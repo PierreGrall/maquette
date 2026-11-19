@@ -200,14 +200,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .brand{display:inline-flex;align-items:center;gap:.6rem;font-stretch:125%;font-weight:700;letter-spacing:-.01em}.lmark{width:28px;height:28px;flex:none}
 .pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
 @media(max-width:600px){.hero-ctas .ghost{display:none}}
-header.site{background:rgba(251,252,251,.94);backdrop-filter:blur(10px);color:var(--ink);box-shadow:0 1px 0 var(--line)}.clogo{height:42px;width:auto;display:block}@media(max-width:600px){.clogo{height:34px}}
+.clogo{height:42px;width:auto;display:block}@media(max-width:600px){.clogo{height:34px}}
+header.site,header.site.solid{background:none!important;backdrop-filter:none!important;box-shadow:none!important}
+header.site .wrap{height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:rgba(6,34,43,.38);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);color:#fff;transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:rgba(251,252,251,.8);color:var(--ink);border-color:rgba(20,36,42,.1)}
+header.site .btn{padding:.6rem 1.1rem}
+#logoSlot{display:inline-flex;align-items:center;height:34px}#logoSlot img,#logoSlot svg{height:34px;width:auto}
+@media(max-width:600px){header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}#logoSlot,#logoSlot img,#logoSlot svg{height:28px}}
 </style>
 </head>
 <body>
 <div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour Piscines Logintec par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
 
 <header class="site" id="hdr"><div class="wrap">
- <a class="brand" href="#top" aria-label="Piscines Logintec, accueil"><img class="clogo" src="https://www.piscines-logintec.com/templates/piscinelogin/img/interface/logo.png" alt="Piscines Logintec" onerror="this.parentNode.innerHTML='<svg class=\'lmark\' viewBox=\'0 0 32 32\'><rect x=\'2\' y=\'2\' width=\'28\' height=\'28\' rx=\'3\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.4\'/><path d=\'M6 17c3.3-3 6.7 3 10 0s6.7 3 10 0\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.4\'/></svg><span>Logintec</span>'"></a>
+ <a class="brand" href="#top" aria-label="Piscines Logintec, accueil"><span id="logoSlot"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M6 17c3.3-3 6.7 3 10 0s6.7 3 10 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></a>
  <nav class="hnav" aria-label="Navigation">
   <a class="nl" href="#realisations">Réalisations</a><a class="nl" href="#methode">Méthode</a><a class="nl" href="#estimateur">Votre projet</a>
   <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button><button type="button" aria-pressed="false" data-l="it">IT</button></div>

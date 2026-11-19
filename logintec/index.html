@@ -196,13 +196,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#93b4b8}
 @media (max-width:900px){.cfg{grid-template-columns:1fr}.preview{position:relative;top:0}}
 @media (prefers-reduced-motion:reduce){.pv-anim,.ripple{transition:none;animation:none}}
+.logo-plate{display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:.35rem .6rem;transition:box-shadow .3s}.logo-plate img{height:34px;width:auto}header.site.solid .logo-plate{box-shadow:0 0 0 1px var(--line)}@media(max-width:600px){.logo-plate img{height:28px}}
 </style>
 </head>
 <body>
 <div class="proof"><div class="wrap"><span>Maquette préparée pour Piscines Logintec par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><a href="#grall-studio">Voir la proposition</a></div></div>
 
 <header class="site" id="hdr"><div class="wrap">
- <a class="brand" href="#top">Logintec</a>
+ <a class="brand" href="#top" aria-label="Piscines Logintec, accueil"><span class="logo-plate"><img src="https://www.piscines-logintec.com/templates/piscinelogin/img/interface/logo.png" alt="Piscines Logintec" onerror="this.parentNode.outerHTML='Logintec'"></span></a>
  <nav class="hnav" aria-label="Navigation">
   <a class="nl" href="#realisations">Réalisations</a><a class="nl" href="#methode">Méthode</a><a class="nl" href="#estimateur">Votre projet</a>
   <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button><button type="button" aria-pressed="false" data-l="it">IT</button></div>
@@ -376,7 +377,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
  </div>
 </div></section>
 </main>
-<footer class="site"><div class="wrap"><span>Logintec SAS, constructeur de piscines en béton armé</span><span>Garantie décennale SMABTP</span></div></footer>
+<footer class="site"><div class="wrap"><span style="display:flex;align-items:center;gap:.8rem"><img src="https://www.piscines-logintec.com/templates/piscinelogin/img/interface/logo.png" alt="" style="height:28px;width:auto" onerror="this.remove()">Logintec SAS, constructeur de piscines en béton armé</span><span>Garantie décennale SMABTP</span></div></footer>
 
 <aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
  <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>

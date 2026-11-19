@@ -178,6 +178,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
  .reveal,.cut,.hgal{height:auto}.reveal .stick,.cut .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
  .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
 }
+
+.cfg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.2rem;overflow:hidden}
+.preview svg{width:100%;height:auto;display:block}
+.pv-anim{transform-box:fill-box;transform-origin:center;transition:transform .7s cubic-bezier(.16,1,.3,1),opacity .5s}
+.ripple{animation:rip 6s linear infinite}@keyframes rip{to{transform:translateX(-40px)}}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem;font-family:var(--d)}
+.live span{font-size:.8rem;color:#93b4b8}.live b{display:block;white-space:nowrap;font-stretch:110%;font-size:clamp(1.15rem,2vw,1.6rem);color:#fff;font-variant-numeric:tabular-nums}
+.live small{font-size:.8rem;color:#93b4b8;text-align:right;max-width:14rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:#93b4b8;padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--foam);color:var(--deep);border-color:var(--foam)}
+.chips button.done{color:#fff;border-color:rgba(191,233,236,.5)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.85rem;color:#86a7ab;margin:-.4rem 0 1rem}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-family:var(--d);font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#93b4b8}
+@media (max-width:900px){.cfg{grid-template-columns:1fr}.preview{position:relative;top:0}}
+@media (prefers-reduced-motion:reduce){.pv-anim,.ripple{transition:none;animation:none}}
 </style>
 </head>
 <body>
@@ -272,39 +290,51 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
  </ol>
 </div></section>
 
-<section class="pad estimate" id="estimateur"><div class="wrap est-grid">
- <div><h2>Une première fourchette avant même de nous appeler.</h2><p class="lede" style="margin-top:1rem">Quatre questions, une minute. Vous obtenez un ordre de grandeur, et nous recevons un projet déjà décrit.</p></div>
- <div class="panel" aria-live="polite">
-  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
-  <form id="est" novalidate>
-   <fieldset data-s><legend>Quel projet avez-vous ?</legend><div class="choices">
-    <div class="choice"><input type="radio" name="type" id="t1" value="classique" checked><label for="t1">Piscine sur mesure<small>Forme libre ou rectangulaire</small></label></div>
-    <div class="choice"><input type="radio" name="type" id="t2" value="couloir"><label for="t2">Couloir de nage<small>12 à 25 m</small></label></div>
-    <div class="choice"><input type="radio" name="type" id="t3" value="debordement"><label for="t3">Débordement ou miroir<small>Bord invisible</small></label></div>
-    <div class="choice"><input type="radio" name="type" id="t4" value="renovation"><label for="t4">Rénovation<small>Fuite, fissure, revêtement</small></label></div></div></fieldset>
-   <fieldset data-s hidden><legend>Quelle surface d'eau ?</legend><div class="choices">
-    <div class="choice"><input type="radio" name="size" id="s1" value=".85"><label for="s1">Moins de 30 m²</label></div>
-    <div class="choice"><input type="radio" name="size" id="s2" value="1" checked><label for="s2">30 à 50 m²</label></div>
-    <div class="choice"><input type="radio" name="size" id="s3" value="1.35"><label for="s3">50 à 80 m²</label></div>
-    <div class="choice"><input type="radio" name="size" id="s4" value="1.8"><label for="s4">Plus de 80 m²</label></div></div></fieldset>
-   <fieldset data-s hidden><legend>Quelle finition ?</legend><div class="choices">
-    <div class="choice"><input type="radio" name="fin" id="f1" value="1" checked><label for="f1">Émaux<small>Mosaïque de verre</small></label></div>
-    <div class="choice"><input type="radio" name="fin" id="f2" value="1.12"><label for="f2">Pierre de Bali<small>Effet lagon</small></label></div>
-    <div class="choice"><input type="radio" name="fin" id="f3" value="1.25"><label for="f3">Pierre naturelle taillée</label></div>
-    <div class="choice"><input type="radio" name="fin" id="f4" value="1.06"><label for="f4">Je ne sais pas encore</label></div></div></fieldset>
-   <fieldset data-s hidden><legend>Des options ou contraintes ?</legend><div class="choices">
-    <div class="choice"><input type="checkbox" name="opt" id="o1" data-a="9000" data-b="14000"><label for="o1">Volet immergé</label></div>
-    <div class="choice"><input type="checkbox" name="opt" id="o2" data-a="12000" data-b="20000"><label for="o2">Spa intégré</label></div>
-    <div class="choice"><input type="checkbox" name="opt" id="o3" data-a="4000" data-b="7000"><label for="o3">Chauffage</label></div>
-    <div class="choice"><input type="checkbox" name="opt" id="o4" data-a="8000" data-b="25000"><label for="o4">Terrain en pente ou argileux</label></div></div></fieldset>
-   <div data-s hidden><div style="font-family:var(--d)">Ordre de grandeur pour votre projet</div><div class="range" id="range">—</div>
-    <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
-    <div class="field"><label for="p">Téléphone</label><input id="p" type="tel" autocomplete="tel"></div>
-    <div class="field"><label for="c">Commune du projet</label><input id="c" autocomplete="address-level2"></div></div>
-   <div data-s hidden><div class="range" style="font-size:1.7rem">Demande envoyée</div><p style="color:#9fc0c4">Dans le site final, cette demande arrive directement dans votre boîte mail, avec le type de bassin, la surface, la finition, les options et la fourchette.</p></div>
-   <div class="est-nav"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn" id="next" style="margin-left:auto">Continuer</button></div>
-  </form>
-  <p class="note">Fourchettes indicatives de démonstration, calibrées avec vos vrais prix avant la mise en ligne.</p>
+<section class="pad estimate" id="estimateur"><div class="wrap">
+ <h2>Configurez votre piscine.</h2>
+ <p class="lede" style="margin-top:1rem">Une minute, cinq choix. Votre bassin prend forme sous vos yeux et le budget s'affine à chaque réponse.</p>
+ <div class="cfg">
+  <div class="preview" aria-hidden="true">
+   <svg viewBox="0 0 420 300"><defs>
+    <pattern id="rip" width="40" height="18" patternUnits="userSpaceOnUse"><path class="ripple" d="M0 9 q10 -6 20 0 t20 0 t20 0 t20 0" fill="none" stroke="#BFE9EC" stroke-opacity=".35" stroke-width="1.2"/></pattern>
+    <pattern id="slope" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="10" stroke="#2a5a63" stroke-width="2"/></pattern></defs>
+    <rect x="0" y="0" width="420" height="300" rx="10" fill="#123a43"/>
+    <rect id="pvSlope" class="pv-anim" x="0" y="0" width="420" height="300" rx="10" fill="url(#slope)" style="opacity:0"/>
+    <g id="pvPool" class="pv-anim">
+     <rect id="pvCoping" x="90" y="80" width="240" height="140" rx="4" fill="#E8E6E0"/>
+     <rect id="pvWater" x="100" y="90" width="220" height="120" rx="2" fill="#1E9AA8" style="transition:fill .6s"/>
+     <rect x="100" y="90" width="220" height="120" fill="url(#rip)"/>
+     <rect id="pvBeach" x="100" y="90" width="44" height="120" fill="#7FD0D6" opacity="0"/>
+     <rect id="pvEdge" x="318" y="88" width="6" height="124" fill="#BFE9EC" opacity="0"/>
+     <g id="pvVolet" opacity="0"><rect x="100" y="90" width="220" height="120" fill="#cfd8d6" opacity=".85"/><g stroke="#9aa9a6"><line x1="100" y1="104" x2="320" y2="104"/><line x1="100" y1="118" x2="320" y2="118"/><line x1="100" y1="132" x2="320" y2="132"/><line x1="100" y1="146" x2="320" y2="146"/></g></g>
+    </g>
+    <circle id="pvSpa" class="pv-anim" cx="352" cy="82" r="26" fill="#1E9AA8" stroke="#E8E6E0" stroke-width="8" style="transform:scale(0)"/>
+    <g id="pvHeat" class="pv-anim" style="opacity:0"><rect x="34" y="236" width="44" height="30" rx="4" fill="#E8E6E0"/><circle cx="56" cy="251" r="9" fill="none" stroke="#123a43" stroke-width="2"/><text x="86" y="256" font-family="Archivo" font-size="12" fill="#BFE9EC">Eau chauffée</text></g>
+    <text id="pvLabel" x="210" y="284" text-anchor="middle" font-family="Archivo" font-size="12" fill="#93b4b8"></text>
+   </svg>
+   <div class="live"><div><span>Budget estimé</span><b id="liveRange">—</b></div><small>Ordre de grandeur indicatif, affiné sur place.</small></div>
+  </div>
+  <div class="panel" aria-live="polite">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <fieldset data-s data-n="Bassin"><legend>Quel bassin imaginez-vous ?</legend><div class="choices"><div class="choice"><input type="radio" name="type" id="typeclaPi" value="classique" checked><label for="typeclaPi">Piscine sur mesure<small>Forme libre ou rectangulaire</small></label></div><div class="choice"><input type="radio" name="type" id="typecouCo" value="couloir"><label for="typecouCo">Couloir de nage<small>Pour nager vraiment, 12 à 25 m</small></label></div><div class="choice"><input type="radio" name="type" id="typedebDé" value="debordement"><label for="typedebDé">Débordement ou miroir<small>L'eau rejoint l'horizon</small></label></div><div class="choice"><input type="radio" name="type" id="typerenRé" value="renovation"><label for="typerenRé">Rénovation<small>Fuite, fissure, revêtement</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Surface" hidden><legend>Quelle surface d'eau ?</legend><p class="hint">Repère : un bassin de 8 × 4 m fait 32 m².</p><div class="choices"><div class="choice"><input type="radio" name="size" id="size.85Mo" value=".85"><label for="size.85Mo">Moins de 30 m²<small>Bassin de détente</small></label></div><div class="choice"><input type="radio" name="size" id="size130" value="1" checked><label for="size130">30 à 50 m²<small>Le plus courant</small></label></div><div class="choice"><input type="radio" name="size" id="size1.350" value="1.35"><label for="size1.350">50 à 80 m²<small>Grande famille, réceptions</small></label></div><div class="choice"><input type="radio" name="size" id="size1.8Pl" value="1.8"><label for="size1.8Pl">Plus de 80 m²<small>Projet d'exception</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Finition" hidden><legend>Quelle finition ?</legend><div class="choices"><div class="choice"><input type="radio" name="fin" id="fin1Ém" value="1" checked><label for="fin1Ém">Émaux de verre<small>Bleu lumineux</small></label></div><div class="choice"><input type="radio" name="fin" id="fin1.1Pi" value="1.12"><label for="fin1.1Pi">Pierre de Bali<small>Eau vert lagon</small></label></div><div class="choice"><input type="radio" name="fin" id="fin1.2Pi" value="1.25"><label for="fin1.2Pi">Pierre naturelle taillée<small>Margelles sur mesure</small></label></div><div class="choice"><input type="radio" name="fin" id="fin1.0Je" value="1.06"><label for="fin1.0Je">Je ne sais pas encore<small>On vous conseillera</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Options" hidden><legend>Des options ou contraintes ?</legend><p class="hint">Plusieurs choix possibles, ou aucun.</p><div class="choices">
+     <div class="choice"><input type="checkbox" name="opt" id="o1" value="volet" data-a="9000" data-b="14000"><label for="o1">Volet immergé<small>Sécurité et chaleur</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o2" value="spa" data-a="12000" data-b="20000"><label for="o2">Spa intégré<small>Débordant ou attenant</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o3" value="chauffage" data-a="4000" data-b="7000"><label for="o3">Chauffage<small>Pompe à chaleur</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o4" value="terrain" data-a="8000" data-b="25000"><label for="o4">Terrain en pente ou argileux<small>Fondations spéciales</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Calendrier" hidden><legend>Quand aimeriez-vous vous baigner ?</legend><p class="hint">Les démarches en mairie prennent en général un mois avant le chantier.</p><div class="choices"><div class="choice"><input type="radio" name="when" id="whenÉtéÉt" value="Été 2027" checked><label for="whenÉtéÉt">Été 2027</label></div><div class="choice"><input type="radio" name="when" id="whenAutAu" value="Automne 2027"><label for="whenAutAu">Automne 2027</label></div><div class="choice"><input type="radio" name="when" id="when20220" value="2028 ou plus tard"><label for="when20220">2028 ou plus tard</label></div><div class="choice"><input type="radio" name="when" id="whenJe Je" value="Je me renseigne"><label for="whenJe Je">Je me renseigne</label></div></div></fieldset>
+    <div data-s data-n="Coordonnées" hidden><p style="font-family:var(--d);font-weight:600;font-size:1.25rem;color:#fff;margin:0 0 1rem">Votre projet est prêt.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
+     <div class="field"><label for="p">Téléphone ou WhatsApp</label><input id="p" type="tel" autocomplete="tel"></div>
+     <div class="field"><label for="c">Commune du projet</label><input id="c" autocomplete="address-level2"></div></div>
+    <div data-s data-n="Envoi" hidden><div class="range" style="font-size:1.6rem">Merci, votre projet est entre de bonnes mains.</div><p style="color:#9fc0c4">Dans le site final, cette demande arrive directement dans la boîte mail de Logintec avec le récapitulatif et le croquis, et vous en recevez une copie.</p></div>
+    <div class="est-nav"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn" id="next" style="margin-left:auto">Continuer</button></div>
+   </form>
+   <p class="note">Fourchettes indicatives de démonstration, calibrées avec vos vrais prix avant la mise en ligne.</p>
+  </div>
  </div>
 </div></section>
 
@@ -330,6 +360,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <h2 class="rise">Les questions qu'on nous pose avant de commencer.</h2>
   <div class="faq-list">
    <details><summary>Combien coûte une piscine en béton armé ?</summary><p>Tout dépend de la surface, de la finition et du terrain. L'estimateur plus haut vous donne une fourchette en une minute ; nous la précisons ensuite gratuitement sur place.</p></details>
+   <details><summary>Quand lancer mon projet pour nager cet été ?</summary><p>L'instruction d'une déclaration préalable prend en général un mois, avant le chantier. Pour vous baigner en juillet, le mieux est de valider votre projet pendant l'hiver.</p></details>
    <details><summary>Faut-il une autorisation pour construire ?</summary><p>En général, une déclaration préalable suffit pour un bassin non couvert de 10 à 100 m², et un permis de construire est nécessaire au-delà. Nous prenons en charge ces démarches administratives.</p></details>
    <details><summary>Mon terrain est en pente ou argileux, est-ce possible ?</summary><p>Oui, c'est notre spécialité. Sur les sols difficiles, nous réalisons des fondations spéciales (micropieux, radiers renforcés), calculées en interne par notre ingénieur.</p></details>
    <details><summary>Combien de temps durent les travaux ?</summary><p>Comptez en général quelques semaines entre le terrassement et la mise en eau, selon le terrain et la saison. Nous vous donnons un planning précis au devis (délai à valider avec vous).</p></details>
@@ -447,13 +478,37 @@ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isInter
 document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
 if(RM)facts.forEach(function(b){b.textContent=(+b.dataset.to).toLocaleString('fr-FR',{minimumFractionDigits:+b.dataset.dec||0})+(b.dataset.suf||'');});
 
-/* ---------- Estimateur ---------- */
+/* ---------- Configurateur ---------- */
 var base={classique:[38000,55000],couloir:[62000,95000],debordement:[58000,90000],renovation:[12000,35000]};
-var f=document.getElementById('est'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=document.getElementById('prev'),nx=document.getElementById('next'),bar=document.getElementById('bar'),i=0,lo=0,hi=0;
+var TN={classique:'Piscine sur mesure',couloir:'Couloir de nage',debordement:'Débordement',renovation:'Rénovation'};
+var SN={'.85':'moins de 30 m²','1':'30 à 50 m²','1.35':'50 à 80 m²','1.8':'plus de 80 m²'};
+var FIN={'1':['Émaux de verre','#1E9AA8','#E8E6E0'],'1.12':['Pierre de Bali','#3E8C80','#9AA39A'],'1.25':['Pierre naturelle taillée','#2C8C95','#D2C4A8'],'1.06':['À définir','#1E9AA8','#D9D9D2']};
+var ON={volet:'volet immergé',spa:'spa',chauffage:'chauffage',terrain:'fondations spéciales'};
+var f=document.getElementById('est'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=document.getElementById('prev'),nx=document.getElementById('next'),chips=document.getElementById('chips'),i=0,reached=0,cL=0,cH=0;
+function $(id){return document.getElementById(id);}
+function val(n){var e=f.querySelector('[name="'+n+'"]:checked');return e?e.value:null;}
 function fmt(n){return(Math.round(n/1000)*1000).toLocaleString('fr-FR')+' €';}
-function calc(){var t=f.querySelector('[name=type]:checked').value,s=+f.querySelector('[name=size]:checked').value,k=t==='renovation'?1:+f.querySelector('[name=fin]:checked').value;lo=base[t][0]*s*k;hi=base[t][1]*s*k;f.querySelectorAll('[name=opt]:checked').forEach(function(o){lo+=+o.dataset.a;hi+=+o.dataset.b;});var el=document.getElementById('range'),st=performance.now();(function tk(n){var q=ease(Math.min(1,(n-st)/900));el.textContent='Entre '+fmt(lo*q)+' et '+fmt(hi*q);if(q<1)requestAnimationFrame(tk);})(st);}
-function show(){S.forEach(function(el,k){el.hidden=k!==i;if(k===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});pv.hidden=i===0||i===5;nx.hidden=i===5;nx.textContent=i===3?'Voir mon estimation':i===4?'Être rappelé':'Continuer';bar.style.transform='scaleX('+Math.min(1,(i+1)/5)+')';if(i===4)calc();}
-nx.onclick=function(){if(i<5){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};show();
+function tween(lo,hi){var a0=cL,b0=cH,st=performance.now();cL=lo;cH=hi;(function tk(n){var q=ease(Math.min(1,(n-st)/700));$('liveRange').textContent=fmt(a0+(lo-a0)*q)+' – '+fmt(b0+(hi-b0)*q);if(q<1)requestAnimationFrame(tk);})(st);}
+function update(){
+ var t=val('type'),sz=val('size'),fn=val('fin'),k=t==='renovation'?1:+fn,lo=base[t][0]*(+sz)*k,hi=base[t][1]*(+sz)*k,opts=[];
+ f.querySelectorAll('[name=opt]:checked').forEach(function(o){lo+=+o.dataset.a;hi+=+o.dataset.b;opts.push(o.value);});
+ tween(lo,hi);
+ var sc={'.85':.78,'1':1,'1.35':1.15,'1.8':1.3}[sz],sx=sc,sy=sc;if(t==='couloir'){sx=sc*1.28;sy=sc*.5;}
+ $('pvPool').style.transform='scale('+sx+','+sy+')';
+ $('pvWater').setAttribute('fill',FIN[fn][1]);$('pvCoping').setAttribute('fill',FIN[fn][2]);$('pvSpa').setAttribute('fill',FIN[fn][1]);
+ $('pvEdge').setAttribute('opacity',t==='debordement'?1:0);$('pvBeach').setAttribute('opacity',fn==='1.12'?.55:0);
+ $('pvVolet').setAttribute('opacity',opts.indexOf('volet')>-1?.9:0);
+ $('pvSpa').style.transform=opts.indexOf('spa')>-1?'scale(1)':'scale(0)';
+ $('pvHeat').style.opacity=opts.indexOf('chauffage')>-1?1:0;$('pvSlope').style.opacity=opts.indexOf('terrain')>-1?1:0;
+ $('pvLabel').textContent=TN[t]+', '+SN[sz]+(reached>=2?', '+FIN[fn][0].toLowerCase():'');
+ return{t:t,sz:sz,fn:fn,opts:opts,lo:lo,hi:hi};
+}
+function recap(){var d=update(),L=[['Bassin',TN[d.t]],['Surface',SN[d.sz]],['Finition',FIN[d.fn][0]],['Options',d.opts.length?d.opts.map(function(o){return ON[o];}).join(', '):'aucune'],['Baignade',val('when')],['Budget',fmt(d.lo)+' – '+fmt(d.hi)]];$('recap').innerHTML=L.map(function(r){return'<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');}
+function drawChips(){chips.innerHTML='';S.slice(0,6).forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached||i===6;b.onclick=function(){i=k;show();};li.appendChild(b);chips.appendChild(li);});}
+function show(){S.forEach(function(el,k){el.hidden=k!==i;if(k===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0||i===6;nx.hidden=i===6;nx.textContent=i===4?'Voir mon projet':i===5?'Être rappelé':'Continuer';drawChips();if(i===5)recap();else update();}
+f.addEventListener('change',function(e){update();if(e.target.type==='radio'&&i<=4){var at=i;setTimeout(function(){if(i===at){i++;show();}},420);}});
+nx.onclick=function(){if(i<6){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};
+show();
 
 /* ---------- Langues ---------- */
 var L={en:{h1a:'Reinforced concrete',h1b:'pools, engineered',h1c:'before they are built.',lede:'Lap pools, infinity edges, mirror pools and renovations, from Menton to Saint-Tropez. Built by our own teams, no subcontracting.',cta1:'Estimate my project in 1 minute',cta1s:'Estimate my project'},it:{h1a:'Piscine in cemento',h1b:'armato, calcolate',h1c:'da un ingegnere.',lede:'Corsie di nuoto, sfioro, piscine a specchio e ristrutturazioni, da Mentone a Saint-Tropez. Costruite dalle nostre squadre, senza subappalti.',cta1:'Stima il mio progetto in 1 minuto',cta1s:'Stima il mio progetto'}},fr={};

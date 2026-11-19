@@ -142,6 +142,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
 .cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
 
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 48s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-size:1.06rem;line-height:1.5}.rcard figcaption{font-family:var(--d);font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--water),var(--water)) center/14px 2px no-repeat,linear-gradient(var(--water),var(--water)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.rx-head,.faq{grid-template-columns:1fr;gap:1.5rem}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none;flex-wrap:wrap;width:auto}}
 .mbar{display:none}
 @media (max-width:900px){
  .hnav a.nl{display:none}
@@ -291,7 +309,36 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </div></section>
 
 <section class="pad"><div class="wrap">
- <div class="reviews rise"><div class="score">5,0<small><span class="stars">★★★★★</span> 13 avis Google</small></div><p style="margin:0;max-width:44rem">Vos clients parlent de la qualité d'exécution, de vos conseils et de votre disponibilité après la mise en eau. Dans le site final, vos avis Google s'affichent ici en entier et se mettent à jour automatiquement.</p></div>
+ <div class="reviews-x">
+  <div class="rx-head rise"><div class="score">5,0<small><span class="stars">★★★★★</span> 13 avis Google</small></div><h2>Ce que disent ceux qui se baignent dedans.</h2></div>
+  <div class="marquee" aria-label="Avis clients"><div class="mq-track">
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Une rénovation de grande ampleur, menée sans accroc. La qualité d'exécution est impressionnante, et l'eau est parfaite.</blockquote><figcaption>Rénovation complète</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Un vrai professionnel, attentif et toujours disponible. Des équipes ponctuelles et compétentes.</blockquote><figcaption>Construction</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Piscine à débordement en mosaïque avec couverture intégrée : l'équipe, les conseils et le service après-vente sont au top. Le résultat est magnifique.</blockquote><figcaption>Débordement en mosaïque</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Une rénovation exemplaire de la piscine de notre résidence, avec des équipes d'une efficacité remarquable.</blockquote><figcaption>Copropriété</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>De précieux conseils sur la forme, le revêtement, les plages et l'entretien. Il se déplace encore quand on a une question.</blockquote><figcaption>Suivi après la mise en eau</figcaption></figure>
+  
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Une rénovation de grande ampleur, menée sans accroc. La qualité d'exécution est impressionnante, et l'eau est parfaite.</blockquote><figcaption>Rénovation complète</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Un vrai professionnel, attentif et toujours disponible. Des équipes ponctuelles et compétentes.</blockquote><figcaption>Construction</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Piscine à débordement en mosaïque avec couverture intégrée : l'équipe, les conseils et le service après-vente sont au top. Le résultat est magnifique.</blockquote><figcaption>Débordement en mosaïque</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Une rénovation exemplaire de la piscine de notre résidence, avec des équipes d'une efficacité remarquable.</blockquote><figcaption>Copropriété</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>De précieux conseils sur la forme, le revêtement, les plages et l'entretien. Il se déplace encore quand on a une question.</blockquote><figcaption>Suivi après la mise en eau</figcaption></figure>
+  </div></div>
+  <p class="note-rv">Extraits reformulés de vos avis Google pour la maquette. Dans le site final, vos avis s'affichent en version originale et se mettent à jour automatiquement.</p>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Les questions qu'on nous pose avant de commencer.</h2>
+  <div class="faq-list">
+   <details><summary>Combien coûte une piscine en béton armé ?</summary><p>Tout dépend de la surface, de la finition et du terrain. L'estimateur plus haut vous donne une fourchette en une minute ; nous la précisons ensuite gratuitement sur place.</p></details>
+   <details><summary>Faut-il une autorisation pour construire ?</summary><p>En général, une déclaration préalable suffit pour un bassin non couvert de 10 à 100 m², et un permis de construire est nécessaire au-delà. Nous prenons en charge ces démarches administratives.</p></details>
+   <details><summary>Mon terrain est en pente ou argileux, est-ce possible ?</summary><p>Oui, c'est notre spécialité. Sur les sols difficiles, nous réalisons des fondations spéciales (micropieux, radiers renforcés), calculées en interne par notre ingénieur.</p></details>
+   <details><summary>Combien de temps durent les travaux ?</summary><p>Comptez en général quelques semaines entre le terrassement et la mise en eau, selon le terrain et la saison. Nous vous donnons un planning précis au devis (délai à valider avec vous).</p></details>
+   <details><summary>Faites-vous appel à des sous-traitants ?</summary><p>Non. Génie civil, maçonnerie et plomberie sont réalisés par nos équipes, avec un seul interlocuteur du début à la fin.</p></details>
+   <details><summary>Quelles garanties avez-vous ?</summary><p>Tous nos ouvrages sont couverts par la garantie décennale, assurée auprès de la SMABTP.</p></details>
+   <details><summary>Rénovez-vous les piscines existantes ?</summary><p>Oui. Un département dédié traite les fissures, les fuites et les revêtements décollés, quel que soit le constructeur d'origine.</p></details>
+   <details><summary>Intervenez-vous dans ma commune ?</summary><p>Dans toutes les Alpes-Maritimes, le Var et les Bouches-du-Rhône : Nice, Cannes, Antibes, Mougins, Grasse, Vence, Saint-Paul-de-Vence, Mandelieu, Saint-Tropez, Aix-en-Provence.</p></details>
+  </div>
+ </div>
  <div class="contact" style="margin-top:5rem">
   <div><h2>Parlons de votre terrain.</h2><a class="bigtel" href="tel:+33469001795">04 69 00 17 95</a><p style="margin:0;color:var(--soft)">4591 route de Grasse, 06140 Tourrettes-sur-Loup<br>Du lundi au vendredi, de 8 h à 18 h</p></div>
   <div><p style="color:var(--soft);margin-top:0">Alpes-Maritimes, Var et Bouches-du-Rhône : Nice, Cannes, Antibes, Mougins, Grasse, Vence, Saint-Paul-de-Vence, Mandelieu, Saint-Tropez, Aix-en-Provence.</p><a class="btn" href="#estimateur">Estimer mon projet</a></div>
@@ -305,7 +352,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
  <p class="lede" style="margin-top:1rem">Monsieur Logel, voici ce que nous avons relevé sur piscines-logintec.com, et ce que la nouvelle version apporte.</p>
  <ul class="audit">
   <li><div class="now"><b>Aujourd'hui</b>Aucun formulaire de devis : le visiteur doit écrire un email et décrire son projet seul.</div><div><b>Avec la refonte</b>Un estimateur en quatre questions, et des demandes qui arrivent déjà qualifiées.</div></li>
-  <li><div class="now"><b>Aujourd'hui</b>Votre note de 5,0 sur Google n'apparaît nulle part.</div><div><b>Avec la refonte</b>La note et les avis complets, au plus près des boutons d'action.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Votre note de 5,0 sur Google n'apparaît nulle part, et aucune question fréquente n'est traitée.</div><div><b>Avec la refonte</b>Vos avis mis en scène, et une FAQ qui lève les objections avant l'appel.</div></li>
   <li><div class="now"><b>Aujourd'hui</b>Un site statique qui ressemble à ceux de vos concurrents.</div><div><b>Avec la refonte</b>De l'eau vivante dès l'ouverture, une coupe technique qui se construit au défilement : on comprend votre savoir-faire d'ingénieur en dix secondes.</div></li>
   <li><div class="now"><b>Aujourd'hui</b>Site en français uniquement, alors que vous construisez à Cannes, Saint-Paul et Saint-Tropez.</div><div><b>Avec la refonte</b>Versions anglaise et italienne.</div></li>
   <li><div class="now"><b>Aujourd'hui</b>Une photo de banque d'images en fond, et deux chiffres différents pour votre expérience (25 et 30 ans).</div><div><b>Avec la refonte</b>Uniquement vos réalisations, et des textes cohérents écrits pour vos clients.</div></li>

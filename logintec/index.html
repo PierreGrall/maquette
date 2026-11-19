@@ -196,7 +196,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#93b4b8}
 @media (max-width:900px){.cfg{grid-template-columns:1fr}.preview{position:relative;top:0}}
 @media (prefers-reduced-motion:reduce){.pv-anim,.ripple{transition:none;animation:none}}
-.logo-plate{display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:.35rem .6rem;transition:box-shadow .3s}.logo-plate img{height:34px;width:auto}header.site.solid .logo-plate{box-shadow:0 0 0 1px var(--line)}@media(max-width:600px){.logo-plate img{height:28px}}
+.logo-plate{display:inline-flex;align-items:center}.logo-plate img{height:30px;width:auto;filter:brightness(0) invert(1);transition:filter .4s}header.site.solid .logo-plate img{filter:brightness(0) invert(.12)}footer .flogo{height:24px;width:auto;filter:brightness(0) invert(.35)}@media(max-width:600px){.logo-plate img{height:24px}}
 </style>
 </head>
 <body>
@@ -377,7 +377,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
  </div>
 </div></section>
 </main>
-<footer class="site"><div class="wrap"><span style="display:flex;align-items:center;gap:.8rem"><img src="https://www.piscines-logintec.com/templates/piscinelogin/img/interface/logo.png" alt="" style="height:28px;width:auto" onerror="this.remove()">Logintec SAS, constructeur de piscines en béton armé</span><span>Garantie décennale SMABTP</span></div></footer>
+<footer class="site"><div class="wrap"><span style="display:flex;align-items:center;gap:.8rem"><img src="https://www.piscines-logintec.com/templates/piscinelogin/img/interface/logo.png" alt="" class="flogo" onerror="this.remove()">Logintec SAS, constructeur de piscines en béton armé</span><span>Garantie décennale SMABTP</span></div></footer>
 
 <aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
  <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>

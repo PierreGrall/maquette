@@ -7,526 +7,411 @@
 <title>Piscines Logintec — maquette préparée par Grall Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Source+Serif+4:opsz,wght@8..60,300..600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --concrete:#EEF0EE;
-    --concrete-2:#E1E5E3;
-    --ink:#1C2A2F;
-    --ink-soft:#4A5A60;
-    --water:#1F7A86;
-    --water-deep:#135A63;
-    --bali:#8E9C8F;
-    --line:#C7CEcb;
-    --white:#FBFCFB;
-    --display:"Archivo", system-ui, sans-serif;
-    --text:"Source Serif 4", Georgia, serif;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-  body{margin:0;background:var(--concrete);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased}
-  img{display:block;max-width:100%}
-  a{color:inherit}
-  :focus-visible{outline:3px solid var(--water);outline-offset:3px}
-  .wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+:root{--deep:#06222B;--pool:#0E4F5C;--water:#1F8A96;--foam:#BFE9EC;--concrete:#EEF0EE;--ink:#14242A;--soft:#566870;--line:#C9D1CE;--white:#FBFCFB;--d:"Archivo",system-ui,sans-serif;--t:"Source Serif 4",Georgia,serif}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--concrete);color:var(--ink);font-family:var(--t);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--water);background:var(--water);color:#fff;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px);background:#17727d}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);letter-spacing:-.02em;margin:0}
+h2{font-stretch:112%;font-weight:700;font-size:clamp(2rem,4.2vw,3.6rem);line-height:1.02;max-width:18ch}
+.lede{color:var(--soft);max-width:38rem}
 
-  /* Bandeau maquette */
-  .proof-banner{background:var(--ink);color:#DCE4E3;font-family:var(--display);font-size:.8125rem;letter-spacing:.01em}
-  .proof-banner .wrap{display:flex;gap:1rem;justify-content:space-between;align-items:center;padding:.55rem 0;flex-wrap:wrap}
-  .proof-banner a{color:#fff;text-underline-offset:3px}
+/* Bandeau + header */
+.proof{position:relative;z-index:40;background:#000;color:#cfdedf;font-family:var(--d);font-size:.8rem}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:background .4s,color .4s,top .3s}
+header.site.solid{top:0;background:rgba(238,240,238,.88);backdrop-filter:blur(10px);color:var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
+.brand{font-family:var(--d);font-stretch:125%;font-weight:700;font-size:1.3rem;text-decoration:none}
+.hnav{display:flex;align-items:center;gap:1.4rem;font-family:var(--d);font-size:.9rem}
+.hnav a{text-decoration:none;opacity:.85}
+.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
 
-  /* En-tête */
-  header.site{position:sticky;top:0;z-index:20;background:rgba(238,240,238,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-  header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1.5rem}
-  .brand{font-family:var(--display);font-stretch:125%;font-weight:700;font-size:1.25rem;letter-spacing:-.01em;text-decoration:none}
-  .brand small{display:block;font-stretch:100%;font-weight:400;font-size:.72rem;color:var(--ink-soft);letter-spacing:.02em;margin-top:-2px}
-  nav.main{display:flex;gap:1.6rem;font-family:var(--display);font-size:.92rem}
-  nav.main a{text-decoration:none;color:var(--ink-soft)}
-  nav.main a:hover{color:var(--ink)}
-  .head-actions{display:flex;align-items:center;gap:1rem;font-family:var(--display);font-size:.9rem}
-  .lang{display:flex;gap:.15rem}
-  .lang button{font:inherit;font-size:.8rem;background:none;border:1px solid transparent;border-radius:4px;padding:.15rem .35rem;color:var(--ink-soft);cursor:pointer}
-  .lang button[aria-pressed="true"]{border-color:var(--ink);color:var(--ink)}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--display);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:6px;padding:.8rem 1.25rem;border:1.5px solid var(--water);background:var(--water);color:#fff;cursor:pointer;transition:background .15s}
-  .btn:hover{background:var(--water-deep);border-color:var(--water-deep)}
-  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
-  .btn.ghost:hover{background:var(--ink);color:#fff}
-  .tel{text-decoration:none;font-weight:600;white-space:nowrap}
+/* Hero eau temps réel */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+#water{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-stretch:118%;font-weight:700;font-size:clamp(2.6rem,7.4vw,7rem);line-height:.95;max-width:12ch}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln span{display:block;transform:translateY(105%);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.08s}.hero h1 .ln:nth-child(3) span{transition-delay:.16s}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .5s,transform 1s .5s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:30rem;color:#cfe6e8;margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.scrollhint{position:absolute;right:1.25rem;bottom:1.25rem;z-index:2;font-family:var(--d);font-size:.75rem;color:#9fc6ca;writing-mode:vertical-rl}
 
-  /* Hero */
-  .hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);min-height:calc(100vh - 68px - 34px);max-height:860px}
-  .hero-img{position:relative;overflow:hidden;background:var(--concrete-2)}
-  .hero-img img{width:100%;height:100%;object-fit:cover}
-  .hero-img figcaption{position:absolute;left:1.25rem;bottom:1.1rem;color:#fff;font-family:var(--display);font-size:.82rem;text-shadow:0 1px 8px rgba(0,0,0,.45)}
-  .hero-copy{padding:clamp(2rem,5vw,4.5rem) clamp(1.5rem,4vw,4rem);display:flex;flex-direction:column;justify-content:center}
-  h1{font-family:var(--display);font-stretch:112%;font-weight:700;font-size:clamp(2.2rem,4.1vw,3.6rem);line-height:1.02;letter-spacing:-.025em;margin:0 0 1.4rem}
-  .lede{font-size:1.15rem;color:var(--ink-soft);max-width:34rem;margin:0 0 2rem}
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:2.4rem}
-  .facts{display:grid;grid-template-columns:repeat(3,auto);gap:1.4rem 2.2rem;border-top:1px solid var(--line);padding-top:1.4rem;font-family:var(--display)}
-  .facts b{display:block;font-size:1.35rem;font-stretch:110%;letter-spacing:-.01em}
-  .facts span{font-size:.82rem;color:var(--ink-soft)}
-  .stars{color:#B8862B;letter-spacing:.08em}
+/* Révélation photo */
+.reveal{height:220vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;place-items:center}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform;background:var(--pool)}
+.reveal .cap{position:absolute;left:clamp(1.25rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);color:#fff;font-family:var(--d);z-index:2;max-width:26rem}
+.reveal .cap b{display:block;font-stretch:115%;font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.05;margin-bottom:.4rem}
+.reveal .cap span{font-size:.9rem;color:#d6eaec}
+.facts{position:absolute;top:clamp(5rem,14vh,8rem);right:clamp(1.25rem,4vw,3rem);z-index:2;display:grid;gap:1.2rem;color:#fff;font-family:var(--d);text-align:right}
+.facts b{display:block;font-stretch:125%;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;color:#d6eaec}
 
-  section{padding:clamp(4rem,9vw,7.5rem) 0}
-  h2{font-family:var(--display);font-stretch:110%;font-weight:700;font-size:clamp(1.8rem,3.2vw,2.7rem);line-height:1.06;letter-spacing:-.02em;margin:0 0 1rem;max-width:22ch}
-  .intro{max-width:40rem;color:var(--ink-soft);margin:0 0 3rem}
+/* Coupe animée */
+.cut{height:340vh;position:relative;background:var(--ink);color:#e4ecec}
+.cut .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.cut-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.cut h2{color:#fff;margin-bottom:1rem}
+.cut .lede{color:#9fb4b7;margin:0 0 2rem}
+.cut svg{width:100%;height:auto;overflow:visible}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps-live li{border-left:2px solid #2c4249;padding:.2rem 0 .2rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--water)}
+.steps-live b{display:block;font-family:var(--d);color:#fff;font-weight:600}
+.steps-live span{font-size:.96rem;color:#a9bcbf}
+.meter{height:2px;background:#2c4249;margin-top:2rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--water);transform-origin:left;transform:scaleX(0)}
 
-  /* Réalisations */
-  .gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(150px,17vw,230px);gap:.75rem}
-  .gallery figure{margin:0;position:relative;overflow:hidden;background:var(--concrete-2)}
-  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-  .gallery figure:hover img{transform:scale(1.03)}
-  .gallery figcaption{position:absolute;inset:auto 0 0 0;padding:2.2rem .9rem .75rem;background:linear-gradient(transparent,rgba(16,30,34,.78));color:#fff;font-family:var(--display);font-size:.84rem;line-height:1.35}
-  .gallery figcaption strong{display:block;font-weight:600;font-size:.95rem}
-  .g1{grid-column:span 4;grid-row:span 2}.g2{grid-column:span 2;grid-row:span 2}
-  .g3{grid-column:span 2}.g4{grid-column:span 2}.g5{grid-column:span 2}
+/* Galerie horizontale */
+.hgal{height:360vh;position:relative;background:var(--concrete)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(62vw,720px);margin:0}
+.card .ph{height:min(58vh,520px);overflow:hidden;border-radius:4px;background:#cfd8d6}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{font-family:var(--d);margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-weight:600}.card figcaption span{color:var(--soft);font-size:.9rem}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--d);font-stretch:125%;font-weight:700;font-size:1.1rem;font-variant-numeric:tabular-nums}
 
-  /* Coupe technique */
-  .section-cut{background:var(--ink);color:#E4EBEA}
-  .section-cut h2{color:#fff}
-  .section-cut .intro{color:#AFC0C0}
-  .cut-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
-  .cut svg{width:100%;height:auto}
-  .cut-notes{list-style:none;margin:0;padding:0;display:grid;gap:1.3rem}
-  .cut-notes li{border-left:2px solid var(--water);padding-left:1rem}
-  .cut-notes b{display:block;font-family:var(--display);color:#fff;font-weight:600;margin-bottom:.15rem}
-  .cut-notes span{color:#AFC0C0;font-size:.98rem}
+/* Étapes */
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;counter-reset:s;margin:3rem 0 0;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:1rem}
+.steps li::before{content:counter(s);font-family:var(--d);font-stretch:125%;font-weight:700;font-size:2.6rem;line-height:1;color:var(--water);display:block;margin-bottom:.8rem}
+.steps h3{font-size:1.08rem;margin-bottom:.4rem}.steps p{margin:0;color:var(--soft);font-size:.98rem}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
 
-  /* Étapes */
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;counter-reset:s;margin:0;padding:0;list-style:none}
-  .steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:1rem}
-  .steps li::before{content:counter(s);font-family:var(--display);font-stretch:125%;font-weight:700;font-size:2.4rem;line-height:1;color:var(--water);display:block;margin-bottom:.8rem}
-  .steps h3{font-family:var(--display);font-size:1.08rem;margin:0 0 .4rem;font-weight:600}
-  .steps p{margin:0;color:var(--ink-soft);font-size:.98rem}
+/* Estimateur */
+.estimate{background:var(--deep);color:#e7f2f3;position:relative;overflow:hidden}
+.estimate h2{color:#fff}.estimate .lede{color:#9fc0c4}
+.est-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,5rem);align-items:start;position:relative;z-index:1}
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.25rem,3vw,2rem)}
+.progress{height:3px;background:rgba(255,255,255,.1);margin-bottom:1.5rem;overflow:hidden}.progress i{display:block;height:100%;background:var(--foam);transform-origin:left;transform:scaleX(.2);transition:transform .6s cubic-bezier(.16,1,.3,1)}
+fieldset{border:0;margin:0;padding:0}legend{font-family:var(--d);font-weight:600;font-size:1.25rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem .95rem;cursor:pointer;font-family:var(--d);font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:#93b4b8;font-size:.8rem;margin-top:.2rem}
+.choice input:checked+label{border-color:var(--foam);background:rgba(191,233,236,.08)}
+.choice input:focus-visible+label{outline:3px solid var(--foam);outline-offset:2px}
+.step-anim{animation:in .55s cubic-bezier(.16,1,.3,1)}@keyframes in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.range{font-family:var(--d);font-stretch:115%;font-weight:700;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.02em;color:#fff;font-variant-numeric:tabular-nums;margin:.2rem 0 .6rem}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-family:var(--d);font-size:.88rem}
+.field input{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.06);color:#fff}
+.note{font-size:.85rem;color:#86a7ab;margin-top:1rem}
+[hidden]{display:none!important}
 
-  /* Estimateur */
-  .estimate{background:var(--white);border-block:1px solid var(--line)}
-  .est-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(2rem,5vw,5rem);align-items:start}
-  .est-panel{border:1px solid var(--line);border-radius:10px;background:var(--concrete);padding:clamp(1.25rem,3vw,2rem)}
-  .progress{height:4px;background:var(--concrete-2);border-radius:2px;margin-bottom:1.5rem;overflow:hidden}
-  .progress i{display:block;height:100%;width:20%;background:var(--water);transition:width .3s ease}
-  fieldset{border:0;margin:0;padding:0}
-  legend{font-family:var(--display);font-weight:600;font-size:1.2rem;margin-bottom:1rem;padding:0}
-  .choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
-  .choice{position:relative}
-  .choice input{position:absolute;opacity:0;inset:0}
-  .choice label{display:block;height:100%;border:1.5px solid var(--line);border-radius:8px;padding:.85rem .95rem;background:var(--white);cursor:pointer;font-family:var(--display);font-size:.95rem;line-height:1.3}
-  .choice label small{display:block;color:var(--ink-soft);font-size:.8rem;margin-top:.2rem;font-weight:400}
-  .choice input:checked + label{border-color:var(--water);box-shadow:inset 0 0 0 1px var(--water)}
-  .choice input:focus-visible + label{outline:3px solid var(--water);outline-offset:2px}
-  .est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
-  .result{font-family:var(--display)}
-  .result .range{font-stretch:112%;font-weight:700;font-size:clamp(1.8rem,3.5vw,2.5rem);letter-spacing:-.02em;margin:.2rem 0 .6rem}
-  .result p{font-family:var(--text);color:var(--ink-soft);margin:0 0 1.2rem}
-  .field{display:grid;gap:.3rem;margin-bottom:.8rem}
-  .field label{font-family:var(--display);font-size:.88rem;font-weight:600}
-  .field input{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid var(--line);border-radius:6px;background:var(--white)}
-  .demo-note{font-size:.85rem;color:var(--ink-soft);margin-top:1rem}
-  [hidden]{display:none!important}
+/* Avis + contact */
+.reviews{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:2.5rem 0}
+.score{font-family:var(--d);font-stretch:125%;font-weight:700;font-size:4.2rem;line-height:1}.score small{display:block;font-size:.85rem;font-stretch:100%;font-weight:400;color:var(--soft)}
+.stars{color:#B8862B}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.bigtel{font-family:var(--d);font-stretch:120%;font-weight:700;font-size:clamp(2.2rem,5vw,3.8rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem}
+footer.site{border-top:1px solid var(--line);padding:2rem 0 6rem;font-family:var(--d);font-size:.85rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
-  /* Avis */
-  .reviews-band{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;border:1px solid var(--line);border-radius:10px;padding:2rem;background:var(--white)}
-  .score{font-family:var(--display);font-stretch:125%;font-weight:700;font-size:3.6rem;line-height:1}
-  .score small{display:block;font-size:.85rem;font-stretch:100%;font-weight:400;color:var(--ink-soft);margin-top:.4rem}
+/* Grall Studio */
+.studio{background:#DCE3E1;border-top:6px solid var(--water);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid #B9C4C1}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid #B9C4C1}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--white);border:1px solid #B9C4C1;border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:#e7f2f3;border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--water);font-weight:600}.offer.rec .tag{color:var(--foam)}
+.offer h3{font-stretch:110%;font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
 
-  /* Contact */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
-  .big-tel{font-family:var(--display);font-stretch:118%;font-weight:700;font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-.02em;text-decoration:none;display:inline-block;margin:.4rem 0 1rem}
-  footer.site{border-top:1px solid var(--line);padding:2rem 0 6rem;font-family:var(--display);font-size:.85rem;color:var(--ink-soft)}
-  footer.site .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-
-  /* Partie Grall Studio */
-  .studio{background:#DCE3E1;border-top:6px solid var(--water);padding:clamp(3.5rem,7vw,6rem) 0}
-  .studio h2{max-width:26ch}
-  .audit{list-style:none;margin:0 0 3.5rem;padding:0;display:grid;gap:0;border-top:1px solid #B9C4C1}
-  .audit li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;padding:1.1rem 0;border-bottom:1px solid #B9C4C1}
-  .audit .now{color:var(--ink-soft)}
-  .audit .now b,.audit .then b{display:block;font-family:var(--display);font-size:.8rem;font-weight:600;color:var(--ink);margin-bottom:.15rem}
-  .offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
-  .offer{background:var(--white);border:1px solid #B9C4C1;border-radius:10px;padding:1.6rem}
-  .offer.recommended{border:2px solid var(--water)}
-  .offer h3{font-family:var(--display);font-stretch:110%;margin:0 0 .2rem;font-size:1.3rem}
-  .offer .tag{font-family:var(--display);font-size:.8rem;color:var(--water);font-weight:600}
-  .offer .price{font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.02em;margin:.6rem 0 0}
-  .offer .alt{font-family:var(--display);font-size:.88rem;color:var(--ink-soft);margin:0 0 1rem}
-  .offer ul{margin:0;padding-left:1.1rem;font-size:.97rem}
-  .studio-cta{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
-  .studio-cta p{margin:0;font-size:.95rem;color:var(--ink-soft);max-width:40rem}
-
-  /* Barre mobile */
-  .mobile-bar{display:none}
-
-  @media (max-width:960px){
-    nav.main{display:none}
-    .hero{grid-template-columns:1fr;max-height:none;min-height:0}
-    .hero-img{aspect-ratio:4/3}
-    .cut-grid,.est-grid,.contact-grid{grid-template-columns:1fr}
-    .steps{grid-template-columns:1fr 1fr}
-    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
-    .g1{grid-column:span 2;grid-row:span 1}.g2,.g3,.g4,.g5{grid-column:span 1;grid-row:span 1}
-    .offers{grid-template-columns:1fr}
-  }
-  @media (max-width:640px){
-    .head-actions .btn,.head-actions .tel{display:none}
-    .facts{grid-template-columns:1fr 1fr}
-    .steps{grid-template-columns:1fr}
-    .choices{grid-template-columns:1fr}
-    .reviews-band{grid-template-columns:1fr}
-    .audit li{grid-template-columns:1fr;gap:.6rem}
-    .mobile-bar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:30;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(251,252,251,.97);border-top:1px solid var(--line)}
-    .mobile-bar .btn{padding:.85rem .5rem}
-  }
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .cut-grid,.est-grid,.contact{grid-template-columns:1fr}
+ .cut{height:300vh}.cut h2{font-size:1.8rem}.cut .lede{display:none}
+ .steps{grid-template-columns:1fr 1fr}.offers{grid-template-columns:1fr}
+ .card{width:82vw}.facts{top:auto;bottom:8rem}
+}
+@media (max-width:600px){
+ .hnav .btn{display:none}.steps,.choices{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}.audit li{grid-template-columns:1fr;gap:.5rem}
+ .steps-live li:not(.on){display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(6,34,43,.92);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.cut,.hgal{height:auto}.reveal .stick,.cut .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+}
 </style>
 </head>
 <body>
+<div class="proof"><div class="wrap"><span>Maquette préparée pour Piscines Logintec par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><a href="#grall-studio">Voir la proposition</a></div></div>
 
-<div class="proof-banner" role="note">
-  <div class="wrap">
-    <span>Maquette préparée pour Piscines Logintec par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span>
-    <a href="#grall-studio">Voir la proposition</a>
-  </div>
-</div>
-
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="#top">Logintec<small>Piscines en béton armé</small></a>
-    <nav class="main" aria-label="Navigation principale">
-      <a href="#realisations">Réalisations</a>
-      <a href="#structure">Notre méthode</a>
-      <a href="#projet">Votre projet</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="head-actions">
-      <div class="lang" role="group" aria-label="Langue">
-        <button type="button" aria-pressed="true" data-lang="fr">FR</button>
-        <button type="button" aria-pressed="false" data-lang="en">EN</button>
-        <button type="button" aria-pressed="false" data-lang="it">IT</button>
-      </div>
-      <a class="tel" href="tel:+33469001795">04 69 00 17 95</a>
-      <a class="btn" href="#estimateur">Estimer mon projet</a>
-    </div>
-  </div>
-</header>
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top">Logintec</a>
+ <nav class="hnav" aria-label="Navigation">
+  <a class="nl" href="#realisations">Réalisations</a><a class="nl" href="#methode">Méthode</a><a class="nl" href="#estimateur">Votre projet</a>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button><button type="button" aria-pressed="false" data-l="it">IT</button></div>
+  <a class="btn" href="#estimateur" data-i="cta1s">Estimer mon projet</a>
+ </nav>
+</div></header>
 
 <main id="top">
-  <div class="hero">
-    <figure class="hero-img" style="margin:0">
-      <img src="https://www.piscines-logintec.com/public/img/big/BASSINETSPAjpg_641f0f3ce22320.38900716.jpg" alt="Couloir de nage de 15 mètres prolongé d'un spa débordant en pierre naturelle, dans une villa à Cannes" fetchpriority="high">
-      <figcaption>Couloir de nage de 15 m et spa débordant en pierre taillée, Cannes</figcaption>
-    </figure>
-    <div class="hero-copy">
-      <h1 data-i18n="h1">Des piscines en béton armé, calculées par un ingénieur.</h1>
-      <p class="lede" data-i18n="lede">Couloirs de nage, débordements, bassins miroirs et rénovations, de Menton à Saint-Tropez. Nous construisons chaque bassin nous-mêmes, sans sous-traitance, avec un seul interlocuteur du premier croquis à la mise en eau.</p>
-      <div class="hero-ctas">
-        <a class="btn" href="#estimateur" data-i18n="cta1">Estimer mon projet en 1 minute</a>
-        <a class="btn ghost" href="#realisations" data-i18n="cta2">Voir les réalisations</a>
-      </div>
-      <div class="facts">
-        <div><b>2 000+</b><span>bassins construits</span></div>
-        <div><b>25 ans</b><span>de béton armé</span></div>
-        <div><b><span class="stars" aria-hidden="true">★★★★★</span> 5,0</b><span>13 avis Google</span></div>
-      </div>
-    </div>
+<section class="hero" aria-label="Accueil">
+ <canvas id="water" aria-hidden="true"></canvas>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">Des piscines</span></span><span class="ln"><span data-i="h1b">en béton armé,</span></span><span class="ln"><span data-i="h1c">calculées par un ingénieur.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Couloirs de nage, débordements, bassins miroirs et rénovations, de Menton à Saint-Tropez. Construits par nos équipes, sans sous-traitance.</p>
+   <div class="hero-ctas"><a class="btn" href="#estimateur" data-i="cta1">Estimer mon projet en 1 minute</a><a class="btn ghost" href="tel:+33469001795">04 69 00 17 95</a></div>
   </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true">Défiler</div>
+</section>
 
-  <section id="realisations">
-    <div class="wrap">
-      <h2>Chaque terrain pose une question différente.</h2>
-      <p class="intro">Sol argileux, pente, cave voûtée d'une demeure classée : nos réalisations commencent toujours par un problème de structure, et finissent par un bassin dont on ne voit que l'eau.</p>
-      <div class="gallery">
-        <figure class="g1">
-          <img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/PIERREDEBALIDEBORDEMENTVOLETjpg_641f0f551342d2.96306708.jpg" alt="Piscine à débordement en pierre de Bali avec plage immergée et volet, à Antibes">
-          <figcaption><strong>Débordement en pierre de Bali</strong>Plage immergée et volet intégré, Antibes</figcaption>
-        </figure>
-        <figure class="g2">
-          <img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/miroir3jpghotelstpaul1807jpg_64b957244567b9.34993855.jpg" alt="Piscine miroir à Saint-Paul-de-Vence">
-          <figcaption><strong>Bassin miroir sur poteaux</strong>Fondé dans un sol argileux, Saint-Paul-de-Vence</figcaption>
-        </figure>
-        <figure class="g3">
-          <img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/piscinevuesurmerjpg_64b6b0e3c52d14.25747777.jpg" alt="Piscine avec vue sur la mer à Mandelieu">
-          <figcaption><strong>Vue mer</strong>Mandelieu-la-Napoule</figcaption>
-        </figure>
-        <figure class="g4">
-          <img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/BASSINDENAGEDEBORDANTjpg_641f0f6fb1fe47.93742937.jpg" alt="Bassin de nage débordant à Aix-en-Provence">
-          <figcaption><strong>Bassin de nage débordant</strong>Aix-en-Provence</figcaption>
-        </figure>
-        <figure class="g5">
-          <img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/EMAUXVERTSPAILLETESORjpg_645fb7e6ab8189.00267205.jpg" alt="Piscine en émaux verts pailletés d'or à Vallauris">
-          <figcaption><strong>Émaux verts pailletés d'or</strong>Vallauris</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
+<section class="reveal" id="realisations" aria-label="Réalisation phare">
+ <div class="stick">
+  <figure id="rv"><img src="https://www.piscines-logintec.com/public/img/big/BASSINETSPAjpg_641f0f3ce22320.38900716.jpg" alt="Couloir de nage de 15 mètres prolongé d'un spa débordant en pierre naturelle, villa à Cannes"></figure>
+  <div class="cap"><b>Couloir de nage de 15 m, spa débordant en pierre taillée.</b><span>Villa à Cannes</span></div>
+  <div class="facts" id="facts"><div><b data-to="2000" data-suf="+">0</b><span>bassins construits</span></div><div><b data-to="25" data-suf=" ans">0</b><span>de béton armé</span></div><div><b data-to="5" data-dec="1" data-suf="">0</b><span><span class="stars">★★★★★</span> 13 avis Google</span></div></div>
+ </div>
+</section>
 
-  <section id="structure" class="section-cut">
-    <div class="wrap">
-      <h2>Ce qui ne se voit pas doit tenir trente ans.</h2>
-      <p class="intro">Notre dirigeant a été ingénieur travaux dans un major du BTP puis en bureau d'études de structures. Les calculs sont faits en interne, avant le premier coup de pelle.</p>
-      <div class="cut-grid">
-        <figure class="cut" style="margin:0">
-          <svg viewBox="0 0 760 380" role="img" aria-labelledby="cutTitle">
-            <title id="cutTitle">Coupe d'une piscine monobloc en béton armé reposant sur des micropieux dans un sol argileux</title>
-            <defs>
-              <pattern id="clay" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
-                <line x1="0" y1="0" x2="0" y2="14" stroke="#3A4A4F" stroke-width="1"/>
-              </pattern>
-              <pattern id="rebar" width="18" height="18" patternUnits="userSpaceOnUse">
-                <circle cx="9" cy="9" r="1.6" fill="#E4EBEA"/>
-              </pattern>
-            </defs>
-            <!-- terrain -->
-            <rect x="0" y="120" width="570" height="260" fill="url(#clay)"/>
-            <line x1="0" y1="120" x2="570" y2="120" stroke="#8E9C8F" stroke-width="2"/>
-            <!-- plage -->
-            <rect x="20" y="108" width="90" height="12" fill="#8E9C8F"/>
-            <rect x="530" y="108" width="40" height="12" fill="#8E9C8F"/>
-            <!-- coque béton -->
-            <path d="M110 108 H530 V250 H110 Z" fill="none"/>
-            <path d="M96 108 H124 V236 H516 V108 H544 V264 H96 Z" fill="#6E7C80"/>
-            <path d="M96 108 H124 V236 H516 V108 H544 V264 H96 Z" fill="url(#rebar)" opacity=".7"/>
-            <!-- eau -->
-            <path d="M124 122 H516 V236 H124 Z" fill="#1F7A86"/>
-            <path d="M124 122 q24 -6 49 0 t49 0 t49 0 t49 0 t49 0 t49 0 t49 0 t49 0" fill="none" stroke="#7FC1C8" stroke-width="2"/>
-            <!-- micropieux -->
-            <g fill="#AFC0C0">
-              <rect x="140" y="264" width="10" height="100"/>
-              <rect x="250" y="264" width="10" height="100"/>
-              <rect x="380" y="264" width="10" height="100"/>
-              <rect x="490" y="264" width="10" height="100"/>
-            </g>
-            <line x1="0" y1="352" x2="570" y2="352" stroke="#AFC0C0" stroke-dasharray="4 6"/>
-            <!-- annotations -->
-            <g font-family="Archivo, sans-serif" font-size="13" fill="#E4EBEA">
-              <text x="200" y="185">Bassin monobloc en béton armé</text>
-              <line x1="544" y1="250" x2="575" y2="250" stroke="#E4EBEA"/>
-              <text x="582" y="246">Radier et voiles</text>
-              <text x="582" y="262">coulés d'un seul tenant</text>
-              <line x1="500" y1="320" x2="575" y2="320" stroke="#E4EBEA"/>
-              <text x="582" y="316">Micropieux jusqu'au</text>
-              <text x="582" y="332">sol porteur</text>
-              <text x="12" y="300" fill="#AFC0C0">Argile gonflante</text>
-              <text x="12" y="372" fill="#AFC0C0">Sol porteur</text>
-            </g>
-          </svg>
-        </figure>
-        <ul class="cut-notes">
-          <li><b>Structure monobloc</b><span>Radier et murs forment une seule pièce de béton armé, sans joint entre le fond et les parois.</span></li>
-          <li><b>Fondations spéciales</b><span>Micropieux et radiers renforcés sur les sols argileux et les terrains en pente.</span></li>
-          <li><b>Aucune sous-traitance</b><span>Génie civil, maçonnerie et plomberie réalisés par nos équipes.</span></li>
-          <li><b>Garantie décennale</b><span>Tous nos ouvrages sont assurés auprès de la SMABTP.</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<section class="cut" id="methode" aria-label="Notre méthode">
+ <div class="stick"><div class="wrap cut-grid">
+  <svg viewBox="0 0 760 400" role="img" aria-label="Coupe animée d'une piscine monobloc en béton armé sur micropieux">
+   <defs>
+    <pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><line x1="0" y1="0" x2="0" y2="12" stroke="#33474d" stroke-width="1"/></pattern>
+    <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2AA3AE"/><stop offset="1" stop-color="#0E4F5C"/></linearGradient>
+    <clipPath id="wclip"><rect id="wrect" x="124" y="250" width="392" height="0"/></clipPath>
+   </defs>
+   <g id="ground" opacity="0"><rect x="0" y="120" width="600" height="270" fill="url(#hatch)"/><line x1="0" y1="120" x2="600" y2="120" stroke="#8E9C8F" stroke-width="2"/><text x="10" y="300" font-family="Archivo" font-size="13" fill="#7f9599">Argile gonflante</text></g>
+   <g id="piles" fill="#AFC0C0">
+    <rect x="140" y="264" width="10" height="100"/><rect x="250" y="264" width="10" height="100"/><rect x="380" y="264" width="10" height="100"/><rect x="490" y="264" width="10" height="100"/>
+   </g>
+   <line id="bed" x1="0" y1="364" x2="600" y2="364" stroke="#AFC0C0" stroke-dasharray="4 6" opacity="0"/>
+   <path id="shell" d="M96 108 H124 V236 H516 V108 H544 V264 H96 Z" fill="#5E6E72" fill-opacity="0" stroke="#E4ECEC" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <g id="rebar" opacity="0" fill="#E4ECEC"></g>
+   <g clip-path="url(#wclip)"><rect x="124" y="122" width="392" height="114" fill="url(#wg)"/><path id="wave" d="M124 124 q24 -6 49 0 t49 0 t49 0 t49 0 t49 0 t49 0 t49 0 t49 0" fill="none" stroke="#BFE9EC" stroke-width="2"/></g>
+   <g font-family="Archivo" font-size="13" fill="#E4ECEC">
+    <g class="lbl" opacity="0"><line x1="544" y1="250" x2="580" y2="250" stroke="#E4ECEC"/><text x="588" y="246">Radier et voiles</text><text x="588" y="262">coulés d'un seul tenant</text></g>
+    <g class="lbl" opacity="0"><line x1="500" y1="330" x2="580" y2="330" stroke="#E4ECEC"/><text x="588" y="326">Micropieux jusqu'au</text><text x="588" y="342">sol porteur</text></g>
+    <g class="lbl" opacity="0"><text x="250" y="190" fill="#fff">Bassin monobloc</text></g>
+   </g>
+  </svg>
+  <div>
+   <h2>Ce qui ne se voit pas doit tenir trente ans.</h2>
+   <p class="lede">Notre dirigeant a été ingénieur travaux dans un major du BTP puis en bureau d'études de structures. Chaque bassin est calculé en interne avant le premier coup de pelle.</p>
+   <ol class="steps-live" id="live">
+    <li><b>Étude du sol</b><span>Argile, pente, accès : on part du terrain.</span></li>
+    <li><b>Fondations spéciales</b><span>Micropieux jusqu'au sol porteur quand il le faut.</span></li>
+    <li><b>Structure monobloc</b><span>Radier et murs en une seule pièce de béton armé.</span></li>
+    <li><b>Mise en eau</b><span>Garantie décennale SMABTP, aucune sous-traitance.</span></li>
+   </ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
 
-  <section id="projet">
-    <div class="wrap">
-      <h2>Votre projet, du croquis à la mise en eau.</h2>
-      <p class="intro">Vous n'avez qu'un interlocuteur, et c'est celui qui calcule votre bassin.</p>
-      <ol class="steps">
-        <li><h3>Étude de faisabilité</h3><p>Visite du terrain, contraintes du sol et de l'accès, premières esquisses avec notre cabinet d'architectes partenaire.</p></li>
-        <li><h3>Démarches et calculs</h3><p>Déclaration préalable ou permis pris en charge. Calcul de structure réalisé en interne.</p></li>
-        <li><h3>Construction</h3><p>Terrassement, ferraillage, béton, étanchéité et revêtement par nos propres équipes.</p></li>
-        <li><h3>Mise en eau et suivi</h3><p>Réglage de la filtration et de la domotique, puis entretien si vous le souhaitez.</p></li>
-      </ol>
-    </div>
-  </section>
+<section class="hgal" aria-label="Réalisations">
+ <div class="stick">
+  <div class="wrap head"><h2>Chaque terrain pose une question différente.</h2><span class="count" id="gcount">01 / 05</span></div>
+  <div class="track" id="track">
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/PIERREDEBALIDEBORDEMENTVOLETjpg_641f0f551342d2.96306708.jpg" alt="Débordement en pierre de Bali avec plage immergée, Antibes"></div><figcaption><b>Débordement en pierre de Bali, plage immergée</b><span>Antibes</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/miroir3jpghotelstpaul1807jpg_64b957244567b9.34993855.jpg" alt="Bassin miroir, Saint-Paul-de-Vence"></div><figcaption><b>Bassin miroir fondé sur poteaux</b><span>Saint-Paul-de-Vence</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/piscinevuesurmerjpg_64b6b0e3c52d14.25747777.jpg" alt="Piscine vue mer, Mandelieu"></div><figcaption><b>Vue mer</b><span>Mandelieu-la-Napoule</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/BASSINDENAGEDEBORDANTjpg_641f0f6fb1fe47.93742937.jpg" alt="Bassin de nage débordant, Aix-en-Provence"></div><figcaption><b>Bassin de nage débordant</b><span>Aix-en-Provence</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://www.piscines-logintec.com/public/img/big/EMAUXVERTSPAILLETESORjpg_645fb7e6ab8189.00267205.jpg" alt="Émaux verts pailletés d'or, Vallauris"></div><figcaption><b>Émaux verts pailletés d'or</b><span>Vallauris</span></figcaption></figure>
+  </div>
+ </div>
+</section>
 
-  <section id="estimateur" class="estimate">
-    <div class="wrap est-grid">
-      <div>
-        <h2>Une première fourchette avant même de nous appeler.</h2>
-        <p class="intro">Quatre questions, une minute. Vous obtenez un ordre de grandeur, et nous recevons un projet déjà décrit, ce qui nous permet de vous rappeler avec des réponses précises.</p>
-      </div>
-      <div class="est-panel" aria-live="polite">
-        <div class="progress" aria-hidden="true"><i id="bar"></i></div>
-        <form id="est" novalidate>
-          <fieldset data-step="1">
-            <legend>Quel projet avez-vous ?</legend>
-            <div class="choices">
-              <div class="choice"><input type="radio" name="type" id="t1" value="classique" checked><label for="t1">Piscine sur mesure<small>Forme libre ou rectangulaire</small></label></div>
-              <div class="choice"><input type="radio" name="type" id="t2" value="couloir"><label for="t2">Couloir de nage<small>12 à 25 m</small></label></div>
-              <div class="choice"><input type="radio" name="type" id="t3" value="debordement"><label for="t3">Débordement ou miroir<small>Bord invisible</small></label></div>
-              <div class="choice"><input type="radio" name="type" id="t4" value="renovation"><label for="t4">Rénovation<small>Fuite, fissure, revêtement</small></label></div>
-            </div>
-          </fieldset>
-          <fieldset data-step="2" hidden>
-            <legend>Quelle surface d'eau ?</legend>
-            <div class="choices">
-              <div class="choice"><input type="radio" name="size" id="s1" value="0.85"><label for="s1">Moins de 30 m²</label></div>
-              <div class="choice"><input type="radio" name="size" id="s2" value="1" checked><label for="s2">30 à 50 m²</label></div>
-              <div class="choice"><input type="radio" name="size" id="s3" value="1.35"><label for="s3">50 à 80 m²</label></div>
-              <div class="choice"><input type="radio" name="size" id="s4" value="1.8"><label for="s4">Plus de 80 m²</label></div>
-            </div>
-          </fieldset>
-          <fieldset data-step="3" hidden>
-            <legend>Quelle finition ?</legend>
-            <div class="choices">
-              <div class="choice"><input type="radio" name="finish" id="f1" value="1" checked><label for="f1">Émaux<small>Mosaïque de verre</small></label></div>
-              <div class="choice"><input type="radio" name="finish" id="f2" value="1.12"><label for="f2">Pierre de Bali<small>Effet lagon naturel</small></label></div>
-              <div class="choice"><input type="radio" name="finish" id="f3" value="1.25"><label for="f3">Pierre naturelle taillée<small>Sur mesure</small></label></div>
-              <div class="choice"><input type="radio" name="finish" id="f4" value="1.06"><label for="f4">Je ne sais pas encore</label></div>
-            </div>
-          </fieldset>
-          <fieldset data-step="4" hidden>
-            <legend>Des options ou contraintes ?</legend>
-            <div class="choices">
-              <div class="choice"><input type="checkbox" name="opt" id="o1" data-min="9000" data-max="14000"><label for="o1">Volet immergé</label></div>
-              <div class="choice"><input type="checkbox" name="opt" id="o2" data-min="12000" data-max="20000"><label for="o2">Spa intégré</label></div>
-              <div class="choice"><input type="checkbox" name="opt" id="o3" data-min="4000" data-max="7000"><label for="o3">Chauffage</label></div>
-              <div class="choice"><input type="checkbox" name="opt" id="o4" data-min="8000" data-max="25000"><label for="o4">Terrain en pente ou argileux</label></div>
-            </div>
-          </fieldset>
-          <div data-step="5" hidden class="result">
-            <div>Ordre de grandeur pour votre projet</div>
-            <div class="range" id="range">—</div>
-            <p>Laissez vos coordonnées : nous vous rappelons pour affiner le projet sur place.</p>
-            <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
-            <div class="field"><label for="p">Téléphone</label><input id="p" type="tel" autocomplete="tel"></div>
-            <div class="field"><label for="c">Commune du projet</label><input id="c" autocomplete="address-level2"></div>
-          </div>
-          <div data-step="6" hidden class="result">
-            <div class="range" style="font-size:1.6rem">Demande envoyée</div>
-            <p>Dans le site final, cette demande arrive directement dans votre boîte mail, avec le type de bassin, la surface, la finition, les options et la fourchette.</p>
-          </div>
-          <div class="est-nav">
-            <button type="button" class="btn ghost" id="prev" hidden>Retour</button>
-            <button type="button" class="btn" id="next" style="margin-left:auto">Continuer</button>
-          </div>
-        </form>
-        <p class="demo-note">Les fourchettes de cette maquette sont indicatives. Avant la mise en ligne, nous les calibrons avec vos vrais prix.</p>
-      </div>
-    </div>
-  </section>
+<section class="pad"><div class="wrap">
+ <h2 class="rise">Votre projet, du croquis à la mise en eau.</h2>
+ <ol class="steps">
+  <li class="rise"><h3>Étude de faisabilité</h3><p>Visite du terrain, contraintes du sol et de l'accès, esquisses avec notre cabinet d'architectes partenaire.</p></li>
+  <li class="rise"><h3>Démarches et calculs</h3><p>Démarches administratives prises en charge, calcul de structure en interne.</p></li>
+  <li class="rise"><h3>Construction</h3><p>Terrassement, ferraillage, béton, étanchéité et revêtement par nos équipes.</p></li>
+  <li class="rise"><h3>Mise en eau et suivi</h3><p>Réglage de la filtration et de la domotique, puis entretien si vous le souhaitez.</p></li>
+ </ol>
+</div></section>
 
-  <section>
-    <div class="wrap">
-      <div class="reviews-band">
-        <div class="score">5,0<small><span class="stars" aria-hidden="true">★★★★★</span> 13 avis Google</small></div>
-        <p style="margin:0;max-width:44rem">Vos clients parlent de la qualité d'exécution, de vos conseils et de votre disponibilité après la mise en eau. Dans le site final, vos avis Google s'affichent ici en entier et se mettent à jour automatiquement.</p>
-      </div>
-    </div>
-  </section>
+<section class="pad estimate" id="estimateur"><div class="wrap est-grid">
+ <div><h2>Une première fourchette avant même de nous appeler.</h2><p class="lede" style="margin-top:1rem">Quatre questions, une minute. Vous obtenez un ordre de grandeur, et nous recevons un projet déjà décrit.</p></div>
+ <div class="panel" aria-live="polite">
+  <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+  <form id="est" novalidate>
+   <fieldset data-s><legend>Quel projet avez-vous ?</legend><div class="choices">
+    <div class="choice"><input type="radio" name="type" id="t1" value="classique" checked><label for="t1">Piscine sur mesure<small>Forme libre ou rectangulaire</small></label></div>
+    <div class="choice"><input type="radio" name="type" id="t2" value="couloir"><label for="t2">Couloir de nage<small>12 à 25 m</small></label></div>
+    <div class="choice"><input type="radio" name="type" id="t3" value="debordement"><label for="t3">Débordement ou miroir<small>Bord invisible</small></label></div>
+    <div class="choice"><input type="radio" name="type" id="t4" value="renovation"><label for="t4">Rénovation<small>Fuite, fissure, revêtement</small></label></div></div></fieldset>
+   <fieldset data-s hidden><legend>Quelle surface d'eau ?</legend><div class="choices">
+    <div class="choice"><input type="radio" name="size" id="s1" value=".85"><label for="s1">Moins de 30 m²</label></div>
+    <div class="choice"><input type="radio" name="size" id="s2" value="1" checked><label for="s2">30 à 50 m²</label></div>
+    <div class="choice"><input type="radio" name="size" id="s3" value="1.35"><label for="s3">50 à 80 m²</label></div>
+    <div class="choice"><input type="radio" name="size" id="s4" value="1.8"><label for="s4">Plus de 80 m²</label></div></div></fieldset>
+   <fieldset data-s hidden><legend>Quelle finition ?</legend><div class="choices">
+    <div class="choice"><input type="radio" name="fin" id="f1" value="1" checked><label for="f1">Émaux<small>Mosaïque de verre</small></label></div>
+    <div class="choice"><input type="radio" name="fin" id="f2" value="1.12"><label for="f2">Pierre de Bali<small>Effet lagon</small></label></div>
+    <div class="choice"><input type="radio" name="fin" id="f3" value="1.25"><label for="f3">Pierre naturelle taillée</label></div>
+    <div class="choice"><input type="radio" name="fin" id="f4" value="1.06"><label for="f4">Je ne sais pas encore</label></div></div></fieldset>
+   <fieldset data-s hidden><legend>Des options ou contraintes ?</legend><div class="choices">
+    <div class="choice"><input type="checkbox" name="opt" id="o1" data-a="9000" data-b="14000"><label for="o1">Volet immergé</label></div>
+    <div class="choice"><input type="checkbox" name="opt" id="o2" data-a="12000" data-b="20000"><label for="o2">Spa intégré</label></div>
+    <div class="choice"><input type="checkbox" name="opt" id="o3" data-a="4000" data-b="7000"><label for="o3">Chauffage</label></div>
+    <div class="choice"><input type="checkbox" name="opt" id="o4" data-a="8000" data-b="25000"><label for="o4">Terrain en pente ou argileux</label></div></div></fieldset>
+   <div data-s hidden><div style="font-family:var(--d)">Ordre de grandeur pour votre projet</div><div class="range" id="range">—</div>
+    <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
+    <div class="field"><label for="p">Téléphone</label><input id="p" type="tel" autocomplete="tel"></div>
+    <div class="field"><label for="c">Commune du projet</label><input id="c" autocomplete="address-level2"></div></div>
+   <div data-s hidden><div class="range" style="font-size:1.7rem">Demande envoyée</div><p style="color:#9fc0c4">Dans le site final, cette demande arrive directement dans votre boîte mail, avec le type de bassin, la surface, la finition, les options et la fourchette.</p></div>
+   <div class="est-nav"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn" id="next" style="margin-left:auto">Continuer</button></div>
+  </form>
+  <p class="note">Fourchettes indicatives de démonstration, calibrées avec vos vrais prix avant la mise en ligne.</p>
+ </div>
+</div></section>
 
-  <section id="contact" style="padding-top:0">
-    <div class="wrap contact-grid">
-      <div>
-        <h2>Parlons de votre terrain.</h2>
-        <a class="big-tel" href="tel:+33469001795">04 69 00 17 95</a>
-        <p style="margin:0;color:var(--ink-soft)">4591 route de Grasse, 06140 Tourrettes-sur-Loup<br>Du lundi au vendredi, de 8 h à 18 h</p>
-      </div>
-      <div>
-        <p style="color:var(--ink-soft);margin-top:0">Nous intervenons dans toutes les Alpes-Maritimes, dans le Var et les Bouches-du-Rhône : Nice, Cannes, Antibes, Mougins, Grasse, Vence, Saint-Paul-de-Vence, Mandelieu, Saint-Tropez, Aix-en-Provence.</p>
-        <a class="btn" href="#estimateur">Estimer mon projet</a>
-      </div>
-    </div>
-  </section>
+<section class="pad"><div class="wrap">
+ <div class="reviews rise"><div class="score">5,0<small><span class="stars">★★★★★</span> 13 avis Google</small></div><p style="margin:0;max-width:44rem">Vos clients parlent de la qualité d'exécution, de vos conseils et de votre disponibilité après la mise en eau. Dans le site final, vos avis Google s'affichent ici en entier et se mettent à jour automatiquement.</p></div>
+ <div class="contact" style="margin-top:5rem">
+  <div><h2>Parlons de votre terrain.</h2><a class="bigtel" href="tel:+33469001795">04 69 00 17 95</a><p style="margin:0;color:var(--soft)">4591 route de Grasse, 06140 Tourrettes-sur-Loup<br>Du lundi au vendredi, de 8 h à 18 h</p></div>
+  <div><p style="color:var(--soft);margin-top:0">Alpes-Maritimes, Var et Bouches-du-Rhône : Nice, Cannes, Antibes, Mougins, Grasse, Vence, Saint-Paul-de-Vence, Mandelieu, Saint-Tropez, Aix-en-Provence.</p><a class="btn" href="#estimateur">Estimer mon projet</a></div>
+ </div>
+</div></section>
 </main>
+<footer class="site"><div class="wrap"><span>Logintec SAS, constructeur de piscines en béton armé</span><span>Garantie décennale SMABTP</span></div></footer>
 
-<footer class="site">
-  <div class="wrap">
-    <span>Logintec SAS, constructeur de piscines en béton armé</span>
-    <span>Garantie décennale SMABTP</span>
-  </div>
-</footer>
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Monsieur Logel, voici ce que nous avons relevé sur piscines-logintec.com, et ce que la nouvelle version apporte.</p>
+ <ul class="audit">
+  <li><div class="now"><b>Aujourd'hui</b>Aucun formulaire de devis : le visiteur doit écrire un email et décrire son projet seul.</div><div><b>Avec la refonte</b>Un estimateur en quatre questions, et des demandes qui arrivent déjà qualifiées.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Votre note de 5,0 sur Google n'apparaît nulle part.</div><div><b>Avec la refonte</b>La note et les avis complets, au plus près des boutons d'action.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Un site statique qui ressemble à ceux de vos concurrents.</div><div><b>Avec la refonte</b>De l'eau vivante dès l'ouverture, une coupe technique qui se construit au défilement : on comprend votre savoir-faire d'ingénieur en dix secondes.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Site en français uniquement, alors que vous construisez à Cannes, Saint-Paul et Saint-Tropez.</div><div><b>Avec la refonte</b>Versions anglaise et italienne.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Une photo de banque d'images en fond, et deux chiffres différents pour votre expérience (25 et 30 ans).</div><div><b>Avec la refonte</b>Uniquement vos réalisations, et des textes cohérents écrits pour vos clients.</div></li>
+ </ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">2 400 €</p><p class="alt">ou 0 € puis 179 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Formulaire de devis, avis Google, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en 14 jours</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">3 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Signature + estimateur de budget</li><li>FR, EN, IT</li><li>4 pages par ville</li><li>Suivi mensuel des demandes</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">6 900 €</p><p class="alt">ou 0 € puis 449 €/mois sur 24 mois</p><ul><li>Croissance + eau animée en temps réel (WebGL)</li><li>Coupe technique et galerie animées au défilement, à 120 images/s</li><li>Motion design sur mesure de vos réalisations</li><li>En ligne en 4 semaines</li></ul></div>
+ </div>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Logintec">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. −20 % pour nos cinq premiers clients. Cette maquette reste en ligne quatorze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
 
-<!-- Proposition Grall Studio -->
-<aside id="grall-studio" class="studio" aria-labelledby="gs-title">
-  <div class="wrap">
-    <h2 id="gs-title">Ce que cette maquette change par rapport à votre site actuel.</h2>
-    <p class="intro">Monsieur Logel, voici ce que nous avons relevé sur piscines-logintec.com, et ce que la nouvelle version apporte.</p>
-    <ul class="audit">
-      <li><div class="now"><b>Aujourd'hui</b>Aucun formulaire de devis : un visiteur doit ouvrir sa messagerie et décrire son projet seul.</div><div class="then"><b>Avec la refonte</b>Un estimateur en quatre questions, et des demandes qui arrivent déjà qualifiées.</div></li>
-      <li><div class="now"><b>Aujourd'hui</b>Votre note de 5,0 sur Google n'apparaît nulle part sur le site.</div><div class="then"><b>Avec la refonte</b>La note et les avis complets, au plus près des boutons d'action.</div></li>
-      <li><div class="now"><b>Aujourd'hui</b>Site en français uniquement, alors que vous construisez à Cannes, Saint-Paul et Saint-Tropez pour une clientèle souvent étrangère.</div><div class="then"><b>Avec la refonte</b>Versions anglaise et italienne.</div></li>
-      <li><div class="now"><b>Aujourd'hui</b>Des titres écrits pour Google (« Alpes Maritimes 06 et région PACA » répété) et deux chiffres différents pour votre expérience, 25 et 30 ans.</div><div class="then"><b>Avec la refonte</b>Des textes écrits pour vos clients, et un référencement local porté par des pages ville par ville.</div></li>
-      <li><div class="now"><b>Aujourd'hui</b>Une photo de banque d'images en fond, alors que vos propres bassins sont plus beaux.</div><div class="then"><b>Avec la refonte</b>Uniquement vos réalisations, en grand.</div></li>
-    </ul>
+<div class="mbar"><a class="btn ghost" href="tel:+33469001795">Appeler</a><a class="btn" href="#estimateur">Estimer</a></div>
 
-    <div class="offers">
-      <div class="offer">
-        <h3>Signature</h3>
-        <p class="price">2 400 €</p>
-        <p class="alt">ou 0 € à la commande puis 179 €/mois sur 24 mois, maintenance incluse</p>
-        <ul>
-          <li>Refonte complète, jusqu'à 6 pages, français et anglais</li>
-          <li>Formulaire de devis, avis Google, barre d'appel sur mobile</li>
-          <li>Référencement local et fiche Google optimisée</li>
-          <li>En ligne en 14 jours</li>
-        </ul>
-      </div>
-      <div class="offer recommended">
-        <span class="tag">Recommandée pour Logintec</span>
-        <h3>Croissance</h3>
-        <p class="price">3 900 €</p>
-        <p class="alt">ou 0 € à la commande puis 279 €/mois sur 24 mois, maintenance incluse</p>
-        <ul>
-          <li>Tout Signature, plus l'estimateur de budget de cette maquette</li>
-          <li>Français, anglais et italien</li>
-          <li>4 pages par ville : Cannes, Antibes, Mougins, Saint-Paul-de-Vence</li>
-          <li>Suivi mensuel des demandes reçues, en ligne en 21 jours</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="studio-cta">
-      <a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Logintec">Je veux ce site</a>
-      <p>Prix nets. Le solde n'est dû qu'une fois le site validé. −20 % pour nos cinq premiers clients. Cette maquette reste en ligne quatorze jours. Pierre Grall, Grall Studio.</p>
-    </div>
-  </div>
-</aside>
-
-<div class="mobile-bar">
-  <a class="btn ghost" href="tel:+33469001795">Appeler</a>
-  <a class="btn" href="#estimateur">Estimer</a>
-</div>
-
+<script>!function(t,i){"object"==typeof exports&&"undefined"!=typeof module?module.exports=i():"function"==typeof define&&define.amd?define(i):(t="undefined"!=typeof globalThis?globalThis:t||self).Lenis=i()}(this,(function(){"use strict";function clamp(t,i,e){return Math.max(t,Math.min(i,e))}class Animate{constructor(){this.isRunning=!1,this.value=0,this.from=0,this.to=0,this.currentTime=0}advance(t){var i;if(!this.isRunning)return;let e=!1;if(this.duration&&this.easing){this.currentTime+=t;const i=clamp(0,this.currentTime/this.duration,1);e=i>=1;const s=e?1:this.easing(i);this.value=this.from+(this.to-this.from)*s}else this.lerp?(this.value=function damp(t,i,e,s){return function lerp(t,i,e){return(1-e)*t+e*i}(t,i,1-Math.exp(-e*s))}(this.value,this.to,60*this.lerp,t),Math.round(this.value)===this.to&&(this.value=this.to,e=!0)):(this.value=this.to,e=!0);e&&this.stop(),null===(i=this.onUpdate)||void 0===i||i.call(this,this.value,e)}stop(){this.isRunning=!1}fromTo(t,i,{lerp:e,duration:s,easing:o,onStart:n,onUpdate:l}){this.from=this.value=t,this.to=i,this.lerp=e,this.duration=s,this.easing=o,this.currentTime=0,this.isRunning=!0,null==n||n(),this.onUpdate=l}}class Dimensions{constructor(t,i,{autoResize:e=!0,debounce:s=250}={}){this.wrapper=t,this.content=i,this.width=0,this.height=0,this.scrollHeight=0,this.scrollWidth=0,this.resize=()=>{this.onWrapperResize(),this.onContentResize()},this.onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)},this.onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)},e&&(this.debouncedResize=function debounce(t,i){let e;return function(...s){let o=this;clearTimeout(e),e=setTimeout((()=>{e=void 0,t.apply(o,s)}),i)}}(this.resize,s),this.wrapper instanceof Window?window.addEventListener("resize",this.debouncedResize,!1):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}destroy(){var t,i;null===(t=this.wrapperResizeObserver)||void 0===t||t.disconnect(),null===(i=this.contentResizeObserver)||void 0===i||i.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener("resize",this.debouncedResize,!1)}get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}}class Emitter{constructor(){this.events={}}emit(t,...i){var e;let s=this.events[t]||[];for(let t=0,o=s.length;t<o;t++)null===(e=s[t])||void 0===e||e.call(s,...i)}on(t,i){var e;return(null===(e=this.events[t])||void 0===e?void 0:e.push(i))||(this.events[t]=[i]),()=>{var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}}off(t,i){var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}destroy(){this.events={}}}const t=100/6,i={passive:!1};class VirtualScroll{constructor(e,s={wheelMultiplier:1,touchMultiplier:1}){this.element=e,this.options=s,this.touchStart={x:0,y:0},this.lastDelta={x:0,y:0},this.window={width:0,height:0},this.emitter=new Emitter,this.onTouchStart=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:0,y:0},this.emitter.emit("scroll",{deltaX:0,deltaY:0,event:t})},this.onTouchMove=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t,s=-(i-this.touchStart.x)*this.options.touchMultiplier,o=-(e-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:s,y:o},this.emitter.emit("scroll",{deltaX:s,deltaY:o,event:t})},this.onTouchEnd=t=>{this.emitter.emit("scroll",{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:t})},this.onWheel=i=>{let{deltaX:e,deltaY:s,deltaMode:o}=i;e*=1===o?t:2===o?this.window.width:1,s*=1===o?t:2===o?this.window.height:1,e*=this.options.wheelMultiplier,s*=this.options.wheelMultiplier,this.emitter.emit("scroll",{deltaX:e,deltaY:s,event:i})},this.onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}},window.addEventListener("resize",this.onWindowResize,!1),this.onWindowResize(),this.element.addEventListener("wheel",this.onWheel,i),this.element.addEventListener("touchstart",this.onTouchStart,i),this.element.addEventListener("touchmove",this.onTouchMove,i),this.element.addEventListener("touchend",this.onTouchEnd,i)}on(t,i){return this.emitter.on(t,i)}destroy(){this.emitter.destroy(),window.removeEventListener("resize",this.onWindowResize,!1),this.element.removeEventListener("wheel",this.onWheel,i),this.element.removeEventListener("touchstart",this.onTouchStart,i),this.element.removeEventListener("touchmove",this.onTouchMove,i),this.element.removeEventListener("touchend",this.onTouchEnd,i)}}return class Lenis{constructor({wrapper:t=window,content:i=document.documentElement,eventsTarget:e=t,smoothWheel:s=!0,syncTouch:o=!1,syncTouchLerp:n=.075,touchInertiaMultiplier:l=35,duration:r,easing:h=(t=>Math.min(1,1.001-Math.pow(2,-10*t))),lerp:a=.1,infinite:c=!1,orientation:u="vertical",gestureOrientation:d="vertical",touchMultiplier:p=1,wheelMultiplier:m=1,autoResize:v=!0,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w=!1}={}){this._isScrolling=!1,this._isStopped=!1,this._isLocked=!1,this._preventNextNativeScrollEvent=!1,this._resetVelocityTimeout=null,this.time=0,this.userData={},this.lastVelocity=0,this.velocity=0,this.direction=0,this.animate=new Animate,this.emitter=new Emitter,this.onPointerDown=t=>{1===t.button&&this.reset()},this.onVirtualScroll=t=>{if("function"==typeof this.options.virtualScroll&&!1===this.options.virtualScroll(t))return;const{deltaX:i,deltaY:e,event:s}=t;if(this.emitter.emit("virtual-scroll",{deltaX:i,deltaY:e,event:s}),s.ctrlKey)return;const o=s.type.includes("touch"),n=s.type.includes("wheel");this.isTouching="touchstart"===s.type||"touchmove"===s.type;if(this.options.syncTouch&&o&&"touchstart"===s.type&&!this.isStopped&&!this.isLocked)return void this.reset();const l=0===i&&0===e,r="vertical"===this.options.gestureOrientation&&0===e||"horizontal"===this.options.gestureOrientation&&0===i;if(l||r)return;let h=s.composedPath();h=h.slice(0,h.indexOf(this.rootElement));const a=this.options.prevent;if(h.find((t=>{var i,e,s,l,r;return t instanceof HTMLElement&&("function"==typeof a&&(null==a?void 0:a(t))||(null===(i=t.hasAttribute)||void 0===i?void 0:i.call(t,"data-lenis-prevent"))||o&&(null===(e=t.hasAttribute)||void 0===e?void 0:e.call(t,"data-lenis-prevent-touch"))||n&&(null===(s=t.hasAttribute)||void 0===s?void 0:s.call(t,"data-lenis-prevent-wheel"))||(null===(l=t.classList)||void 0===l?void 0:l.contains("lenis"))&&!(null===(r=t.classList)||void 0===r?void 0:r.contains("lenis-stopped")))})))return;if(this.isStopped||this.isLocked)return void s.preventDefault();if(!(this.options.syncTouch&&o||this.options.smoothWheel&&n))return this.isScrolling="native",void this.animate.stop();s.preventDefault();let c=e;"both"===this.options.gestureOrientation?c=Math.abs(e)>Math.abs(i)?e:i:"horizontal"===this.options.gestureOrientation&&(c=i);const u=o&&this.options.syncTouch,d=o&&"touchend"===s.type&&Math.abs(c)>5;d&&(c=this.velocity*this.options.touchInertiaMultiplier),this.scrollTo(this.targetScroll+c,Object.assign({programmatic:!1},u?{lerp:d?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}))},this.onNativeScroll=()=>{if(null!==this._resetVelocityTimeout&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent)this._preventNextNativeScrollEvent=!1;else if(!1===this.isScrolling||"native"===this.isScrolling){const t=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-t,this.direction=Math.sign(this.animatedScroll-t),this.isScrolling="native",this.emit(),0!==this.velocity&&(this._resetVelocityTimeout=setTimeout((()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()}),400))}},window.lenisVersion="1.1.13",t&&t!==document.documentElement&&t!==document.body||(t=window),this.options={wrapper:t,content:i,eventsTarget:e,smoothWheel:s,syncTouch:o,syncTouchLerp:n,touchInertiaMultiplier:l,duration:r,easing:h,lerp:a,infinite:c,gestureOrientation:d,orientation:u,touchMultiplier:p,wheelMultiplier:m,autoResize:v,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w},this.dimensions=new Dimensions(t,i,{autoResize:v}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.addEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll=new VirtualScroll(e,{touchMultiplier:p,wheelMultiplier:m}),this.virtualScroll.on("scroll",this.onVirtualScroll)}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.removeEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName()}on(t,i){return this.emitter.on(t,i)}off(t,i){return this.emitter.off(t,i)}setScroll(t){this.isHorizontal?this.rootElement.scrollLeft=t:this.rootElement.scrollTop=t}resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit("scroll",this)}reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){this.isStopped&&(this.isStopped=!1,this.reset())}stop(){this.isStopped||(this.isStopped=!0,this.animate.stop(),this.reset())}raf(t){const i=t-(this.time||t);this.time=t,this.animate.advance(.001*i)}scrollTo(t,{offset:i=0,immediate:e=!1,lock:s=!1,duration:o=this.options.duration,easing:n=this.options.easing,lerp:l=this.options.lerp,onStart:r,onComplete:h,force:a=!1,programmatic:c=!0,userData:u}={}){if(!this.isStopped&&!this.isLocked||a){if("string"==typeof t&&["top","left","start"].includes(t))t=0;else if("string"==typeof t&&["bottom","right","end"].includes(t))t=this.limit;else{let e;if("string"==typeof t?e=document.querySelector(t):t instanceof HTMLElement&&(null==t?void 0:t.nodeType)&&(e=t),e){if(this.options.wrapper!==window){const t=this.rootElement.getBoundingClientRect();i-=this.isHorizontal?t.left:t.top}const s=e.getBoundingClientRect();t=(this.isHorizontal?s.left:s.top)+this.animatedScroll}}if("number"==typeof t){if(t+=i,t=Math.round(t),this.options.infinite?c&&(this.targetScroll=this.animatedScroll=this.scroll):t=clamp(0,t,this.limit),t===this.targetScroll)return null==r||r(this),void(null==h||h(this));if(this.userData=null!=u?u:{},e)return this.animatedScroll=this.targetScroll=t,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),null==h||h(this),void(this.userData={});c||(this.targetScroll=t),this.animate.fromTo(this.animatedScroll,t,{duration:o,easing:n,lerp:l,onStart:()=>{s&&(this.isLocked=!0),this.isScrolling="smooth",null==r||r(this)},onUpdate:(t,i)=>{this.isScrolling="smooth",this.lastVelocity=this.velocity,this.velocity=t-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=t,this.setScroll(this.scroll),c&&(this.targetScroll=t),i||this.emit(),i&&(this.reset(),this.emit(),null==h||h(this),this.userData={},this.preventNextNativeScrollEvent())}})}}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame((()=>{this._preventNextNativeScrollEvent=!1}))}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.__experimental__naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?"x":"y"]}get isHorizontal(){return"horizontal"===this.options.orientation}get actualScroll(){return this.isHorizontal?this.rootElement.scrollLeft:this.rootElement.scrollTop}get scroll(){return this.options.infinite?function modulo(t,i){return(t%i+i)%i}(this.animatedScroll,this.limit):this.animatedScroll}get progress(){return 0===this.limit?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(t){this._isScrolling!==t&&(this._isScrolling=t,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(t){this._isStopped!==t&&(this._isStopped=t,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(t){this._isLocked!==t&&(this._isLocked=t,this.updateClassName())}get isSmooth(){return"smooth"===this.isScrolling}get className(){let t="lenis";return this.isStopped&&(t+=" lenis-stopped"),this.isLocked&&(t+=" lenis-locked"),this.isScrolling&&(t+=" lenis-scrolling"),"smooth"===this.isScrolling&&(t+=" lenis-smooth"),t}updateClassName(){this.cleanUpClassName(),this.rootElement.className=`${this.rootElement.className} ${this.className}`.trim()}cleanUpClassName(){this.rootElement.className=this.rootElement.className.replace(/lenis(-\w+)?/g,"").trim()}}}));
+//# sourceMappingURL=lenis.min.js.map
+</script>
 <script>
 (function(){
-  var base = {classique:[38000,55000], couloir:[62000,95000], debordement:[58000,90000], renovation:[12000,35000]};
-  var form = document.getElementById('est');
-  var steps = [].slice.call(form.querySelectorAll('[data-step]'));
-  var prev = document.getElementById('prev'), next = document.getElementById('next'), bar = document.getElementById('bar');
-  var i = 0;
-  function fmt(n){ return (Math.round(n/1000)*1000).toLocaleString('fr-FR') + ' €'; }
-  function compute(){
-    var t = form.querySelector('[name=type]:checked').value;
-    var s = parseFloat(form.querySelector('[name=size]:checked').value);
-    var f = parseFloat(form.querySelector('[name=finish]:checked').value);
-    if (t === 'renovation') { f = 1; }
-    var lo = base[t][0]*s*f, hi = base[t][1]*s*f;
-    [].forEach.call(form.querySelectorAll('[name=opt]:checked'), function(o){ lo += +o.dataset.min; hi += +o.dataset.max; });
-    document.getElementById('range').textContent = 'Entre ' + fmt(lo) + ' et ' + fmt(hi);
-  }
-  function show(){
-    steps.forEach(function(el, k){ el.hidden = k !== i; });
-    prev.hidden = i === 0 || i === 5;
-    next.hidden = i === 5;
-    next.textContent = i === 3 ? 'Voir mon estimation' : (i === 4 ? 'Être rappelé' : 'Continuer');
-    bar.style.width = Math.min(100, (i+1)*20) + '%';
-    if (i === 4) compute();
-    var first = steps[i].querySelector('input'); if (first && i > 0) first.focus({preventScroll:true});
-  }
-  next.addEventListener('click', function(){ if (i < 5) { i++; show(); } });
-  prev.addEventListener('click', function(){ if (i > 0) { i--; show(); } });
-  show();
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lenis=null;
+if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
 
-  var i18n = {
-    en:{h1:'Reinforced concrete pools, engineered before they are built.', lede:'Lap pools, infinity edges, mirror pools and renovations, from Menton to Saint-Tropez. We build every pool ourselves, with no subcontracting and one point of contact from first sketch to filling.', cta1:'Estimate my project in 1 minute', cta2:'See our work'},
-    it:{h1:'Piscine in cemento armato, calcolate da un ingegnere.', lede:'Corsie di nuoto, sfioro, piscine a specchio e ristrutturazioni, da Mentone a Saint-Tropez. Costruiamo ogni piscina con le nostre squadre, senza subappalti, con un unico referente dal primo schizzo al riempimento.', cta1:'Stima il mio progetto in 1 minuto', cta2:'Le nostre realizzazioni'}
-  };
-  var fr = {};
-  [].forEach.call(document.querySelectorAll('[data-i18n]'), function(el){ fr[el.dataset.i18n] = el.textContent; });
-  i18n.fr = fr;
-  [].forEach.call(document.querySelectorAll('.lang button'), function(b){
-    b.addEventListener('click', function(){
-      var l = b.dataset.lang;
-      [].forEach.call(document.querySelectorAll('.lang button'), function(x){ x.setAttribute('aria-pressed', x === b); });
-      document.documentElement.lang = l;
-      [].forEach.call(document.querySelectorAll('[data-i18n]'), function(el){ el.textContent = i18n[l][el.dataset.i18n]; });
-    });
-  });
+/* ---------- Eau temps réel (WebGL) ---------- */
+var cv=document.getElementById('water'),gl=cv.getContext('webgl',{antialias:false,alpha:false});
+var heroVisible=true,t0=performance.now();
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ var fs='precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;'+
+ 'float h(vec2 p,float t){float v=0.;vec2 q=p;for(int k=0;k<4;k++){float fk=float(k);q+=vec2(sin(q.y*1.3+t*.6+fk*1.7),cos(q.x*1.1-t*.5+fk*.9))*.42;v+=sin(q.x*1.6+t*.3)*cos(q.y*1.4-t*.25);}return v*.25;}'+
+ 'void main(){vec2 uv=gl_FragCoord.xy/r;vec2 p=(gl_FragCoord.xy-.5*r)/r.y*3.2;p+=(m-.5)*.35;float tt=t*.55;'+
+ 'float a=h(p,tt),b=h(p*1.9+3.1,tt*1.3);float c1=1.-smoothstep(0.,.11,abs(a));float c2=1.-smoothstep(0.,.08,abs(b));'+
+ 'float caus=pow(c1,2.2)*.75+pow(c2,2.6)*.45;vec3 deep=vec3(.024,.133,.169),pool=vec3(.055,.36,.41);'+
+ 'vec3 col=mix(deep,pool,smoothstep(.0,1.,uv.y*.9+.1+a*.08));col+=vec3(.62,.92,.93)*caus*(.35+.5*uv.y);'+
+ 'col*=1.-.35*length(uv-vec2(.5,.6));gl_FragColor=vec4(col,1.);}';
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);return o;}
+ var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.5,my=.5,tx=.5,ty=.5;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5);cv.width=cv.clientWidth*d*.75;cv.height=cv.clientHeight*d*.75;gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ window.__drawWater=function(now){if(!heroVisible)return;mx+=(tx-mx)*.05;my+=(ty-my)*.05;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?8.:(now-t0)/1000);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ window.__drawWater(t0+8000);
+}
+
+/* ---------- Scroll scènes ---------- */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+var hdr=document.getElementById('hdr');
+var rvS=document.querySelector('.reveal'),rv=document.getElementById('rv'),rvImg=rv.querySelector('img');
+var cutS=document.querySelector('.cut'),shell=document.getElementById('shell'),ground=document.getElementById('ground'),piles=document.querySelectorAll('#piles rect'),bed=document.getElementById('bed'),wrect=document.getElementById('wrect'),wave=document.getElementById('wave'),lbls=document.querySelectorAll('.lbl'),live=document.querySelectorAll('#live li'),meter=document.getElementById('meter'),rebar=document.getElementById('rebar');
+for(var x=104;x<540;x+=16){[[x,256]].forEach(function(c){var e=document.createElementNS('http://www.w3.org/2000/svg','circle');e.setAttribute('cx',c[0]);e.setAttribute('cy',c[1]);e.setAttribute('r',1.8);rebar.appendChild(e);});}
+for(var y=116;y<256;y+=16){[110,530].forEach(function(xx){var e=document.createElementNS('http://www.w3.org/2000/svg','circle');e.setAttribute('cx',xx);e.setAttribute('cy',y);e.setAttribute('r',1.8);rebar.appendChild(e);});}
+piles.forEach(function(r){r.style.transformBox='fill-box';r.style.transformOrigin='top';});
+var gS=document.querySelector('.hgal'),track=document.getElementById('track'),gImgs=track.querySelectorAll('img'),gc=document.getElementById('gcount');
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+
+function scenes(now){
+ hdr.classList.toggle('solid',scrollY>innerHeight*.85);
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7));
+ var ins=(1-e)*18;rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*24+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.45){factsDone=true;facts.forEach(function(b){var to=+b.dataset.to,dec=+b.dataset.dec||0,suf=b.dataset.suf||'',st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1400));b.textContent=(to*k).toLocaleString('fr-FR',{minimumFractionDigits:dec,maximumFractionDigits:dec})+suf;if(k<1)requestAnimationFrame(tick);})(st);});}
+ var c=prog(cutS);
+ ground.setAttribute('opacity',seg(c,0,.12));
+ piles.forEach(function(r,i){r.style.transform='scaleY('+ease(seg(c,.12+i*.03,.32+i*.03))+')';});
+ bed.setAttribute('opacity',seg(c,.25,.32));
+ shell.setAttribute('stroke-dashoffset',1-ease(seg(c,.32,.55)));
+ shell.setAttribute('fill-opacity',seg(c,.5,.6));
+ rebar.setAttribute('opacity',seg(c,.45,.58));
+ var w=ease(seg(c,.62,.88));wrect.setAttribute('y',250-128*w);wrect.setAttribute('height',128*w);
+ wave.setAttribute('transform','translate('+(Math.sin(now/600)*8)+','+(124-(250-128*w)>0?0:0)+')');
+ lbls.forEach(function(l,i){l.setAttribute('opacity',seg(c,[.55,.32,.85][i],[.62,.4,.92][i]));});
+ var st=c<.25?0:c<.45?1:c<.62?2:3;live.forEach(function(li,i){li.classList.toggle('on',i===st);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(20,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ gc.textContent='0'+Math.min(5,1+Math.floor(g*5))+' / 05';
+}
+function loop(now){if(lenis)lenis.raf(now);if(window.__drawWater&&!RM)window.__drawWater(now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+if(RM)facts.forEach(function(b){b.textContent=(+b.dataset.to).toLocaleString('fr-FR',{minimumFractionDigits:+b.dataset.dec||0})+(b.dataset.suf||'');});
+
+/* ---------- Estimateur ---------- */
+var base={classique:[38000,55000],couloir:[62000,95000],debordement:[58000,90000],renovation:[12000,35000]};
+var f=document.getElementById('est'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=document.getElementById('prev'),nx=document.getElementById('next'),bar=document.getElementById('bar'),i=0,lo=0,hi=0;
+function fmt(n){return(Math.round(n/1000)*1000).toLocaleString('fr-FR')+' €';}
+function calc(){var t=f.querySelector('[name=type]:checked').value,s=+f.querySelector('[name=size]:checked').value,k=t==='renovation'?1:+f.querySelector('[name=fin]:checked').value;lo=base[t][0]*s*k;hi=base[t][1]*s*k;f.querySelectorAll('[name=opt]:checked').forEach(function(o){lo+=+o.dataset.a;hi+=+o.dataset.b;});var el=document.getElementById('range'),st=performance.now();(function tk(n){var q=ease(Math.min(1,(n-st)/900));el.textContent='Entre '+fmt(lo*q)+' et '+fmt(hi*q);if(q<1)requestAnimationFrame(tk);})(st);}
+function show(){S.forEach(function(el,k){el.hidden=k!==i;if(k===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});pv.hidden=i===0||i===5;nx.hidden=i===5;nx.textContent=i===3?'Voir mon estimation':i===4?'Être rappelé':'Continuer';bar.style.transform='scaleX('+Math.min(1,(i+1)/5)+')';if(i===4)calc();}
+nx.onclick=function(){if(i<5){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};show();
+
+/* ---------- Langues ---------- */
+var L={en:{h1a:'Reinforced concrete',h1b:'pools, engineered',h1c:'before they are built.',lede:'Lap pools, infinity edges, mirror pools and renovations, from Menton to Saint-Tropez. Built by our own teams, no subcontracting.',cta1:'Estimate my project in 1 minute',cta1s:'Estimate my project'},it:{h1a:'Piscine in cemento',h1b:'armato, calcolate',h1c:'da un ingegnere.',lede:'Corsie di nuoto, sfioro, piscine a specchio e ristrutturazioni, da Mentone a Saint-Tropez. Costruite dalle nostre squadre, senza subappalti.',cta1:'Stima il mio progetto in 1 minuto',cta1s:'Stima il mio progetto'}},fr={};
+document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.textContent;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){e.textContent=L[l][e.dataset.i];});};});
 })();
 </script>
 </body>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chamonix Sport Aventure — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF1F3;--ink:#0E1A24;--soft:#53626D;--line:#CAD4DA;--deep:#0B1A27;--deep2:#132636;--acc:#C8372D;--onacc:#fff;--acc2:#9FD3E8;--ondeep:#DCE7EE;--ondeep2:#93A9B8;--card:#F8FAFB;--stud:#DCE4E9;--sline:#B6C4CD;--star:#D99A2B;--phbg:#C5D2DA;--glass:rgba(11,26,39,.34);--glass2:rgba(248,250,251,.82);--herot:#CFDDE6;--mbar:rgba(11,26,39,.92);--d:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;--t:"Source Sans 3",system-ui,sans-serif;--h1:clamp(2.6rem,7vw,7rem);--h1m:clamp(1.9rem,8.6vw,3rem)}
+
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--t);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--acc);background:var(--acc);color:var(--onacc);cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),filter .2s;line-height:1.2;text-align:center}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);margin:0;font-weight:var(--dw,700)}
+h2{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.04;max-width:18ch;letter-spacing:var(--ls,-.02em)}
+.lede{color:var(--soft);max-width:38rem}
+[hidden]{display:none!important}
+.proof{position:relative;z-index:40;background:#000;color:#d4d7d6;font-family:var(--d);font-size:.8rem;font-weight:400}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:top .3s}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:var(--glass);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:var(--glass2);color:var(--ink);border-color:rgba(0,0,0,.08)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;min-width:0}
+.lmark{width:28px;height:28px;flex:none}
+.bname{font-family:var(--d);font-weight:var(--bw,700);font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap}
+.hnav{display:flex;align-items:center;gap:1.3rem;font-family:var(--d);font-size:.9rem;font-weight:500}
+.hnav a{text-decoration:none}.hnav a.nl{opacity:.85}
+header.site .btn{padding:.6rem 1.1rem}
+.lang{display:flex;gap:.15rem}.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero .fallback{position:absolute;inset:0;background:var(--deep);display:none}
+.hero .fallback img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.nogl .hero .fallback{display:block}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-size:var(--h1,clamp(2rem,5.2vw,5.2rem));line-height:1.02;letter-spacing:var(--ls,-.02em)}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.04em}
+.hero h1 .ln span{display:inline-block;transform:translateY(108%);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.09s}.hero h1 .ln:nth-child(3) span{transition-delay:.18s}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .55s,transform 1s .55s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:var(--herot);margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.scrollhint{position:absolute;right:1.25rem;bottom:1.25rem;z-index:2;font-family:var(--d);font-size:.75rem;color:var(--herot);opacity:.7;writing-mode:vertical-rl}
+@media(max-width:600px){.hero h1{font-size:var(--h1m,clamp(1.45rem,6.4vw,2.3rem))}.hero-inner{padding-bottom:6.5rem}.hero-ctas .ghost{display:none}}
+.reveal{height:220vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:var(--deep2)}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55))}
+.reveal .cap{position:absolute;left:clamp(1.25rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);color:#fff;font-family:var(--d);z-index:2;max-width:28rem}
+.reveal .cap b{display:block;font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.08;margin-bottom:.4rem}
+.reveal .cap span{font-size:.9rem;opacity:.85}
+.facts{position:absolute;top:clamp(6rem,15vh,9rem);right:clamp(1.25rem,4vw,3rem);z-index:2;display:grid;gap:1.2rem;color:#fff;font-family:var(--d);text-align:right}
+.facts b{display:block;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;opacity:.85}
+.cut{height:340vh;position:relative;background:var(--deep);color:var(--ondeep)}
+.cut .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.cut-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.cut h2{color:#fff;margin-bottom:1rem}
+.cut .lede{color:var(--ondeep2);margin:0 0 2rem}
+.cut svg{width:100%;height:auto;overflow:visible}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps-live li{border-left:2px solid rgba(255,255,255,.16);padding:.2rem 0 .2rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--acc2)}
+.steps-live b{display:block;font-family:var(--d);color:#fff;font-weight:600}
+.steps-live span{font-size:.96rem;color:var(--ondeep2)}
+.meter{height:2px;background:rgba(255,255,255,.14);margin-top:2rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--acc2);transform-origin:left;transform:scaleX(0)}
+.hgal{height:360vh;position:relative;background:var(--bg)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(62vw,720px);margin:0}
+.card .ph{height:min(58vh,520px);overflow:hidden;border-radius:var(--r,4px);background:var(--phbg)}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{font-family:var(--d);margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-weight:600}.card figcaption span{color:var(--soft);font-size:.9rem;white-space:nowrap}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--d);font-weight:700;font-size:1.1rem;font-variant-numeric:tabular-nums}
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;counter-reset:s;margin:3rem 0 0;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:1rem}
+.steps li::before{content:counter(s);font-family:var(--d);font-weight:700;font-size:2.6rem;line-height:1;color:var(--acc);display:block;margin-bottom:.8rem}
+.steps h3{font-size:1.08rem;margin-bottom:.4rem}.steps p{margin:0;color:var(--soft);font-size:.98rem}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+.feat{background:var(--deep);color:var(--ondeep);position:relative;overflow:hidden}
+.feat h2{color:#fff}.feat .lede{color:var(--ondeep2)}
+.cfg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.2rem;overflow:hidden}
+.preview svg{width:100%;height:auto;display:block}
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.25rem,3vw,2rem)}
+fieldset{border:0;margin:0;padding:0}legend{font-family:var(--d);font-weight:600;font-size:1.25rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem .95rem;cursor:pointer;font-family:var(--d);font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:var(--ondeep2);font-size:.8rem;margin-top:.2rem;font-family:var(--t)}
+.choice input:checked+label{border-color:var(--acc2);background:rgba(255,255,255,.07)}
+.choice input:focus-visible+label{outline:3px solid var(--acc2);outline-offset:2px}
+.step-anim{animation:stepin .55s cubic-bezier(.16,1,.3,1)}@keyframes stepin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-family:var(--d);font-size:.88rem}
+.field input,.field select{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.06);color:#fff}
+.note{font-size:.85rem;color:var(--ondeep2);opacity:.85;margin-top:1rem}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem;font-family:var(--d)}
+.live span{font-size:.8rem;color:var(--ondeep2)}.live b{display:block;white-space:nowrap;font-size:clamp(1.15rem,2vw,1.6rem);color:#fff;font-variant-numeric:tabular-nums}
+.live small{font-size:.8rem;color:var(--ondeep2);text-align:right;max-width:15rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:var(--ondeep2);padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--acc2);color:var(--deep);border-color:var(--acc2)}
+.chips button.done{color:#fff;border-color:rgba(255,255,255,.45)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.85rem;color:var(--ondeep2);margin:-.4rem 0 1rem}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-family:var(--d);font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:var(--ondeep2)}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.btn.wa{background:#1F9D57;border-color:#1F9D57;color:#fff}
+.copied{font-family:var(--d);font-size:.82rem;color:var(--acc2);align-self:center;word-break:break-all}
+.done-msg{font-family:var(--d);font-size:1.5rem;color:#fff;line-height:1.2}
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.score{font-family:var(--d);font-weight:700;font-size:4.4rem;line-height:1;font-variant-numeric:tabular-nums}.score small{display:block;font-size:.85rem;font-weight:400;color:var(--soft);margin-top:.4rem}
+.stars{color:var(--star);letter-spacing:.08em;position:relative;display:inline-block}
+.stars.fill{background:linear-gradient(90deg,var(--star) var(--p,0%),var(--line) var(--p,0%));-webkit-background-clip:text;background-clip:text;color:transparent;transition:--p 1.4s}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 52s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--card);border:1px solid var(--line);border-radius:var(--r2,14px);padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-size:1.04rem;line-height:1.5}.rcard figcaption{font-family:var(--d);font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--acc),var(--acc)) center/14px 2px no-repeat,linear-gradient(var(--acc),var(--acc)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-top:5rem}
+.bigtel{font-family:var(--d);font-weight:700;font-size:clamp(2rem,4.6vw,3.6rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-family:var(--d);font-size:.85rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:grid;gap:.4rem;max-width:26rem}.nl-form label{color:var(--ink);font-weight:600}
+.nl-row{display:flex;gap:.4rem}.nl-row input{flex:1;min-width:0;font:inherit;padding:.6rem .8rem;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink)}
+.nl-row .btn{padding:.6rem 1rem}
+.nl-ok{color:var(--acc);font-weight:600}
+.studio{background:var(--stud);border-top:6px solid var(--acc);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid var(--sline)}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid var(--sline)}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid var(--sline)}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid var(--sline)}.addons b{font-weight:600;font-family:var(--d)}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums;font-family:var(--d)}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--card);border:1px solid var(--sline);border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:var(--ondeep);border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--acc);font-weight:600}.offer.rec .tag{color:var(--acc2)}
+.offer h3{font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .cut-grid,.cfg,.contact,.rx-head,.faq{grid-template-columns:1fr}.rx-head,.faq{gap:1.5rem}
+ .cut{height:300vh}.cut h2{font-size:1.8rem}.cut .lede{display:none}
+ .preview{position:relative;top:0}
+ .steps{grid-template-columns:1fr 1fr}.offers{grid-template-columns:1fr}
+ .card{width:82vw}.facts{top:auto;bottom:8rem}
+}
+@media (max-width:600px){
+ header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}.bname{font-size:.95rem}.lmark{width:24px;height:24px}
+ .hnav .btn{display:none}.steps,.choices{grid-template-columns:1fr}.audit li{grid-template-columns:1fr;gap:.5rem}
+ .steps-live li:not(.on){display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:var(--mbar);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+ .score{font-size:3.4rem}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.cut,.hgal{height:auto}.reveal .stick,.cut .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .mq-track{animation:none;flex-wrap:wrap;width:auto}
+}
+
+
+.stepper{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;font-family:var(--d)}
+.stepper button{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);background:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.stepper output{font-size:2.4rem;font-weight:700;min-width:2ch;text-align:center;color:#fff;font-variant-numeric:tabular-nums}
+.stepper span{color:var(--ondeep2)}
+.cal{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.8rem}
+.cal-h{display:flex;justify-content:space-between;align-items:center;font-family:var(--d);margin-bottom:.6rem}.cal-h b{color:#fff;font-size:1.1rem}
+.cal-h button{background:none;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:1.1rem}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;font-family:var(--d);font-size:.85rem;text-align:center}
+.cal-g .dw{color:var(--ondeep2);font-size:.72rem;padding:.2rem 0}
+.cal-g button{aspect-ratio:1;border:0;border-radius:8px;background:rgba(255,255,255,.05);color:#fff;cursor:pointer;font:inherit;position:relative}
+.cal-g button.hi{box-shadow:inset 0 -3px 0 #ffd27a}
+.cal-g button:disabled{opacity:.25;cursor:default}
+.cal-g button[aria-pressed="true"]{background:var(--acc2);color:var(--deep);font-weight:700}
+.wx{margin-top:1rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.8rem;font-family:var(--d)}
+.wx span{font-size:.8rem;color:var(--ondeep2)}.wx p{margin:.2rem 0 0;color:#fff;font-size:.95rem}
+.pvl{opacity:0;transition:opacity .6s}.pvl.on{opacity:1}
+.pvl .dash{stroke-dasharray:600;stroke-dashoffset:600;transition:stroke-dashoffset 1.6s cubic-bezier(.16,1,.3,1)}.pvl.on .dash{stroke-dashoffset:0}
+.hero h1{font-weight:800;letter-spacing:-.005em}
+h2{font-weight:800;letter-spacing:-.005em}
+.bname{font-weight:800;font-size:1.15rem;letter-spacing:.01em}
+.who{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:3rem;align-items:center;margin-bottom:6rem}
+.who .ph{aspect-ratio:4/5;background:var(--phbg);border-radius:4px;overflow:hidden}.who img{width:100%;height:100%;object-fit:cover}
+.who ul{padding-left:1.1rem;color:var(--soft)}
+@media(max-width:900px){.who{grid-template-columns:1fr}.who .ph{aspect-ratio:4/3}}
+
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour Chamonix Sport Aventure par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Chamonix Sport Aventure, accueil"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><path d="M2 27 L12 9 L17 17 L21 11 L30 27 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M12 9 L14.5 13.5 L12 12.5 L9.7 13.2 Z" fill="currentColor"/><path d="M8 27 C12 23 14 24 17 21 S22 19 24 16" fill="none" stroke="#C8372D" stroke-width="2.2" stroke-linecap="round"/></svg><span class="bname">Chamonix Sport Aventure</span></a>
+ <nav class="hnav" aria-label="Navigation"><a class="nl" href="#vallee" data-i="n1">La Vallée Blanche</a><a class="nl" href="#galerie" data-i="n2">En montagne</a><a class="nl" href="#avis" data-i="n3">Avis</a><div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button></div><a class="btn" href="#journee" data-i="hcta">Composer ma journée</a></nav>
+</div></header>
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="herogl" aria-hidden="true"></canvas>
+ <div class="fallback" aria-hidden="true"><img src="https://www.chamonix-sport-aventure.com/sites/default/files/images/ValleeBlanche/P1221714.JPG" alt="" onerror="this.style.visibility='hidden'"></div>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">30 ans de hors‑piste</span></span><span class="ln"><span data-i="h1b">au pied du Mont‑Blanc.</span></span><span class="ln"><span data-i="h1c">La prochaine trace est la vôtre.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Cours privés de ski et de snowboard, hors-piste, Vallée Blanche et héliski en Suisse et en Italie. Avec Franck Chapon, guide de haute montagne UIAGM et ancien membre de l'équipe de France de parapente, et une équipe de guides diplômés.</p>
+   <div class="hero-ctas"><a class="btn" href="#journee" data-i="c1">Composer ma journée</a><a class="btn ghost" href="tel:+33645892852">06 45 89 28 52</a></div>
+  </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true" data-i="scroll">Défiler</div>
+</section>
+<section class="reveal" id="vallee" aria-label="La Vallée Blanche, encordés à votre guide.">
+ <div class="stick">
+  <figure id="rv"><img src="https://www.chamonix-sport-aventure.com/sites/default/files/images/ValleeBlanche/F_C%20v_b%20Cham_net.jpg" alt="Franck Chapon en tête de cordée sur la Vallée Blanche" onerror="this.style.visibility='hidden'"><div class="shade"></div></figure>
+  <div class="cap"><b>La Vallée Blanche, encordés à votre guide.</b><span>Massif du Mont-Blanc</span></div>
+  <div class="facts" id="facts"><div><b data-to="3842" data-suf=" m">0</b><span>départ de l'Aiguille du Midi</span></div><div><b data-to="20" data-suf=" km">0</b><span>de glacier jusqu'à la Mer de Glace</span></div><div><b data-to="167" data-suf="">0</b><span>avis TripAdvisor, dont 141 « Excellent »</span></div></div>
+ </div>
+</section>
+<section class="cut" id="methode" aria-label="Vingt kilomètres de glacier, lus mètre par mètre.">
+ <div class="stick"><div class="wrap cut-grid">
+  <svg viewBox="0 0 760 420" role="img" aria-label="Profil animé de la descente de la Vallée Blanche, de l'Aiguille du Midi à Montenvers">
+ <defs><linearGradient id="gla" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe6f2"/><stop offset="1" stop-color="#7fb0c9"/></linearGradient>
+ <clipPath id="glc"><rect id="glr" x="0" y="420" width="760" height="0"/></clipPath></defs>
+ <g id="grid" opacity="0" font-family="Source Sans 3" font-size="12" fill="#6f8798">
+  <line x1="40" y1="60" x2="740" y2="60" stroke="#21384a" stroke-dasharray="3 6"/><text x="40" y="52">3 842 m</text>
+  <line x1="40" y1="352" x2="740" y2="352" stroke="#21384a" stroke-dasharray="3 6"/><text x="690" y="344">1 913 m</text>
+ </g>
+ <path id="massif" d="M0 420 L0 230 L40 150 L70 96 L88 62 L104 92 L130 108 L170 90 L205 130 L250 112 L300 160 L345 150 L380 196 L430 188 L470 236 L520 240 L560 286 L610 300 L650 330 L700 350 L760 356 L760 420 Z" fill="#132a3b" opacity="0"/>
+ <path id="glacier" d="M120 112 C170 140 230 160 300 176 C350 188 395 212 440 236 C470 252 490 262 520 268 C565 282 600 304 640 322 C670 336 700 346 724 350" fill="none" stroke="#cfe6f2" stroke-opacity=".16" stroke-width="34" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+ <path id="route" d="M88 64 C100 80 112 96 128 112 C170 140 230 160 300 176 C350 188 395 212 440 236 C470 252 490 262 520 268 C565 282 600 304 640 322 C670 336 700 346 724 350" fill="none" stroke="#C8372D" stroke-width="3" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+ <path id="rail" d="M724 350 C728 370 735 392 748 414" fill="none" stroke="#9FD3E8" stroke-width="2" stroke-dasharray="5 5" opacity="0"/>
+ <circle id="skier" r="6" fill="#fff" stroke="#C8372D" stroke-width="3" cx="88" cy="64" opacity="0"/>
+ <g font-family="Source Sans 3" font-size="13" fill="#DCE7EE">
+  <g class="lbl" opacity="0"><circle cx="88" cy="62" r="4" fill="#9FD3E8"/><text x="100" y="44">Aiguille du Midi</text></g>
+  <g class="lbl" opacity="0"><text x="250" y="210">Vallée Blanche</text><text x="250" y="226" fill="#93A9B8">Glacier du Géant</text></g>
+  <g class="lbl" opacity="0"><text x="430" y="290">Séracs et crevasses</text></g>
+  <g class="lbl" opacity="0"><text x="560" y="372">Mer de Glace</text><text x="640" y="398" fill="#93A9B8">Montenvers, train vers Chamonix</text></g>
+ </g>
+</svg>
+  <div>
+   <h2>Vingt kilomètres de glacier, lus mètre par mètre.</h2>
+   <p class="lede">Sur la Vallée Blanche, ce n'est pas la pente qui est difficile, ce sont les crevasses qu'on ne voit pas. Votre guide choisit la trace selon l'enneigement du jour et s'aligne toujours sur le skieur le moins à l'aise.</p>
+   <ol class="steps-live" id="live"><li><b>Aiguille du Midi, 3 842 m</b><span>Téléphérique, puis l'arête à pied, encordés à votre guide.</span></li><li><b>La Vallée Blanche</b><span>Les grandes pentes du glacier du Géant, au cœur du massif.</span></li><li><b>Séracs et crevasses</b><span>La trace change chaque semaine : le guide la lit pour vous.</span></li><li><b>Mer de Glace et Montenvers</b><span>Remontée vers le train du Montenvers, retour à Chamonix.</span></li></ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
+<section class="hgal" id="galerie" aria-label="Galerie">
+ <div class="stick">
+  <div class="wrap head"><h2>Là où Franck vous emmène.</h2><span class="count" id="gcount">01 / 06</span></div>
+  <div class="track" id="track"><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chamonix-sport-aventure.com/sites/default/files/images/ValleeBlanche/arete%20aiguille2006.jpg" alt="L&#x27;arête de l&#x27;Aiguille du Midi" onerror="this.style.visibility='hidden'"></div><figcaption><b>L'arête de l'Aiguille du Midi</b><span>3 842 m</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chamonix-sport-aventure.com/sites/default/files/images/ValleeBlanche/P3280301.JPG" alt="Descente de la Vallée Blanche" onerror="this.style.visibility='hidden'"></div><figcaption><b>Descente de la Vallée Blanche</b><span>Glacier du Géant</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chamonix-sport-aventure.com/sites/default/files/images/ValleeBlanche/Grosse%20crevasse.jpg" alt="Entre les crevasses" onerror="this.style.visibility='hidden'"></div><figcaption><b>Entre les crevasses</b><span>Vallée Blanche</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chamonix-sport-aventure.com/sites/default/files/images/EcoleSki/HP-ski-1.jpg" alt="Hors-piste" onerror="this.style.visibility='hidden'"></div><figcaption><b>Hors-piste</b><span>Vallée de Chamonix</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chamonix-sport-aventure.com/sites/default/files/images/ValleeBlanche/Ski%20sur%20Glaciers%20.jpg" alt="Ski sur glacier" onerror="this.style.visibility='hidden'"></div><figcaption><b>Ski sur glacier</b><span>Massif du Mont-Blanc</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chamonix-sport-aventure.com/sites/default/files/images/EcoleSki/LP-snowboard-2.jpg" alt="Leçon de snowboard" onerror="this.style.visibility='hidden'"></div><figcaption><b>Leçon de snowboard</b><span>Chamonix</span></figcaption></figure></div>
+ </div>
+</section>
+<section class="pad" id="guide"><div class="wrap"><div class="who"><div class="ph rise"><img loading="lazy" src="https://www.chamonix-sport-aventure.com/sites/default/files/images/franck.jpg" alt="Franck Chapon, guide de haute montagne" onerror="this.style.visibility='hidden'"></div><div class="rise"><h2>Votre guide s'appelle Franck.</h2><p class="lede" style="margin-top:1rem">Guide de haute montagne UIAGM, moniteur de ski, de snowboard et de parapente, ancien membre de l'équipe de France de parapente. Il connaît la vallée depuis trente ans et compose lui-même chaque sortie.</p><ul><li>Une équipe de guides de haute montagne, tous diplômés dans leur discipline</li><li>Encadrement en français et en anglais</li><li>« Le guide s'alignera toujours sur le niveau des participants les plus faibles »</li></ul></div></div></div></section>
+<section class="pad feat" id="journee"><div class="wrap">
+ <h2 data-i="fh">Composez votre journée en montagne.</h2>
+ <p class="lede" style="margin-top:1rem" data-i="fl">Cours privé, hors-piste, Vallée Blanche ou héliski : quatre choix, et vous connaissez le prix avant même d'écrire. Les tarifs viennent de votre grille, les conditions en altitude de la météo du jour.</p>
+ <div class="cfg">
+  <div class="preview">
+   <svg viewBox="0 0 420 280" aria-hidden="true">
+    <rect width="420" height="280" rx="10" fill="#0f2231"/>
+    <path d="M0 280 L0 170 L38 120 L66 70 L82 40 L98 72 L130 84 L160 66 L196 104 L236 90 L280 132 L320 124 L360 168 L420 176 L420 280 Z" fill="#183448"/>
+    <path d="M66 70 L82 40 L98 72 L90 66 L82 76 L74 66 Z M150 72 L160 66 L172 78 Z M226 96 L236 90 L248 100 Z" fill="#dfeaf1" opacity=".9"/>
+    <path d="M0 280 L0 236 C70 226 140 232 210 224 C280 216 350 226 420 220 L420 280 Z" fill="#20435a"/>
+    <g id="pvCours" class="pvl"><path d="M150 236 C170 246 190 240 210 250 C230 260 250 252 268 262" fill="none" stroke="#9FD3E8" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7"/><text x="150" y="226" font-family="Source Sans 3" font-size="12" fill="#9FD3E8">Domaine skiable</text></g>
+    <g id="pvHp" class="pvl"><path d="M160 70 C170 110 150 140 176 180 C196 210 180 230 196 246" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 6"/><path d="M236 92 C250 130 236 160 260 196 C276 220 266 236 280 250" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 6"/><text x="270" y="190" font-family="Source Sans 3" font-size="12" fill="#fff">Hors-piste</text></g>
+    <g id="pvVb" class="pvl"><path class="dash" d="M82 42 C100 70 130 96 190 114 C250 132 290 160 330 190 C360 212 390 222 412 230" fill="none" stroke="#C8372D" stroke-width="3.5" stroke-linecap="round"/><text x="230" y="112" font-family="Source Sans 3" font-size="12" fill="#ffb4ad">Vallée Blanche, 20 km</text></g>
+    <g id="pvHeli" class="pvl"><path class="dash" d="M30 250 C60 170 120 110 236 84" fill="none" stroke="#ffd27a" stroke-width="2.5" stroke-dasharray="4 6"/><g id="heli" transform="translate(236 84)"><circle r="5" fill="#ffd27a"/><line x1="-12" y1="-7" x2="12" y2="-7" stroke="#ffd27a" stroke-width="2"/></g><text x="250" y="76" font-family="Source Sans 3" font-size="12" fill="#ffd27a" id="heliTxt">Dépose en Suisse</text></g>
+    <text id="pvLabel" x="210" y="270" text-anchor="middle" font-family="Source Sans 3" font-size="12" fill="#93A9B8"></text>
+   </svg>
+   <div class="live"><div><span id="liveLab">Prix pour votre groupe</span><b id="liveP">—</b></div><small id="liveSub">Selon votre grille 2025-2026.</small></div>
+   <div class="wx" id="wx" aria-live="polite"><span>Conditions à 3 842 m</span><p id="wxTxt">Choisissez une date pour voir la météo en altitude.</p></div>
+  </div>
+  <div class="panel" aria-live="polite">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <fieldset data-s data-n="Activité"><legend>Que voulez-vous vivre ?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="act" id="a1" value="cours" checked><label for="a1">Cours privé<small>Ski ou snowboard, tous niveaux</small></label></div>
+     <div class="choice"><input type="radio" name="act" id="a2" value="hp"><label for="a2">Hors-piste et freeride<small>Les Grands-Montets, Brévent, Flégère</small></label></div>
+     <div class="choice"><input type="radio" name="act" id="a3" value="vb"><label for="a3">Vallée Blanche<small>Depuis l'Aiguille du Midi ou le Skyway</small></label></div>
+     <div class="choice"><input type="radio" name="act" id="a4" value="heli"><label for="a4">Héliski<small>Suisse et Italie, dès mi-janvier</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Formule" hidden><legend id="fmLeg">Quelle formule ?</legend><div class="choices" id="fmBox"></div><div id="fmOpt"></div></fieldset>
+    <fieldset data-s data-n="Groupe" hidden data-noauto><legend>Qui vient avec vous ?</legend>
+     <div class="stepper"><button type="button" id="nMinus" aria-label="Une personne de moins">−</button><output id="nOut">2</output><button type="button" id="nPlus" aria-label="Une personne de plus">+</button><span id="nTxt">personnes</span></div>
+     <p class="hint" id="nHint"></p>
+     <div class="choices"><div class="choice"><input type="radio" name="lvl" id="l1" value="Débutant ou intermédiaire"><label for="l1">Débutant ou intermédiaire</label></div><div class="choice"><input type="radio" name="lvl" id="l2" value="Bon skieur, toutes pistes" checked><label for="l2">Bon skieur, toutes pistes</label></div><div class="choice"><input type="radio" name="lvl" id="l3" value="Très bon skieur, à l'aise en poudreuse"><label for="l3">Très bon skieur, à l'aise en poudreuse</label></div><div class="choice"><input type="radio" name="lvl" id="l4" value="Enfants et adultes mélangés"><label for="l4">Enfants et adultes mélangés</label></div></div></fieldset>
+    <fieldset data-s data-n="Date" hidden data-noauto><legend>Quel jour ?</legend>
+     <div class="cal"><div class="cal-h"><button type="button" id="cPrev" aria-label="Mois précédent">‹</button><b id="cMonth"></b><button type="button" id="cNext" aria-label="Mois suivant">›</button></div><div class="cal-g" id="cGrid"></div></div>
+     <p class="hint" id="dHint" style="margin-top:.8rem"></p></fieldset>
+    <div data-s data-n="Coordonnées" hidden><p class="done-msg" style="margin:0 0 1rem">Votre journée est prête.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
+     <div class="field"><label for="p">Téléphone ou WhatsApp</label><input id="p" type="tel" autocomplete="tel"></div>
+     <div class="field"><label for="h">Hôtel ou chalet</label><input id="h"></div>
+     <div class="send-row"><a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">Envoyer ma demande sur WhatsApp</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien</button><span class="copied" id="copied" hidden></span></div></div>
+    <div data-s data-n="Envoi" hidden><p class="done-msg">Merci, Franck vous répond pour confirmer le guide et l'heure de rendez-vous.</p><p style="color:var(--ondeep2)">Dans le site final, la demande arrive aussi par email à booking@chamonix-sport-aventure.com, avec le récapitulatif.</p></div>
+    <div class="est-nav"><button type="button" class="btn ghost prev" hidden>Retour</button><button type="button" class="btn next" style="margin-left:auto">Continuer</button></div>
+   </form>
+   <p class="note">Tarifs repris de votre site (saison 2025-2026), à mettre à jour avec la grille 2026-2027 avant la mise en ligne.</p>
+  </div>
+ </div>
+</div></section>
+<section class="pad" id="avis"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise" data-stars="4.7"><div class="score"><span data-to="4.7" data-dec="1" data-suf="">4,7</span><small><span class="stars fill" aria-hidden="true">★★★★★</span> 167 avis TripAdvisor</small></div><h2>Ils sont revenus. Souvent avec leurs enfants.</h2></div>
+  <div class="marquee" aria-label="Avis clients"><div class="mq-track"><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Trois jours avec Franck et nos enfants adultes : on a skié des endroits qu'on n'aurait jamais trouvés seuls.</blockquote><figcaption>Séjour en famille, 2025</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Deux journées entre les Grands-Montets et la Vallée Blanche, parfaitement adaptées à notre niveau.</blockquote><figcaption>Hors-piste et Vallée Blanche</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Troisième saison avec Franck pour nos deux ados : de débutants à skieurs confiants. Il nous a même réservé nos restaurants.</blockquote><figcaption>Cours privés, trois saisons</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Vallée Blanche avec ma fille de 17 ans. Un guide rassurant à chaque passage délicat.</blockquote><figcaption>Vallée Blanche</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Très professionnel, de bon conseil et d'une grande gentillesse.</blockquote><figcaption>Cours privé</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Trois jours avec Franck et nos enfants adultes : on a skié des endroits qu'on n'aurait jamais trouvés seuls.</blockquote><figcaption>Séjour en famille, 2025</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Deux journées entre les Grands-Montets et la Vallée Blanche, parfaitement adaptées à notre niveau.</blockquote><figcaption>Hors-piste et Vallée Blanche</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Troisième saison avec Franck pour nos deux ados : de débutants à skieurs confiants. Il nous a même réservé nos restaurants.</blockquote><figcaption>Cours privés, trois saisons</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Vallée Blanche avec ma fille de 17 ans. Un guide rassurant à chaque passage délicat.</blockquote><figcaption>Vallée Blanche</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Très professionnel, de bon conseil et d'une grande gentillesse.</blockquote><figcaption>Cours privé</figcaption></figure></div></div>
+  <p class="note-rv">Extraits reformulés de vos avis TripAdvisor pour la maquette (note moyenne calculée sur la répartition affichée). Dans le site final, vos avis Google et TripAdvisor s'affichent en version originale et se mettent à jour automatiquement.</p>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Les questions qu'on nous pose avant de partir.</h2>
+  <div class="faq-list"><details><summary>Quel niveau faut-il pour la Vallée Blanche ?</summary><p>Il faut être à l'aise sur toutes les pistes et savoir s'arrêter dans la pente. Si vous hésitez, la journée de préparation aux Grands-Montets la veille permet au guide de valider votre niveau.</p></details><details><summary>Quand réserver pour les vacances de février ?</summary><p>C'est la période la plus demandée de l'hiver, avec une majoration sur la grille. Les guides se réservent souvent plusieurs semaines à l'avance : le mieux est de fixer vos dates dès maintenant.</p></details><details><summary>Et si la météo est mauvaise le jour prévu ?</summary><p>La sécurité passe avant tout : votre guide vous propose une autre date ou une autre sortie adaptée aux conditions.</p></details><details><summary>À partir de quand peut-on faire de l'héliski ?</summary><p>Pas avant la mi-janvier, selon l'enneigement, en Suisse (Rosablanche, Trient, Petit Combin) ou en Italie (Valgrisenche, Courmayeur, La Thuile). Un sac airbag est obligatoire, en location si besoin.</p></details><details><summary>Le matériel de sécurité est-il fourni ?</summary><p>Le guide vous indique le matériel nécessaire (détecteur, pelle, sonde, baudrier) et vous aide à vous équiper (à valider avec vous).</p></details><details><summary>Les cours conviennent-ils aux enfants ?</summary><p>Oui : les cours privés s'adaptent à chaque âge et à chaque niveau, jusqu'à 6 personnes par moniteur.</p></details><details><summary>Le repas du moniteur est-il compris ?</summary><p>Non, sur une journée, le repas du moniteur est à la charge du client.</p></details><details><summary>Parlez-vous anglais ?</summary><p>Oui, toute l'équipe encadre en français et en anglais.</p></details></div>
+ </div>
+ <div class="contact" id="contact"><div><h2>Une question sur votre niveau, une date ?</h2><a class="bigtel" href="tel:+33645892852">06 45 89 28 52</a><p style="margin:0;color:var(--soft)">Téléphone et WhatsApp · booking@chamonix-sport-aventure.com<br>20 chemin de la Jonction, 74400 Chamonix-Mont-Blanc</p></div><div><p style="color:var(--soft);margin-top:0">Hiver : cours de ski et de snowboard, hors-piste, Vallée Blanche, héliski, ski de randonnée, Chamonix-Zermatt. Été : parapente biplace, alpinisme, canyoning, via ferrata.</p><a class="btn" href="#journee">Composer ma journée</a></div></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap"><div><div style="color:var(--ink);font-weight:600;margin-bottom:.3rem">Chamonix Sport Aventure SARL, 20 chemin de la Jonction, 74400 Chamonix-Mont-Blanc</div>Guides de haute montagne et moniteurs diplômés · Chamonix-Mont-Blanc</div><form class="nl-form" id="nlf"><label for="nlm">Recevoir nos réalisations et conseils chaque mois</label><div class="nl-row"><input id="nlm" type="email" placeholder="Votre email" autocomplete="email" required><button class="btn" type="submit">S'inscrire</button></div><span class="nl-ok" id="nlok" hidden>C'est noté. Prochaine lettre au début du mois.</span></form></div></footer>
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Monsieur Chapon, voici ce que nous avons relevé sur chamonix-sport-aventure.com, et ce que la nouvelle version apporte.</p>
+ <ul class="audit"><li><div class="now"><b>Aujourd'hui</b>Aucune réservation ni demande guidée : pour une sortie à 500 € ou un héliski à 800 €, le client doit écrire un email et décrire tout seul son niveau et son groupe.</div><div><b>Avec la refonte</b>Un configurateur en quatre choix qui calcule le prix réel selon votre grille, puis envoie la demande complète sur votre WhatsApp.</div></li><li><div class="now"><b>Aujourd'hui</b>167 avis TripAdvisor, dont 141 « Excellent », mais une page de témoignages arrêtée en 2014 et des avis récents restés sans réponse.</div><div><b>Avec la refonte</b>Vos avis mis en scène dès la page d'accueil, et une réponse à chaque nouvel avis.</div></li><li><div class="now"><b>Aujourd'hui</b>Un site conçu avant les smartphones (aucune balise d'affichage mobile détectée), alors que vos clients réservent depuis leur chalet, téléphone en main.</div><div><b>Avec la refonte</b>Un site pensé d'abord pour le téléphone, avec appel et WhatsApp toujours à portée de pouce.</div></li><li><div class="now"><b>Aujourd'hui</b>Une base Drupal 7 qui n'est plus mise à jour depuis janvier 2025, des icônes Twitter et Flickr d'une autre époque, des images sans description.</div><div><b>Avec la refonte</b>Une page rapide et sécurisée, des photos décrites pour Google, et une ouverture animée qui donne envie de partir.</div></li><li><div class="now"><b>Aujourd'hui</b>Rien ne dit à un skieur s'il a le niveau pour la Vallée Blanche ou l'héliski, ni quand réserver.</div><div><b>Avec la refonte</b>Une descente de la Vallée Blanche qui se dessine au défilement, la météo à 3 842 m et une FAQ qui lève les doutes avant l'appel.</div></li></ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Formulaire de demande, avis, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + configurateur de journée avec vos tarifs</li><li>FR, EN, IT</li><li>4 pages par activité (Vallée Blanche, héliski…)</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + ouverture animée en temps réel (WebGL)</li><li>Descente de la Vallée Blanche et galerie animées au défilement</li><li>Météo en altitude en direct</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+ <div class="addons"><div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis Google et TripAdvisor sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos clients après chaque sortie, bilan mensuel.</p></div><div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens clients : ouverture de l'héliski, conditions de la Vallée Blanche, stages d'été. De quoi les faire revenir chaque saison. Rédigé, mis en page et envoyé pour vous.</p></div><div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Italien, allemand ou néerlandais, pour la clientèle européenne de Chamonix, traduite et tenue à jour.</p></div></div>
+ <p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Chamonix%20Sport%20Aventure">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+<div class="mbar"><a class="btn ghost" href="tel:+33645892852">Appeler</a><a class="btn" href="#journee">Ma journée</a></div>
+<script>!function(t,i){"object"==typeof exports&&"undefined"!=typeof module?module.exports=i():"function"==typeof define&&define.amd?define(i):(t="undefined"!=typeof globalThis?globalThis:t||self).Lenis=i()}(this,(function(){"use strict";function clamp(t,i,e){return Math.max(t,Math.min(i,e))}class Animate{constructor(){this.isRunning=!1,this.value=0,this.from=0,this.to=0,this.currentTime=0}advance(t){var i;if(!this.isRunning)return;let e=!1;if(this.duration&&this.easing){this.currentTime+=t;const i=clamp(0,this.currentTime/this.duration,1);e=i>=1;const s=e?1:this.easing(i);this.value=this.from+(this.to-this.from)*s}else this.lerp?(this.value=function damp(t,i,e,s){return function lerp(t,i,e){return(1-e)*t+e*i}(t,i,1-Math.exp(-e*s))}(this.value,this.to,60*this.lerp,t),Math.round(this.value)===this.to&&(this.value=this.to,e=!0)):(this.value=this.to,e=!0);e&&this.stop(),null===(i=this.onUpdate)||void 0===i||i.call(this,this.value,e)}stop(){this.isRunning=!1}fromTo(t,i,{lerp:e,duration:s,easing:o,onStart:n,onUpdate:l}){this.from=this.value=t,this.to=i,this.lerp=e,this.duration=s,this.easing=o,this.currentTime=0,this.isRunning=!0,null==n||n(),this.onUpdate=l}}class Dimensions{constructor(t,i,{autoResize:e=!0,debounce:s=250}={}){this.wrapper=t,this.content=i,this.width=0,this.height=0,this.scrollHeight=0,this.scrollWidth=0,this.resize=()=>{this.onWrapperResize(),this.onContentResize()},this.onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)},this.onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)},e&&(this.debouncedResize=function debounce(t,i){let e;return function(...s){let o=this;clearTimeout(e),e=setTimeout((()=>{e=void 0,t.apply(o,s)}),i)}}(this.resize,s),this.wrapper instanceof Window?window.addEventListener("resize",this.debouncedResize,!1):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}destroy(){var t,i;null===(t=this.wrapperResizeObserver)||void 0===t||t.disconnect(),null===(i=this.contentResizeObserver)||void 0===i||i.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener("resize",this.debouncedResize,!1)}get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}}class Emitter{constructor(){this.events={}}emit(t,...i){var e;let s=this.events[t]||[];for(let t=0,o=s.length;t<o;t++)null===(e=s[t])||void 0===e||e.call(s,...i)}on(t,i){var e;return(null===(e=this.events[t])||void 0===e?void 0:e.push(i))||(this.events[t]=[i]),()=>{var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}}off(t,i){var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}destroy(){this.events={}}}const t=100/6,i={passive:!1};class VirtualScroll{constructor(e,s={wheelMultiplier:1,touchMultiplier:1}){this.element=e,this.options=s,this.touchStart={x:0,y:0},this.lastDelta={x:0,y:0},this.window={width:0,height:0},this.emitter=new Emitter,this.onTouchStart=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:0,y:0},this.emitter.emit("scroll",{deltaX:0,deltaY:0,event:t})},this.onTouchMove=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t,s=-(i-this.touchStart.x)*this.options.touchMultiplier,o=-(e-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:s,y:o},this.emitter.emit("scroll",{deltaX:s,deltaY:o,event:t})},this.onTouchEnd=t=>{this.emitter.emit("scroll",{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:t})},this.onWheel=i=>{let{deltaX:e,deltaY:s,deltaMode:o}=i;e*=1===o?t:2===o?this.window.width:1,s*=1===o?t:2===o?this.window.height:1,e*=this.options.wheelMultiplier,s*=this.options.wheelMultiplier,this.emitter.emit("scroll",{deltaX:e,deltaY:s,event:i})},this.onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}},window.addEventListener("resize",this.onWindowResize,!1),this.onWindowResize(),this.element.addEventListener("wheel",this.onWheel,i),this.element.addEventListener("touchstart",this.onTouchStart,i),this.element.addEventListener("touchmove",this.onTouchMove,i),this.element.addEventListener("touchend",this.onTouchEnd,i)}on(t,i){return this.emitter.on(t,i)}destroy(){this.emitter.destroy(),window.removeEventListener("resize",this.onWindowResize,!1),this.element.removeEventListener("wheel",this.onWheel,i),this.element.removeEventListener("touchstart",this.onTouchStart,i),this.element.removeEventListener("touchmove",this.onTouchMove,i),this.element.removeEventListener("touchend",this.onTouchEnd,i)}}return class Lenis{constructor({wrapper:t=window,content:i=document.documentElement,eventsTarget:e=t,smoothWheel:s=!0,syncTouch:o=!1,syncTouchLerp:n=.075,touchInertiaMultiplier:l=35,duration:r,easing:h=(t=>Math.min(1,1.001-Math.pow(2,-10*t))),lerp:a=.1,infinite:c=!1,orientation:u="vertical",gestureOrientation:d="vertical",touchMultiplier:p=1,wheelMultiplier:m=1,autoResize:v=!0,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w=!1}={}){this._isScrolling=!1,this._isStopped=!1,this._isLocked=!1,this._preventNextNativeScrollEvent=!1,this._resetVelocityTimeout=null,this.time=0,this.userData={},this.lastVelocity=0,this.velocity=0,this.direction=0,this.animate=new Animate,this.emitter=new Emitter,this.onPointerDown=t=>{1===t.button&&this.reset()},this.onVirtualScroll=t=>{if("function"==typeof this.options.virtualScroll&&!1===this.options.virtualScroll(t))return;const{deltaX:i,deltaY:e,event:s}=t;if(this.emitter.emit("virtual-scroll",{deltaX:i,deltaY:e,event:s}),s.ctrlKey)return;const o=s.type.includes("touch"),n=s.type.includes("wheel");this.isTouching="touchstart"===s.type||"touchmove"===s.type;if(this.options.syncTouch&&o&&"touchstart"===s.type&&!this.isStopped&&!this.isLocked)return void this.reset();const l=0===i&&0===e,r="vertical"===this.options.gestureOrientation&&0===e||"horizontal"===this.options.gestureOrientation&&0===i;if(l||r)return;let h=s.composedPath();h=h.slice(0,h.indexOf(this.rootElement));const a=this.options.prevent;if(h.find((t=>{var i,e,s,l,r;return t instanceof HTMLElement&&("function"==typeof a&&(null==a?void 0:a(t))||(null===(i=t.hasAttribute)||void 0===i?void 0:i.call(t,"data-lenis-prevent"))||o&&(null===(e=t.hasAttribute)||void 0===e?void 0:e.call(t,"data-lenis-prevent-touch"))||n&&(null===(s=t.hasAttribute)||void 0===s?void 0:s.call(t,"data-lenis-prevent-wheel"))||(null===(l=t.classList)||void 0===l?void 0:l.contains("lenis"))&&!(null===(r=t.classList)||void 0===r?void 0:r.contains("lenis-stopped")))})))return;if(this.isStopped||this.isLocked)return void s.preventDefault();if(!(this.options.syncTouch&&o||this.options.smoothWheel&&n))return this.isScrolling="native",void this.animate.stop();s.preventDefault();let c=e;"both"===this.options.gestureOrientation?c=Math.abs(e)>Math.abs(i)?e:i:"horizontal"===this.options.gestureOrientation&&(c=i);const u=o&&this.options.syncTouch,d=o&&"touchend"===s.type&&Math.abs(c)>5;d&&(c=this.velocity*this.options.touchInertiaMultiplier),this.scrollTo(this.targetScroll+c,Object.assign({programmatic:!1},u?{lerp:d?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}))},this.onNativeScroll=()=>{if(null!==this._resetVelocityTimeout&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent)this._preventNextNativeScrollEvent=!1;else if(!1===this.isScrolling||"native"===this.isScrolling){const t=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-t,this.direction=Math.sign(this.animatedScroll-t),this.isScrolling="native",this.emit(),0!==this.velocity&&(this._resetVelocityTimeout=setTimeout((()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()}),400))}},window.lenisVersion="1.1.13",t&&t!==document.documentElement&&t!==document.body||(t=window),this.options={wrapper:t,content:i,eventsTarget:e,smoothWheel:s,syncTouch:o,syncTouchLerp:n,touchInertiaMultiplier:l,duration:r,easing:h,lerp:a,infinite:c,gestureOrientation:d,orientation:u,touchMultiplier:p,wheelMultiplier:m,autoResize:v,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w},this.dimensions=new Dimensions(t,i,{autoResize:v}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.addEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll=new VirtualScroll(e,{touchMultiplier:p,wheelMultiplier:m}),this.virtualScroll.on("scroll",this.onVirtualScroll)}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.removeEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName()}on(t,i){return this.emitter.on(t,i)}off(t,i){return this.emitter.off(t,i)}setScroll(t){this.isHorizontal?this.rootElement.scrollLeft=t:this.rootElement.scrollTop=t}resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit("scroll",this)}reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){this.isStopped&&(this.isStopped=!1,this.reset())}stop(){this.isStopped||(this.isStopped=!0,this.animate.stop(),this.reset())}raf(t){const i=t-(this.time||t);this.time=t,this.animate.advance(.001*i)}scrollTo(t,{offset:i=0,immediate:e=!1,lock:s=!1,duration:o=this.options.duration,easing:n=this.options.easing,lerp:l=this.options.lerp,onStart:r,onComplete:h,force:a=!1,programmatic:c=!0,userData:u}={}){if(!this.isStopped&&!this.isLocked||a){if("string"==typeof t&&["top","left","start"].includes(t))t=0;else if("string"==typeof t&&["bottom","right","end"].includes(t))t=this.limit;else{let e;if("string"==typeof t?e=document.querySelector(t):t instanceof HTMLElement&&(null==t?void 0:t.nodeType)&&(e=t),e){if(this.options.wrapper!==window){const t=this.rootElement.getBoundingClientRect();i-=this.isHorizontal?t.left:t.top}const s=e.getBoundingClientRect();t=(this.isHorizontal?s.left:s.top)+this.animatedScroll}}if("number"==typeof t){if(t+=i,t=Math.round(t),this.options.infinite?c&&(this.targetScroll=this.animatedScroll=this.scroll):t=clamp(0,t,this.limit),t===this.targetScroll)return null==r||r(this),void(null==h||h(this));if(this.userData=null!=u?u:{},e)return this.animatedScroll=this.targetScroll=t,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),null==h||h(this),void(this.userData={});c||(this.targetScroll=t),this.animate.fromTo(this.animatedScroll,t,{duration:o,easing:n,lerp:l,onStart:()=>{s&&(this.isLocked=!0),this.isScrolling="smooth",null==r||r(this)},onUpdate:(t,i)=>{this.isScrolling="smooth",this.lastVelocity=this.velocity,this.velocity=t-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=t,this.setScroll(this.scroll),c&&(this.targetScroll=t),i||this.emit(),i&&(this.reset(),this.emit(),null==h||h(this),this.userData={},this.preventNextNativeScrollEvent())}})}}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame((()=>{this._preventNextNativeScrollEvent=!1}))}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.__experimental__naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?"x":"y"]}get isHorizontal(){return"horizontal"===this.options.orientation}get actualScroll(){return this.isHorizontal?this.rootElement.scrollLeft:this.rootElement.scrollTop}get scroll(){return this.options.infinite?function modulo(t,i){return(t%i+i)%i}(this.animatedScroll,this.limit):this.animatedScroll}get progress(){return 0===this.limit?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(t){this._isScrolling!==t&&(this._isScrolling=t,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(t){this._isStopped!==t&&(this._isStopped=t,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(t){this._isLocked!==t&&(this._isLocked=t,this.updateClassName())}get isSmooth(){return"smooth"===this.isScrolling}get className(){let t="lenis";return this.isStopped&&(t+=" lenis-stopped"),this.isLocked&&(t+=" lenis-locked"),this.isScrolling&&(t+=" lenis-scrolling"),"smooth"===this.isScrolling&&(t+=" lenis-smooth"),t}updateClassName(){this.cleanUpClassName(),this.rootElement.className=`${this.rootElement.className} ${this.className}`.trim()}cleanUpClassName(){this.rootElement.className=this.rootElement.className.replace(/lenis(-\w+)?/g,"").trim()}}}));
+//# sourceMappingURL=lenis.min.js.map
+</script>
+<script>
+window.GS={hooks:[]};(function(G){
+G.ease=function(x){return 1-Math.pow(1-x,3);};G.seg=function(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));};
+G.eur=function(n,r){r=r||1;return (Math.round(n/r)*r).toLocaleString('fr-FR')+' €';};
+G.tween=function(el,lo,hi,fmt,sep){var a0=el._lo||0,b0=el._hi||0,st=performance.now();el._lo=lo;el._hi=hi;(function tk(n){var q=G.ease(Math.min(1,(n-st)/700)),a=a0+(lo-a0)*q,b=b0+(hi-b0)*q;el.textContent=hi==null||lo===hi?fmt(a):fmt(a)+(sep||' – ')+fmt(b);if(q<1)requestAnimationFrame(tk);})(st);};
+G.stepper=function(f,o){var S=[].slice.call(f.querySelectorAll('[data-s]')),pv=f.querySelector('.prev'),nx=f.querySelector('.next'),chips=document.getElementById(o.chips),i=0,reached=0,N=S.length-1;
+ function draw(){chips.innerHTML='';S.slice(0,N).forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached||i===N;b.onclick=function(){go(k);};li.appendChild(b);chips.appendChild(li);});}
+ function go(k){i=k;S.forEach(function(el,j){el.hidden=j!==i;if(j===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0||i===N;nx.hidden=i===N;nx.textContent=i===N-2?o.seeTxt:i===N-1?o.sendTxt:o.nextTxt;draw();if(o.update)o.update();if(i===N-1&&o.recap)o.recap();if(o.onStep)o.onStep(i);}
+ f.addEventListener('change',function(e){if(o.update)o.update();if(e.target.type==='radio'&&i<N-2&&!e.target.closest('[data-noauto]')){var at=i;setTimeout(function(){if(i===at)go(i+1);},420);}});
+ f.addEventListener('submit',function(e){e.preventDefault();});
+ nx.onclick=function(){if(o.canNext&&!o.canNext(i))return;if(i<N)go(i+1);};pv.onclick=function(){if(i>0)go(i-1);};
+ go(0);return{go:go,cur:function(){return i;}};};
+G.copy=function(btn,out){btn.addEventListener('click',function(){var c=document.getElementById(out);(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});};
+})(window.GS);
+
+GS.FS="\nfloat hs(float n){return fract(sin(n)*43758.5453);}\nfloat h2(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}\nfloat n1(float x){float i=floor(x),f=fract(x);f=f*f*(3.-2.*f);return mix(hs(i),hs(i+1.),f);}\nfloat ridge(float x,float s){float v=0.,a=.55;for(int k=0;k<5;k++){v+=a*(1.-abs(n1(x+s)*2.-1.));x=x*2.07+1.3;a*=.48;}return v;}\nvoid main(){\n vec2 uv=gl_FragCoord.xy/r;float ar=r.x/r.y;vec2 q=vec2(uv.x*ar,uv.y);vec2 mm=m-.5;\n vec3 top=vec3(.025,.06,.11),hor=vec3(.30,.42,.56);\n vec3 col=mix(hor,top,pow(clamp(uv.y,0.,1.),.65));\n col+=vec3(.95,.58,.40)*.22*exp(-pow((uv.y-.36+mm.y*.05)*5.5,2.))*(.7+.3*uv.x);\n vec2 sp=floor(q*170.);float st=step(.9972,h2(sp))*smoothstep(.5,.95,uv.y);col+=st*.75*(.55+.45*sin(t*2.3+h2(sp+1.)*40.));\n for(int k=0;k<4;k++){\n  float fk=float(k);float par=.03+fk*.045;\n  float x=q.x*(1.1+fk*.6)+mm.x*par*7.+fk*5.7+t*.004*(fk+1.);\n  float base=.50-fk*.105+mm.y*par*.25;float amp=.36-fk*.05;\n  float hg=base+amp*(ridge(x,fk*3.1)-.5);\n  float d=uv.y-hg;\n  float cov=1.-smoothstep(-1.2/r.y,1.2/r.y,d);\n  if(cov>0.){\n   vec3 lc=mix(vec3(.50,.60,.72),vec3(.045,.085,.13),fk/3.);\n   float cap=smoothstep(-.05-fk*.015,0.,d);\n   float lit=.5+.5*sin(x*3.+fk);\n   vec3 snowc=mix(lc,vec3(.86,.90,.95),.55-fk*.12)+vec3(.35,.18,.10)*(1.-fk/3.)*.25*lit;\n   vec3 lay=mix(lc,snowc,cap*(.75-fk*.12));\n   lay=mix(lay,hor*.9,(.32-fk*.09)*smoothstep(-.25,0.,d));\n   col=mix(col,lay,cov);\n  }\n }\n float fog=exp(-pow((uv.y-.12)*6.,2.))*.18;col=mix(col,vec3(.55,.64,.74),fog*(.6+.4*sin(q.x*2.+t*.15)));\n for(int k=0;k<3;k++){float fk=float(k);float sc=9.+fk*11.;vec2 p=q*sc;p.y+=t*(1.1+fk*.7);p.x+=t*(.25+mm.x*1.6)*(1.+fk*.4)+sin(p.y*.17+fk*2.)*.5;\n  vec2 i=floor(p),f=fract(p)-.5;float rr=h2(i+fk*13.1);if(rr>.72){vec2 o=vec2(h2(i+3.3)-.5,h2(i+7.7)-.5)*.6;float dd=length(f-o);col+=vec3(.92,.96,1.)*smoothstep(.09-fk*.025,0.,dd)*(.3+fk*.28);}}\n col*=1.-.38*length(uv-vec2(.5,.62));\n gl_FragColor=vec4(col,1.);\n}\n";GS.TH=[0.3, 0.55, 0.78];GS.I18N={"en": {"n1": "Vallée Blanche", "n2": "In the mountains", "n3": "Reviews", "hcta": "Plan my day", "h1a": "30 years off‑piste", "h1b": "below Mont‑Blanc.", "h1c": "The next line is yours.", "lede": "Private ski and snowboard lessons, off-piste, the Vallée Blanche and heli-skiing in Switzerland and Italy. With Franck Chapon, IFMGA mountain guide and former French paragliding team member, and a team of qualified guides.", "c1": "Plan my day", "scroll": "Scroll", "fh": "Plan your day in the mountains.", "fl": "Private lesson, off-piste, Vallée Blanche or heli-skiing: four choices and you know the price before you even write."}};GS.GLQ=0.9;</script>
+<script>
+
+(function(G){
+var $=function(i){return document.getElementById(i);};
+/* scène Vallée Blanche */
+var route=$('route'),sk=$('skier'),L=route.getTotalLength?route.getTotalLength():1,lbl=document.querySelectorAll('.cut .lbl');
+G.CUT=function(c){var s=G.seg,e=G.ease;
+ $('massif').setAttribute('opacity',s(c,0,.12));$('grid').setAttribute('opacity',s(c,.06,.16));
+ var w=e(s(c,.1,.9));route.setAttribute('stroke-dashoffset',1-w);
+ var pt=route.getPointAtLength(L*w);sk.setAttribute('cx',pt.x);sk.setAttribute('cy',pt.y);sk.setAttribute('opacity',s(c,.1,.14)*(1-s(c,.93,.97)));
+ $('glacier').setAttribute('stroke-dashoffset',1-e(s(c,.14,.7)));
+ $('rail').setAttribute('opacity',s(c,.9,.96));
+ [[.1,.16],[.32,.38],[.56,.62],[.8,.86]].forEach(function(r,i){lbl[i].setAttribute('opacity',s(c,r[0],r[1]));});};
+/* configurateur */
+var f=$('est'),n=2,date=null,cm=new Date(2026,11,1);
+var NOW=new Date();NOW.setHours(0,0,0,0);
+var FM={
+ cours:{leg:'Quelle formule ?',o:[['m','Matin','9 h 15 – 12 h 15'],['a','Après-midi','13 h 30 – 16 h 30'],['j','Journée','Le moniteur skie avec vous toute la journée']]},
+ hp:{leg:'Quelle durée ?',o:[['m','Matin','9 h 15 – 12 h 15'],['a','Après-midi','13 h 30 – 16 h 30'],['j','Journée','Pour aller chercher les grandes pentes']]},
+ vb:{leg:'Quelle Vallée Blanche ?',o:[['cl','Classique','Depuis l\'Aiguille du Midi'],['mg','Avec moniteur-guide','Encadrement renforcé'],['sk','Depuis le Skyway','Départ côté italien']],opt:'<div class="choice" style="margin-top:.6rem"><input type="checkbox" name="prep" id="prep" value="1"><label for="prep">Journée de préparation aux Grands-Montets<small>La veille, pour arriver en confiance · 490 €</small></label></div>'},
+ heli:{leg:'Quelle dépose ?',o:[['ro','Rosablanche','Suisse, une dépose'],['tr','Trient','Suisse, deux déposes'],['pc','Petit Combin','Suisse, une dépose'],['vg','Valgrisenche','Italie, deux déposes'],['cm','Courmayeur, La Thuile','Italie']],opt:'<div class="choice" style="margin-top:.6rem"><input type="checkbox" name="air" id="air" value="1"><label for="air">J\'ai mon propre sac airbag<small>Sinon location obligatoire : 35 € par personne</small></label></div>'}};
+var HELI={ro:[550,400,6],tr:[800,690,6],pc:[540,440,6],vg:[880,680,4],cm:[750,650,4]};
+var NM={cours:'Cours privé',hp:'Hors-piste',vb:'Vallée Blanche',heli:'Héliski'};
+function val(k){var e=f.querySelector('[name="'+k+'"]:checked');return e?e.value:null;}
+function lab(k){var e=f.querySelector('[name="'+k+'"]:checked');return e?e.nextElementSibling.firstChild.textContent:'';}
+function buildFm(){var a=val('act'),d=FM[a],cur=val('fm');$('fmLeg').textContent=d.leg;
+ $('fmBox').innerHTML=d.o.map(function(o,i){return '<div class="choice"><input type="radio" name="fm" id="fm'+i+'" value="'+o[0]+'"'+((cur===o[0]||(!cur||!d.o.some(function(x){return x[0]===cur;}))&&i===0)?' checked':'')+'><label for="fm'+i+'">'+o[1]+'<small>'+o[2]+'</small></label></div>';}).join('');
+ $('fmOpt').innerHTML=d.opt||'';}
+function peak(d){if(!d)return false;var m=d.getMonth(),j=d.getDate();return (m===11&&j===31)||(m===0&&j===1)||(m===1&&j>=14)||(m===2&&j===1);}
+function price(){var a=val('act'),fm=val('fm'),pp=null,tot=null,msg='',sub='Selon votre grille 2025-2026.';
+ if(a==='cours'||a==='hp'){tot=fm==='m'?(n<=3?280:320):fm==='a'?(n<=3?250:300):500+Math.max(0,n-3)*50;
+  if(peak(date)){tot*=fm==='j'?1.10:1.15;sub='Majoration de période incluse (Nouvel An, vacances de février).';}
+  if(a==='hp')sub='Tarif du cours privé, à confirmer pour le hors-piste.';
+  if(fm!=='j'&&n>6)msg='6 personnes maximum par moniteur.';}
+ else if(a==='vb'){var early=date&&date<new Date(2027,1,1);
+  if(fm==='mg')tot=570;else if(early){tot=n<=2?550:null;if(n>2)msg='Avant le 31 janvier, la Vallée Blanche se fait à deux très bons skieurs par guide : nous organisons votre groupe.';}
+  else tot=500+Math.max(0,n-4)*50;
+  if(tot&&$('prep')&&$('prep').checked)tot+=490;}
+ else{var h=HELI[fm],k=Math.max(3,Math.min(h[2],n));pp=h[0]+(h[1]-h[0])*(k-3)/(h[2]-3);tot=pp*Math.max(n,3);if(!($('air')&&$('air').checked))tot+=35*Math.max(n,3);
+  sub='Soit '+G.eur(pp,5)+' par personne. Prix intermédiaires à valider.';if(n<3)msg='L\'héliski se réserve à partir de 3 skieurs : nous pouvons compléter votre groupe.';if(n>h[2])msg='Groupe de '+h[2]+' skieurs maximum pour cette dépose.';}
+ return{tot:tot,pp:pp,msg:msg,sub:sub};}
+var lastA=null;
+function update(){var a=val('act');if(a!==lastA){lastA=a;buildFm();}
+ ['pvCours','pvHp','pvVb','pvHeli'].forEach(function(id,i){$(id).classList.toggle('on',['cours','hp','vb','heli'][i]===a);});
+ var fm=val('fm');if(a==='heli')$('heliTxt').textContent=(fm==='vg'||fm==='cm')?'Dépose en Italie':'Dépose en Suisse';
+ var p=price();if(p.tot)G.tween($('liveP'),p.tot,null,function(x){return G.eur(x,5);});else{$('liveP').textContent='Sur demande';$('liveP')._lo=0;}
+ $('liveSub').textContent=p.sub;$('nHint').textContent=p.msg;$('nOut').textContent=n;$('nTxt').textContent=n>1?'personnes':'personne';
+ $('pvLabel').textContent=NM[a]+(fm?' · '+lab('fm'):'')+' · '+n+' pers.'+(date?' · '+date.toLocaleDateString('fr-FR',{day:'numeric',month:'long'}):'');
+ var hs=[a,fm,n,val('lvl')?f.querySelector('[name=lvl]:checked').id:'',date?date.toISOString().slice(0,10):''].join('~');try{history.replaceState(null,'','#journee='+hs);}catch(e){}
+ return p;}
+$('nMinus').onclick=function(){n=Math.max(1,n-1);update();};$('nPlus').onclick=function(){n=Math.min(8,n+1);update();};
+/* calendrier */
+var DW=['L','M','M','J','V','S','D'];
+function dis(d){var a=val('act');if(d<NOW)return true;if(d>new Date(2027,4,3))return true;if(a==='heli'&&d<new Date(2027,0,15))return true;return false;}
+function cal(){$('cMonth').textContent=cm.toLocaleDateString('fr-FR',{month:'long',year:'numeric'});var g=$('cGrid'),h=DW.map(function(x){return '<span class="dw">'+x+'</span>';}).join(''),first=(cm.getDay()+6)%7,days=new Date(cm.getFullYear(),cm.getMonth()+1,0).getDate();
+ for(var i=0;i<first;i++)h+='<span></span>';for(var j=1;j<=days;j++){var d=new Date(cm.getFullYear(),cm.getMonth(),j);h+='<button type="button" data-d="'+j+'"'+(dis(d)?' disabled':'')+(peak(d)?' class="hi" title="Période majorée"':'')+' aria-pressed="'+(date&&+date===+d)+'">'+j+'</button>';}
+ g.innerHTML=h;$('cPrev').disabled=cm<=new Date(2026,11,1);$('cNext').disabled=cm>=new Date(2027,4,1);}
+$('cGrid').addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;date=new Date(cm.getFullYear(),cm.getMonth(),+b.dataset.d);cal();update();wx();
+ $('dHint').textContent=peak(date)?'Période majorée sur votre grille (Nouvel An, vacances de février).':val('act')==='heli'?'L\'héliski dépend de la météo : une date de repli vous sera proposée.':'';
+ setTimeout(function(){if(st.cur()===3)st.go(4);},650);});
+$('cPrev').onclick=function(){cm=new Date(cm.getFullYear(),cm.getMonth()-1,1);cal();};$('cNext').onclick=function(){cm=new Date(cm.getFullYear(),cm.getMonth()+1,1);cal();};
+/* météo en altitude (open-meteo, repli silencieux) */
+var WX=null;
+function wx(){var t=$('wxTxt');if(!date)return;var diff=Math.round((date-NOW)/864e5);if(diff>6){t.textContent='Prévisions à 3 842 m disponibles sept jours avant votre sortie.';return;}
+ function show(){var i=WX.daily.time.indexOf(date.toISOString().slice(0,10).replace(/T.*/,''));if(i<0){var k=date.getFullYear()+'-'+String(date.getMonth()+1).padStart(2,'0')+'-'+String(date.getDate()).padStart(2,'0');i=WX.daily.time.indexOf(k);}if(i<0)return;var D=WX.daily;t.textContent=Math.round(D.temperature_2m_min[i])+' °C à '+Math.round(D.temperature_2m_max[i])+' °C, '+(D.snowfall_sum[i]>0?Math.round(D.snowfall_sum[i])+' cm de neige fraîche, ':'pas de neige annoncée, ')+'vent jusqu\'à '+Math.round(D.wind_speed_10m_max[i])+' km/h.';}
+ if(WX)return show();
+ fetch('https://api.open-meteo.com/v1/forecast?latitude=45.879&longitude=6.887&elevation=3842&daily=temperature_2m_max,temperature_2m_min,snowfall_sum,wind_speed_10m_max&timezone=Europe%2FParis&forecast_days=7').then(function(r){return r.json();}).then(function(j){if(j&&j.daily){WX=j;show();}}).catch(function(){});}
+function recap(){var p=price(),d=[['Activité',NM[val('act')]],['Formule',lab('fm')],['Groupe',n+(n>1?' personnes':' personne')],['Niveau',val('lvl')||'—'],['Date',date?date.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}):'à définir'],['Prix',p.tot?G.eur(p.tot,5):'sur demande']];
+ $('recap').innerHTML=d.map(function(r){return '<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');return d;}
+var st=G.stepper(f,{chips:'chips',update:update,recap:recap,nextTxt:'Continuer',seeTxt:'Voir ma journée',sendTxt:'Envoyer',onStep:function(i){if(i===3)cal();}});
+(function(){var m=location.hash.match(/journee=([^&]+)/);if(!m)return;var p=decodeURIComponent(m[1]).split('~'),e=f.querySelector('[name=act][value="'+p[0]+'"]');if(e){e.checked=true;update();}var g=f.querySelector('[name=fm][value="'+p[1]+'"]');if(g)g.checked=true;n=+p[2]||2;if(p[3]&&$(p[3]))$(p[3]).checked=true;if(p[4]){var q=p[4].split('-');date=new Date(+q[0],+q[1]-1,+q[2]);cm=new Date(+q[0],+q[1]-1,1);}update();})();
+$('waBtn').addEventListener('click',function(){var d=recap(),txt='Bonjour Franck, voici ma demande :\n'+d.map(function(r){return '- '+r[0]+' : '+r[1];}).join('\n')+'\nNom : '+$('n').value+'\nHôtel : '+$('h').value+'\n'+location.href;this.href='https://wa.me/'+'33645892852'+'?text='+encodeURIComponent(txt);});
+G.copy($('copyBtn'),'copied');
+G.onLang=function(){};
+})(window.GS);
+
+</script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,G=window.GS;
+var lenis=null;if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});}
+G.lenis=lenis;
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+/* Ouverture WebGL */
+var cv=document.getElementById('herogl'),gl=null;try{gl=cv.getContext('webgl',{antialias:false,alpha:false,preserveDrawingBuffer:false});}catch(e){}
+var heroVisible=true,t0=performance.now();
+function nogl(){document.documentElement.classList.add('nogl');cv.style.display='none';}
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.error(gl.getShaderInfoLog(o));return null;}return o;}
+ var a=sh(gl.VERTEX_SHADER,vs),b=sh(gl.FRAGMENT_SHADER,'precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;'+G.FS);
+ if(!a||!b){nogl();}else{
+ var pr=gl.createProgram();gl.attachShader(pr,a);gl.attachShader(pr,b);gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.5,my=.5,tx=.5,ty=.5;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5)*(G.GLQ||.75);cv.width=Math.max(2,cv.clientWidth*d|0);cv.height=Math.max(2,cv.clientHeight*d|0);gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ G.drawHero=function(now){if(!heroVisible)return;mx+=(tx-mx)*.05;my+=(ty-my)*.05;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?12.:(now-t0)/1000+12.);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ G.drawHero(t0);}
+}else nogl();
+/* Titre : chaque ligne tient sur une ligne, quelle que soit la police */
+var h1=document.querySelector('.hero h1');G.fit=function(){h1.style.fontSize='';var w=h1.clientWidth,mx=0;h1.querySelectorAll('.ln span').forEach(function(s){mx=Math.max(mx,s.offsetWidth);});if(mx>w){h1.style.fontSize=(parseFloat(getComputedStyle(h1).fontSize)*w/mx*.97)+'px';}};
+G.fit();addEventListener('resize',G.fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(G.fit);
+/* Scènes */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+G.prog=prog;G.ease=ease;G.seg=seg;
+var hdr=document.getElementById('hdr'),proofB=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=document.getElementById('rv'),rvImg=rv.querySelector('img');
+var cutS=document.querySelector('.cut'),live=document.querySelectorAll('#live li'),meter=document.getElementById('meter');
+var gS=document.querySelector('.hgal'),track=document.getElementById('track'),gImgs=track.querySelectorAll('img'),gc=document.getElementById('gcount'),gN=gImgs.length;
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+function count(b){var to=+b.dataset.to,dec=+b.dataset.dec||0,suf=b.dataset.suf||'',st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1400));b.textContent=(to*k).toLocaleString(document.documentElement.lang==='en'?'en-GB':'fr-FR',{minimumFractionDigits:dec,maximumFractionDigits:dec})+suf;if(k<1)requestAnimationFrame(tick);})(st);}
+G.count=count;
+function scenes(now){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proofB.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*24+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.45){factsDone=true;facts.forEach(count);}
+ var c=prog(cutS);if(G.CUT)G.CUT(c,now);
+ var th=G.TH||[.25,.5,.75],st=0;th.forEach(function(x){if(c>=x)st++;});live.forEach(function(li,i){li.classList.toggle('on',i===st);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(20,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ var k=Math.min(gN,1+Math.floor(g*gN));gc.textContent=(k<10?'0':'')+k+' / '+(gN<10?'0':'')+gN;
+}
+function loop(now){if(lenis)lenis.raf(now);if(G.drawHero&&!RM)G.drawHero(now);for(var i=0;i<G.hooks.length;i++)G.hooks[i](now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+if(RM){facts.forEach(function(b){b.textContent=(+b.dataset.to).toLocaleString('fr-FR',{minimumFractionDigits:+b.dataset.dec||0})+(b.dataset.suf||'');});if(G.CUT)G.CUT(1,0);}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);if(x.target.dataset.stars)fillStars(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+function fillStars(el){var s=el.querySelector('.stars.fill'),to=+el.dataset.stars,sc=el.querySelector('[data-to]');if(sc)count(sc);if(!s)return;var st=performance.now();(function tk(n){var k=ease(Math.min(1,(n-st)/1600));s.style.setProperty('--p',(to/5*100*k)+'%');if(k<1)requestAnimationFrame(tk);})(st);}
+/* Lettre mensuelle (démonstration) */
+var nf=document.getElementById('nlf');if(nf)nf.addEventListener('submit',function(e){e.preventDefault();var ok=document.getElementById('nlok');ok.hidden=false;nf.querySelector('.nl-row').hidden=true;});
+/* Langues */
+var L=G.I18N||{},fr={};document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.innerHTML;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){var v=(L[l]||{})[e.dataset.i];e.innerHTML=v!=null?v:fr[e.dataset.i];});if(G.onLang)G.onLang(l);G.fit();};});
+})();
+</script>
+</body>
+</html>

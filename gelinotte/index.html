@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Gelinotte — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF1F5;--ink:#181B26;--soft:#596072;--line:#D3D8E1;--deep:#171B2B;--deep2:#22283D;--acc:#B9533A;--onacc:#fff;--acc2:#F1C27D;--ondeep:#E4E7EF;--ondeep2:#A2A9BD;--card:#FBFCFD;--stud:#E2E6EE;--sline:#C3C9D6;--star:#D29A3C;--phbg:#CDD3DE;--glass:rgba(23,27,43,.36);--glass2:rgba(251,252,253,.84);--herot:#D9DDE8;--mbar:rgba(23,27,43,.93);--d:"DM Serif Display",Georgia,serif;--t:"Figtree",system-ui,sans-serif;--dw:400;--h1:clamp(2.2rem,5.4vw,5.6rem)}
+
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--t);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--acc);background:var(--acc);color:var(--onacc);cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),filter .2s;line-height:1.2;text-align:center}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);margin:0;font-weight:var(--dw,700)}
+h2{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.04;max-width:18ch;letter-spacing:var(--ls,-.02em)}
+.lede{color:var(--soft);max-width:38rem}
+[hidden]{display:none!important}
+.proof{position:relative;z-index:40;background:#000;color:#d4d7d6;font-family:var(--d);font-size:.8rem;font-weight:400}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:top .3s}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:var(--glass);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:var(--glass2);color:var(--ink);border-color:rgba(0,0,0,.08)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;min-width:0}
+.lmark{width:28px;height:28px;flex:none}
+.bname{font-family:var(--d);font-weight:var(--bw,700);font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap}
+.hnav{display:flex;align-items:center;gap:1.3rem;font-family:var(--d);font-size:.9rem;font-weight:500}
+.hnav a{text-decoration:none}.hnav a.nl{opacity:.85}
+header.site .btn{padding:.6rem 1.1rem}
+.lang{display:flex;gap:.15rem}.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero .fallback{position:absolute;inset:0;background:var(--deep);display:none}
+.hero .fallback img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.nogl .hero .fallback{display:block}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-size:var(--h1,clamp(2rem,5.2vw,5.2rem));line-height:1.02;letter-spacing:var(--ls,-.02em)}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.04em}
+.hero h1 .ln span{display:inline-block;transform:translateY(108%);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.09s}.hero h1 .ln:nth-child(3) span{transition-delay:.18s}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .55s,transform 1s .55s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:var(--herot);margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.scrollhint{position:absolute;right:1.25rem;bottom:1.25rem;z-index:2;font-family:var(--d);font-size:.75rem;color:var(--herot);opacity:.7;writing-mode:vertical-rl}
+@media(max-width:600px){.hero h1{font-size:var(--h1m,clamp(1.45rem,6.4vw,2.3rem))}.hero-inner{padding-bottom:6.5rem}.hero-ctas .ghost{display:none}}
+.reveal{height:220vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:var(--deep2)}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55))}
+.reveal .cap{position:absolute;left:clamp(1.25rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);color:#fff;font-family:var(--d);z-index:2;max-width:28rem}
+.reveal .cap b{display:block;font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.08;margin-bottom:.4rem}
+.reveal .cap span{font-size:.9rem;opacity:.85}
+.facts{position:absolute;top:clamp(6rem,15vh,9rem);right:clamp(1.25rem,4vw,3rem);z-index:2;display:grid;gap:1.2rem;color:#fff;font-family:var(--d);text-align:right}
+.facts b{display:block;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;opacity:.85}
+.cut{height:340vh;position:relative;background:var(--deep);color:var(--ondeep)}
+.cut .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.cut-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.cut h2{color:#fff;margin-bottom:1rem}
+.cut .lede{color:var(--ondeep2);margin:0 0 2rem}
+.cut svg{width:100%;height:auto;overflow:visible}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps-live li{border-left:2px solid rgba(255,255,255,.16);padding:.2rem 0 .2rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--acc2)}
+.steps-live b{display:block;font-family:var(--d);color:#fff;font-weight:600}
+.steps-live span{font-size:.96rem;color:var(--ondeep2)}
+.meter{height:2px;background:rgba(255,255,255,.14);margin-top:2rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--acc2);transform-origin:left;transform:scaleX(0)}
+.hgal{height:360vh;position:relative;background:var(--bg)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(62vw,720px);margin:0}
+.card .ph{height:min(58vh,520px);overflow:hidden;border-radius:var(--r,4px);background:var(--phbg)}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{font-family:var(--d);margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-weight:600}.card figcaption span{color:var(--soft);font-size:.9rem;white-space:nowrap}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--d);font-weight:700;font-size:1.1rem;font-variant-numeric:tabular-nums}
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;counter-reset:s;margin:3rem 0 0;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:1rem}
+.steps li::before{content:counter(s);font-family:var(--d);font-weight:700;font-size:2.6rem;line-height:1;color:var(--acc);display:block;margin-bottom:.8rem}
+.steps h3{font-size:1.08rem;margin-bottom:.4rem}.steps p{margin:0;color:var(--soft);font-size:.98rem}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+.feat{background:var(--deep);color:var(--ondeep);position:relative;overflow:hidden}
+.feat h2{color:#fff}.feat .lede{color:var(--ondeep2)}
+.cfg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.2rem;overflow:hidden}
+.preview svg{width:100%;height:auto;display:block}
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.25rem,3vw,2rem)}
+fieldset{border:0;margin:0;padding:0}legend{font-family:var(--d);font-weight:600;font-size:1.25rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem .95rem;cursor:pointer;font-family:var(--d);font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:var(--ondeep2);font-size:.8rem;margin-top:.2rem;font-family:var(--t)}
+.choice input:checked+label{border-color:var(--acc2);background:rgba(255,255,255,.07)}
+.choice input:focus-visible+label{outline:3px solid var(--acc2);outline-offset:2px}
+.step-anim{animation:stepin .55s cubic-bezier(.16,1,.3,1)}@keyframes stepin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-family:var(--d);font-size:.88rem}
+.field input,.field select{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.06);color:#fff}
+.note{font-size:.85rem;color:var(--ondeep2);opacity:.85;margin-top:1rem}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem;font-family:var(--d)}
+.live span{font-size:.8rem;color:var(--ondeep2)}.live b{display:block;white-space:nowrap;font-size:clamp(1.15rem,2vw,1.6rem);color:#fff;font-variant-numeric:tabular-nums}
+.live small{font-size:.8rem;color:var(--ondeep2);text-align:right;max-width:15rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:var(--ondeep2);padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--acc2);color:var(--deep);border-color:var(--acc2)}
+.chips button.done{color:#fff;border-color:rgba(255,255,255,.45)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.85rem;color:var(--ondeep2);margin:-.4rem 0 1rem}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-family:var(--d);font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:var(--ondeep2)}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.btn.wa{background:#1F9D57;border-color:#1F9D57;color:#fff}
+.copied{font-family:var(--d);font-size:.82rem;color:var(--acc2);align-self:center;word-break:break-all}
+.done-msg{font-family:var(--d);font-size:1.5rem;color:#fff;line-height:1.2}
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.score{font-family:var(--d);font-weight:700;font-size:4.4rem;line-height:1;font-variant-numeric:tabular-nums}.score small{display:block;font-size:.85rem;font-weight:400;color:var(--soft);margin-top:.4rem}
+.stars{color:var(--star);letter-spacing:.08em;position:relative;display:inline-block}
+.stars.fill{background:linear-gradient(90deg,var(--star) var(--p,0%),var(--line) var(--p,0%));-webkit-background-clip:text;background-clip:text;color:transparent;transition:--p 1.4s}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 52s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--card);border:1px solid var(--line);border-radius:var(--r2,14px);padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-size:1.04rem;line-height:1.5}.rcard figcaption{font-family:var(--d);font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--acc),var(--acc)) center/14px 2px no-repeat,linear-gradient(var(--acc),var(--acc)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-top:5rem}
+.bigtel{font-family:var(--d);font-weight:700;font-size:clamp(2rem,4.6vw,3.6rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-family:var(--d);font-size:.85rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:grid;gap:.4rem;max-width:26rem}.nl-form label{color:var(--ink);font-weight:600}
+.nl-row{display:flex;gap:.4rem}.nl-row input{flex:1;min-width:0;font:inherit;padding:.6rem .8rem;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink)}
+.nl-row .btn{padding:.6rem 1rem}
+.nl-ok{color:var(--acc);font-weight:600}
+.studio{background:var(--stud);border-top:6px solid var(--acc);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid var(--sline)}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid var(--sline)}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid var(--sline)}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid var(--sline)}.addons b{font-weight:600;font-family:var(--d)}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums;font-family:var(--d)}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--card);border:1px solid var(--sline);border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:var(--ondeep);border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--acc);font-weight:600}.offer.rec .tag{color:var(--acc2)}
+.offer h3{font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .cut-grid,.cfg,.contact,.rx-head,.faq{grid-template-columns:1fr}.rx-head,.faq{gap:1.5rem}
+ .cut{height:300vh}.cut h2{font-size:1.8rem}.cut .lede{display:none}
+ .preview{position:relative;top:0}
+ .steps{grid-template-columns:1fr 1fr}.offers{grid-template-columns:1fr}
+ .card{width:82vw}.facts{top:auto;bottom:8rem}
+}
+@media (max-width:600px){
+ header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}.bname{font-size:.95rem}.lmark{width:24px;height:24px}
+ .hnav .btn{display:none}.steps,.choices{grid-template-columns:1fr}.audit li{grid-template-columns:1fr;gap:.5rem}
+ .steps-live li:not(.on){display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:var(--mbar);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+ .score{font-size:3.4rem}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.cut,.hgal{height:auto}.reveal .stick,.cut .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .mq-track{animation:none;flex-wrap:wrap;width:auto}
+}
+
+
+.hero h1,h2{letter-spacing:-.01em}.btn,.hnav,.chips button,.choice label,.live,.recap,.cal-h,.stepper,legend,.field label,.count,.card figcaption,.offer .price,.addons b,.addons span,.faq summary,.facts,.reveal .cap span,footer.site,.proof,.steps-live b,.bigtel{font-family:var(--t)!important}.btn{font-weight:600}.faq summary,.steps-live b,legend{font-weight:600}
+.bname{font-weight:600;font-size:1.12rem}
+.stepper{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;font-family:var(--d)}
+.stepper button{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);background:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.stepper output{font-size:2.2rem;font-weight:600;min-width:2ch;text-align:center;color:#fff;font-variant-numeric:tabular-nums}
+.stepper span{color:var(--ondeep2);font-family:var(--t)}
+.cal{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.8rem}
+.cal-h{display:flex;justify-content:space-between;align-items:center;font-family:var(--d);margin-bottom:.6rem}.cal-h b{color:#fff;font-size:1.1rem;font-weight:600}
+.cal-h button{background:none;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:1.1rem}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;font-family:var(--t);font-size:.85rem;text-align:center}
+.cal-g .dw{color:var(--ondeep2);font-size:.72rem;padding:.2rem 0}
+.cal-g button{aspect-ratio:1;border:0;border-radius:8px;color:#fff;cursor:pointer;font:inherit;background:rgba(255,255,255,.05);border-bottom:3px solid transparent}
+.cal-g button.s1{border-bottom-color:#5d8c84}.cal-g button.s2{border-bottom-color:#c9a36b}.cal-g button.s3{border-bottom-color:#e07a4f}
+.cal-g button.in{background:rgba(233,195,143,.22)}.cal-g button.end{background:var(--acc2);color:var(--deep);font-weight:700}
+.cal-g button:disabled{opacity:.22;cursor:default}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.75rem;color:var(--ondeep2);margin-top:.6rem}.legend i{display:inline-block;width:14px;height:3px;margin-right:.35rem;vertical-align:middle}
+.legend .s1{background:#5d8c84}.legend .s2{background:#c9a36b}.legend .s3{background:#e07a4f}
+#facade .rw rect{fill:#241c19;transition:fill .5s}#facade .rw text{font-family:Figtree,sans-serif;font-size:10px;fill:#f1c27d;opacity:0;transition:opacity .4s}#facade .rw text.in{fill:#171b2b}
+#facade .rw.on rect{fill:#f2b563}#facade .rw.on text{opacity:1}
+#pvAll{transition:opacity .6s}
+.snowlive{margin-top:1rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.8rem;font-family:var(--t)}.snowlive span{display:block;font-size:.8rem;color:var(--ondeep2)}.snowlive b{color:#fff;font-weight:600}
+.cmp{display:flex;justify-content:space-between;gap:1rem;font-size:.85rem;color:var(--acc2);margin:0 0 1rem}
+
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour La Gelinotte par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="La Gelinotte, accueil"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 26 L12 12 L17 19 L21 14 L29 26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M9.5 16 L12 12 L14.5 15.5" fill="none" stroke="#F1C27D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="7" r="2.6" fill="currentColor"/></svg><span class="bname">La Gelinotte</span></a>
+ <nav class="hnav" aria-label="Navigation"><a class="nl" href="#chambres" data-i="n1">Les chambres</a><a class="nl" href="#journee" data-i="n2">Une journée</a><a class="nl" href="#avis" data-i="n3">Avis</a><div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button></div><a class="btn" href="#reserver" data-i="hcta">Réserver en direct</a></nav>
+</div></header>
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="herogl" aria-hidden="true"></canvas>
+ <div class="fallback" aria-hidden="true"><img src="https://static.wixstatic.com/media/3a3ff5_6c7b737d70d648b48999eaaa8d23c804~mv2_d_6016_4000_s_4_2.jpg" alt="" onerror="this.style.visibility='hidden'"></div>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">Face aux Dômes de Miage,</span></span><span class="ln"><span data-i="h1b">une maison de famille</span></span><span class="ln"><span data-i="h1c">depuis 1995.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Quatorze chambres à 1 164 m, aux Contamines-Montjoie. Béatrice vous accueille, Nimaga cuisine savoyard et africain, et la navette gratuite vous dépose aux remontées. Réservez votre chambre en direct, en demi-pension ou avec le petit-déjeuner.</p>
+   <div class="hero-ctas"><a class="btn" href="#reserver" data-i="c1">Voir les disponibilités</a><a class="btn ghost" href="tel:+33607964731">06 07 96 47 31</a></div>
+  </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true" data-i="scroll">Défiler</div>
+</section>
+<section class="reveal" id="chambres" aria-label="Ici, chaque hôte est reçu comme un ami de la famille.">
+ <div class="stick">
+  <figure id="rv"><img src="https://static.wixstatic.com/media/3a3ff5_86ca52db23ba42af8cd70c458f77f36d~mv2_d_2592_1944_s_2.jpg" alt="Le chalet-hôtel La Gelinotte aux Contamines-Montjoie" onerror="this.style.visibility='hidden'"><div class="shade"></div></figure>
+  <div class="cap"><b>Ici, chaque hôte est reçu comme un ami de la famille.</b><span>La Revenaz, Les Contamines-Montjoie</span></div>
+  <div class="facts" id="facts"><div><b data-to="1164" data-suf=" m">0</b><span>d’altitude, face aux Dômes de Miage</span></div><div><b data-to="14" data-suf="">0</b><span>chambres, de 1 à 5 personnes</span></div><div><b data-to="4.3" data-dec="1" data-suf="/5">0</b><span>48 avis TripAdvisor</span></div></div>
+ </div>
+</section>
+<section class="cut" id="journee" aria-label="Une journée à La Gelinotte.">
+ <div class="stick"><div class="wrap cut-grid">
+  <svg viewBox="0 0 760 420" role="img" aria-label="Une journée à La Gelinotte, du petit-déjeuner au dîner">
+ <defs><clipPath id="win"><rect x="0" y="0" width="760" height="420" rx="14"/></clipPath></defs>
+ <g clip-path="url(#win)">
+ <rect width="760" height="420" fill="#1d2440"/>
+ <rect id="skyDay" width="760" height="420" fill="#7ea3c4" opacity="0"/>
+ <rect id="skyDusk" width="760" height="420" fill="#8a6170" opacity="0"/>
+ <rect id="skyNight" width="760" height="420" fill="#10142a" opacity="0"/>
+ <circle id="sun" cx="80" cy="330" r="22" fill="#f8deaa"/>
+ <path d="M0 290 C60 250 110 170 210 150 C290 135 330 190 380 175 C440 120 520 105 590 150 C650 185 700 220 760 230 L760 420 L0 420 Z" fill="#e4eaf1"/>
+ <path d="M0 290 C60 250 110 170 210 150 C290 135 330 190 380 175 C440 120 520 105 590 150 C650 185 700 220 760 230" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
+ <path id="shade" d="M0 290 C60 250 110 170 210 150 C290 135 330 190 380 175 C440 120 520 105 590 150 C650 185 700 220 760 230 L760 420 L0 420 Z" fill="#141a30" opacity="0"/>
+ <text x="470" y="98" font-family="Figtree" font-size="12" fill="#fff" opacity=".7">Dômes de Miage</text>
+ <line x1="470" y1="356" x2="700" y2="190" stroke="#2c3346" stroke-width="1.5"/>
+ <g id="cab"><line x1="0" y1="-10" x2="0" y2="0" stroke="#2c3346" stroke-width="1.5"/><rect x="-9" y="0" width="18" height="15" rx="3" fill="#b9533a"/></g>
+ <rect x="0" y="352" width="760" height="68" fill="#f0f3f7"/>
+ <g id="bus"><rect x="0" y="0" width="54" height="22" rx="5" fill="#b9533a"/><rect x="6" y="5" width="34" height="8" rx="2" fill="#f1c27d"/><circle cx="12" cy="23" r="4" fill="#1d2440"/><circle cx="42" cy="23" r="4" fill="#1d2440"/></g>
+ <g id="chalet" transform="translate(130 250)">
+  <path d="M-24 46 L130 -36 L284 46 Z" fill="#3a2a22"/><path d="M-28 48 L130 -38 L288 48" fill="none" stroke="#f3f6f9" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="0" y="46" width="260" height="56" fill="#6b4632"/><rect x="0" y="46" width="260" height="8" fill="#55382a"/>
+  <rect x="-6" y="72" width="272" height="5" fill="#3a2a22"/>
+  <g id="wins" fill="#241c19"><rect x="16" y="56" width="24" height="14"/><rect x="58" y="56" width="24" height="14"/><rect x="100" y="56" width="24" height="14"/><rect x="142" y="56" width="24" height="14"/><rect x="184" y="56" width="24" height="14"/><rect x="226" y="56" width="24" height="14"/><rect x="58" y="82" width="24" height="16"/><rect x="184" y="82" width="24" height="16"/><rect x="116" y="0" width="28" height="22"/></g>
+  <g id="steam" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0"><path d="M200 -10 c-6 -10 6 -16 0 -26 s6 -16 0 -26"/><path d="M214 -6 c-6 -10 6 -16 0 -26 s6 -16 0 -26"/></g>
+  <rect x="194" y="-6" width="16" height="26" fill="#3a2a22"/>
+ </g>
+ <text id="clock" x="720" y="60" text-anchor="end" font-family="DM Serif Display" font-size="44" fill="#fff">7 h 30</text>
+ </g>
+</svg>
+  <div>
+   <h2>Une journée à La Gelinotte.</h2>
+   <p class="lede">Du buffet du matin au dîner de 19 h 30, sans prendre la voiture : la navette passe à deux minutes du chalet.</p>
+   <ol class="steps-live" id="live"><li><b>7 h 30, petit-déjeuner</b><span>Buffet sucré-salé, fromages de pays et charcuterie.</span></li><li><b>9 h, la navette gratuite</b><span>Arrêt n° 43 à deux minutes, puis 120 km de pistes.</span></li><li><b>17 h, le bar ouvre</b><span>Salon, bibliothèque, jeux et baby-foot jusqu’à 21 h.</span></li><li><b>19 h 30, le dîner</b><span>Entrée, plat, dessert : la Savoie et les recettes africaines de Nimaga.</span></li></ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
+<section class="hgal" id="galerie" aria-label="Galerie">
+ <div class="stick">
+  <div class="wrap head"><h2>Votre chambre, avant d’arriver.</h2><span class="count" id="gcount">01 / 06</span></div>
+  <div class="track" id="track"><figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/3a3ff5_e74222a8dc2a45efbc006fef8a49ab4d~mv2_d_5616_3744_s_4_2.jpg" alt="Le chalet-hôtel" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le chalet-hôtel</b><span>Les Contamines-Montjoie</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/3a3ff5_00417c41a70f4e5f8e36d547ca4634ea~mv2.jpg" alt="Double Vue Balcon" onerror="this.style.visibility='hidden'"></div><figcaption><b>Double Vue Balcon</b><span>Face aux Dômes de Miage</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/3a3ff5_937a8a1f1fa94fbab2dcf9e50d60caa8~mv2.jpg" alt="Triple Chaleureuse" onerror="this.style.visibility='hidden'"></div><figcaption><b>Triple Chaleureuse</b><span>22 m², balcon</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/3a3ff5_024f7098f7d749b7b58e909fb020b313~mv2.jpg" alt="Quadruple avec Balcon" onerror="this.style.visibility='hidden'"></div><figcaption><b>Quadruple avec Balcon</b><span>Et Suite Familiale Cocon</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/3a3ff5_38ac59764ae7478eb797e1cc08525dee~mv2.jpg" alt="Le salon" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le salon</b><span>Bibliothèque, jeux, baby-foot</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/3a3ff5_a4a6ded94f254e0bbb9a0960a86d6a02~mv2.jpg" alt="Le restaurant" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le restaurant</b><span>Dîner à 19 h 30</span></figcaption></figure></div>
+ </div>
+</section>
+<section class="pad feat" id="reserver"><div class="wrap">
+ <h2 data-i="fh">Réservez votre chambre en direct.</h2>
+ <p class="lede" style="margin-top:1rem" data-i="fl">Choisissez votre formule, votre chambre, vos dates et vos voyageurs : le prix s’affiche nuit par nuit, et votre demande arrive directement chez Béatrice, sans plateforme ni commission.</p>
+ <div class="cfg">
+  <div class="preview">
+   <svg viewBox="0 0 420 300" aria-hidden="true" id="facade">
+    <rect width="420" height="300" rx="10" fill="#171b2b"/>
+    <path d="M0 240 C50 200 90 130 160 120 C220 112 250 150 290 140 C330 105 380 110 420 140 L420 300 L0 300 Z" fill="#2a3150"/>
+    <rect x="0" y="262" width="420" height="38" fill="#e4eaf1"/>
+    <path d="M60 104 L210 28 L360 104 Z" fill="#2f2420"/><path d="M54 107 L210 25 L366 107" fill="none" stroke="#eef2f6" stroke-width="7" stroke-linejoin="round"/>
+    <rect x="80" y="104" width="260" height="158" fill="#6b4632"/>
+    <g stroke="#55382a" stroke-width="2"><line x1="80" y1="150" x2="340" y2="150"/><line x1="80" y1="200" x2="340" y2="200"/></g>
+    <rect x="70" y="150" width="280" height="5" fill="#3a2a22"/><rect x="70" y="200" width="280" height="5" fill="#3a2a22"/>
+    <g class="rw" data-r="cocon"><rect x="186" y="54" width="48" height="38" rx="2"/><text x="210" y="48" text-anchor="middle">Suite Cocon</text></g>
+    <g class="rw" data-r="balcon"><rect x="96" y="116" width="44" height="26" rx="2"/><text x="118" y="112" text-anchor="middle">Vue Balcon</text></g>
+    <g class="rw" data-r="triple"><rect x="188" y="116" width="44" height="26" rx="2"/><text x="210" y="112" text-anchor="middle">Triple</text></g>
+    <g class="rw" data-r="quadb"><rect x="280" y="116" width="44" height="26" rx="2"/><text x="302" y="112" text-anchor="middle">Quadruple Balcon</text></g>
+    <g class="rw" data-r="twin"><rect x="96" y="166" width="44" height="26" rx="2"/><text x="118" y="162" text-anchor="middle">Twin ou Double</text></g>
+    <g class="rw" data-r="quad"><rect x="280" y="166" width="44" height="26" rx="2"/><text x="302" y="162" text-anchor="middle">Quadruple</text></g>
+    <g class="rw" data-r="resto"><rect x="96" y="216" width="132" height="34" rx="2"/><text x="162" y="238" text-anchor="middle" class="in">Restaurant</text></g>
+    <rect x="252" y="214" width="36" height="48" fill="#3a2a22"/>
+    <g id="pvAll" opacity="0"><rect x="80" y="104" width="260" height="158" fill="#f1c27d" opacity=".10"/></g>
+   </svg>
+   <div class="live"><div><span id="liveLab">Votre séjour</span><b id="liveP">—</b></div><small id="liveSub">Selon la saison.</small></div>
+   <div class="snowlive" id="snow" hidden><span>Aux Contamines en ce moment</span><b id="snowTxt"></b></div>
+  </div>
+  <div class="panel" aria-live="polite">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <fieldset data-s data-n="Formule"><legend>Quelle formule ?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="fm" id="f1" value="dp" checked><label for="f1">Demi-pension<small>Petit-déjeuner et dîner à 19 h 30</small></label></div>
+     <div class="choice"><input type="radio" name="fm" id="f2" value="bb"><label for="f2">Chambre et petit-déjeuner<small>Buffet sucré-salé de 7 h 30 à 9 h</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Chambre" hidden><legend>Quelle chambre ?</legend><div class="choices" id="rooms"><div class="choice"><input type="radio" name="rm" id="r1" value="twin" checked><label for="r1">Twin ou Double<small>1 à 2 personnes, 16 m²</small></label></div><div class="choice"><input type="radio" name="rm" id="r2" value="balcon"><label for="r2">Double Vue Balcon<small>Balcon sud face aux Dômes</small></label></div><div class="choice"><input type="radio" name="rm" id="r3" value="triple"><label for="r3">Triple Chaleureuse<small>22 m², balcon</small></label></div><div class="choice"><input type="radio" name="rm" id="r4" value="quad"><label for="r4">Quadruple<small>4 personnes, balcon</small></label></div><div class="choice"><input type="radio" name="rm" id="r5" value="quadb"><label for="r5">Quadruple avec Balcon<small>Balcon panoramique</small></label></div><div class="choice"><input type="radio" name="rm" id="r6" value="cocon"><label for="r6">Suite Familiale Cocon<small>Jusqu’à 5 personnes, balcon</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Dates" hidden data-noauto><legend>Vos dates</legend>
+     <div class="cal"><div class="cal-h"><button type="button" id="cPrev" aria-label="Mois précédent">‹</button><b id="cMonth"></b><button type="button" id="cNext" aria-label="Mois suivant">›</button></div><div class="cal-g" id="cGrid"></div>
+     <div class="legend"><span><i class="s1"></i>Basse saison</span><span><i class="s2"></i>Moyenne</span><span><i class="s3"></i>Haute</span></div></div>
+     <p class="hint" id="dHint" style="margin-top:.8rem">Touchez votre jour d’arrivée, puis votre jour de départ.</p></fieldset>
+    <fieldset data-s data-n="Voyageurs" hidden data-noauto><legend>Qui vient ?</legend>
+     <div class="stepper"><button type="button" data-k="ad" data-d="-1" aria-label="Un adulte de moins">−</button><output id="adO">2</output><button type="button" data-k="ad" data-d="1" aria-label="Un adulte de plus">+</button><span>adultes</span></div>
+     <div class="stepper"><button type="button" data-k="en" data-d="-1" aria-label="Un enfant de moins">−</button><output id="enO">0</output><button type="button" data-k="en" data-d="1" aria-label="Un enfant de plus">+</button><span>enfants</span></div>
+     <p class="hint" id="pHint"></p></fieldset>
+    <div data-s data-n="Coordonnées" hidden><p class="done-msg" style="margin:0 0 1rem">Votre séjour est prêt.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
+     <div class="field"><label for="p">Téléphone ou WhatsApp</label><input id="p" type="tel" autocomplete="tel"></div>
+     <div class="send-row"><a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">Envoyer ma demande sur WhatsApp</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien</button><span class="copied" id="copied" hidden></span></div></div>
+    <div data-s data-n="Envoi" hidden><p class="done-msg">Merci, Béatrice vous confirme vos dates très vite.</p><p style="color:var(--ondeep2)">Dans le site final, la demande arrive aussi par email avec le récapitulatif, et le calendrier se met à jour selon vos réservations.</p></div>
+    <div class="est-nav"><button type="button" class="btn ghost prev" hidden>Retour</button><button type="button" class="btn next" style="margin-left:auto">Continuer</button></div>
+   </form>
+   <p class="note">Démonstration : prix des chambres repris de votre grille hiver 2026-2027, demi-pension et petit-déjeuner d’après votre fiche office de tourisme, saisons indicatives à caler avec vous avant la mise en ligne.</p>
+  </div>
+ </div>
+</div></section>
+<section class="pad" id="avis"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise" data-stars="4.3"><div class="score"><span data-to="4.3" data-dec="1" data-suf="">4,3</span><small><span class="stars fill" aria-hidden="true">★★★★★</span> sur 5, 48 avis TripAdvisor · 8,5 sur 10, 238 avis vérifiés</small></div><h2>Ce que vos hôtes écrivent en repartant.</h2></div>
+  <div class="marquee" aria-label="Avis clients"><div class="mq-track"><figure class="rcard"><div class="stars">★★★★★</div><blockquote>De belles vues sur les Alpes, et un dîner partagé tous ensemble qui a été magique. Merci à Béatrice et Constance.</blockquote><figcaption>Leslie, août 2025</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Un accueil très chaleureux, des repas copieux, des chambres spacieuses et propres.</blockquote><figcaption>Séverine, juin 2024</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Une très bonne étape du Tour du Mont-Blanc, et on nous a même conduits au départ de la randonnée.</blockquote><figcaption>Randonneur du TMB</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Une propriétaire très serviable et une bonne cuisine.</blockquote><figcaption>Séjour en famille</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>De belles vues sur les Alpes, et un dîner partagé tous ensemble qui a été magique. Merci à Béatrice et Constance.</blockquote><figcaption>Leslie, août 2025</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Un accueil très chaleureux, des repas copieux, des chambres spacieuses et propres.</blockquote><figcaption>Séverine, juin 2024</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Une très bonne étape du Tour du Mont-Blanc, et on nous a même conduits au départ de la randonnée.</blockquote><figcaption>Randonneur du TMB</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Une propriétaire très serviable et une bonne cuisine.</blockquote><figcaption>Séjour en famille</figcaption></figure></div></div>
+  <p class="note-rv">Extraits reformulés de vos avis TripAdvisor pour la maquette. Dans le site final, vos avis s’affichent en version originale et se mettent à jour automatiquement.</p>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Avant de réserver, on nous demande souvent.</h2>
+  <div class="faq-list"><details><summary>Quand réserver pour Noël et les vacances de février ?</summary><p>Ce sont les semaines qui partent en premier. La saison d’hiver 2026-2027 est ouverte à la réservation : pour être sûr d’avoir votre chambre, mieux vaut demander vos dates dès maintenant.</p></details><details><summary>À quelle distance sont les pistes ?</summary><p>Les remontées sont à 1,5 km. La navette gratuite s’arrête à deux minutes à pied (arrêt n° 43, Le Cugnonnet) et vous dépose au pied de la télécabine.</p></details><details><summary>La demi-pension, comment ça se passe ?</summary><p>Petit-déjeuner buffet sucré-salé de 7 h 30 à 9 h, avec fromages de pays et charcuterie. Le soir à 19 h 30, entrée, plat et dessert : une cuisine savoyarde, avec les recettes africaines de Nimaga en cuisine.</p></details><details><summary>Avez-vous des options végétaliennes ou sans gluten ?</summary><p>Oui, au petit-déjeuner. Signalez-le à la réservation, et un panier-repas peut aussi être préparé pour la journée.</p></details><details><summary>Nous sommes une famille de cinq, est-ce possible ?</summary><p>Oui : la Suite Familiale Cocon accueille jusqu’à cinq personnes, et deux chambres quadruples ont un balcon.</p></details><details><summary>Accueillez-vous les groupes ?</summary><p>Oui, avec un tarif groupe à partir de quinze personnes. Appelez Béatrice pour en parler.</p></details><details><summary>Pouvez-vous organiser les cours de ski ?</summary><p>Nous vous mettons en relation avec l’ESI, le Bureau des guides, le parapente ou le VTT selon la saison. Un local à skis vous attend au chalet.</p></details><details><summary>Êtes-vous ouverts l’été ?</summary><p>Oui. La Gelinotte est une étape appréciée du Tour du Mont-Blanc, avec un jardin, des transats et un hamac face aux Dômes de Miage.</p></details></div>
+ </div>
+ <div class="contact" id="contact"><div><h2>Une date, une question ?</h2><a class="bigtel" href="tel:+33607964731">06 07 96 47 31</a><p style="margin:0;color:var(--soft)">Béatrice · hôtel 04 50 47 01 61<br>91 chemin de la Revenaz, 74170 Les Contamines-Montjoie</p></div><div><p style="color:var(--soft);margin-top:0">Ouvert l’hiver et l’été. Navette gratuite à deux minutes, arrêt n° 43 Le Cugnonnet.</p><a class="btn" href="#reserver">Voir les disponibilités</a></div></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap"><div><div style="color:var(--ink);font-weight:600;margin-bottom:.3rem">Hôtel-Restaurant La Gelinotte · 91 chemin de la Revenaz, 74170 Les Contamines-Montjoie</div>Chalet-hôtel familial depuis 1995</div><form class="nl-form" id="nlf"><label for="nlm">Recevoir nos nouvelles et nos dates chaque mois</label><div class="nl-row"><input id="nlm" type="email" placeholder="Votre email" autocomplete="email" required><button class="btn" type="submit">S’inscrire</button></div><span class="nl-ok" id="nlok" hidden>C’est noté. Prochaine lettre au début du mois.</span></form></div></footer>
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Madame, voici ce que nous avons relevé sur hotel-lagelinotte.net, et ce que la nouvelle version apporte.</p>
+ <ul class="audit"><li><div class="now"><b>Aujourd'hui</b>« Réservez en direct sans intermédiaire » mène à un simple formulaire : aucun calendrier, aucun prix calculé, le visiteur ne sait pas si ses dates sont libres.</div><div><b>Avec la refonte</b>Une réservation directe avec calendrier, prix nuit par nuit selon la formule, et la demande qui arrive sur le WhatsApp de Béatrice.</div></li><li><div class="now"><b>Aujourd'hui</b>L’accueil affiche 56 à 68 € la nuit, la page des chambres 84 à 275 € ; « Lit King size ou Twin » est répété partout et une même photo sert à deux chambres.</div><div><b>Avec la refonte</b>Une grille 2026-2027 claire, chambre par chambre, avec sa vraie photo et sa capacité.</div></li><li><div class="now"><b>Aujourd'hui</b>Sur l’accueil, une vignette floue « westafrica2.jpg » et une galerie qui montre deux fois la même photo ; la page Activités mélange les saisons et renvoie aux navettes de l’hiver 2023-2024.</div><div><b>Avec la refonte</b>Des pages cohérentes, une journée type et la neige en direct aux Contamines.</div></li><li><div class="now"><b>Aujourd'hui</b>Votre 4,3 sur TripAdvisor et votre 8,5 sur 238 avis vérifiés n’apparaissent nulle part, et les avis restent sans réponse.</div><div><b>Avec la refonte</b>Vos avis mis en scène dès l’accueil, et une réponse à chacun.</div></li><li><div class="now"><b>Aujourd'hui</b>Site en français uniquement, alors qu’une grande partie de vos hôtes d’été font le Tour du Mont-Blanc et parlent anglais.</div><div><b>Avec la refonte</b>Français et anglais sur la même page, réservation comprise.</div></li></ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Demande de réservation, avis, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + réservation directe avec calendrier</li><li>FR, EN, IT</li><li>Pages hiver, été et Tour du Mont-Blanc</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + neige animée en temps réel (WebGL)</li><li>Journée au chalet et galerie animées au défilement</li><li>Neige aux Contamines en direct</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+ <div class="addons"><div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis Google et TripAdvisor sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos hôtes après chaque séjour, bilan mensuel.</p></div><div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens hôtes : ouverture de la saison, semaines encore libres, été sur le Tour du Mont-Blanc. Rédigé, mis en page et envoyé pour vous.</p></div><div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Italien ou allemand, pour vos randonneurs et skieurs européens, traduit et tenu à jour avec le reste du site.</p></div></div>
+ <p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20La%20Gelinotte">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+<div class="mbar"><a class="btn ghost" href="tel:+33607964731">Appeler</a><a class="btn" href="#reserver">Réserver</a></div>
+<script>!function(t,i){"object"==typeof exports&&"undefined"!=typeof module?module.exports=i():"function"==typeof define&&define.amd?define(i):(t="undefined"!=typeof globalThis?globalThis:t||self).Lenis=i()}(this,(function(){"use strict";function clamp(t,i,e){return Math.max(t,Math.min(i,e))}class Animate{constructor(){this.isRunning=!1,this.value=0,this.from=0,this.to=0,this.currentTime=0}advance(t){var i;if(!this.isRunning)return;let e=!1;if(this.duration&&this.easing){this.currentTime+=t;const i=clamp(0,this.currentTime/this.duration,1);e=i>=1;const s=e?1:this.easing(i);this.value=this.from+(this.to-this.from)*s}else this.lerp?(this.value=function damp(t,i,e,s){return function lerp(t,i,e){return(1-e)*t+e*i}(t,i,1-Math.exp(-e*s))}(this.value,this.to,60*this.lerp,t),Math.round(this.value)===this.to&&(this.value=this.to,e=!0)):(this.value=this.to,e=!0);e&&this.stop(),null===(i=this.onUpdate)||void 0===i||i.call(this,this.value,e)}stop(){this.isRunning=!1}fromTo(t,i,{lerp:e,duration:s,easing:o,onStart:n,onUpdate:l}){this.from=this.value=t,this.to=i,this.lerp=e,this.duration=s,this.easing=o,this.currentTime=0,this.isRunning=!0,null==n||n(),this.onUpdate=l}}class Dimensions{constructor(t,i,{autoResize:e=!0,debounce:s=250}={}){this.wrapper=t,this.content=i,this.width=0,this.height=0,this.scrollHeight=0,this.scrollWidth=0,this.resize=()=>{this.onWrapperResize(),this.onContentResize()},this.onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)},this.onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)},e&&(this.debouncedResize=function debounce(t,i){let e;return function(...s){let o=this;clearTimeout(e),e=setTimeout((()=>{e=void 0,t.apply(o,s)}),i)}}(this.resize,s),this.wrapper instanceof Window?window.addEventListener("resize",this.debouncedResize,!1):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}destroy(){var t,i;null===(t=this.wrapperResizeObserver)||void 0===t||t.disconnect(),null===(i=this.contentResizeObserver)||void 0===i||i.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener("resize",this.debouncedResize,!1)}get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}}class Emitter{constructor(){this.events={}}emit(t,...i){var e;let s=this.events[t]||[];for(let t=0,o=s.length;t<o;t++)null===(e=s[t])||void 0===e||e.call(s,...i)}on(t,i){var e;return(null===(e=this.events[t])||void 0===e?void 0:e.push(i))||(this.events[t]=[i]),()=>{var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}}off(t,i){var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}destroy(){this.events={}}}const t=100/6,i={passive:!1};class VirtualScroll{constructor(e,s={wheelMultiplier:1,touchMultiplier:1}){this.element=e,this.options=s,this.touchStart={x:0,y:0},this.lastDelta={x:0,y:0},this.window={width:0,height:0},this.emitter=new Emitter,this.onTouchStart=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:0,y:0},this.emitter.emit("scroll",{deltaX:0,deltaY:0,event:t})},this.onTouchMove=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t,s=-(i-this.touchStart.x)*this.options.touchMultiplier,o=-(e-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:s,y:o},this.emitter.emit("scroll",{deltaX:s,deltaY:o,event:t})},this.onTouchEnd=t=>{this.emitter.emit("scroll",{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:t})},this.onWheel=i=>{let{deltaX:e,deltaY:s,deltaMode:o}=i;e*=1===o?t:2===o?this.window.width:1,s*=1===o?t:2===o?this.window.height:1,e*=this.options.wheelMultiplier,s*=this.options.wheelMultiplier,this.emitter.emit("scroll",{deltaX:e,deltaY:s,event:i})},this.onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}},window.addEventListener("resize",this.onWindowResize,!1),this.onWindowResize(),this.element.addEventListener("wheel",this.onWheel,i),this.element.addEventListener("touchstart",this.onTouchStart,i),this.element.addEventListener("touchmove",this.onTouchMove,i),this.element.addEventListener("touchend",this.onTouchEnd,i)}on(t,i){return this.emitter.on(t,i)}destroy(){this.emitter.destroy(),window.removeEventListener("resize",this.onWindowResize,!1),this.element.removeEventListener("wheel",this.onWheel,i),this.element.removeEventListener("touchstart",this.onTouchStart,i),this.element.removeEventListener("touchmove",this.onTouchMove,i),this.element.removeEventListener("touchend",this.onTouchEnd,i)}}return class Lenis{constructor({wrapper:t=window,content:i=document.documentElement,eventsTarget:e=t,smoothWheel:s=!0,syncTouch:o=!1,syncTouchLerp:n=.075,touchInertiaMultiplier:l=35,duration:r,easing:h=(t=>Math.min(1,1.001-Math.pow(2,-10*t))),lerp:a=.1,infinite:c=!1,orientation:u="vertical",gestureOrientation:d="vertical",touchMultiplier:p=1,wheelMultiplier:m=1,autoResize:v=!0,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w=!1}={}){this._isScrolling=!1,this._isStopped=!1,this._isLocked=!1,this._preventNextNativeScrollEvent=!1,this._resetVelocityTimeout=null,this.time=0,this.userData={},this.lastVelocity=0,this.velocity=0,this.direction=0,this.animate=new Animate,this.emitter=new Emitter,this.onPointerDown=t=>{1===t.button&&this.reset()},this.onVirtualScroll=t=>{if("function"==typeof this.options.virtualScroll&&!1===this.options.virtualScroll(t))return;const{deltaX:i,deltaY:e,event:s}=t;if(this.emitter.emit("virtual-scroll",{deltaX:i,deltaY:e,event:s}),s.ctrlKey)return;const o=s.type.includes("touch"),n=s.type.includes("wheel");this.isTouching="touchstart"===s.type||"touchmove"===s.type;if(this.options.syncTouch&&o&&"touchstart"===s.type&&!this.isStopped&&!this.isLocked)return void this.reset();const l=0===i&&0===e,r="vertical"===this.options.gestureOrientation&&0===e||"horizontal"===this.options.gestureOrientation&&0===i;if(l||r)return;let h=s.composedPath();h=h.slice(0,h.indexOf(this.rootElement));const a=this.options.prevent;if(h.find((t=>{var i,e,s,l,r;return t instanceof HTMLElement&&("function"==typeof a&&(null==a?void 0:a(t))||(null===(i=t.hasAttribute)||void 0===i?void 0:i.call(t,"data-lenis-prevent"))||o&&(null===(e=t.hasAttribute)||void 0===e?void 0:e.call(t,"data-lenis-prevent-touch"))||n&&(null===(s=t.hasAttribute)||void 0===s?void 0:s.call(t,"data-lenis-prevent-wheel"))||(null===(l=t.classList)||void 0===l?void 0:l.contains("lenis"))&&!(null===(r=t.classList)||void 0===r?void 0:r.contains("lenis-stopped")))})))return;if(this.isStopped||this.isLocked)return void s.preventDefault();if(!(this.options.syncTouch&&o||this.options.smoothWheel&&n))return this.isScrolling="native",void this.animate.stop();s.preventDefault();let c=e;"both"===this.options.gestureOrientation?c=Math.abs(e)>Math.abs(i)?e:i:"horizontal"===this.options.gestureOrientation&&(c=i);const u=o&&this.options.syncTouch,d=o&&"touchend"===s.type&&Math.abs(c)>5;d&&(c=this.velocity*this.options.touchInertiaMultiplier),this.scrollTo(this.targetScroll+c,Object.assign({programmatic:!1},u?{lerp:d?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}))},this.onNativeScroll=()=>{if(null!==this._resetVelocityTimeout&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent)this._preventNextNativeScrollEvent=!1;else if(!1===this.isScrolling||"native"===this.isScrolling){const t=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-t,this.direction=Math.sign(this.animatedScroll-t),this.isScrolling="native",this.emit(),0!==this.velocity&&(this._resetVelocityTimeout=setTimeout((()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()}),400))}},window.lenisVersion="1.1.13",t&&t!==document.documentElement&&t!==document.body||(t=window),this.options={wrapper:t,content:i,eventsTarget:e,smoothWheel:s,syncTouch:o,syncTouchLerp:n,touchInertiaMultiplier:l,duration:r,easing:h,lerp:a,infinite:c,gestureOrientation:d,orientation:u,touchMultiplier:p,wheelMultiplier:m,autoResize:v,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w},this.dimensions=new Dimensions(t,i,{autoResize:v}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.addEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll=new VirtualScroll(e,{touchMultiplier:p,wheelMultiplier:m}),this.virtualScroll.on("scroll",this.onVirtualScroll)}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.removeEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName()}on(t,i){return this.emitter.on(t,i)}off(t,i){return this.emitter.off(t,i)}setScroll(t){this.isHorizontal?this.rootElement.scrollLeft=t:this.rootElement.scrollTop=t}resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit("scroll",this)}reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){this.isStopped&&(this.isStopped=!1,this.reset())}stop(){this.isStopped||(this.isStopped=!0,this.animate.stop(),this.reset())}raf(t){const i=t-(this.time||t);this.time=t,this.animate.advance(.001*i)}scrollTo(t,{offset:i=0,immediate:e=!1,lock:s=!1,duration:o=this.options.duration,easing:n=this.options.easing,lerp:l=this.options.lerp,onStart:r,onComplete:h,force:a=!1,programmatic:c=!0,userData:u}={}){if(!this.isStopped&&!this.isLocked||a){if("string"==typeof t&&["top","left","start"].includes(t))t=0;else if("string"==typeof t&&["bottom","right","end"].includes(t))t=this.limit;else{let e;if("string"==typeof t?e=document.querySelector(t):t instanceof HTMLElement&&(null==t?void 0:t.nodeType)&&(e=t),e){if(this.options.wrapper!==window){const t=this.rootElement.getBoundingClientRect();i-=this.isHorizontal?t.left:t.top}const s=e.getBoundingClientRect();t=(this.isHorizontal?s.left:s.top)+this.animatedScroll}}if("number"==typeof t){if(t+=i,t=Math.round(t),this.options.infinite?c&&(this.targetScroll=this.animatedScroll=this.scroll):t=clamp(0,t,this.limit),t===this.targetScroll)return null==r||r(this),void(null==h||h(this));if(this.userData=null!=u?u:{},e)return this.animatedScroll=this.targetScroll=t,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),null==h||h(this),void(this.userData={});c||(this.targetScroll=t),this.animate.fromTo(this.animatedScroll,t,{duration:o,easing:n,lerp:l,onStart:()=>{s&&(this.isLocked=!0),this.isScrolling="smooth",null==r||r(this)},onUpdate:(t,i)=>{this.isScrolling="smooth",this.lastVelocity=this.velocity,this.velocity=t-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=t,this.setScroll(this.scroll),c&&(this.targetScroll=t),i||this.emit(),i&&(this.reset(),this.emit(),null==h||h(this),this.userData={},this.preventNextNativeScrollEvent())}})}}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame((()=>{this._preventNextNativeScrollEvent=!1}))}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.__experimental__naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?"x":"y"]}get isHorizontal(){return"horizontal"===this.options.orientation}get actualScroll(){return this.isHorizontal?this.rootElement.scrollLeft:this.rootElement.scrollTop}get scroll(){return this.options.infinite?function modulo(t,i){return(t%i+i)%i}(this.animatedScroll,this.limit):this.animatedScroll}get progress(){return 0===this.limit?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(t){this._isScrolling!==t&&(this._isScrolling=t,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(t){this._isStopped!==t&&(this._isStopped=t,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(t){this._isLocked!==t&&(this._isLocked=t,this.updateClassName())}get isSmooth(){return"smooth"===this.isScrolling}get className(){let t="lenis";return this.isStopped&&(t+=" lenis-stopped"),this.isLocked&&(t+=" lenis-locked"),this.isScrolling&&(t+=" lenis-scrolling"),"smooth"===this.isScrolling&&(t+=" lenis-smooth"),t}updateClassName(){this.cleanUpClassName(),this.rootElement.className=`${this.rootElement.className} ${this.className}`.trim()}cleanUpClassName(){this.rootElement.className=this.rootElement.className.replace(/lenis(-\w+)?/g,"").trim()}}}));
+//# sourceMappingURL=lenis.min.js.map
+</script>
+<script>
+window.GS={hooks:[]};(function(G){
+G.ease=function(x){return 1-Math.pow(1-x,3);};G.seg=function(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));};
+G.eur=function(n,r){r=r||1;return (Math.round(n/r)*r).toLocaleString('fr-FR')+' €';};
+G.tween=function(el,lo,hi,fmt,sep){var a0=el._lo||0,b0=el._hi||0,st=performance.now();el._lo=lo;el._hi=hi;(function tk(n){var q=G.ease(Math.min(1,(n-st)/700)),a=a0+(lo-a0)*q,b=b0+(hi-b0)*q;el.textContent=hi==null||lo===hi?fmt(a):fmt(a)+(sep||' – ')+fmt(b);if(q<1)requestAnimationFrame(tk);})(st);};
+G.stepper=function(f,o){var S=[].slice.call(f.querySelectorAll('[data-s]')),pv=f.querySelector('.prev'),nx=f.querySelector('.next'),chips=document.getElementById(o.chips),i=0,reached=0,N=S.length-1;
+ function draw(){chips.innerHTML='';S.slice(0,N).forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached||i===N;b.onclick=function(){go(k);};li.appendChild(b);chips.appendChild(li);});}
+ function go(k){i=k;S.forEach(function(el,j){el.hidden=j!==i;if(j===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0||i===N;nx.hidden=i===N;nx.textContent=i===N-2?o.seeTxt:i===N-1?o.sendTxt:o.nextTxt;draw();if(o.update)o.update();if(i===N-1&&o.recap)o.recap();if(o.onStep)o.onStep(i);}
+ f.addEventListener('change',function(e){if(o.update)o.update();if(e.target.type==='radio'&&i<N-2&&!e.target.closest('[data-noauto]')){var at=i;setTimeout(function(){if(i===at)go(i+1);},420);}});
+ f.addEventListener('submit',function(e){e.preventDefault();});
+ nx.onclick=function(){if(o.canNext&&!o.canNext(i))return;if(i<N)go(i+1);};pv.onclick=function(){if(i>0)go(i-1);};
+ go(0);return{go:go,cur:function(){return i;}};};
+G.copy=function(btn,out){btn.addEventListener('click',function(){var c=document.getElementById(out);(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});};
+})(window.GS);
+
+GS.FS="\nfloat h2(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}\nfloat box(vec2 p,vec2 b){vec2 d=abs(p)-b;return length(max(d,0.))+min(max(d.x,d.y),0.);}\nfloat fir(vec2 p,float w,float h){if(p.y<0.||p.y>h)return 0.;float k=p.y/h;float tier=fract(k*3.);float ww=w*(1.-k)*(.75+.35*tier);return smoothstep(.004,0.,abs(p.x)-ww);}\nvoid main(){\n vec2 uv=gl_FragCoord.xy/r;float ar=r.x/r.y;vec2 q=vec2(uv.x*ar,uv.y);vec2 mm=m-.5;\n vec3 col=mix(vec3(.07,.08,.14),vec3(.02,.025,.06),uv.y);\n col+=vec3(.55,.6,.8)*.16*exp(-length((q-vec2(ar*.18,.86))*vec2(1.,1.6))*2.2);\n float mob=step(ar,1.);float hm=.47-mob*.1+.16*exp(-pow((q.x-ar*.30)*2.4,2.))+.12*exp(-pow((q.x-ar*.50)*2.8,2.))+.012*sin(q.x*9.)+mm.x*.01;\n float mcov=1.-smoothstep(-1./r.y,1./r.y,uv.y-hm);\n vec3 mcol=mix(vec3(.16,.18,.27),vec3(.42,.46,.58),smoothstep(hm-.3,hm,uv.y));\n col=mix(col,mcol,mcov);\n float gy=.17+.035*sin(q.x*1.4+.3);\n float cs=mix(.62,.5,mob);vec2 cpos=mix(vec2(ar*.83+mm.x*.02,hm-.035),vec2(ar*.62,hm-.03),mob);float hm2=.47-mob*.1+.16*exp(-pow((cpos.x-ar*.30)*2.4,2.))+.12*exp(-pow((cpos.x-ar*.50)*2.8,2.))+.012*sin(cpos.x*9.);cpos.y=hm2-.03;vec2 cp=(q-cpos)/cs;\n float house=box(cp-vec2(0.,.085),vec2(.25,.085));\n float roof=max(abs(cp.x)*.40+(cp.y-.27),-(cp.y-.165));\n float body=min(house,max(roof,abs(cp.x)-.30));\n float flick=.9+.1*sin(t*7.3)*sin(t*3.1);\n vec3 warm=vec3(1.,.66,.32);\n col+=warm*.08*exp(-length(cp-vec2(0.,.1))*4.)*flick;\n col+=vec3(.9,.92,.95)*.10*smoothstep(.06,0.,abs(cp.y+.01))*step(abs(cp.x),.5)*mcov;\n float gcov=1.-smoothstep(-1./r.y,1./r.y,uv.y-gy);\n vec3 snow=mix(vec3(.30,.36,.40),vec3(.52,.58,.62),smoothstep(gy-.2,gy,uv.y));\n col=mix(col,snow,gcov);\n for(int k=0;k<9;k++){float fk=float(k);float x=ar*(.04+fk*.115)+(h2(vec2(fk,2.))-.5)*.08+mm.x*.03;float hh=.18+.14*h2(vec2(fk,7.));float by=gy-.02+.03*h2(vec2(fk,5.));\n  if(abs(fk-5.5)<1.6)continue;col=mix(col,vec3(.015,.035,.03),fir(q-vec2(x,by),.055+.02*h2(vec2(fk,9.)),hh));}\n vec3 wood=vec3(.045,.032,.026);\n float bc=smoothstep(.003,0.,body);col=mix(col,wood,bc);\n float sr=smoothstep(.003,0.,abs(roof+.004)-.006)*step(abs(cp.x),.30);col=mix(col,vec3(.62,.68,.72),sr*.9);\n for(int i=0;i<5;i++){for(int j=0;j<2;j++){vec2 wp=cp-vec2(-.18+float(i)*.09,.05+float(j)*.075);float w=box(wp,vec2(.026,.022));float on=step(.25,h2(vec2(float(i),float(j))));\n  col=mix(col,warm*(.8+.2*h2(vec2(float(i)+t*.0,float(j))))*flick,smoothstep(.002,0.,w)*on);col+=warm*.05*exp(-max(w,0.)*45.)*on;}}\n for(int k=0;k<4;k++){float fk=float(k);float sc=7.+fk*9.;vec2 p=q*sc;p.y+=t*(.55+fk*.35);p.x+=t*(.12+mm.x*.9)*(1.+fk*.5)+sin(p.y*.21+fk*1.7+t*.3)*.45;\n  vec2 i=floor(p),f=fract(p)-.5;float rr=h2(i+fk*17.3);if(rr>.62){vec2 o=vec2(h2(i+3.1)-.5,h2(i+8.2)-.5)*.5;float dd=length(f-o);float sz=k==0?.16:.07-fk*.012;float soft=k==0?.14:.03;\n   col+=vec3(.95,.97,1.)*smoothstep(sz,sz-soft,dd)*(k==0?.18:.45+fk*.1);}}\n col*=1.-.42*length((uv-vec2(.55,.55))*vec2(1.,1.2));\n gl_FragColor=vec4(col,1.);\n}\n";GS.TH=[0.25,0.5,0.75];GS.I18N={"en": {"n1": "Rooms", "n2": "A day here", "n3": "Reviews", "hcta": "Book direct", "h1a": "Facing the Dômes de Miage,", "h1b": "a family house", "h1c": "since 1995.", "lede": "Fourteen rooms at 1,164 m in Les Contamines-Montjoie. Béatrice welcomes you, Nimaga cooks Savoyard and African dishes, and the free shuttle takes you to the lifts. Book your room direct, half board or bed and breakfast.", "c1": "Check availability", "scroll": "Scroll", "fh": "Book your room direct.", "fl": "Pick your board, room, dates and party: the price shows night by night, and your request goes straight to Béatrice, with no platform and no commission."}};GS.GLQ=0.85;</script>
+<script>
+(function(G){
+var $=function(i){return document.getElementById(i);};
+var sun=$('sun'),cab=$('cab'),bus=$('bus'),clock=$('clock'),wins=$('wins').children;
+G.CUT=function(c){var s=G.seg;
+ var a=Math.PI*(1-s(c,0,.85));sun.setAttribute('cx',380+310*Math.cos(a));sun.setAttribute('cy',330-230*Math.sin(a));sun.setAttribute('opacity',1-s(c,.75,.86));
+ $('skyDay').setAttribute('opacity',s(c,.05,.2)*(1-s(c,.55,.7)));$('skyDusk').setAttribute('opacity',s(c,.5,.66)*(1-s(c,.78,.9)));$('skyNight').setAttribute('opacity',s(c,.78,.92));
+ $('shade').setAttribute('opacity',.75*s(c,.62,.9));
+ var b=s(c,.2,.42);bus.setAttribute('transform','translate('+(-60+520*b)+' 334)');
+ var g=s(c,.32,.52);cab.setAttribute('transform','translate('+(470+230*g)+' '+(366-166*g)+')');
+ for(var i=0;i<wins.length;i++)wins[i].setAttribute('fill',(c<.18||c>.6+i*.025)?'#f2b563':'#241c19');
+ $('steam').setAttribute('opacity',s(c,.55,.62));
+ clock.textContent=c<.25?'7 h 30':c<.5?'9 h':c<.75?'17 h':'19 h 30';};
+var f=$('est'),ad=2,en=0,A=null,D=null,cm=new Date(2026,11,1),NOW=new Date();NOW.setHours(0,0,0,0);
+var OPEN=new Date(2026,11,1),CLOSE=new Date(2027,3,30);
+var R={"twin": ["Twin ou Double", 84, 98, 2], "balcon": ["Double Vue Balcon", 90, 108, 2], "triple": ["Triple Chaleureuse", 119, 143, 3], "quad": ["Quadruple", 154, 188, 4], "quadb": ["Quadruple avec Balcon", 160, 198, 4], "cocon": ["Suite Familiale Cocon", 230, 275, 5]};
+function season(d){var t=+d;function b(a,z){return t>=+a&&t<=+z;}
+ if(b(new Date(2026,11,19),new Date(2027,0,2))||b(new Date(2027,1,6),new Date(2027,2,6)))return 3;
+ if(b(new Date(2027,0,3),new Date(2027,1,5))||b(new Date(2027,2,7),new Date(2027,3,4)))return 2;return 1;}
+function val(k){var e=f.querySelector('[name="'+k+'"]:checked');return e?e.value:null;}
+function nights(){return A&&D?Math.round((D-A)/864e5):0;}
+function rp(rm,s){return s===1?rm[1]:s===3?rm[2]:Math.round((rm[1]+rm[2])/2);}
+function price(){var fm=val('fm'),rm=R[val('rm')],n=nights(),pp=ad+en,tot=0;
+ if(!n){return fm==='dp'?{lo:85,hi:95,n:0,pp:true}:{lo:rm[1],hi:rm[2],n:0};}
+ for(var i=0;i<n;i++){var d=new Date(A.getFullYear(),A.getMonth(),A.getDate()+i),s=season(d);tot+=fm==='dp'?pp*(s===1?85:s===3?95:90):rp(rm,s)+13*pp;}
+ return{tot:tot,n:n};}
+function fmtD(d){return d.toLocaleDateString('fr-FR',{day:'numeric',month:'short'});}
+function update(){var fm=val('fm'),rm=val('rm'),p=price();
+ document.querySelectorAll('#facade .rw').forEach(function(g){g.classList.toggle('on',g.dataset.r===rm||(g.dataset.r==='resto'&&fm==='dp'));});
+ var lp=$('liveP');
+ if(!p.n){G.tween(lp,p.lo,p.hi,function(x){return G.eur(x,1);});$('liveLab').textContent=p.pp?'Demi-pension, par personne et par nuit':R[rm][0]+', la nuit';$('liveSub').textContent=p.pp?'Chambre, petit-déjeuner et dîner, selon la saison.':'Selon la saison, petit-déjeuner en plus.';}
+ else{G.tween(lp,p.tot,null,function(x){return G.eur(x,1);});$('liveLab').textContent=R[rm][0]+', '+p.n+' nuit'+(p.n>1?'s':'')+' · '+fmtD(A)+' – '+fmtD(D);$('liveSub').textContent=fm==='dp'?'Demi-pension pour '+(ad+en)+' personne'+(ad+en>1?'s':'')+'.':'Chambre et petit-déjeuner pour '+(ad+en)+' personne'+(ad+en>1?'s':'')+'.';}
+ var cap=R[rm][3];$('pHint').textContent=ad+en>cap?'Cette chambre accueille '+cap+' personne'+(cap>1?'s':'')+' : regardez la Suite Familiale Cocon, jusqu’à cinq, ou réservez deux chambres.':'';
+ $('adO').textContent=ad;$('enO').textContent=en;
+ var hs=[fm,rm,A?A.toISOString().slice(0,10):'',D?D.toISOString().slice(0,10):'',ad,en].join('~');try{history.replaceState(null,'','#sejour='+hs);}catch(e){}}
+document.querySelectorAll('.stepper button').forEach(function(b){b.onclick=function(){if(b.dataset.k==='ad')ad=Math.max(1,Math.min(6,ad+ +b.dataset.d));else en=Math.max(0,Math.min(5,en+ +b.dataset.d));update();};});
+var DW=['L','M','M','J','V','S','D'];
+function cal(){$('cMonth').textContent=cm.toLocaleDateString('fr-FR',{month:'long',year:'numeric'});var h=DW.map(function(x){return '<span class="dw">'+x+'</span>';}).join(''),first=(cm.getDay()+6)%7,days=new Date(cm.getFullYear(),cm.getMonth()+1,0).getDate();
+ for(var i=0;i<first;i++)h+='<span></span>';
+ for(var j=1;j<=days;j++){var d=new Date(cm.getFullYear(),cm.getMonth(),j),cl='s'+season(d);if(A&&+d===+A||D&&+d===+D)cl+=' end';else if(A&&D&&d>A&&d<D)cl+=' in';
+  h+='<button type="button" data-d="'+j+'" class="'+cl+'"'+((d<NOW||d<OPEN||d>CLOSE)?' disabled':'')+'>'+j+'</button>';}
+ $('cGrid').innerHTML=h;$('cPrev').disabled=cm<=new Date(2026,11,1);$('cNext').disabled=cm>=new Date(2027,3,1);}
+$('cGrid').addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;var d=new Date(cm.getFullYear(),cm.getMonth(),+b.dataset.d);
+ if(!A||D||d<=A){A=d;D=null;$('dHint').textContent='Et votre jour de départ ?';}else{D=d;var n=nights();$('dHint').textContent=n+' nuit'+(n>1?'s':'')+'.';setTimeout(function(){if(st.cur()===2)st.go(3);},800);}
+ cal();update();});
+$('cPrev').onclick=function(){cm=new Date(cm.getFullYear(),cm.getMonth()-1,1);cal();};$('cNext').onclick=function(){cm=new Date(cm.getFullYear(),cm.getMonth()+1,1);cal();};
+function recap(){var fm=val('fm'),p=price(),L=[['Formule',fm==='dp'?'Demi-pension':'Chambre et petit-déjeuner'],['Chambre',R[val('rm')][0]],['Arrivée',A?A.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}):'à définir'],['Départ',D?D.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}):'à définir'],['Voyageurs',ad+' adulte'+(ad>1?'s':'')+(en?', '+en+' enfant'+(en>1?'s':''):'')],['Prix indicatif',p.n?G.eur(p.tot,1):'selon vos dates']];
+ $('recap').innerHTML=L.map(function(r){return '<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('')+'<li><span>En direct</span>vous échangez avec Béatrice, sans intermédiaire</li>';return L;}
+var st=G.stepper(f,{chips:'chips',update:update,recap:recap,nextTxt:'Continuer',seeTxt:'Voir mon séjour',sendTxt:'Envoyer',onStep:function(i){if(i===2)cal();}});
+(function(){var m=location.hash.match(/sejour=([^&]+)/);if(!m)return;var p=decodeURIComponent(m[1]).split('~');function ck(n,v){var e=f.querySelector('[name="'+n+'"][value="'+v+'"]');if(e)e.checked=true;}ck('fm',p[0]);ck('rm',p[1]);function pd(s){if(!s)return null;var q=s.split('-');return new Date(+q[0],+q[1]-1,+q[2]);}A=pd(p[2]);D=pd(p[3]);if(A)cm=new Date(A.getFullYear(),A.getMonth(),1);ad=+p[4]||2;en=+p[5]||0;update();})();
+$('waBtn').addEventListener('click',function(){var L=recap(),txt='Bonjour Béatrice, voici ma demande de séjour à La Gelinotte :\n'+L.map(function(r){return '- '+r[0]+' : '+r[1];}).join('\n')+'\nNom : '+$('n').value+'\n'+location.href;this.href='https://wa.me/33607964731?text='+encodeURIComponent(txt);});
+G.copy($('copyBtn'),'copied');
+fetch('https://api.open-meteo.com/v1/forecast?latitude=45.82&longitude=6.73&elevation=1164&current=temperature_2m,snow_depth&daily=snowfall_sum&forecast_days=3&timezone=Europe%2FParis').then(function(r){return r.json();}).then(function(j){if(!j||!j.current)return;var c=j.current,sn=(j.daily.snowfall_sum||[0,0,0]).reduce(function(a,b){return a+(b||0);},0);
+ $('snowTxt').textContent=Math.round(c.temperature_2m)+' °C, '+Math.round((c.snow_depth||0)*100)+' cm de neige au sol'+(sn>=1?', '+Math.round(sn)+' cm annoncés sur trois jours':'')+'.';$('snow').hidden=false;}).catch(function(){});
+})(window.GS);
+</script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,G=window.GS;
+var lenis=null;if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});}
+G.lenis=lenis;
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+/* Ouverture WebGL */
+var cv=document.getElementById('herogl'),gl=null;try{gl=cv.getContext('webgl',{antialias:false,alpha:false,preserveDrawingBuffer:false});}catch(e){}
+var heroVisible=true,t0=performance.now();
+function nogl(){document.documentElement.classList.add('nogl');cv.style.display='none';}
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.error(gl.getShaderInfoLog(o));return null;}return o;}
+ var a=sh(gl.VERTEX_SHADER,vs),b=sh(gl.FRAGMENT_SHADER,'precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;'+G.FS);
+ if(!a||!b){nogl();}else{
+ var pr=gl.createProgram();gl.attachShader(pr,a);gl.attachShader(pr,b);gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.5,my=.5,tx=.5,ty=.5;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5)*(G.GLQ||.75);cv.width=Math.max(2,cv.clientWidth*d|0);cv.height=Math.max(2,cv.clientHeight*d|0);gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ G.drawHero=function(now){if(!heroVisible)return;mx+=(tx-mx)*.05;my+=(ty-my)*.05;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?12.:(now-t0)/1000+12.);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ G.drawHero(t0);}
+}else nogl();
+/* Titre : chaque ligne tient sur une ligne, quelle que soit la police */
+var h1=document.querySelector('.hero h1');G.fit=function(){h1.style.fontSize='';var w=h1.clientWidth,mx=0;h1.querySelectorAll('.ln span').forEach(function(s){mx=Math.max(mx,s.offsetWidth);});if(mx>w){h1.style.fontSize=(parseFloat(getComputedStyle(h1).fontSize)*w/mx*.97)+'px';}};
+G.fit();addEventListener('resize',G.fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(G.fit);
+/* Scènes */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+G.prog=prog;G.ease=ease;G.seg=seg;
+var hdr=document.getElementById('hdr'),proofB=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=document.getElementById('rv'),rvImg=rv.querySelector('img');
+var cutS=document.querySelector('.cut'),live=document.querySelectorAll('#live li'),meter=document.getElementById('meter');
+var gS=document.querySelector('.hgal'),track=document.getElementById('track'),gImgs=track.querySelectorAll('img'),gc=document.getElementById('gcount'),gN=gImgs.length;
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+function count(b){var to=+b.dataset.to,dec=+b.dataset.dec||0,suf=b.dataset.suf||'',st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1400));b.textContent=(to*k).toLocaleString(document.documentElement.lang==='en'?'en-GB':'fr-FR',{minimumFractionDigits:dec,maximumFractionDigits:dec})+suf;if(k<1)requestAnimationFrame(tick);})(st);}
+G.count=count;
+function scenes(now){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proofB.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*24+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.45){factsDone=true;facts.forEach(count);}
+ var c=prog(cutS);if(G.CUT)G.CUT(c,now);
+ var th=G.TH||[.25,.5,.75],st=0;th.forEach(function(x){if(c>=x)st++;});live.forEach(function(li,i){li.classList.toggle('on',i===st);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(20,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ var k=Math.min(gN,1+Math.floor(g*gN));gc.textContent=(k<10?'0':'')+k+' / '+(gN<10?'0':'')+gN;
+}
+function loop(now){if(lenis)lenis.raf(now);if(G.drawHero&&!RM)G.drawHero(now);for(var i=0;i<G.hooks.length;i++)G.hooks[i](now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+if(RM){facts.forEach(function(b){b.textContent=(+b.dataset.to).toLocaleString('fr-FR',{minimumFractionDigits:+b.dataset.dec||0})+(b.dataset.suf||'');});if(G.CUT)G.CUT(1,0);}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);if(x.target.dataset.stars)fillStars(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+function fillStars(el){var s=el.querySelector('.stars.fill'),to=+el.dataset.stars,sc=el.querySelector('[data-to]');if(sc)count(sc);if(!s)return;var st=performance.now();(function tk(n){var k=ease(Math.min(1,(n-st)/1600));s.style.setProperty('--p',(to/5*100*k)+'%');if(k<1)requestAnimationFrame(tk);})(st);}
+/* Lettre mensuelle (démonstration) */
+var nf=document.getElementById('nlf');if(nf)nf.addEventListener('submit',function(e){e.preventDefault();var ok=document.getElementById('nlok');ok.hidden=false;nf.querySelector('.nl-row').hidden=true;});
+/* Langues */
+var L=G.I18N||{},fr={};document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.innerHTML;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){var v=(L[l]||{})[e.dataset.i];e.innerHTML=v!=null?v:fr[e.dataset.i];});if(G.onLang)G.onLang(l);G.fit();};});
+})();
+</script>
+</body>
+</html>

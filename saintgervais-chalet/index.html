@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Saint Gervais Le Chalet — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1EFF2;--ink:#1D1A22;--soft:#5D5866;--line:#D9D4DD;--deep:#1C1A2B;--deep2:#28253B;--acc:#B5445F;--onacc:#fff;--acc2:#F3B49A;--ondeep:#E7E3EC;--ondeep2:#A9A2B8;--card:#FBFAFC;--stud:#E6E2EA;--sline:#C9C3D0;--star:#D49A3A;--phbg:#D2CCD8;--glass:rgba(28,26,43,.34);--glass2:rgba(251,250,252,.85);--herot:#E3DCE6;--mbar:rgba(28,26,43,.93);--d:"Young Serif",Georgia,serif;--t:"Public Sans",system-ui,sans-serif;--dw:400;--ls:-.015em;--h1:clamp(2.2rem,5.4vw,5.4rem);--h1m:clamp(1.6rem,8vw,2.4rem)}
+
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--t);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--acc);background:var(--acc);color:var(--onacc);cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),filter .2s;line-height:1.2;text-align:center}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);margin:0;font-weight:var(--dw,700)}
+h2{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.04;max-width:18ch;letter-spacing:var(--ls,-.02em)}
+.lede{color:var(--soft);max-width:38rem}
+[hidden]{display:none!important}
+.proof{position:relative;z-index:40;background:#000;color:#d4d7d6;font-family:var(--d);font-size:.8rem;font-weight:400}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:top .3s}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:var(--glass);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:var(--glass2);color:var(--ink);border-color:rgba(0,0,0,.08)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;min-width:0}
+.lmark{width:28px;height:28px;flex:none}
+.bname{font-family:var(--d);font-weight:var(--bw,700);font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap}
+.hnav{display:flex;align-items:center;gap:1.3rem;font-family:var(--d);font-size:.9rem;font-weight:500}
+.hnav a{text-decoration:none}.hnav a.nl{opacity:.85}
+header.site .btn{padding:.6rem 1.1rem}
+.lang{display:flex;gap:.15rem}.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero .fallback{position:absolute;inset:0;background:var(--deep);display:none}
+.hero .fallback img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.nogl .hero .fallback{display:block}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-size:var(--h1,clamp(2rem,5.2vw,5.2rem));line-height:1.02;letter-spacing:var(--ls,-.02em)}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.04em}
+.hero h1 .ln span{display:inline-block;transform:translateY(108%);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.09s}.hero h1 .ln:nth-child(3) span{transition-delay:.18s}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .55s,transform 1s .55s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:var(--herot);margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.scrollhint{position:absolute;right:1.25rem;bottom:1.25rem;z-index:2;font-family:var(--d);font-size:.75rem;color:var(--herot);opacity:.7;writing-mode:vertical-rl}
+@media(max-width:600px){.hero h1{font-size:var(--h1m,clamp(1.45rem,6.4vw,2.3rem))}.hero-inner{padding-bottom:6.5rem}.hero-ctas .ghost{display:none}}
+.reveal{height:220vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:var(--deep2)}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55))}
+.reveal .cap{position:absolute;left:clamp(1.25rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);color:#fff;font-family:var(--d);z-index:2;max-width:28rem}
+.reveal .cap b{display:block;font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.08;margin-bottom:.4rem}
+.reveal .cap span{font-size:.9rem;opacity:.85}
+.facts{position:absolute;top:clamp(6rem,15vh,9rem);right:clamp(1.25rem,4vw,3rem);z-index:2;display:grid;gap:1.2rem;color:#fff;font-family:var(--d);text-align:right}
+.facts b{display:block;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;opacity:.85}
+.cut{height:340vh;position:relative;background:var(--deep);color:var(--ondeep)}
+.cut .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.cut-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.cut h2{color:#fff;margin-bottom:1rem}
+.cut .lede{color:var(--ondeep2);margin:0 0 2rem}
+.cut svg{width:100%;height:auto;overflow:visible}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps-live li{border-left:2px solid rgba(255,255,255,.16);padding:.2rem 0 .2rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--acc2)}
+.steps-live b{display:block;font-family:var(--d);color:#fff;font-weight:600}
+.steps-live span{font-size:.96rem;color:var(--ondeep2)}
+.meter{height:2px;background:rgba(255,255,255,.14);margin-top:2rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--acc2);transform-origin:left;transform:scaleX(0)}
+.hgal{height:360vh;position:relative;background:var(--bg)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(62vw,720px);margin:0}
+.card .ph{height:min(58vh,520px);overflow:hidden;border-radius:var(--r,4px);background:var(--phbg)}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{font-family:var(--d);margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-weight:600}.card figcaption span{color:var(--soft);font-size:.9rem;white-space:nowrap}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--d);font-weight:700;font-size:1.1rem;font-variant-numeric:tabular-nums}
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;counter-reset:s;margin:3rem 0 0;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:1rem}
+.steps li::before{content:counter(s);font-family:var(--d);font-weight:700;font-size:2.6rem;line-height:1;color:var(--acc);display:block;margin-bottom:.8rem}
+.steps h3{font-size:1.08rem;margin-bottom:.4rem}.steps p{margin:0;color:var(--soft);font-size:.98rem}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+.feat{background:var(--deep);color:var(--ondeep);position:relative;overflow:hidden}
+.feat h2{color:#fff}.feat .lede{color:var(--ondeep2)}
+.cfg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.2rem;overflow:hidden}
+.preview svg{width:100%;height:auto;display:block}
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.25rem,3vw,2rem)}
+fieldset{border:0;margin:0;padding:0}legend{font-family:var(--d);font-weight:600;font-size:1.25rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem .95rem;cursor:pointer;font-family:var(--d);font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:var(--ondeep2);font-size:.8rem;margin-top:.2rem;font-family:var(--t)}
+.choice input:checked+label{border-color:var(--acc2);background:rgba(255,255,255,.07)}
+.choice input:focus-visible+label{outline:3px solid var(--acc2);outline-offset:2px}
+.step-anim{animation:stepin .55s cubic-bezier(.16,1,.3,1)}@keyframes stepin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-family:var(--d);font-size:.88rem}
+.field input,.field select{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.06);color:#fff}
+.note{font-size:.85rem;color:var(--ondeep2);opacity:.85;margin-top:1rem}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem;font-family:var(--d)}
+.live span{font-size:.8rem;color:var(--ondeep2)}.live b{display:block;white-space:nowrap;font-size:clamp(1.15rem,2vw,1.6rem);color:#fff;font-variant-numeric:tabular-nums}
+.live small{font-size:.8rem;color:var(--ondeep2);text-align:right;max-width:15rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:var(--ondeep2);padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--acc2);color:var(--deep);border-color:var(--acc2)}
+.chips button.done{color:#fff;border-color:rgba(255,255,255,.45)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.85rem;color:var(--ondeep2);margin:-.4rem 0 1rem}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-family:var(--d);font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:var(--ondeep2)}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.btn.wa{background:#1F9D57;border-color:#1F9D57;color:#fff}
+.copied{font-family:var(--d);font-size:.82rem;color:var(--acc2);align-self:center;word-break:break-all}
+.done-msg{font-family:var(--d);font-size:1.5rem;color:#fff;line-height:1.2}
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.score{font-family:var(--d);font-weight:700;font-size:4.4rem;line-height:1;font-variant-numeric:tabular-nums}.score small{display:block;font-size:.85rem;font-weight:400;color:var(--soft);margin-top:.4rem}
+.stars{color:var(--star);letter-spacing:.08em;position:relative;display:inline-block}
+.stars.fill{background:linear-gradient(90deg,var(--star) var(--p,0%),var(--line) var(--p,0%));-webkit-background-clip:text;background-clip:text;color:transparent;transition:--p 1.4s}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 52s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--card);border:1px solid var(--line);border-radius:var(--r2,14px);padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-size:1.04rem;line-height:1.5}.rcard figcaption{font-family:var(--d);font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--acc),var(--acc)) center/14px 2px no-repeat,linear-gradient(var(--acc),var(--acc)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-top:5rem}
+.bigtel{font-family:var(--d);font-weight:700;font-size:clamp(2rem,4.6vw,3.6rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-family:var(--d);font-size:.85rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:grid;gap:.4rem;max-width:26rem}.nl-form label{color:var(--ink);font-weight:600}
+.nl-row{display:flex;gap:.4rem}.nl-row input{flex:1;min-width:0;font:inherit;padding:.6rem .8rem;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink)}
+.nl-row .btn{padding:.6rem 1rem}
+.nl-ok{color:var(--acc);font-weight:600}
+.studio{background:var(--stud);border-top:6px solid var(--acc);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid var(--sline)}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid var(--sline)}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid var(--sline)}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid var(--sline)}.addons b{font-weight:600;font-family:var(--d)}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums;font-family:var(--d)}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--card);border:1px solid var(--sline);border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:var(--ondeep);border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--acc);font-weight:600}.offer.rec .tag{color:var(--acc2)}
+.offer h3{font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .cut-grid,.cfg,.contact,.rx-head,.faq{grid-template-columns:1fr}.rx-head,.faq{gap:1.5rem}
+ .cut{height:300vh}.cut h2{font-size:1.8rem}.cut .lede{display:none}
+ .preview{position:relative;top:0}
+ .steps{grid-template-columns:1fr 1fr}.offers{grid-template-columns:1fr}
+ .card{width:82vw}.facts{top:auto;bottom:8rem}
+}
+@media (max-width:600px){
+ header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}.bname{font-size:.95rem}.lmark{width:24px;height:24px}
+ .hnav .btn{display:none}.steps,.choices{grid-template-columns:1fr}.audit li{grid-template-columns:1fr;gap:.5rem}
+ .steps-live li:not(.on){display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:var(--mbar);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+ .score{font-size:3.4rem}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.cut,.hgal{height:auto}.reveal .stick,.cut .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .mq-track{animation:none;flex-wrap:wrap;width:auto}
+}
+
+
+.bname{font-weight:600;font-size:1.12rem}
+.stepper{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;font-family:var(--d)}
+.stepper button{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);background:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.stepper output{font-size:2.2rem;font-weight:600;min-width:2ch;text-align:center;color:#fff;font-variant-numeric:tabular-nums}
+.stepper span{color:var(--ondeep2);font-family:var(--t)}
+.cal{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.8rem}
+.cal-h{display:flex;justify-content:space-between;align-items:center;font-family:var(--d);margin-bottom:.6rem}.cal-h b{color:#fff;font-size:1.1rem;font-weight:600}
+.cal-h button{background:none;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:1.1rem}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;font-family:var(--t);font-size:.85rem;text-align:center}
+.cal-g .dw{color:var(--ondeep2);font-size:.72rem;padding:.2rem 0}
+.cal-g button{aspect-ratio:1;border:0;border-radius:8px;color:#fff;cursor:pointer;font:inherit;background:rgba(255,255,255,.05);border-bottom:3px solid transparent}
+.cal-g button.s1{border-bottom-color:#5d8c84}.cal-g button.s2{border-bottom-color:#c9a36b}.cal-g button.s3{border-bottom-color:#e07a4f}
+.cal-g button.in{background:rgba(233,195,143,.22)}.cal-g button.end{background:var(--acc2);color:var(--deep);font-weight:700}
+.cal-g button:disabled{opacity:.22;cursor:default}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.75rem;color:var(--ondeep2);margin-top:.6rem}.legend i{display:inline-block;width:14px;height:3px;margin-right:.35rem;vertical-align:middle}
+.legend .s1{background:#5d8c84}.legend .s2{background:#c9a36b}.legend .s3{background:#e07a4f}
+.hero{height:calc(100svh - 34px)}.count{white-space:nowrap}.faq summary{font-family:var(--t);font-weight:600;font-size:1.02rem}
+@media(max-width:600px){.proof{font-size:.74rem}.proof .wrap{flex-wrap:nowrap;white-space:nowrap}.hero{height:calc(100svh - 34px);min-height:560px}}
+@media(max-width:600px){.live{flex-direction:column;align-items:flex-start;gap:.3rem}.live small{text-align:left;max-width:none}}
+
+.btn,.chips button,.choice label,.field label,.recap,.hnav,.proof,.card figcaption,.count,.stepper,.cal-h,.rcard figcaption,footer.site,.offer .tag,.offer .alt,.audit b,.addons b,.addons span,.steps-live b,.live span,.live small{font-family:var(--t)}
+.btn{font-weight:700}
+.hero h1,h2,.done-msg,.score,.bigtel,.facts b,.reveal .cap b,.offer h3,.offer .price,legend,.live b{font-family:var(--d);font-weight:400}
+.bname{font-family:var(--d);font-weight:400;font-size:1.08rem}
+.choice label{font-weight:600}
+.cal-g button.s4{border-bottom-color:#b5445f}.legend .s4{background:#b5445f}
+.cal-g button.s1{border-bottom-color:#6f8fa8}.legend .s1{background:#6f8fa8}.cal-g button.s2{border-bottom-color:#c9a36b}.legend .s2{background:#c9a36b}.cal-g button.s3{border-bottom-color:#e08a5f}.legend .s3{background:#e08a5f}
+#facade .rw rect{transition:fill .5s}#facade .rw text{font-family:"Public Sans",sans-serif;font-size:10px;font-weight:700;fill:#F3B49A;opacity:0;transition:opacity .4s}#facade .rw.on text{opacity:1}
+#facade .cv{transition:opacity .35s,transform .35s;transform-box:fill-box;transform-origin:center}#facade .cv.off{opacity:0;transform:scale(.4)}
+.snowlive{margin-top:1rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.8rem}.snowlive span{display:block;font-size:.8rem;color:var(--ondeep2)}.snowlive b{color:#fff;font-weight:600}
+.tablecount{font-family:var(--t);font-size:.84rem;color:var(--acc2);margin-top:.4rem}
+.rcard blockquote{font-family:var(--d);font-size:1.08rem}
+.gb{font-family:var(--d);font-size:.8rem;color:var(--acc)}
+@media(max-width:600px){.hero-ctas{display:none}}
+
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour Saint Gervais Le Chalet par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée, Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Saint Gervais Le Chalet, accueil"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><path d="M1.5 20 C 6 14, 9 9, 13 8 C 17 7, 20 11, 23 12 C 26 13, 28 16, 30.5 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 27 L16 20 L24 27" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><rect x="14" y="23.5" width="4" height="3.5" fill="#F3B49A"/></svg><span class="bname">Saint Gervais Le Chalet</span></a>
+ <nav class="hnav" aria-label="Navigation"><a class="nl" href="#chalet" data-i="n1">Le chalet</a><a class="nl" href="#journee" data-i="n2">Une journée</a><a class="nl" href="#avis" data-i="n3">Livre d'or</a><div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button></div><a class="btn" href="#reserver" data-i="hcta">Réserver en direct</a></nav>
+</div></header>
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="herogl" aria-hidden="true"></canvas>
+ <div class="fallback" aria-hidden="true"><img src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/chalet-2014-1038x576.jpg" alt="" onerror="this.style.visibility='hidden'"></div>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">Face au Mont‑Blanc,</span></span><span class="ln"><span data-i="h1b">dîner et petit‑déjeuner</span></span><span class="ln"><span data-i="h1c">compris, dès 71 € par jour.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Cinq chambres d'hôtes dans un chalet de 170 m² à 930 mètres, à moins de cinq minutes des télécabines et des 445 km de pistes du domaine Evasion Mont‑Blanc. Jean-Luc et Naïma vous reçoivent en demi-pension : des repas copieux le soir, fondue et raclette en tête, et le petit-déjeuner le matin. Dès 71 € par adulte et par jour en basse saison.</p>
+   <div class="hero-ctas"><a class="btn" href="#reserver" data-i="c1">Voir les disponibilités</a><a class="btn ghost" href="tel:+33609494370">06 09 49 43 70</a></div>
+  </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true" data-i="scroll">Défiler</div>
+</section>
+<section class="reveal" id="chalet" aria-label="Un chalet de 170 m², comme à la maison">
+ <div class="stick">
+  <figure id="rv"><img src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/salon2.jpg" alt="Le salon du chalet" onerror="this.style.visibility='hidden'"><div class="shade"></div></figure>
+  <div class="cap"><b>Un chalet de 170 m², et l'on s'y sent comme à la maison.</b><span>Route des Ponthieux, Saint-Gervais-les-Bains</span></div>
+  <div class="facts" id="facts"><div><b data-to="5" data-suf="">0</b><span>chambres d'hôtes, jusqu'à 10 personnes</span></div><div><b data-to="445" data-suf=" km">0</b><span>de pistes, à moins de cinq minutes</span></div><div><b data-to="45" data-suf="">0</b><span>messages dans votre livre d'or</span></div></div>
+ </div>
+</section>
+<section class="cut" id="journee" aria-label="Une journée au chalet">
+ <div class="stick"><div class="wrap cut-grid">
+  <svg viewBox="0 0 760 420" role="img" aria-label="Une journée au chalet, face au Mont-Blanc">
+ <defs><clipPath id="win"><rect x="0" y="0" width="760" height="420" rx="14"/></clipPath></defs>
+ <g clip-path="url(#win)">
+ <rect width="760" height="420" fill="#3a3558"/>
+ <rect id="skyDay" width="760" height="420" fill="#8fb3d1" opacity="0"/>
+ <rect id="skyDusk" width="760" height="420" fill="#c98a8a" opacity="0"/>
+ <rect id="skyNight" width="760" height="420" fill="#121024" opacity="0"/>
+ <circle id="sun" cx="80" cy="330" r="22" fill="#fbe0b4"/>
+ <path id="mb" d="M0 260 C 80 230, 140 200, 210 190 C 300 176, 360 110, 450 104 C 540 98, 600 160, 660 176 C 700 186, 730 200, 760 210 L760 420 L0 420 Z" fill="#e9edf3"/>
+ <path id="mbGlow" d="M0 260 C 80 230, 140 200, 210 190 C 300 176, 360 110, 450 104 C 540 98, 600 160, 660 176 C 700 186, 730 200, 760 210 L760 420 L0 420 Z" fill="#f2a7a0" opacity="0"/>
+ <path id="shade" d="M0 260 C 80 230, 140 200, 210 190 C 300 176, 360 110, 450 104 C 540 98, 600 160, 660 176 C 700 186, 730 200, 760 210 L760 420 L0 420 Z" fill="#1a1830" opacity="0"/>
+ <path d="M0 300 L60 280 L120 292 L200 270 L280 288 L360 266 L450 284 L540 262 L620 280 L700 268 L760 278 L760 420 L0 420 Z" fill="#2c3b3a"/>
+ <line x1="470" y1="352" x2="690" y2="222" stroke="#262233" stroke-width="1.5"/>
+ <g id="cab"><line x1="0" y1="-10" x2="0" y2="0" stroke="#262233" stroke-width="1.5"/><rect x="-9" y="0" width="18" height="15" rx="3" fill="#b5445f"/></g>
+ <rect x="0" y="352" width="760" height="68" fill="#eef1f5"/>
+ <g transform="translate(120 252)">
+  <path d="M-24 44 L120 -22 L264 44 Z" fill="#3b2a22"/><path d="M-28 46 L120 -25 L268 46" fill="none" stroke="#f4f6f9" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="0" y="44" width="240" height="56" fill="#6a4a35"/>
+  <g id="wins" fill="#2a1f19"><rect x="22" y="60" width="28" height="24"/><rect x="66" y="60" width="28" height="24"/><rect x="146" y="60" width="28" height="24"/><rect x="190" y="60" width="28" height="24"/><rect x="104" y="6" width="32" height="26"/></g>
+  <rect x="-6" y="40" width="252" height="6" fill="#2a1f19"/>
+  <g id="steam" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0"><path d="M112 34 c-6 -10 6 -16 0 -26"/><path d="M128 34 c-6 -10 6 -16 0 -26"/></g>
+ </g>
+ <text id="clock" x="720" y="60" text-anchor="end" font-family="Young Serif, Georgia, serif" font-size="44" fill="#fff">8 h</text>
+ </g>
+</svg>
+  <div>
+   <h2>Une journée au chalet.</h2>
+   <p class="lede">Du petit-déjeuner face au Mont-Blanc au dîner servi à table : vous n'avez rien à organiser, ni à réserver le soir.</p>
+   <ol class="steps-live" id="live"><li><b>8 h, petit-déjeuner</b><span>Servi au chalet, le Mont-Blanc dans la fenêtre.</span></li><li><b>9 h, la télécabine</b><span>Moins de cinq minutes jusqu'aux télécabines et aux 445 km du domaine Evasion.</span></li><li><b>17 h, le Mont-Blanc rosit</b><span>Retour au chalet à l'heure où les sommets prennent la lumière du soir.</span></li><li><b>19 h 30, à table</b><span>Des repas copieux, fondue et raclette en tête, compris dans votre séjour.</span></li></ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
+<section class="hgal" id="galerie" aria-label="Galerie">
+ <div class="stick">
+  <div class="wrap head"><h2>Les chambres, une à une.</h2><span class="count" id="gcount">01 / 08</span></div>
+  <div class="track" id="track"><figure class="card"><div class="ph"><img loading="lazy" src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/ch-rouge.jpg" alt="La chambre Rouge" onerror="this.style.visibility='hidden'"></div><figcaption><b>La chambre Rouge</b><span>Salle d'eau, vue Mont-Blanc</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/chambre-orange-1-web.jpg" alt="La chambre Orange" onerror="this.style.visibility='hidden'"></div><figcaption><b>La chambre Orange</b><span>Salle de bain privée</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/ch-bleue.jpg" alt="La chambre Bleue" onerror="this.style.visibility='hidden'"></div><figcaption><b>La chambre Bleue</b><span>Chambre double</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/chambres-2-et-3-pour-site.jpg" alt="Des chambres du chalet" onerror="this.style.visibility='hidden'"></div><figcaption><b>Pour les familles</b><span>Chambres voisines</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/ch_lits_jum.jpg" alt="Une chambre à lits jumeaux" onerror="this.style.visibility='hidden'"></div><figcaption><b>Lits jumeaux</b><span>Pour les enfants ou les amis</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/SDB-chambre-Rouge.jpg" alt="La salle d'eau de la chambre Rouge" onerror="this.style.visibility='hidden'"></div><figcaption><b>La salle d'eau</b><span>Chambre Rouge</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/salle_manger.jpg" alt="La salle à manger" onerror="this.style.visibility='hidden'"></div><figcaption><b>La salle à manger</b><span>Le dîner, chaque soir</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://saint-gervais-lechalet.fr/wp-content/uploads/2021/09/chalet-2014-1038x576.jpg" alt="Le chalet" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le chalet</b><span>930 m, face au Mont-Blanc</span></figcaption></figure></div>
+ </div>
+</section>
+<section class="pad feat" id="reserver"><div class="wrap">
+ <h2 data-i="fh">Réservez votre séjour en direct.</h2>
+ <p class="lede" style="margin-top:1rem" data-i="fl">Choisissez votre chambre, vos dates et qui vient : le prix s'affiche par personne, dîner et petit-déjeuner compris, et votre demande arrive directement chez Jean-Luc et Naïma.</p>
+ <div class="cfg">
+  <div class="preview">
+   <svg viewBox="0 0 420 300" aria-hidden="true" id="facade">
+    <rect width="420" height="300" rx="10" fill="#141225"/>
+    <path d="M0 150 C 60 130, 100 110, 150 104 C 200 98, 230 60, 270 58 C 320 56, 350 96, 380 104 C 400 110, 410 116, 420 120 L420 300 L0 300 Z" fill="#cfd2e0" opacity=".9"/>
+    <path d="M0 170 L60 160 L120 168 L180 154 L240 166 L300 152 L360 164 L420 156 L420 300 L0 300 Z" fill="#232238"/>
+    <rect x="0" y="262" width="420" height="38" fill="#dfe2ea"/>
+    <path d="M80 126 L210 62 L340 126 Z" fill="#3b2a22"/><path d="M74 129 L210 59 L346 129" fill="none" stroke="#eef1f5" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="100" y="126" width="220" height="136" fill="#6a4a35"/>
+    <rect x="94" y="168" width="232" height="6" fill="#2a1f19"/>
+    <g class="rw" data-r="rouge"><rect x="122" y="134" width="40" height="28" rx="2" fill="#2a1f19"/><text x="142" y="128" text-anchor="middle">Rouge</text></g>
+    <g class="rw" data-r="orange"><rect x="190" y="88" width="40" height="30" rx="2" fill="#2a1f19"/><text x="210" y="82" text-anchor="middle">Orange</text></g>
+    <g class="rw" data-r="bleue"><rect x="258" y="134" width="40" height="28" rx="2" fill="#2a1f19"/><text x="278" y="128" text-anchor="middle">Bleue</text></g>
+    <rect x="190" y="196" width="40" height="66" fill="#3b2a22"/>
+    <g id="table"><rect x="112" y="200" width="66" height="44" rx="3" fill="#2a1f19"/><rect x="242" y="200" width="66" height="44" rx="3" fill="#2a1f19"/><g id="covers"></g></g>
+   </svg>
+   <div class="live"><div><span id="liveLab">Votre séjour</span><b id="liveP">—</b></div><small id="liveSub">Dîner et petit-déjeuner compris.</small></div>
+   <p class="tablecount" id="tc">Ce soir à table : 2 couverts.</p>
+   <div class="snowlive" id="snow" hidden><span>Au chalet en ce moment</span><b id="snowTxt"></b></div>
+  </div>
+  <div class="panel" aria-live="polite">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <fieldset data-s data-n="Chambre"><legend>Quelle chambre ?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="rm" id="r1" value="rouge" checked><label for="r1">La Rouge<small>Salle d'eau privée, vue sur le Mont-Blanc</small></label></div>
+     <div class="choice"><input type="radio" name="rm" id="r2" value="orange"><label for="r2">L'Orange<small>Salle de bain privée</small></label></div>
+     <div class="choice"><input type="radio" name="rm" id="r3" value="bleue"><label for="r3">La Bleue<small>Chambre double, sans salle de bain privée</small></label></div>
+     <div class="choice"><input type="radio" name="rm" id="r4" value="multi"><label for="r4">Plusieurs chambres<small>En famille ou entre amis, jusqu'à 10 personnes</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Dates" hidden data-noauto><legend>Vos dates</legend>
+     <div class="cal"><div class="cal-h"><button type="button" id="cPrev" aria-label="Mois précédent">‹</button><b id="cMonth"></b><button type="button" id="cNext" aria-label="Mois suivant">›</button></div><div class="cal-g" id="cGrid"></div>
+     <div class="legend"><span><i class="s1"></i>Basse saison</span><span><i class="s2"></i>Moyenne</span><span><i class="s3"></i>Haute</span><span><i class="s4"></i>Très haute</span></div></div>
+     <p class="hint" id="dHint" style="margin-top:.8rem">Touchez votre jour d'arrivée, puis votre jour de départ.</p></fieldset>
+    <fieldset data-s data-n="Voyageurs" hidden data-noauto><legend>Qui vient ?</legend>
+     <div class="stepper"><button type="button" data-k="ad" data-d="-1" aria-label="Un adulte de moins">−</button><output id="adO">2</output><button type="button" data-k="ad" data-d="1" aria-label="Un adulte de plus">+</button><span>adultes</span></div>
+     <div class="stepper"><button type="button" data-k="en" data-d="-1" aria-label="Un enfant de moins">−</button><output id="enO">0</output><button type="button" data-k="en" data-d="1" aria-label="Un enfant de plus">+</button><span>enfants de 2 à 14 ans (−30 %)</span></div>
+     <div class="stepper"><button type="button" data-k="bb" data-d="-1" aria-label="Un bébé de moins">−</button><output id="bbO">0</output><button type="button" data-k="bb" data-d="1" aria-label="Un bébé de plus">+</button><span>bébés</span></div>
+     <p class="hint" id="pHint"></p></fieldset>
+    <div data-s data-n="Coordonnées" hidden><p class="done-msg" style="margin:0 0 1rem">Votre séjour est prêt.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
+     <div class="field"><label for="p">Téléphone ou WhatsApp</label><input id="p" type="tel" autocomplete="tel"></div>
+     <div class="send-row"><a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">Envoyer ma demande sur WhatsApp</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien</button><span class="copied" id="copied" hidden></span></div></div>
+    <div data-s data-n="Envoi" hidden><p class="done-msg">Merci, Jean-Luc et Naïma vous confirment vos dates très vite.</p><p style="color:var(--ondeep2)">Dans le site final, la demande arrive aussi par email avec le récapitulatif, et le calendrier se met à jour selon vos réservations.</p></div>
+    <div class="est-nav"><button type="button" class="btn ghost prev" hidden>Retour</button><button type="button" class="btn next" style="margin-left:auto">Continuer</button></div>
+   </form>
+   <p class="note">Démonstration : prix par adulte repris de votre grille (71 à 80 € par jour, 469 à 515 € la semaine) ; dates des saisons indicatives, à caler avec vous avant la mise en ligne.</p>
+  </div>
+ </div>
+</div></section>
+<section class="pad" id="avis"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise"><div class="score"><span data-to="45" data-suf="">45</span><small>messages laissés dans votre livre d'or, de décembre 2024 à Noël 2025</small></div><h2>Ce que nos hôtes écrivent en repartant.</h2></div>
+  <div class="marquee" aria-label="Messages du livre d'or"><div class="mq-track"><figure class="rcard"><span class="gb">Livre d'or</span><blockquote>Un accueil si chaleureux qu'on s'y est sentis comme chez nous.</blockquote><figcaption>Séjour en famille</figcaption></figure><figure class="rcard"><span class="gb">Livre d'or</span><blockquote>Un chalet spacieux, et le Mont-Blanc en face chaque matin.</blockquote><figcaption>Séjour d'hiver</figcaption></figure><figure class="rcard"><span class="gb">Livre d'or</span><blockquote>Des repas copieux, la fondue et la raclette resteront dans nos mémoires.</blockquote><figcaption>Séjour entre amis</figcaption></figure><figure class="rcard"><span class="gb">Livre d'or</span><blockquote>Merci pour votre aide pour tout organiser, jusqu'à la location des skis.</blockquote><figcaption>Séjour au ski</figcaption></figure><figure class="rcard"><span class="gb">Livre d'or</span><blockquote>Nous n'avons qu'une envie : revenir.</blockquote><figcaption>Séjour à Noël</figcaption></figure><figure class="rcard" aria-hidden="true"><span class="gb">Livre d'or</span><blockquote>Un accueil si chaleureux qu'on s'y est sentis comme chez nous.</blockquote><figcaption>Séjour en famille</figcaption></figure><figure class="rcard" aria-hidden="true"><span class="gb">Livre d'or</span><blockquote>Un chalet spacieux, et le Mont-Blanc en face chaque matin.</blockquote><figcaption>Séjour d'hiver</figcaption></figure><figure class="rcard" aria-hidden="true"><span class="gb">Livre d'or</span><blockquote>Des repas copieux, la fondue et la raclette resteront dans nos mémoires.</blockquote><figcaption>Séjour entre amis</figcaption></figure><figure class="rcard" aria-hidden="true"><span class="gb">Livre d'or</span><blockquote>Merci pour votre aide pour tout organiser, jusqu'à la location des skis.</blockquote><figcaption>Séjour au ski</figcaption></figure><figure class="rcard" aria-hidden="true"><span class="gb">Livre d'or</span><blockquote>Nous n'avons qu'une envie : revenir.</blockquote><figcaption>Séjour à Noël</figcaption></figure></div></div>
+  <p class="note-rv">Extraits reformulés de votre livre d'or pour la maquette. Dans le site final, vos messages et vos avis Google s'affichent en version originale.</p>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Avant de réserver, on nous demande souvent.</h2>
+  <div class="faq-list"><details><summary>Que comprend le prix ?</summary><p>Le dîner et le petit-déjeuner, en plus de la chambre : c'est une demi-pension. Le prix s'entend par adulte, de 71 à 80 € par jour, ou de 469 à 515 € la semaine selon la saison.</p></details><details><summary>Quand réserver Noël et les vacances de février ?</summary><p>Ce sont les semaines qui partent en premier, et la saison d'hiver approche. Avec cinq chambres seulement, mieux vaut demander vos dates dès maintenant.</p></details><details><summary>Les pistes sont-elles loin ?</summary><p>Le chalet est à moins de cinq minutes des télécabines, qui vous montent sur les 445 km de pistes du domaine Evasion Mont-Blanc.</p></details><details><summary>Quel tarif pour les enfants ?</summary><p>Moins 30 % de 2 à 14 ans. Pour un bébé allaité, une participation de 20 € par jour.</p></details><details><summary>Les chambres ont-elles leur salle de bain ?</summary><p>La Rouge a sa salle d'eau et la vue sur le Mont-Blanc, l'Orange sa salle de bain privée. La Bleue n'a pas de salle de bain privée.</p></details><details><summary>À la nuit ou à la semaine ?</summary><p>Les deux : à la nuit de 71 à 80 € par adulte, à la semaine de 469 à 515 €. Les semaines de très haute saison se réservent à la semaine (à valider).</p></details><details><summary>Pouvez-vous nous aider à organiser le séjour ?</summary><p>Oui, nos hôtes nous le disent souvent dans le livre d'or : nous vous aidons à tout organiser, jusqu'à la location de vos skis.</p></details><details><summary>Comment se fait le règlement ?</summary><p>Par chèque (à valider avec vous).</p></details></div>
+ </div>
+ <div class="contact" id="contact"><div><h2>Une date, une question ?</h2><a class="bigtel" href="tel:+33609494370">06 09 49 43 70</a><p style="margin:0;color:var(--soft)">Jean-Luc et Naïma · 04 50 93 45 72<br>530 route des Ponthieux, 74170 Saint-Gervais-les-Bains</p></div><div><p style="color:var(--soft);margin-top:0">Cinq chambres d'hôtes en demi-pension, face au Mont-Blanc, à moins de cinq minutes des télécabines.</p><a class="btn" href="#reserver">Voir les disponibilités</a></div></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap"><div><div style="color:var(--ink);font-weight:600;margin-bottom:.3rem">Saint Gervais Le Chalet · 530 route des Ponthieux, 74170 Saint-Gervais-les-Bains</div>Chambres d'hôtes en demi-pension face au Mont-Blanc</div><form class="nl-form" id="nlf"><label for="nlm">Recevoir nos semaines libres et nos nouvelles chaque mois</label><div class="nl-row"><input id="nlm" type="email" placeholder="Votre email" autocomplete="email" required><button class="btn" type="submit">S'inscrire</button></div><span class="nl-ok" id="nlok" hidden>C'est noté. Prochaine lettre au début du mois.</span></form></div></footer>
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Monsieur Terrazas, voici ce que nous avons relevé sur saint-gervais-lechalet.fr, et ce que la nouvelle version apporte.</p>
+ <ul class="audit"><li><div class="now"><b>Aujourd'hui</b>Les pages « Les chambres » et « Le séjour » ne contiennent aucun texte, seulement des images : ni équipement, ni salle de bain, ni ce que comprend la demi-pension.</div><div><b>Avec la refonte</b>Chaque chambre avec ses photos, sa salle de bain et son prix, et la demi-pension expliquée dès l'accueil.</div></li><li><div class="now"><b>Aujourd'hui</b>Ni formulaire ni réservation : vos numéros ne figurent que sur la page contact, et l'adresse email la plus visible de l'accueil est celle de l'ESF.</div><div><b>Avec la refonte</b>Une réservation directe avec calendrier, prix par personne et demande envoyée sur votre WhatsApp, et votre numéro sur chaque écran.</div></li><li><div class="now"><b>Aujourd'hui</b>Le calendrier des réservations ne montre pas lisiblement les semaines libres, et une période affiche « 26 déc. 2025 au 1er janv. 2027 ».</div><div><b>Avec la refonte</b>Un calendrier clair avec vos saisons et vos tarifs, que vous mettez à jour en deux minutes.</div></li><li><div class="now"><b>Aujourd'hui</b>Vos 45 messages du livre d'or sont rangés sur une sous-page, et nous n'avons trouvé aucune note Google ni Booking pour le chalet.</div><div><b>Avec la refonte</b>Vos plus beaux messages dès l'accueil, et des avis Google qui s'accumulent après chaque séjour.</div></li><li><div class="now"><b>Aujourd'hui</b>Une seule photo sur l'accueil, un thème WordPress gratuit et aucune version anglaise.</div><div><b>Avec la refonte</b>Une ouverture face au Mont-Blanc qui prend les couleurs du soir, en français et en anglais.</div></li></ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Demande de réservation, avis, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + réservation directe avec calendrier</li><li>FR, EN, IT</li><li>Pages hiver, été et par chambre</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + Mont-Blanc animé en temps réel (WebGL)</li><li>Journée au chalet et galerie animées au défilement</li><li>Météo du Mont-Blanc en direct</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+ <div class="addons"><div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Pour que la chaleur de votre livre d'or se voie aussi sur Google : demande d'avis envoyée à vos hôtes après chaque séjour, réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, bilan mensuel.</p></div><div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens hôtes, qui ont tant envie de revenir : semaines encore libres, ouverture de la saison, l'été au pied du Mont-Blanc. Rédigé, mis en page et envoyé pour vous.</p></div><div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Italien ou néerlandais, en plus du français et de l'anglais, traduit et tenu à jour avec le reste du site.</p></div></div>
+ <p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Saint%20Gervais%20Le%20Chalet">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+<div class="mbar"><a class="btn ghost" href="tel:+33609494370">Appeler</a><a class="btn" href="#reserver">Réserver</a></div>
+
+<script>!function(t,i){"object"==typeof exports&&"undefined"!=typeof module?module.exports=i():"function"==typeof define&&define.amd?define(i):(t="undefined"!=typeof globalThis?globalThis:t||self).Lenis=i()}(this,(function(){"use strict";function clamp(t,i,e){return Math.max(t,Math.min(i,e))}class Animate{constructor(){this.isRunning=!1,this.value=0,this.from=0,this.to=0,this.currentTime=0}advance(t){var i;if(!this.isRunning)return;let e=!1;if(this.duration&&this.easing){this.currentTime+=t;const i=clamp(0,this.currentTime/this.duration,1);e=i>=1;const s=e?1:this.easing(i);this.value=this.from+(this.to-this.from)*s}else this.lerp?(this.value=function damp(t,i,e,s){return function lerp(t,i,e){return(1-e)*t+e*i}(t,i,1-Math.exp(-e*s))}(this.value,this.to,60*this.lerp,t),Math.round(this.value)===this.to&&(this.value=this.to,e=!0)):(this.value=this.to,e=!0);e&&this.stop(),null===(i=this.onUpdate)||void 0===i||i.call(this,this.value,e)}stop(){this.isRunning=!1}fromTo(t,i,{lerp:e,duration:s,easing:o,onStart:n,onUpdate:l}){this.from=this.value=t,this.to=i,this.lerp=e,this.duration=s,this.easing=o,this.currentTime=0,this.isRunning=!0,null==n||n(),this.onUpdate=l}}class Dimensions{constructor(t,i,{autoResize:e=!0,debounce:s=250}={}){this.wrapper=t,this.content=i,this.width=0,this.height=0,this.scrollHeight=0,this.scrollWidth=0,this.resize=()=>{this.onWrapperResize(),this.onContentResize()},this.onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)},this.onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)},e&&(this.debouncedResize=function debounce(t,i){let e;return function(...s){let o=this;clearTimeout(e),e=setTimeout((()=>{e=void 0,t.apply(o,s)}),i)}}(this.resize,s),this.wrapper instanceof Window?window.addEventListener("resize",this.debouncedResize,!1):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}destroy(){var t,i;null===(t=this.wrapperResizeObserver)||void 0===t||t.disconnect(),null===(i=this.contentResizeObserver)||void 0===i||i.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener("resize",this.debouncedResize,!1)}get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}}class Emitter{constructor(){this.events={}}emit(t,...i){var e;let s=this.events[t]||[];for(let t=0,o=s.length;t<o;t++)null===(e=s[t])||void 0===e||e.call(s,...i)}on(t,i){var e;return(null===(e=this.events[t])||void 0===e?void 0:e.push(i))||(this.events[t]=[i]),()=>{var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}}off(t,i){var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}destroy(){this.events={}}}const t=100/6,i={passive:!1};class VirtualScroll{constructor(e,s={wheelMultiplier:1,touchMultiplier:1}){this.element=e,this.options=s,this.touchStart={x:0,y:0},this.lastDelta={x:0,y:0},this.window={width:0,height:0},this.emitter=new Emitter,this.onTouchStart=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:0,y:0},this.emitter.emit("scroll",{deltaX:0,deltaY:0,event:t})},this.onTouchMove=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t,s=-(i-this.touchStart.x)*this.options.touchMultiplier,o=-(e-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:s,y:o},this.emitter.emit("scroll",{deltaX:s,deltaY:o,event:t})},this.onTouchEnd=t=>{this.emitter.emit("scroll",{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:t})},this.onWheel=i=>{let{deltaX:e,deltaY:s,deltaMode:o}=i;e*=1===o?t:2===o?this.window.width:1,s*=1===o?t:2===o?this.window.height:1,e*=this.options.wheelMultiplier,s*=this.options.wheelMultiplier,this.emitter.emit("scroll",{deltaX:e,deltaY:s,event:i})},this.onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}},window.addEventListener("resize",this.onWindowResize,!1),this.onWindowResize(),this.element.addEventListener("wheel",this.onWheel,i),this.element.addEventListener("touchstart",this.onTouchStart,i),this.element.addEventListener("touchmove",this.onTouchMove,i),this.element.addEventListener("touchend",this.onTouchEnd,i)}on(t,i){return this.emitter.on(t,i)}destroy(){this.emitter.destroy(),window.removeEventListener("resize",this.onWindowResize,!1),this.element.removeEventListener("wheel",this.onWheel,i),this.element.removeEventListener("touchstart",this.onTouchStart,i),this.element.removeEventListener("touchmove",this.onTouchMove,i),this.element.removeEventListener("touchend",this.onTouchEnd,i)}}return class Lenis{constructor({wrapper:t=window,content:i=document.documentElement,eventsTarget:e=t,smoothWheel:s=!0,syncTouch:o=!1,syncTouchLerp:n=.075,touchInertiaMultiplier:l=35,duration:r,easing:h=(t=>Math.min(1,1.001-Math.pow(2,-10*t))),lerp:a=.1,infinite:c=!1,orientation:u="vertical",gestureOrientation:d="vertical",touchMultiplier:p=1,wheelMultiplier:m=1,autoResize:v=!0,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w=!1}={}){this._isScrolling=!1,this._isStopped=!1,this._isLocked=!1,this._preventNextNativeScrollEvent=!1,this._resetVelocityTimeout=null,this.time=0,this.userData={},this.lastVelocity=0,this.velocity=0,this.direction=0,this.animate=new Animate,this.emitter=new Emitter,this.onPointerDown=t=>{1===t.button&&this.reset()},this.onVirtualScroll=t=>{if("function"==typeof this.options.virtualScroll&&!1===this.options.virtualScroll(t))return;const{deltaX:i,deltaY:e,event:s}=t;if(this.emitter.emit("virtual-scroll",{deltaX:i,deltaY:e,event:s}),s.ctrlKey)return;const o=s.type.includes("touch"),n=s.type.includes("wheel");this.isTouching="touchstart"===s.type||"touchmove"===s.type;if(this.options.syncTouch&&o&&"touchstart"===s.type&&!this.isStopped&&!this.isLocked)return void this.reset();const l=0===i&&0===e,r="vertical"===this.options.gestureOrientation&&0===e||"horizontal"===this.options.gestureOrientation&&0===i;if(l||r)return;let h=s.composedPath();h=h.slice(0,h.indexOf(this.rootElement));const a=this.options.prevent;if(h.find((t=>{var i,e,s,l,r;return t instanceof HTMLElement&&("function"==typeof a&&(null==a?void 0:a(t))||(null===(i=t.hasAttribute)||void 0===i?void 0:i.call(t,"data-lenis-prevent"))||o&&(null===(e=t.hasAttribute)||void 0===e?void 0:e.call(t,"data-lenis-prevent-touch"))||n&&(null===(s=t.hasAttribute)||void 0===s?void 0:s.call(t,"data-lenis-prevent-wheel"))||(null===(l=t.classList)||void 0===l?void 0:l.contains("lenis"))&&!(null===(r=t.classList)||void 0===r?void 0:r.contains("lenis-stopped")))})))return;if(this.isStopped||this.isLocked)return void s.preventDefault();if(!(this.options.syncTouch&&o||this.options.smoothWheel&&n))return this.isScrolling="native",void this.animate.stop();s.preventDefault();let c=e;"both"===this.options.gestureOrientation?c=Math.abs(e)>Math.abs(i)?e:i:"horizontal"===this.options.gestureOrientation&&(c=i);const u=o&&this.options.syncTouch,d=o&&"touchend"===s.type&&Math.abs(c)>5;d&&(c=this.velocity*this.options.touchInertiaMultiplier),this.scrollTo(this.targetScroll+c,Object.assign({programmatic:!1},u?{lerp:d?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}))},this.onNativeScroll=()=>{if(null!==this._resetVelocityTimeout&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent)this._preventNextNativeScrollEvent=!1;else if(!1===this.isScrolling||"native"===this.isScrolling){const t=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-t,this.direction=Math.sign(this.animatedScroll-t),this.isScrolling="native",this.emit(),0!==this.velocity&&(this._resetVelocityTimeout=setTimeout((()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()}),400))}},window.lenisVersion="1.1.13",t&&t!==document.documentElement&&t!==document.body||(t=window),this.options={wrapper:t,content:i,eventsTarget:e,smoothWheel:s,syncTouch:o,syncTouchLerp:n,touchInertiaMultiplier:l,duration:r,easing:h,lerp:a,infinite:c,gestureOrientation:d,orientation:u,touchMultiplier:p,wheelMultiplier:m,autoResize:v,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w},this.dimensions=new Dimensions(t,i,{autoResize:v}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.addEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll=new VirtualScroll(e,{touchMultiplier:p,wheelMultiplier:m}),this.virtualScroll.on("scroll",this.onVirtualScroll)}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.removeEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName()}on(t,i){return this.emitter.on(t,i)}off(t,i){return this.emitter.off(t,i)}setScroll(t){this.isHorizontal?this.rootElement.scrollLeft=t:this.rootElement.scrollTop=t}resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit("scroll",this)}reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){this.isStopped&&(this.isStopped=!1,this.reset())}stop(){this.isStopped||(this.isStopped=!0,this.animate.stop(),this.reset())}raf(t){const i=t-(this.time||t);this.time=t,this.animate.advance(.001*i)}scrollTo(t,{offset:i=0,immediate:e=!1,lock:s=!1,duration:o=this.options.duration,easing:n=this.options.easing,lerp:l=this.options.lerp,onStart:r,onComplete:h,force:a=!1,programmatic:c=!0,userData:u}={}){if(!this.isStopped&&!this.isLocked||a){if("string"==typeof t&&["top","left","start"].includes(t))t=0;else if("string"==typeof t&&["bottom","right","end"].includes(t))t=this.limit;else{let e;if("string"==typeof t?e=document.querySelector(t):t instanceof HTMLElement&&(null==t?void 0:t.nodeType)&&(e=t),e){if(this.options.wrapper!==window){const t=this.rootElement.getBoundingClientRect();i-=this.isHorizontal?t.left:t.top}const s=e.getBoundingClientRect();t=(this.isHorizontal?s.left:s.top)+this.animatedScroll}}if("number"==typeof t){if(t+=i,t=Math.round(t),this.options.infinite?c&&(this.targetScroll=this.animatedScroll=this.scroll):t=clamp(0,t,this.limit),t===this.targetScroll)return null==r||r(this),void(null==h||h(this));if(this.userData=null!=u?u:{},e)return this.animatedScroll=this.targetScroll=t,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),null==h||h(this),void(this.userData={});c||(this.targetScroll=t),this.animate.fromTo(this.animatedScroll,t,{duration:o,easing:n,lerp:l,onStart:()=>{s&&(this.isLocked=!0),this.isScrolling="smooth",null==r||r(this)},onUpdate:(t,i)=>{this.isScrolling="smooth",this.lastVelocity=this.velocity,this.velocity=t-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=t,this.setScroll(this.scroll),c&&(this.targetScroll=t),i||this.emit(),i&&(this.reset(),this.emit(),null==h||h(this),this.userData={},this.preventNextNativeScrollEvent())}})}}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame((()=>{this._preventNextNativeScrollEvent=!1}))}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.__experimental__naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?"x":"y"]}get isHorizontal(){return"horizontal"===this.options.orientation}get actualScroll(){return this.isHorizontal?this.rootElement.scrollLeft:this.rootElement.scrollTop}get scroll(){return this.options.infinite?function modulo(t,i){return(t%i+i)%i}(this.animatedScroll,this.limit):this.animatedScroll}get progress(){return 0===this.limit?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(t){this._isScrolling!==t&&(this._isScrolling=t,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(t){this._isStopped!==t&&(this._isStopped=t,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(t){this._isLocked!==t&&(this._isLocked=t,this.updateClassName())}get isSmooth(){return"smooth"===this.isScrolling}get className(){let t="lenis";return this.isStopped&&(t+=" lenis-stopped"),this.isLocked&&(t+=" lenis-locked"),this.isScrolling&&(t+=" lenis-scrolling"),"smooth"===this.isScrolling&&(t+=" lenis-smooth"),t}updateClassName(){this.cleanUpClassName(),this.rootElement.className=`${this.rootElement.className} ${this.className}`.trim()}cleanUpClassName(){this.rootElement.className=this.rootElement.className.replace(/lenis(-\w+)?/g,"").trim()}}}));
+//# sourceMappingURL=lenis.min.js.map
+</script>
+<script>
+window.GS={hooks:[]};(function(G){
+G.ease=function(x){return 1-Math.pow(1-x,3);};G.seg=function(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));};
+G.eur=function(n,r){r=r||1;return (Math.round(n/r)*r).toLocaleString('fr-FR')+' €';};
+G.tween=function(el,lo,hi,fmt,sep){var a0=el._lo||0,b0=el._hi||0,st=performance.now();el._lo=lo;el._hi=hi;(function tk(n){var q=G.ease(Math.min(1,(n-st)/700)),a=a0+(lo-a0)*q,b=b0+(hi-b0)*q;el.textContent=hi==null||lo===hi?fmt(a):fmt(a)+(sep||' – ')+fmt(b);if(q<1)requestAnimationFrame(tk);})(st);};
+G.stepper=function(f,o){var S=[].slice.call(f.querySelectorAll('[data-s]')),pv=f.querySelector('.prev'),nx=f.querySelector('.next'),chips=document.getElementById(o.chips),i=0,reached=0,N=S.length-1;
+ function draw(){chips.innerHTML='';S.slice(0,N).forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached||i===N;b.onclick=function(){go(k);};li.appendChild(b);chips.appendChild(li);});}
+ function go(k){i=k;S.forEach(function(el,j){el.hidden=j!==i;if(j===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0||i===N;nx.hidden=i===N;nx.textContent=i===N-2?o.seeTxt:i===N-1?o.sendTxt:o.nextTxt;draw();if(o.update)o.update();if(i===N-1&&o.recap)o.recap();if(o.onStep)o.onStep(i);}
+ f.addEventListener('change',function(e){if(o.update)o.update();if(e.target.type==='radio'&&i<N-2&&!e.target.closest('[data-noauto]')){var at=i;setTimeout(function(){if(i===at)go(i+1);},420);}});
+ f.addEventListener('submit',function(e){e.preventDefault();});
+ nx.onclick=function(){if(o.canNext&&!o.canNext(i))return;if(i<N)go(i+1);};pv.onclick=function(){if(i>0)go(i-1);};
+ go(0);return{go:go,cur:function(){return i;}};};
+G.copy=function(btn,out){btn.addEventListener('click',function(){var c=document.getElementById(out);(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});};
+})(window.GS);
+
+
+GS.FS="\nfloat h2(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}\nfloat n2(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h2(i),h2(i+vec2(1.,0.)),f.x),mix(h2(i+vec2(0.,1.)),h2(i+vec2(1.,1.)),f.x),f.y);}\nfloat fbm(vec2 p){float a=.5,s=0.;for(int i=0;i<5;i++){s+=a*n2(p);p*=2.03;a*=.5;}return s;}\nfloat sq(float x){return x*x;}\nfloat mb(float x,float c,float mob){float d=(x-c)/mix(.42,.30,mob);return .44+mob*.1+.27*exp(-d*d)+.06*exp(-sq((x-c+.55)/.2))+.05*exp(-sq((x-c-.6)/.18))+.035*(fbm(vec2(x*5.,1.3))-.5)+.012*(n2(vec2(x*28.,4.))-.5);}\nfloat ms(float x,float c,float mob){float d=(x-c)/mix(.42,.30,mob);return .27*exp(-d*d)+.06*exp(-sq((x-c+.55)/.2))+.05*exp(-sq((x-c-.6)/.18))+.035*(fbm(vec2(x*5.,1.3))-.5);}\nvoid main(){\n vec2 uv=gl_FragCoord.xy/r;float ar=r.x/r.y;vec2 q=vec2(uv.x*ar,uv.y);vec2 mm=m-.5;float mob=step(ar,1.);float px=1./r.y;\n float glow=.55+.35*sin(t*.12)+mm.x*.5;glow=clamp(glow,0.,1.);\n vec3 skyT=vec3(.07,.07,.17),skyM=vec3(.30,.24,.42),skyH=mix(vec3(.80,.55,.52),vec3(.98,.70,.52),glow);\n vec3 col=mix(skyH,skyM,smoothstep(.30,.62,uv.y));col=mix(col,skyT,smoothstep(.6,1.,uv.y));\n float st=h2(floor(q*150.));col+=vec3(1.)*step(.994,st)*smoothstep(.25,0.,length(fract(q*150.)-.5))*smoothstep(.7,.95,uv.y)*(.6+.4*sin(t*2.+st*50.));\n float c=ar*mix(.64,.55,mob)+mm.x*.03;\n float h=mb(q.x+mm.x*.02,c,mob);float e=.004;float e2=.03;float dh=(ms(q.x+e2+mm.x*.02,c,mob)-ms(q.x-e2+mm.x*.02,c,mob))/(2.*e2);\n float cov=1.-smoothstep(-px,px,uv.y-h);\n float sun=smoothstep(-.6,.6,-dh);\n vec3 shadow=vec3(.40,.42,.62),lit=mix(vec3(.96,.86,.84),vec3(1.,.70,.66),glow);\n float rock=smoothstep(.58,.75,fbm(vec2(q.x*7.+q.y*4.,q.y*9.)))*smoothstep(h-.03,h-.2,uv.y)*.5;\n vec3 mcol=mix(shadow,lit,sun);mcol=mix(mcol,mcol*vec3(.45,.42,.55),rock);\n mcol=mix(mcol,vec3(.36,.34,.52),smoothstep(h-.18,h-.36,uv.y));\n col=mix(col,mcol,cov);\n col+=vec3(1.,.6,.55)*.10*glow*exp(-abs(uv.y-h)*30.)*(1.-cov);\n float hm=.30+mob*.1+.05*fbm(vec2((q.x+mm.x*.05)*2.,7.))+.025*sin(q.x*3.1);\n float saw=abs(fract((q.x+mm.x*.05)*38.)-.5)*.02;float hmid=hm+saw*step(.5,n2(vec2(q.x*9.,2.)))*1.;\n float mcov=1.-smoothstep(-px,px,uv.y-hmid);\n vec3 fcol=mix(vec3(.08,.10,.16),vec3(.16,.16,.26),smoothstep(hm-.15,hm,uv.y));\n col=mix(col,fcol,mcov);\n float mist=fbm(vec2(q.x*2.5-t*.04,uv.y*9.))*smoothstep(.12,.0,abs(uv.y-hm+.02-mob*.0));\n col=mix(col,mix(vec3(.62,.52,.62),vec3(.95,.72,.62),glow*.6),mist*.55);\n float hn=.20+mob*.06+.03*sin(q.x*2.2+1.)+.015*fbm(vec2(q.x*6.,3.));\n float ncov=1.-smoothstep(-px,px,uv.y-hn);\n col=mix(col,vec3(.05,.06,.10),ncov);\n for(int k=0;k<6;k++){float fk=float(k);vec2 lp=vec2(ar*(.08+fk*.17)+(h2(vec2(fk,2.))-.5)*.1+mm.x*.05,.19+mob*.06+.04*h2(vec2(fk,5.)));float d=length((q-lp)*vec2(1.,1.3));\n  col+=vec3(1.,.72,.40)*(.7*exp(-d*400.)+.05*exp(-d*40.))*(.85+.15*sin(t*3.+fk));}\n float by=.115+mob*.03;float rx=q.x*mix(14.,9.,mob);float cell=fract(rx);\n float board=step(abs(cell-.5),.44);\n vec2 hp=vec2((cell-.5)*1.2,(uv.y-by*.55)/by*1.6);float hole=smoothstep(.13,.11,length(hp*vec2(1.,1.)))+smoothstep(.05,.03,abs(hp.x))*step(abs(hp.y-.35),.25);\n float rail=step(uv.y,by)*board*(1.-clamp(hole,0.,1.));\n float top=smoothstep(by+.012,by+.008,uv.y)*step(by-.004,uv.y);\n vec3 wood=vec3(.07,.045,.035);\n col=mix(col,wood,max(rail,top));\n col+=vec3(1.,.6,.4)*.05*glow*top;\n col*=1.-.34*length((uv-vec2(.55,.6))*vec2(1.,1.2));\n gl_FragColor=vec4(col,1.);\n}\n";GS.TH=[0.25, 0.5, 0.75];GS.I18N={"en": {"n1": "The chalet", "n2": "A day here", "n3": "Guestbook", "hcta": "Book direct", "h1a": "Facing Mont Blanc,", "h1b": "dinner and breakfast", "h1c": "included, from €71 a day.", "lede": "Five guest rooms in a 170 m² chalet at 930 metres, less than five minutes from the gondolas and the 445 km of slopes of the Evasion Mont‑Blanc area. Jean-Luc and Naïma host you on half board: hearty dinners, fondue and raclette first, and breakfast in the morning. From €71 per adult per day in low season.", "c1": "Check availability", "scroll": "Scroll", "fh": "Book your stay direct.", "fl": "Pick your room, your dates and your party: the price shows per person, dinner and breakfast included, and your request goes straight to Jean-Luc and Naïma."}};GS.GLQ=0.85;</script>
+<script>
+(function(G){
+var $=function(i){return document.getElementById(i);};
+/* scène : une journée au chalet */
+var sun=$('sun'),cab=$('cab'),clock=$('clock'),wins=$('wins').children;
+G.CUT=function(c){var s=G.seg;
+ var a=Math.PI*(1-s(c,0,.85));sun.setAttribute('cx',380+310*Math.cos(a));sun.setAttribute('cy',330-230*Math.sin(a));sun.setAttribute('opacity',1-s(c,.66,.78));
+ $('skyDay').setAttribute('opacity',s(c,.05,.2)*(1-s(c,.5,.64)));$('skyDusk').setAttribute('opacity',s(c,.5,.62)*(1-s(c,.8,.92)));$('skyNight').setAttribute('opacity',s(c,.8,.94));
+ $('mbGlow').setAttribute('opacity',.85*s(c,.52,.64)*(1-s(c,.74,.84)));$('shade').setAttribute('opacity',.7*s(c,.74,.92));
+ var g=s(c,.25,.5);cab.setAttribute('transform','translate('+(470+220*g)+' '+(362-130*g)+')');
+ for(var i=0;i<wins.length;i++)wins[i].setAttribute('fill',(c<.16||c>.6+i*.03)?'#F3B49A':'#2a1f19');
+ $('steam').setAttribute('opacity',s(c,.8,.88));
+ clock.textContent=c<.25?'8 h':c<.5?'9 h':c<.75?'17 h':'19 h 30';};
+/* réservation directe */
+var f=$('est'),ad=2,en=0,bb=0,A=null,D=null,cm=new Date(2026,11,1),NOW=new Date();NOW.setHours(0,0,0,0);
+var OPEN=new Date(2026,11,1),CLOSE=new Date(2027,3,30);
+var R={rouge:['La Rouge',4],orange:["L'Orange",4],bleue:['La Bleue',3],multi:['Plusieurs chambres',10]};
+/* par adulte : jour [basse, moyenne, haute, très haute], semaine idem */
+var DAY=[71,75,80,80],WEEK=[469,485,499,515];
+function b(t,a,z){return t>=+a&&t<+z;}
+function season(d){var t=+d;
+ if(b(t,new Date(2026,11,19),new Date(2027,0,3)))return 4;
+ if(b(t,new Date(2027,1,6),new Date(2027,2,7)))return 3;
+ if(b(t,new Date(2027,0,3),new Date(2027,1,6))||b(t,new Date(2027,2,7),new Date(2027,3,4)))return 2;return 1;}
+function val(k){var e=f.querySelector('[name="'+k+'"]:checked');return e?e.value:null;}
+function nights(){return A&&D?Math.round((D-A)/864e5):0;}
+function price(){var n=nights(),tot=0;
+ if(!n)return{lo:DAY[0],hi:DAY[3],n:0};
+ for(var i=0;i<n;i++){var d=new Date(A.getFullYear(),A.getMonth(),A.getDate()+i),s=season(d)-1,r=n>=7?WEEK[s]/7:DAY[s];tot+=ad*r+en*r*.7+bb*20;}
+ return{tot:Math.round(tot),n:n};}
+function fmtD(d){return d.toLocaleDateString('fr-FR',{day:'numeric',month:'short'});}
+function covers(){var g=$('covers'),N=ad+en+bb,h='';for(var i=0;i<10;i++){var tb=i<5?0:1,k=i%5,x=(tb?250:120)+k*12.5,y=210+(k%2)*14;h+='<circle class="cv'+(i<N?'':' off')+'" cx="'+x+'" cy="'+y+'" r="4.5" fill="#F3B49A"/>';}g.innerHTML=h;
+ $('tc').textContent='Ce soir à table : '+N+' couvert'+(N>1?'s':'')+'.';}
+function update(){var rm=val('rm'),p=price();
+ document.querySelectorAll('#facade .rw').forEach(function(g){var on=rm==='multi'||g.dataset.r===rm;g.classList.toggle('on',on);g.querySelector('rect').setAttribute('fill',on?(g.dataset.r==='rouge'?'#d9665f':g.dataset.r==='orange'?'#f0a35e':'#7fa3d6'):'#2a1f19');});
+ covers();
+ var lp=$('liveP');
+ if(!p.n){G.tween(lp,p.lo,p.hi,function(x){return G.eur(x,1);});$('liveLab').textContent='Par adulte et par jour';$('liveSub').textContent='Dîner et petit-déjeuner compris, selon la saison.';}
+ else{G.tween(lp,p.tot,null,function(x){return G.eur(x,1);});$('liveLab').textContent=R[rm][0]+', '+p.n+' nuit'+(p.n>1?'s':'')+' · '+fmtD(A)+' – '+fmtD(D);$('liveSub').textContent=(p.n>=7?'Tarif à la semaine, ':'')+'dîner et petit-déjeuner compris pour '+(ad+en+bb)+' personne'+(ad+en+bb>1?'s':'')+'.';}
+ var cap=R[rm][1];$('pHint').textContent=ad+en+bb>cap?(rm==='multi'?'Le chalet accueille 10 personnes au maximum.':'Pour un groupe de cette taille, choisissez « Plusieurs chambres ».'):'';
+ $('adO').textContent=ad;$('enO').textContent=en;$('bbO').textContent=bb;
+ var hs=[rm,A?A.toISOString().slice(0,10):'',D?D.toISOString().slice(0,10):'',ad,en,bb].join('~');try{history.replaceState(null,'','#sejour='+hs);}catch(e){}}
+document.querySelectorAll('.stepper button').forEach(function(bt){bt.onclick=function(){var d=+bt.dataset.d;if(bt.dataset.k==='ad')ad=Math.max(1,Math.min(10,ad+d));else if(bt.dataset.k==='en')en=Math.max(0,Math.min(8,en+d));else bb=Math.max(0,Math.min(3,bb+d));update();};});
+var DW=['L','M','M','J','V','S','D'];
+function cal(){$('cMonth').textContent=cm.toLocaleDateString('fr-FR',{month:'long',year:'numeric'});var h=DW.map(function(x){return '<span class="dw">'+x+'</span>';}).join(''),first=(cm.getDay()+6)%7,days=new Date(cm.getFullYear(),cm.getMonth()+1,0).getDate();
+ for(var i=0;i<first;i++)h+='<span></span>';
+ for(var j=1;j<=days;j++){var d=new Date(cm.getFullYear(),cm.getMonth(),j),cl='s'+season(d);if(A&&+d===+A||D&&+d===+D)cl+=' end';else if(A&&D&&d>A&&d<D)cl+=' in';
+  h+='<button type="button" data-d="'+j+'" class="'+cl+'"'+((d<NOW||d<OPEN||d>CLOSE)?' disabled':'')+'>'+j+'</button>';}
+ $('cGrid').innerHTML=h;$('cPrev').disabled=cm<=new Date(2026,11,1);$('cNext').disabled=cm>=new Date(2027,3,1);}
+$('cGrid').addEventListener('click',function(e){var bt=e.target.closest('button');if(!bt||bt.disabled)return;var d=new Date(cm.getFullYear(),cm.getMonth(),+bt.dataset.d);
+ if(!A||D||d<=A){A=d;D=null;$('dHint').textContent='Et votre jour de départ ?';}else{D=d;var n=nights();$('dHint').textContent=n+' nuit'+(n>1?'s':'')+(n>=7?', au tarif de la semaine.':'.');setTimeout(function(){if(st.cur()===1)st.go(2);},800);}
+ cal();update();});
+$('cPrev').onclick=function(){cm=new Date(cm.getFullYear(),cm.getMonth()-1,1);cal();};$('cNext').onclick=function(){cm=new Date(cm.getFullYear(),cm.getMonth()+1,1);cal();};
+function recap(){var rm=val('rm'),p=price(),L=[['Chambre',R[rm][0]],['Arrivée',A?A.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}):'à définir'],['Départ',D?D.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}):'à définir'],['Voyageurs',ad+' adulte'+(ad>1?'s':'')+(en?', '+en+' enfant'+(en>1?'s':''):'')+(bb?', '+bb+' bébé'+(bb>1?'s':''):'')],
+ ['Prix',p.n?G.eur(p.tot,1)+', dîners et petits-déjeuners compris':'selon vos dates']];
+ $('recap').innerHTML=L.map(function(r){return '<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('')+'<li><span>En direct</span>vous échangez avec Jean-Luc et Naïma, sans intermédiaire</li>';return L;}
+var st=G.stepper(f,{chips:'chips',update:update,recap:recap,nextTxt:'Continuer',seeTxt:'Voir mon séjour',sendTxt:'Envoyer',canNext:function(i){if(i===1&&!(A&&D)){$('dHint').textContent="Choisissez d'abord vos dates dans le calendrier.";return false;}return true;},onStep:function(i){if(i===1)cal();}});
+(function(){var m=location.hash.match(/sejour=([^&]+)/);if(!m)return;var p=decodeURIComponent(m[1]).split('~');var e=f.querySelector('[name="rm"][value="'+p[0]+'"]');if(e)e.checked=true;function pd(s){if(!s)return null;var q=s.split('-');return new Date(+q[0],+q[1]-1,+q[2]);}A=pd(p[1]);D=pd(p[2]);if(A)cm=new Date(A.getFullYear(),A.getMonth(),1);ad=+p[3]||2;en=+p[4]||0;bb=+p[5]||0;update();})();
+$('waBtn').addEventListener('click',function(){var L=recap(),txt='Bonjour Jean-Luc et Naïma, voici ma demande de séjour :\n'+L.map(function(r){return '- '+r[0]+' : '+r[1];}).join('\n')+'\nNom : '+$('n').value+'\n'+location.href;this.href='https://wa.me/33609494370?text='+encodeURIComponent(txt);});
+G.copy($('copyBtn'),'copied');
+/* le Mont-Blanc se voit-il ? (open-meteo, repli silencieux) */
+fetch('https://api.open-meteo.com/v1/forecast?latitude=45.892&longitude=6.712&elevation=930&current=temperature_2m,snow_depth,cloud_cover&timezone=Europe%2FParis').then(function(r){return r.json();}).then(function(j){if(!j||!j.current)return;var c=j.current,cc=c.cloud_cover;
+ var sky=cc<35?'ciel dégagé, le Mont-Blanc se montre':cc<70?'quelques nuages autour du Mont-Blanc':'le Mont-Blanc est dans les nuages';
+ $('snowTxt').textContent=Math.round(c.temperature_2m)+' °C, '+sky+(c.snow_depth>0.01?', '+Math.round(c.snow_depth*100)+' cm de neige au sol':'')+'.';$('snow').hidden=false;}).catch(function(){});
+
+})(window.GS);
+</script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,G=window.GS;
+var lenis=null;if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});}
+G.lenis=lenis;
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+/* Ouverture WebGL */
+var cv=document.getElementById('herogl'),gl=null;try{gl=cv.getContext('webgl',{antialias:false,alpha:false,preserveDrawingBuffer:false});}catch(e){}
+var heroVisible=true,t0=performance.now();
+function nogl(){document.documentElement.classList.add('nogl');cv.style.display='none';}
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.error(gl.getShaderInfoLog(o));return null;}return o;}
+ var a=sh(gl.VERTEX_SHADER,vs),b=sh(gl.FRAGMENT_SHADER,'precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;'+G.FS);
+ if(!a||!b){nogl();}else{
+ var pr=gl.createProgram();gl.attachShader(pr,a);gl.attachShader(pr,b);gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.5,my=.5,tx=.5,ty=.5;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5)*(G.GLQ||.75);cv.width=Math.max(2,cv.clientWidth*d|0);cv.height=Math.max(2,cv.clientHeight*d|0);gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ G.drawHero=function(now){if(!heroVisible)return;mx+=(tx-mx)*.05;my+=(ty-my)*.05;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?12.:(now-t0)/1000+12.);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ G.drawHero(t0);}
+}else nogl();
+/* Titre : chaque ligne tient sur une ligne, quelle que soit la police */
+var h1=document.querySelector('.hero h1');G.fit=function(){h1.style.fontSize='';var w=h1.clientWidth,mx=0;h1.querySelectorAll('.ln span').forEach(function(s){mx=Math.max(mx,s.offsetWidth);});if(mx>w){h1.style.fontSize=(parseFloat(getComputedStyle(h1).fontSize)*w/mx*.97)+'px';}};
+G.fit();addEventListener('resize',G.fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(G.fit);
+/* Scènes */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+G.prog=prog;G.ease=ease;G.seg=seg;
+var hdr=document.getElementById('hdr'),proofB=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=document.getElementById('rv'),rvImg=rv.querySelector('img');
+var cutS=document.querySelector('.cut'),live=document.querySelectorAll('#live li'),meter=document.getElementById('meter');
+var gS=document.querySelector('.hgal'),track=document.getElementById('track'),gImgs=track.querySelectorAll('img'),gc=document.getElementById('gcount'),gN=gImgs.length;
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+function count(b){var to=+b.dataset.to,dec=+b.dataset.dec||0,suf=b.dataset.suf||'',st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1400));b.textContent=(to*k).toLocaleString(document.documentElement.lang==='en'?'en-GB':'fr-FR',{minimumFractionDigits:dec,maximumFractionDigits:dec})+suf;if(k<1)requestAnimationFrame(tick);})(st);}
+G.count=count;
+function scenes(now){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proofB.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*24+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.45){factsDone=true;facts.forEach(count);}
+ var c=prog(cutS);if(G.CUT)G.CUT(c,now);
+ var th=G.TH||[.25,.5,.75],st=0;th.forEach(function(x){if(c>=x)st++;});live.forEach(function(li,i){li.classList.toggle('on',i===st);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(20,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ var k=Math.min(gN,1+Math.floor(g*gN));gc.textContent=(k<10?'0':'')+k+' / '+(gN<10?'0':'')+gN;
+}
+function loop(now){if(lenis)lenis.raf(now);if(G.drawHero&&!RM)G.drawHero(now);for(var i=0;i<G.hooks.length;i++)G.hooks[i](now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+if(RM){facts.forEach(function(b){b.textContent=(+b.dataset.to).toLocaleString('fr-FR',{minimumFractionDigits:+b.dataset.dec||0})+(b.dataset.suf||'');});if(G.CUT)G.CUT(1,0);}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);if(x.target.dataset.stars)fillStars(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+function fillStars(el){var s=el.querySelector('.stars.fill'),to=+el.dataset.stars,sc=el.querySelector('[data-to]');if(sc)count(sc);if(!s)return;var st=performance.now();(function tk(n){var k=ease(Math.min(1,(n-st)/1600));s.style.setProperty('--p',(to/5*100*k)+'%');if(k<1)requestAnimationFrame(tk);})(st);}
+/* Lettre mensuelle (démonstration) */
+var nf=document.getElementById('nlf');if(nf)nf.addEventListener('submit',function(e){e.preventDefault();var ok=document.getElementById('nlok');ok.hidden=false;nf.querySelector('.nl-row').hidden=true;});
+/* Langues */
+var L=G.I18N||{},fr={};document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.innerHTML;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){var v=(L[l]||{})[e.dataset.i];e.innerHTML=v!=null?v:fr[e.dataset.i];});if(G.onLang)G.onLang(l);G.fit();};});
+})();
+</script>
+</body>
+</html>

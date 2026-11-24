@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chalets Berthet — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF0F3;--ink:#141922;--soft:#545C6B;--line:#D2D7DF;--deep:#0D1524;--deep2:#172137;--acc:#C25D1C;--onacc:#fff;--acc2:#F2B064;--ondeep:#E2E6EE;--ondeep2:#9EA8BC;--card:#FAFBFC;--stud:#E1E5EC;--sline:#C1C8D4;--star:#D9963A;--phbg:#C9CFDA;--glass:rgba(13,21,36,.36);--glass2:rgba(250,251,252,.84);--herot:#D3D9E6;--mbar:rgba(13,21,36,.93);--d:"Instrument Serif",Georgia,serif;--t:"Manrope",system-ui,sans-serif;--dw:400;--ls:-.01em;--h1:clamp(2.4rem,6vw,6.2rem);--h1m:clamp(1.8rem,9vw,2.6rem)}
+
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--t);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--acc);background:var(--acc);color:var(--onacc);cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),filter .2s;line-height:1.2;text-align:center}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);margin:0;font-weight:var(--dw,700)}
+h2{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.04;max-width:18ch;letter-spacing:var(--ls,-.02em)}
+.lede{color:var(--soft);max-width:38rem}
+[hidden]{display:none!important}
+.proof{position:relative;z-index:40;background:#000;color:#d4d7d6;font-family:var(--d);font-size:.8rem;font-weight:400}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:top .3s}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:var(--glass);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:var(--glass2);color:var(--ink);border-color:rgba(0,0,0,.08)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;min-width:0}
+.lmark{width:28px;height:28px;flex:none}
+.bname{font-family:var(--d);font-weight:var(--bw,700);font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap}
+.hnav{display:flex;align-items:center;gap:1.3rem;font-family:var(--d);font-size:.9rem;font-weight:500}
+.hnav a{text-decoration:none}.hnav a.nl{opacity:.85}
+header.site .btn{padding:.6rem 1.1rem}
+.lang{display:flex;gap:.15rem}.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero .fallback{position:absolute;inset:0;background:var(--deep);display:none}
+.hero .fallback img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.nogl .hero .fallback{display:block}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-size:var(--h1,clamp(2rem,5.2vw,5.2rem));line-height:1.02;letter-spacing:var(--ls,-.02em)}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.04em}
+.hero h1 .ln span{display:inline-block;transform:translateY(108%);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.09s}.hero h1 .ln:nth-child(3) span{transition-delay:.18s}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .55s,transform 1s .55s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:var(--herot);margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.scrollhint{position:absolute;right:1.25rem;bottom:1.25rem;z-index:2;font-family:var(--d);font-size:.75rem;color:var(--herot);opacity:.7;writing-mode:vertical-rl}
+@media(max-width:600px){.hero h1{font-size:var(--h1m,clamp(1.45rem,6.4vw,2.3rem))}.hero-inner{padding-bottom:6.5rem}.hero-ctas .ghost{display:none}}
+.reveal{height:220vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:var(--deep2)}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55))}
+.reveal .cap{position:absolute;left:clamp(1.25rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);color:#fff;font-family:var(--d);z-index:2;max-width:28rem}
+.reveal .cap b{display:block;font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.08;margin-bottom:.4rem}
+.reveal .cap span{font-size:.9rem;opacity:.85}
+.facts{position:absolute;top:clamp(6rem,15vh,9rem);right:clamp(1.25rem,4vw,3rem);z-index:2;display:grid;gap:1.2rem;color:#fff;font-family:var(--d);text-align:right}
+.facts b{display:block;font-size:clamp(1.8rem,3.4vw,2.8rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;opacity:.85}
+.cut{height:340vh;position:relative;background:var(--deep);color:var(--ondeep)}
+.cut .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.cut-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.cut h2{color:#fff;margin-bottom:1rem}
+.cut .lede{color:var(--ondeep2);margin:0 0 2rem}
+.cut svg{width:100%;height:auto;overflow:visible}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps-live li{border-left:2px solid rgba(255,255,255,.16);padding:.2rem 0 .2rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--acc2)}
+.steps-live b{display:block;font-family:var(--d);color:#fff;font-weight:600}
+.steps-live span{font-size:.96rem;color:var(--ondeep2)}
+.meter{height:2px;background:rgba(255,255,255,.14);margin-top:2rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--acc2);transform-origin:left;transform:scaleX(0)}
+.hgal{height:360vh;position:relative;background:var(--bg)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(62vw,720px);margin:0}
+.card .ph{height:min(58vh,520px);overflow:hidden;border-radius:var(--r,4px);background:var(--phbg)}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{font-family:var(--d);margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-weight:600}.card figcaption span{color:var(--soft);font-size:.9rem;white-space:nowrap}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--d);font-weight:700;font-size:1.1rem;font-variant-numeric:tabular-nums}
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;counter-reset:s;margin:3rem 0 0;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:1rem}
+.steps li::before{content:counter(s);font-family:var(--d);font-weight:700;font-size:2.6rem;line-height:1;color:var(--acc);display:block;margin-bottom:.8rem}
+.steps h3{font-size:1.08rem;margin-bottom:.4rem}.steps p{margin:0;color:var(--soft);font-size:.98rem}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+.feat{background:var(--deep);color:var(--ondeep);position:relative;overflow:hidden}
+.feat h2{color:#fff}.feat .lede{color:var(--ondeep2)}
+.cfg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.2rem;overflow:hidden}
+.preview svg{width:100%;height:auto;display:block}
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.25rem,3vw,2rem)}
+fieldset{border:0;margin:0;padding:0}legend{font-family:var(--d);font-weight:600;font-size:1.25rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem .95rem;cursor:pointer;font-family:var(--d);font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:var(--ondeep2);font-size:.8rem;margin-top:.2rem;font-family:var(--t)}
+.choice input:checked+label{border-color:var(--acc2);background:rgba(255,255,255,.07)}
+.choice input:focus-visible+label{outline:3px solid var(--acc2);outline-offset:2px}
+.step-anim{animation:stepin .55s cubic-bezier(.16,1,.3,1)}@keyframes stepin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-family:var(--d);font-size:.88rem}
+.field input,.field select{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.06);color:#fff}
+.note{font-size:.85rem;color:var(--ondeep2);opacity:.85;margin-top:1rem}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem;font-family:var(--d)}
+.live span{font-size:.8rem;color:var(--ondeep2)}.live b{display:block;white-space:nowrap;font-size:clamp(1.15rem,2vw,1.6rem);color:#fff;font-variant-numeric:tabular-nums}
+.live small{font-size:.8rem;color:var(--ondeep2);text-align:right;max-width:15rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:var(--ondeep2);padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--acc2);color:var(--deep);border-color:var(--acc2)}
+.chips button.done{color:#fff;border-color:rgba(255,255,255,.45)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.85rem;color:var(--ondeep2);margin:-.4rem 0 1rem}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-family:var(--d);font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:var(--ondeep2)}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.btn.wa{background:#1F9D57;border-color:#1F9D57;color:#fff}
+.copied{font-family:var(--d);font-size:.82rem;color:var(--acc2);align-self:center;word-break:break-all}
+.done-msg{font-family:var(--d);font-size:1.5rem;color:#fff;line-height:1.2}
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.score{font-family:var(--d);font-weight:700;font-size:4.4rem;line-height:1;font-variant-numeric:tabular-nums}.score small{display:block;font-size:.85rem;font-weight:400;color:var(--soft);margin-top:.4rem}
+.stars{color:var(--star);letter-spacing:.08em;position:relative;display:inline-block}
+.stars.fill{background:linear-gradient(90deg,var(--star) var(--p,0%),var(--line) var(--p,0%));-webkit-background-clip:text;background-clip:text;color:transparent;transition:--p 1.4s}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 52s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--card);border:1px solid var(--line);border-radius:var(--r2,14px);padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-size:1.04rem;line-height:1.5}.rcard figcaption{font-family:var(--d);font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--acc),var(--acc)) center/14px 2px no-repeat,linear-gradient(var(--acc),var(--acc)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-top:5rem}
+.bigtel{font-family:var(--d);font-weight:700;font-size:clamp(2rem,4.6vw,3.6rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-family:var(--d);font-size:.85rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:grid;gap:.4rem;max-width:26rem}.nl-form label{color:var(--ink);font-weight:600}
+.nl-row{display:flex;gap:.4rem}.nl-row input{flex:1;min-width:0;font:inherit;padding:.6rem .8rem;border:1.5px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink)}
+.nl-row .btn{padding:.6rem 1rem}
+.nl-ok{color:var(--acc);font-weight:600}
+.studio{background:var(--stud);border-top:6px solid var(--acc);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid var(--sline)}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid var(--sline)}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid var(--sline)}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid var(--sline)}.addons b{font-weight:600;font-family:var(--d)}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums;font-family:var(--d)}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--card);border:1px solid var(--sline);border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:var(--ondeep);border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--acc);font-weight:600}.offer.rec .tag{color:var(--acc2)}
+.offer h3{font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .cut-grid,.cfg,.contact,.rx-head,.faq{grid-template-columns:1fr}.rx-head,.faq{gap:1.5rem}
+ .cut{height:300vh}.cut h2{font-size:1.8rem}.cut .lede{display:none}
+ .preview{position:relative;top:0}
+ .steps{grid-template-columns:1fr 1fr}.offers{grid-template-columns:1fr}
+ .card{width:82vw}.facts{top:auto;bottom:8rem}
+}
+@media (max-width:600px){
+ header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}.bname{font-size:.95rem}.lmark{width:24px;height:24px}
+ .hnav .btn{display:none}.steps,.choices{grid-template-columns:1fr}.audit li{grid-template-columns:1fr;gap:.5rem}
+ .steps-live li:not(.on){display:none}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:var(--mbar);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+ .score{font-size:3.4rem}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.cut,.hgal{height:auto}.reveal .stick,.cut .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .mq-track{animation:none;flex-wrap:wrap;width:auto}
+}
+
+
+.bname{font-weight:600;font-size:1.12rem}
+.stepper{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;font-family:var(--d)}
+.stepper button{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);background:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.stepper output{font-size:2.2rem;font-weight:600;min-width:2ch;text-align:center;color:#fff;font-variant-numeric:tabular-nums}
+.stepper span{color:var(--ondeep2);font-family:var(--t)}
+.cal{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.8rem}
+.cal-h{display:flex;justify-content:space-between;align-items:center;font-family:var(--d);margin-bottom:.6rem}.cal-h b{color:#fff;font-size:1.1rem;font-weight:600}
+.cal-h button{background:none;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:1.1rem}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;font-family:var(--t);font-size:.85rem;text-align:center}
+.cal-g .dw{color:var(--ondeep2);font-size:.72rem;padding:.2rem 0}
+.cal-g button{aspect-ratio:1;border:0;border-radius:8px;color:#fff;cursor:pointer;font:inherit;background:rgba(255,255,255,.05);border-bottom:3px solid transparent}
+.cal-g button.s1{border-bottom-color:#5d8c84}.cal-g button.s2{border-bottom-color:#c9a36b}.cal-g button.s3{border-bottom-color:#e07a4f}
+.cal-g button.in{background:rgba(233,195,143,.22)}.cal-g button.end{background:var(--acc2);color:var(--deep);font-weight:700}
+.cal-g button:disabled{opacity:.22;cursor:default}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.75rem;color:var(--ondeep2);margin-top:.6rem}.legend i{display:inline-block;width:14px;height:3px;margin-right:.35rem;vertical-align:middle}
+.legend .s1{background:#5d8c84}.legend .s2{background:#c9a36b}.legend .s3{background:#e07a4f}
+.hero{height:calc(100svh - 34px)}.count{white-space:nowrap}.faq summary{font-family:var(--t);font-weight:600;font-size:1.02rem}
+@media(max-width:600px){.proof{font-size:.74rem}.proof .wrap{flex-wrap:nowrap;white-space:nowrap}.hero{height:calc(100svh - 34px);min-height:560px}}
+@media(max-width:600px){.live{flex-direction:column;align-items:flex-start;gap:.3rem}.live small{text-align:left;max-width:none}}
+
+.btn,.chips button,.choice label,.field label,.recap,.hnav,.proof,.card figcaption,.count,.live,.stepper,.cal-h,.rcard figcaption,footer.site,.offer .tag,.offer .alt,.audit b,.addons b,.addons span,.steps-live b,.cmp{font-family:var(--t)}
+.btn{font-weight:700;letter-spacing:.005em}
+.hero h1,h2,.done-msg,.score,.bigtel,.facts b,.reveal .cap b,.offer h3,.offer .price,legend{font-family:var(--d);font-weight:400}
+.hero h1{letter-spacing:-.015em}h2{line-height:1.02}
+.facts b,.score,.offer .price,.bigtel{font-variant-numeric:lining-nums}
+.bname{font-family:var(--d);font-weight:400;font-size:1.28rem;letter-spacing:0}
+.choice label{font-weight:600}.steps-live b{font-weight:700}
+.live b{font-family:var(--d);font-weight:400;font-size:clamp(1.5rem,2.6vw,2.1rem)}
+#facade .ch{transition:opacity .5s}#facade .ch.dim{opacity:.32}
+#facade .gl{transition:fill .5s}#facade .ch.on .gl{fill:#F2B064}
+#facade text{font-family:Manrope,sans-serif;font-size:11px;font-weight:700;fill:#E2E6EE}
+#facade #skiTag{transition:opacity .4s}
+.snowlive{margin-top:1rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.8rem}.snowlive span{display:block;font-size:.8rem;color:var(--ondeep2)}.snowlive b{color:#fff;font-weight:600}
+.cmp{display:grid;gap:.15rem;font-size:.84rem;color:var(--acc2);margin:.9rem 0 0;border-top:1px solid rgba(255,255,255,.1);padding-top:.7rem}.cmp em{font-style:normal;color:var(--ondeep2)}
+.opt{display:flex;gap:.8rem;align-items:flex-start;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem .95rem;margin-bottom:.6rem;cursor:pointer}
+.opt input{margin-top:.25rem;accent-color:var(--acc2);width:18px;height:18px;flex:none}.opt b{display:block;font-weight:600}.opt small{display:block;color:var(--ondeep2);font-size:.8rem}
+.opt:has(input:checked){border-color:var(--acc2);background:rgba(255,255,255,.07)}
+.score small{font-family:var(--t)}
+@media(max-width:600px){.hero-ctas{display:none}}
+
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour les Chalets Berthet par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée, Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Chalets Berthet, accueil"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><path d="M2.5 26 L16 4.5 L29.5 26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M10.5 26 L16 17 L21.5 26 Z" fill="#F2B064"/><path d="M16 17 V26" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 26 H26.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span class="bname">Chalets Berthet</span></a>
+ <nav class="hnav" aria-label="Navigation"><a class="nl" href="#chalet" data-i="n1">Les chalets</a><a class="nl" href="#journee" data-i="n2">Une journée</a><a class="nl" href="#avis" data-i="n3">Avis</a><div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button></div><a class="btn" href="#reserver" data-i="hcta">Réserver en direct</a></nav>
+</div></header>
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="herogl" aria-hidden="true"></canvas>
+ <div class="fallback" aria-hidden="true"><img src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/Nuit.jpg" alt="" onerror="this.style.visibility='hidden'"></div>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">Les pistes des Gets</span></span><span class="ln"><span data-i="h1b">devant la porte.</span></span><span class="ln"><span data-i="h1c">Noté 5,0 sur Airbnb.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Deux chalets de 125 et 135 m² pour 8 et 12 personnes, avec sauna, poêle à bois et séjour cathédrale sur deux niveaux. Sylvie et Christian Berthet vous accueillent à 1 172 mètres, au cœur des Portes du Soleil, et vos skis sont livrés au pied des pistes.</p>
+   <div class="hero-ctas"><a class="btn" href="#reserver" data-i="c1">Voir les disponibilités</a><a class="btn ghost" href="tel:+33608943908">06 08 94 39 08</a></div>
+  </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true" data-i="scroll">Défiler</div>
+</section>
+<section class="reveal" id="chalet" aria-label="Le séjour cathédrale, sur deux niveaux">
+ <div class="stick">
+  <figure id="rv"><img src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/Salon.jpg" alt="Le séjour du chalet Grand Canyon 1, au coin du feu" onerror="this.style.visibility='hidden'"><div class="shade"></div></figure>
+  <div class="cap"><b>Le séjour cathédrale, sur deux niveaux, au coin du feu.</b><span>Grand Canyon 1, Les Gets</span></div>
+  <div class="facts" id="facts"><div><b data-to="135" data-suf=" m²">0</b><span>pour le Grand Canyon 1</span></div><div><b data-to="12" data-suf="">0</b><span>personnes, 4 chambres, 4 salles de bains</span></div><div><b data-to="5" data-dec="1" data-suf="/5">0</b><span>13 commentaires Airbnb, coup de cœur voyageurs</span></div></div>
+ </div>
+</section>
+<section class="cut" id="journee" aria-label="Une journée au Grand Canyon">
+ <div class="stick"><div class="wrap cut-grid">
+  <svg viewBox="0 0 760 420" role="img" aria-label="Une journée au chalet, du petit-déjeuner au poêle à bois">
+ <defs><clipPath id="win"><rect x="0" y="0" width="760" height="420" rx="14"/></clipPath></defs>
+ <g clip-path="url(#win)">
+ <rect width="760" height="420" fill="#1d3550"/>
+ <rect id="skyDay" width="760" height="420" fill="#7ea6c8" opacity="0"/>
+ <rect id="skyDusk" width="760" height="420" fill="#6c5a78" opacity="0"/>
+ <rect id="skyNight" width="760" height="420" fill="#0a1222" opacity="0"/>
+ <g id="stars" fill="#fff" opacity="0"><circle cx="60" cy="40" r="1.3"/><circle cx="140" cy="76" r="1"/><circle cx="230" cy="30" r="1.4"/><circle cx="330" cy="64" r="1"/><circle cx="420" cy="22" r="1.2"/><circle cx="500" cy="58" r="1"/><circle cx="600" cy="34" r="1.3"/><circle cx="690" cy="80" r="1"/></g>
+ <circle id="sun" cx="80" cy="330" r="22" fill="#f8dba6"/>
+ <path d="M0 250 L90 170 L160 205 L250 120 L330 180 L420 95 L520 165 L610 110 L700 170 L760 140 L760 420 L0 420 Z" fill="#dbe4ec"/>
+ <path d="M0 250 L90 170 L160 205 L250 120 L330 180 L420 95 L520 165 L610 110 L700 170 L760 140" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/>
+ <path id="piste" d="M640 128 C 610 190, 690 220, 610 262 S 520 310, 470 352" fill="none" stroke="#f7fafc" stroke-width="26" stroke-linecap="round" opacity=".95"/>
+ <path d="M640 128 C 610 190, 690 220, 610 262 S 520 310, 470 352" fill="none" stroke="#c9d6e2" stroke-width="1.2" stroke-dasharray="3 7"/>
+ <path id="shade" d="M0 250 L90 170 L160 205 L250 120 L330 180 L420 95 L520 165 L610 110 L700 170 L760 140 L760 420 L0 420 Z" fill="#0c1a2c" opacity="0"/>
+ <rect x="0" y="352" width="760" height="68" fill="#eef3f7"/>
+ <g id="skier" opacity="0"><circle cx="0" cy="-17" r="3.2" fill="#C25D1C"/><path d="M0 -14 L-2 -5 L3 0" fill="none" stroke="#172137" stroke-width="2.4" stroke-linecap="round"/><path d="M-9 2 L10 -1" stroke="#172137" stroke-width="1.8" stroke-linecap="round"/></g>
+ <g id="chalet">
+  <rect x="110" y="250" width="250" height="102" fill="#4a3427"/>
+  <rect x="300" y="160" width="16" height="40" fill="#2a1d16"/>
+  <path d="M90 256 L235 128 L380 256 Z" fill="#2a1d16"/>
+  <path d="M84 259 L235 124 L386 259" fill="none" stroke="#f4f7fa" stroke-width="7" stroke-linejoin="round"/>
+  <path id="glaze" d="M178 250 L235 172 L292 250 Z" fill="#1b2433"/>
+  <g stroke="#2a1d16" stroke-width="2.5"><line x1="235" y1="172" x2="235" y2="250"/><line x1="200" y1="220" x2="270" y2="220"/></g>
+  <rect id="fire" x="222" y="232" width="26" height="16" rx="3" fill="#F2B064" opacity="0"/>
+  <g id="wins" fill="#1b2433"><rect x="128" y="280" width="24" height="30"/><rect x="166" y="280" width="24" height="30"/><rect x="282" y="280" width="24" height="30"/><rect x="320" y="280" width="24" height="30"/></g>
+  <rect x="222" y="292" width="26" height="60" fill="#2a1d16"/>
+  <g id="smoke" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0"><path d="M308 150 c-7 -10 7 -16 0 -26 s7 -16 0 -26"/></g>
+  <rect x="396" y="318" width="62" height="34" fill="#5b4131"/><path d="M390 320 L427 298 L464 320" fill="none" stroke="#f4f7fa" stroke-width="5" stroke-linejoin="round"/>
+  <rect id="saunaW" x="418" y="328" width="18" height="14" fill="#1b2433"/>
+  <g id="steam" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0"><path d="M416 296 c-6 -9 6 -14 0 -23 s6 -14 0 -23"/><path d="M438 298 c-6 -9 6 -14 0 -23 s6 -14 0 -23"/></g>
+ </g>
+ <text id="clock" x="720" y="60" text-anchor="end" font-family="Instrument Serif, Georgia, serif" font-size="48" fill="#fff">8 h</text>
+ </g>
+</svg>
+  <div>
+   <h2>Une journée au Grand Canyon.</h2>
+   <p class="lede">Du petit-déjeuner dans la cuisine ouverte au poêle à bois du soir : aux Gets, tout se fait à pied ou à skis.</p>
+   <ol class="steps-live" id="live"><li><b>8 h, petit-déjeuner</b><span>Cuisine contemporaine et grande table, face aux montagnes.</span></li><li><b>9 h, sur les pistes</b><span>Les pistes des Portes du Soleil au bout du chemin, vos skis livrés au pied des pistes.</span></li><li><b>16 h 30, le sauna</b><span>Un sauna traditionnel dans chaque chalet, et le local à skis au retour.</span></li><li><b>20 h, au coin du feu</b><span>Le séjour cathédrale s'allume, le poêle à bois aussi.</span></li></ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
+<section class="hgal" id="galerie" aria-label="Galerie">
+ <div class="stick">
+  <div class="wrap head"><h2>Chaque pièce, à votre rythme.</h2><span class="count" id="gcount">01 / 08</span></div>
+  <div class="track" id="track"><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/ChaletsBerthet_ext1.jpg" alt="Le chalet Grand Canyon sous la neige" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le chalet sous la neige</b><span>1 172 m, Les Gets</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/Escaliers.jpg" alt="Le séjour cathédrale et l'escalier" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le séjour cathédrale</b><span>Sur deux niveaux</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/Cuisine.jpg" alt="La cuisine contemporaine" onerror="this.style.visibility='hidden'"></div><figcaption><b>La cuisine</b><span>Ouverte sur le séjour</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/Table.jpg" alt="La salle à manger" onerror="this.style.visibility='hidden'"></div><figcaption><b>La grande table</b><span>Douze couverts</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/Chambre-2.jpg" alt="Une chambre du Grand Canyon 1" onerror="this.style.visibility='hidden'"></div><figcaption><b>Les chambres</b><span>2 doubles, 2 familiales</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/Sauna.jpg" alt="Le sauna traditionnel" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le sauna</b><span>Après la dernière piste</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/ChaletsBerthet_ext4.jpg" alt="Le chalet Grand Canyon 2" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le Grand Canyon 2</b><span>125 m², 8 personnes</span></figcaption></figure><figure class="card"><div class="ph"><img loading="lazy" src="https://www.chalets-berthet.com/wp-content/uploads/2019/03/Nuit.jpg" alt="Le chalet éclairé, la nuit" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le soir venu</b><span>Portes du Soleil</span></figcaption></figure></div>
+ </div>
+</section>
+<section class="pad feat" id="reserver"><div class="wrap">
+ <h2 data-i="fh">Réservez votre chalet en direct.</h2>
+ <p class="lede" style="margin-top:1rem" data-i="fl">Choisissez votre chalet, vos dates et votre groupe : le prix s'affiche pour votre séjour exact, et votre demande arrive directement chez Sylvie et Christian.</p>
+ <div class="cfg">
+  <div class="preview">
+   <svg viewBox="0 0 420 300" aria-hidden="true" id="facade">
+    <rect width="420" height="300" rx="10" fill="#0a1222"/>
+    <g fill="#fff" opacity=".7"><circle cx="40" cy="30" r="1.2"/><circle cx="120" cy="54" r="1"/><circle cx="210" cy="22" r="1.3"/><circle cx="300" cy="48" r="1"/><circle cx="380" cy="28" r="1.2"/></g>
+    <path d="M0 200 L70 130 L130 160 L200 92 L270 150 L330 110 L420 160 L420 300 L0 300 Z" fill="#172137"/>
+    <path d="M330 112 C 316 160, 360 190, 300 232" fill="none" stroke="#dfe7ee" stroke-width="12" stroke-linecap="round" opacity=".55"/>
+    <rect x="0" y="252" width="420" height="48" fill="#dfe7ee"/>
+    <g class="ch" data-c="gc1"><rect x="40" y="176" width="170" height="76" fill="#4a3427"/><path d="M26 180 L125 92 L224 180 Z" fill="#2a1d16"/><path d="M22 182 L125 89 L228 182" fill="none" stroke="#eef3f7" stroke-width="5" stroke-linejoin="round"/><path class="gl" d="M92 176 L125 130 L158 176 Z" fill="#1b2433"/><rect class="gl" x="56" y="200" width="18" height="22" fill="#1b2433"/><rect class="gl" x="176" y="200" width="18" height="22" fill="#1b2433"/><text x="125" y="244" text-anchor="middle">Grand Canyon 1</text></g>
+    <g class="ch" data-c="gc2"><rect x="250" y="192" width="134" height="60" fill="#5b4131"/><path d="M238 196 L317 126 L396 196 Z" fill="#2a1d16"/><path d="M234 198 L317 123 L400 198" fill="none" stroke="#eef3f7" stroke-width="5" stroke-linejoin="round"/><path class="gl" d="M292 192 L317 158 L342 192 Z" fill="#1b2433"/><rect class="gl" x="262" y="208" width="16" height="18" fill="#1b2433"/><rect class="gl" x="356" y="208" width="16" height="18" fill="#1b2433"/><text x="317" y="244" text-anchor="middle">Grand Canyon 2</text></g>
+    <g id="skiTag" opacity="0" transform="translate(300 272)"><path d="M-30 6 L30 -4 M-30 12 L30 2" stroke="#C25D1C" stroke-width="3" stroke-linecap="round"/><text x="0" y="-12" text-anchor="middle" style="fill:#172137">Skis livrés</text></g>
+   </svg>
+   <div class="live"><div><span id="liveLab">Votre séjour</span><b id="liveP">—</b></div><small id="liveSub">Sauna et wifi compris.</small></div>
+   <div class="cmp" id="cmp" hidden></div>
+   <div class="snowlive" id="snow" hidden><span>Aux Gets en ce moment</span><b id="snowTxt"></b></div>
+  </div>
+  <div class="panel" aria-live="polite">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <fieldset data-s data-n="Chalet"><legend>Quel chalet ?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="ch" id="c1" value="gc1" checked><label for="c1">Grand Canyon 1<small>Jusqu'à 12 personnes, 135 m², 4 chambres, 4 salles de bains</small></label></div>
+     <div class="choice"><input type="radio" name="ch" id="c2" value="gc2"><label for="c2">Grand Canyon 2<small>8 personnes, 125 m², 4 chambres doubles, 3 salles de bains</small></label></div>
+     <div class="choice"><input type="radio" name="ch" id="c3" value="both"><label for="c3">Les deux chalets<small>Jusqu'à 20 personnes, pour une grande famille ou un groupe d'amis</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Dates" hidden data-noauto><legend id="dLeg">Vos dates</legend>
+     <div class="cal"><div class="cal-h"><button type="button" id="cPrev" aria-label="Mois précédent">‹</button><b id="cMonth"></b><button type="button" id="cNext" aria-label="Mois suivant">›</button></div><div class="cal-g" id="cGrid"></div>
+     <div class="legend"><span><i class="s1"></i>Hors vacances</span><span><i class="s2"></i>Janvier</span><span><i class="s3"></i>Noël, Nouvel An, février</span></div></div>
+     <p class="hint" id="dHint" style="margin-top:.8rem">Touchez votre jour d'arrivée, puis votre jour de départ. Trois nuits minimum.</p></fieldset>
+    <fieldset data-s data-n="Voyageurs" hidden data-noauto><legend>Qui vient ?</legend>
+     <div class="stepper"><button type="button" data-k="ad" data-d="-1" aria-label="Un adulte de moins">−</button><output id="adO">6</output><button type="button" data-k="ad" data-d="1" aria-label="Un adulte de plus">+</button><span>adultes</span></div>
+     <div class="stepper"><button type="button" data-k="en" data-d="-1" aria-label="Un enfant de moins">−</button><output id="enO">2</output><button type="button" data-k="en" data-d="1" aria-label="Un enfant de plus">+</button><span>enfants</span></div>
+     <p class="hint" id="pHint"></p></fieldset>
+    <fieldset data-s data-n="Options" hidden data-noauto><legend>Pour arriver les mains libres</legend>
+     <label class="opt"><input type="checkbox" id="oSki"><span><b>Location de skis chez Skilove, −20 %</b><small>Livrés au pied des pistes, pour tout le groupe</small></span></label>
+     <label class="opt"><input type="checkbox" id="oBaby"><span><b>Kit bébé</b><small>Lit et chaise haute, offerts</small></span></label>
+     <label class="opt"><input type="checkbox" id="oCar"><span><b>Borne de recharge</b><small>Pour votre voiture électrique, dans le garage couvert</small></span></label></fieldset>
+    <div data-s data-n="Coordonnées" hidden><p class="done-msg" style="margin:0 0 1rem">Votre séjour est prêt.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
+     <div class="field"><label for="p">Téléphone ou WhatsApp</label><input id="p" type="tel" autocomplete="tel"></div>
+     <div class="send-row"><a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">Envoyer ma demande sur WhatsApp</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien</button><span class="copied" id="copied" hidden></span></div></div>
+    <div data-s data-n="Envoi" hidden><p class="done-msg">Merci, Sylvie et Christian vous confirment vos dates très vite.</p><p style="color:var(--ondeep2)">Dans le site final, la demande arrive aussi par email avec le récapitulatif, et le calendrier se met à jour selon vos réservations.</p></div>
+    <div class="est-nav"><button type="button" class="btn ghost prev" hidden>Retour</button><button type="button" class="btn next" style="margin-left:auto">Continuer</button></div>
+   </form>
+   <p class="note">Démonstration : prix du Grand Canyon 1 repris de votre grille hiver 2026-2027 ; Grand Canyon 2, dates des périodes et comparaison avec les plateformes indicatives, à valider avec vous avant la mise en ligne.</p>
+  </div>
+ </div>
+</div></section>
+<section class="pad" id="avis"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise" data-stars="5"><div class="score"><span data-to="5" data-dec="1" data-suf="">5,0</span><small><span class="stars fill" aria-hidden="true">★★★★★</span> sur 5, 13 commentaires Airbnb, coup de cœur voyageurs · 4,86 sur 71 évaluations de vos séjours</small></div><h2>Ce que nos voyageurs écrivent en repartant.</h2></div>
+  <div class="marquee" aria-label="Avis clients"><div class="mq-track"><figure class="rcard"><div class="stars">★★★★★</div><blockquote>L'accès aux pistes est direct, et tout le reste se fait à pied.</blockquote><figcaption>Voyageur Airbnb, hiver</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>La vue sur les pistes et les montagnes depuis le chalet est superbe.</blockquote><figcaption>Voyageur Airbnb</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Un chalet lumineux et joliment aménagé, avec la cheminée le soir.</blockquote><figcaption>Séjour en famille</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Tout l'équipement est là, parfait pour une grande famille avec des enfants.</blockquote><figcaption>Voyageur Airbnb</figcaption></figure><figure class="rcard"><div class="stars">★★★★★</div><blockquote>Un emplacement parfait, au cœur des Portes du Soleil.</blockquote><figcaption>Séjour entre amis</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>L'accès aux pistes est direct, et tout le reste se fait à pied.</blockquote><figcaption>Voyageur Airbnb, hiver</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>La vue sur les pistes et les montagnes depuis le chalet est superbe.</blockquote><figcaption>Voyageur Airbnb</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Un chalet lumineux et joliment aménagé, avec la cheminée le soir.</blockquote><figcaption>Séjour en famille</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Tout l'équipement est là, parfait pour une grande famille avec des enfants.</blockquote><figcaption>Voyageur Airbnb</figcaption></figure><figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Un emplacement parfait, au cœur des Portes du Soleil.</blockquote><figcaption>Séjour entre amis</figcaption></figure></div></div>
+  <p class="note-rv">Extraits reformulés de vos avis Airbnb pour la maquette. Dans le site final, vos avis s'affichent en version originale et se mettent à jour automatiquement.</p>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Avant de réserver, on nous demande souvent.</h2>
+  <div class="faq-list"><details><summary>Quand réserver Noël, le Nouvel An et février ?</summary><p>Ce sont les semaines qui partent en premier, et l'hiver 2026-2027 approche. Pour avoir le chalet à vos dates, mieux vaut nous écrire dès maintenant.</p></details><details><summary>Quelle est la durée minimale ?</summary><p>Trois nuits. Pendant les vacances scolaires, les chalets se louent de préférence à la semaine (à valider).</p></details><details><summary>Les pistes sont-elles vraiment à côté ?</summary><p>Oui, nos voyageurs soulignent l'accès direct aux pistes et la vue sur le domaine. Le village et ses commerces se font à pied.</p></details><details><summary>Peut-on louer ses skis sur place ?</summary><p>Oui, chez Skilove, avec −20 % pour nos voyageurs et la livraison au pied des pistes. Il suffit de cocher l'option dans votre demande.</p></details><details><summary>Le sauna est-il compris ?</summary><p>Oui, chaque chalet a son sauna traditionnel, en accès libre pendant tout votre séjour.</p></details><details><summary>Peut-on venir avec un bébé ?</summary><p>Oui, un kit bébé (lit et chaise haute) est prêté gratuitement.</p></details><details><summary>Où se garer ?</summary><p>Un garage couvert, avec local à skis et à vélos, et une borne de recharge électrique.</p></details><details><summary>Peut-on louer les deux chalets ensemble ?</summary><p>Oui, pour un groupe jusqu'à 20 personnes. Indiquez-le dans votre demande, nous vous proposons un tarif pour l'ensemble.</p></details><details><summary>Et l'été ?</summary><p>Les chalets se louent aussi l'été 2027, de 2 000 à 4 000 € la semaine selon le chalet et la période.</p></details></div>
+ </div>
+ <div class="contact" id="contact"><div><h2>Une date, une question ?</h2><a class="bigtel" href="tel:+33608943908">06 08 94 39 08</a><p style="margin:0;color:var(--soft)">Sylvie et Christian Berthet · 06 87 77 12 79<br>Les Gets, Portes du Soleil, 1 172 m</p></div><div><p style="color:var(--soft);margin-top:0">Deux chalets de standing pour 8 et 12 personnes, l'hiver comme l'été. Location de skis à −20 % chez Skilove, livrée au pied des pistes.</p><a class="btn" href="#reserver">Voir les disponibilités</a></div></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap"><div><div style="color:var(--ink);font-weight:600;margin-bottom:.3rem">Chalets Berthet · Grand Canyon 1 et Grand Canyon 2 · Les Gets</div>Location de chalets de 8 à 12 personnes aux Gets</div><form class="nl-form" id="nlf"><label for="nlm">Recevoir nos semaines libres et nos nouvelles chaque mois</label><div class="nl-row"><input id="nlm" type="email" placeholder="Votre email" autocomplete="email" required><button class="btn" type="submit">S'inscrire</button></div><span class="nl-ok" id="nlok" hidden>C'est noté. Prochaine lettre au début du mois.</span></form></div></footer>
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Madame, Monsieur Berthet, voici ce que nous avons relevé sur chalets-berthet.com, et ce que la nouvelle version apporte.</p>
+ <ul class="audit"><li><div class="now"><b>Aujourd'hui</b>Le bloc « Demande de réservation » n'a aucun champ visible et affiche « Du au prix » sans valeur : le visiteur ne peut ni choisir ses dates ni voir un prix.</div><div><b>Avec la refonte</b>Une réservation directe avec calendrier, prix exact du séjour et demande envoyée sur votre WhatsApp.</div></li><li><div class="now"><b>Aujourd'hui</b>Des périodes de tarifs aux années inversées (« 02/01/2027 au 09/01/2026 »), un tableau 2027-2028 vide, et une nuitée annoncée à 450 € puis à 350 €.</div><div><b>Avec la refonte</b>Une grille claire par chalet et par période, que vous mettez à jour en deux minutes.</div></li><li><div class="now"><b>Aujourd'hui</b>Votre 5,0 et le badge coup de cœur voyageurs d'Airbnb n'apparaissent nulle part sur votre site.</div><div><b>Avec la refonte</b>Vos avis mis en scène dès l'accueil, pour que vos voyageurs réservent chez vous plutôt que sur la plateforme.</div></li><li><div class="now"><b>Aujourd'hui</b>La version anglaise contient « bedromms », « LIVING ROMM » et « exeptional », alors qu'une bonne part de la clientèle des Gets est britannique.</div><div><b>Avec la refonte</b>Un anglais relu, sur la même page, en un clic.</div></li><li><div class="now"><b>Aujourd'hui</b>Trois chalets annoncés pour deux présentés, des vignettes de 300 pixels et des actualités de la Toussaint 2025.</div><div><b>Avec la refonte</b>Vos deux chalets en grand, des informations à jour et une ouverture à l'heure bleue qui donne envie de réserver.</div></li></ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Demande de réservation, avis, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + réservation directe avec calendrier</li><li>FR, EN, IT</li><li>Pages hiver, été et par chalet</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + ouverture animée en temps réel (WebGL)</li><li>Journée au chalet et galerie animées au défilement</li><li>Neige aux Gets en direct</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+ <div class="addons"><div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens voyageurs : semaines encore libres, ouverture de la saison, l'été aux Gets. Rédigé, mis en page et envoyé pour vous.</p></div><div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos voyageurs après chaque séjour, bilan mensuel.</p></div><div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Néerlandais ou italien, pour vos voyageurs belges, néerlandais et italiens, traduit et tenu à jour avec le reste du site.</p></div></div>
+ <p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Chalets%20Berthet">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+<div class="mbar"><a class="btn ghost" href="tel:+33608943908">Appeler</a><a class="btn" href="#reserver">Réserver</a></div>
+
+<script>!function(t,i){"object"==typeof exports&&"undefined"!=typeof module?module.exports=i():"function"==typeof define&&define.amd?define(i):(t="undefined"!=typeof globalThis?globalThis:t||self).Lenis=i()}(this,(function(){"use strict";function clamp(t,i,e){return Math.max(t,Math.min(i,e))}class Animate{constructor(){this.isRunning=!1,this.value=0,this.from=0,this.to=0,this.currentTime=0}advance(t){var i;if(!this.isRunning)return;let e=!1;if(this.duration&&this.easing){this.currentTime+=t;const i=clamp(0,this.currentTime/this.duration,1);e=i>=1;const s=e?1:this.easing(i);this.value=this.from+(this.to-this.from)*s}else this.lerp?(this.value=function damp(t,i,e,s){return function lerp(t,i,e){return(1-e)*t+e*i}(t,i,1-Math.exp(-e*s))}(this.value,this.to,60*this.lerp,t),Math.round(this.value)===this.to&&(this.value=this.to,e=!0)):(this.value=this.to,e=!0);e&&this.stop(),null===(i=this.onUpdate)||void 0===i||i.call(this,this.value,e)}stop(){this.isRunning=!1}fromTo(t,i,{lerp:e,duration:s,easing:o,onStart:n,onUpdate:l}){this.from=this.value=t,this.to=i,this.lerp=e,this.duration=s,this.easing=o,this.currentTime=0,this.isRunning=!0,null==n||n(),this.onUpdate=l}}class Dimensions{constructor(t,i,{autoResize:e=!0,debounce:s=250}={}){this.wrapper=t,this.content=i,this.width=0,this.height=0,this.scrollHeight=0,this.scrollWidth=0,this.resize=()=>{this.onWrapperResize(),this.onContentResize()},this.onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)},this.onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)},e&&(this.debouncedResize=function debounce(t,i){let e;return function(...s){let o=this;clearTimeout(e),e=setTimeout((()=>{e=void 0,t.apply(o,s)}),i)}}(this.resize,s),this.wrapper instanceof Window?window.addEventListener("resize",this.debouncedResize,!1):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}destroy(){var t,i;null===(t=this.wrapperResizeObserver)||void 0===t||t.disconnect(),null===(i=this.contentResizeObserver)||void 0===i||i.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener("resize",this.debouncedResize,!1)}get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}}class Emitter{constructor(){this.events={}}emit(t,...i){var e;let s=this.events[t]||[];for(let t=0,o=s.length;t<o;t++)null===(e=s[t])||void 0===e||e.call(s,...i)}on(t,i){var e;return(null===(e=this.events[t])||void 0===e?void 0:e.push(i))||(this.events[t]=[i]),()=>{var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}}off(t,i){var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}destroy(){this.events={}}}const t=100/6,i={passive:!1};class VirtualScroll{constructor(e,s={wheelMultiplier:1,touchMultiplier:1}){this.element=e,this.options=s,this.touchStart={x:0,y:0},this.lastDelta={x:0,y:0},this.window={width:0,height:0},this.emitter=new Emitter,this.onTouchStart=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:0,y:0},this.emitter.emit("scroll",{deltaX:0,deltaY:0,event:t})},this.onTouchMove=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t,s=-(i-this.touchStart.x)*this.options.touchMultiplier,o=-(e-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:s,y:o},this.emitter.emit("scroll",{deltaX:s,deltaY:o,event:t})},this.onTouchEnd=t=>{this.emitter.emit("scroll",{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:t})},this.onWheel=i=>{let{deltaX:e,deltaY:s,deltaMode:o}=i;e*=1===o?t:2===o?this.window.width:1,s*=1===o?t:2===o?this.window.height:1,e*=this.options.wheelMultiplier,s*=this.options.wheelMultiplier,this.emitter.emit("scroll",{deltaX:e,deltaY:s,event:i})},this.onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}},window.addEventListener("resize",this.onWindowResize,!1),this.onWindowResize(),this.element.addEventListener("wheel",this.onWheel,i),this.element.addEventListener("touchstart",this.onTouchStart,i),this.element.addEventListener("touchmove",this.onTouchMove,i),this.element.addEventListener("touchend",this.onTouchEnd,i)}on(t,i){return this.emitter.on(t,i)}destroy(){this.emitter.destroy(),window.removeEventListener("resize",this.onWindowResize,!1),this.element.removeEventListener("wheel",this.onWheel,i),this.element.removeEventListener("touchstart",this.onTouchStart,i),this.element.removeEventListener("touchmove",this.onTouchMove,i),this.element.removeEventListener("touchend",this.onTouchEnd,i)}}return class Lenis{constructor({wrapper:t=window,content:i=document.documentElement,eventsTarget:e=t,smoothWheel:s=!0,syncTouch:o=!1,syncTouchLerp:n=.075,touchInertiaMultiplier:l=35,duration:r,easing:h=(t=>Math.min(1,1.001-Math.pow(2,-10*t))),lerp:a=.1,infinite:c=!1,orientation:u="vertical",gestureOrientation:d="vertical",touchMultiplier:p=1,wheelMultiplier:m=1,autoResize:v=!0,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w=!1}={}){this._isScrolling=!1,this._isStopped=!1,this._isLocked=!1,this._preventNextNativeScrollEvent=!1,this._resetVelocityTimeout=null,this.time=0,this.userData={},this.lastVelocity=0,this.velocity=0,this.direction=0,this.animate=new Animate,this.emitter=new Emitter,this.onPointerDown=t=>{1===t.button&&this.reset()},this.onVirtualScroll=t=>{if("function"==typeof this.options.virtualScroll&&!1===this.options.virtualScroll(t))return;const{deltaX:i,deltaY:e,event:s}=t;if(this.emitter.emit("virtual-scroll",{deltaX:i,deltaY:e,event:s}),s.ctrlKey)return;const o=s.type.includes("touch"),n=s.type.includes("wheel");this.isTouching="touchstart"===s.type||"touchmove"===s.type;if(this.options.syncTouch&&o&&"touchstart"===s.type&&!this.isStopped&&!this.isLocked)return void this.reset();const l=0===i&&0===e,r="vertical"===this.options.gestureOrientation&&0===e||"horizontal"===this.options.gestureOrientation&&0===i;if(l||r)return;let h=s.composedPath();h=h.slice(0,h.indexOf(this.rootElement));const a=this.options.prevent;if(h.find((t=>{var i,e,s,l,r;return t instanceof HTMLElement&&("function"==typeof a&&(null==a?void 0:a(t))||(null===(i=t.hasAttribute)||void 0===i?void 0:i.call(t,"data-lenis-prevent"))||o&&(null===(e=t.hasAttribute)||void 0===e?void 0:e.call(t,"data-lenis-prevent-touch"))||n&&(null===(s=t.hasAttribute)||void 0===s?void 0:s.call(t,"data-lenis-prevent-wheel"))||(null===(l=t.classList)||void 0===l?void 0:l.contains("lenis"))&&!(null===(r=t.classList)||void 0===r?void 0:r.contains("lenis-stopped")))})))return;if(this.isStopped||this.isLocked)return void s.preventDefault();if(!(this.options.syncTouch&&o||this.options.smoothWheel&&n))return this.isScrolling="native",void this.animate.stop();s.preventDefault();let c=e;"both"===this.options.gestureOrientation?c=Math.abs(e)>Math.abs(i)?e:i:"horizontal"===this.options.gestureOrientation&&(c=i);const u=o&&this.options.syncTouch,d=o&&"touchend"===s.type&&Math.abs(c)>5;d&&(c=this.velocity*this.options.touchInertiaMultiplier),this.scrollTo(this.targetScroll+c,Object.assign({programmatic:!1},u?{lerp:d?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}))},this.onNativeScroll=()=>{if(null!==this._resetVelocityTimeout&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent)this._preventNextNativeScrollEvent=!1;else if(!1===this.isScrolling||"native"===this.isScrolling){const t=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-t,this.direction=Math.sign(this.animatedScroll-t),this.isScrolling="native",this.emit(),0!==this.velocity&&(this._resetVelocityTimeout=setTimeout((()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()}),400))}},window.lenisVersion="1.1.13",t&&t!==document.documentElement&&t!==document.body||(t=window),this.options={wrapper:t,content:i,eventsTarget:e,smoothWheel:s,syncTouch:o,syncTouchLerp:n,touchInertiaMultiplier:l,duration:r,easing:h,lerp:a,infinite:c,gestureOrientation:d,orientation:u,touchMultiplier:p,wheelMultiplier:m,autoResize:v,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w},this.dimensions=new Dimensions(t,i,{autoResize:v}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.addEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll=new VirtualScroll(e,{touchMultiplier:p,wheelMultiplier:m}),this.virtualScroll.on("scroll",this.onVirtualScroll)}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.removeEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName()}on(t,i){return this.emitter.on(t,i)}off(t,i){return this.emitter.off(t,i)}setScroll(t){this.isHorizontal?this.rootElement.scrollLeft=t:this.rootElement.scrollTop=t}resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit("scroll",this)}reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){this.isStopped&&(this.isStopped=!1,this.reset())}stop(){this.isStopped||(this.isStopped=!0,this.animate.stop(),this.reset())}raf(t){const i=t-(this.time||t);this.time=t,this.animate.advance(.001*i)}scrollTo(t,{offset:i=0,immediate:e=!1,lock:s=!1,duration:o=this.options.duration,easing:n=this.options.easing,lerp:l=this.options.lerp,onStart:r,onComplete:h,force:a=!1,programmatic:c=!0,userData:u}={}){if(!this.isStopped&&!this.isLocked||a){if("string"==typeof t&&["top","left","start"].includes(t))t=0;else if("string"==typeof t&&["bottom","right","end"].includes(t))t=this.limit;else{let e;if("string"==typeof t?e=document.querySelector(t):t instanceof HTMLElement&&(null==t?void 0:t.nodeType)&&(e=t),e){if(this.options.wrapper!==window){const t=this.rootElement.getBoundingClientRect();i-=this.isHorizontal?t.left:t.top}const s=e.getBoundingClientRect();t=(this.isHorizontal?s.left:s.top)+this.animatedScroll}}if("number"==typeof t){if(t+=i,t=Math.round(t),this.options.infinite?c&&(this.targetScroll=this.animatedScroll=this.scroll):t=clamp(0,t,this.limit),t===this.targetScroll)return null==r||r(this),void(null==h||h(this));if(this.userData=null!=u?u:{},e)return this.animatedScroll=this.targetScroll=t,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),null==h||h(this),void(this.userData={});c||(this.targetScroll=t),this.animate.fromTo(this.animatedScroll,t,{duration:o,easing:n,lerp:l,onStart:()=>{s&&(this.isLocked=!0),this.isScrolling="smooth",null==r||r(this)},onUpdate:(t,i)=>{this.isScrolling="smooth",this.lastVelocity=this.velocity,this.velocity=t-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=t,this.setScroll(this.scroll),c&&(this.targetScroll=t),i||this.emit(),i&&(this.reset(),this.emit(),null==h||h(this),this.userData={},this.preventNextNativeScrollEvent())}})}}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame((()=>{this._preventNextNativeScrollEvent=!1}))}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.__experimental__naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?"x":"y"]}get isHorizontal(){return"horizontal"===this.options.orientation}get actualScroll(){return this.isHorizontal?this.rootElement.scrollLeft:this.rootElement.scrollTop}get scroll(){return this.options.infinite?function modulo(t,i){return(t%i+i)%i}(this.animatedScroll,this.limit):this.animatedScroll}get progress(){return 0===this.limit?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(t){this._isScrolling!==t&&(this._isScrolling=t,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(t){this._isStopped!==t&&(this._isStopped=t,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(t){this._isLocked!==t&&(this._isLocked=t,this.updateClassName())}get isSmooth(){return"smooth"===this.isScrolling}get className(){let t="lenis";return this.isStopped&&(t+=" lenis-stopped"),this.isLocked&&(t+=" lenis-locked"),this.isScrolling&&(t+=" lenis-scrolling"),"smooth"===this.isScrolling&&(t+=" lenis-smooth"),t}updateClassName(){this.cleanUpClassName(),this.rootElement.className=`${this.rootElement.className} ${this.className}`.trim()}cleanUpClassName(){this.rootElement.className=this.rootElement.className.replace(/lenis(-\w+)?/g,"").trim()}}}));
+//# sourceMappingURL=lenis.min.js.map
+</script>
+<script>
+window.GS={hooks:[]};(function(G){
+G.ease=function(x){return 1-Math.pow(1-x,3);};G.seg=function(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));};
+G.eur=function(n,r){r=r||1;return (Math.round(n/r)*r).toLocaleString('fr-FR')+' €';};
+G.tween=function(el,lo,hi,fmt,sep){var a0=el._lo||0,b0=el._hi||0,st=performance.now();el._lo=lo;el._hi=hi;(function tk(n){var q=G.ease(Math.min(1,(n-st)/700)),a=a0+(lo-a0)*q,b=b0+(hi-b0)*q;el.textContent=hi==null||lo===hi?fmt(a):fmt(a)+(sep||' – ')+fmt(b);if(q<1)requestAnimationFrame(tk);})(st);};
+G.stepper=function(f,o){var S=[].slice.call(f.querySelectorAll('[data-s]')),pv=f.querySelector('.prev'),nx=f.querySelector('.next'),chips=document.getElementById(o.chips),i=0,reached=0,N=S.length-1;
+ function draw(){chips.innerHTML='';S.slice(0,N).forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached||i===N;b.onclick=function(){go(k);};li.appendChild(b);chips.appendChild(li);});}
+ function go(k){i=k;S.forEach(function(el,j){el.hidden=j!==i;if(j===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0||i===N;nx.hidden=i===N;nx.textContent=i===N-2?o.seeTxt:i===N-1?o.sendTxt:o.nextTxt;draw();if(o.update)o.update();if(i===N-1&&o.recap)o.recap();if(o.onStep)o.onStep(i);}
+ f.addEventListener('change',function(e){if(o.update)o.update();if(e.target.type==='radio'&&i<N-2&&!e.target.closest('[data-noauto]')){var at=i;setTimeout(function(){if(i===at)go(i+1);},420);}});
+ f.addEventListener('submit',function(e){e.preventDefault();});
+ nx.onclick=function(){if(o.canNext&&!o.canNext(i))return;if(i<N)go(i+1);};pv.onclick=function(){if(i>0)go(i-1);};
+ go(0);return{go:go,cur:function(){return i;}};};
+G.copy=function(btn,out){btn.addEventListener('click',function(){var c=document.getElementById(out);(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});};
+})(window.GS);
+
+
+GS.FS="\nfloat h2(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}\nfloat n2(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h2(i),h2(i+vec2(1.,0.)),f.x),mix(h2(i+vec2(0.,1.)),h2(i+vec2(1.,1.)),f.x),f.y);}\nfloat fbm(vec2 p){float a=.5,s=0.;for(int i=0;i<5;i++){s+=a*n2(p);p*=2.03;a*=.5;}return s;}\nfloat fir(vec2 p,float w,float h){if(p.y<0.||p.y>h)return 0.;float k=p.y/h;float tier=fract(k*3.);float ww=w*(1.-k)*(.75+.35*tier);return smoothstep(.004,0.,abs(p.x)-ww);}\nfloat pisteX(float y,float ar,float mob){return ar*mix(.56,.5,mob)+.06*sin(y*11.+.6)+.03*sin(y*23.);}\nvoid main(){\n vec2 uv=gl_FragCoord.xy/r;float ar=r.x/r.y;vec2 q=vec2(uv.x*ar,uv.y);vec2 mm=m-.5;float mob=step(ar,1.);\n float px=1./r.y;\n vec3 top=vec3(.02,.04,.10),mid=vec3(.09,.15,.30),low=vec3(.62,.38,.34);\n vec3 col=mix(low,mid,smoothstep(.18,.55,uv.y));col=mix(col,top,smoothstep(.5,1.,uv.y));\n vec2 sg=floor(q*vec2(160.,160.));float st=h2(sg);vec2 sf=fract(q*160.)-.5;\n float tw=.55+.45*sin(t*(1.5+st*3.)+st*40.);col+=vec3(.9,.94,1.)*step(.993,st)*smoothstep(.22,.0,length(sf))*tw*smoothstep(.45,.8,uv.y);\n float rx=(q.x+mm.x*.02)*2.2;float hf=.56+mob*.08+.20*(1.-abs(2.*n2(vec2(rx,4.2))-1.))*.8+.08*fbm(vec2(rx*2.,7.1))+.05*sin(q.x*1.3+1.);\n float fcov=1.-smoothstep(-px,px,uv.y-hf);\n vec3 fcol=mix(vec3(.16,.21,.33),vec3(.46,.44,.58),smoothstep(hf-.12,hf,uv.y));\n fcol+=vec3(.55,.28,.22)*.35*smoothstep(hf-.05,hf,uv.y);\n col=mix(col,fcol,fcov);\n float hn=.40+mob*.12+.11*fbm(vec2((q.x+mm.x*.045)*1.15,9.7))+.05*sin(q.x*1.7);\n float ncov=1.-smoothstep(-px,px,uv.y-hn);\n vec3 ncol=mix(vec3(.10,.14,.24),vec3(.30,.36,.50),smoothstep(hn-.3,hn,uv.y));\n float pw=.018+.035*(1.-uv.y);float pd=abs(q.x-pisteX(q.y,ar,mob)-mm.x*.045)-pw;\n float pst=smoothstep(.004,0.,pd)*ncov*step(.15,uv.y);\n ncol=mix(ncol,vec3(.58,.64,.78),pst*.75);\n col=mix(col,ncol,ncov);\n for(int k=0;k<2;k++){float fk=float(k);float y=mix(.18,.40+mob*.12,fract(t*.018+fk*.47));\n  {vec2 lp=vec2(pisteX(y,ar,mob)+mm.x*.045,y);float d=length((q-lp)*vec2(1.,1.4));\n  col+=vec3(1.,.93,.78)*(.9*exp(-d*220.)+.12*exp(-d*28.))*ncov;}}\n for(int k=0;k<14;k++){float fk=float(k);float x=ar*(.02+fk*.075)+(h2(vec2(fk,3.))-.5)*.06+mm.x*.045;float by=.40+mob*.12+.11*fbm(vec2(x*1.15,9.7))+.05*sin(x*1.7)-.05-.12*h2(vec2(fk,8.));\n  float hh=.06+.06*h2(vec2(fk,6.));if(abs(x-pisteX(by,ar,mob))<.07)continue;col=mix(col,vec3(.03,.05,.09),fir(q-vec2(x,by),.012+.006*h2(vec2(fk,1.)),hh)*.9);}\n float gy=.16+mob*.02+.02*sin(q.x*2.1+.5)+mm.y*.01;\n float gcov=1.-smoothstep(-px,px,uv.y-gy);\n vec3 snow=mix(vec3(.22,.27,.38),vec3(.44,.49,.62),smoothstep(gy-.16,gy,uv.y));\n vec2 base=mix(vec2(ar*.86+mm.x*.07,gy-.008),vec2(ar*.74+mm.x*.05,hn-.03),mob);float cs=mix(.50,.27,mob);\n vec2 cp=(q-base)/cs;\n float flick=.88+.12*sin(t*6.1)*sin(t*2.7+1.);\n vec3 warm=vec3(1.,.62,.28);\n col+=warm*.10*exp(-length((cp-vec2(0.,.18))*vec2(1.,1.4))*2.6)*flick*(1.-gcov*.3);\n col=mix(col,snow,gcov);\n col+=warm*.10*exp(-length((cp-vec2(0.,-.02))*vec2(.55,3.))*2.)*flick*gcov;\n float outer=.62-abs(cp.x)*1.15-cp.y;float inner=.47-abs(cp.x)*1.15-cp.y;\n float inA=step(0.,cp.y)*smoothstep(0.,.004,outer);\n col=mix(col,vec3(.045,.032,.028),inA);\n float edge=inA*smoothstep(.035,.02,outer);col=mix(col,vec3(.66,.72,.82),edge);\n float gl=step(.03,cp.y)*smoothstep(0.,.004,inner);\n vec3 glass=mix(warm*1.05,vec3(1.,.82,.55),smoothstep(.45,.05,cp.y))*flick;\n float mull=smoothstep(.006,.0,abs(cp.x))+smoothstep(.006,.0,abs(cp.y-.17))+smoothstep(.006,.0,abs(cp.y-.31))+smoothstep(.006,.0,abs(abs(cp.x)-.14))*step(cp.y,.31);\n col=mix(col,glass,gl*(1.-clamp(mull,0.,1.)*.85));\n float rail=smoothstep(.014,.008,abs(cp.y-.12))*smoothstep(.0,.006,.6-abs(cp.x)*1.15-cp.y)*step(0.,cp.y);col=mix(col,vec3(.05,.035,.03),rail);\n float chim=smoothstep(.032,.026,abs(cp.x-.24))*step(.3,cp.y)*step(cp.y,.5);col=mix(col,vec3(.045,.032,.028),chim*(1.-gl));\n vec2 sp=cp-vec2(.24,.52);sp.x-=sin(sp.y*9.-t*1.4)*.03*sp.y*6.;float smk=smoothstep(.06,0.,length(sp*vec2(1.,.4)-vec2(0.,.04)))*smoothstep(0.,.05,sp.y);\n col+=vec3(.5,.55,.65)*.12*smk*fbm(sp*14.+vec2(0.,-t*.6));\n float sd=1.-smoothstep(0.,.25,abs(uv.y-gy+.05));col+=vec3(.7,.8,1.)*.03*fbm(vec2(q.x*6.-t*.15,q.y*20.))*sd*gcov;\n col*=1.-.38*length((uv-vec2(.55,.55))*vec2(1.,1.2));\n col=pow(col,vec3(.95));\n gl_FragColor=vec4(col,1.);\n}\n";GS.TH=[0.25, 0.5, 0.75];GS.I18N={"en": {"n1": "The chalets", "n2": "A day here", "n3": "Reviews", "hcta": "Book direct", "h1a": "The Les Gets slopes", "h1b": "right at the door.", "h1c": "Rated 5.0 on Airbnb.", "lede": "Two chalets of 125 and 135 m² for 8 and 12 guests, with sauna, wood stove and a double-height living room. Sylvie and Christian Berthet welcome you at 1,172 metres in the heart of the Portes du Soleil, and your skis are delivered to the foot of the slopes.", "c1": "Check availability", "scroll": "Scroll", "fh": "Book your chalet direct.", "fl": "Pick your chalet, your dates and your party: the price shows for your exact week, and your request goes straight to Sylvie and Christian."}};GS.GLQ=0.85;</script>
+<script>
+(function(G){
+var $=function(i){return document.getElementById(i);};
+/* scène : une journée au chalet */
+var sun=$('sun'),clock=$('clock'),wins=$('wins').children,piste=$('piste'),skier=$('skier'),PL=piste.getTotalLength();
+G.CUT=function(c){var s=G.seg;
+ var a=Math.PI*(1-s(c,0,.85));sun.setAttribute('cx',380+310*Math.cos(a));sun.setAttribute('cy',330-230*Math.sin(a));sun.setAttribute('opacity',1-s(c,.72,.84));
+ $('skyDay').setAttribute('opacity',s(c,.05,.2)*(1-s(c,.55,.7)));$('skyDusk').setAttribute('opacity',s(c,.5,.66)*(1-s(c,.78,.9)));$('skyNight').setAttribute('opacity',s(c,.78,.92));
+ $('stars').setAttribute('opacity',s(c,.82,.95));$('shade').setAttribute('opacity',.72*s(c,.62,.9));
+ var g=s(c,.25,.5),pt=piste.getPointAtLength(PL*g);skier.setAttribute('transform','translate('+pt.x.toFixed(1)+' '+(pt.y-4).toFixed(1)+')');skier.setAttribute('opacity',g>0&&g<1?1:0);
+ var lit=c<.2||c>.68;for(var i=0;i<wins.length;i++)wins[i].setAttribute('fill',(c<.2&&i<2)||(c>.68+i*.02)?'#F2B064':'#1b2433');
+ $('glaze').setAttribute('fill',c>.74?'#F2B064':c<.2?'#3a4a62':'#1b2433');$('fire').setAttribute('opacity',s(c,.74,.84));
+ $('saunaW').setAttribute('fill',c>.5&&c<.8?'#F2B064':'#1b2433');
+ $('steam').setAttribute('opacity',s(c,.5,.58)*(1-s(c,.78,.86)));$('smoke').setAttribute('opacity',s(c,.76,.86));
+ clock.textContent=c<.25?'8 h':c<.5?'9 h':c<.75?'16 h 30':'20 h';};
+/* réservation directe */
+var f=$('est'),ad=6,en=2,A=null,D=null,cm=new Date(2026,11,1),NOW=new Date();NOW.setHours(0,0,0,0);
+var OPEN=new Date(2026,11,1),CLOSE=new Date(2027,3,30);
+var C={gc1:['Grand Canyon 1',12],gc2:['Grand Canyon 2',8],both:['Les deux chalets',20]};
+/* prix à la semaine par période : [hors vacances, janvier, Noël, Nouvel An, février] */
+var W={gc1:[3150,4000,6500,7500,7500],gc2:[2800,3500,5600,6500,6500]};
+function b(t,a,z){return t>=+a&&t<+z;}
+function per(d){var t=+d;
+ if(b(t,new Date(2026,11,19),new Date(2026,11,26)))return 2;if(b(t,new Date(2026,11,26),new Date(2027,0,2)))return 3;
+ if(b(t,new Date(2027,1,6),new Date(2027,2,6)))return 4;if(b(t,new Date(2027,0,2),new Date(2027,1,6)))return 1;return 0;}
+function season(d){var p=per(d);return p===0?1:p===1?2:3;}
+function val(k){var e=f.querySelector('[name="'+k+'"]:checked');return e?e.value:null;}
+function nights(){return A&&D?Math.round((D-A)/864e5):0;}
+function wk(ch,p){return ch==='both'?W.gc1[p]+W.gc2[p]:W[ch][p];}
+function price(){var ch=val('ch'),n=nights(),tot=0;
+ if(!n){var lo=wk(ch,0),hi=wk(ch,4);return{lo:lo,hi:hi,n:0};}
+ for(var i=0;i<n;i++){var d=new Date(A.getFullYear(),A.getMonth(),A.getDate()+i);tot+=wk(ch,per(d))/7;}
+ tot=Math.round(tot/10)*10;return{tot:tot,n:n};}
+function fmtD(d){return d.toLocaleDateString('fr-FR',{day:'numeric',month:'short'});}
+function update(){var ch=val('ch'),p=price(),ski=$('oSki').checked;
+ document.querySelectorAll('#facade .ch').forEach(function(g){var on=ch==='both'||g.dataset.c===ch;g.classList.toggle('on',on);g.classList.toggle('dim',!on);});
+ $('skiTag').setAttribute('opacity',ski?1:0);
+ var lp=$('liveP'),cmp=$('cmp');
+ if(!p.n){G.tween(lp,p.lo,p.hi,function(x){return G.eur(x,10);});$('liveLab').textContent=C[ch][0]+', la semaine';$('liveSub').textContent='Selon la période, sauna et wifi compris.';cmp.hidden=true;}
+ else{G.tween(lp,p.tot,null,function(x){return G.eur(x,10);});$('liveLab').textContent=C[ch][0]+', '+p.n+' nuit'+(p.n>1?'s':'')+' · '+fmtD(A)+' – '+fmtD(D);$('liveSub').textContent=p.n<3?'Trois nuits minimum.':'Sauna, wifi et parking couvert compris.';
+  var lo=Math.round(p.tot*.10/10)*10,hi=Math.round(p.tot*.15/10)*10;cmp.innerHTML='<span>En direct : aucun frais de service.</span><em>Sur une plateforme, comptez souvent '+G.eur(lo,10)+' à '+G.eur(hi,10)+' de frais en plus (à valider).</em>';cmp.hidden=false;}
+ var cap=C[ch][1];$('pHint').textContent=ad+en>cap?(ch==='gc2'?'Le Grand Canyon 2 accueille 8 personnes : regardez le Grand Canyon 1, ou les deux chalets.':ch==='gc1'?'Le Grand Canyon 1 accueille 12 personnes : pour un plus grand groupe, prenez les deux chalets.':'Les deux chalets accueillent 20 personnes au maximum.'):'';
+ $('adO').textContent=ad;$('enO').textContent=en;
+ var hs=[ch,A?A.toISOString().slice(0,10):'',D?D.toISOString().slice(0,10):'',ad,en,ski?1:0].join('~');try{history.replaceState(null,'','#sejour='+hs);}catch(e){}}
+document.querySelectorAll('.stepper button').forEach(function(bt){bt.onclick=function(){if(bt.dataset.k==='ad')ad=Math.max(1,Math.min(20,ad+ +bt.dataset.d));else en=Math.max(0,Math.min(12,en+ +bt.dataset.d));update();};});
+['oSki','oBaby','oCar'].forEach(function(k){$(k).addEventListener('change',update);});
+var DW=['L','M','M','J','V','S','D'];
+function cal(){$('cMonth').textContent=cm.toLocaleDateString('fr-FR',{month:'long',year:'numeric'});var h=DW.map(function(x){return '<span class="dw">'+x+'</span>';}).join(''),first=(cm.getDay()+6)%7,days=new Date(cm.getFullYear(),cm.getMonth()+1,0).getDate();
+ for(var i=0;i<first;i++)h+='<span></span>';
+ for(var j=1;j<=days;j++){var d=new Date(cm.getFullYear(),cm.getMonth(),j),cl='s'+season(d);if(A&&+d===+A||D&&+d===+D)cl+=' end';else if(A&&D&&d>A&&d<D)cl+=' in';
+  h+='<button type="button" data-d="'+j+'" class="'+cl+'"'+((d<NOW||d<OPEN||d>CLOSE)?' disabled':'')+'>'+j+'</button>';}
+ $('cGrid').innerHTML=h;$('cPrev').disabled=cm<=new Date(2026,11,1);$('cNext').disabled=cm>=new Date(2027,3,1);}
+$('cGrid').addEventListener('click',function(e){var bt=e.target.closest('button');if(!bt||bt.disabled)return;var d=new Date(cm.getFullYear(),cm.getMonth(),+bt.dataset.d);
+ if(!A||D||d<=A){A=d;D=null;$('dHint').textContent='Et votre jour de départ ?';}else{var n=Math.round((d-A)/864e5);if(n<3){$('dHint').textContent='Trois nuits minimum : choisissez un départ un peu plus tard.';return;}D=d;$('dHint').textContent=n+' nuits'+(n>=7?', soit '+Math.floor(n/7)+' semaine'+(n>=14?'s':'')+(n%7?' et '+(n%7)+' nuit'+(n%7>1?'s':''):''):'')+'.';setTimeout(function(){if(st.cur()===1)st.go(2);},800);}
+ cal();update();});
+$('cPrev').onclick=function(){cm=new Date(cm.getFullYear(),cm.getMonth()-1,1);cal();};$('cNext').onclick=function(){cm=new Date(cm.getFullYear(),cm.getMonth()+1,1);cal();};
+function recap(){var ch=val('ch'),p=price(),o=[];if($('oSki').checked)o.push('skis Skilove −20 %, livrés');if($('oBaby').checked)o.push('kit bébé');if($('oCar').checked)o.push('borne de recharge');
+ var L=[['Chalet',C[ch][0]],['Arrivée',A?A.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}):'à définir'],['Départ',D?D.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}):'à définir'],['Voyageurs',ad+' adulte'+(ad>1?'s':'')+(en?', '+en+' enfant'+(en>1?'s':''):'')],['Options',o.length?o.join(', '):'aucune'],
+ ['Prix',p.n?G.eur(p.tot,10)+' (taxe de séjour en plus)':'selon vos dates']];
+ $('recap').innerHTML=L.map(function(r){return '<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('')+'<li><span>En direct</span>vous échangez avec Sylvie et Christian, sans intermédiaire</li>';return L;}
+var st=G.stepper(f,{chips:'chips',update:update,recap:recap,nextTxt:'Continuer',seeTxt:'Voir mon séjour',sendTxt:'Envoyer',canNext:function(i){if(i===1&&!(A&&D)){$('dHint').textContent='Choisissez d\'abord vos dates dans le calendrier.';return false;}return true;},onStep:function(i){if(i===1)cal();}});
+(function(){var m=location.hash.match(/sejour=([^&]+)/);if(!m)return;var p=decodeURIComponent(m[1]).split('~');var e=f.querySelector('[name="ch"][value="'+p[0]+'"]');if(e)e.checked=true;function pd(s){if(!s)return null;var q=s.split('-');return new Date(+q[0],+q[1]-1,+q[2]);}A=pd(p[1]);D=pd(p[2]);if(A)cm=new Date(A.getFullYear(),A.getMonth(),1);ad=+p[3]||6;en=p[4]!=null?+p[4]:2;$('oSki').checked=p[5]==='1';update();})();
+$('waBtn').addEventListener('click',function(){var L=recap(),txt='Bonjour Sylvie et Christian, voici ma demande de séjour :\n'+L.map(function(r){return '- '+r[0]+' : '+r[1];}).join('\n')+'\nNom : '+$('n').value+'\n'+location.href;this.href='https://wa.me/33608943908?text='+encodeURIComponent(txt);});
+G.copy($('copyBtn'),'copied');
+/* neige aux Gets (open-meteo, repli silencieux) */
+fetch('https://api.open-meteo.com/v1/forecast?latitude=46.159&longitude=6.669&elevation=1172&current=temperature_2m,snow_depth&daily=snowfall_sum&forecast_days=3&timezone=Europe%2FParis').then(function(r){return r.json();}).then(function(j){if(!j||!j.current)return;var c=j.current,sn=(j.daily.snowfall_sum||[0,0,0]).reduce(function(a,b){return a+(b||0);},0);
+ $('snowTxt').textContent=Math.round(c.temperature_2m)+' °C, '+Math.round((c.snow_depth||0)*100)+' cm de neige au sol'+(sn>=1?', '+Math.round(sn)+' cm annoncés sur trois jours':'')+'.';$('snow').hidden=false;}).catch(function(){});
+
+})(window.GS);
+</script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,G=window.GS;
+var lenis=null;if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});}
+G.lenis=lenis;
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+/* Ouverture WebGL */
+var cv=document.getElementById('herogl'),gl=null;try{gl=cv.getContext('webgl',{antialias:false,alpha:false,preserveDrawingBuffer:false});}catch(e){}
+var heroVisible=true,t0=performance.now();
+function nogl(){document.documentElement.classList.add('nogl');cv.style.display='none';}
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.error(gl.getShaderInfoLog(o));return null;}return o;}
+ var a=sh(gl.VERTEX_SHADER,vs),b=sh(gl.FRAGMENT_SHADER,'precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;'+G.FS);
+ if(!a||!b){nogl();}else{
+ var pr=gl.createProgram();gl.attachShader(pr,a);gl.attachShader(pr,b);gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.5,my=.5,tx=.5,ty=.5;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5)*(G.GLQ||.75);cv.width=Math.max(2,cv.clientWidth*d|0);cv.height=Math.max(2,cv.clientHeight*d|0);gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ G.drawHero=function(now){if(!heroVisible)return;mx+=(tx-mx)*.05;my+=(ty-my)*.05;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?12.:(now-t0)/1000+12.);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ G.drawHero(t0);}
+}else nogl();
+/* Titre : chaque ligne tient sur une ligne, quelle que soit la police */
+var h1=document.querySelector('.hero h1');G.fit=function(){h1.style.fontSize='';var w=h1.clientWidth,mx=0;h1.querySelectorAll('.ln span').forEach(function(s){mx=Math.max(mx,s.offsetWidth);});if(mx>w){h1.style.fontSize=(parseFloat(getComputedStyle(h1).fontSize)*w/mx*.97)+'px';}};
+G.fit();addEventListener('resize',G.fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(G.fit);
+/* Scènes */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+G.prog=prog;G.ease=ease;G.seg=seg;
+var hdr=document.getElementById('hdr'),proofB=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=document.getElementById('rv'),rvImg=rv.querySelector('img');
+var cutS=document.querySelector('.cut'),live=document.querySelectorAll('#live li'),meter=document.getElementById('meter');
+var gS=document.querySelector('.hgal'),track=document.getElementById('track'),gImgs=track.querySelectorAll('img'),gc=document.getElementById('gcount'),gN=gImgs.length;
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+function count(b){var to=+b.dataset.to,dec=+b.dataset.dec||0,suf=b.dataset.suf||'',st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1400));b.textContent=(to*k).toLocaleString(document.documentElement.lang==='en'?'en-GB':'fr-FR',{minimumFractionDigits:dec,maximumFractionDigits:dec})+suf;if(k<1)requestAnimationFrame(tick);})(st);}
+G.count=count;
+function scenes(now){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proofB.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*24+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.45){factsDone=true;facts.forEach(count);}
+ var c=prog(cutS);if(G.CUT)G.CUT(c,now);
+ var th=G.TH||[.25,.5,.75],st=0;th.forEach(function(x){if(c>=x)st++;});live.forEach(function(li,i){li.classList.toggle('on',i===st);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(20,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ var k=Math.min(gN,1+Math.floor(g*gN));gc.textContent=(k<10?'0':'')+k+' / '+(gN<10?'0':'')+gN;
+}
+function loop(now){if(lenis)lenis.raf(now);if(G.drawHero&&!RM)G.drawHero(now);for(var i=0;i<G.hooks.length;i++)G.hooks[i](now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+if(RM){facts.forEach(function(b){b.textContent=(+b.dataset.to).toLocaleString('fr-FR',{minimumFractionDigits:+b.dataset.dec||0})+(b.dataset.suf||'');});if(G.CUT)G.CUT(1,0);}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);if(x.target.dataset.stars)fillStars(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+function fillStars(el){var s=el.querySelector('.stars.fill'),to=+el.dataset.stars,sc=el.querySelector('[data-to]');if(sc)count(sc);if(!s)return;var st=performance.now();(function tk(n){var k=ease(Math.min(1,(n-st)/1600));s.style.setProperty('--p',(to/5*100*k)+'%');if(k<1)requestAnimationFrame(tk);})(st);}
+/* Lettre mensuelle (démonstration) */
+var nf=document.getElementById('nlf');if(nf)nf.addEventListener('submit',function(e){e.preventDefault();var ok=document.getElementById('nlok');ok.hidden=false;nf.querySelector('.nl-row').hidden=true;});
+/* Langues */
+var L=G.I18N||{},fr={};document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.innerHTML;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){var v=(L[l]||{})[e.dataset.i];e.innerHTML=v!=null?v:fr[e.dataset.i];});if(G.onLang)G.onLang(l);G.fit();};});
+})();
+</script>
+</body>
+</html>

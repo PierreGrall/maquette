@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Clef des Champs — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,50&family=Figtree:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0C1524;--fir:#1B3830;--snow:#F3F5F4;--ink:#17202B;--soft:#5C6672;--amber:#E3A24B;--line:#D3D8DA;--white:#FBFCFC;--d:"Fraunces",Georgia,"Times New Roman",serif;--t:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--snow);color:var(--ink);font-family:var(--t);font-size:1.04rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--t);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--amber);background:var(--amber);color:#1b1408;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px);background:#d18f37}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);font-weight:500;letter-spacing:-.02em;margin:0}
+h2{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.04;max-width:18ch;font-variation-settings:"SOFT" 50}
+.lede{color:var(--soft);max-width:38rem}
+.kicker{font-size:.9rem;color:#9b6a22;font-weight:600;margin:0 0 .8rem}
+
+.proof{position:relative;z-index:40;background:#000;color:#d6dbe2;font-size:.8rem}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0}
+.proof a{color:#fff;white-space:nowrap}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;transition:top .3s}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px;margin-top:.7rem;width:min(1100px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:rgba(12,21,36,.34);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);color:#fff;transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:rgba(251,252,252,.8);color:var(--ink);border-color:rgba(23,32,43,.1)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none}
+.lmark{width:30px;height:30px;flex:none}
+.bname{font-family:var(--d);font-weight:600;font-size:1.12rem;white-space:nowrap}
+.hnav{display:flex;align-items:center;gap:1.3rem;font-size:.9rem}
+.hnav a{text-decoration:none;opacity:.88}
+header .btn{padding:.6rem 1.1rem}
+.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+
+.hero{position:relative;height:100svh;min-height:620px;background:var(--night);color:#fff;overflow:hidden}
+#sky{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-weight:400;font-variation-settings:"SOFT" 50,"opsz" 144;font-size:clamp(2rem,5.4vw,5.4rem);line-height:1.02;max-width:none}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(108%);transition:transform 1.3s cubic-bezier(.16,1,.3,1)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.1s}.hero h1 .ln:nth-child(3) span{transition-delay:.2s;font-style:italic;color:#F2C985}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .6s,transform 1s .6s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:32rem;color:#d3dbe6;margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.wx{position:absolute;right:clamp(1.25rem,4vw,3rem);top:clamp(7rem,17vh,10rem);z-index:2;text-align:right;font-size:.85rem;color:#c6d0dc}
+.wx b{display:block;font-family:var(--d);font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;line-height:1.1;font-variant-numeric:tabular-nums}
+@media(max-width:600px){.hero h1{font-size:clamp(1.45rem,7.4vw,2.5rem)}.hero-inner{padding-bottom:6.5rem}.hero-ctas .ghost{display:none}.wx{top:6.2rem}}
+
+.reveal{height:220vh;position:relative;background:var(--night)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:#1d2a3c}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .cap{position:absolute;left:clamp(1.25rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);color:#fff;z-index:2;max-width:28rem;text-shadow:0 1px 18px rgba(0,0,0,.4)}
+.reveal .cap b{display:block;font-family:var(--d);font-weight:400;font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.08;margin-bottom:.4rem}
+.reveal .cap span{font-size:.9rem;color:#e4e9ef}
+.facts{position:absolute;top:clamp(6rem,15vh,9rem);right:clamp(1.25rem,4vw,3rem);z-index:2;display:grid;gap:1.1rem;color:#fff;text-align:right;text-shadow:0 1px 18px rgba(0,0,0,.45)}
+.facts b{display:block;font-family:var(--d);font-weight:400;font-size:clamp(2rem,3.8vw,3.2rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;color:#e4e9ef}
+
+.day{height:380vh;position:relative;background:var(--night);color:#e3e8ee}
+.day .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.day-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.day h2{color:#fff;margin-bottom:1rem}
+.day .lede{color:#9daabb;margin:0 0 1.6rem}
+.day svg{width:100%;height:auto;overflow:visible}
+.clock{font-family:var(--d);font-size:clamp(2.4rem,4vw,3.4rem);color:#F2C985;line-height:1;margin-bottom:1rem;font-variant-numeric:tabular-nums}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:.85rem}
+.steps-live li{border-left:2px solid #2b3a50;padding:.15rem 0 .15rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--amber)}
+.steps-live b{display:block;color:#fff;font-weight:600}
+.steps-live span{font-size:.95rem;color:#a9b5c4}
+
+.hgal{height:360vh;position:relative;background:var(--snow)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(46vw,560px);margin:0}
+.card:nth-child(odd){width:min(60vw,720px)}
+.card .ph{position:relative;height:min(58vh,520px);overflow:hidden;background:#1f2c3d}
+.card .ph::before{content:attr(data-n);position:absolute;left:1.2rem;bottom:1rem;font-family:var(--d);font-size:clamp(1.8rem,4vw,3.4rem);line-height:1;color:rgba(242,201,133,.28)}
+.card img{position:relative;width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-family:var(--d);font-weight:500;font-size:1.1rem}.card figcaption span{color:var(--soft);font-size:.9rem;white-space:nowrap}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--d);font-size:1.2rem;font-variant-numeric:tabular-nums}
+
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+
+/* Neige en direct */
+.snow{background:var(--fir);color:#e7efea}
+.snow h2{color:#fff}.snow .lede{color:#a9c2b8}
+.snow-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,5rem);align-items:end}
+.cd{display:flex;gap:2rem;margin-top:2rem;flex-wrap:wrap}
+.cd div b{display:block;font-family:var(--d);font-weight:400;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.cd div span{font-size:.85rem;color:#a9c2b8}
+.fc{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem;align-items:end;height:220px;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:.4rem}
+.fc div{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:.3rem;font-size:.8rem;color:#cfe0d8}
+.fc i{display:block;width:100%;max-width:44px;background:#F3F5F4;border-radius:3px 3px 0 0;transform-origin:bottom;transform:scaleY(0);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.in .fc i{transform:scaleY(var(--h,0))}
+.fc-days{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem;font-size:.78rem;color:#a9c2b8;text-align:center;margin-top:.4rem}
+.wxnote{font-size:.82rem;color:#8fb0a3;margin-top:1rem}
+.sb{margin-top:2rem}.sbar{position:relative;height:14px;background:rgba(255,255,255,.1);border-radius:3px}.sbar i{position:absolute;top:0;bottom:0;background:#F3F5F4;border-radius:3px;transform-origin:left;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.16,1,.3,1)}.in .sbar i{transform:scaleX(1)}.sbar i+i{transition-delay:.25s}.sbar b{position:absolute;top:-6px;bottom:-6px;width:2px;background:#F2C985}.sbl{display:grid;grid-template-columns:repeat(5,1fr);font-size:.78rem;color:#a9c2b8;margin-top:.4rem}
+
+/* Configurateur séjour */
+.stay{background:var(--night);color:#e3e8ee}
+.stay h2{color:#fff}.stay .lede{color:#9daabb}
+.cfg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px}
+.room{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:6px;background:#1f2c3d}
+.room img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .7s,transform 1.4s cubic-bezier(.16,1,.3,1)}
+.room img.on{opacity:1;transform:none}
+.room .rname{position:absolute;left:1rem;bottom:1rem;right:1rem;font-family:var(--d);font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.05;color:#fff;text-shadow:0 1px 16px rgba(0,0,0,.5)}
+.room .rname small{display:block;font-family:var(--t);font-size:.85rem;color:#e6ebf0;margin-top:.3rem}
+.room .ap{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--d);font-size:clamp(3rem,7vw,5.5rem);color:rgba(242,201,133,.3);opacity:0;transition:opacity .6s}
+.room .ap.on{opacity:1}
+.live{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.live div{border-top:1px solid rgba(255,255,255,.14);padding-top:.6rem}
+.live span{font-size:.8rem;color:#8e9db0;display:block}.live b{display:block;white-space:nowrap;font-family:var(--d);font-weight:400;font-size:clamp(1.3rem,2.2vw,1.8rem);color:#fff;font-variant-numeric:tabular-nums}
+.live .plat b{color:#9daabb;text-decoration:line-through;text-decoration-thickness:1px}
+.panel{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.25rem,3vw,2rem)}
+fieldset{border:0;margin:0;padding:0}legend{font-family:var(--d);font-size:1.4rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.8rem .95rem;cursor:pointer;font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:#8e9db0;font-size:.8rem;margin-top:.2rem}
+.choice input:checked+label{border-color:var(--amber);background:rgba(227,162,75,.08)}
+.choice input:focus-visible+label{outline:3px solid var(--amber);outline-offset:2px}
+.step-anim{animation:in .55s cubic-bezier(.16,1,.3,1)}@keyframes in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font:inherit;font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:#8e9db0;padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--amber);color:#1b1408;border-color:var(--amber)}
+.chips button.done{color:#fff;border-color:rgba(227,162,75,.5)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.85rem;color:#8e9db0;margin:-.4rem 0 1rem}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:.8rem}
+.cal .dn{font-size:.7rem;color:#8e9db0;text-align:center}
+.cal button{font:inherit;font-size:.82rem;aspect-ratio:1;border:0;border-radius:6px;background:rgba(255,255,255,.05);color:#dfe5ec;cursor:pointer;padding:0}
+.cal button:disabled{background:none;color:#3c4a5e;cursor:default}
+.cal button.sat{box-shadow:inset 0 0 0 1px rgba(227,162,75,.45)}
+.cal button.in{background:rgba(227,162,75,.28);color:#fff}.cal button.s{background:var(--amber);color:#1b1408}
+.calhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.calhead b{font-family:var(--d);font-weight:400;font-size:1.2rem;color:#fff}
+.calhead button{font:inherit;font-size:.85rem;background:none;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:999px;padding:.25rem .7rem;cursor:pointer}
+.nights{display:flex;align-items:center;gap:.6rem;font-size:.9rem;margin-top:.4rem}
+.nights button{font:inherit;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:none;color:#fff;cursor:pointer}
+.nights b{min-width:5.5rem;text-align:center;font-variant-numeric:tabular-nums}
+.ctr{display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.ctr div{display:flex;align-items:center;gap:.6rem}
+.ctr button{font:inherit;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:none;color:#fff;cursor:pointer}
+.ctr b{min-width:1.5rem;text-align:center}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#8e9db0}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-size:.88rem}
+.field input{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.06);color:#fff}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.copied{font-size:.82rem;color:#F2C985;align-self:center;word-break:break-all}
+.note{font-size:.85rem;color:#8e9db0;margin-top:1rem}
+[hidden]{display:none!important}
+
+/* Avis */
+.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.since{font-family:var(--d);font-size:clamp(4.5rem,10vw,8rem);line-height:.85;color:var(--ink)}
+.since small{display:block;font-family:var(--t);font-size:.95rem;color:var(--soft);margin-top:.8rem;line-height:1.4}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 52s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--white);border-top:3px solid var(--amber);padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-family:var(--d);font-size:1.2rem;line-height:1.38}
+.rcard figcaption{font-size:.82rem;color:var(--soft);margin-top:auto}
+.rcard .sc{font-size:.8rem;font-weight:600;color:#9b6a22}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-top:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-weight:600;font-size:1.06rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--fir),var(--fir)) center/14px 2px no-repeat,linear-gradient(var(--fir),var(--fir)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-top:6rem}
+.bigtel{font-family:var(--d);font-size:clamp(2.2rem,5vw,3.6rem);text-decoration:none;display:inline-block;margin:.4rem 0 .2rem;white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-size:.88rem;color:var(--soft)}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:end}
+.nl label{display:block;color:var(--ink);font-weight:600;margin-bottom:.5rem}
+.nl div{display:flex;gap:.5rem;max-width:28rem}
+.nl input{flex:1;min-width:0;font:inherit;padding:.7rem .9rem;border:1.5px solid var(--line);border-radius:999px;background:var(--white)}
+.nl .btn{padding:.7rem 1.1rem}
+.nl p{margin:.5rem 0 0;color:var(--fir)}
+
+/* Grall Studio */
+.studio{background:#E1E5E8;border-top:6px solid var(--amber);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid #BCC4CA}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid #BCC4CA}
+.audit b{display:block;font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--white);border:1px solid #BCC4CA;border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--night);color:#e3e8ee;border-color:var(--night)}
+.offer .tag{font-size:.8rem;color:#9b6a22;font-weight:600}.offer.rec .tag{color:#F2C985}
+.offer h3{font-size:1.4rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-size:2rem;margin:.5rem 0 0}
+.offer .alt{font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid #BCC4CA}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid #BCC4CA}.addons b{font-weight:600}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .day-grid,.cfg,.contact,.snow-grid,.faq,.fgrid,.rx-head{grid-template-columns:1fr}
+ .faq,.rx-head{gap:1.5rem}
+ .day{height:340vh}.day h2{font-size:1.8rem}.day .lede{display:none}
+ .offers{grid-template-columns:1fr}
+ .card,.card:nth-child(odd){width:80vw}.facts{top:auto;bottom:8.5rem}
+ .preview{position:relative;top:0}
+}
+@media (max-width:600px){
+ .hnav .btn{display:none}.choices{grid-template-columns:1fr}.audit li{grid-template-columns:1fr;gap:.5rem}
+ header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}.bname{font-size:1rem}.lmark{width:26px;height:26px}
+ .steps-live li:not(.on){display:none}
+ .day .stick{align-items:flex-start;padding-top:5.5rem}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(12,21,36,.92);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+ .fc{height:160px}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.day,.hgal{height:auto}.reveal .stick,.day .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .mq-track{animation:none;flex-wrap:wrap;width:auto}.fc i{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour La Clef des Champs par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée, Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Hôtel La Clef des Champs, accueil"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="10" cy="16" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="10" cy="16" r="2" fill="currentColor"/><path d="M16.5 16H29M24 16v4.5M27.5 16v3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M15 6l3.5-3 3.5 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bname">La Clef des Champs</span></a>
+ <nav class="hnav" aria-label="Navigation">
+  <a class="nl" href="#chambres" data-i="n1">Chambres</a><a class="nl" href="#journee" data-i="n2">Piscine et spa</a><a class="nl" href="#neige" data-i="n3">Neige</a>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button><button type="button" aria-pressed="false" data-l="nl">NL</button></div>
+  <a class="btn" href="#sejour" data-i="cta1s">Composer mon séjour</a>
+ </nav>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="sky" aria-hidden="true"></canvas>
+ <div class="wx" id="wx" hidden><b id="wxT">—</b><span id="wxL">à Morzine en ce moment</span></div>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">Une pension de 1950</span></span><span class="ln"><span data-i="h1b">devenue quatre étoiles.</span></span><span class="ln"><span data-i="h1c">La famille est restée.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Au pied des pistes de Morzine, trente chambres de style chalet, une piscine chauffée à 30 degrés sous toit télescopique, et la cuisine maison de Pierre chaque soir.</p>
+   <div class="hero-ctas"><a class="btn" href="#sejour" data-i="cta1">Composer mon séjour</a><a class="btn ghost" href="tel:+33450791013">04 50 79 10 13</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="reveal" aria-label="L'hôtel">
+ <div class="stick">
+  <figure id="rv"><img src="https://clefdeschamps.com/wp-content/uploads/Vue-hiver-drone-11-scaled-e1786035907866.jpg" alt="La Clef des Champs sous la neige, vue aérienne sur Morzine" onerror="this.style.visibility='hidden'"></figure>
+  <div class="cap"><b>Trois générations sous le même toit de bois.</b><span>Créée en 1950 par les grands‑parents de Pierre, au pied des pistes de Morzine</span></div>
+  <div class="facts" id="facts"><div><b data-to="1950" data-from="1900" data-raw="1">0</b><span>ouverture de la pension</span></div><div><b data-to="30">0</b><span>chambres de style chalet</span></div><div><b data-to="30" data-suf="°">0</b><span>dans la piscine couverte</span></div><div><b data-to="34" data-suf="°">0</b><span>dans le jacuzzi</span></div></div>
+ </div>
+</section>
+
+<section class="day" id="journee" aria-label="Une journée à la Clef des Champs">
+ <div class="stick"><div class="wrap day-grid">
+  <svg viewBox="0 0 760 440" role="img" aria-label="Une journée à l'hôtel, du petit-déjeuner au dîner">
+   <rect x="0" y="0" width="760" height="440" fill="#0C1524"/>
+   <rect id="skyDay" x="0" y="0" width="760" height="440" fill="#2D5677" opacity="0"/>
+   <circle id="sun" cx="0" cy="0" r="22" fill="#F2C985"/>
+   <g id="moon" opacity="0"><circle cx="640" cy="70" r="18" fill="#E9EEF5"/><circle cx="648" cy="64" r="16" fill="#0C1524"/></g>
+   <path id="ridge" d="M0 230 L80 170 L130 200 L210 110 L270 160 L330 95 L410 175 L470 140 L540 205 L610 150 L680 190 L760 160 V440 H0 Z" fill="#16233a" stroke="#E9EEF5" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <path id="snowcap" d="M210 110 L232 130 L248 122 L270 160 M330 95 L352 116 L372 108 L410 175" fill="none" stroke="#E9EEF5" stroke-width="2" opacity="0"/>
+   <path id="skiTrack" d="M330 100 C320 150 360 170 340 210 C320 250 380 270 360 300" fill="none" stroke="#F2C985" stroke-width="2" stroke-dasharray="5 6" opacity="0"/>
+   <rect x="0" y="330" width="760" height="110" fill="#EEF1F2"/>
+   <g id="chalet">
+    <path d="M150 330 V250 L260 190 L370 250 V330 Z" fill="#6A4A35"/>
+    <path d="M130 258 L260 180 L390 258" fill="none" stroke="#F3F5F4" stroke-width="10" stroke-linejoin="round"/>
+    <g id="wins" fill="#F2C985"><rect x="180" y="265" width="26" height="22" opacity=".15"/><rect x="224" y="265" width="26" height="22" opacity=".15"/><rect x="270" y="265" width="26" height="22" opacity=".15"/><rect x="314" y="265" width="26" height="22" opacity=".15"/><rect x="246" y="220" width="28" height="22" opacity=".15"/></g>
+    <g id="dine" fill="#F2C985" opacity=".15"><rect x="180" y="300" width="70" height="22"/><rect x="270" y="300" width="70" height="22"/></g>
+   </g>
+   <g id="poolhouse">
+    <rect x="410" y="285" width="200" height="45" fill="#3B5A6E"/>
+    <rect x="420" y="300" width="180" height="20" fill="#3FA3B3"/>
+    <g id="roof"><path d="M405 285 L510 255 L615 285 Z" fill="#9FB3C0" opacity=".9"/></g>
+    <g id="steam" opacity="0" fill="none" stroke="#E9EEF5" stroke-width="2" stroke-linecap="round"><path d="M640 300 q6 -10 0 -20 q-6 -10 0 -20"/><path d="M660 300 q6 -10 0 -20 q-6 -10 0 -20"/><path d="M680 300 q6 -10 0 -20 q-6 -10 0 -20"/></g>
+    <rect x="630" y="305" width="62" height="25" rx="4" fill="#3FA3B3" stroke="#9FB3C0" stroke-width="3"/>
+   </g>
+   <g id="bus" opacity="0"><rect x="0" y="342" width="70" height="26" rx="5" fill="#E3A24B"/><rect x="8" y="347" width="14" height="9" fill="#0C1524"/><rect x="28" y="347" width="14" height="9" fill="#0C1524"/><rect x="48" y="347" width="14" height="9" fill="#0C1524"/><circle cx="16" cy="370" r="5" fill="#17202B"/><circle cx="54" cy="370" r="5" fill="#17202B"/></g>
+   <g font-family="Figtree, sans-serif" font-size="13" fill="#E3E8EE">
+    <g class="lbl" opacity="0"><text x="20" y="400" fill="#17202B">Navette gratuite, arrêt en face de l'hôtel</text></g>
+    <g class="lbl" opacity="0"><text x="420" y="350" fill="#17202B">Toit télescopique ouvert</text></g>
+    <g class="lbl" opacity="0"><text x="180" y="400" fill="#17202B">Dîner maison, produits de producteurs locaux</text></g>
+   </g>
+  </svg>
+  <div>
+   <p class="kicker" style="color:#F2C985">Une journée à la Clef</p>
+   <div class="clock" id="clock">Le matin</div>
+   <h2>De la première trace au dîner de Pierre.</h2>
+   <p class="lede">Tout ce qui compte pendant une semaine au ski tient dans la même maison.</p>
+   <ol class="steps-live" id="live">
+    <li><b>Le matin, petit‑déjeuner</b><span>Le buffet, avant de chausser.</span></li>
+    <li><b>Navette gratuite</b><span>L'arrêt est en face de l'hôtel, forfaits en vente à la réception à tarif préférentiel.</span></li>
+    <li><b>16 h, piscine à 30°</b><span>Dix mètres sur cinq, sous un toit télescopique.</span></li>
+    <li><b>18 h, jacuzzi et sauna entre adultes</b><span>Jacuzzi de 6 × 3 m à 34°, hammam à l'eucalyptus, sauna panoramique.</span></li>
+    <li><b>Le soir, dîner maison</b><span>Pierre et son équipe, produits frais de producteurs locaux.</span></li>
+   </ol>
+  </div>
+ </div></div>
+</section>
+
+<section class="hgal" id="chambres" aria-label="Chambres et lieux de vie">
+ <div class="stick">
+  <div class="wrap head"><h2>Trente chambres, aucune pareille.</h2><span class="count" id="gcount">01 / 06</span></div>
+  <div class="track" id="track">
+   <figure class="card"><div class="ph" data-n="Suite"><img loading="lazy" src="https://clefdeschamps.com/wp-content/uploads/Suite-Pointe-de-Nyon-6-4-scaled-e1786037175722.jpg" alt="Suite Pointe de Nyon" onerror="this.style.visibility='hidden'"></div><figcaption><b>Suite Pointe de Nyon</b><span>26 à 33 m², 2 à 4 pers.</span></figcaption></figure>
+   <figure class="card"><div class="ph" data-n="Junior"><img loading="lazy" src="https://clefdeschamps.com/wp-content/uploads/Junior-Pointe-de-Nyon-5-scaled.jpg" alt="Chambre Junior Pointe de Nyon" onerror="this.style.visibility='hidden'"></div><figcaption><b>Junior Pointe de Nyon</b><span>20 à 25 m², 2 à 3 pers.</span></figcaption></figure>
+   <figure class="card"><div class="ph" data-n="Restaurant"><img loading="lazy" src="https://clefdeschamps.com/wp-content/uploads/Restaurant-hotel-morzine-04.jpg" alt="Le restaurant de l'hôtel" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le restaurant</b><span>Cuisine maison chaque soir</span></figcaption></figure>
+   <figure class="card"><div class="ph" data-n="Suite"><img loading="lazy" src="https://clefdeschamps.com/wp-content/uploads/Suite-Avoriaz-3.jpg" alt="Suite Avoriaz" onerror="this.style.visibility='hidden'"></div><figcaption><b>Suite Avoriaz</b><span>Pour toute la famille</span></figcaption></figure>
+   <figure class="card"><div class="ph" data-n="Spa"><img loading="lazy" src="https://clefdeschamps.com/wp-content/uploads/SPA-5-1.jpg" alt="L'espace bien-être" onerror="this.style.visibility='hidden'"></div><figcaption><b>L'espace bien‑être</b><span>Jacuzzi, hammam, sauna</span></figcaption></figure>
+   <figure class="card"><div class="ph" data-n="Morzinette"><img loading="lazy" src="https://clefdeschamps.com/wp-content/uploads/Morzinette-Montagne-24-2.jpg" alt="Chambre Morzinette côté montagne" onerror="this.style.visibility='hidden'"></div><figcaption><b>Morzinette côté montagne</b><span>17 à 19 m², 1 à 2 pers.</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="pad snow" id="neige"><div class="wrap snow-grid">
+ <div class="rise">
+  <p class="kicker" style="color:#F2C985">Morzine, en direct</p>
+  <h2>Il neige&nbsp;? Regardez avant de réserver.</h2>
+  <p class="lede" style="margin-top:1rem">Ouverture de l'hôtel le week‑end du 11 au 13 décembre, puis saison d'hiver du 19 décembre au 3 avril.</p>
+  <div class="cd"><div><b id="cdD">—</b><span>jours avant la saison d'hiver</span></div><div><b id="snowSum">—</b><span id="snowLbl">de neige annoncés sur 7 jours</span></div></div>
+ </div>
+ <div class="rise">
+ <div id="fcWrap">
+  <div class="fc" id="fc"></div><div class="fc-days" id="fcDays"></div>
+  <p class="wxnote" id="wxNote">Prévisions de neige à Morzine, mises à jour en continu.</p>
+ </div>
+ <div class="sb"><div class="sbar"><i style="left:4.5%;width:1.8%"></i><i style="left:11%;width:84%"></i><b id="sbNow"></b></div><div class="sbl"><span>déc.</span><span>janv.</span><span>févr.</span><span>mars</span><span>avr.</span></div><p class="wxnote">Week‑end d'ouverture, puis saison d'hiver jusqu'au 3 avril 2027.</p></div>
+ </div>
+</div></section>
+
+<section class="pad stay" id="sejour"><div class="wrap">
+ <h2>Composez votre semaine.</h2>
+ <p class="lede" style="margin-top:1rem">Dates, chambre, formule&nbsp;: le séjour se chiffre sous vos yeux, au meilleur tarif, directement avec la famille.</p>
+ <div class="cfg">
+  <div class="preview">
+   <div class="room" id="room">
+    <img data-r="morz" src="https://clefdeschamps.com/wp-content/uploads/Morzinette-Montagne-24-2.jpg" alt="" onerror="this.style.visibility='hidden'">
+    <img data-r="junior" src="https://clefdeschamps.com/wp-content/uploads/Junior-Pointe-de-Nyon-5-scaled.jpg" alt="" onerror="this.style.visibility='hidden'">
+    <img data-r="suite" src="https://clefdeschamps.com/wp-content/uploads/Suite-Avoriaz-3.jpg" alt="" onerror="this.style.visibility='hidden'">
+    <div class="ap" data-r="apt">108 m²</div>
+    <div class="rname" id="rname">La Morzinette<small>17 à 19 m², 1 à 2 personnes</small></div>
+   </div>
+   <div class="live"><div><span>Votre séjour en direct</span><b id="pDirect">—</b></div><div class="plat"><span>Sur une plateforme (à valider)</span><b id="pPlat">—</b></div></div>
+   <p class="note" id="pNote">Tarifs « à partir de » de votre site, à valider avec vous avant la mise en ligne.</p>
+  </div>
+  <div class="panel" aria-live="polite">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <div data-s data-n="Dates">
+     <p style="font-family:var(--d);font-size:1.4rem;color:#fff;margin:0 0 .8rem">Quand arrivez-vous&nbsp;?</p>
+     <div class="calhead"><button type="button" id="mPrev" aria-label="Mois précédent">Préc.</button><b id="mName"></b><button type="button" id="mNext" aria-label="Mois suivant">Suiv.</button></div>
+     <div class="cal" id="cal"></div>
+     <div class="nights"><span>Durée</span><button type="button" id="nMinus" aria-label="Une nuit de moins">−</button><b id="nVal">7 nuits</b><button type="button" id="nPlus" aria-label="Une nuit de plus">+</button></div>
+     <p class="hint" style="margin:.8rem 0 0">Les samedis sont entourés&nbsp;: c'est le jour d'arrivée le plus courant.</p>
+    </div>
+    <div data-s data-n="Voyageurs" hidden>
+     <p style="font-family:var(--d);font-size:1.4rem;color:#fff;margin:0 0 .4rem">Qui vient&nbsp;?</p>
+     <div class="ctr"><span>Adultes</span><div><button type="button" data-c="ad" data-d="-1" aria-label="Un adulte de moins">−</button><b id="adV">2</b><button type="button" data-c="ad" data-d="1" aria-label="Un adulte de plus">+</button></div></div>
+     <div class="ctr"><span>Enfants</span><div><button type="button" data-c="ch" data-d="-1" aria-label="Un enfant de moins">−</button><b id="chV">0</b><button type="button" data-c="ch" data-d="1" aria-label="Un enfant de plus">+</button></div></div>
+     <div class="ctr"><span>Chien</span><div><button type="button" data-c="dog" data-d="-1" aria-label="Retirer le chien">−</button><b id="dogV">0</b><button type="button" data-c="dog" data-d="1" aria-label="Ajouter un chien">+</button></div></div>
+    </div>
+    <fieldset data-s data-n="Chambre" hidden><legend>Quelle chambre&nbsp;?</legend><p class="hint" id="capHint"></p><div class="choices">
+     <div class="choice"><input type="radio" name="room" id="r1" value="morz" checked><label for="r1">La Morzinette<small>17 à 19 m², 1 à 2 pers.</small></label></div>
+     <div class="choice"><input type="radio" name="room" id="r2" value="junior"><label for="r2">La Junior<small>20 à 25 m², 2 à 3 pers.</small></label></div>
+     <div class="choice"><input type="radio" name="room" id="r3" value="suite"><label for="r3">La Suite<small>26 à 33 m², 2 à 4 pers.</small></label></div>
+     <div class="choice"><input type="radio" name="room" id="r4" value="apt"><label for="r4">Appartement C des Champs<small>108 m², 6 à 10 pers.</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Formule" hidden><legend>Quelle formule&nbsp;?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="board" id="b1" value="bb"><label for="b1">Chambre et petit‑déjeuner<small>Le soir, libre à Morzine</small></label></div>
+     <div class="choice"><input type="radio" name="board" id="b2" value="hb" checked><label for="b2">Demi‑pension<small>Le dîner maison de Pierre chaque soir</small></label></div>
+     <div class="choice"><input type="radio" name="board" id="b3" value="pass"><label for="b3">Avec forfaits de ski<small>À tarif préférentiel, à la réception</small></label></div>
+     <div class="choice"><input type="radio" name="board" id="b4" value="spa"><label for="b4">Avec soins<small>Massages et soins du visage</small></label></div></div></fieldset>
+    <div data-s data-n="Récapitulatif" hidden><p style="font-family:var(--d);font-size:1.4rem;color:#fff;margin:0 0 1rem">Votre semaine est prête.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
+     <div class="send-row"><a class="btn" id="mailBtn" href="#">Demander ce séjour</a><a class="btn ghost" id="bookBtn" href="https://secure.reservit.com/fo/booking/2/176400/dates?nbroom=1&amp;specialMode=default&amp;hotelid=176400" target="_blank" rel="noopener">Voir les disponibilités</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien</button><span class="copied" id="copied" hidden></span></div></div>
+    <div class="est-nav"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn" id="next" style="margin-left:auto">Continuer</button></div>
+   </form>
+  </div>
+ </div>
+</div></section>
+
+<section class="pad"><div class="wrap">
+ <div class="rx-head rise"><div class="since">1950<small>Des clients qui reviennent<br>depuis de nombreuses années</small></div><h2>Ce que racontent ceux qui reviennent.</h2></div>
+ <div class="marquee" aria-label="Avis clients"><div class="mq-track">
+  <figure class="rcard"><span class="sc">100/100</span><blockquote>Pour nous, le meilleur hôtel de Morzine. Une maison familiale et une équipe formidable.</blockquote><figcaption>Michael D.</figcaption></figure>
+  <figure class="rcard"><span class="sc">100/100</span><blockquote>Une cuisine incroyable, un très bel espace bien‑être et une équipe adorable.</blockquote><figcaption>Sian H.</figcaption></figure>
+  <figure class="rcard"><span class="sc">100/100</span><blockquote>Pierre, Valérie et Jérémy prennent un soin immense de leurs hôtes.</blockquote><figcaption>Cindy C.</figcaption></figure>
+  <figure class="rcard"><span class="sc">100/100</span><blockquote>Très satisfaits depuis de nombreuses années, nous recommandons vivement.</blockquote><figcaption>Jean‑Paul B.</figcaption></figure>
+  <figure class="rcard"><span class="sc">100/100</span><blockquote>Encore une fois, une cuisine superbe et généreuse.</blockquote><figcaption>Christine M.</figcaption></figure>
+  <figure class="rcard"><span class="sc">100/100</span><blockquote>Un hôtel familial qui tient ses promesses, sur tous les plans.</blockquote><figcaption>Brian S.</figcaption></figure>
+  <figure class="rcard" aria-hidden="true"><span class="sc">100/100</span><blockquote>Pour nous, le meilleur hôtel de Morzine. Une maison familiale et une équipe formidable.</blockquote><figcaption>Michael D.</figcaption></figure>
+  <figure class="rcard" aria-hidden="true"><span class="sc">100/100</span><blockquote>Une cuisine incroyable, un très bel espace bien‑être et une équipe adorable.</blockquote><figcaption>Sian H.</figcaption></figure>
+  <figure class="rcard" aria-hidden="true"><span class="sc">100/100</span><blockquote>Pierre, Valérie et Jérémy prennent un soin immense de leurs hôtes.</blockquote><figcaption>Cindy C.</figcaption></figure>
+  <figure class="rcard" aria-hidden="true"><span class="sc">100/100</span><blockquote>Très satisfaits depuis de nombreuses années, nous recommandons vivement.</blockquote><figcaption>Jean‑Paul B.</figcaption></figure>
+  <figure class="rcard" aria-hidden="true"><span class="sc">100/100</span><blockquote>Encore une fois, une cuisine superbe et généreuse.</blockquote><figcaption>Christine M.</figcaption></figure>
+  <figure class="rcard" aria-hidden="true"><span class="sc">100/100</span><blockquote>Un hôtel familial qui tient ses promesses, sur tous les plans.</blockquote><figcaption>Brian S.</figcaption></figure>
+ </div></div>
+ <p class="note-rv">Extraits reformulés et traduits des avis de vos clients pour la maquette. Dans le site final, les avis s'affichent en version originale et se mettent à jour automatiquement.</p>
+
+ <div class="faq">
+  <h2 class="rise">Avant de réserver, on nous demande souvent…</h2>
+  <div class="faq-list">
+   <details><summary>Quand faut-il réserver pour les vacances de février&nbsp;?</summary><p>Ce sont les semaines les plus demandées de la saison, et une maison de trente chambres se remplit vite. Si vos dates dépendent des vacances scolaires, mieux vaut réserver dès maintenant.</p></details>
+   <details><summary>À quelle distance sont les pistes&nbsp;?</summary><p>L'hôtel est au pied des pistes, à quelques minutes à pied des remontées, et l'arrêt de la navette gratuite est juste en face.</p></details>
+   <details><summary>Les enfants ont-ils accès à la piscine et au spa&nbsp;?</summary><p>Oui, à des horaires dédiés&nbsp;: les moins de 9 ans jusqu'à midi, les 9‑16 ans jusqu'à 18 h, puis l'espace est réservé aux adultes.</p></details>
+   <details><summary>La demi-pension est-elle possible&nbsp;?</summary><p>Oui. Pierre et son équipe cuisinent chaque soir avec des produits frais de producteurs locaux, et le Bistrot de la Clef vous accueille pour un verre avant ou après le dîner.</p></details>
+   <details><summary>Peut-on acheter les forfaits à l'hôtel&nbsp;?</summary><p>Oui, à la réception et à tarif préférentiel. Vous partez skier sans faire la queue.</p></details>
+   <details><summary>Les chiens sont-ils acceptés&nbsp;?</summary><p>Oui, votre chien est le bienvenu. Signalez‑le simplement lors de la réservation.</p></details>
+   <details><summary>Avez-vous de quoi loger un grand groupe&nbsp;?</summary><p>L'appartement C des Champs fait 108 m² et accueille de six à dix personnes, avec tous les services de l'hôtel.</p></details>
+   <details><summary>Quelles sont les dates d'ouverture&nbsp;?</summary><p>Week‑end d'ouverture du vendredi 11 au dimanche 13 décembre 2026, puis saison d'hiver du samedi 19 décembre 2026 au samedi 3 avril 2027. L'hôtel rouvre aussi en été.</p></details>
+  </div>
+ </div>
+
+ <div class="contact">
+  <div><h2>Une question avant de venir&nbsp;?</h2><a class="bigtel" href="tel:+33450791013">04 50 79 10 13</a><p style="margin:0;color:var(--soft)">40 Taille de Mas du Château, avenue de Joux Plane, 74110 Morzine<br>Réception téléphonique de 9 h 30 à 17 h 30</p></div>
+  <div><p style="color:var(--soft);margin-top:0">Ou par email&nbsp;: <a href="mailto:hotel@clefdeschamps.com">hotel@clefdeschamps.com</a>. Massages et soins avec notre partenaire Clair Moment.</p><a class="btn" href="#sejour">Composer mon séjour</a></div>
+ </div>
+</div></section>
+</main>
+
+<footer class="site"><div class="wrap fgrid">
+ <form class="nl" id="nl" onsubmit="return false"><label for="nlm">Recevoir nos nouvelles et nos conseils chaque mois</label><div><input id="nlm" type="email" placeholder="Votre email" autocomplete="email"><button class="btn" type="submit">S'inscrire</button></div><p id="nlok" hidden>Merci, la prochaine lettre arrive début de mois.</p></form>
+ <div style="text-align:right">Hôtel La Clef des Champs, quatre étoiles, Morzine<br>Famille Leblanc, depuis 1950</div>
+</div></footer>
+
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Monsieur Leblanc, voici ce que nous avons relevé sur clefdeschamps.com, et ce que la nouvelle version apporte.</p>
+ <ul class="audit">
+  <li><div class="now"><b>Aujourd'hui</b>La même chambre affiche deux prix selon la page&nbsp;: la Morzinette «&nbsp;à partir de 120&nbsp;€&nbsp;» sur l'accueil, «&nbsp;à partir de 165&nbsp;€&nbsp;» sur la page des chambres.</div><div><b>Avec la refonte</b>Un seul tarif tenu à jour, et un séjour chiffré en direct avant de réserver.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Certains liens de réservation ouvrent encore des dates de juin 2021.</div><div><b>Avec la refonte</b>Un séjour composé sur le vrai calendrier de la saison 2026‑2027, envoyé à la réception en un clic.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Un accueil en anglais avec des titres en français, et un espace bien‑être «&nbsp;réservé aux adultes&nbsp;» sur l'accueil mais ouvert aux enfants sur sa propre page.</div><div><b>Avec la refonte</b>Français, anglais et néerlandais propres, et des horaires clairs pour les familles.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Vos avis notés sur 100 sont rangés dans une page à part, sans mise en avant.</div><div><b>Avec la refonte</b>Vos clients en vitrine, et une FAQ qui répond aux questions avant l'appel.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Rien ne dit s'il neige à Morzine ni dans combien de jours ouvre la saison.</div><div><b>Avec la refonte</b>Neige qui tombe dès l'ouverture, prévisions en direct et compte à rebours.</div></li>
+ </ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Lien direct vers votre moteur de réservation</li><li>Avis clients, barre d'appel mobile, référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Réservation directe</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + composeur de séjour</li><li>FR, EN, NL</li><li>Neige et météo en direct</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + neige animée en temps réel (WebGL)</li><li>Journée à l'hôtel racontée au défilement</li><li>Galerie de chambres en mouvement</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+ <div class="addons">
+  <div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens clients et à vos contacts&nbsp;: ouverture de la saison, neige, nouveautés de la carte, semaines encore libres. Rédigé, mis en page et envoyé pour vous, pour qu'ils réservent en direct.</p></div>
+  <div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Allemand ou une autre langue de votre clientèle, traduite et tenue à jour avec le reste du site.</p></div>
+  <div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos clients après chaque séjour, bilan mensuel.</p></div>
+ </div>
+ <p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20La%20Clef%20des%20Champs">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio.</p></div>
+</div></aside>
+
+<div class="mbar"><a class="btn ghost" href="tel:+33450791013">Appeler</a><a class="btn" href="#sejour">Mon séjour</a></div>
+
+<script>!function(t,i){"object"==typeof exports&&"undefined"!=typeof module?module.exports=i():"function"==typeof define&&define.amd?define(i):(t="undefined"!=typeof globalThis?globalThis:t||self).Lenis=i()}(this,(function(){"use strict";function clamp(t,i,e){return Math.max(t,Math.min(i,e))}class Animate{constructor(){this.isRunning=!1,this.value=0,this.from=0,this.to=0,this.currentTime=0}advance(t){var i;if(!this.isRunning)return;let e=!1;if(this.duration&&this.easing){this.currentTime+=t;const i=clamp(0,this.currentTime/this.duration,1);e=i>=1;const s=e?1:this.easing(i);this.value=this.from+(this.to-this.from)*s}else this.lerp?(this.value=function damp(t,i,e,s){return function lerp(t,i,e){return(1-e)*t+e*i}(t,i,1-Math.exp(-e*s))}(this.value,this.to,60*this.lerp,t),Math.round(this.value)===this.to&&(this.value=this.to,e=!0)):(this.value=this.to,e=!0);e&&this.stop(),null===(i=this.onUpdate)||void 0===i||i.call(this,this.value,e)}stop(){this.isRunning=!1}fromTo(t,i,{lerp:e,duration:s,easing:o,onStart:n,onUpdate:l}){this.from=this.value=t,this.to=i,this.lerp=e,this.duration=s,this.easing=o,this.currentTime=0,this.isRunning=!0,null==n||n(),this.onUpdate=l}}class Dimensions{constructor(t,i,{autoResize:e=!0,debounce:s=250}={}){this.wrapper=t,this.content=i,this.width=0,this.height=0,this.scrollHeight=0,this.scrollWidth=0,this.resize=()=>{this.onWrapperResize(),this.onContentResize()},this.onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)},this.onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)},e&&(this.debouncedResize=function debounce(t,i){let e;return function(...s){let o=this;clearTimeout(e),e=setTimeout((()=>{e=void 0,t.apply(o,s)}),i)}}(this.resize,s),this.wrapper instanceof Window?window.addEventListener("resize",this.debouncedResize,!1):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}destroy(){var t,i;null===(t=this.wrapperResizeObserver)||void 0===t||t.disconnect(),null===(i=this.contentResizeObserver)||void 0===i||i.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener("resize",this.debouncedResize,!1)}get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}}class Emitter{constructor(){this.events={}}emit(t,...i){var e;let s=this.events[t]||[];for(let t=0,o=s.length;t<o;t++)null===(e=s[t])||void 0===e||e.call(s,...i)}on(t,i){var e;return(null===(e=this.events[t])||void 0===e?void 0:e.push(i))||(this.events[t]=[i]),()=>{var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}}off(t,i){var e;this.events[t]=null===(e=this.events[t])||void 0===e?void 0:e.filter((t=>i!==t))}destroy(){this.events={}}}const t=100/6,i={passive:!1};class VirtualScroll{constructor(e,s={wheelMultiplier:1,touchMultiplier:1}){this.element=e,this.options=s,this.touchStart={x:0,y:0},this.lastDelta={x:0,y:0},this.window={width:0,height:0},this.emitter=new Emitter,this.onTouchStart=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:0,y:0},this.emitter.emit("scroll",{deltaX:0,deltaY:0,event:t})},this.onTouchMove=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t,s=-(i-this.touchStart.x)*this.options.touchMultiplier,o=-(e-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:s,y:o},this.emitter.emit("scroll",{deltaX:s,deltaY:o,event:t})},this.onTouchEnd=t=>{this.emitter.emit("scroll",{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:t})},this.onWheel=i=>{let{deltaX:e,deltaY:s,deltaMode:o}=i;e*=1===o?t:2===o?this.window.width:1,s*=1===o?t:2===o?this.window.height:1,e*=this.options.wheelMultiplier,s*=this.options.wheelMultiplier,this.emitter.emit("scroll",{deltaX:e,deltaY:s,event:i})},this.onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}},window.addEventListener("resize",this.onWindowResize,!1),this.onWindowResize(),this.element.addEventListener("wheel",this.onWheel,i),this.element.addEventListener("touchstart",this.onTouchStart,i),this.element.addEventListener("touchmove",this.onTouchMove,i),this.element.addEventListener("touchend",this.onTouchEnd,i)}on(t,i){return this.emitter.on(t,i)}destroy(){this.emitter.destroy(),window.removeEventListener("resize",this.onWindowResize,!1),this.element.removeEventListener("wheel",this.onWheel,i),this.element.removeEventListener("touchstart",this.onTouchStart,i),this.element.removeEventListener("touchmove",this.onTouchMove,i),this.element.removeEventListener("touchend",this.onTouchEnd,i)}}return class Lenis{constructor({wrapper:t=window,content:i=document.documentElement,eventsTarget:e=t,smoothWheel:s=!0,syncTouch:o=!1,syncTouchLerp:n=.075,touchInertiaMultiplier:l=35,duration:r,easing:h=(t=>Math.min(1,1.001-Math.pow(2,-10*t))),lerp:a=.1,infinite:c=!1,orientation:u="vertical",gestureOrientation:d="vertical",touchMultiplier:p=1,wheelMultiplier:m=1,autoResize:v=!0,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w=!1}={}){this._isScrolling=!1,this._isStopped=!1,this._isLocked=!1,this._preventNextNativeScrollEvent=!1,this._resetVelocityTimeout=null,this.time=0,this.userData={},this.lastVelocity=0,this.velocity=0,this.direction=0,this.animate=new Animate,this.emitter=new Emitter,this.onPointerDown=t=>{1===t.button&&this.reset()},this.onVirtualScroll=t=>{if("function"==typeof this.options.virtualScroll&&!1===this.options.virtualScroll(t))return;const{deltaX:i,deltaY:e,event:s}=t;if(this.emitter.emit("virtual-scroll",{deltaX:i,deltaY:e,event:s}),s.ctrlKey)return;const o=s.type.includes("touch"),n=s.type.includes("wheel");this.isTouching="touchstart"===s.type||"touchmove"===s.type;if(this.options.syncTouch&&o&&"touchstart"===s.type&&!this.isStopped&&!this.isLocked)return void this.reset();const l=0===i&&0===e,r="vertical"===this.options.gestureOrientation&&0===e||"horizontal"===this.options.gestureOrientation&&0===i;if(l||r)return;let h=s.composedPath();h=h.slice(0,h.indexOf(this.rootElement));const a=this.options.prevent;if(h.find((t=>{var i,e,s,l,r;return t instanceof HTMLElement&&("function"==typeof a&&(null==a?void 0:a(t))||(null===(i=t.hasAttribute)||void 0===i?void 0:i.call(t,"data-lenis-prevent"))||o&&(null===(e=t.hasAttribute)||void 0===e?void 0:e.call(t,"data-lenis-prevent-touch"))||n&&(null===(s=t.hasAttribute)||void 0===s?void 0:s.call(t,"data-lenis-prevent-wheel"))||(null===(l=t.classList)||void 0===l?void 0:l.contains("lenis"))&&!(null===(r=t.classList)||void 0===r?void 0:r.contains("lenis-stopped")))})))return;if(this.isStopped||this.isLocked)return void s.preventDefault();if(!(this.options.syncTouch&&o||this.options.smoothWheel&&n))return this.isScrolling="native",void this.animate.stop();s.preventDefault();let c=e;"both"===this.options.gestureOrientation?c=Math.abs(e)>Math.abs(i)?e:i:"horizontal"===this.options.gestureOrientation&&(c=i);const u=o&&this.options.syncTouch,d=o&&"touchend"===s.type&&Math.abs(c)>5;d&&(c=this.velocity*this.options.touchInertiaMultiplier),this.scrollTo(this.targetScroll+c,Object.assign({programmatic:!1},u?{lerp:d?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}))},this.onNativeScroll=()=>{if(null!==this._resetVelocityTimeout&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent)this._preventNextNativeScrollEvent=!1;else if(!1===this.isScrolling||"native"===this.isScrolling){const t=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-t,this.direction=Math.sign(this.animatedScroll-t),this.isScrolling="native",this.emit(),0!==this.velocity&&(this._resetVelocityTimeout=setTimeout((()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()}),400))}},window.lenisVersion="1.1.13",t&&t!==document.documentElement&&t!==document.body||(t=window),this.options={wrapper:t,content:i,eventsTarget:e,smoothWheel:s,syncTouch:o,syncTouchLerp:n,touchInertiaMultiplier:l,duration:r,easing:h,lerp:a,infinite:c,gestureOrientation:d,orientation:u,touchMultiplier:p,wheelMultiplier:m,autoResize:v,prevent:g,virtualScroll:S,__experimental__naiveDimensions:w},this.dimensions=new Dimensions(t,i,{autoResize:v}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.addEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll=new VirtualScroll(e,{touchMultiplier:p,wheelMultiplier:m}),this.virtualScroll.on("scroll",this.onVirtualScroll)}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.removeEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName()}on(t,i){return this.emitter.on(t,i)}off(t,i){return this.emitter.off(t,i)}setScroll(t){this.isHorizontal?this.rootElement.scrollLeft=t:this.rootElement.scrollTop=t}resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit("scroll",this)}reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){this.isStopped&&(this.isStopped=!1,this.reset())}stop(){this.isStopped||(this.isStopped=!0,this.animate.stop(),this.reset())}raf(t){const i=t-(this.time||t);this.time=t,this.animate.advance(.001*i)}scrollTo(t,{offset:i=0,immediate:e=!1,lock:s=!1,duration:o=this.options.duration,easing:n=this.options.easing,lerp:l=this.options.lerp,onStart:r,onComplete:h,force:a=!1,programmatic:c=!0,userData:u}={}){if(!this.isStopped&&!this.isLocked||a){if("string"==typeof t&&["top","left","start"].includes(t))t=0;else if("string"==typeof t&&["bottom","right","end"].includes(t))t=this.limit;else{let e;if("string"==typeof t?e=document.querySelector(t):t instanceof HTMLElement&&(null==t?void 0:t.nodeType)&&(e=t),e){if(this.options.wrapper!==window){const t=this.rootElement.getBoundingClientRect();i-=this.isHorizontal?t.left:t.top}const s=e.getBoundingClientRect();t=(this.isHorizontal?s.left:s.top)+this.animatedScroll}}if("number"==typeof t){if(t+=i,t=Math.round(t),this.options.infinite?c&&(this.targetScroll=this.animatedScroll=this.scroll):t=clamp(0,t,this.limit),t===this.targetScroll)return null==r||r(this),void(null==h||h(this));if(this.userData=null!=u?u:{},e)return this.animatedScroll=this.targetScroll=t,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),null==h||h(this),void(this.userData={});c||(this.targetScroll=t),this.animate.fromTo(this.animatedScroll,t,{duration:o,easing:n,lerp:l,onStart:()=>{s&&(this.isLocked=!0),this.isScrolling="smooth",null==r||r(this)},onUpdate:(t,i)=>{this.isScrolling="smooth",this.lastVelocity=this.velocity,this.velocity=t-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=t,this.setScroll(this.scroll),c&&(this.targetScroll=t),i||this.emit(),i&&(this.reset(),this.emit(),null==h||h(this),this.userData={},this.preventNextNativeScrollEvent())}})}}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame((()=>{this._preventNextNativeScrollEvent=!1}))}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.__experimental__naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?"x":"y"]}get isHorizontal(){return"horizontal"===this.options.orientation}get actualScroll(){return this.isHorizontal?this.rootElement.scrollLeft:this.rootElement.scrollTop}get scroll(){return this.options.infinite?function modulo(t,i){return(t%i+i)%i}(this.animatedScroll,this.limit):this.animatedScroll}get progress(){return 0===this.limit?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(t){this._isScrolling!==t&&(this._isScrolling=t,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(t){this._isStopped!==t&&(this._isStopped=t,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(t){this._isLocked!==t&&(this._isLocked=t,this.updateClassName())}get isSmooth(){return"smooth"===this.isScrolling}get className(){let t="lenis";return this.isStopped&&(t+=" lenis-stopped"),this.isLocked&&(t+=" lenis-locked"),this.isScrolling&&(t+=" lenis-scrolling"),"smooth"===this.isScrolling&&(t+=" lenis-smooth"),t}updateClassName(){this.cleanUpClassName(),this.rootElement.className=`${this.rootElement.className} ${this.className}`.trim()}cleanUpClassName(){this.rootElement.className=this.rootElement.className.replace(/lenis(-\w+)?/g,"").trim()}}}));
+
+</script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lenis=null;
+if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+function $(id){return document.getElementById(id);}
+
+/* ---------- Nuit d'hiver sur Morzine, neige au vent (WebGL) ---------- */
+var cv=$('sky'),gl=null;try{gl=cv.getContext('webgl',{antialias:false,alpha:false});}catch(e){}
+var heroVisible=true,t0=performance.now();
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ var fs=['precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;',
+ 'float hs(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+ 'float ns(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hs(i),hs(i+vec2(1.,0.)),f.x),mix(hs(i+vec2(0.,1.)),hs(i+vec2(1.,1.)),f.x),f.y);}',
+ 'float rg(float x,float s){float v=0.,a=.55;for(int i=0;i<5;i++){float n=ns(vec2(x,s));v+=a*(1.-abs(n*2.-1.));x=x*2.1+3.7;a*=.48;}return v;}',
+ 'void main(){vec2 uv=gl_FragCoord.xy/r;float as=r.x/r.y;vec2 p=vec2(uv.x*as,uv.y);vec2 w=(m-.5);',
+ 'vec3 col=mix(vec3(.13,.2,.32),vec3(.025,.04,.085),pow(uv.y,.8));',
+ 'vec2 mp=vec2(as*.8+w.x*.02,.83);float md=length(p-mp);col+=vec3(.75,.82,.95)*(smoothstep(.042,.036,md)*.9+exp(-md*5.)*.13);',
+ 'vec2 sc=floor(p*180.);float sv=hs(sc);col+=step(.994,sv)*smoothstep(.5,.95,uv.y)*(.45+.45*sin(t*1.7+sv*40.))*vec3(.9,.92,1.);',
+ 'for(int i=0;i<3;i++){float fi=float(i);float x=p.x+w.x*.05*(fi+1.);float h=.5-fi*.12+(rg(x*(1.1+fi*.7)+fi*5.3,fi*3.1)-.55)*(.42-fi*.08);',
+ 'float d=h-uv.y;float inside=smoothstep(-.002,.002,d);vec3 mc=mix(vec3(.11,.16,.26),vec3(.03,.05,.09),fi/2.);',
+ 'float lit=smoothstep(.0,.004,rg(x*(1.1+fi*.7)+fi*5.3+.01,fi*3.1)-rg(x*(1.1+fi*.7)+fi*5.3,fi*3.1));',
+ 'vec3 sn=mix(vec3(.55,.62,.74),vec3(.82,.87,.95),lit)*(.75-fi*.22);mc=mix(mc,sn,(1.-smoothstep(0.,.07+fi*.05,d))*(.85-fi*.25));',
+ 'mc+=vec3(.1,.12,.16)*ns(vec2(x*30.,uv.y*30.))*(1.-fi*.4)*.4;col=mix(col,mc,inside);',
+ 'if(i==2){vec2 lq=vec2(x*60.,uv.y*60.);vec2 lc=floor(lq);float lv=hs(lc+7.);float dd=length(fract(lq)-.5);float on=step(.93,lv)*step(uv.y,min(h-.04,.17))*step(.02,uv.y);col+=vec3(1.,.7,.35)*on*(smoothstep(.16,.05,dd)*.9+smoothstep(.5,.0,dd)*.12)*(.75+.25*sin(t*2.+lv*50.));col+=vec3(.9,.55,.2)*exp(-abs(uv.y-.07)*16.)*.06;}}',
+ 'for(int k=0;k<4;k++){float fk=float(k);float s=7.+fk*7.;vec2 q=p*s;q.y+=t*(1.1+fk*.45);q.x+=sin(t*.4+fk*2.)*.6+t*w.x*(1.5+fk)+uv.y*w.x*2.;',
+ 'vec2 id=floor(q);vec2 f=fract(q)-.5;vec2 o=(vec2(hs(id),hs(id+11.))-.5)*.75;float rr=(.045+.04*hs(id+5.))*(1.25-fk*.18);float fl=smoothstep(rr,rr*.35,length(f-o))*step(.25,hs(id+2.));col+=vec3(.92,.95,1.)*fl*(.85-fk*.15);}',
+ 'col*=(1.-.3*length(uv-vec2(.5,.55)))*mix(.5,1.,smoothstep(.0,.5,uv.y));gl_FragColor=vec4(col,1.);}'].join('');
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(o));return o;}
+ var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.5,my=.5,tx=.5,ty=.5;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5);cv.width=Math.round(cv.clientWidth*d*.75);cv.height=Math.round(cv.clientHeight*d*.75);gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ window.__drawSky=function(ts){if(!heroVisible)return;mx+=(tx-mx)*.04;my+=(ty-my)*.04;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?6.:(ts-t0)/1000);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ window.__drawSky(t0+6000);
+}
+
+/* ---------- Scènes au défilement ---------- */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+var hdr=$('hdr'),proof=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=$('rv'),rvImg=rv.querySelector('img');
+var dayS=document.querySelector('.day'),sun=$('sun'),moon=$('moon'),skyDay=$('skyDay'),ridge=$('ridge'),snowcap=$('snowcap'),trk=$('skiTrack'),wins=$('wins').children,dine=$('dine'),roof=$('roof'),steam=$('steam'),bus=$('bus'),lbls=document.querySelectorAll('.lbl'),live=document.querySelectorAll('#live li'),clock=$('clock');
+var gS=document.querySelector('.hgal'),track=$('track'),gImgs=track.querySelectorAll('img'),gc=$('gcount'),N=gImgs.length;
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+function fmtFact(b,v){b.textContent=(b.dataset.raw?Math.round(v):Math.round(v).toLocaleString('fr-FR'))+(b.dataset.suf||'');}
+var HRS=['Le matin','Sur les pistes','16 h','18 h','Le soir'];
+function scenes(ts){
+ hdr.classList.toggle('solid',scrollY>innerHeight*.85);hdr.style.top=Math.max(0,proof.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*24+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.4){factsDone=true;facts.forEach(function(b){var to=+b.dataset.to,fr=+b.dataset.from||0,st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1500));fmtFact(b,fr+(to-fr)*k);if(k<1)requestAnimationFrame(tick);})(st);});}
+ var c=prog(dayS);
+ ridge.setAttribute('stroke-dashoffset',1-ease(seg(c,0,.14)));snowcap.setAttribute('opacity',seg(c,.1,.16));
+ var sa=seg(c,.0,.78),ang=Math.PI*(1-sa);sun.setAttribute('transform','translate('+(380+Math.cos(ang)*330)+','+(250-Math.sin(ang)*200)+')');sun.setAttribute('opacity',1-seg(c,.7,.8));
+ skyDay.setAttribute('opacity',(seg(c,.02,.18)-seg(c,.62,.8))*.85);moon.setAttribute('opacity',seg(c,.74,.84));
+ var bq=seg(c,.16,.38);bus.setAttribute('transform','translate('+(bq*680)+',0)');bus.setAttribute('opacity',seg(c,.14,.18)-seg(c,.38,.42));trk.setAttribute('opacity',seg(c,.22,.3)-seg(c,.4,.46));
+ roof.setAttribute('transform','translate('+(seg(c,.42,.52)*120)+','+(-seg(c,.42,.52)*14)+')');
+ steam.setAttribute('opacity',seg(c,.58,.64));steam.setAttribute('transform','translate(0,'+(Math.sin(ts/500)*3)+')');
+ for(var k=0;k<wins.length;k++)wins[k].setAttribute('opacity',.15+.85*seg(c,.62+k*.02,.7+k*.02));
+ dine.setAttribute('opacity',.15+.85*seg(c,.8,.88));
+ lbls.forEach(function(l,i){var a=[.2,.44,.82][i];l.setAttribute('opacity',seg(c,a,a+.05)-seg(c,a+.16,a+.2)*(i<2?1:0));});
+ var st=c<.18?0:c<.4?1:c<.58?2:c<.78?3:4;live.forEach(function(li,i){li.classList.toggle('on',i===st);});clock.textContent=HRS[st];
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(20,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ gc.textContent='0'+Math.min(N,1+Math.floor(g*N))+' / 0'+N;
+}
+function loop(ts){if(lenis)lenis.raf(ts);if(window.__drawSky&&!RM)window.__drawSky(ts);scenes(ts);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+if(RM)facts.forEach(function(b){fmtFact(b,+b.dataset.to);});
+
+/* ---------- Neige et météo en direct (open-meteo) ---------- */
+var OPEN=new Date(2026,11,19);
+(function(){var d=Math.ceil((OPEN-new Date())/864e5);$('cdD').textContent=d>0?d:'Ouvert';if(d<=0)$('cdD').nextElementSibling.textContent='la saison bat son plein';})();
+var JRS=['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'];
+(function(){var fc=$('fc'),fd=$('fcDays');
+ function demo(){$('fcWrap').hidden=true;$('snowSum').parentNode.hidden=true;}
+ var sd=new Date(2026,11,1),ed=new Date(2027,4,1),nw=new Date(),pc=(nw-sd)/(ed-sd);if(pc>=0&&pc<=1){$('sbNow').style.left=(pc*100)+'%';}else $('sbNow').hidden=true;
+ try{fetch('https://api.open-meteo.com/v1/forecast?latitude=46.18&longitude=6.71&elevation=1000&current=temperature_2m&daily=snowfall_sum,temperature_2m_max&timezone=Europe%2FParis&forecast_days=7').then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(j){
+  var s=j.daily.snowfall_sum,tm=j.daily.time,mxv=Math.max.apply(null,s.concat([1])),sum=s.reduce(function(a,b){return a+b;},0);
+  fc.innerHTML=s.map(function(v){return'<div><span>'+(v>0?v.toFixed(0)+' cm':'')+'</span><i style="--h:'+Math.max(.02,v/mxv)+'"></i></div>';}).join('');
+  fd.innerHTML=tm.map(function(d){return'<span>'+JRS[new Date(d+'T12:00').getDay()]+'</span>';}).join('');
+  $('snowSum').textContent=Math.round(sum)+' cm';
+  if(j.current&&typeof j.current.temperature_2m==='number'){$('wxT').textContent=Math.round(j.current.temperature_2m)+'°';$('wx').hidden=false;}
+ }).catch(demo);}catch(e){demo();}
+})();
+
+/* ---------- Composeur de séjour ---------- */
+var ROOMS={morz:['La Morzinette','17 à 19 m², 1 à 2 personnes',165,2],junior:['La Junior','20 à 25 m², 2 à 3 personnes',225,3],suite:['La Suite','26 à 33 m², 2 à 4 personnes',265,4],apt:['Appartement C des Champs','108 m², 6 à 10 personnes',0,10]};
+var BOARD={bb:'Chambre et petit‑déjeuner',hb:'Demi‑pension',pass:'Avec forfaits de ski',spa:'Avec soins'};
+var MOIS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+var SEASON=[[new Date(2026,11,11),new Date(2026,11,13)],[new Date(2026,11,19),new Date(2027,3,3)]];
+var st={arr:new Date(2026,11,19),n:7,ad:2,ch:0,dog:0,room:'morz',board:'hb'},view=new Date(2026,11,1);
+function open(d){return SEASON.some(function(s){return d>=s[0]&&d<=s[1];});}
+function dstr(d){return d.getDate()+' '+MOIS[d.getMonth()];}
+function addD(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x;}
+function eur(n){return Math.round(n).toLocaleString('fr-FR')+' €';}
+var cL=0,cP=0;
+function price(){var r=ROOMS[st.room];if(!r[2])return 0;return r[2]*st.n;}
+function tween(v){var a0=cL,st0=performance.now();cL=v;(function tk(n){var q=ease(Math.min(1,(n-st0)/700)),x=a0+(v-a0)*q;$('pDirect').textContent=v?'dès '+eur(x):'sur demande';$('pPlat').textContent=v?'dès '+eur(x*1.17):'—';if(q<1)requestAnimationFrame(tk);})(st0);}
+function drawCal(){var c=$('cal'),y=view.getFullYear(),m=view.getMonth();$('mName').textContent=MOIS[m]+' '+y;var h=['L','M','M','J','V','S','D'].map(function(x){return'<span class="dn">'+x+'</span>';}).join('');var first=(new Date(y,m,1).getDay()+6)%7,days=new Date(y,m+1,0).getDate(),out='';for(var k=0;k<first;k++)out+='<span></span>';
+ var end=addD(st.arr,st.n);for(var d=1;d<=days;d++){var dt=new Date(y,m,d),cls=[];if(dt.getDay()===6)cls.push('sat');if(+dt===+st.arr)cls.push('s');else if(dt>st.arr&&dt<end)cls.push('in');out+='<button type="button" data-d="'+d+'" class="'+cls.join(' ')+'"'+(open(dt)?'':' disabled')+'>'+d+'</button>';}
+ c.innerHTML=h+out;c.querySelectorAll('button[data-d]').forEach(function(b){b.onclick=function(){st.arr=new Date(y,m,+b.dataset.d);upd();drawCal();};});
+ $('mPrev').disabled=+view<=+new Date(2026,11,1);$('mNext').disabled=+view>=+new Date(2027,3,1);}
+$('mPrev').onclick=function(){view=new Date(view.getFullYear(),view.getMonth()-1,1);drawCal();};
+$('mNext').onclick=function(){view=new Date(view.getFullYear(),view.getMonth()+1,1);drawCal();};
+$('nMinus').onclick=function(){st.n=Math.max(1,st.n-1);upd();drawCal();};$('nPlus').onclick=function(){st.n=Math.min(21,st.n+1);upd();drawCal();};
+document.querySelectorAll('.ctr button').forEach(function(b){b.onclick=function(){var k=b.dataset.c,lim={ad:[1,10],ch:[0,8],dog:[0,2]}[k];st[k]=Math.min(lim[1],Math.max(lim[0],st[k]+ +b.dataset.d));upd();};});
+function upd(){
+ var f=$('est'),r=f.querySelector('[name=room]:checked'),b=f.querySelector('[name=board]:checked');st.room=r.value;st.board=b.value;
+ $('nVal').textContent=st.n+(st.n>1?' nuits':' nuit');$('adV').textContent=st.ad;$('chV').textContent=st.ch;$('dogV').textContent=st.dog;
+ var R=ROOMS[st.room],tot=st.ad+st.ch;$('rname').innerHTML=R[0]+'<small>'+R[1]+'</small>';
+ document.querySelectorAll('#room [data-r]').forEach(function(el){el.classList.toggle('on',el.dataset.r===st.room);});
+ $('capHint').textContent=tot+' voyageur'+(tot>1?'s':'')+(tot>R[3]?' : prévoyez une chambre plus grande ou deux chambres.':' : cette chambre vous convient.');
+ tween(price());
+ var hs=[st.arr.getFullYear(),st.arr.getMonth()+1,st.arr.getDate(),st.n,st.ad,st.ch,st.dog,st.room,st.board].join('~');try{history.replaceState(null,'','#sejour='+hs);}catch(e){}
+}
+function lines(){var R=ROOMS[st.room];return[['Arrivée',dstr(st.arr)],['Départ',dstr(addD(st.arr,st.n))],['Durée',st.n+(st.n>1?' nuits':' nuit')],['Voyageurs',st.ad+' adulte'+(st.ad>1?'s':'')+(st.ch?', '+st.ch+' enfant'+(st.ch>1?'s':''):'')+(st.dog?', un chien':'')],['Chambre',R[0]],['Formule',BOARD[st.board]],['Hébergement',price()?'dès '+eur(price()):'sur demande']];}
+var f=$('est'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=$('prev'),nx=$('next'),chips=$('chips'),i=0,reached=0,LAST=S.length-1;
+function drawChips(){chips.innerHTML='';S.forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached;b.onclick=function(){i=k;show();};li.appendChild(b);chips.appendChild(li);});}
+function show(){S.forEach(function(el,k){el.hidden=k!==i;if(k===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0;nx.hidden=i===LAST;nx.textContent=i===LAST-1?'Voir mon séjour':'Continuer';drawChips();upd();if(i===LAST)$('recap').innerHTML=lines().map(function(r){return'<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');}
+f.addEventListener('change',function(e){upd();if(e.target.type==='radio'){var at=i;setTimeout(function(){if(i===at&&i<LAST){i++;show();}},420);}});
+nx.onclick=function(){if(i<LAST){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};
+(function(){var m=location.hash.match(/sejour=([^&]+)/);if(!m)return;var p=m[1].split('~');if(p.length<9)return;var d=new Date(+p[0],+p[1]-1,+p[2]);if(!isNaN(d)&&open(d)){st.arr=d;view=new Date(d.getFullYear(),d.getMonth(),1);}st.n=+p[3]||7;st.ad=+p[4]||2;st.ch=+p[5]||0;st.dog=+p[6]||0;var r=f.querySelector('[name=room][value="'+p[7]+'"]');if(r)r.checked=true;var b=f.querySelector('[name=board][value="'+p[8]+'"]');if(b)b.checked=true;})();
+drawCal();show();
+$('mailBtn').addEventListener('click',function(){var nm=$('n').value.trim(),body='Bonjour,\n\nJe souhaiterais réserver ce séjour :\n'+lines().map(function(r){return'- '+r[0]+' : '+r[1];}).join('\n')+'\n\n'+(nm?nm+'\n':'')+location.href;this.href='mailto:hotel@clefdeschamps.com?subject='+encodeURIComponent('Séjour du '+dstr(st.arr)+' ('+st.n+' nuits)')+'&body='+encodeURIComponent(body);});
+$('copyBtn').addEventListener('click',function(){var c=$('copied');(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});
+$('nl').addEventListener('submit',function(){var m=$('nlm');if(!/.+@.+\..+/.test(m.value)){m.focus();return;}$('nlok').hidden=false;m.value='';});
+
+/* ---------- Langues ---------- */
+var L={en:{n1:'Rooms',n2:'Pool and spa',n3:'Snow',cta1s:'Plan my stay',h1a:'A family pension from 1950,',h1b:'now a four-star hotel.',h1c:'The family stayed.',lede:'At the foot of the Morzine slopes: thirty chalet-style rooms, a pool heated to 30 degrees under a telescopic roof, and Pierre’s home cooking every evening.',cta1:'Plan my stay'},nl:{n1:'Kamers',n2:'Zwembad en spa',n3:'Sneeuw',cta1s:'Mijn verblijf',h1a:'Een pension uit 1950,',h1b:'nu een viersterrenhotel.',h1c:'De familie bleef.',lede:'Aan de voet van de pistes van Morzine: dertig kamers in chaletstijl, een zwembad van 30 graden onder een schuifdak, en elke avond de huisgemaakte keuken van Pierre.',cta1:'Mijn verblijf samenstellen'}},fr={};
+document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.textContent;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){e.textContent=L[l][e.dataset.i];});};});
+})();
+</script>
+</body>
+</html>

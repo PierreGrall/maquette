@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hôtel Ohartzia — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0F1E36;--water:#1D4E9E;--foam:#CFE0F2;--rouge:#A8232C;--chaux:#F5F6F2;--vert:#1E3A2C;--ink:#14213A;--soft:#56627A;--line:#CDD3DC;--white:#FFFFFF;--gold:#C9952F;--d:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;--t:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;--f:"Fraunces",Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--chaux);color:var(--ink);font-family:var(--t);font-size:1.0625rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:700;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--water);background:var(--water);color:#fff;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px);background:#173f82}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{margin:0}
+h1,h2{font-family:var(--f);font-weight:400;letter-spacing:-.015em;font-variation-settings:"opsz" 120}
+h3{font-family:var(--d);font-weight:700}
+h2{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.04;max-width:18ch}
+h2 em{font-style:italic;color:var(--water)}
+.lede{color:var(--soft);max-width:38rem}
+
+/* Bandeau + en-tête */
+.proof{position:relative;z-index:40;background:#060D19;color:#c9d6e6;font-family:var(--d);font-size:.8rem}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:top .3s}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:rgba(15,30,54,.34);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.18);transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:rgba(245,246,242,.8);color:var(--ink);border-color:rgba(20,33,58,.1)}
+header.site .btn{padding:.6rem 1.1rem}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none}
+.lmark{width:30px;height:30px;flex:none}
+.bname{font-family:var(--f);font-size:1.2rem;font-weight:500;letter-spacing:-.01em;white-space:nowrap}
+.hnav{display:flex;align-items:center;gap:1.3rem;font-family:var(--d);font-size:.9rem}
+.hnav a{text-decoration:none;opacity:.88}
+.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+@media(max-width:600px){header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}.bname{font-size:1.02rem}.lmark{width:26px;height:26px}}
+
+/* Ouverture : la baie en lumière */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+#bay{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-size:clamp(2.1rem,5.4vw,5.4rem);line-height:1.02;font-weight:420;text-shadow:0 2px 30px rgba(6,13,25,.35)}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(108%);transition:transform 1.25s cubic-bezier(.16,1,.3,1)}
+.hero h1 .ln:nth-child(2) span{transition-delay:.1s}.hero h1 .ln:nth-child(3) span{transition-delay:.2s;font-style:italic}
+.ready .hero h1 .ln span{transform:none}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .6s,transform 1s .6s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:#dbe6f3;margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.wx{display:inline-flex;gap:.9rem;flex-wrap:wrap;font-family:var(--d);font-size:.82rem;color:#e8eef6;margin-top:1rem;padding:.35rem .9rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(15,30,54,.3);backdrop-filter:blur(8px)}
+.wx b{font-weight:700;color:#fff}
+.scrollhint{position:absolute;right:1.25rem;bottom:1.25rem;z-index:2;font-family:var(--d);font-size:.75rem;color:#b9c9de;writing-mode:vertical-rl}
+@media(max-width:600px){.hero h1{font-size:clamp(1.2rem,5.5vw,2.4rem)}.hero-inner{padding-bottom:6.5rem}.hero-ctas .ghost{display:none}}
+
+/* Le jardin : révélation */
+.reveal{height:220vh;position:relative;background:var(--vert)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:#2c4a39}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .shade{position:absolute;inset:0;background:rgba(10,20,16,.28);pointer-events:none}
+.reveal .cap{position:absolute;left:clamp(1.25rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);color:#fff;z-index:2;max-width:28rem}
+.reveal .cap b{display:block;font-family:var(--f);font-weight:400;font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.08;margin-bottom:.5rem}
+.reveal .cap span{font-family:var(--d);font-size:.9rem;color:#e4ece6}
+.facts{position:absolute;top:clamp(6rem,15vh,9rem);right:clamp(1.25rem,4vw,3rem);z-index:2;display:grid;gap:1.3rem;color:#fff;text-align:right}
+.facts b{display:block;font-family:var(--f);font-weight:400;font-size:clamp(2rem,3.8vw,3.2rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-family:var(--d);font-size:.82rem;color:#e4ece6}
+
+/* Une journée */
+.day{height:360vh;position:relative;background:var(--deep);color:#dfe7f2}
+.day .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.day-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.day h2{color:#fff;margin-bottom:1rem}.day h2 em{color:var(--foam)}
+.day .lede{color:#a7b6cc;margin:0 0 1.8rem}
+.day svg{width:100%;height:auto;display:block;border-radius:6px;background:#9fbfdc}
+.shut{transform-box:fill-box}.shut.l{transform-origin:left center}.shut.r{transform-origin:right center}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps-live li{border-left:2px solid #26385a;padding:.2rem 0 .2rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--foam)}
+.steps-live b{display:block;font-family:var(--d);color:#fff;font-weight:700}
+.steps-live b i{font-style:normal;font-family:var(--f);font-weight:400;color:var(--foam);margin-right:.5rem;font-variant-numeric:tabular-nums}
+.steps-live span{font-size:.96rem;color:#a7b6cc}
+.meter{height:2px;background:#26385a;margin-top:2rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--foam);transform-origin:left;transform:scaleX(0)}
+
+/* Galerie */
+.hgal{height:380vh;position:relative;background:var(--chaux)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(60vw,700px);margin:0}
+.card.tall{width:min(34vw,400px)}
+.card .ph{height:min(58vh,520px);overflow:hidden;border-radius:4px;background:#c9d3de}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{font-family:var(--d);margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-weight:700}.card figcaption span{color:var(--soft);font-size:.9rem}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--f);font-size:1.3rem;font-variant-numeric:tabular-nums}
+
+/* Infos pratiques */
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.facts2{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin:3rem 0 0;padding:0;list-style:none}
+.facts2 li{border-top:2px solid var(--ink);padding-top:1rem}
+.facts2 b{display:block;font-family:var(--f);font-weight:400;font-size:2.2rem;line-height:1.05;color:var(--water);margin-bottom:.6rem}
+.facts2 h3{font-size:1.05rem;margin-bottom:.35rem}.facts2 p{margin:0;color:var(--soft);font-size:.97rem}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+
+/* Réservation directe */
+.book{background:var(--deep);color:#e4ebf5;position:relative;overflow:hidden}
+.book h2{color:#fff}.book h2 em{color:var(--foam)}.book .lede{color:#a7b6cc}
+.cfg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1rem;overflow:hidden}
+.pv-ph{position:relative;aspect-ratio:16/10;border-radius:8px;overflow:hidden;background:#24375a}
+.pv-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .7s,transform 1.2s cubic-bezier(.16,1,.3,1)}
+.pv-ph img.on{opacity:1;transform:none}
+.pv-tag{position:absolute;left:.7rem;bottom:.7rem;font-family:var(--d);font-size:.78rem;color:#fff;background:rgba(15,30,54,.55);backdrop-filter:blur(8px);border-radius:999px;padding:.3rem .75rem}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem;font-family:var(--d)}
+.live span{font-size:.8rem;color:#93a6c2}.live b{display:block;white-space:nowrap;font-family:var(--f);font-weight:400;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.05;color:#fff;font-variant-numeric:tabular-nums}
+.live small{font-size:.8rem;color:#93a6c2;text-align:right;max-width:14rem}
+.nights{display:flex;align-items:flex-end;gap:3px;height:64px;margin-top:1rem}
+.nights i{flex:1;height:100%;border-radius:2px 2px 0 0;transform-origin:bottom;transition:transform .6s cubic-bezier(.16,1,.3,1),background .4s}
+.s0{background:#5d7fae}.s1{background:#9cc0e6}.s2{background:#F2C46B}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;font-family:var(--d);font-size:.74rem;color:#93a6c2;margin-top:.5rem}
+.legend span{display:inline-flex;align-items:center;gap:.35rem}.legend i{width:9px;height:9px;border-radius:2px;display:inline-block}
+.vs{margin-top:1rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.8rem;font-family:var(--d);font-size:.86rem;display:grid;gap:.3rem}
+.vs div{display:flex;justify-content:space-between;gap:1rem}.vs span{color:#93a6c2}.vs b{font-variant-numeric:tabular-nums;color:#fff;white-space:nowrap}
+.vs p{margin:.2rem 0 0;color:#93a6c2;font-size:.78rem}
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.25rem,3vw,2rem)}
+fieldset{border:0;margin:0;padding:0}legend{font-family:var(--f);font-weight:400;font-size:1.5rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem .95rem;cursor:pointer;font-family:var(--d);font-weight:600;font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:#93a6c2;font-weight:400;font-size:.8rem;margin-top:.2rem}
+.choice input:checked+label{border-color:var(--foam);background:rgba(207,224,242,.08)}
+.choice input:focus-visible+label{outline:3px solid var(--foam);outline-offset:2px}
+.choice input:disabled+label{opacity:.35;cursor:not-allowed}
+.step-anim{animation:stin .55s cubic-bezier(.16,1,.3,1)}@keyframes stin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:#93a6c2;padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--foam);color:var(--deep);border-color:var(--foam)}
+.chips button.done{color:#fff;border-color:rgba(207,224,242,.5)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.86rem;color:#93a6c2;margin:-.4rem 0 1rem}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem;font-family:var(--d);font-weight:700;color:#fff}
+.cal-head button{font:inherit;font-weight:600;font-size:.82rem;background:none;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:999px;padding:.3rem .8rem;cursor:pointer}
+.cal-head button:disabled{opacity:.3;cursor:default}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;font-family:var(--d);font-size:.86rem}
+.cal .wd{text-align:center;color:#7f93b1;font-size:.72rem;padding:.2rem 0}
+.cal button{position:relative;aspect-ratio:1/1;border:0;border-radius:6px;background:rgba(255,255,255,.04);color:#e4ebf5;font:inherit;cursor:pointer;font-variant-numeric:tabular-nums;transition:background .2s}
+.cal button::after{content:"";position:absolute;left:30%;right:30%;bottom:4px;height:2px;border-radius:2px;opacity:.85}
+.cal button.s0::after{background:#5d7fae}.cal button.s1::after{background:#9cc0e6}.cal button.s2::after{background:#F2C46B}
+.cal button.s0,.cal button.s1,.cal button.s2{background-color:rgba(255,255,255,.04)}
+.cal button:disabled{opacity:.25;cursor:default}
+.cal button.in{background:rgba(207,224,242,.16)}
+.cal button.a,.cal button.b{background:var(--foam);color:var(--deep);font-weight:700}
+.cal-sel{font-family:var(--d);font-size:.88rem;color:#c7d4e6;margin:.8rem 0 0}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-family:var(--d);font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#93a6c2}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-family:var(--d);font-size:.88rem}
+.field input,.field select{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.06);color:#fff}
+.field select option{color:#14213A}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.copied{font-family:var(--d);font-size:.82rem;color:var(--foam);align-self:center}
+.note{font-size:.85rem;color:#8396b3;margin-top:1rem}
+.big-thanks{font-family:var(--f);font-size:1.7rem;line-height:1.15;color:#fff;margin:.2rem 0 .8rem}
+[hidden]{display:none!important}
+
+/* Avis, contact, pied de page */
+.score{font-family:var(--f);font-weight:400;font-size:4.6rem;line-height:1}.score small{display:block;font-family:var(--d);font-size:.85rem;color:var(--soft);margin-top:.4rem}
+.stars{color:var(--gold);letter-spacing:.1em}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.bigtel{font-family:var(--f);font-weight:400;font-size:clamp(2.2rem,5vw,3.8rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-family:var(--d);font-size:.86rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:grid;gap:.5rem;max-width:26rem}
+.nl-form label{font-weight:700;color:var(--ink)}
+.nl-form div{display:flex;gap:.5rem}
+.nl-form input{flex:1;min-width:0;font:inherit;padding:.65rem .9rem;border:1.5px solid var(--line);border-radius:999px;background:#fff;color:var(--ink)}
+.nl-form .btn{padding:.65rem 1.1rem}
+.nl-ok{color:var(--water);font-weight:600}
+
+.studio{background:#DCE3E1;border-top:6px solid var(--water);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid #B9C4C1}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid #B9C4C1}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid #B9C4C1}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid #B9C4C1}.addons b{font-weight:600}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--white);border:1px solid #B9C4C1;border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:#e7f2f3;border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--water);font-weight:600}.offer.rec .tag{color:var(--foam)}
+.offer h3{font-stretch:110%;font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 48s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-size:1.06rem;line-height:1.5}.rcard figcaption{font-family:var(--d);font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--water),var(--water)) center/14px 2px no-repeat,linear-gradient(var(--water),var(--water)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.rx-head,.faq{grid-template-columns:1fr;gap:1.5rem}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none;flex-wrap:wrap;width:auto}}
+.studio{background:#E3E8EF;border-top:6px solid var(--water)}
+.audit,.audit li,.addons,.addons div,.offer{border-color:#BFC8D6}
+.offer.rec{background:var(--deep);border-color:var(--deep)}
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .day-grid,.cfg,.contact{grid-template-columns:1fr}
+ .day{height:320vh}.day h2{font-size:1.8rem}.day .lede{display:none}
+ .facts2{grid-template-columns:1fr 1fr}.offers{grid-template-columns:1fr}
+ .card{width:82vw}.card.tall{width:56vw}.facts{top:auto;bottom:8.5rem}
+ .preview{position:relative;top:0}
+}
+@media (max-width:600px){
+ .hnav .btn{display:none}.facts2{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}.audit li{grid-template-columns:1fr;gap:.5rem}
+ .steps-live li:not(.on){display:none}.day-grid{gap:1.2rem}
+ .choices{grid-template-columns:1fr}
+ .facts{top:5.5rem;bottom:auto;gap:.9rem}.facts b{font-size:1.9rem}.reveal .cap b{font-size:1.4rem}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(15,30,54,.92);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+ .nl-form div{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.day,.hgal{height:auto}.reveal .stick,.day .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .pv-ph img,.nights i{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour l'Hôtel Ohartzia par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Hôtel Ohartzia, accueil"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 15 L17 5 L29 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M6 13.5 V28 H26 V12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><rect x="9" y="16" width="4" height="5" fill="currentColor"/><rect x="19" y="16" width="4" height="5" fill="currentColor"/><path d="M14 28 V23 H18 V28" fill="none" stroke="currentColor" stroke-width="2"/></svg><span class="bname">Hôtel Ohartzia</span></a>
+ <nav class="hnav" aria-label="Navigation">
+  <a class="nl" href="#jardin" data-i="n1">Le jardin</a><a class="nl" href="#journee" data-i="n2">Une journée</a><a class="nl" href="#chambres" data-i="n3">Les chambres</a>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button><button type="button" aria-pressed="false" data-l="es">ES</button></div>
+  <a class="btn" href="#reserver" data-i="cta1s">Réserver</a>
+ </nav>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="bay" aria-hidden="true"></canvas>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">Un jardin caché</span></span><span class="ln"><span data-i="h1b">à deux pas de la Grande Plage.</span></span><span class="ln"><span data-i="h1c">Quatorze chambres, pas une de plus.</span></span></h1>
+  <div class="hero-row">
+   <div><p data-i="lede">Une maison basque aux volets bleus, tenue en famille au cœur de Saint‑Jean‑de‑Luz, entre l'église et la plage. Petit‑déjeuner sous les arbres, gare à 800 m, ouvert toute l'année.</p><div class="wx" id="wx" hidden></div></div>
+   <div class="hero-ctas"><a class="btn" href="#reserver" data-i="cta1">Réserver en direct</a><a class="btn ghost" href="tel:+33559260006">05 59 26 00 06</a></div>
+  </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true">Défiler</div>
+</section>
+
+<section class="reveal" id="jardin" aria-label="Le jardin">
+ <div class="stick">
+  <figure id="rv"><img src="https://static.wixstatic.com/media/b8096b_c81dc49d5c96452cb38cc7fc3959ba16~mv2.jpg" alt="Le jardin de l'Hôtel Ohartzia, sa terrasse ombragée et la façade aux volets bleus" onerror="this.style.visibility='hidden'"></figure>
+  <div class="shade"></div>
+  <div class="cap"><b>Sous les arbres, la terrasse du petit‑déjeuner.</b><span>Le jardin de l'hôtel, 28 rue Garat</span></div>
+  <div class="facts" id="facts"><div><b data-to="14" data-suf="">0</b><span>chambres, sur trois étages avec ascenseur</span></div><div><b data-to="9.1" data-dec="1" data-suf="/10">0</b><span>sur 285 avis vérifiés</span></div><div><b data-to="800" data-suf=" m">0</b><span>jusqu'à la gare TGV</span></div></div>
+ </div>
+</section>
+
+<section class="day" id="journee" aria-label="Une journée à l'hôtel">
+ <div class="stick"><div class="wrap day-grid">
+  <svg viewBox="0 0 560 400" role="img" aria-label="La maison basque de l'hôtel au fil d'une journée, du petit-déjeuner au soir">
+   <rect width="560" height="400" fill="#A9C8E4"/>
+   <rect id="dusk" width="560" height="400" fill="#E9A77C" opacity="0"/>
+   <rect id="night" width="560" height="400" fill="#101C33" opacity="0"/>
+   <g id="sun"><circle r="17" fill="#F6CF74"/><circle r="28" fill="#F6CF74" opacity=".25"/></g>
+   <g id="moon" opacity="0"><circle cx="470" cy="62" r="12" fill="#E9EEF6"/><circle cx="476" cy="57" r="11" fill="#101C33"/></g>
+   <g id="sea" opacity="0"><rect x="430" y="318" width="130" height="82" fill="#2F6BAF"/><path id="wv" d="M430 330 q8 -5 16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0" fill="none" stroke="#CFE0F2" stroke-width="2"/><path d="M430 352 q8 -4 16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0" fill="none" stroke="#CFE0F2" stroke-width="1.4" opacity=".6"/><text x="452" y="384" font-family="Manrope" font-size="12" fill="#fff">Grande Plage</text></g>
+   <g id="boat" opacity="0"><path d="M470 318 h40 l-6 9 h-28 z" fill="#A8232C"/><path d="M490 318 V292 L506 314 Z" fill="#F5F6F2"/></g>
+   <rect x="0" y="380" width="560" height="20" fill="#2C4A39"/>
+   <path id="path" d="M410 384 C440 384 430 340 470 336" fill="none" stroke="#F5F6F2" stroke-width="2" stroke-dasharray="4 6" opacity="0"/>
+   <g id="tree"><rect x="62" y="300" width="8" height="82" fill="#4A3A2A"/><path d="M66 312 C26 316 20 270 44 258 C40 226 84 214 98 240 C126 236 128 282 104 296 C104 316 82 318 66 312 Z" fill="#3E6B47"/></g>
+   <g id="table" opacity="0"><path d="M86 310 Q118 290 150 310 Z" fill="#F5F6F2"/><rect x="117" y="310" width="2" height="62" fill="#F5F6F2"/><rect x="100" y="352" width="36" height="4" fill="#F5F6F2"/><rect x="104" y="356" width="2" height="24" fill="#F5F6F2"/><rect x="130" y="356" width="2" height="24" fill="#F5F6F2"/><circle cx="110" cy="349" r="3" fill="#A8232C"/><circle cx="124" cy="349" r="3" fill="#F2C46B"/></g>
+   <path d="M150 380 V142 L300 78 L410 132 V380 Z" fill="#F5F6F2"/>
+   <path id="outline" d="M150 380 V142 L300 78 L410 132 V380" fill="none" stroke="#14213A" stroke-width="2.4" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <path id="roof" d="M126 154 L300 68 L434 134" fill="none" stroke="#A8232C" stroke-width="6" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <g id="beams" stroke="#14213A" stroke-width="3" opacity="0"><line x1="150" y1="212" x2="410" y2="212"/><line x1="150" y1="290" x2="410" y2="290"/><line x1="230" y1="142" x2="230" y2="212"/><line x1="330" y1="120" x2="330" y2="212"/></g>
+   <g id="wins"></g>
+   <g id="balc" opacity="0" stroke="#14213A" stroke-width="2"><line x1="168" y1="276" x2="392" y2="276"/><line x1="168" y1="262" x2="392" y2="262" stroke-width="1"/></g>
+   <rect x="266" y="318" width="28" height="62" fill="#1D4E9E"/>
+   <text id="hotelname" x="280" y="306" text-anchor="middle" font-family="Fraunces" font-size="11" fill="#14213A" opacity="0">Hôtel Ohartzia</text>
+  </svg>
+  <div>
+   <h2>Une journée <em>à deux pas</em> de tout.</h2>
+   <p class="lede">La voiture reste garée : la plage, le port, l'église et les rues piétonnes se rejoignent à pied depuis le jardin.</p>
+   <ol class="steps-live" id="live">
+    <li><b><i>8 h 30</i>Petit‑déjeuner au jardin</b><span>En salle ou sur la terrasse ombragée, 16 € par personne.</span></li>
+    <li><b><i>11 h</i>La Grande Plage à pied</b><span>La baie abritée de Saint‑Jean‑de‑Luz, à quelques minutes.</span></li>
+    <li><b><i>19 h</i>Le port et le vieux centre</b><span>L'église Saint‑Jean‑Baptiste est à côté de l'hôtel.</span></li>
+    <li><b><i>22 h</i>Le calme d'une petite maison</b><span>Quatorze chambres, Wi‑Fi gratuit, climatisation dans certaines.</span></li>
+   </ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
+
+<section class="hgal" id="chambres" aria-label="Les chambres et la maison">
+ <div class="stick">
+  <div class="wrap head"><h2>Quatorze chambres, <em>une maison.</em></h2><span class="count" id="gcount">01 / 07</span></div>
+  <div class="track" id="track">
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b8096b_e91520cfc9ed4bb4afa9bff96ba39231~mv2.jpg" alt="Chambre double aux murs clairs, mur framboise et rideaux rouges" onerror="this.style.visibility='hidden'"></div><figcaption><b>Chambre double</b><span>Lit de 160, Wi‑Fi, télévision</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b8096b_ecba90379f4e4c61a973c4cf371a5d02~mv2.jpg" alt="Chambre twin avec un lit de 160 et un lit de 90" onerror="this.style.visibility='hidden'"></div><figcaption><b>Chambre twin</b><span>Un lit de 160 et un lit de 90</span></figcaption></figure>
+   <figure class="card tall"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/635f61_21b8221f0d884b02b290ff7292fee336~mv2_d_1325_1915_s_2.jpg" alt="Façade blanche à colombages et volets bleus de l'Hôtel Ohartzia" onerror="this.style.visibility='hidden'"></div><figcaption><b>La façade</b><span>Rue Garat</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b8096b_65aa32c893334354a548ba13b1d6123f~mv2.jpg" alt="Le salon ouvert sur le jardin, fauteuils et grande toile colorée" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le salon</b><span>Ouvert sur le jardin</span></figcaption></figure>
+   <figure class="card tall"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b8096b_b9cbe34e5ef040e48b1b4f71045cef7a~mv2.jpg" alt="Petit-déjeuner servi en terrasse devant un massif de roses" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le petit‑déjeuner</b><span>16 € par personne</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b8096b_5924164e002f498586e37df227f7aa6e~mv2.jpg" alt="Chambre contemporaine avec tête de lit noire" onerror="this.style.visibility='hidden'"></div><figcaption><b>Chambre classique</b><span>Lit de 160</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b8096b_aa8a4b4deb464b5a9c16d2bacbb3d918~mv2.jpg" alt="Carte postale ancienne de la Pergola et de la plage de Saint-Jean-de-Luz" onerror="this.style.visibility='hidden'"></div><figcaption><b>La Pergola et la plage</b><span>Carte postale ancienne</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="pad"><div class="wrap">
+ <h2 class="rise">Venir, arriver, <em>repartir.</em></h2>
+ <ul class="facts2">
+  <li class="rise"><b>800 m</b><h3>En train</h3><p>La gare TGV de Saint‑Jean‑de‑Luz est à dix minutes à pied. Taxis Luziens au 05 59 47 38 38.</p></li>
+  <li class="rise"><b>20 min</b><h3>En avion</h3><p>L'aéroport de Biarritz est à une vingtaine de minutes de l'hôtel.</p></li>
+  <li class="rise"><b>A63</b><h3>En voiture</h3><p>Sortie Saint‑Jean‑de‑Luz Nord, puis direction centre‑ville par l'avenue André Ithurralde.</p></li>
+  <li class="rise"><b>21 h</b><h3>Arrivée</h3><p>Accueil jusqu'à 21 h, plus tard sur simple appel. Départ jusqu'à midi.</p></li>
+ </ul>
+</div></section>
+
+<section class="pad book" id="reserver"><div class="wrap">
+ <h2>Réservez <em>en direct</em> avec la maison.</h2>
+ <p class="lede" style="margin-top:1rem">Choisissez votre chambre et vos dates : le prix du séjour se calcule nuit par nuit, selon la saison, taxe de séjour comprise.</p>
+ <div class="cfg">
+  <div class="preview">
+   <div class="pv-ph" id="pvph">
+    <img data-r="classique" src="https://static.wixstatic.com/media/b8096b_5924164e002f498586e37df227f7aa6e~mv2.jpg" alt="" onerror="this.style.visibility='hidden'">
+    <img data-r="double" src="https://static.wixstatic.com/media/b8096b_e91520cfc9ed4bb4afa9bff96ba39231~mv2.jpg" alt="" onerror="this.style.visibility='hidden'">
+    <img data-r="twin" src="https://static.wixstatic.com/media/b8096b_ecba90379f4e4c61a973c4cf371a5d02~mv2.jpg" alt="" onerror="this.style.visibility='hidden'">
+    <img data-r="balcon" src="https://static.wixstatic.com/media/635f61_21b8221f0d884b02b290ff7292fee336~mv2_d_1325_1915_s_2.jpg" alt="" style="object-position:50% 40%" onerror="this.style.visibility='hidden'">
+    <span class="pv-tag" id="pvTag">Chambre classique</span>
+   </div>
+   <div class="live"><div><span id="liveN">Votre séjour</span><b id="liveTotal">—</b></div><small id="liveSub">Taxe de séjour incluse. Photo indicative.</small></div>
+   <div class="nights" id="nights" aria-hidden="true"></div>
+   <div class="legend"><span><i class="s0"></i>Basse saison</span><span><i class="s1"></i>Moyenne saison</span><span><i class="s2"></i>Haute saison</span></div>
+   <div class="vs"><div><span>Réservé ici, en direct</span><b id="vsDirect">—</b></div><div><span>Commission d'une plateforme (15 à 18 %)</span><b id="vsCom">—</b></div><p>En direct, cette part reste à l'hôtel. Taux indicatif, à valider avec vous.</p></div>
+  </div>
+  <div class="panel" aria-live="polite">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <fieldset data-s data-n="Chambre"><legend>Quelle chambre vous ressemble ?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="room" id="r1" value="classique" checked><label for="r1">Chambre classique<small>Lit de 160, dès 105 €</small></label></div>
+     <div class="choice"><input type="radio" name="room" id="r2" value="double"><label for="r2">Chambre double<small>Lit de 160, dès 115 €</small></label></div>
+     <div class="choice"><input type="radio" name="room" id="r3" value="twin"><label for="r3">Chambre twin<small>160 + 90, jusqu'à trois, dès 145 €</small></label></div>
+     <div class="choice"><input type="radio" name="room" id="r4" value="balcon"><label for="r4">Twin avec balcon<small>160 + 90, balcon, dès 165 €</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Dates" hidden><legend>Vos dates</legend><p class="hint">Touchez votre jour d'arrivée, puis votre jour de départ.</p>
+     <div class="cal-head"><button type="button" id="calPrev">Précédent</button><span id="calTitle"></span><button type="button" id="calNext">Suivant</button></div>
+     <div class="cal" id="cal"></div><p class="cal-sel" id="calSel"></p></fieldset>
+    <fieldset data-s data-n="Voyageurs" hidden><legend>Combien serez‑vous ?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="pers" id="p1" value="1"><label for="p1">Une personne<small>Voyage seul, déplacement</small></label></div>
+     <div class="choice"><input type="radio" name="pers" id="p2" value="2" checked><label for="p2">Deux personnes<small>Le plus courant</small></label></div>
+     <div class="choice"><input type="radio" name="pers" id="p3" value="3"><label for="p3">Trois personnes<small>Chambres twin uniquement</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Petit‑déjeuner" hidden><legend>Le petit‑déjeuner au jardin ?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="bk" id="b1" value="1" checked><label for="b1">Oui, chaque matin<small>16 € par personne</small></label></div>
+     <div class="choice"><input type="radio" name="bk" id="b0" value="0"><label for="b0">Non merci<small>On le décidera sur place</small></label></div></div></fieldset>
+    <div data-s data-n="Votre demande" hidden><p class="big-thanks" style="font-size:1.5rem">Votre séjour est prêt.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="fn">Nom</label><input id="fn" autocomplete="name"></div>
+     <div class="field"><label for="fp">Téléphone ou email</label><input id="fp" autocomplete="email"></div>
+     <div class="field"><label for="fa">Heure d'arrivée prévue</label><select id="fa"><option>Avant 17 h</option><option selected>Entre 17 h et 21 h</option><option>Après 21 h, je préviendrai</option></select></div>
+     <div class="send-row"><a class="btn" id="mailBtn" href="mailto:hotel.ohartzia@wanadoo.fr">Envoyer ma demande à l'hôtel</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien de mon séjour</button><span class="copied" id="copied" hidden>Lien copié</span></div></div>
+    <div data-s data-n="Envoyée" hidden><p class="big-thanks">Merci, votre demande est partie.</p><p style="color:#a7b6cc;margin:0">Dans le site final, la demande arrive directement chez vous avec le récapitulatif et les dates, et le client reçoit une confirmation. Un acompte d'une nuit confirme la réservation ; annulation sans frais à plus de 30 jours.</p></div>
+    <div class="est-nav"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn" id="next" style="margin-left:auto">Continuer</button></div>
+   </form>
+   <p class="note">Tarifs repris de votre page Tarifs, remis dans l'ordre des saisons pour la démonstration : à valider avec vous.</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="pad"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise"><div class="score">9,1<small><span class="stars">★★★★★</span> 285 avis vérifiés</small></div><h2>Ceux qui reviennent <em>en parlent mieux que nous.</em></h2></div>
+  <div class="marquee" aria-label="Avis de voyageurs"><div class="mq-track">
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>L'un des hôtels les plus chaleureux et accueillants où nous ayons dormi.</blockquote><figcaption>Mars 2025</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Un vrai petit bijou, en plein cœur de Saint‑Jean‑de‑Luz.</blockquote><figcaption>Juillet 2025</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>C'est décidé : ce sera notre adresse pour chaque séjour à Saint‑Jean‑de‑Luz.</blockquote><figcaption>Avril 2025</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Une gestion familiale très attentionnée, qui réconcilie avec l'hôtellerie indépendante.</blockquote><figcaption>Décembre 2024</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Entre la mer et le centre‑ville, avec un jardin magnifique.</blockquote><figcaption>Octobre 2024</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Arrivés sous une pluie battante, nous avons trouvé ici un vrai réconfort.</blockquote><figcaption>Septembre 2024</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>L'un des hôtels les plus chaleureux et accueillants où nous ayons dormi.</blockquote><figcaption>Mars 2025</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Un vrai petit bijou, en plein cœur de Saint‑Jean‑de‑Luz.</blockquote><figcaption>Juillet 2025</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>C'est décidé : ce sera notre adresse pour chaque séjour à Saint‑Jean‑de‑Luz.</blockquote><figcaption>Avril 2025</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Une gestion familiale très attentionnée, qui réconcilie avec l'hôtellerie indépendante.</blockquote><figcaption>Décembre 2024</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Entre la mer et le centre‑ville, avec un jardin magnifique.</blockquote><figcaption>Octobre 2024</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Arrivés sous une pluie battante, nous avons trouvé ici un vrai réconfort.</blockquote><figcaption>Septembre 2024</figcaption></figure>
+  </div></div>
+  <p class="note-rv">Extraits reformulés d'avis de voyageurs (Trip.com, note Kayak) pour la maquette. Dans le site final, vos avis Google s'affichent en version originale et se mettent à jour automatiquement.</p>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Les questions <em>avant de réserver.</em></h2>
+  <div class="faq-list">
+   <details><summary>Reste‑t‑il des chambres cet été ?</summary><p>L'hôtel ne compte que quatorze chambres et la haute saison va de juillet à fin septembre : les dates d'été partent vite. Envoyez vos dates dès maintenant avec le formulaire ci‑dessus, la réponse vient directement de l'hôtel.</p></details>
+   <details><summary>La plage est‑elle vraiment accessible à pied ?</summary><p>Oui. L'hôtel est dans le vieux centre, près de l'église, et la Grande Plage se rejoint à pied en quelques minutes.</p></details>
+   <details><summary>Les chambres sont‑elles climatisées ?</summary><p>Certaines chambres le sont. Si c'est important pour vous en plein été, précisez‑le dans votre demande et nous vous proposerons l'une d'elles.</p></details>
+   <details><summary>Où garer ma voiture ?</summary><p>Le centre de Saint‑Jean‑de‑Luz est en partie piéton ; nous vous indiquons à la réservation le stationnement le plus proche (informations à valider avec vous).</p></details>
+   <details><summary>Quelles sont les conditions d'annulation ?</summary><p>Un acompte d'une nuit confirme la réservation. Il est remboursé si vous annulez plus de 30 jours avant l'arrivée ; en deçà, une nuit est retenue.</p></details>
+   <details><summary>J'arrive tard, est‑ce un problème ?</summary><p>L'accueil est assuré jusqu'à 21 h. Au‑delà, appelez‑nous au 05 59 26 00 06 et nous organisons votre arrivée.</p></details>
+   <details><summary>L'hôtel est‑il accessible en fauteuil ?</summary><p>Oui : une chambre est aménagée pour les personnes à mobilité réduite et un ascenseur dessert les trois étages.</p></details>
+   <details><summary>Acceptez‑vous les animaux ?</summary><p>Non, les animaux ne sont pas admis. L'hôtel est entièrement non‑fumeur.</p></details>
+   <details><summary>Quels moyens de paiement acceptez‑vous ?</summary><p>Cartes bancaires, chèques‑vacances ANCV, chèques et espèces. La taxe de séjour est de 2,45 € par personne et par nuit.</p></details>
+  </div>
+ </div>
+ <div class="contact" style="margin-top:5rem">
+  <div><h2>Une question, <em>une date ?</em></h2><a class="bigtel" href="tel:+33559260006">05 59 26 00 06</a><p style="margin:0;color:var(--soft)">28 rue Garat, 64500 Saint‑Jean‑de‑Luz<br>Ouvert toute l'année · <a href="mailto:hotel.ohartzia@wanadoo.fr">hotel.ohartzia@wanadoo.fr</a></p></div>
+  <div><p style="color:var(--soft);margin-top:0">Accueil en français, en anglais et en espagnol. Hôtel trois étoiles, non‑fumeur, Wi‑Fi gratuit dans toute la maison.</p><a class="btn" href="#reserver">Choisir mes dates</a></div>
+ </div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+ <span>Hôtel Ohartzia, hôtel trois étoiles indépendant<br>28 rue Garat, 64500 Saint‑Jean‑de‑Luz</span>
+ <form class="nl-form" id="nl" novalidate><label for="nle">Recevoir nos nouvelles et nos dates libres chaque mois</label><div><input id="nle" type="email" placeholder="Votre email" autocomplete="email"><button class="btn" type="submit">S'inscrire</button></div><span class="nl-ok" id="nlok" hidden>Merci, c'est noté. (Démonstration : aucun envoi réel.)</span></form>
+</div></footer>
+
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Madame, Monsieur Audibert, voici ce que nous avons relevé sur hotel-ohartzia.com, et ce que la nouvelle version apporte.</p>
+ <ul class="audit">
+  <li><div class="now"><b>Aujourd'hui</b>Aucune réservation en ligne : la page Réserver renvoie vers un formulaire ou le téléphone, et vos avis envoient les visiteurs sur Booking.</div><div><b>Avec la refonte</b>Une réservation directe en six étapes, avec le prix du séjour calculé nuit par nuit et la commission évitée.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Une grille de tarifs qui s'affiche dans le désordre (haute saison moins chère que la moyenne, mai absent) et un code postal 74500 sur la page Contact.</div><div><b>Avec la refonte</b>Des tarifs lisibles par saison et des coordonnées vérifiées, partout.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Vos photos affichées en vignettes de 147 pixels, une image de banque d'images en en‑tête, et aucune photo de chambre sur la page Tarifs.</div><div><b>Avec la refonte</b>Votre jardin, vos chambres et votre façade en plein écran, dans une galerie qui se déroule au défilement.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Votre note de 9,1 sur 285 avis n'apparaît nulle part sur votre site, et aucune question fréquente n'est traitée.</div><div><b>Avec la refonte</b>Vos avis mis en scène, et une FAQ qui répond avant l'appel : climatisation, stationnement, arrivée tardive, annulation.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Site en français uniquement, alors que l'Espagne est à quinze minutes et que vous accueillez en anglais et en espagnol.</div><div><b>Avec la refonte</b>Versions anglaise et espagnole, et la météo et la mer de Saint‑Jean‑de‑Luz en direct.</div></li>
+ </ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Formulaire de devis, avis Google, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + estimateur de budget</li><li>FR, EN, IT</li><li>4 pages par ville</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + la baie et sa lumière animées en temps réel (WebGL)</li><li>Une journée à l'hôtel et la galerie des chambres animées au défilement, à 120 images/s</li><li>Réservation directe avec prix par saison, météo et mer en direct</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+<div class="addons">
+ <div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens clients et à vos contacts&nbsp;: dates encore libres, saison à Saint‑Jean‑de‑Luz, fêtes et événements du Pays basque. Rédigé, mis en page et envoyé pour vous.</p></div>
+ <div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos clients après chaque séjour, bilan mensuel.</p></div>
+ <div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Allemand, néerlandais ou une autre langue de votre clientèle, traduite et tenue à jour avec le reste du site.</p></div>
+</div>
+<p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Hotel%20Ohartzia">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+
+<div class="mbar"><a class="btn ghost" href="tel:+33559260006">Appeler</a><a class="btn" href="#reserver">Réserver</a></div>
+
+<script src="../lib/lenis.min.js"></script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lenis=null;
+if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});window.lenis=lenis;}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+
+/* ---------- La baie en lumière (WebGL) ---------- */
+var cv=document.getElementById('bay'),gl=cv.getContext('webgl',{antialias:false,alpha:false});
+var heroVisible=true,t0=performance.now();
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ var fs=[
+ 'precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;',
+ 'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+ 'float noise(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1.,0.)),u.x),mix(hash(i+vec2(0.,1.)),hash(i+vec2(1.,1.)),u.x),u.y);}',
+ 'float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*noise(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}',
+ 'float bump(float x,float c,float w){float a=(x-c)/w;return exp(-a*a);}',
+ 'float swell(vec2 w,float t){return sin(w.y*1.25-t*1.1+sin(w.x*.35)*1.2)*.55+sin(w.y*2.3+w.x*.6-t*1.7)*.25+fbm(w*vec2(.9,1.8)+vec2(t*.08,-t*.32))*1.1;}',
+ 'void main(){vec2 uv=gl_FragCoord.xy/r;float asp=r.x/r.y;float hz=asp<1.?.72:.6;',
+ 'vec2 sun=vec2(.3+.4*m.x,hz+.045+.06*m.y);',
+ 'vec3 low=vec3(.95,.72,.50),mid=vec3(.46,.53,.68),top=vec3(.07,.13,.27);vec3 col;',
+ 'if(uv.y>hz){float k=(uv.y-hz)/(1.-hz);col=mix(low,mid,smoothstep(0.,.32,k));col=mix(col,top,smoothstep(.28,1.,k));',
+ 'vec2 d=(uv-sun)*vec2(asp,1.);float sd=length(d);col+=vec3(1.,.74,.45)*exp(-sd*8.)*.5;col=mix(col,vec3(1.,.93,.78),smoothstep(.026,.02,sd));',
+ 'float cl=fbm(vec2(uv.x*2.2*asp+t*.012,uv.y*7.));col=mix(col,col+vec3(.06,.04,.05),smoothstep(.55,.85,cl)*(1.-k)*.8);',
+ 'float x=uv.x;float ridge=hz+.075*bump(x,.8,.11)+.03*bump(x,.62,.08)+.022*bump(x,.95,.07)+.018*fbm(vec2(x*16.,2.))+.006*fbm(vec2(x*60.,5.))-.008;',
+ 'float mnt=smoothstep(ridge+.0025,ridge-.0025,uv.y);vec3 mc=mix(vec3(.33,.37,.52),low,.28+.25*(1.-smoothstep(hz,ridge,uv.y)));col=mix(col,mc,mnt);',
+ '}else{float dy=hz-uv.y;float z=.34/(dy+.01);vec2 w=vec2((uv.x-.5)*asp*z,z);',
+ 'float e=.06;float h0=swell(w,t);float gx=swell(w+vec2(e,0.),t)-h0;float gz=swell(w+vec2(0.,e),t)-h0;float fade=smoothstep(0.,.25,dy);',
+ 'vec3 deep=vec3(.03,.08,.17),blue=vec3(.09,.22,.42);col=mix(mix(low*.82,mid*.7,.5),blue,smoothstep(0.,.08,dy));col=mix(col,deep,smoothstep(.1,.46,dy));',
+ 'col+=vec3(.25,.32,.42)*(gz*1.6)*fade;col-=vec3(.05,.06,.08)*gx*fade;',
+ 'float sx=(uv.x-sun.x)*asp;float colw=.035+dy*.75;float path=exp(-sx*sx/(colw*colw));',
+ 'float sp=fbm(w*vec2(2.2,3.4)+vec2(-t*.5,t*.9));float glint=smoothstep(.6,.78,sp+gz*.8);',
+ 'col+=vec3(1.,.86,.6)*glint*path*(1.1-dy*.9);col+=vec3(1.,.8,.55)*path*.12*(1.-smoothstep(0.,.2,dy));',
+ 'col+=vec3(.7,.8,.9)*smoothstep(.86,.95,fbm(w*3.1+t*.4))*.18*fade;',
+ 'col=mix(col,low*.9,smoothstep(.012,0.,dy)*.6);}',
+ 'col*=1.-.42*smoothstep(.3,1.,length((uv-vec2(.5,.62))*vec2(1.,1.3)));',
+ 'col*=mix(.55,1.,smoothstep(0.,.45,uv.y));',
+ 'col+=(hash(gl_FragCoord.xy+t)-.5)*.025;gl_FragColor=vec4(col,1.);}'
+ ].join('\n');
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(o));return o;}
+ var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.5,my=.5,tx=.5,ty=.5;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5);cv.width=cv.clientWidth*d*.7;cv.height=cv.clientHeight*d*.7;gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ window.__drawBay=function(now){if(!heroVisible)return;mx+=(tx-mx)*.04;my+=(ty-my)*.04;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?6.:(now-t0)/1000);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ window.__drawBay(t0+6000);
+}
+
+/* ---------- Météo et mer en direct (open-meteo, repli silencieux) ---------- */
+(function(){var wx=document.getElementById('wx'),parts={};
+ function show(){var s=[];if(parts.a!=null)s.push('<span>Saint‑Jean‑de‑Luz <b>'+parts.a+' °C</b></span>');if(parts.s!=null)s.push('<span>mer <b>'+parts.s+' °C</b></span>');if(parts.w!=null)s.push('<span>houle <b>'+parts.w+' m</b></span>');if(s.length){wx.innerHTML=s.join('');wx.hidden=false;}}
+ function get(u,cb){try{fetch(u).then(function(r){return r.ok?r.json():null;}).then(function(j){if(j&&j.current){cb(j.current);show();}}).catch(function(){});}catch(e){}}
+ get('https://api.open-meteo.com/v1/forecast?latitude=43.389&longitude=-1.663&current=temperature_2m&timezone=Europe%2FParis',function(c){if(c.temperature_2m!=null)parts.a=Math.round(c.temperature_2m);});
+ get('https://marine-api.open-meteo.com/v1/marine?latitude=43.40&longitude=-1.68&current=sea_surface_temperature,wave_height',function(c){if(c.sea_surface_temperature!=null)parts.s=Math.round(c.sea_surface_temperature);if(c.wave_height!=null)parts.w=c.wave_height.toLocaleString('fr-FR',{maximumFractionDigits:1});});
+})();
+
+/* ---------- Scènes au défilement ---------- */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+function $(id){return document.getElementById(id);}
+var hdr=$('hdr'),proofEl=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=$('rv'),rvImg=rv.querySelector('img');
+var dayS=document.querySelector('.day'),live=document.querySelectorAll('#live li'),meter=$('meter');
+var NS='http://www.w3.org/2000/svg',wins=$('wins'),shutters=[],lights=[];
+function el(tag,at){var e=document.createElementNS(NS,tag);for(var k in at)e.setAttribute(k,at[k]);return e;}
+[[180,154,40],[262,150,40],[344,154,40],[180,226,44],[262,226,44],[344,226,44],[180,306,46],[344,306,46]].forEach(function(w){
+ wins.appendChild(el('rect',{x:w[0],y:w[1],width:36,height:w[2],fill:'#1B2A44'}));
+ var li=el('rect',{x:w[0],y:w[1],width:36,height:w[2],fill:'#F6CF74',opacity:0});wins.appendChild(li);lights.push(li);
+ var a=el('rect',{x:w[0],y:w[1],width:18,height:w[2],fill:'#1D4E9E','class':'shut l'}),b=el('rect',{x:w[0]+18,y:w[1],width:18,height:w[2],fill:'#1D4E9E','class':'shut r'});
+ wins.appendChild(a);wins.appendChild(b);shutters.push(a,b);
+});
+var outline=$('outline'),roof=$('roof'),beams=$('beams'),balc=$('balc'),sun=$('sun'),moon=$('moon'),dusk=$('dusk'),night=$('night'),table=$('table'),sea=$('sea'),pathE=$('path'),boat=$('boat'),wv=$('wv'),hname=$('hotelname');
+var gS=document.querySelector('.hgal'),track=$('track'),gImgs=track.querySelectorAll('img'),gc=$('gcount'),NG=gImgs.length;
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+function countUp(){facts.forEach(function(b){var to=+b.dataset.to,dec=+b.dataset.dec||0,suf=b.dataset.suf||'',st=performance.now();(function tick(n){var k=RM?1:ease(Math.min(1,(n-st)/1400));b.textContent=(to*k).toLocaleString('fr-FR',{minimumFractionDigits:dec,maximumFractionDigits:dec})+suf;if(k<1)requestAnimationFrame(tick);})(st);});}
+
+function scenes(now){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proofEl.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*24+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.4){factsDone=true;countUp();}
+ var c=prog(dayS);
+ outline.setAttribute('stroke-dashoffset',1-ease(seg(c,0,.12)));roof.setAttribute('stroke-dashoffset',1-ease(seg(c,.04,.15)));
+ beams.setAttribute('opacity',seg(c,.1,.16));balc.setAttribute('opacity',seg(c,.12,.18));hname.setAttribute('opacity',seg(c,.14,.2));
+ shutters.forEach(function(s,i){var k=ease(seg(c,.15+(i>>1)*.012,.24+(i>>1)*.012));s.style.transform='scaleX('+(1-2*k)+')';});
+ var sp=seg(c,.12,.8),sx=60+440*sp,sy=150-110*Math.sin(Math.PI*sp);sun.setAttribute('transform','translate('+sx+','+sy+')');sun.setAttribute('opacity',1-seg(c,.74,.82));
+ table.setAttribute('opacity',seg(c,.18,.26));
+ pathE.setAttribute('opacity',seg(c,.3,.36));sea.setAttribute('opacity',seg(c,.32,.4));
+ wv.setAttribute('transform','translate('+(Math.sin(now/700)*6-6)+',0)');
+ boat.setAttribute('opacity',seg(c,.5,.56));boat.setAttribute('transform','translate('+(-30*seg(c,.5,.9))+','+(Math.sin(now/500)*1.5)+')');
+ dusk.setAttribute('opacity',seg(c,.5,.66)*.75*(1-seg(c,.8,.9)));night.setAttribute('opacity',seg(c,.72,.86)*.88);moon.setAttribute('opacity',seg(c,.8,.9));
+ lights.forEach(function(l,i){l.setAttribute('opacity',seg(c,.76+i*.012,.82+i*.012)*.95);});
+ var st=c<.3?0:c<.5?1:c<.74?2:3;live.forEach(function(li,i){li.classList.toggle('on',i===st);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(20,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ gc.textContent='0'+Math.min(NG,1+Math.floor(g*NG))+' / 0'+NG;
+}
+function loop(now){if(lenis)lenis.raf(now);if(window.__drawBay&&!RM)window.__drawBay(now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+if(RM){countUp();shutters.forEach(function(s){s.style.transform='scaleX(-1)';});outline.setAttribute('stroke-dashoffset',0);roof.setAttribute('stroke-dashoffset',0);beams.setAttribute('opacity',1);balc.setAttribute('opacity',1);table.setAttribute('opacity',1);sea.setAttribute('opacity',1);pathE.setAttribute('opacity',1);hname.setAttribute('opacity',1);sun.setAttribute('transform','translate(280,50)');live.forEach(function(li){li.classList.add('on');});}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+
+/* ---------- Réservation directe ---------- */
+var RATES={classique:[105,115,155],double:[115,125,135],twin:[145,155,165],balcon:[165,175,185]};
+var RN={classique:'Chambre classique',double:'Chambre double',twin:'Chambre twin',balcon:'Twin avec balcon'};
+var MOIS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+function season(d){var m=d.getMonth();return(m>=6&&m<=8)?2:(m>=3&&m<=5||m===9)?1:0;}
+var f=$('est'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=$('prev'),nx=$('next'),chips=$('chips'),i=0,reached=0,cur=0;
+var today=new Date();today.setHours(0,0,0,0);
+function addD(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x;}
+function key(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+function parse(k){var a=k.split('-');return new Date(+a[0],+a[1]-1,+a[2]);}
+var arr=addD(today,21),dep=addD(today,24),view=new Date(arr.getFullYear(),arr.getMonth(),1);
+function val(n){var e=f.querySelector('[name="'+n+'"]:checked');return e?e.value:null;}
+function eur(n){return Math.round(n).toLocaleString('fr-FR')+' €';}
+function dlong(d){return d.getDate()+' '+MOIS[d.getMonth()];}
+function tween(to){var a0=cur,st=performance.now();cur=to;(function tk(n){var q=RM?1:ease(Math.min(1,(n-st)/700));$('liveTotal').textContent=eur(a0+(to-a0)*q);if(q<1)requestAnimationFrame(tk);})(st);}
+function calc(){var rm=val('room'),pers=+val('pers'),bk=+val('bk'),list=[],room=0;
+ if(rm!=='twin'&&rm!=='balcon'&&pers>2){pers=2;$('p2').checked=true;}
+ if(dep){for(var d=new Date(arr);d<dep;d=addD(d,1)){var s=season(d),r=RATES[rm][s];list.push([s,r]);room+=r;}}
+ var n=list.length,bf=bk?16*pers*n:0,tax=2.45*pers*n;return{rm:rm,pers:pers,bk:bk,n:n,list:list,room:room,bf:bf,tax:tax,total:room+bf+tax};}
+function update(){var d=calc();
+ $('p3').disabled=!(d.rm==='twin'||d.rm==='balcon');
+ [].forEach.call(document.querySelectorAll('#pvph img'),function(im){im.classList.toggle('on',im.dataset.r===d.rm);});
+ $('pvTag').textContent=RN[d.rm]+(d.rm==='balcon'?' · photo de façade':' · photo indicative');
+ tween(d.total);
+ $('liveN').textContent=d.n?(d.n+' nuit'+(d.n>1?'s':'')+', '+d.pers+' pers.'+(d.bk?', petit‑déjeuner':'')):'Votre séjour';
+ $('liveSub').textContent=d.n?('Du '+dlong(arr)+' au '+dlong(dep)+'. Taxe de séjour incluse.'):'Choisissez vos dates.';
+ var nb=$('nights');nb.innerHTML='';var mx=185;d.list.forEach(function(x){var b=document.createElement('i');b.className='s'+x[0];b.style.transform='scaleY('+(x[1]/mx)+')';b.title=x[1]+' €';nb.appendChild(b);});
+ $('vsDirect').textContent=eur(d.total);$('vsCom').textContent=d.n?(eur(d.room*.15)+' à '+eur(d.room*.18)):'—';
+ var hs=[d.rm,key(arr),dep?key(dep):'',d.pers,d.bk].join('~');try{history.replaceState(null,'','#sejour='+encodeURIComponent(hs));}catch(e){}
+ return d;}
+function renderCal(){var c=$('cal');c.innerHTML='';['L','M','M','J','V','S','D'].forEach(function(w){var s=document.createElement('span');s.className='wd';s.textContent=w;c.appendChild(s);});
+ $('calTitle').textContent=MOIS[view.getMonth()]+' '+view.getFullYear();
+ var first=(view.getDay()+6)%7;for(var k=0;k<first;k++)c.appendChild(document.createElement('span'));
+ var dim=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+ for(var dd=1;dd<=dim;dd++){(function(day){var b=document.createElement('button');b.type='button';b.textContent=day.getDate();b.className='s'+season(day);
+  if(day<today)b.disabled=true;
+  if(+day===+arr)b.classList.add('a');if(dep&&+day===+dep)b.classList.add('b');if(dep&&day>arr&&day<dep)b.classList.add('in');
+  b.onclick=function(){if(!dep&&day>arr&&(day-arr)/864e5<=14){dep=day;renderCal();update();var at=i;setTimeout(function(){if(i===at){i++;show();}},650);}else{arr=day;dep=null;renderCal();update();}};
+  c.appendChild(b);})(new Date(view.getFullYear(),view.getMonth(),dd));}
+ $('calPrev').disabled=view<=new Date(today.getFullYear(),today.getMonth(),1);
+ $('calSel').textContent=dep?('Arrivée le '+dlong(arr)+', départ le '+dlong(dep)+'.'):('Arrivée le '+dlong(arr)+'. Choisissez le départ (14 nuits au plus).');
+ nx.disabled=i===1&&!dep;}
+$('calPrev').onclick=function(){view=new Date(view.getFullYear(),view.getMonth()-1,1);renderCal();};
+$('calNext').onclick=function(){view=new Date(view.getFullYear(),view.getMonth()+1,1);renderCal();};
+function recap(){var d=update(),L=[['Chambre',RN[d.rm]],['Arrivée',dlong(arr)],['Départ',dlong(dep)],['Nuits',d.n],['Voyageurs',d.pers],['Petit‑déjeuner',d.bk?eur(d.bf):'non'],['Taxe de séjour',eur(d.tax)],['Total estimé',eur(d.total)]];$('recap').innerHTML=L.map(function(r){return'<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');return d;}
+function drawChips(){chips.innerHTML='';S.forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached||i===5;b.onclick=function(){i=k;show();};li.appendChild(b);chips.appendChild(li);});}
+function show(){S.forEach(function(el,k){el.hidden=k!==i;if(k===i&&!RM){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0||i===5;nx.hidden=i===5;nx.textContent=i===3?'Voir mon séjour':i===4?'Envoyer la demande':'Continuer';nx.disabled=false;drawChips();if(i===1)renderCal();if(i===4)recap();else update();}
+f.addEventListener('change',function(e){update();if(e.target.type==='radio'&&i!==1&&i<=3){var at=i;setTimeout(function(){if(i===at){i++;show();}},420);}});
+nx.onclick=function(){if(i===1&&!dep)return;if(i<5){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};
+(function(){var m=location.hash.match(/sejour=([^&]+)/);if(!m)return;var p=decodeURIComponent(m[1]).split('~');function chk(n,v){var e=f.querySelector('[name="'+n+'"][value="'+v+'"]');if(e)e.checked=true;}
+ chk('room',p[0]);try{var a=parse(p[1]),b=p[2]?parse(p[2]):null;if(a>=today){arr=a;dep=(b&&b>a)?b:null;view=new Date(a.getFullYear(),a.getMonth(),1);}}catch(e){}chk('pers',p[3]);chk('bk',p[4]);})();
+show();
+$('mailBtn').addEventListener('click',function(){var d=recap(),txt='Bonjour,\n\nJe souhaite réserver :\n- '+RN[d.rm]+'\n- Du '+dlong(arr)+' au '+dlong(dep)+' ('+d.n+' nuits)\n- '+d.pers+' personne(s)'+(d.bk?', avec petit-déjeuner':'')+'\n- Total estimé : '+eur(d.total)+' (taxe de séjour incluse)\n- Arrivée prévue : '+$('fa').value+'\n\n'+($('fn').value||'')+' '+($('fp').value||'')+'\n'+location.href;
+ this.href='mailto:hotel.ohartzia@wanadoo.fr?subject='+encodeURIComponent('Demande de réservation du '+dlong(arr))+'&body='+encodeURIComponent(txt);});
+$('copyBtn').addEventListener('click',function(){var c=$('copied');(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});
+
+/* ---------- Lettre mensuelle (démonstration) ---------- */
+$('nl').addEventListener('submit',function(e){e.preventDefault();$('nlok').hidden=false;});
+
+/* ---------- Langues ---------- */
+var L={en:{n1:'The garden',n2:'A day here',n3:'Rooms',cta1s:'Book',h1a:'A hidden garden',h1b:'steps from the Grande Plage.',h1c:'Fourteen rooms, not one more.',lede:'A family-run Basque house with blue shutters in the heart of Saint-Jean-de-Luz, between the church and the beach. Breakfast under the trees, station 800 m away, open all year.',cta1:'Book direct'},
+ es:{n1:'El jardín',n2:'Un día aquí',n3:'Habitaciones',cta1s:'Reservar',h1a:'Un jardín escondido',h1b:'a dos pasos de la Grande Plage.',h1c:'Catorce habitaciones, ni una más.',lede:'Una casa vasca de contraventanas azules, llevada en familia en el corazón de San Juan de Luz, entre la iglesia y la playa. Desayuno bajo los árboles, estación a 800 m, abierto todo el año.',cta1:'Reservar directamente'}},fr={};
+document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.textContent;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){if(L[l][e.dataset.i])e.textContent=L[l][e.dataset.i];});};});
+})();
+</script>
+</body>
+</html>

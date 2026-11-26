@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Grand-Bec — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&family=Newsreader:opsz,wght@6..72,300..600&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0D1822;--pool:#1F3242;--water:#2F5E52;--foam:#D9B76E;--concrete:#EEF1F2;--ink:#13202B;--soft:#56656F;--line:#CBD4D9;--white:#FAFBFB;--d:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;--t:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;--s:"Newsreader",Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--concrete);color:var(--ink);font-family:var(--t);font-size:1.03rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--foam);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--water);background:var(--water);color:#fff;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px);background:#264d43}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+.btn.gold{background:var(--foam);border-color:var(--foam);color:var(--deep)}.btn.gold:hover{background:#cfa95b}
+h1,h2,h3{font-family:var(--s);font-weight:450;letter-spacing:-.015em;margin:0}
+h2{font-size:clamp(2rem,4.4vw,3.5rem);line-height:1.04;max-width:19ch}
+.eyebrow{font-family:var(--d);font-size:.85rem;font-weight:600;color:var(--water);margin:0 0 .9rem}
+.lede{color:var(--soft);max-width:38rem}
+.pad{padding:clamp(4rem,9vw,8rem) 0}
+.rise{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rise.in{opacity:1;transform:none}
+.wipe img{clip-path:inset(0 0 100% 0);transform:scale(1.12);transition:clip-path 1.3s cubic-bezier(.7,0,.2,1),transform 1.8s cubic-bezier(.16,1,.3,1)}.wipe.in img{clip-path:inset(0 0 0 0);transform:none}
+.proof{position:relative;z-index:40;background:#070E14;color:#c3d1da;font-family:var(--d);font-size:.8rem}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:background .4s,color .4s,top .3s}
+header.site.solid{top:0;background:rgba(238,240,238,.88);backdrop-filter:blur(10px);color:var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
+.brand{font-family:var(--d);font-stretch:125%;font-weight:700;font-size:1.3rem;text-decoration:none}
+.hnav{display:flex;align-items:center;gap:1.4rem;font-family:var(--d);font-size:.9rem}
+.hnav a{text-decoration:none;opacity:.85}
+.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+.studio{background:#E1E7EA;border-top:6px solid var(--water);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid #C3CDD3}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid #C3CDD3}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid #C3CDD3}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid #C3CDD3}.addons b{font-weight:600}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--white);border:1px solid #C3CDD3;border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:#e7f2f3;border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--water);font-weight:600}.offer.rec .tag{color:var(--foam)}
+.offer h3{font-stretch:110%;font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--water),var(--water)) center/14px 2px no-repeat,linear-gradient(var(--water),var(--water)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.rx-head,.faq{grid-template-columns:1fr;gap:1.5rem}}
+.mbar{display:none}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-stretch:125%;font-weight:700;letter-spacing:-.01em}.lmark{width:28px;height:28px;flex:none}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+@media(max-width:600px){.hero-ctas .ghost{display:none}}
+.clogo{height:42px;width:auto;display:block}@media(max-width:600px){.clogo{height:34px}}
+header.site,header.site.solid{background:none!important;backdrop-filter:none!important;box-shadow:none!important}
+header.site .wrap{height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:rgba(13,24,34,.38);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);color:#fff;transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:rgba(251,252,251,.8);color:var(--ink);border-color:rgba(20,36,42,.1)}
+header.site .btn{padding:.6rem 1.1rem}
+#logoSlot{display:inline-flex;align-items:center;height:34px}#logoSlot img,#logoSlot svg{height:34px;width:auto}
+@media(max-width:600px){header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}#logoSlot,#logoSlot img,#logoSlot svg{height:28px}}
+#logoSlot{gap:.6rem}.bname{font-family:var(--d);font-stretch:118%;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap}@media(max-width:600px){.bname{font-size:.95rem}}
+.bname{font-family:var(--s);font-weight:500;font-size:1.2rem;letter-spacing:0}
+.hnav{gap:1.2rem}.hnav a.nl{font-weight:500}
+
+/* Ouverture : neige WebGL */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+#snow{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.kick{font-family:var(--d);font-size:.9rem;color:#c3d1da;margin:0 0 1.1rem;opacity:0;transition:opacity 1s .2s}
+.ready .kick{opacity:1}
+.hero h1{font-weight:400;font-size:clamp(2.4rem,6.2vw,6.2rem);line-height:1.02}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(108%);transition:transform 1.3s cubic-bezier(.16,1,.3,1)}
+.hero h1 .ln:nth-child(2) span{transition-delay:.1s}.hero h1 .ln:nth-child(3) span{transition-delay:.2s;font-style:italic;color:#E9D4A2}
+.ready .hero h1 .ln span{transform:none}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:1.8rem;flex-wrap:wrap;opacity:0;transform:translateY(18px);transition:opacity 1s .6s,transform 1s .6s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:#d3dde3;margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.scrollhint{position:absolute;right:1.1rem;bottom:1.25rem;z-index:2;font-family:var(--d);font-size:.75rem;color:#8fa3b0;writing-mode:vertical-rl}
+
+/* Photo phare */
+.reveal{height:230vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:var(--pool)}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .cap{position:absolute;left:clamp(1rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);z-index:2;max-width:25rem;color:#fff;background:rgba(13,24,34,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:14px;padding:1.1rem 1.3rem;font-size:.95rem}
+.reveal .cap b{display:block;font-family:var(--s);font-weight:450;font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.1;margin-bottom:.4rem}
+.facts{position:absolute;right:clamp(1rem,4vw,3rem);top:50%;transform:translateY(-50%);z-index:2;display:grid;gap:.6rem;width:15rem}
+.facts div{background:rgba(13,24,34,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;border-left:2px solid var(--foam);padding:.7rem 1rem;opacity:0;transform:translateX(30px);transition:opacity .7s,transform .9s cubic-bezier(.16,1,.3,1)}
+.facts.on div{opacity:1;transform:none}.facts.on div:nth-child(2){transition-delay:.1s}.facts.on div:nth-child(3){transition-delay:.2s}.facts.on div:nth-child(4){transition-delay:.3s}
+.facts b{display:block;font-family:var(--s);font-weight:400;font-size:2.3rem;line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;color:#c3d1da}
+
+/* Journée */
+.day{height:340vh;background:var(--deep);color:#e8eef1}
+.day .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center;overflow:hidden}
+.day-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(1.5rem,4vw,4rem);align-items:center}
+.day .eyebrow{color:var(--foam)}
+.day h2{font-size:clamp(1.8rem,3.4vw,3rem)}
+.dlist{list-style:none;padding:0;margin:1.6rem 0 0}
+.dlist li{display:grid;grid-template-columns:4.6rem 1fr;gap:.6rem;padding:.55rem 0;border-top:1px solid rgba(255,255,255,.1);opacity:.32;transition:opacity .45s}
+.dlist li.on{opacity:1}.dlist b{font-family:var(--d);font-weight:600;color:var(--foam);font-variant-numeric:tabular-nums}
+.meter{height:2px;background:rgba(255,255,255,.12);margin-top:1rem}.meter i{display:block;height:100%;background:var(--foam);transform-origin:left;transform:scaleX(0)}
+#daySvg{width:100%;height:auto;display:block;border-radius:16px;background:#0D1822}
+#daySvg .t{font-family:var(--d);font-size:12px;fill:#8fa3b0}
+
+/* Séjour */
+.cfgsec{background:var(--pool);color:#e8eef1}
+.cfgsec .eyebrow{color:var(--foam)}.cfgsec .lede{color:#a9bac5}
+.cfg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:#9fb0bb;padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--foam);color:var(--deep);border-color:var(--foam)}
+.chips button.done{color:#fff;border-color:rgba(217,183,110,.55)}.chips button:disabled{cursor:default;opacity:.4}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{font-family:var(--s);font-size:clamp(1.4rem,2.2vw,1.8rem);padding:0;margin-bottom:1rem;line-height:1.15}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative;display:block;cursor:pointer}
+.choice input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.choice span{display:block;height:100%;border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:.85rem 1rem;transition:border-color .2s,background .2s;font-weight:600}
+.choice small{display:block;font-weight:400;color:#9fb0bb;font-size:.84rem;margin-top:.15rem}
+.choice input:checked+span{border-color:var(--foam);background:rgba(217,183,110,.12)}
+.choice input:focus-visible+span{outline:3px solid var(--foam);outline-offset:2px}
+.row2{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem;align-items:center}
+.tick{display:flex;gap:.5rem;align-items:center;font-size:.92rem;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:.45rem .9rem;cursor:pointer}
+.tick input{accent-color:var(--foam)}
+select{font:inherit;background:var(--deep);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:.45rem .6rem}
+.hint{font-size:.85rem;color:#8fa3b0;margin:.9rem 0 0}
+.cal{max-width:23rem}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem;font-family:var(--d);font-weight:600}
+.cal-head button{font:inherit;background:none;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:999px;width:2.2rem;height:2.2rem;cursor:pointer}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid .dow{font-size:.72rem;color:#8fa3b0;text-align:center}
+.cal-grid button{aspect-ratio:1;border-radius:8px;border:1px solid rgba(255,255,255,.08);background:none;color:#e8eef1;font:inherit;font-size:.85rem;cursor:pointer;padding:0}
+.cal-grid button:disabled{opacity:.22;cursor:default}
+.cal-grid button.in{background:rgba(217,183,110,.2);border-color:transparent}
+.cal-grid button.sel{background:var(--foam);color:var(--deep);font-weight:700}
+.nav-row{display:flex;gap:.6rem;margin-top:1.5rem}
+.step-anim{animation:stp .55s cubic-bezier(.16,1,.3,1)}@keyframes stp{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+.preview{position:sticky;top:90px;background:var(--deep);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1rem;overflow:hidden}
+.preview svg{width:100%;height:auto;display:block;border-radius:10px;background:#B9CCD8}
+.pv{transition:opacity .7s,transform .9s cubic-bezier(.16,1,.3,1)}
+.pz{transition:none}
+.flake{animation:fall 5s linear infinite}@keyframes fall{from{transform:translate(0,-40px)}to{transform:translate(-18px,300px)}}
+.pv-room{display:grid;grid-template-columns:6.5rem 1fr;gap:.9rem;align-items:center;margin-top:1rem}
+.pv-room .ph{aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:#31495C}
+.pv-room img{width:100%;height:100%;object-fit:cover}
+.pv-room p{margin:0;font-size:.88rem;color:#a9bac5}.pv-room b{display:block;color:#fff;font-weight:600}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
+.live span{font-size:.8rem;color:#8fa3b0}
+.live b{display:block;font-family:var(--s);font-weight:400;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+.live small{font-size:.8rem;color:#8fa3b0;text-align:right;max-width:15rem}
+.cmp{margin-top:.9rem;display:grid;gap:.4rem;font-size:.8rem;color:#a9bac5}
+.cmp div{display:grid;grid-template-columns:8.5rem 1fr 5.2rem;gap:.6rem;align-items:center}
+.cmp i{display:block;height:8px;border-radius:4px;background:var(--foam);transform-origin:left;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.cmp .pl i{background:#4E6577}.cmp em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums;color:#fff}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-size:.92rem;display:grid;gap:.2rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.4rem 0}.recap li span{color:#8fa3b0}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem;align-items:center}
+.copied{font-size:.82rem;color:var(--foam)}
+.countdown{font-size:.92rem;background:rgba(217,183,110,.08);border:1px solid rgba(217,183,110,.3);border-radius:10px;padding:.7rem .9rem;margin:0 0 1.2rem;color:#e8eef1}
+.countdown b{color:#fff}
+
+/* Table */
+.table-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(2rem,5vw,5rem);align-items:center}
+.table-ph{aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:#C9D3D8}
+.table-ph img{width:100%;height:100%;object-fit:cover}
+.labels{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0}
+.labels span{font-size:.82rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem;background:var(--white)}
+.mtabs{display:flex;gap:.4rem;flex-wrap:wrap;margin:1.6rem 0 1rem}
+.mtabs button{font:inherit;font-weight:600;font-size:.9rem;border-radius:999px;border:1px solid var(--line);background:none;padding:.45rem 1rem;cursor:pointer;color:var(--ink)}
+.mtabs button[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.mpanel{border-top:1px solid var(--line)}
+.mpanel li{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--line);animation:mi .5s cubic-bezier(.16,1,.3,1) both}
+.mpanel li:nth-child(2){animation-delay:.06s}.mpanel li:nth-child(3){animation-delay:.12s}
+@keyframes mi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.mpanel ul{list-style:none;margin:0;padding:0}.mpanel small{color:var(--soft)}
+.hours{font-size:.9rem;color:var(--soft);margin-top:1rem}
+
+/* Galerie */
+.hgal{height:300vh;background:#E3E9EC}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal-head{display:flex;justify-content:space-between;align-items:end;gap:2rem}
+.gcount{font-family:var(--d);font-weight:600;color:var(--soft);font-variant-numeric:tabular-nums}
+.track{display:flex;gap:1.4rem;align-items:flex-start;padding-left:max(1rem,(100vw - 1200px)/2);will-change:transform}
+.card{flex:none;width:min(58vw,540px);margin:0}
+.card:nth-child(even){width:min(44vw,400px);margin-top:3.5rem}
+.card .ph{aspect-ratio:4/3;overflow:hidden;border-radius:4px;background:#A7B7C1}
+.card:nth-child(3n) .ph{aspect-ratio:1/1}
+.card img{width:118%;max-width:none;height:100%;object-fit:cover;margin-left:-9%;will-change:transform}
+.card figcaption{font-size:.9rem;color:var(--soft);margin-top:.6rem}.card figcaption b{color:var(--ink);font-weight:600}
+
+/* Neige en direct */
+.wxsec{background:var(--concrete)}
+.wx-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,5vw,5rem);align-items:start}
+.wx-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.wx-tiles div{padding:1.1rem .8rem 1.1rem 0}
+.wx-tiles b{display:block;font-family:var(--s);font-weight:400;font-size:clamp(2.1rem,4vw,3.3rem);line-height:1;font-variant-numeric:tabular-nums}
+.wx-tiles span{font-size:.85rem;color:var(--soft)}
+.bars{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem;height:130px;align-items:end;margin-top:1.4rem;border-bottom:1px solid var(--line)}
+.bars span{display:block;height:100%;background:var(--pool);border-radius:3px 3px 0 0;transform-origin:bottom;transform:scaleY(.02);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.bars-l{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem;font-size:.75rem;color:var(--soft);text-align:center;margin-top:.4rem}
+.wxnote{font-size:.85rem;color:var(--soft);margin-top:1rem}
+.wxsec .countdown{color:var(--ink);background:var(--white);border-color:var(--line);margin-top:1.6rem}.wxsec .countdown b{color:var(--ink)}
+
+/* Séjours à thème */
+.stays{list-style:none;padding:0;margin:2.5rem 0 0;border-top:1px solid var(--line)}
+.stays li{display:grid;grid-template-columns:13rem minmax(0,1fr) 8rem;gap:1.6rem;align-items:center;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.stays time{font-family:var(--s);font-size:1.35rem;line-height:1.1}
+.stays h3{font-family:var(--d);font-weight:700;font-size:1.05rem;letter-spacing:0}
+.stays p{margin:.2rem 0 0;color:var(--soft);font-size:.95rem}
+.stays .ph{aspect-ratio:4/3;border-radius:4px;overflow:hidden;background:#C9D3D8}.stays img{width:100%;height:100%;object-fit:cover}
+
+/* Preuves */
+.proofs{background:var(--deep);color:#e8eef1}
+.proofs .eyebrow{color:var(--foam)}
+.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.big{font-family:var(--s);font-weight:300;font-size:clamp(4.5rem,11vw,9rem);line-height:.9}
+.big small{font-size:.3em;color:#8fa3b0}
+.marquee{overflow:hidden;border-block:1px solid rgba(255,255,255,.1);padding:1.2rem 0}
+.mq-track{display:flex;gap:3rem;width:max-content;animation:mq 46s linear infinite;font-family:var(--s);font-size:clamp(1.3rem,2.4vw,2rem);white-space:nowrap}
+.mq-track span{display:flex;align-items:center;gap:3rem}.mq-track span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--foam)}
+.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.note-rv{font-size:.82rem;color:#8fa3b0;margin-top:1rem;max-width:44rem}
+
+/* FAQ / contact */
+.faq{margin-bottom:0}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-top:6rem}
+.bigtel{font-family:var(--s);font-weight:400;font-size:clamp(2.3rem,5vw,4rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;white-space:nowrap}
+footer.site{background:var(--deep);color:#a9bac5;padding:3rem 0 6rem;font-size:.9rem}
+.foot{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:end}
+.foot b{color:#fff;font-family:var(--s);font-weight:450;font-size:1.3rem;display:block}
+.nl-form{display:flex;gap:.5rem;flex-wrap:wrap}
+.nl-form label{width:100%;font-size:.85rem}
+.nl-form input{flex:1;min-width:12rem;font:inherit;padding:.75rem 1rem;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);color:#fff}
+.nl-ok{width:100%;color:var(--foam);font-size:.85rem;margin:.3rem 0 0}
+
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .cfg,.table-grid,.wx-grid,.contact,.foot,.rx-head{grid-template-columns:1fr}
+ .preview{position:relative;top:0}
+ .day-grid{grid-template-columns:1fr;gap:1.2rem}.day h2{font-size:1.7rem}
+ .dlist li:not(.on){display:none}.dlist{margin-top:1rem}
+ .facts{top:5.2rem;left:1rem;right:1rem;width:auto;transform:none;grid-template-columns:1fr 1fr}
+ .facts b{font-size:1.7rem}
+ .stays li{grid-template-columns:minmax(0,1fr) 6.5rem;gap:.4rem 1rem}.stays time{grid-column:1/-1;font-size:1.15rem}
+ .card{width:78vw}.card:nth-child(even){width:64vw}
+}
+@media (max-width:600px){
+ .hnav .btn{display:none}
+ .hero h1{font-size:9.2vw}.hero-inner{padding-bottom:10.2rem}.hero-ctas{display:none}.hero-row p{font-size:.95rem}
+ .choices{grid-template-columns:1fr}
+ .wx-tiles b{font-size:1.9rem}
+ .reveal .cap{right:1rem;bottom:5.5rem}
+ .cmp div{grid-template-columns:7rem 1fr 4.6rem}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(13,24,34,.92);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.day,.hgal{height:auto}.reveal .stick,.day .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .stick{padding:4rem 0}.track{flex-wrap:wrap;padding:0 1rem}.wipe img{clip-path:none;transform:none}
+ .rise,.hero-row,.kick,.hero h1 .ln span,.facts div{opacity:1;transform:none;transition:none}
+ .mq-track{animation:none;flex-wrap:wrap;width:auto;white-space:normal}.flake{animation:none}.step-anim{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour l'Hôtel-Restaurant Le Grand-Bec par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Le Grand-Bec, accueil"><span id="logoSlot"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><path d="M2.5 26.5 10.5 14l4 5.2L21 5.5l8.5 21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M17.6 12.6 21 5.5l3 6.6-1.7-1.2-1.5 1.6-1.6-1.4z" fill="currentColor"/><path d="M5.5 26.5h21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span class="bname">Le Grand-Bec</span></span></a>
+ <nav class="hnav" aria-label="Navigation">
+  <a class="nl" href="#chambres" data-i="n1">Chambres</a><a class="nl" href="#table" data-i="n2">La table</a><a class="nl" href="#sejours" data-i="n3">Séjours à thème</a>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button></div>
+  <a class="btn gold" href="#sejour" data-i="cta1s">Mon séjour</a>
+ </nav>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="snow" aria-hidden="true"></canvas>
+ <div class="wrap hero-inner">
+  <p class="kick" data-i="kick">Hôtel 3 étoiles et restaurant, Pralognan-la-Vanoise, Savoie</p>
+  <h1><span class="ln"><span data-i="h1a">Trois générations</span></span><span class="ln"><span data-i="h1b">au pied de la Vanoise.</span></span><span class="ln"><span data-i="h1c">Votre table est mise.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Un hôtel de famille au cœur de Pralognan : 39 chambres et suites avec balcon, piscine chauffée, sauna et jacuzzi, et la cuisine savoyarde d'un Maître Restaurateur. Navette gratuite jusqu'au téléphérique en hiver.</p>
+   <div class="hero-ctas"><a class="btn gold" href="#sejour" data-i="cta1">Calculer mon séjour</a><a class="btn ghost" href="tel:+33479087110">04 79 08 71 10</a></div>
+  </div>
+ </div>
+ <span class="scrollhint" aria-hidden="true">Défiler</span>
+</section>
+
+<section class="reveal" id="hotel" aria-label="L'hôtel">
+ <div class="stick">
+  <figure id="rv"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2025/04/page_accueil_entete.jpg" alt="L'hôtel Le Grand-Bec à Pralognan-la-Vanoise" onerror="this.style.visibility='hidden'"></figure>
+  <div class="facts" id="facts">
+   <div><b data-to="3">0</b><span>générations d'hôteliers, la famille Favre-Briquet</span></div>
+   <div><b data-to="39">0</b><span>chambres et suites junior, toutes avec balcon ou terrasse</span></div>
+   <div><b data-to="98" data-suf=" m²">0</b><span>de piscine extérieure chauffée, l'été</span></div>
+   <div><b data-to="3398" data-suf=" m">0</b><span>le sommet du Grand Bec, qui domine la vallée</span></div>
+  </div>
+  <div class="cap"><b>Au cœur du village, face au massif.</b>291 avenue de la Grande Casse. L'hiver, la navette vous dépose au téléphérique ; l'été, les sentiers du parc national partent de la porte.</div>
+ </div>
+</section>
+
+<section class="day" id="journee" aria-label="Une journée au Grand-Bec">
+ <div class="stick"><div class="wrap day-grid">
+  <div>
+   <p class="eyebrow">Une journée d'hiver au Grand-Bec</p>
+   <h2 data-i="dayH">Du premier café au coin du feu, tout est à deux pas.</h2>
+   <ol class="dlist" id="dayList">
+    <li class="on"><b>8 h</b><span>Petit-déjeuner en salle, ou servi dans votre chambre.</span></li>
+    <li><b>9 h</b><span>La navette gratuite vous dépose au pied du téléphérique.</span></li>
+    <li><b>12 h 30</b><span>Ski sur le domaine, ou déjeuner à l'hôtel (dernière commande à 13 h).</span></li>
+    <li><b>16 h 30</b><span>Piscine intérieure, sauna et jacuzzi, réservés aux clients de l'hôtel.</span></li>
+    <li><b>19 h 30</b><span>Dîner du Maître Restaurateur : produits de la montagne et des lacs.</span></li>
+    <li><b>21 h 30</b><span>Bar la Godille, billard, salon de lecture au coin de la cheminée.</span></li>
+   </ol>
+   <div class="meter"><i id="dayMeter"></i></div>
+  </div>
+  <svg id="daySvg" viewBox="0 0 640 440" role="img" aria-label="Illustration d'une journée à Pralognan, du matin au soir">
+   <defs><clipPath id="capc"><path d="M0 0H640V200L600 192 560 204 520 186 480 200 440 184 400 198 360 180 320 196 280 182 240 196 200 184 160 198 120 188 80 200 40 190 0 198Z"/></clipPath></defs>
+   <rect width="640" height="440" fill="#0D1822"/>
+   <rect id="dSky" width="640" height="440" fill="#86A8BF" opacity="0"/>
+   <rect id="dDusk" y="150" width="640" height="200" fill="#D9937A" opacity="0"/>
+   <g id="dSun"><circle cx="320" cy="110" r="22" fill="#F2D38A"/></g>
+   <path id="dFar" d="M0 262 60 214 110 236 170 162 215 200 262 142 300 176 350 118 398 168 450 132 500 186 560 150 640 206V440H0Z" fill="#2B4255"/>
+   <path d="M0 262 60 214 110 236 170 162 215 200 262 142 300 176 350 118 398 168 450 132 500 186 560 150 640 206V440H0Z" fill="#E6ECF0" clip-path="url(#capc)"/>
+   <path d="M300 440V336L380 282 430 268 470 244 520 196 562 152 640 184V440Z" fill="#E9EEF1"/>
+   <path d="M300 336 380 282 430 268 470 244 520 196 562 152 600 168 560 186 520 230 470 268 420 296 360 330Z" fill="#CBD6DD"/>
+   <g id="dPiste"><path id="dPath" d="M562 156C548 190 512 204 516 232S470 268 478 290 434 318 420 346" fill="none" stroke="#2F5E52" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/></g>
+   <line x1="468" y1="352" x2="562" y2="154" stroke="#7E93A3" stroke-width="1.4"/>
+   <path d="M0 440V362l14-26 14 26 10-20 13 22 12-30 14 30 11-18 12 20 13-28 14 28 12-22 12 24 14-26 13 24V440Z M330 440v-58l12-22 12 22 12-28 13 28 12-18 12 20 14-30 14 30 12-22 13 24 14-26 14 26 13-20 12 22 14-28 13 28 12-16 12 18 14-26 13 26 12-20 12 22 V440Z" fill="#132430"/>
+   <path d="M0 440V392h640v48Z" fill="#E3EAEE"/>
+   <rect x="150" y="336" width="120" height="58" fill="#5A3F2E"/>
+   <path d="M136 340 210 296 284 340Z" fill="#EEF2F4"/>
+   <rect x="244" y="300" width="10" height="26" fill="#4A3426"/>
+   <rect x="280" y="372" width="56" height="16" rx="2" fill="#4D8FA8"/>
+   <rect id="dNight" width="640" height="440" fill="#0D1822" opacity=".6"/>
+   <g id="dStars" opacity="1" fill="#E6E9EE"><circle cx="60" cy="40" r="1.3"/><circle cx="140" cy="76" r="1"/><circle cx="210" cy="30" r="1.4"/><circle cx="420" cy="52" r="1.1"/><circle cx="470" cy="24" r="1.4"/><circle cx="590" cy="70" r="1.2"/><circle cx="300" cy="60" r="1"/><circle cx="96" cy="120" r="1"/><circle cx="610" cy="118" r="1"/></g>
+   <circle id="dMoon" cx="520" cy="78" r="12" fill="#E6E9EE" opacity="0"/>
+   <g id="dWin" fill="#F2C56B" opacity="0"><rect x="164" y="350" width="16" height="12"/><rect x="190" y="350" width="16" height="12"/><rect x="216" y="350" width="16" height="12"/><rect x="242" y="350" width="16" height="12"/><rect x="164" y="372" width="16" height="12"/><rect x="216" y="372" width="16" height="12"/><rect x="242" y="372" width="16" height="12"/><rect x="190" y="372" width="16" height="22"/></g>
+   <g id="dSteam" fill="none" stroke="#DDE6EB" stroke-width="2" stroke-linecap="round" opacity="0"><path d="M292 368c-6-8 6-12 0-20"/><path d="M308 368c-6-8 6-12 0-20"/><path d="M324 368c-6-8 6-12 0-20"/></g>
+   <g id="dSmoke" fill="#B8C5CE" opacity="0"><circle cx="249" cy="290" r="5"/><circle cx="254" cy="278" r="7"/><circle cx="262" cy="263" r="9"/></g>
+   <rect id="dCab" x="-6" y="-5" width="12" height="9" rx="2" fill="#D9B76E"/>
+   <circle id="dSki" r="4.5" fill="#D9B76E" opacity="0"/>
+   <line x1="40" y1="420" x2="600" y2="420" stroke="#9fb0bb" stroke-width="1" opacity=".5"/>
+   <text class="t" x="40" y="414">8 h</text><text class="t" x="200" y="414">12 h</text><text class="t" x="360" y="414">16 h</text><text class="t" x="520" y="414">20 h</text>
+   <circle id="dMark" cx="40" cy="420" r="5" fill="#D9B76E"/>
+  </svg>
+ </div></div>
+</section>
+
+<section class="cfgsec pad" id="sejour" aria-labelledby="cfgH">
+ <div class="wrap">
+  <p class="eyebrow">Réservation directe</p>
+  <h2 id="cfgH" data-i="cfgH">Votre séjour, chiffré avant même d'appeler.</h2>
+  <p class="lede" style="margin-top:1rem">Saison, chambre, formule, dates : le prix se calcule à chaque choix, taxe de séjour comprise. La réception vous confirme la disponibilité par retour d'email.</p>
+  <div class="cfg">
+   <form id="sej" onsubmit="return false">
+    <ul class="chips" id="chips" aria-label="Étapes"></ul>
+    <fieldset data-s="0" data-n="Saison" data-auto><legend>Quand venez-vous ?</legend>
+     <div class="choices">
+      <label class="choice" id="lb-hiver"><input type="radio" name="season" value="hiver" checked><span>L'hiver<small>Ski, navette au téléphérique, piscine intérieure, sauna et jacuzzi</small></span></label>
+      <label class="choice" id="lb-ete"><input type="radio" name="season" value="ete"><span>L'été<small>Piscine extérieure chauffée, tennis, sentiers du parc national</small></span></label>
+     </div>
+    </fieldset>
+    <fieldset data-s="1" data-n="Chambre" data-auto hidden><legend>Quelle chambre ?</legend>
+     <div class="choices">
+      <label class="choice"><input type="radio" name="room" value="cabine"><span>Chambre cabine<small>Douche et WC, balcon plein ouest</small></span></label>
+      <label class="choice"><input type="radio" name="room" value="douche"><span>Chambre douche<small>Douche et WC, balcon est ou ouest</small></span></label>
+      <label class="choice"><input type="radio" name="room" value="bain" checked><span>Chambre bain<small>Baignoire et WC, balcon est, sud ou ouest</small></span></label>
+      <label class="choice" id="lb-suite"><input type="radio" name="room" value="suite"><span>Suite junior<small>Chambre et salon séparés, terrasse sud-est</small></span></label>
+     </div>
+    </fieldset>
+    <fieldset data-s="2" data-n="Formule" data-auto hidden><legend>Quelle formule ?</legend>
+     <div class="choices">
+      <label class="choice"><input type="radio" name="formula" value="0"><span>Nuit seule<small>Petit-déjeuner possible sur place, 18 €</small></span></label>
+      <label class="choice"><input type="radio" name="formula" value="1"><span>Nuit et petit-déjeuner<small>Buffet en salle, ou servi en chambre</small></span></label>
+      <label class="choice"><input type="radio" name="formula" value="2" checked><span>Demi-pension<small>Le dîner du Maître Restaurateur chaque soir</small></span></label>
+     </div>
+    </fieldset>
+    <fieldset data-s="3" data-n="Voyageurs" hidden><legend>Qui vient ?</legend>
+     <div class="choices">
+      <label class="choice"><input type="radio" name="adults" value="1"><span>Une personne</span></label>
+      <label class="choice"><input type="radio" name="adults" value="2" checked><span>Deux adultes</span></label>
+     </div>
+     <div class="row2"><label for="kids" style="font-size:.92rem">Enfants</label><select id="kids"><option value="0">aucun</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
+      <label class="tick"><input type="checkbox" id="oDog"> Avec notre chien</label><label class="tick"><input type="checkbox" id="oGar"> Garage pour la voiture</label></div>
+     <p class="hint">Gratuit pour les moins de 3 ans ; à partir de 3 ans, la réception vous précise le supplément. Parking privé gratuit.</p>
+    </fieldset>
+    <fieldset data-s="4" data-n="Dates" hidden><legend>Votre date d'arrivée</legend>
+     <div class="cal"><div class="cal-head"><button type="button" id="calP" aria-label="Mois précédent">‹</button><span id="calT"></span><button type="button" id="calN" aria-label="Mois suivant">›</button></div><div class="cal-grid" id="calG"></div></div>
+     <div class="row2" role="radiogroup" aria-label="Nombre de nuits"><span style="font-size:.92rem">Nuits</span>
+      <label class="tick"><input type="radio" name="nights" value="3"> 3</label><label class="tick"><input type="radio" name="nights" value="5"> 5</label><label class="tick"><input type="radio" name="nights" value="7" checked> 7</label><label class="tick"><input type="radio" name="nights" value="10"> 10</label></div>
+    </fieldset>
+    <div data-s="5" data-n="Récapitulatif" hidden>
+     <p class="countdown" id="countdown"></p>
+     <ul class="recap" id="recap"></ul>
+     <div class="send-row"><a class="btn gold" id="mailBtn" href="mailto:grand_bec@wanadoo.fr">Envoyer ma demande à la réception</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien du séjour</button><span class="copied" id="copied" hidden></span></div>
+    </div>
+    <div class="nav-row"><button type="button" class="btn ghost" id="prev">Retour</button><button type="button" class="btn" id="next">Continuer</button></div>
+   </form>
+   <div class="preview" id="preview" aria-live="polite">
+    <svg viewBox="0 0 480 330" aria-hidden="true">
+     <g class="pz" data-z=".25">
+      <rect width="480" height="330" fill="#B9CCD8"/>
+      <rect id="pSkyS" class="pv" width="480" height="330" fill="#7DB1D6" opacity="0"/>
+      <circle id="pGlow" class="pv" r="80" fill="#F2B98F" opacity="0"/>
+      <circle id="pSun" class="pv" r="19" fill="#F6DC93"/>
+     </g>
+     <g class="pz" data-z=".55">
+      <path d="M-20 210 40 150 90 176 150 96 196 140 240 82 286 128 330 100 380 150 430 118 500 170V330H-20Z" fill="#6F8799"/>
+      <path id="pCaps" class="pv" d="M128 126 150 96 172 128 160 122 150 132 140 122Z M218 112 240 82 262 114 250 108 240 120 230 108Z M314 112 330 100 348 118 338 116 330 124 322 116Z M414 130 430 118 446 134 436 130 428 138 420 130Z" fill="#F4F7F8"/>
+     </g>
+     <g class="pz" data-z=".9">
+      <path id="pSlopeW" class="pv" d="M-20 330V236L60 206 140 224 230 190 320 222 400 200 500 230V330Z" fill="#E8EEF1"/>
+      <path id="pSlopeS" class="pv" d="M-20 330V236L60 206 140 224 230 190 320 222 400 200 500 230V330Z" fill="#7F9C6E" opacity="0"/>
+      <path d="M40 250l9-22 9 22Zm22 4 11-28 11 28Zm300-6 9-22 9 22Zm22 6 11-28 11 28Zm26-4 8-18 8 18Z" fill="#24443A"/>
+      <rect id="pPool" class="pv" x="170" y="236" width="120" height="16" rx="3" fill="#5FB0CC" opacity="0"/>
+      <g id="pFlakes" class="pv" fill="#fff"><circle class="flake" cx="60" cy="20" r="2"/><circle class="flake" cx="150" cy="0" r="1.6" style="animation-delay:-1.2s"/><circle class="flake" cx="230" cy="30" r="2.2" style="animation-delay:-2.5s"/><circle class="flake" cx="320" cy="10" r="1.7" style="animation-delay:-3.4s"/><circle class="flake" cx="410" cy="24" r="2" style="animation-delay:-.6s"/><circle class="flake" cx="460" cy="4" r="1.5" style="animation-delay:-4.2s"/><circle class="flake" cx="110" cy="40" r="1.4" style="animation-delay:-3s"/><circle class="flake" cx="370" cy="44" r="1.4" style="animation-delay:-1.8s"/></g>
+     </g>
+     <g class="pz" data-z="1.6">
+      <g id="pSofa" class="pv" opacity="0"><rect x="-10" y="250" width="96" height="40" rx="10" fill="#3A5163"/><rect x="-10" y="236" width="88" height="22" rx="10" fill="#465E71"/></g>
+      <rect x="-20" y="250" width="520" height="7" fill="#7A5236"/>
+      <path d="M8 257h10v73H8Zm30 0h10v73H38Zm30 0h10v73H68Zm30 0h10v73H98Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Zm30 0h10v73h-10Z" fill="#6A462E"/>
+      <rect x="-20" y="300" width="520" height="40" fill="#2E2219"/>
+      <g id="pChair1"><rect x="262" y="270" width="28" height="34" rx="4" fill="#C9D3D8"/><rect x="262" y="300" width="4" height="22" fill="#9FB0BB"/><rect x="286" y="300" width="4" height="22" fill="#9FB0BB"/></g>
+      <g id="pChair2" class="pv"><rect x="390" y="270" width="28" height="34" rx="4" fill="#C9D3D8"/><rect x="390" y="300" width="4" height="22" fill="#9FB0BB"/><rect x="414" y="300" width="4" height="22" fill="#9FB0BB"/></g>
+      <ellipse cx="340" cy="284" rx="50" ry="10" fill="#D7DEE2"/><rect x="337" y="290" width="6" height="34" fill="#9FB0BB"/>
+      <g id="pCup" class="pv"><path d="M316 270h14v8a7 7 0 0 1-14 0Z" fill="#fff"/><path d="M330 272a4 4 0 0 1 0 6" fill="none" stroke="#fff" stroke-width="2"/></g>
+      <g id="pCup2" class="pv"><path d="M352 270h14v8a7 7 0 0 1-14 0Z" fill="#fff"/></g>
+      <g id="pPlate" class="pv"><ellipse cx="340" cy="282" rx="18" ry="4" fill="#fff"/><path d="M326 280a14 12 0 0 1 28 0Z" fill="#B9C6CE"/><circle cx="340" cy="267" r="2" fill="#B9C6CE"/></g>
+      <g id="pDog" class="pv" opacity="0" fill="#2E2219"><path d="M190 300c0-12 8-18 22-18h16l6-10 6 4-2 10c4 2 6 6 6 12v6h-8v-6h-30v6h-8Z" fill="#8A6A52"/></g>
+     </g>
+    </svg>
+    <div class="pv-room"><div class="ph"><img id="pvImg" src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/03/Hotel-Grand-Bec-Chambre-bain-WC.jpg" alt="" onerror="this.style.visibility='hidden'"></div><p><b id="pvRoom">Chambre bain et WC</b><span id="pvLabel">Hiver, balcon est, sud ou ouest</span></p></div>
+    <div class="live"><div><span>Votre séjour, estimation</span><b id="livePrice">0 €</b></div><small id="liveTxt"></small></div>
+    <div class="cmp"><div><span>Réservé ici</span><i id="barD"></i><em id="cmpD"></em></div><div class="pl"><span>Via une plateforme</span><i id="barP"></i><em id="cmpP"></em></div></div>
+    <p class="hint" style="margin-top:.6rem">Tarifs basse saison hiver 2027 publiés par l'hôtel. Écart avec les plateformes indicatif, à valider avec vous.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="pad" id="table" aria-labelledby="tableH">
+ <div class="wrap table-grid">
+  <div class="table-ph wipe"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/le-grand-bec.jpg" alt="Le restaurant du Grand-Bec" loading="lazy" onerror="this.style.visibility='hidden'"></div>
+  <div>
+   <p class="eyebrow">La table du Grand-Bec</p>
+   <h2 id="tableH" data-i="tableH">Dominique Briquet, Maître Restaurateur.</h2>
+   <p class="lede" style="margin-top:1.2rem">Formé à l'École Lenôtre et à l'École nationale supérieure de la pâtisserie, il signe une cuisine inventive sur les traditions savoyardes : produits de la montagne et des lacs, herbes et fleurs, presque tout fait maison. La carte suit les saisons, la cave aussi.</p>
+   <div class="labels"><span>Maître Restaurateur</span><span>Académie du goût et des traditions culinaires de Savoie</span></div>
+   <div class="mtabs" role="tablist" aria-label="Menus du terroir"><button type="button" role="tab" aria-selected="true" data-m="gb">Grand-Bec</button><button type="button" role="tab" aria-selected="false" data-m="gn">Génépi</button><button type="button" role="tab" aria-selected="false" data-m="mb">Mont-Bochor</button></div>
+   <div class="mpanel" id="mpanel" role="tabpanel"></div>
+   <p class="hours">Menus du terroir à 33 € par personne. Déjeuner de 12 h 30 à 13 h, dîner de 19 h 30 à 20 h 15 (dernière commande), sur réservation.</p>
+  </div>
+ </div>
+</section>
+
+<section class="hgal" id="chambres" aria-label="Chambres et lieux">
+ <div class="stick">
+  <div class="wrap hgal-head"><div><p class="eyebrow">39 chambres et suites</p><h2 data-i="galH">Un balcon à l'est, au sud ou à l'ouest.</h2></div><span class="gcount" id="gcount">01 / 08</span></div>
+  <div class="track" id="track">
+   <figure class="card"><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2025/04/vue-de-l-hotel-sous-les.jpg" alt="L'hôtel Le Grand-Bec" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>L'hôtel</b>, avenue de la Grande Casse</figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/6-2561014.jpg" alt="Suite junior" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>Suite junior</b>, chambre et salon, terrasse sud-est</figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/03/Hotel-Grand-Bec-Chambre-bain-WC.jpg" alt="Chambre avec baignoire" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>Chambre bain</b>, balcon est, sud ou ouest</figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/03/Hotel-Grand-Bec-Chambre-douche-WC.jpg" alt="Chambre avec douche" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>Chambre douche</b>, balcon est ou ouest</figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/la-piscine-a-l-exterieur.jpg" alt="La piscine extérieure" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>La piscine chauffée</b>, 98 m² et bassin pour les enfants</figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/03/Hotel-Grand-Bec-Chambre-Cabine-douche-WC.jpg" alt="Chambre cabine" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>Chambre cabine</b>, balcon plein ouest</figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/H%C3%B4tel-Grand-Bec-Zen-Altitude1.jpg" alt="Espace Zen Altitude" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>Zen Altitude</b>, massages sur rendez-vous</figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/grand-bec-ete.jpg" alt="Le Grand-Bec en été" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>L'été</b>, tennis privé, pétanque, balançoires</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="wxsec pad" id="neige" aria-labelledby="wxH">
+ <div class="wrap wx-grid">
+  <div>
+   <p class="eyebrow">Neige et météo en direct</p>
+   <h2 id="wxH" data-i="wxH">Pralognan, en ce moment.</h2>
+   <p class="lede" style="margin-top:1rem">Avant de réserver, on veut savoir s'il a neigé. Les chiffres se mettent à jour à chaque visite, pour le village de Pralognan-la-Vanoise.</p>
+   <p class="countdown rise" id="countdown2"></p>
+  </div>
+  <div class="rise">
+   <div class="wx-tiles"><div><b id="wxT">—</b><span id="wxC">Température</span></div><div><b id="wxD">—</b><span>Neige au sol, au village</span></div><div><b id="wxS">—</b><span>Chutes prévues sur 7 jours</span></div></div>
+   <div class="bars" id="bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+   <div class="bars-l" id="barsL"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+   <p class="wxnote" id="wxNote">Prévisions Open-Meteo, chutes de neige jour par jour.</p>
+  </div>
+ </div>
+</section>
+
+<section class="pad" id="sejours" aria-labelledby="stayH" style="padding-top:0">
+ <div class="wrap">
+  <p class="eyebrow">Séjours à thème</p>
+  <h2 id="stayH" data-i="stayH">Des semaines à thème, entre deux sommets.</h2>
+  <ul class="stays">
+   <li class="rise"><time>Toute la saison</time><div><h3>Les Ateliers de Lisette</h3><p>Peinture sur bois et sur toile, chaque jour, sur réservation.</p></div><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/animation-hotel-grandbec-peinture.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"></div></li>
+   <li class="rise"><time>20 – 27 février 2027</time><div><h3>Échecs et ski</h3><p>Le matin sur les pistes, l'après-midi devant l'échiquier.</p></div><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/animation-hotel-grandbec-echec.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"></div></li>
+   <li class="rise"><time>Juin 2027</time><div><h3>Randonnée et peinture</h3><p>5 nuits (4 en pension complète, 1 en demi-pension) et 4 jours de stage, ou 3 nuits et 2 jours.</p></div><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/animation-hotel-grandbec-randonnee.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"></div></li>
+   <li class="rise"><time>Juin et septembre 2027</time><div><h3>Scrabble</h3><p>Deux semaines de parties, entre deux balades.</p></div><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/animation-hotel-grandbec-scrabble.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"></div></li>
+   <li class="rise"><time>25 juillet – 1er août 2027</time><div><h3>Échecs et montagne</h3><p>Une semaine d'été entre le parc national et l'échiquier.</p></div><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/animation-hotel-grandbec-echec.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"></div></li>
+   <li class="rise"><time>22 – 29 août 2027</time><div><h3>Bridge</h3><p>7 nuits en demi-pension et le stage.</p></div><div class="ph"><img src="https://www.hoteldugrandbec.fr/wp-content/uploads/2018/04/animation-hotel-grandbec-carte.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"></div></li>
+  </ul>
+ </div>
+</section>
+
+<section class="proofs pad" id="avis" aria-labelledby="avisH">
+ <div class="wrap">
+  <div class="rx-head">
+   <p class="big">8,0<small> / 10</small></p>
+   <div><p class="eyebrow">Une maison de famille</p><h2 id="avisH" data-i="avisH">Des titres qui se méritent, des clients qui notent.</h2><p class="lede" style="color:#a9bac5;margin-top:1rem">Note moyenne relevée sur 42 avis vérifiés de comparateurs de voyage.</p></div>
+  </div>
+ </div>
+ <div class="marquee" aria-label="Preuves"><div class="mq-track">
+  <span>Hôtel 3 étoiles</span><span>Maître Restaurateur</span><span>Trois générations d'hôteliers</span><span>Académie du goût et des traditions culinaires de Savoie</span><span>Formé à l'École Lenôtre</span><span>Navette gratuite jusqu'au téléphérique</span><span>Piscine chauffée de 98 m²</span><span>Tennis privé</span>
+  <span aria-hidden="true">Hôtel 3 étoiles</span><span aria-hidden="true">Maître Restaurateur</span><span aria-hidden="true">Trois générations d'hôteliers</span><span aria-hidden="true">Académie du goût et des traditions culinaires de Savoie</span><span aria-hidden="true">Formé à l'École Lenôtre</span><span aria-hidden="true">Navette gratuite jusqu'au téléphérique</span><span aria-hidden="true">Piscine chauffée de 98 m²</span><span aria-hidden="true">Tennis privé</span>
+ </div></div>
+ <div class="wrap"><p class="note-rv">Preuves tirées de votre site pour la maquette. Dans le site final, vos avis Google s'affichent ici en version originale et se mettent à jour automatiquement.</p></div>
+</section>
+
+<section class="pad" aria-labelledby="faqH">
+ <div class="wrap">
+  <div class="faq">
+   <h2 class="rise" id="faqH" data-i="faqH">Les questions qu'on nous pose avant de réserver.</h2>
+   <div class="faq-list">
+    <details><summary>Quelles semaines partent en premier ?</summary><p>Les vacances de Noël et de février, et les semaines à thème comme Échecs et ski, du 20 au 27 février 2027. Si vos dates sont fixées, envoyez votre demande dès maintenant : la réception vous répond avec les disponibilités.</p></details>
+    <details><summary>Comment rejoindre les pistes ?</summary><p>En hiver, une navette gratuite vous conduit de l'hôtel au téléphérique. Un local à skis vous attend au retour.</p></details>
+    <details><summary>Y a-t-il une piscine en hiver ?</summary><p>Oui : piscine intérieure, sauna et jacuzzi, réservés aux clients de l'hôtel. En été, la piscine extérieure chauffée de 98 m² et son bassin pour les enfants prennent le relais.</p></details>
+    <details><summary>Le petit-déjeuner est-il compris ?</summary><p>Il l'est dans les formules petit-déjeuner et demi-pension. Sinon, il coûte 18 €, et 10 € de plus s'il est servi en chambre.</p></details>
+    <details><summary>Peut-on venir avec son chien ?</summary><p>Oui, les animaux sont acceptés, pour 5 € par nuit.</p></details>
+    <details><summary>Où garer la voiture ?</summary><p>Le parking privé est gratuit. Un garage fermé est disponible pour 12 € la nuit ou 70 € la semaine, et le garage à vélos et motos est gratuit en été.</p></details>
+    <details><summary>Et pour les enfants ?</summary><p>Le séjour est gratuit pour les moins de 3 ans, avec un supplément à partir de 3 ans. En été : bassin pour les enfants, balançoires, tennis de table et pétanque.</p></details>
+    <details><summary>Peut-on réserver un massage ?</summary><p>L'espace Zen Altitude propose des massages californien, sportif ou sur mesure, sur rendez-vous auprès de Betty au 06 88 48 14 61. Il est aussi ouvert aux personnes qui ne logent pas à l'hôtel.</p></details>
+    <details><summary>L'hôtel est-il accessible en fauteuil roulant ?</summary><p>Pas entièrement : l'hôtel ne dispose pas de chambre adaptée. Appelez la réception, elle vous dira franchement ce qui est possible.</p></details>
+   </div>
+  </div>
+  <div class="contact" id="contact">
+   <div><h2 data-i="ctH">Une question ? La réception répond.</h2><a class="bigtel" href="tel:+33479087110">04 79 08 71 10</a><p style="margin:0;color:var(--soft)">291 avenue de la Grande Casse, 73710 Pralognan-la-Vanoise<br><a href="mailto:grand_bec@wanadoo.fr">grand_bec@wanadoo.fr</a></p></div>
+   <div><p style="color:var(--soft);margin-top:0">Au cœur du parc national de la Vanoise, à quelques minutes du téléphérique en navette. Bar, restaurant, salons, salles de réunion et de banquet.</p><a class="btn" href="#sejour">Calculer mon séjour</a></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="site"><div class="wrap foot">
+ <div><b>Hôtel-Restaurant Le Grand-Bec</b>Hôtel 3 étoiles, famille Favre-Briquet. 291 avenue de la Grande Casse, 73710 Pralognan-la-Vanoise. 04 79 08 71 10.</div>
+ <form class="nl-form" id="nlForm"><label for="nlMail">Recevoir nos séjours et conseils de saison chaque mois</label><input type="email" id="nlMail" placeholder="votre@email.fr" required><button class="btn gold" type="submit">S'inscrire</button><p class="nl-ok" id="nlOk" hidden>Merci, c'est noté. Démonstration : aucun envoi réel depuis la maquette.</p></form>
+</div></footer>
+
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Famille Favre-Briquet, voici ce que nous avons relevé sur hoteldugrandbec.fr, et ce que la nouvelle version apporte.</p>
+ <ul class="audit">
+  <li><div class="now"><b>Aujourd'hui</b>Votre page d'accueil annonce encore une ouverture du 12 juin au 14 septembre 2025, alors que vos tarifs de l'hiver 2027 sont déjà publiés.</div><div><b>Avec la refonte</b>Les saisons et les dates tenues à jour en un seul endroit, visibles dès l'ouverture de la page.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Vos tarifs sont rangés dans un tableau en bas de la page Hôtel, et le bouton Réservation envoie vers un moteur externe sans dire pourquoi réserver chez vous.</div><div><b>Avec la refonte</b>Un calculateur de séjour&nbsp;: chambre, formule, dates, prix animé taxe de séjour comprise, et l'avantage de réserver en direct plutôt que sur une plateforme.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>« Image par défaut » en tête de vos pages intérieures, le texte du chef répété deux fois, une version anglaise approximative (« Chief »).</div><div><b>Avec la refonte</b>Vos photos sur chaque page, et des textes réécrits en français et en anglais pour votre clientèle étrangère.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Votre titre de Maître Restaurateur, vos trois générations et vos séjours à thème sont noyés dans le texte, et aucun avis client n'apparaît.</div><div><b>Avec la refonte</b>Vos preuves mises en scène dès les premières secondes, et une FAQ qui répond avant l'appel&nbsp;: navette, chien, garage, enfants.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Un site statique, semblable à celui des autres hôtels de la station.</div><div><b>Avec la refonte</b>La neige qui tombe sur la Vanoise dès l'ouverture, une journée au Grand-Bec qui se dessine au défilement, la neige de Pralognan en direct.</div></li>
+ </ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Formulaire de devis, avis Google, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + estimateur de budget</li><li>FR, EN, IT</li><li>4 pages par ville</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + neige animée en temps réel (WebGL)</li><li>Journée au Grand-Bec et galerie animées au défilement, à 120 images/s</li><li>Calculateur de séjour, neige et météo en direct</li><li>Motion design sur mesure de vos chambres</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+<div class="addons">
+ <div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens clients et à vos contacts&nbsp;: dates des séjours échecs, bridge et randonnée, menus de saison, ouverture des réservations d'hiver. Rédigé, mis en page et envoyé pour vous.</p></div>
+ <div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos clients après chaque séjour, bilan mensuel.</p></div>
+ <div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Néerlandais, allemand ou une autre langue de votre clientèle, traduite et tenue à jour avec le reste du site.</p></div>
+</div>
+<p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Le%20Grand-Bec">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+
+<div class="mbar"><a class="btn ghost" href="tel:+33479087110">Appeler</a><a class="btn gold" href="#sejour">Mon séjour</a></div>
+
+<script src="../lib/lenis.min.js"></script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lenis=null;
+if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});window.lenis=lenis;}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+function $(id){return document.getElementById(id);}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+var tweens=[];
+function tween(d,f){tweens.push({st:performance.now(),d:d,f:f});}
+function runTweens(now){for(var k=tweens.length-1;k>=0;k--){var w=tweens[k],q=Math.min(1,Math.max(0,(now-w.st)/w.d));w.f(ease(q));if(q>=1)tweens.splice(k,1);}}
+function fmt(n){return Math.round(n).toLocaleString('fr-FR')+' €';}
+
+/* ---------- Neige sur la Vanoise (WebGL) ---------- */
+var cv=$('snow'),gl=cv.getContext('webgl',{antialias:false,alpha:false});
+var heroVisible=true,t0=performance.now();
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ var fs=['precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;',
+ 'float h1(float n){return fract(sin(n)*43758.5453);}',
+ 'float h2(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+ 'float n1(float x){float i=floor(x),f=fract(x);f=f*f*(3.-2.*f);return mix(h1(i),h1(i+1.),f);}',
+ 'float ridge(float x){float v=0.,a=.5;for(int k=0;k<5;k++){float n=1.-abs(n1(x)*2.-1.);v+=a*n*n;x=x*2.07+3.1;a*=.5;}return v;}',
+ 'float lo(float x){float v=0.,a=.5;for(int k=0;k<2;k++){float n=1.-abs(n1(x)*2.-1.);v+=a*n*n;x=x*2.07+3.1;a*=.5;}return v;}',
+'float flakes(vec2 q,float sc,float sp,float sz,float wind){vec2 p=q*sc;p.y+=t*sp;p.x+=t*sp*wind+sin(p.y*.35+t*.7)*.25;vec2 id=floor(p);vec2 f=fract(p)-.5;vec2 o=vec2(h2(id),h2(id+7.3))-.5;float d=length(f-o*.7);return smoothstep(sz,sz*.25,d)*step(.45,h2(id+3.7));}',
+ 'void main(){vec2 uv=gl_FragCoord.xy/r;float asp=r.x/r.y;vec2 q=vec2(uv.x*asp,uv.y);vec2 mm=m-.5;float px=1.5/r.y;',
+ 'float glow=.35+.45*m.y;',
+ 'vec3 col=mix(vec3(.30,.30,.40)+vec3(.35,.18,.12)*glow,vec3(.03,.06,.10),pow(uv.y,.65));',
+ 'col+=vec3(.9)*step(.9965,h2(floor(gl_FragCoord.xy*.5)))*smoothstep(.5,.9,uv.y)*.5;',
+ 'vec3 lit=mix(vec3(.86,.90,.96),vec3(1.,.82,.72),glow*.75),shd=vec3(.30,.37,.50);',
+ 'for(int i=0;i<3;i++){float fi=float(i);float fr=1.1+fi*.7;float x=q.x*fr+mm.x*(.05+fi*.07)+fi*5.3;float base=.34-fi*.1;float amp=.44-fi*.08;',
+ 'float hh=base+amp*pow(ridge(x),1.35);float a=smoothstep(hh+px,hh-px,uv.y);',
+'float xs=x+(hh-uv.y)*2.2;float face=smoothstep(-.03,.03,lo(xs+.04)-lo(xs-.04));',
+'float dep=amp*(.14+.18*n1(x*2.3+fi*3.))+.04*pow(n1(x*22.),3.);float snowL=smoothstep(hh-dep-.004,hh-dep+.004,uv.y);',
+'vec3 rock=vec3(.09,.12,.17)*(1.-fi*.2);vec3 sn=mix(shd,lit,face)*(1.-.2*smoothstep(0.,dep,hh-uv.y))*(1.-fi*.12);',
+'vec3 mc=mix(rock*(.8+.4*face),sn,snowL);mc=mix(mc,col,.24-fi*.1);mc*=.7+.3*smoothstep(base-.1,hh,uv.y);',
+'col=mix(col,mc,a);}',
+ 'float fx=q.x*15.;float tri=1.-abs(fract(fx)*2.-1.);float fh=.10+.03*n1(q.x*3.+mm.x*.6)+.05*tri*(.5+.5*h1(floor(fx)));',
+ 'float fa=smoothstep(fh+px,fh-px,uv.y);col=mix(col,vec3(.025,.045,.06),fa);',
+ 'vec2 lc=vec2(q.x*46.,uv.y*46.);vec2 li=floor(lc);float on=step(.9,h2(li))*step(uv.y,fh-.025)*step(.015,uv.y);',
+ 'col+=vec3(1.,.74,.40)*on*(smoothstep(.16,.04,length(fract(lc)-.5))+.25*smoothstep(.5,.1,length(fract(lc)-.5)))*(.75+.25*sin(t*1.5+li.x*3.));',
+ 'vec2 dp=q-vec2(m.x*asp,m.y);float inf=exp(-dot(dp,dp)*10.);vec2 push=dp/(length(dp)+.001)*inf*.05;',
+ 'float wind=mm.x*1.6+.2;',
+ 'float s=flakes(q+push*.5,7.,.06,.13,wind)*.45+flakes(q+push,4.5,.1,.12,wind)*.6+flakes(q+push*1.6,3.2,.15,.09,wind)*.8+flakes(q+push*2.2,2.4,.22,.045,wind)*.7;',
+ 'col+=vec3(.95,.97,1.)*s;',
+ 'col*=1.-.62*smoothstep(.85,.05,uv.x)*smoothstep(.72,.12,uv.y);',
+ 'col*=1.-.28*length(uv-vec2(.5,.62));col*=1.-.5*smoothstep(.62,.05,uv.y)*step(asp,1.);',
+ 'gl_FragColor=vec4(col,1.);}'].join('\n');
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(o));return o;}
+ var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.5,my=.45,tx=.5,ty=.45;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5);cv.width=Math.max(2,cv.clientWidth*d*.7|0);cv.height=Math.max(2,cv.clientHeight*d*.7|0);gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ window.__drawSnow=function(now){if(!heroVisible)return;mx+=(tx-mx)*.04;my+=(ty-my)*.04;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?12.:(now-t0)/1000+12.);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ window.__drawSnow(t0);
+}
+
+/* ---------- Scènes au défilement ---------- */
+var hdr=$('hdr'),proofBar=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=$('rv'),rvImg=rv.querySelector('img'),facts=$('facts'),factsDone=false;
+var dayS=$('journee'),dItems=document.querySelectorAll('#dayList li'),dPath=$('dPath'),dLen=dPath.getTotalLength(),dPh=-1;
+var gS=$('chambres'),track=$('track'),gImgs=track.querySelectorAll('img'),gc=$('gcount');
+function countUp(){facts.classList.add('on');facts.querySelectorAll('b').forEach(function(b){var to=+b.dataset.to,suf=b.dataset.suf||'';tween(1500,function(k){b.textContent=Math.round(to*k).toLocaleString('fr-FR')+suf;});});}
+function op(id,v){$(id).style.opacity=v;}
+function scenes(now){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proofBar.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.65)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*26+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.4){factsDone=true;countUp();}
+ var d=prog(dayS);
+ var day=Math.min(seg(d,0,.14),1-seg(d,.62,.8));
+ op('dSky',day*.95);op('dNight',.62*(1-day));op('dStars',seg(d,.74,.86)+(1-seg(d,0,.08)));op('dMoon',seg(d,.76,.9));
+ op('dDusk',Math.min(seg(d,.55,.66),1-seg(d,.72,.82))*.55);
+ $('dSun').setAttribute('transform','rotate('+(-78+d*190)+' 320 440)');
+ var cab=seg(d,.17,.32);$('dCab').setAttribute('transform','translate('+(468+94*cab)+','+(352-198*cab)+')');
+ var sk=seg(d,.34,.5);var pt=dPath.getPointAtLength(dLen*sk);$('dSki').setAttribute('transform','translate('+pt.x+','+pt.y+')');op('dSki',sk>0&&sk<1?1:0);
+ $('dPiste').style.clipPath='inset(0 0 '+((1-sk)*100)+'% 0)';
+ op('dSteam',Math.min(seg(d,.5,.55),1-seg(d,.7,.75)));$('dSteam').setAttribute('transform','translate(0,'+(-(now/90)%8)+')');
+ op('dWin',seg(d,.62,.7));op('dSmoke',seg(d,.8,.88));
+ $('dMark').setAttribute('transform','translate('+(d*560)+',0)');
+ $('dayMeter').style.transform='scaleX('+d+')';
+ var ph=Math.min(5,Math.floor(d*6));if(ph!==dPh){dPh=ph;dItems.forEach(function(li,i){li.classList.toggle('on',i===ph);});}
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(16,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-6+g*12-i*1.5)+'%,0,0)';});
+ gc.textContent='0'+Math.min(8,1+Math.floor(g*8))+' / 08';
+ if(pvVis){pvx+=(ptx-pvx)*.06;pvy+=(pty-pvy)*.06;pz.forEach(function(el){var z=+el.dataset.z;el.style.transform='translate('+(-pvx*z*9)+'px,'+(-pvy*z*5)+'px)';});}
+}
+var pz=[].slice.call(document.querySelectorAll('.pz')),pvVis=false,pvx=0,pvy=0,ptx=0,pty=0,pvEl=$('preview');
+new IntersectionObserver(function(en){pvVis=en[0].isIntersecting&&!RM;}).observe(pvEl);
+pvEl.addEventListener('pointermove',function(e){var r=pvEl.getBoundingClientRect();ptx=(e.clientX-r.left)/r.width*2-1;pty=(e.clientY-r.top)/r.height*2-1;});
+pvEl.addEventListener('pointerleave',function(){ptx=0;pty=0;});
+function loop(now){if(lenis)lenis.raf(now);if(window.__drawSnow&&!RM)window.__drawSnow(now);runTweens(now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+if(RM){facts.classList.add('on');facts.querySelectorAll('b').forEach(function(b){b.textContent=(+b.dataset.to).toLocaleString('fr-FR')+(b.dataset.suf||'');});op('dSky',.95);op('dNight',0);op('dStars',0);op('dWin',1);}
+
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.15});
+document.querySelectorAll('.rise,.wipe').forEach(function(el,i){el.style.transitionDelay=(i%3)*.07+'s';io.observe(el);});
+
+/* ---------- Menus ---------- */
+var MENU={gb:[['Charcuterie et salade','entrée'],['Fondue savoyarde','200 g de fromage par personne'],['Coupe Grand-Bec','dessert']],gn:[['Charcuterie et salade','entrée'],['Tartiflette','plat'],['Coupe glacée au génépi','dessert']],mb:[['Charcuterie et salade','entrée'],['Raclette et cornichons','200 g de fromage par personne'],['Coupe Bochor','dessert']]};
+function menu(k){$('mpanel').innerHTML='<ul>'+MENU[k].map(function(r){return'<li><span>'+r[0]+'</span><small>'+r[1]+'</small></li>';}).join('')+'</ul>';document.querySelectorAll('.mtabs button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.m===k);});}
+document.querySelectorAll('.mtabs button').forEach(function(b){b.onclick=function(){menu(b.dataset.m);};});menu('gb');
+
+/* ---------- Calculateur de séjour ---------- */
+var U='https://www.hoteldugrandbec.fr/wp-content/uploads/';
+var P={cabine:{1:[72,86,102],2:[104,132,164]},douche:{1:[88,102,118],2:[114,142,174]},bain:{1:[98,112,128],2:[124,152,184]},suite:{1:[118,132,148],2:[144,172,204]}};
+var RN={cabine:'Chambre cabine, douche et WC',douche:'Chambre douche et WC',bain:'Chambre bain et WC',suite:'Suite junior'};
+var RO={cabine:'balcon plein ouest',douche:'balcon est ou ouest',bain:'balcon est, sud ou ouest',suite:'terrasse sud-est'};
+var RP={cabine:U+'2018/03/Hotel-Grand-Bec-Chambre-Cabine-douche-WC.jpg',douche:U+'2018/03/Hotel-Grand-Bec-Chambre-douche-WC.jpg',bain:U+'2018/03/Hotel-Grand-Bec-Chambre-bain-WC.jpg',suite:U+'2018/04/6-2561014.jpg'};
+var SUN={cabine:[404,170,1],douche:[90,116,0],bain:[240,62,0],suite:[150,84,0]};
+var FN=['Nuit seule','Nuit et petit-déjeuner','Demi-pension'];
+var MO=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+var DW=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+var f=$('sej'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=$('prev'),nx=$('next'),chips=$('chips'),i=0,reached=0,cur=0,arr=null,calM=null,lastImg='';
+var today=new Date();today.setHours(0,0,0,0);
+function val(n){var e=f.querySelector('[name="'+n+'"]:checked');return e?e.value:null;}
+function seasonStart(s){var y=today.getFullYear(),m=today.getMonth();if(s==='hiver')return(m>=11||m<=3)?new Date(y,m,1):new Date(y,11,1);return(m>=5&&m<=8)?new Date(y,m,1):new Date(m>8?y+1:y,5,1);}
+function sLabel(s){var a=seasonStart(s),y=a.getFullYear();return s==='hiver'?'Hiver '+(a.getMonth()===11?y+'-'+(y+1):(y-1)+'-'+y):'Été '+y;}
+function ymd(d){return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();}
+function calc(){var s=val('season'),r=val('room'),fo=+val('formula'),a=val('adults'),k=+$('kids').value,n=+val('nights'),dog=$('oDog').checked,gar=$('oGar').checked;
+ var night=P[r][a][fo],tot=night*n+1.38*(+a)*n+(dog?5*n:0)+(gar?(n>=7?70+12*(n-7):Math.min(12*n,70)):0);
+ return{s:s,r:r,f:fo,a:a,k:k,n:n,dog:dog,gar:gar,night:night,tot:tot};}
+function setT(el,v){el.style.transform=v;}
+function update(){
+ var d=calc(),sum=d.s==='ete',sp=SUN[d.r];
+ op('pSkyS',sum?1:0);op('pSlopeS',sum?1:0);op('pPool',sum?1:0);op('pFlakes',sum?0:1);op('pCaps',sum?.35:1);
+ setT($('pSun'),'translate('+sp[0]+'px,'+(sp[1]-(sum?16:0))+'px)');setT($('pGlow'),'translate('+sp[0]+'px,'+(sp[1]-(sum?16:0))+'px)');op('pGlow',sp[2]?.5:0);
+ op('pCup',d.f>=1?1:0);op('pCup2',d.f>=1&&d.a==='2'?1:0);op('pPlate',d.f===2?1:0);op('pChair2',d.a==='2'?1:0);
+ op('pSofa',d.r==='suite'?1:0);op('pDog',d.dog?1:0);
+ if(lastImg!==d.r){lastImg=d.r;var im=$('pvImg');im.style.visibility='';im.src=RP[d.r];}
+ $('pvRoom').textContent=RN[d.r];$('pvLabel').textContent=sLabel(d.s)+', '+RO[d.r];
+ var a0=cur;cur=d.tot;tween(700,function(q){$('livePrice').textContent=fmt(a0+(d.tot-a0)*q);});
+ $('liveTxt').textContent=d.n+' nuits, '+(d.a==='2'?'2 adultes':'1 personne')+(d.k?', '+d.k+' enfant'+(d.k>1?'s':''):'')+', '+FN[d.f].toLowerCase()+'. Taxe de séjour incluse.';
+ var pl=d.tot*1.12;$('cmpD').textContent=fmt(d.tot);$('cmpP').textContent='≈ '+fmt(pl);setT($('barD'),'scaleX('+(1/1.12)+')');setT($('barP'),'scaleX(1)');
+ var hs=[d.s,d.r,d.f,d.a,d.k,(d.dog?1:0)+''+(d.gar?1:0),arr?ymd(arr):'',d.n].join('~');try{history.replaceState(null,'','#sejour='+encodeURIComponent(hs));}catch(e){}
+ return d;
+}
+function fdate(x){return DW[x.getDay()]+' '+x.getDate()+(x.getDate()===1?'er':'')+' '+MO[x.getMonth()]+' '+x.getFullYear();}
+function recap(){var d=update(),dep=arr?new Date(arr.getFullYear(),arr.getMonth(),arr.getDate()+d.n):null,ex=[];if(d.dog)ex.push('chien');if(d.gar)ex.push('garage');
+ var L=[['Saison',sLabel(d.s)],['Chambre',RN[d.r]],['Formule',FN[d.f]],['Voyageurs',(d.a==='2'?'2 adultes':'1 personne')+(d.k?', '+d.k+' enfant'+(d.k>1?'s':''):'')],['Arrivée',arr?fdate(arr):'à préciser'],['Départ',dep?fdate(dep):d.n+' nuits'],['Extras',ex.length?ex.join(', '):'aucun'],['Estimation',fmt(d.tot)]];
+ $('recap').innerHTML=L.map(function(r){return'<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');
+ var txt='Bonjour,\nje souhaite séjourner au Grand-Bec :\n'+L.map(function(r){return'- '+r[0]+' : '+r[1];}).join('\n')+(d.k?'\n(supplément enfant à me préciser)':'')+'\nLien de mon séjour : '+location.href+'\n';
+ $('mailBtn').href='mailto:grand_bec@wanadoo.fr?subject='+encodeURIComponent('Demande de séjour, '+sLabel(d.s))+'&body='+encodeURIComponent(txt);}
+function drawChips(){chips.innerHTML='';S.forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached;b.onclick=function(){i=k;show();};li.appendChild(b);chips.appendChild(li);});}
+function show(){S.forEach(function(el,k){el.hidden=k!==i;if(k===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0;nx.hidden=i===5;nx.textContent=i===4?'Voir mon séjour':'Continuer';drawChips();if(i===5)recap();else update();}
+function cal(){if(!calM)calM=seasonStart(val('season'));var y=calM.getFullYear(),m=calM.getMonth(),g=$('calG'),n=+val('nights');$('calT').textContent=MO[m]+' '+y;
+ var h='';['L','M','M','J','V','S','D'].forEach(function(x){h+='<span class="dow">'+x+'</span>';});var off=(new Date(y,m,1).getDay()+6)%7;for(var k=0;k<off;k++)h+='<span></span>';
+ var nd=new Date(y,m+1,0).getDate();for(var dd=1;dd<=nd;dd++){var x=new Date(y,m,dd),c='';if(arr){var df=Math.round((x-arr)/864e5);if(df===0)c='sel';else if(df>0&&df<n)c='in';}h+='<button type="button" data-d="'+dd+'" class="'+c+'"'+(x<=today?' disabled':'')+' aria-label="'+fdate(x)+'">'+dd+'</button>';}
+ g.innerHTML=h;}
+$('calG').addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;arr=new Date(calM.getFullYear(),calM.getMonth(),+b.dataset.d);cal();update();var at=i;setTimeout(function(){if(i===at&&i===4){i=5;show();}},650);});
+$('calP').onclick=function(){var p=new Date(calM.getFullYear(),calM.getMonth()-1,1);if(p>=new Date(today.getFullYear(),today.getMonth(),1)){calM=p;cal();}};
+$('calN').onclick=function(){calM=new Date(calM.getFullYear(),calM.getMonth()+1,1);cal();};
+f.addEventListener('change',function(e){if(e.target.name==='season'){calM=seasonStart(e.target.value);arr=null;}cal();update();var fs=e.target.closest('[data-s]');if(e.target.type==='radio'&&fs&&fs.hasAttribute('data-auto')){var at=i;setTimeout(function(){if(i===at&&i<4){i++;show();}},450);}});
+nx.onclick=function(){if(i<5){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};
+(function(){var mt=location.hash.match(/sejour=([^&]+)/);if(!mt)return;var q=decodeURIComponent(mt[1]).split('~');function chk(n,v){var e=f.querySelector('[name="'+n+'"][value="'+v+'"]');if(e)e.checked=true;}chk('season',q[0]);chk('room',q[1]);chk('formula',q[2]);chk('adults',q[3]);$('kids').value=q[4]||'0';$('oDog').checked=(q[5]||'')[0]==='1';$('oGar').checked=(q[5]||'')[1]==='1';chk('nights',q[7]);if(q[6]){var z=q[6].split('-');arr=new Date(+z[0],z[1]-1,+z[2]);calM=new Date(arr.getFullYear(),arr.getMonth(),1);}i=5;reached=5;setTimeout(function(){var t=$('sejour');lenis?lenis.scrollTo(t,{offset:-70,immediate:true}):t.scrollIntoView();},300);})();
+cal();show();
+$('copyBtn').addEventListener('click',function(){var c=$('copied');(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});
+(function(){var nl=new Date(2026,11,19),n=Math.ceil((nl-today)/864e5),t;if(n>0)t='Plus que <b>'+n+' jours</b> avant les vacances de Noël, le samedi 19 décembre : ce sont les semaines qui partent en premier.';else t='Les semaines de vacances scolaires partent en premier : envoyez votre demande dès que vos dates sont fixées.';$('countdown').innerHTML=t;$('countdown2').innerHTML=t;})();
+
+/* ---------- Météo et neige en direct ---------- */
+var WMO=function(c){if(c===0)return'Ciel dégagé';if(c<=2)return'Quelques nuages';if(c===3)return'Ciel couvert';if(c<50)return'Brouillard';if(c<60)return'Bruine';if(c<70)return'Pluie';if(c<80)return'Neige';if(c<85)return'Averses';if(c<90)return'Averses de neige';return'Orage';};
+var wxDone=false;
+new IntersectionObserver(function(en){if(!en[0].isIntersecting||wxDone)return;wxDone=true;
+ fetch('https://api.open-meteo.com/v1/forecast?latitude=45.382&longitude=6.721&elevation=1420&current=temperature_2m,weather_code&hourly=snow_depth&daily=snowfall_sum&timezone=Europe%2FParis&forecast_days=7').then(function(r){return r.ok?r.json():Promise.reject();}).then(function(j){
+  var c=j.current,ix=Math.max(0,j.hourly.time.indexOf(c.time.slice(0,13)+':00')),dep=Math.round((j.hourly.snow_depth[ix]||0)*100),sf=j.daily.snowfall_sum,tot=sf.reduce(function(a,b){return a+(b||0);},0),mx=Math.max(1,Math.max.apply(null,sf));
+  tween(1200,function(k){$('wxT').textContent=Math.round(c.temperature_2m*k)+' °C';$('wxD').textContent=Math.round(dep*k)+' cm';$('wxS').textContent=Math.round(tot*k)+' cm';});
+  $('wxC').textContent=WMO(c.weather_code);
+  var bs=$('bars').children,ls=$('barsL').children;sf.forEach(function(v,k){if(!bs[k])return;bs[k].style.transform='scaleY('+Math.max(.02,(v||0)/mx)+')';bs[k].title=Math.round(v||0)+' cm';var dd=new Date(j.daily.time[k]+'T12:00');ls[k].textContent=DW[dd.getDay()].slice(0,3)+'. '+dd.getDate();});
+  $('wxNote').textContent='Prévisions Open-Meteo pour Pralognan, mises à jour à chaque visite.';
+ }).catch(function(){$('wxNote').textContent='Les données en direct ne sont pas disponibles pour le moment ; dans le site final, elles se rafraîchissent à chaque visite.';});
+},{rootMargin:'200px'}).observe($('neige'));
+
+/* ---------- Lettre ---------- */
+$('nlForm').addEventListener('submit',function(e){e.preventDefault();$('nlOk').hidden=false;});
+
+/* ---------- Langues ---------- */
+var L={en:{kick:'Three-star hotel and restaurant, Pralognan-la-Vanoise, Savoie',h1a:'Three generations',h1b:'under the Grand Bec.',h1c:'Your table is set.',lede:'A family-run hotel in the heart of Pralognan: 39 rooms and suites with balconies, a heated pool, sauna and hot tub, and Savoyard cooking by a Maître Restaurateur chef. Free shuttle to the cable car in winter.',cta1:'Price my stay',cta1s:'My stay',n1:'Rooms',n2:'Dining',n3:'Theme weeks',dayH:'From first coffee to the fireside, everything is close at hand.',cfgH:'Your stay, priced before you even call.',tableH:'Dominique Briquet, Maître Restaurateur.',galH:'A balcony facing east, south or west.',wxH:'Pralognan, right now.',stayH:'Theme weeks, between two summits.',avisH:'Titles that are earned, guests who rate us.',faqH:'What guests ask before booking.',ctH:'A question? Reception will answer.'}};
+var fr={};document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.textContent;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){if(L[l][e.dataset.i])e.textContent=L[l][e.dataset.i];});};});
+})();
+</script>
+</body>
+</html>

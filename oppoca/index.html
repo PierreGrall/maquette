@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Maison Oppoca, Ainhoa — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#16211D;--deep2:#22302A;--water:#8C1D22;--rouge:#8C1D22;--foam:#C9D6CC;--chaux:#EEEFEA;--ink:#18211D;--soft:#5A655F;--line:#CCD2CB;--white:#FAFBF8;--gold:#C99A3E;--d:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--s:"Instrument Serif",Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--chaux);color:var(--ink);font-family:var(--d);font-size:1.03rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--rouge);background:var(--rouge);color:#fff;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px);background:#741619}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{margin:0;font-weight:400}
+h2{font-family:var(--s);font-size:clamp(2.2rem,4.6vw,4rem);line-height:1;letter-spacing:-.01em;max-width:17ch}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+h3{font-family:var(--d);font-weight:600}
+.lede{color:var(--soft);max-width:38rem}
+.kick{font-family:var(--d);font-size:.82rem;font-weight:600;letter-spacing:.02em;color:var(--rouge);margin:0 0 1rem;display:block}
+/* Bandeau + header */
+.proof{position:relative;z-index:40;background:#000;color:#cfdedf;font-family:var(--d);font-size:.8rem}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:background .4s,color .4s,top .3s}
+header.site.solid{top:0;background:rgba(238,239,234,.88);backdrop-filter:blur(10px);color:var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
+.brand{font-family:var(--d);font-stretch:125%;font-weight:700;font-size:1.3rem;text-decoration:none}
+.hnav{display:flex;align-items:center;gap:1.4rem;font-family:var(--d);font-size:.9rem}
+.hnav a{text-decoration:none;opacity:.85}
+.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+
+/* Grall Studio */
+.studio{background:#E2E4DD;border-top:6px solid var(--water);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid #C3C8BF}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid #C3C8BF}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid #C3C8BF}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid #C3C8BF}.addons b{font-weight:600}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--white);border:1px solid #C3C8BF;border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:#e7f2f3;border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--water);font-weight:600}.offer.rec .tag{color:var(--foam)}
+.offer h3{font-stretch:110%;font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 48s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-size:1.06rem;line-height:1.5}.rcard figcaption{font-family:var(--d);font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--water),var(--water)) center/14px 2px no-repeat,linear-gradient(var(--water),var(--water)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.rx-head,.faq{grid-template-columns:1fr;gap:1.5rem}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none;flex-wrap:wrap;width:auto}}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-stretch:125%;font-weight:700;letter-spacing:-.01em}.lmark{width:28px;height:28px;flex:none}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+@media(max-width:600px){.hero-ctas .ghost{display:none}}
+.clogo{height:42px;width:auto;display:block}@media(max-width:600px){.clogo{height:34px}}
+header.site,header.site.solid{background:none!important;backdrop-filter:none!important;box-shadow:none!important}
+header.site .wrap{height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:rgba(22,33,29,.36);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);color:#fff;transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:rgba(251,252,251,.8);color:var(--ink);border-color:rgba(24,33,29,.1)}
+header.site .btn{padding:.6rem 1.1rem}
+#logoSlot{display:inline-flex;align-items:center;height:34px}#logoSlot img,#logoSlot svg{height:34px;width:auto}
+@media(max-width:600px){header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}#logoSlot,#logoSlot img,#logoSlot svg{height:28px}}
+#logoSlot{gap:.6rem}.bname{font-family:var(--d);font-stretch:118%;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap}@media(max-width:600px){.bname{font-size:.95rem}}
+.proof{background:#0d1411;color:#c9d2cc}
+.hnav .btn{background:var(--rouge);border-color:var(--rouge);color:#fff}
+
+/* Ouverture : brume du soir */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+#mist{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-family:var(--s);font-size:clamp(2.6rem,6.4vw,6.2rem);line-height:.98;letter-spacing:-.015em}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(108%);transition:transform 1.3s cubic-bezier(.16,1,.3,1)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.1s}.hero h1 .ln:nth-child(3) span{transition-delay:.2s}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(18px);transition:opacity 1s .6s,transform 1s .6s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:#d7ddd6;margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.wx{display:inline-flex;gap:.5rem;align-items:center;font-size:.85rem;color:#d7ddd6;margin-top:1rem}.wx b{color:#fff;font-weight:600}
+.wx i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+.scrollhint{position:absolute;right:1rem;bottom:1.25rem;z-index:2;font-size:.75rem;color:#aab6ae;writing-mode:vertical-rl}
+
+/* Photo phare */
+.reveal{height:220vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;background:var(--deep2);will-change:clip-path}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .shade{position:absolute;inset:0;background:rgba(10,16,13,.32)}
+.reveal .cap{position:absolute;left:clamp(1rem,4vw,3rem);bottom:clamp(1.5rem,6vh,3.5rem);color:#fff;z-index:2;max-width:28rem}
+.reveal .cap b{display:block;font-family:var(--s);font-weight:400;font-size:clamp(1.8rem,3.2vw,2.8rem);line-height:1.02;margin-bottom:.5rem}
+.reveal .cap span{font-size:.95rem;color:#e2e7e1}
+.facts{position:absolute;top:clamp(6rem,16vh,9rem);right:clamp(1rem,4vw,3rem);z-index:2;display:grid;gap:1.3rem;color:#fff;text-align:right}
+.facts b{display:block;font-family:var(--s);font-weight:400;font-size:clamp(2.4rem,4.4vw,3.8rem);line-height:.9;font-variant-numeric:tabular-nums}
+.facts span{font-size:.84rem;color:#e2e7e1}
+
+/* Scène façade */
+.cut{height:340vh;position:relative;background:var(--deep);color:#dfe5df}
+.cut .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.cut-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.cut h2{color:#fff;margin-bottom:1rem}
+.cut .lede{color:#a8b5ad;margin:0 0 2rem}
+.cut svg{width:100%;height:auto;display:block;border-radius:6px;background:#1c2924}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps-live li{border-left:2px solid #34443d;padding:.2rem 0 .2rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--gold)}
+.steps-live b{display:block;color:#fff;font-weight:600}
+.steps-live b small{font-family:var(--s);font-size:1.35rem;font-weight:400;color:var(--gold);margin-right:.5rem}
+.steps-live span{font-size:.95rem;color:#a8b5ad}
+.meter{height:2px;background:#34443d;margin-top:2rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--gold);transform-origin:left;transform:scaleX(0)}
+.sv{transform-box:fill-box}
+
+/* Galerie */
+.hgal{height:380vh;position:relative;background:var(--chaux)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(60vw,700px);margin:0}
+.card .ph{height:min(56vh,500px);overflow:hidden;border-radius:3px;background:#cdd3cb}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.card figcaption b{font-family:var(--s);font-weight:400;font-size:1.5rem}.card figcaption span{color:var(--soft);font-size:.9rem;white-space:nowrap}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--s);font-size:1.5rem;font-variant-numeric:tabular-nums}
+
+/* Table et spa */
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:start}
+.duo .ph{aspect-ratio:4/5;overflow:hidden;border-radius:3px;background:#cdd3cb}
+.duo .ph img{width:100%;height:100%;object-fit:cover}
+.tab{margin-top:2rem;border-top:1px solid var(--line)}
+.tab div{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line);font-size:.97rem}
+.tab dt,.tab b{font-weight:600}
+.tab span{color:var(--soft)}
+.spa{margin-top:3rem;padding-top:2rem;border-top:2px solid var(--ink)}
+.spa h3{font-family:var(--s);font-weight:400;font-size:2rem;margin-bottom:.6rem}
+.status{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.status span{font-size:.85rem;border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem;background:var(--white)}
+.status b{font-weight:600}
+.rise{opacity:0;transform:translateY(36px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+.rise-l{opacity:0;transform:translateX(-30px);transition:opacity 1s,transform 1s cubic-bezier(.16,1,.3,1)}.rise-l.in{opacity:1;transform:none}
+
+/* Réservation */
+.book{background:var(--deep);color:#e3e8e3;position:relative;overflow:hidden}
+.book h2{color:#fff}.book .lede{color:#a8b5ad}
+.offer-band{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;align-items:baseline;margin-top:1.6rem;padding:1rem 1.2rem;border:1px solid rgba(201,154,62,.45);border-radius:10px;max-width:46rem}
+.offer-band b{font-family:var(--s);font-weight:400;font-size:1.7rem;color:var(--gold);line-height:1}
+.offer-band span{font-size:.92rem;color:#cfd7d0}
+.cfg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px;border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden;background:#1c2924}
+.pv-ph{position:relative;aspect-ratio:3/2;background:var(--deep2);overflow:hidden}
+.pv-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s,transform 1.2s cubic-bezier(.16,1,.3,1)}
+.pv-ph img.off{opacity:0;transform:scale(1.06)}
+.pv-tag{position:absolute;left:.8rem;bottom:.8rem;z-index:2;background:rgba(22,33,29,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:.35rem .85rem;font-size:.82rem;color:#fff}
+.pv-body{padding:1.1rem 1.2rem 1.3rem}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
+.live span{font-size:.8rem;color:#a8b5ad}
+.live b{display:block;white-space:nowrap;font-family:var(--s);font-weight:400;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.live small{font-size:.8rem;color:#a8b5ad;text-align:right;max-width:15rem}
+.vs{display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;margin-top:1rem;padding-top:.9rem;border-top:1px solid rgba(255,255,255,.1);font-size:.88rem}
+.vs span{color:#a8b5ad}.vs b{font-weight:600;font-variant-numeric:tabular-nums;text-align:right}.vs .save{color:var(--gold)}
+.nights{display:flex;gap:3px;margin-top:1rem;min-height:30px}
+.nights i{flex:1;display:grid;place-items:center;font-style:normal;font-size:.66rem;color:#a8b5ad;border-radius:3px;background:rgba(255,255,255,.06);padding:.25rem 0;transform-origin:bottom;animation:grow .5s cubic-bezier(.16,1,.3,1) both}
+.nights i.o{background:rgba(201,154,62,.22);color:#f1dfb6}.nights i.r::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--foam);margin-top:2px}
+@keyframes grow{from{transform:scaleY(.2);opacity:0}to{transform:none;opacity:1}}
+.legend2{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.75rem;color:#a8b5ad;margin-top:.5rem}
+.legend2 i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.panel{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.1rem,3vw,2rem)}
+fieldset{border:0;margin:0;padding:0}legend{font-family:var(--s);font-size:1.7rem;line-height:1.1;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.8rem .9rem;cursor:pointer;font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:#a8b5ad;font-size:.8rem;margin-top:.2rem}
+.choice input:checked+label{border-color:var(--gold);background:rgba(201,154,62,.1)}
+.choice input:focus-visible+label{outline:3px solid var(--gold);outline-offset:2px}
+.step-anim{animation:sin .55s cubic-bezier(.16,1,.3,1)}@keyframes sin{from{opacity:0;transform:translateX(22px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:#a8b5ad;padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--gold);color:var(--deep);border-color:var(--gold)}
+.chips button.done{color:#fff;border-color:rgba(201,154,62,.55)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.85rem;color:#a8b5ad;margin:-.3rem 0 1rem}
+.cal{user-select:none}
+.cal-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.cal-h b{font-family:var(--s);font-weight:400;font-size:1.35rem;color:#fff}
+.cal-h button{font:inherit;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:none;color:#fff;cursor:pointer}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cal-g .dn{font-size:.7rem;color:#7f8e85;text-align:center;padding-bottom:.2rem}
+.cal-g button{font:inherit;font-size:.85rem;aspect-ratio:1;border:0;border-radius:6px;background:rgba(255,255,255,.05);color:#e3e8e3;cursor:pointer;font-variant-numeric:tabular-nums;transition:background .2s}
+.cal-g button.o{background:rgba(201,154,62,.2);color:#f6e7c4}
+.cal-g button.in{background:rgba(201,154,62,.45);color:#fff}
+.cal-g button.sel{background:var(--gold);color:var(--deep);font-weight:700}
+.cal-g button:disabled{opacity:.25;cursor:default}
+.stepper{display:flex;align-items:center;gap:.8rem;margin-bottom:.7rem}
+.stepper button{font:inherit;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:none;color:#fff;cursor:pointer;font-size:1.1rem}
+.stepper output{font-family:var(--s);font-size:1.8rem;min-width:1.5ch;text-align:center;color:#fff}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-size:.88rem}
+.field input,.field textarea{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.06);color:#fff}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#a8b5ad}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.copied{font-size:.82rem;color:var(--gold);align-self:center;word-break:break-all}
+.note{font-size:.8rem;color:#8d9b92;margin-top:1rem}
+[hidden]{display:none!important}
+
+/* Bon cadeau */
+.gift{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(2rem,5vw,5rem);align-items:center}
+.gcard{position:relative;aspect-ratio:1.6/1;border-radius:6px;background:var(--rouge);color:#fff;padding:clamp(1.1rem,3vw,2rem);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.gcard.pulse{transform:rotate(-1.2deg) scale(1.015)}
+.gcard svg.lau{position:absolute;right:-12%;top:-20%;width:62%;height:auto;opacity:.13;color:#fff;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.gcard .gt{font-size:.82rem;color:#f0d6d6;display:flex;align-items:center;gap:.5rem}
+.gcard .gt svg{width:22px;height:22px}
+.gcard h3{font-family:var(--s);font-weight:400;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1}
+.gcard .gv{font-family:var(--s);font-size:clamp(2.2rem,4.4vw,3.4rem);line-height:1;font-variant-numeric:tabular-nums}
+.gcard .gm{font-size:.92rem;color:#f6e6e6;max-width:26rem;min-height:1.4em}
+.gcard .gf{display:flex;justify-content:space-between;gap:1rem;font-size:.8rem;color:#f0d6d6;align-items:flex-end}
+.gform{display:grid;gap:1rem}
+.gform .choices label{border-color:var(--line);background:var(--white)}
+.gform .choice label small{color:var(--soft)}
+.gform .choice input:checked+label{border-color:var(--rouge);background:#f6ecec}
+.gform .field input,.gform .field textarea{background:var(--white);color:var(--ink);border-color:var(--line)}
+.gform input[type=range]{width:100%;accent-color:var(--rouge)}
+.gform .row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+
+/* Avis, FAQ, contact */
+.score{font-family:var(--s);font-size:5.4rem;line-height:.9}.score small{display:block;font-family:var(--d);font-size:.85rem;color:var(--soft);margin-top:.4rem}
+.stars{color:var(--gold);letter-spacing:.1em}
+.press{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin:2rem 0 0;font-size:.9rem;color:var(--soft)}
+.press b{color:var(--ink);font-weight:600}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.bigtel{font-family:var(--s);font-size:clamp(2.6rem,5.6vw,4.4rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-size:.88rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.nl-form label{width:100%;font-weight:600;color:var(--ink)}
+.nl-form input{font:inherit;padding:.7rem .9rem;border:1.5px solid var(--line);border-radius:999px;background:var(--white);min-width:15rem}
+.nl-ok{color:var(--rouge);font-weight:600}
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .cut-grid,.cfg,.contact,.duo,.gift{grid-template-columns:1fr}
+ .cut{height:300vh}.cut h2{font-size:2.1rem}.cut .lede{display:none}
+ .card{width:82vw}.facts{top:auto;bottom:9rem}
+ .preview{position:relative;top:0}
+ .duo .ph{aspect-ratio:4/3}
+}
+@media (max-width:600px){
+ .hero h1{font-size:8.1vw}.hero-inner{padding-bottom:6rem}.hero-ctas{display:none}
+ .hnav .btn{display:none}.choices{grid-template-columns:1fr}
+ .steps-live li:not(.on){display:none}
+ .cut .stick{align-items:flex-start;padding-top:5.5rem}
+ .tab div{grid-template-columns:1fr;gap:.1rem}
+ .gform .row2{grid-template-columns:1fr}
+ .score{font-size:4.2rem}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(22,33,29,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+ .nl-form input{min-width:0;flex:1}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.cut,.hgal{height:auto}.reveal .stick,.cut .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1rem}.rise,.rise-l,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .nights i,.step-anim{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour la Maison Oppoca par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Maison Oppoca, accueil"><span id="logoSlot"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 15 L13 5 L29 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M6 13.5 V28 H27 V13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M6 20 H27" stroke="currentColor" stroke-width="1.6"/><rect x="9.5" y="15" width="4" height="3.4" fill="currentColor"/><rect x="19" y="15" width="4" height="3.4" fill="currentColor"/><path d="M14 28 V24.5 a2.5 2.5 0 0 1 5 0 V28" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span class="bname">Maison Oppoca</span></span></a>
+ <nav class="hnav" aria-label="Navigation">
+  <a class="nl" href="#chambres" data-i="n1">Chambres</a><a class="nl" href="#table" data-i="n2">Table et spa</a><a class="nl" href="#offrir" data-i="n3">Offrir</a>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button><button type="button" aria-pressed="false" data-l="es">ES</button></div>
+  <a class="btn" href="#reserver" data-i="cta1s">Réserver en direct</a>
+ </nav>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="mist" aria-hidden="true"></canvas>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">Depuis 1659 à Ainhoa,</span></span><span class="ln"><span data-i="h1b">dix chambres, une table,</span></span><span class="ln"><span data-i="h1c">un spa rien qu’à <em>vous deux</em>.</span></span></h1>
+  <div class="hero-row">
+   <div><p data-i="lede">Hôtel 4 étoiles et restaurant basque dans un ancien relais de poste, au cœur de l’un des plus beaux villages de France&nbsp;: piscine chauffée face aux montagnes, spa privatif, et le GR10 qui passe devant la porte.</p>
+   <div class="wx" id="wxHero" hidden><i></i><span>À Ainhoa en ce moment&nbsp;: <b id="wxT"></b></span></div></div>
+   <div class="hero-ctas"><a class="btn" href="#reserver" data-i="cta1">Voir les prix de mes dates</a><a class="btn ghost" href="tel:+33559299072">05 59 29 90 72</a></div>
+  </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true">Défiler</div>
+</section>
+
+<section class="reveal" id="maison" aria-label="La maison">
+ <div class="stick">
+  <figure id="rv"><img src="https://maisonoppoca.com/wp-content/uploads/2025/03/Studiovuemontagne8-contrastee-1024px.webp" alt="Studio vue montagne de la Maison Oppoca, 35 m²" onerror="this.style.visibility='hidden'"><div class="shade"></div></figure>
+  <div class="cap"><b>Studio vue montagne, 35&nbsp;m².</b><span>Le matin, les collines du Labourd entrent par la fenêtre. Literie king size, chambres insonorisées.</span></div>
+  <div class="facts" id="facts"><div><b data-to="1659" data-from="1500">1659</b><span>la maison est fondée</span></div><div><b data-to="10">10</b><span>chambres, pas une de plus</span></div><div><b data-to="28" data-pre="27–">27–28</b><span>°C dans la piscine, de mai à octobre</span></div><div><b data-to="4.4" data-dec="1">4,4</b><span><span class="stars">★★★★</span> 588 avis Google</span></div></div>
+ </div>
+</section>
+
+<section class="cut" id="journee" aria-label="Une journée à la maison">
+ <div class="stick"><div class="wrap cut-grid">
+  <svg viewBox="0 0 600 400" aria-hidden="true" id="fac">
+   <rect width="600" height="400" fill="#2a3a33"/>
+   <rect id="night" width="600" height="400" fill="#0d1512" opacity="0"/>
+   <circle id="sun" cx="520" cy="90" r="22" fill="#e7c27a"/>
+   <path d="M0 260 C70 200 130 215 200 190 C260 170 300 205 360 185 C430 160 500 200 600 175 L600 400 L0 400 Z" fill="#33473f"/>
+   <path d="M0 300 C90 270 160 285 240 270 C330 255 420 285 600 262 L600 400 L0 400 Z" fill="#24332d"/>
+   <line x1="0" y1="340" x2="600" y2="340" stroke="#8e9c93" stroke-width="1.5"/>
+   <g id="stone" opacity="0"><rect x="110" y="262" width="330" height="78" fill="#7d7a70"/><g stroke="#65625a" stroke-width="1.2"><line x1="110" y1="282" x2="440" y2="282"/><line x1="110" y1="302" x2="440" y2="302"/><line x1="110" y1="322" x2="440" y2="322"/><line x1="150" y1="262" x2="150" y2="282"/><line x1="230" y1="262" x2="230" y2="282"/><line x1="340" y1="262" x2="340" y2="282"/><line x1="190" y1="282" x2="190" y2="302"/><line x1="300" y1="282" x2="300" y2="302"/><line x1="400" y1="282" x2="400" y2="302"/><line x1="140" y1="302" x2="140" y2="322"/><line x1="380" y1="302" x2="380" y2="322"/><line x1="170" y1="322" x2="170" y2="340"/><line x1="420" y1="322" x2="420" y2="340"/></g></g>
+   <rect id="wall" x="110" y="132" width="330" height="130" fill="#eceee8" opacity="0"/>
+   <path id="outline" d="M110 340 V132 H440 V340" fill="none" stroke="#eceee8" stroke-width="2.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <path id="roof" d="M90 142 L300 52 L460 140" fill="none" stroke="#c9b9a6" stroke-width="7" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <path id="roofFill" d="M98 138 L300 56 L452 136 Z" fill="#4c3a33" opacity="0"/>
+   <g id="beams" fill="#8C1D22"><rect class="sv" x="110" y="196" width="330" height="6"/><rect class="sv" x="110" y="256" width="330" height="6"/><rect class="sv" x="190" y="132" width="6" height="124"/><rect class="sv" x="354" y="132" width="6" height="124"/><rect class="sv" x="272" y="132" width="6" height="64"/></g>
+   <g id="wins" fill="#1e2a25"><rect x="140" y="150" width="30" height="32"/><rect x="222" y="150" width="30" height="32"/><rect x="298" y="150" width="30" height="32"/><rect x="382" y="150" width="30" height="32"/><rect x="140" y="212" width="30" height="32"/><rect x="222" y="212" width="30" height="32"/><rect x="298" y="212" width="30" height="32"/><rect x="382" y="212" width="30" height="32"/></g>
+   <g id="glow" fill="#e7b85c" opacity="0"><rect x="140" y="150" width="30" height="32"/><rect x="298" y="150" width="30" height="32"/><rect x="382" y="150" width="30" height="32"/><rect x="140" y="212" width="30" height="32"/><rect x="222" y="212" width="30" height="32"/><rect x="382" y="212" width="30" height="32"/><path d="M250 340 V300 a25 25 0 0 1 50 0 V340 Z"/></g>
+   <g id="shut" fill="#8C1D22"></g>
+   <path id="door" d="M250 340 V300 a25 25 0 0 1 50 0 V340" fill="#3a2b25" stroke="#c9b9a6" stroke-width="2" opacity="0"/>
+   <g id="pool" opacity="0"><rect x="462" y="326" width="120" height="14" rx="2" fill="#5f9c98"/><path id="ripple" d="M466 332 q8 -3 16 0 t16 0 t16 0 t16 0 t16 0 t16 0 t16 0" fill="none" stroke="#cfe6e1" stroke-width="1.2"/><text x="522" y="362" text-anchor="middle" font-family="Hanken Grotesk" font-size="12" fill="#cfd7d0">27–28 °C</text></g>
+   <g id="steam" opacity="0" fill="none" stroke="#cfd7d0" stroke-width="1.2" stroke-linecap="round"><path d="M490 320 q-4 -8 0 -14 t0 -14"/><path d="M522 318 q-4 -8 0 -14 t0 -14"/><path d="M554 320 q-4 -8 0 -14 t0 -14"/></g>
+   <g id="lbls" font-family="Hanken Grotesk" font-size="12" fill="#cfd7d0"><text class="lb" x="116" y="356" opacity="0">Rez-de-chaussée en pierre, 1659</text><text class="lb" x="304" y="44" opacity="0">Toit labourdin</text><text class="lb" x="446" y="190" opacity="0">Pans de bois rouge basque</text></g>
+  </svg>
+  <div>
+   <span class="kick" style="color:var(--gold)">Une journée à la maison</span>
+   <h2>Arriver à 15&nbsp;h, repartir <em>reposé</em>.</h2>
+   <p class="lede">Une maison labourdine du XVII<sup>e</sup>&nbsp;siècle, pierre en bas, volets rouges en haut. Voici à quoi ressemble une journée chez nous.</p>
+   <ol class="steps-live" id="live">
+    <li class="on"><b><small>15 h</small>On vous remet la clé</b><span>Dix chambres insonorisées, de 15 à 35&nbsp;m², au cœur du village.</span></li>
+    <li><b><small>17 h</small>Piscine ou spa privatif</b><span>Eau à 27–28&nbsp;°C de mai à octobre&nbsp;; jacuzzi, hammam et sauna rien que pour vous deux.</span></li>
+    <li><b><small>20 h</small>Dîner basque</b><span>Cuisine de saison, producteurs du coin, terrasse face aux montagnes.</span></li>
+    <li><b><small>8 h</small>Petit-déjeuner, puis le GR10</b><span>Le sentier traverse Ainhoa&nbsp;; l’Espagne est à quelques minutes.</span></li>
+   </ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
+
+<section class="hgal" id="chambres" aria-label="Les chambres">
+ <div class="stick">
+  <div class="wrap head"><h2>Cinq façons de dormir à <em>Ainhoa</em>.</h2><span class="count" id="gcount">01 / 08</span></div>
+  <div class="track" id="track">
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://maisonoppoca.com/wp-content/uploads/2025/03/Studiovuemontagne8-contrastee-1024px.webp" alt="Studio vue montagne" onerror="this.style.visibility='hidden'"></div><figcaption><b>Studio vue montagne</b><span>35 m²</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://maisonoppoca.com/wp-content/uploads/2025/09/EMI0645-HDR-1024px.webp" alt="Studio vue village" onerror="this.style.visibility='hidden'"></div><figcaption><b>Studio vue village</b><span>35 m²</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://maisonoppoca.com/wp-content/uploads/2025/03/EMI0143-HDR-1920px-1-1024x683.webp" alt="Chambre Charme" onerror="this.style.visibility='hidden'"></div><figcaption><b>Charme</b><span>22 m²</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://maisonoppoca.com/wp-content/uploads/2025/03/DSC05473-HDR-1920px-1024x684.webp" alt="Chambre Tradition" onerror="this.style.visibility='hidden'"></div><figcaption><b>Tradition</b><span>18 m²</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://maisonoppoca.com/wp-content/uploads/2025/05/999951d5627e912b9949b15f9f532ea6-1024x682.webp" alt="Chambre Standard" onerror="this.style.visibility='hidden'"></div><figcaption><b>Standard</b><span>15 m²</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://maisonoppoca.com/wp-content/uploads/2026/09/Oppoca-Ka-1024px-768x576.webp" alt="Terrasse du restaurant" onerror="this.style.visibility='hidden'"></div><figcaption><b>La terrasse</b><span>Vue sur les montagnes</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://maisonoppoca.com/wp-content/uploads/2025/04/DSC06063-HDR-1920px-768x513.webp" alt="Salle du restaurant" onerror="this.style.visibility='hidden'"></div><figcaption><b>La salle</b><span>Pierre et poutres</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://maisonoppoca.com/wp-content/uploads/2025/03/DSC05988-HDR-1920px-768x513.webp" alt="La maison" onerror="this.style.visibility='hidden'"></div><figcaption><b>La maison</b><span>303 Karrika Nagusia</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="pad" id="table"><div class="wrap duo">
+ <div class="ph rise-l"><img loading="lazy" src="https://maisonoppoca.com/wp-content/uploads/2026/09/pro-g376lh9I-1024px-768x1020.webp" alt="Assiette du restaurant de la Maison Oppoca" onerror="this.style.visibility='hidden'"></div>
+ <div class="rise">
+  <span class="kick">La table</span>
+  <h2>Basque d’abord, de <em>saison</em> toujours.</h2>
+  <p class="lede" style="margin-top:1.2rem">Une cuisine basque traditionnelle, revisitée sans la trahir&nbsp;: produits frais, circuits courts, viandes mijotées, assiettes végétariennes, desserts aux fruits du moment. La carte change à chaque saison&nbsp;; celle d’automne est servie en ce moment.</p>
+  <dl class="tab">
+   <div><dt>Gault&amp;Millau</dt><span>12/20, «&nbsp;une cuisine basque traditionnelle bien exécutée&nbsp;»</span></div>
+   <div><dt>Le cadre</dt><span>Salle en pierre et poutres, climatisée&nbsp;; terrasse face aux montagnes dès les beaux jours</span></div>
+   <div><dt>À goûter</dt><span>Ravioles de langoustine, veau Herriko, noix de Saint-Jacques</span></div>
+   <div><dt>Réserver</dt><span>Par téléphone au <a href="tel:+33559299072">05 59 29 90 72</a></span></div>
+  </dl>
+  <div class="spa">
+   <h3>Le spa Oppo’Calm, privatif.</h3>
+   <p style="margin:0;color:var(--soft)">Jacuzzi, hammam et sauna réservés pour vous seuls, massages, soins du visage et soins Txokologie. En semaine, trente minutes à deux pour 30&nbsp;€, sur réservation.</p>
+   <div class="status"><span id="poolSt">Piscine chauffée&nbsp;: <b>27–28&nbsp;°C</b> de mai à octobre</span><span id="wxSt" hidden>Ainhoa&nbsp;: <b id="wxT2"></b></span></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="pad book" id="reserver"><div class="wrap">
+ <span class="kick" style="color:var(--gold)">Réservation directe</span>
+ <h2>Vos dates, votre chambre, <em>votre prix</em>.</h2>
+ <p class="lede" style="margin-top:1rem">Choisissez une chambre et des dates&nbsp;: le prix s’affiche nuit par nuit, avec l’offre d’hiver déjà appliquée et les soirs où le restaurant vous attend. Votre demande arrive directement à la réception, sans plateforme.</p>
+ <div class="offer-band" id="offerBand"><b>−30&nbsp;%</b><span id="offerTxt">sur le séjour, petit-déjeuner inclus, du 1<sup>er</sup>&nbsp;novembre au 18&nbsp;décembre et du 3&nbsp;janvier au 12&nbsp;février, hors week-ends et jours fériés.</span></div>
+ <div class="cfg">
+  <div class="preview" aria-live="polite">
+   <div class="pv-ph" id="pvPh"><span class="pv-tag" id="pvTag">Studio vue montagne, 35 m²</span></div>
+   <div class="pv-body">
+    <div class="live"><div><span id="liveLab">À partir de</span><b id="liveP">—</b></div><small id="liveSub">la nuit pour deux, tarif d’exemple à valider avec vous</small></div>
+    <div class="nights" id="nights"></div>
+    <div class="legend2"><span><i style="background:rgba(201,154,62,.5)"></i>Nuit à −30&nbsp;%</span><span><i style="background:var(--foam);border-radius:50%"></i>Restaurant ouvert ce soir-là</span></div>
+    <div class="vs"><span>Réservé ici, en direct</span><b id="vsD">—</b><span>Sur une plateforme de réservation</span><b id="vsP">—</b><span class="save">Ce que vous gardez</span><b class="save" id="vsS">—</b></div>
+    <p class="note" style="margin-top:.7rem">Tarifs et écart avec les plateformes&nbsp;: exemples à valider avec vous. Horaires du restaurant d’après votre page Restaurant (samedi midi au mercredi soir), à confirmer.</p>
+   </div>
+  </div>
+  <div class="panel">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <fieldset data-s data-n="Chambre"><legend>Quelle chambre&nbsp;?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="rm" id="r5" value="svm" checked><label for="r5">Studio vue montagne<small>35 m², les collines depuis le lit</small></label></div>
+     <div class="choice"><input type="radio" name="rm" id="r4" value="svv"><label for="r4">Studio vue village<small>35 m², sur la grand-rue d’Ainhoa</small></label></div>
+     <div class="choice"><input type="radio" name="rm" id="r3" value="cha"><label for="r3">Charme<small>22 m²</small></label></div>
+     <div class="choice"><input type="radio" name="rm" id="r2" value="tra"><label for="r2">Tradition<small>18 m²</small></label></div>
+     <div class="choice"><input type="radio" name="rm" id="r1" value="std"><label for="r1">Standard<small>15 m², l’essentiel au cœur du village</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Dates" hidden><legend>Vos dates</legend>
+     <div class="cal"><div class="cal-h"><button type="button" id="cPrev" aria-label="Mois précédent">‹</button><b id="cMonth"></b><button type="button" id="cNext" aria-label="Mois suivant">›</button></div><div class="cal-g" id="cGrid"></div></div>
+     <p class="hint" id="dHint" style="margin-top:.8rem">Touchez votre jour d’arrivée, puis votre jour de départ. Les jours dorés bénéficient de l’offre d’hiver.</p></fieldset>
+    <fieldset data-s data-n="Séjour" hidden><legend>Pour compléter le séjour</legend>
+     <div class="choices">
+      <div class="choice"><input type="checkbox" name="opt" id="o1" value="spa"><label for="o1">Spa privatif à deux<small>30 min, 30 € en semaine</small></label></div>
+      <div class="choice"><input type="checkbox" name="opt" id="o2" value="din" checked><label for="o2">Dîner les soirs d’ouverture<small>À la carte, environ 55 € par personne</small></label></div>
+     </div>
+     <div class="stepper" style="margin-top:1.2rem"><button type="button" data-d="-1" aria-label="Une personne de moins">−</button><output id="adO">2</output><button type="button" data-d="1" aria-label="Une personne de plus">+</button><span>personnes</span></div>
+     <p class="hint" style="margin:0">Chambres et studios pour deux personnes. Montant du dîner estimé d’après la carte publiée par Gault&amp;Millau, indicatif.</p></fieldset>
+    <div data-s data-n="Envoi" hidden><p style="font-family:var(--s);font-size:1.7rem;color:#fff;margin:0 0 1rem;line-height:1.1">Votre séjour est prêt.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
+     <div class="field"><label for="p">Téléphone ou email</label><input id="p" autocomplete="email"></div>
+     <div class="send-row"><a class="btn" id="mailBtn" href="mailto:contact@maisonoppoca.com">Envoyer ma demande à la réception</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien de mon séjour</button><span class="copied" id="copied" hidden>Lien copié</span></div>
+     <p class="note">Ou appelez le <a href="tel:+33559299072">05 59 29 90 72</a>. Arrivée à partir de 15&nbsp;h, départ avant 11&nbsp;h.</p></div>
+    <div class="est-nav"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn" id="next" style="margin-left:auto">Continuer</button></div>
+   </form>
+  </div>
+ </div>
+</div></section>
+
+<section class="pad" id="offrir"><div class="wrap gift">
+ <div class="rise-l">
+  <div class="gcard" id="gcard">
+   <svg class="lau" viewBox="0 0 100 100" aria-hidden="true"><g fill="currentColor"><path d="M50 50 A25 25 0 0 1 50 0 A12.5 12.5 0 0 1 50 25 A12.5 12.5 0 0 0 50 50Z"/><path d="M50 50 A25 25 0 0 1 100 50 A12.5 12.5 0 0 1 75 50 A12.5 12.5 0 0 0 50 50Z"/><path d="M50 50 A25 25 0 0 1 50 100 A12.5 12.5 0 0 1 50 75 A12.5 12.5 0 0 0 50 50Z"/><path d="M50 50 A25 25 0 0 1 0 50 A12.5 12.5 0 0 1 25 50 A12.5 12.5 0 0 0 50 50Z"/></g></svg>
+   <span class="gt"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 15 L13 5 L29 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M6 13.5 V28 H27 V13" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>Bon cadeau Maison Oppoca, Ainhoa</span>
+   <div><h3 id="gTitle">Une nuit pour deux</h3><p class="gm" id="gMsg">Pour un week-end au Pays basque, quand vous voulez.</p></div>
+   <div class="gf"><span id="gWho">Pour vous, de la part de nous</span><span class="gv" id="gVal">200 €</span></div>
+  </div>
+  <p class="note" style="color:var(--soft)">Aperçu de démonstration. Le bon définitif est émis par la Maison Oppoca.</p>
+ </div>
+ <div class="rise">
+  <span class="kick">Offrir</span>
+  <h2>Noël au Pays basque, dans une <em>enveloppe</em>.</h2>
+  <p class="lede" style="margin:1rem 0 1.5rem" id="xmas">Une nuit, un dîner ou un moment au spa&nbsp;: composez votre bon cadeau, il se dessine sous vos yeux.</p>
+  <form class="gform" id="gform" onsubmit="return false">
+   <div class="choices">
+    <div class="choice"><input type="radio" name="gt" id="g1" value="nuit" checked><label for="g1">Une nuit pour deux<small>Chambre au choix</small></label></div>
+    <div class="choice"><input type="radio" name="gt" id="g2" value="diner"><label for="g2">Un dîner pour deux<small>Au restaurant de la maison</small></label></div>
+    <div class="choice"><input type="radio" name="gt" id="g3" value="spa"><label for="g3">Le spa à deux<small>Jacuzzi, hammam, sauna</small></label></div>
+    <div class="choice"><input type="radio" name="gt" id="g4" value="libre"><label for="g4">Un montant libre<small>Il choisira</small></label></div>
+   </div>
+   <div class="field"><label for="gAmt">Montant du bon&nbsp;: <b id="gAmtO">200 €</b></label><input type="range" id="gAmt" min="30" max="600" step="10" value="200"></div>
+   <div class="row2"><div class="field"><label for="gTo">Pour</label><input id="gTo" placeholder="Prénom"></div><div class="field"><label for="gFrom">De la part de</label><input id="gFrom" placeholder="Prénom"></div></div>
+   <div class="field"><label for="gTxt">Un mot</label><input id="gTxt" maxlength="90" placeholder="Pour un week-end au Pays basque, quand vous voulez."></div>
+   <div><a class="btn" id="gSend" href="mailto:contact@maisonoppoca.com">Commander ce bon</a></div>
+  </form>
+ </div>
+</div></section>
+
+<section class="pad" id="avis" style="padding-top:0"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise"><div class="score">4,4<small><span class="stars">★★★★</span> 588 avis Google</small></div><h2>Ce qu’ils racontent en <em>rentrant</em>.</h2></div>
+  <div class="marquee" aria-label="Avis clients"><div class="mq-track">
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Un hôtel élégant, une cuisine de qualité, une chambre d’une grande beauté, et Anthony aux petits soins.</blockquote><figcaption>Randonneur de l’Hexatrek, novembre 2026</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Le propriétaire et son équipe n’auraient pas pu être plus serviables.</blockquote><figcaption>Août 2026, traduit de l’anglais</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Des chambres très élégantes, et le restaurant est un vrai plus.</blockquote><figcaption>Août 2025, traduit de l’anglais</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Tout le monde a été d’une gentillesse et d’une disponibilité remarquables.</blockquote><figcaption>Octobre 2024, traduit de l’anglais</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Le propriétaire parle très bien anglais, et l’équipe est aux petits soins.</blockquote><figcaption>Juin 2024, traduit de l’anglais</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Un hôtel élégant, une cuisine de qualité, une chambre d’une grande beauté, et Anthony aux petits soins.</blockquote><figcaption>Randonneur de l’Hexatrek, novembre 2026</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Le propriétaire et son équipe n’auraient pas pu être plus serviables.</blockquote><figcaption>Août 2026, traduit de l’anglais</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Des chambres très élégantes, et le restaurant est un vrai plus.</blockquote><figcaption>Août 2025, traduit de l’anglais</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Tout le monde a été d’une gentillesse et d’une disponibilité remarquables.</blockquote><figcaption>Octobre 2024, traduit de l’anglais</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Le propriétaire parle très bien anglais, et l’équipe est aux petits soins.</blockquote><figcaption>Juin 2024, traduit de l’anglais</figcaption></figure>
+  </div></div>
+  <p class="note-rv">Extraits reformulés de vos avis Google pour la maquette. Dans le site final, vos avis s’affichent en version originale et se mettent à jour automatiquement.</p>
+  <div class="press"><span><b>Hôtel 4 étoiles</b></span><span><b>Gault&amp;Millau</b> 12/20</span><span><b>Qualité Tourisme</b></span><span><b>Accueil Vélo</b></span><span><b>Petit Futé</b></span><span>Ainhoa, l’un des <b>plus beaux villages de France</b></span></div>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Avant de réserver, on nous demande <em>souvent</em>…</h2>
+  <div class="faq-list">
+   <details><summary>Jusqu’à quand dure l’offre à −30&nbsp;%&nbsp;?</summary><p id="faqOffer">Du 1<sup>er</sup>&nbsp;novembre au 18&nbsp;décembre, puis du 3&nbsp;janvier au 12&nbsp;février, hors week-ends et jours fériés, petit-déjeuner inclus. Passé le 18&nbsp;décembre, l’offre ne revient que le 3&nbsp;janvier.</p></details>
+   <details><summary>Le spa est-il partagé avec d’autres clients&nbsp;?</summary><p>Non. L’espace Oppo’Calm est privatif&nbsp;: jacuzzi, hammam et sauna sont réservés pour vous seuls, sur créneau. En semaine, trente minutes à deux coûtent 30&nbsp;€.</p></details>
+   <details><summary>Le restaurant est-il ouvert tous les soirs&nbsp;?</summary><p>Non, il ferme deux jours par semaine selon la saison. Le configurateur ci-dessus vous montre les soirs de votre séjour où il est ouvert. Pour être sûr d’avoir une table, réservez-la au 05&nbsp;59&nbsp;29&nbsp;90&nbsp;72.</p></details>
+   <details><summary>La piscine est-elle chauffée&nbsp;?</summary><p>Oui, à 27–28&nbsp;°C de mai à octobre, avec vue sur les montagnes.</p></details>
+   <details><summary>Quelle chambre choisir&nbsp;?</summary><p>Standard (15&nbsp;m²) pour une nuit d’étape, Tradition (18&nbsp;m²) ou Charme (22&nbsp;m²) pour un week-end, et les studios de 35&nbsp;m², côté village ou côté montagne, pour prendre son temps. Toutes sont insonorisées, avec une literie haut de gamme.</p></details>
+   <details><summary>À quelle heure peut-on arriver&nbsp;?</summary><p>Les chambres sont prêtes à partir de 15&nbsp;h, et se libèrent avant 11&nbsp;h le jour du départ.</p></details>
+   <details><summary>Je marche sur le GR10 ou l’Hexatrek, est-ce adapté&nbsp;?</summary><p>Le GR10 traverse Ainhoa, et la maison est labellisée Accueil Vélo. Après l’étape, une vraie chambre, un vrai dîner et le spa pour les jambes.</p></details>
+   <details><summary>Peut-on offrir un séjour&nbsp;?</summary><p>Oui&nbsp;: une nuit, un dîner, un moment au spa ou un montant libre. Composez votre bon cadeau plus haut, nous vous l’envoyons.</p></details>
+  </div>
+ </div>
+ <div class="contact" style="margin-top:5rem">
+  <div><h2>On vous attend à <em>Ainhoa</em>.</h2><a class="bigtel" href="tel:+33559299072">05 59 29 90 72</a><p style="margin:0;color:var(--soft)">303 Karrika Nagusia, 64250 Ainhoa<br>contact@maisonoppoca.com</p></div>
+  <div><p style="color:var(--soft);margin-top:0">Entre Espelette et la frontière espagnole, à une demi-heure de Biarritz et de Saint-Jean-de-Luz. Nous vous répondons en français, en anglais et en espagnol.</p><a class="btn" href="#reserver">Voir les prix de mes dates</a></div>
+ </div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+ <span>SARL Maison Oppoca, hôtel 4 étoiles, restaurant et spa<br>303 Karrika Nagusia, 64250 Ainhoa</span>
+ <form class="nl-form" id="nlForm" onsubmit="return false"><label for="nlE">Recevoir nos menus de saison et nos offres chaque mois</label><input id="nlE" type="email" placeholder="Votre email" autocomplete="email"><button class="btn" type="submit">M’inscrire</button><span class="nl-ok" id="nlOk" hidden>C’est noté, merci. (Démonstration&nbsp;: aucun envoi.)</span></form>
+</div></footer>
+
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">À l’équipe de la Maison Oppoca&nbsp;: voici ce que nous avons relevé sur maisonoppoca.com, et ce que la nouvelle version apporte.</p>
+ <ul class="audit">
+  <li><div class="now"><b>Aujourd'hui</b>La page Chambres s’intitule «&nbsp;Archives&nbsp;: Chambres&nbsp;» et ne donne ni description, ni surface, ni prix&nbsp;; pour connaître un tarif, il faut partir sur eviivo.</div><div><b>Avec la refonte</b>Chaque chambre avec sa surface et sa photo, et un prix calculé nuit par nuit, offre d’hiver comprise, sans quitter votre site.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Deux adresses email différentes (contact@oppoca.com et contact@maisonoppoca.com), un lien Contact qui pointe vers «&nbsp;http://ct&nbsp;», et un bandeau cookies qui affiche {vendor_count}.</div><div><b>Avec la refonte</b>Une seule adresse, des liens qui fonctionnent, des textes relus.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Des horaires du restaurant contradictoires&nbsp;: fermé lundi et mardi sur l’accueil, ouvert du samedi midi au mercredi soir sur la page Restaurant.</div><div><b>Avec la refonte</b>Des horaires uniques, et le configurateur indique à chaque client les soirs de son séjour où il peut dîner sur place.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Vos 588 avis Google (4,4 sur 5) et votre 12/20 au Gault&amp;Millau n’apparaissent nulle part, et les bons cadeaux se résument à une page.</div><div><b>Avec la refonte</b>Vos avis et vos distinctions mis en scène, et un bon cadeau qui se compose à l’écran, juste à temps pour Noël.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Les pages anglaises restent à moitié en français (pop-up, bandeau cookies, boutons), et la chambre «&nbsp;la plus grande&nbsp;» y fait 30&nbsp;m² quand les studios en font 35.</div><div><b>Avec la refonte</b>Français, anglais et espagnol complets et cohérents, pour vos clients venus d’Espagne, d’Angleterre ou du GR10.</div></li>
+ </ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Formulaire de devis, avis Google, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + estimateur de budget</li><li>FR, EN, IT</li><li>4 pages par ville</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + brume du soir sur les collines, animée en temps réel (WebGL)</li><li>Façade labourdine et galerie des chambres animées au défilement, à 120 images/s</li><li>Réservation directe et bon cadeau sur mesure</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+<div class="addons">
+ <div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens clients et à vos contacts, pour remplir les semaines calmes&nbsp;: menu de la saison, offre d’hiver, dates à retenir au village. Rédigé, mis en page et envoyé pour vous.</p></div>
+ <div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos clients après chaque séjour, bilan mensuel.</p></div>
+ <div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Allemand, néerlandais ou basque, pour les randonneurs du GR10 et vos voisins d’Euskadi, traduite et tenue à jour avec le reste du site.</p></div>
+</div>
+<p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Maison%20Oppoca">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+
+<div class="mbar"><a class="btn ghost" href="tel:+33559299072">Appeler</a><a class="btn" href="#reserver">Réserver</a></div>
+
+<script src="../lib/lenis.min.js"></script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lenis=null;
+if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});window.lenis=lenis;}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+function $(id){return document.getElementById(id);}
+
+/* ---------- Ouverture : brume du soir sur les collines (WebGL) ---------- */
+var cv=$('mist'),gl=cv.getContext('webgl',{antialias:false,alpha:false});
+var heroVisible=true,t0=performance.now();
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ var fs='precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;'+
+ 'float h1(float n){return fract(sin(n)*43758.5453);}'+
+ 'float h2(vec2 q){return fract(sin(dot(q,vec2(127.1,311.7)))*43758.5453);}'+
+ 'float n1(float x){float i=floor(x),f=fract(x);float u=f*f*(3.-2.*f);return mix(h1(i),h1(i+1.),u);}'+
+ 'float n2(vec2 q){vec2 i=floor(q),f=fract(q);vec2 u=f*f*(3.-2.*f);return mix(mix(h2(i),h2(i+vec2(1.,0.)),u.x),mix(h2(i+vec2(0.,1.)),h2(i+vec2(1.,1.)),u.x),u.y);}'+
+ 'float ridge(float x){float v=0.,a=.5,s=1.;for(int k=0;k<5;k++){v+=a*n1(x*s);s*=2.07;a*=.5;}return v;}'+
+ 'float fbm(vec2 q){float v=0.,a=.5;for(int k=0;k<4;k++){v+=a*n2(q);q=q*2.03+vec2(1.7,9.2);a*=.5;}return v;}'+
+ 'void main(){vec2 uv=gl_FragCoord.xy/r;float asp=r.x/r.y;vec2 p=vec2(uv.x*asp,uv.y);'+
+ 'vec2 sun=vec2((.2+.6*m.x)*asp,.5+.14*m.y);'+
+ 'vec3 top=vec3(.07,.11,.1),hz=vec3(.74,.6,.47);'+
+ 'vec3 col=mix(hz,top,smoothstep(.28,1.,uv.y));'+
+ 'float d=length(p-sun);col+=vec3(1.,.8,.56)*(.5*exp(-d*9.)+.16*exp(-d*2.4));'+
+ 'float hn=0.;'+
+ 'for(int i=0;i<5;i++){float fi=float(i);float dp=fi/4.;'+
+ 'float par=(m.x-.5)*(.05+.35*dp);'+
+ 'float base=.56-dp*.13;'+
+ 'float hh=base+(ridge(p.x*(1.1+dp*.9)+par+fi*13.7+t*.01*(1.+fi))-.5)*(.17+.12*dp);'+
+ 'vec3 lc=mix(vec3(.66,.62,.56),vec3(.06,.09,.08),pow(dp,.8));'+
+ 'float rim=exp(-abs(uv.y-hh)*140.)*(1.-dp*.6)*exp(-abs(p.x-sun.x)*1.2)*.35;'+
+ 'float e=smoothstep(hh+.003,hh-.003,uv.y);'+
+ 'col=mix(col,lc,e);col+=vec3(1.,.82,.6)*rim*e;'+
+ 'float mist=fbm(vec2(p.x*1.4-t*.025*(1.+fi*.5),uv.y*5.+fi*3.1));'+
+ 'float band=exp(-abs(uv.y-(hh-.035))*14.)*mist*(.55-dp*.25);'+
+ 'col=mix(col,vec3(.84,.81,.75),clamp(band,0.,1.)*.85);'+
+ 'hn=hh;}'+
+ 'vec2 g=vec2(p.x*70.,uv.y*70.);vec2 id=floor(g);vec2 f=fract(g)-.5;float rn=h2(id);'+
+ 'float inside=step(uv.y,hn-.03)*step(hn-.2,uv.y);'+
+ 'float lit=step(.982,rn)*inside*(.75+.25*sin(t*1.5+rn*60.));'+
+ 'col+=vec3(1.,.72,.36)*lit*exp(-dot(f,f)*28.)*.9;'+
+ 'col*=1.-.32*length(uv-vec2(.5,.62));'+
+ 'col+=(h2(gl_FragCoord.xy+fract(t))-.5)*.025;'+
+ 'gl_FragColor=vec4(col,1.);}';
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(o));return o;}
+ var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.62,my=.4,tx=.62,ty=.4;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var dd=Math.min(devicePixelRatio||1,1.5);cv.width=Math.max(1,cv.clientWidth*dd*.7|0);cv.height=Math.max(1,cv.clientHeight*dd*.7|0);gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ window.__drawMist=function(now){if(!heroVisible)return;mx+=(tx-mx)*.04;my+=(ty-my)*.04;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?6.:(now-t0)/1000+6.);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ window.__drawMist(t0);
+}
+
+/* ---------- Scènes au défilement ---------- */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+var hdr=$('hdr'),proofEl=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=$('rv'),rvImg=rv.querySelector('img');
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+function fmtFact(b,v){var dec=+b.dataset.dec||0;return(b.dataset.pre||'')+v.toLocaleString('fr-FR',{minimumFractionDigits:dec,maximumFractionDigits:dec,useGrouping:false});}
+/* façade */
+var cutS=$('journee'),live=document.querySelectorAll('#live li'),meter=$('meter');
+var shutG=$('shut'),SH=[];
+[[140,150],[222,150],[298,150],[382,150],[140,212],[222,212],[298,212],[382,212]].forEach(function(w){[[w[0]-12,'right'],[w[0]+30,'left']].forEach(function(s){var r=document.createElementNS('http://www.w3.org/2000/svg','rect');r.setAttribute('x',s[0]);r.setAttribute('y',w[1]);r.setAttribute('width',12);r.setAttribute('height',32);r.style.transformBox='fill-box';r.style.transformOrigin=s[1];r.style.transform='scaleX(0)';shutG.appendChild(r);SH.push(r);});});
+var beams=document.querySelectorAll('#beams rect');beams.forEach(function(b,i){b.style.transformOrigin=i<2?'left':'top';});
+var lbs=document.querySelectorAll('#lbls .lb');
+var gS=$('chambres'),track=$('track'),gImgs=track.querySelectorAll('img'),gc=$('gcount');
+
+function scenes(now){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proofEl.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7));
+ var ins=(1-e)*18;rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*20+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.4){factsDone=true;facts.forEach(function(b){var to=+b.dataset.to,fr=+b.dataset.from||0,st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1500));var v=fr+(to-fr)*k;if(!b.dataset.dec)v=Math.round(v);b.textContent=fmtFact(b,v);if(k<1)requestAnimationFrame(tick);})(st);});}
+ var c=prog(cutS);
+ $('stone').setAttribute('opacity',seg(c,0,.1));
+ $('outline').setAttribute('stroke-dashoffset',1-ease(seg(c,.05,.22)));
+ $('wall').setAttribute('opacity',seg(c,.18,.26));
+ $('roof').setAttribute('stroke-dashoffset',1-ease(seg(c,.2,.34)));
+ $('roofFill').setAttribute('opacity',seg(c,.3,.36));
+ beams.forEach(function(b,i){var k=ease(seg(c,.26+i*.02,.36+i*.02));b.style.transform=(i<2?'scaleX(':'scaleY(')+k+')';});
+ $('door').setAttribute('opacity',seg(c,.3,.36));
+ SH.forEach(function(s,i){s.style.transform='scaleX('+ease(seg(c,.34+i*.006,.42+i*.006))+')';});
+ $('pool').setAttribute('opacity',seg(c,.42,.5));$('steam').setAttribute('opacity',seg(c,.44,.52)*(1-seg(c,.62,.7))*.8);
+ $('ripple').setAttribute('transform','translate('+(Math.sin(now/700)*6)+',0)');
+ var nt=seg(c,.58,.74);$('night').setAttribute('opacity',nt*.78);$('glow').setAttribute('opacity',seg(c,.62,.76));
+ var sk=seg(c,.4,.74);$('sun').setAttribute('transform','translate('+(-sk*40)+','+(sk*190)+')');$('sun').setAttribute('opacity',1-seg(c,.66,.74)*.9);
+ var dawn=seg(c,.86,.98);if(dawn>0){$('night').setAttribute('opacity',.78*(1-dawn));$('glow').setAttribute('opacity',1-dawn);$('sun').setAttribute('transform','translate('+(-470+dawn*20)+','+(60-dawn*40)+')');$('sun').setAttribute('opacity',dawn);}
+ lbs.forEach(function(l,i){l.setAttribute('opacity',seg(c,[.1,.3,.34][i],[.16,.36,.4][i])*(1-seg(c,.56,.6)));});
+ var st=c<.38?0:c<.56?1:c<.84?2:3;live.forEach(function(li,i){li.classList.toggle('on',i===st);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(16,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*1.5)+'%,0,0)';});
+ gc.textContent='0'+Math.min(8,1+Math.floor(g*8))+' / 08';
+}
+function loop(now){if(lenis)lenis.raf(now);if(window.__drawMist&&!RM)window.__drawMist(now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.18});
+document.querySelectorAll('.rise,.rise-l').forEach(function(el,i){el.style.transitionDelay=(i%3)*.08+'s';io.observe(el);});
+if(RM){facts.forEach(function(b){b.textContent=fmtFact(b,+b.dataset.to);});}
+
+/* ---------- Dates utiles ---------- */
+var TODAY=new Date();TODAY.setHours(0,0,0,0);
+function dkey(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+function pk(s){var a=s.split('-');return new Date(+a[0],+a[1]-1,+a[2]);}
+var HOL=['01-01','05-01','05-08','07-14','08-15','11-01','11-11','12-25'];
+function isOffer(d){var m=d.getMonth(),dd=d.getDate(),w=d.getDay();if(w===5||w===6)return false;if(HOL.indexOf(dkey(d).slice(5))>-1)return false;
+ return(m===10)||(m===11&&dd<=17)||(m===0&&dd>=3)||(m===1&&dd<=11);}
+function restoOpen(d){var w=d.getDay();return w===6||w===0||w===1||w===2||w===3;}
+function season(d){var m=d.getMonth();return(m===6||m===7)?1.3:(m===4||m===5||m===8)?1.12:1;}
+(function(){var y=TODAY.getFullYear(),end=new Date(y,11,18),s2=new Date(TODAY.getMonth()<2?y:y+1,0,3),e2=new Date(TODAY.getMonth()<2?y:y+1,1,12),t='';
+ var dl=Math.round((end-TODAY)/864e5);
+ if(TODAY.getMonth()===10||(TODAY.getMonth()===11&&TODAY.getDate()<=18)){t='Encore <b style="font:inherit;color:#fff">'+dl+' jours</b> pour profiter de −30&nbsp;% avant les fêtes (jusqu’au 18&nbsp;décembre), puis à nouveau du 3&nbsp;janvier au 12&nbsp;février. Hors week-ends et jours fériés, petit-déjeuner inclus.';}
+ else if(TODAY>=s2&&TODAY<=e2){t='Jusqu’au 12&nbsp;février, −30&nbsp;% sur le séjour en semaine, petit-déjeuner inclus.';}
+ if(t)$('offerTxt').innerHTML=t;
+ var x=Math.round((new Date(y,11,25)-TODAY)/864e5);if(x>0&&x<60)$('xmas').innerHTML='Plus que '+x+' jours avant Noël. Une nuit, un dîner ou un moment au spa&nbsp;: composez votre bon cadeau, il se dessine sous vos yeux.';
+})();
+
+/* ---------- Météo en direct (open-meteo, repli silencieux) ---------- */
+var WMO={0:'ciel dégagé',1:'peu nuageux',2:'éclaircies',3:'ciel couvert',45:'brume',48:'brouillard',51:'bruine',53:'bruine',55:'bruine',61:'pluie fine',63:'pluie',65:'forte pluie',71:'neige',73:'neige',75:'neige',80:'averses',81:'averses',82:'averses',95:'orage'};
+try{fetch('https://api.open-meteo.com/v1/forecast?latitude=43.3077&longitude=-1.4986&current=temperature_2m,weather_code&timezone=Europe%2FParis').then(function(r){return r.ok?r.json():null;}).then(function(j){if(!j||!j.current)return;var s=Math.round(j.current.temperature_2m)+' °C, '+(WMO[j.current.weather_code]||'');$('wxT').textContent=s;$('wxT2').textContent=s;$('wxHero').hidden=false;$('wxSt').hidden=false;}).catch(function(){});}catch(e){}
+(function(){var m=TODAY.getMonth();$('poolSt').innerHTML=(m>=4&&m<=9)?'Piscine ouverte en ce moment&nbsp;: <b>27–28&nbsp;°C</b>':'Piscine chauffée&nbsp;: <b>27–28&nbsp;°C</b>, réouverture en mai';})();
+
+/* ---------- Réservation directe ---------- */
+var R={svm:['Studio vue montagne','35 m²',185,'https://maisonoppoca.com/wp-content/uploads/2025/03/Studiovuemontagne8-contrastee-1024px.webp'],
+ svv:['Studio vue village','35 m²',175,'https://maisonoppoca.com/wp-content/uploads/2025/09/EMI0645-HDR-1024px.webp'],
+ cha:['Charme','22 m²',145,'https://maisonoppoca.com/wp-content/uploads/2025/03/EMI0143-HDR-1920px-1-1024x683.webp'],
+ tra:['Tradition','18 m²',125,'https://maisonoppoca.com/wp-content/uploads/2025/03/DSC05473-HDR-1920px-1024x684.webp'],
+ std:['Standard','15 m²',110,'https://maisonoppoca.com/wp-content/uploads/2025/05/999951d5627e912b9949b15f9f532ea6-1024x682.webp']};
+var pvPh=$('pvPh'),imgs={};
+Object.keys(R).forEach(function(k){var im=new Image();im.alt=R[k][0];im.className='off';im.loading='lazy';im.onerror=function(){this.style.visibility='hidden';};im.src=R[k][3];pvPh.insertBefore(im,pvPh.firstChild);imgs[k]=im;});
+var f=$('est'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=$('prev'),nx=$('next'),chips=$('chips'),i=0,reached=0,shown=0,arr=null,dep=null,ad=2,calM=new Date(TODAY.getFullYear(),TODAY.getMonth(),1);
+function val(n){var e=f.querySelector('[name="'+n+'"]:checked');return e?e.value:null;}
+function eur(n){return Math.round(n).toLocaleString('fr-FR')+' €';}
+function tween(el,to){var from=+(el.dataset.v||0),st=performance.now();el.dataset.v=to;(function tk(n){var q=ease(Math.min(1,(n-st)/650));el.textContent=eur(from+(to-from)*q);if(q<1)requestAnimationFrame(tk);})(st);}
+function nightsList(){var L=[];if(!arr||!dep)return L;for(var d=new Date(arr);d<dep;d.setDate(d.getDate()+1))L.push(new Date(d));return L;}
+function calc(){var rm=val('rm'),b=R[rm][2],N=nightsList(),room=0,din=0,spa=0,offerN=0,open=0;
+ var opts=[].map.call(f.querySelectorAll('[name=opt]:checked'),function(o){return o.value;});
+ N.forEach(function(d){var w=d.getDay(),pr=b*season(d)*((w===5||w===6)?1.1:1);if(isOffer(d)){pr*=.7;offerN++;}room+=pr;if(restoOpen(d))open++;});
+ if(opts.indexOf('din')>-1)din=open*ad*55;if(opts.indexOf('spa')>-1)spa=30;
+ return{rm:rm,N:N,room:room,din:din,spa:spa,offerN:offerN,open:open,opts:opts,total:room+din+spa};}
+var lastRm=null;
+function update(){var d=calc();
+ if(d.rm!==lastRm){Object.keys(imgs).forEach(function(k){imgs[k].classList.toggle('off',k!==d.rm);});lastRm=d.rm;}
+ $('pvTag').textContent=R[d.rm][0]+', '+R[d.rm][1];
+ var nb=$('nights');nb.innerHTML='';
+ if(d.N.length){$('liveLab').textContent=d.N.length+(d.N.length>1?' nuits':' nuit')+', du '+arr.toLocaleDateString('fr-FR',{day:'numeric',month:'short'})+' au '+dep.toLocaleDateString('fr-FR',{day:'numeric',month:'short'});tween($('liveP'),d.total);
+  $('liveSub').textContent=(d.offerN?d.offerN+' nuit'+(d.offerN>1?'s':'')+' à −30 %, petit-déjeuner inclus. ':'')+(d.opts.indexOf('din')>-1?d.open+' dîner'+(d.open>1?'s':'')+' sur place.':'Tarifs d’exemple à valider.');
+  d.N.slice(0,14).forEach(function(n,k){var x=document.createElement('i');x.textContent=n.toLocaleDateString('fr-FR',{weekday:'short'}).replace('.','');if(isOffer(n))x.className='o';if(restoOpen(n))x.className+=' r';x.style.animationDelay=k*.05+'s';nb.appendChild(x);});
+ }else{$('liveLab').textContent='À partir de';tween($('liveP'),R[d.rm][2]*.7);$('liveSub').textContent='la nuit pour deux en semaine avec l’offre d’hiver, tarif d’exemple à valider avec vous';}
+ var base=d.N.length?d.room:R[d.rm][2];tween($('vsD'),base);tween($('vsP'),base/0.9);tween($('vsS'),base/0.9-base);
+ var hs=[d.rm,arr?dkey(arr):'-',dep?dkey(dep):'-',d.opts.join('.')||'-',ad].join('~');try{history.replaceState(null,'','#sejour='+encodeURIComponent(hs));}catch(e){}
+ return d;}
+function drawCal(){var g=$('cGrid');g.innerHTML='';$('cMonth').textContent=calM.toLocaleDateString('fr-FR',{month:'long',year:'numeric'});
+ ['lu','ma','me','je','ve','sa','di'].forEach(function(x){var s=document.createElement('span');s.className='dn';s.textContent=x;g.appendChild(s);});
+ var off=(calM.getDay()+6)%7;for(var k=0;k<off;k++)g.appendChild(document.createElement('span'));
+ var dim=new Date(calM.getFullYear(),calM.getMonth()+1,0).getDate();
+ for(var dd=1;dd<=dim;dd++){(function(day){var dt=new Date(calM.getFullYear(),calM.getMonth(),day),b=document.createElement('button');b.type='button';b.textContent=day;
+  if(dt<TODAY)b.disabled=true;else{if(isOffer(dt))b.className='o';if(arr&&+dt===+arr||dep&&+dt===+dep)b.className='sel';else if(arr&&dep&&dt>arr&&dt<dep)b.className='in';}
+  b.setAttribute('aria-label',dt.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})+(isOffer(dt)?', offre −30 %':''));
+  b.onclick=function(){if(!arr||dep||dt<=arr){arr=dt;dep=null;$('dHint').textContent='Et votre jour de départ ?';}else{dep=dt;$('dHint').textContent='C’est noté : '+nightsList().length+' nuit(s).';var at=i;setTimeout(function(){if(i===at&&i===1){i=2;show();}},650);}drawCal();update();};
+  g.appendChild(b);})(dd);}
+ $('cPrev').disabled=calM<=new Date(TODAY.getFullYear(),TODAY.getMonth(),1);}
+$('cPrev').onclick=function(){calM=new Date(calM.getFullYear(),calM.getMonth()-1,1);drawCal();};
+$('cNext').onclick=function(){calM=new Date(calM.getFullYear(),calM.getMonth()+1,1);drawCal();};
+f.querySelectorAll('.stepper button').forEach(function(b){b.onclick=function(){ad=Math.max(1,Math.min(2,ad+ +b.dataset.d));$('adO').textContent=ad;update();};});
+function recap(){var d=update(),L=[['Chambre',R[d.rm][0]+', '+R[d.rm][1]],['Dates',d.N.length?arr.toLocaleDateString('fr-FR')+' → '+dep.toLocaleDateString('fr-FR'):'à préciser'],['Nuits',d.N.length+(d.offerN?' dont '+d.offerN+' à −30 %':'')],['Dîners',d.opts.indexOf('din')>-1?d.open+' soir(s), '+ad+' pers.':'non'],['Spa privatif',d.spa?'30 min à deux':'non'],['Total indicatif',d.N.length?eur(d.total):'selon vos dates']];
+ $('recap').innerHTML=L.map(function(r){return'<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');return{d:d,L:L};}
+function drawChips(){chips.innerHTML='';S.forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=(k+1)+'. '+el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached;b.onclick=function(){i=k;show();};li.appendChild(b);chips.appendChild(li);});}
+function show(){S.forEach(function(el,k){el.hidden=k!==i;if(k===i&&shown){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});shown=1;reached=Math.max(reached,i);pv.hidden=i===0;nx.hidden=i===S.length-1;nx.textContent=i===1&&!dep?'Plus tard':i===2?'Voir mon séjour':'Continuer';if(i===1)drawCal();drawChips();if(i===S.length-1)recap();else update();}
+f.addEventListener('change',function(e){update();if(e.target.name==='rm'&&i===0){setTimeout(function(){if(i===0){i=1;show();}},420);}});
+nx.onclick=function(){if(i<S.length-1){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};
+(function(){var m=location.hash.match(/sejour=([^&]+)/);if(!m)return;var p=decodeURIComponent(m[1]).split('~');var e=f.querySelector('[name=rm][value="'+p[0]+'"]');if(e)e.checked=true;if(p[1]&&p[1]!=='-')arr=pk(p[1]);if(p[2]&&p[2]!=='-')dep=pk(p[2]);if(arr&&arr<TODAY){arr=null;dep=null;}f.querySelectorAll('[name=opt]').forEach(function(o){o.checked=(p[3]||'').split('.').indexOf(o.value)>-1;});ad=+p[4]||2;$('adO').textContent=ad;if(arr)calM=new Date(arr.getFullYear(),arr.getMonth(),1);})();
+show();
+$('mailBtn').addEventListener('click',function(){var r=recap(),txt='Bonjour,\n\nJe souhaite réserver un séjour à la Maison Oppoca :\n'+r.L.map(function(x){return'- '+x[0]+' : '+x[1];}).join('\n')+'\n\nNom : '+($('n').value||'')+'\nContact : '+($('p').value||'')+'\n\nMon séjour : '+location.href;this.href='mailto:contact@maisonoppoca.com?subject='+encodeURIComponent('Demande de séjour, '+R[r.d.rm][0])+'&body='+encodeURIComponent(txt);});
+$('copyBtn').addEventListener('click',function(){var c=$('copied');(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});
+
+/* ---------- Bon cadeau ---------- */
+var GT={nuit:['Une nuit pour deux',220],diner:['Un dîner pour deux',120],spa:['Le spa privatif à deux',60],libre:['Un moment à la Maison Oppoca',150]};
+var gf=$('gform'),gc2=$('gcard'),gv=$('gVal'),lau=gc2.querySelector('.lau'),gRot=0;
+function gUpd(ch){var t=gf.querySelector('[name=gt]:checked').value,a=+$('gAmt').value;$('gTitle').textContent=GT[t][0];$('gAmtO').textContent=eur(a);tween(gv,a);
+ $('gMsg').textContent=$('gTxt').value||'Pour un week-end au Pays basque, quand vous voulez.';
+ var to=$('gTo').value.trim(),fr=$('gFrom').value.trim();$('gWho').textContent=(to?'Pour '+to:'Pour vous')+(fr?', de la part de '+fr:'');
+ if(ch){gc2.classList.add('pulse');setTimeout(function(){gc2.classList.remove('pulse');},380);gRot+=90;lau.style.transform='rotate('+gRot+'deg)';}}
+gf.addEventListener('change',function(e){if(e.target.name==='gt'){$('gAmt').value=GT[e.target.value][1];}gUpd(e.target.name==='gt');});
+gf.addEventListener('input',function(){gUpd(false);});
+gUpd(false);
+$('gSend').addEventListener('click',function(){var t=gf.querySelector('[name=gt]:checked').value,txt='Bonjour,\n\nJe souhaite commander un bon cadeau :\n- '+GT[t][0]+'\n- Montant : '+eur(+$('gAmt').value)+'\n- Pour : '+($('gTo').value||'')+'\n- De la part de : '+($('gFrom').value||'')+'\n- Message : '+($('gTxt').value||'');this.href='mailto:contact@maisonoppoca.com?subject='+encodeURIComponent('Bon cadeau Maison Oppoca')+'&body='+encodeURIComponent(txt);});
+
+/* ---------- Lettre mensuelle (démonstration) ---------- */
+$('nlForm').addEventListener('submit',function(){var e=$('nlE');if(!e.value||e.value.indexOf('@')<0){e.focus();return;}$('nlOk').hidden=false;e.value='';});
+
+/* ---------- Langues ---------- */
+var L={en:{h1a:'Since 1659 in Ainhoa,',h1b:'ten rooms, one table,',h1c:'a spa just for <em>the two of you</em>.',lede:'A 4-star hotel and Basque restaurant in a former coaching inn, in the heart of one of the most beautiful villages in France: a heated pool facing the mountains, a private spa, and the GR10 trail right past the door.',cta1:'See prices for my dates',cta1s:'Book direct',n1:'Rooms',n2:'Table & spa',n3:'Gift vouchers'},
+ es:{h1a:'Desde 1659 en Ainhoa,',h1b:'diez habitaciones, una mesa,',h1c:'un spa solo para <em>vosotros dos</em>.',lede:'Hotel de 4 estrellas y restaurante vasco en una antigua casa de postas, en el corazón de uno de los pueblos más bonitos de Francia: piscina climatizada frente a las montañas, spa privado y el GR10 pasando por la puerta.',cta1:'Ver precios para mis fechas',cta1s:'Reservar directo',n1:'Habitaciones',n2:'Mesa y spa',n3:'Regalar'}},fr={};
+document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.innerHTML;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){if(L[l][e.dataset.i])e.innerHTML=L[l][e.dataset.i];});};});
+})();
+</script>
+</body>
+</html>

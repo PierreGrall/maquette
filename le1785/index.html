@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Au Chalet de Manigod — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0E1824;--slate:#22303F;--snow:#EDF1F4;--ink:#16202A;--soft:#59677A;--line:#CBD3DA;--larch:#7A4E2D;--glow:#E2AE5E;--frost:#BFD3E6;
+--water:#8A5A33;--deep:#0E1824;--foam:#E2AE5E;--white:#FAFBFC;--pool:#22303F;
+--d:"Fraunces",Georgia,"Times New Roman",serif;--t:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--snow);color:var(--ink);font-family:var(--t);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--t);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--night);background:var(--night);color:#fff;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.warm{background:var(--glow);border-color:var(--glow);color:var(--night)}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);font-optical-sizing:auto;letter-spacing:-.015em;margin:0;font-weight:500}
+h2{font-size:clamp(2rem,4.4vw,3.7rem);line-height:1.02;max-width:17ch}
+.lede{color:var(--soft);max-width:38rem}
+.kick{font-family:var(--t);font-size:.85rem;font-weight:600;color:var(--larch);margin:0 0 .8rem;letter-spacing:.01em}
+
+/* Bandeau + en-tête bulle */
+.proof{position:relative;z-index:40;background:#05090E;color:#c9d4de;font-family:var(--t);font-size:.8rem}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:top .3s}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:rgba(14,24,36,.36);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:rgba(250,251,252,.8);color:var(--ink);border-color:rgba(22,32,42,.1)}
+header.site .btn{padding:.6rem 1.1rem}
+header.site.solid .btn.warm{background:var(--night);border-color:var(--night);color:#fff}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none}
+.lmark{width:30px;height:30px;flex:none}
+.bname{font-family:var(--d);font-weight:600;font-size:1.08rem;letter-spacing:-.01em;white-space:nowrap}
+.hnav{display:flex;align-items:center;gap:1.3rem;font-size:.9rem}
+.hnav a{text-decoration:none;opacity:.88}
+.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+
+/* Ouverture neige */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--night);color:#fff;overflow:hidden}
+#snow{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-weight:400;font-size:clamp(2.1rem,5.6vw,5.6rem);line-height:1.02;font-variation-settings:"SOFT" 50}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(108%);transition:transform 1.25s cubic-bezier(.16,1,.3,1)}
+.hero h1 .ln:nth-child(3) span{font-style:italic;color:var(--glow)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.1s}.hero h1 .ln:nth-child(3) span{transition-delay:.2s}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .6s,transform 1s .6s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:#d3dde8;margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.scrollhint{position:absolute;right:1.25rem;bottom:1.25rem;z-index:2;font-size:.75rem;color:#9db0c4;writing-mode:vertical-rl}
+
+/* Révélation photo */
+.reveal{height:220vh;position:relative;background:var(--night)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden;background:var(--slate)}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:#3a4a5c}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .shade{position:absolute;inset:0;background:rgba(8,14,22,.28);pointer-events:none}
+.reveal .cap{position:absolute;left:clamp(1.25rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);color:#fff;z-index:2;max-width:28rem}
+.reveal .cap b{display:block;font-family:var(--d);font-weight:500;font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.08;margin-bottom:.4rem}
+.reveal .cap span{font-size:.9rem;color:#dfe7ef}
+.facts{position:absolute;top:clamp(6rem,15vh,9rem);right:clamp(1.25rem,4vw,3rem);z-index:2;display:grid;gap:1.1rem;color:#fff;text-align:right}
+.facts b{display:block;font-family:var(--d);font-weight:500;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;color:#e3e9ef}
+
+/* Visite en coupe */
+.cut{height:340vh;position:relative;background:var(--night);color:#dfe6ee}
+.cut .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.cut-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.cut h2{color:#fff;margin-bottom:1rem}
+.cut .lede{color:#9fb0c2;margin:0 0 2rem}
+.cut svg{width:100%;height:auto;overflow:visible}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps-live li{border-left:2px solid #2d3d4f;padding:.2rem 0 .2rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--glow)}
+.steps-live b{display:block;color:#fff;font-weight:600}
+.steps-live span{font-size:.95rem;color:#a7b6c6}
+.meter{height:2px;background:#2d3d4f;margin-top:2rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--glow);transform-origin:left;transform:scaleX(0)}
+.svl{font-family:var(--t);font-size:13px;fill:#dfe6ee}
+.svl.s{font-size:11px;fill:#9fb0c2}
+
+/* Galerie horizontale */
+.hgal{height:380vh;position:relative;background:var(--snow)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(62vw,720px);margin:0}
+.card .ph{height:min(58vh,520px);overflow:hidden;border-radius:3px;background:#c9d2db}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-weight:600}.card figcaption span{color:var(--soft);font-size:.9rem;white-space:nowrap}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--d);font-size:1.15rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+
+/* Séjour */
+.stay{background:var(--slate);color:#e6edf3;position:relative;overflow:hidden}
+.stay h2{color:#fff}.stay .lede{color:#a9b9c9}.stay .kick{color:var(--glow)}
+.cfg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:1.1rem;overflow:hidden;background:var(--night)}
+.preview svg{width:100%;height:auto;display:block;border-radius:6px}
+.pv-anim{transition:fill .8s,opacity .8s}
+.flk{animation:fall linear infinite}@keyframes fall{from{transform:translateY(-30px)}to{transform:translateY(300px)}}
+.smk{animation:smk 5s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}@keyframes smk{0%{transform:translateY(6px) scaleY(.8);opacity:0}30%{opacity:.7}100%{transform:translateY(-18px) scaleY(1.15);opacity:0}}
+.beds{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;margin-top:.9rem}
+.room{border:1px solid rgba(255,255,255,.12);border-radius:6px;padding:.45rem .5rem;font-size:.72rem;color:#9fb0c2;line-height:1.25}
+.room b{display:block;color:#e6edf3;font-weight:600;font-size:.78rem}
+.pips{display:flex;gap:3px;margin-top:.35rem;flex-wrap:wrap}
+.pips i{width:12px;height:12px;border-radius:2px;border:1px solid rgba(255,255,255,.25);transition:background .4s,border-color .4s}
+.pips i.w{width:20px}
+.pips i.on{background:var(--glow);border-color:var(--glow)}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem}
+.live span{font-size:.8rem;color:#9fb0c2}.live b{display:block;white-space:nowrap;font-family:var(--d);font-weight:500;font-size:clamp(1.5rem,2.6vw,2.1rem);color:#fff;font-variant-numeric:tabular-nums;line-height:1.1}
+.live small{font-size:.82rem;color:#c9d5e0;text-align:right}
+.cmp{margin-top:1rem;display:grid;gap:.45rem;font-size:.8rem;color:#a9b9c9}
+.cmp div{display:grid;grid-template-columns:7.5rem 1fr auto;gap:.6rem;align-items:center}
+.cmp .bar{height:8px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden}.cmp .bar i{display:block;height:100%;transform-origin:left;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.cmp .d i{background:var(--glow)}.cmp .p i{background:#7f8fa1}
+.cmp em{font-style:normal;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cmp p{margin:.2rem 0 0;font-size:.78rem}
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:clamp(1.25rem,3vw,2rem)}
+fieldset{border:0;margin:0;padding:0}legend{font-family:var(--d);font-weight:500;font-size:1.4rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:8px;padding:.8rem .9rem;cursor:pointer;font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:#9fb0c2;font-size:.8rem;margin-top:.2rem}
+.choice input:checked+label{border-color:var(--glow);background:rgba(226,174,94,.1)}
+.choice input:focus-visible+label{outline:3px solid var(--glow);outline-offset:2px}
+.step-anim{animation:stin .55s cubic-bezier(.16,1,.3,1)}@keyframes stin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font:inherit;font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:#9fb0c2;padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--glow);color:var(--night);border-color:var(--glow)}
+.chips button.done{color:#fff;border-color:rgba(226,174,94,.5)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.85rem;color:#93a5b8;margin:-.4rem 0 1rem}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-size:.92rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#9fb0c2}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-size:.88rem}
+.field input{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:6px;background:rgba(255,255,255,.06);color:#fff}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.btn.wa{background:#1F9D57;border-color:#1F9D57;color:#fff}
+.copied{font-size:.82rem;color:var(--glow);align-self:center;word-break:break-all}
+.note{font-size:.85rem;color:#93a5b8;margin-top:1rem}
+.thanks{font-family:var(--d);font-size:1.6rem;color:#fff;line-height:1.2;margin:.2rem 0 .6rem}
+[hidden]{display:none!important}
+
+/* Neige en direct */
+.snowlive{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(2rem,5vw,5rem);align-items:start}
+.mx{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+.mx div{padding:1rem 1rem 1rem 0}
+.mx b{display:block;font-family:var(--d);font-weight:500;font-size:clamp(2rem,4vw,3.2rem);line-height:1;font-variant-numeric:tabular-nums}
+.mx span{font-size:.85rem;color:var(--soft)}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem;align-items:end;height:150px;margin-top:1.5rem;border-bottom:1px solid var(--line)}
+.days div{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:.3rem;font-size:.75rem;color:var(--soft)}
+.days i{display:block;width:100%;max-width:38px;background:var(--frost);border-radius:2px 2px 0 0;transform-origin:bottom;transform:scaleY(0);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.days em{font-style:normal;color:var(--ink);font-variant-numeric:tabular-nums}
+.src{font-size:.8rem;color:var(--soft);margin-top:.8rem}
+.dist{list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid var(--line)}
+.dist li{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.dist li b{font-family:var(--d);font-weight:500;font-variant-numeric:tabular-nums}
+
+/* Avis, FAQ, contact */
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.score{font-family:var(--d);font-weight:500;font-size:4.6rem;line-height:1}.score small{display:block;font-family:var(--t);font-size:.85rem;color:var(--soft);margin-top:.4rem}
+.stars{color:#B8862B;letter-spacing:.08em}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 52s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--white);border:1px solid var(--line);border-radius:4px;padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-family:var(--d);font-size:1.12rem;line-height:1.4}.rcard figcaption{font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-weight:600;font-size:1.06rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--larch),var(--larch)) center/14px 2px no-repeat,linear-gradient(var(--larch),var(--larch)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.bigtel{font-family:var(--d);font-weight:500;font-size:clamp(2.2rem,5vw,3.8rem);text-decoration:none;display:inline-block;margin:.4rem 0 .6rem;white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-size:.88rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:flex;flex-direction:column;gap:.5rem;max-width:26rem}
+.nl-form label{color:var(--ink);font-weight:600}
+.nl-row{display:flex;gap:.5rem}.nl-row input{flex:1;min-width:0;font:inherit;padding:.65rem .8rem;border:1.5px solid var(--line);border-radius:999px;background:var(--white)}
+.nl-row .btn{padding:.6rem 1.1rem}
+.nl-ok{color:var(--larch);font-size:.85rem}
+
+.studio{background:#E1E7ED;border-top:6px solid var(--water);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid #C3CDD6}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid #C3CDD6}
+.audit b{display:block;font-family:var(--t);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid #C3CDD6}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid #C3CDD6}.addons b{font-weight:600}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--white);border:1px solid #C3CDD6;border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:#e7f2f3;border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--water);font-weight:600}.offer.rec .tag{color:var(--foam)}
+.offer h3{font-stretch:110%;font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+@media (max-width:900px){.offers{grid-template-columns:1fr}}@media (max-width:600px){.audit li{grid-template-columns:1fr;gap:.5rem}}
+
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .cut-grid,.cfg,.contact,.snowlive{grid-template-columns:1fr}
+ .cut{height:300vh}.cut h2{font-size:1.75rem}.cut .lede{display:none}.cut-grid{gap:1.2rem}
+ .preview{position:relative;top:0}
+ .card{width:82vw}.facts{top:auto;bottom:8.5rem}
+ .rx-head,.faq{grid-template-columns:1fr;gap:1.5rem}
+}
+@media (max-width:600px){
+ header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}.bname{font-size:.95rem}.lmark{width:26px;height:26px}
+ .hnav .btn{display:none}.hnav{gap:.6rem}
+ .hero h1{font-size:clamp(1.45rem,6.4vw,2.3rem)}.hero-inner{padding-bottom:6rem}.hero-ctas{display:none}
+ .choices{grid-template-columns:1fr}.beds{grid-template-columns:1fr 1fr}
+ .steps-live li:not(.on){display:none}
+ .mx b{font-size:1.9rem}
+ .mbar{display:grid;grid-template-columns:1fr 1.4fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(14,24,36,.92);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+ .cmp div{grid-template-columns:6rem 1fr auto}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.cut,.hgal{height:auto}.reveal .stick,.cut .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .mq-track{animation:none;flex-wrap:wrap;width:auto}.flk,.smk{animation:none}.pv-anim{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour Au Chalet de Manigod par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Au Chalet de Manigod, accueil"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 15.5 16 5l13 10.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 13v14h18V13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M7 20h18M12.5 27v-4.5h7V27" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="14.5" r="1.6" fill="currentColor"/></svg><span class="bname">Au Chalet de Manigod</span></a>
+ <nav class="hnav" aria-label="Navigation">
+  <a class="nl" href="#visite" data-i="n1">Le chalet</a><a class="nl" href="#galerie" data-i="n2">Photos</a><a class="nl" href="#neige" data-i="n3">Neige</a>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button><button type="button" aria-pressed="false" data-l="nl">NL</button></div>
+  <a class="btn warm" href="#sejour" data-i="cta1s">Réserver en direct</a>
+ </nav>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="snow" aria-hidden="true"></canvas>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">Une ferme de 1785</span></span><span class="ln"><span data-i="h1b">face à la Tournette.</span></span><span class="ln"><span data-i="h1c">Cet hiver, elle est à vous.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Le 1785, chalet de 200 m² sur deux hectares privés à Manigod, à 9 km de La Clusaz. Onze couchages, un sauna dans le mazot, Gîtes de France 4 épis et 4,7 sur 5 sur 18 avis.</p>
+   <div class="hero-ctas"><a class="btn warm" href="#sejour" data-i="cta1">Composer mon séjour</a><a class="btn ghost" href="tel:+33685917798">06 85 91 77 98</a></div>
+  </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true">Défiler</div>
+</section>
+
+<section class="reveal" id="chalet" aria-label="Le chalet sous la neige">
+ <div class="stick">
+  <figure id="rv"><img src="https://static.wixstatic.com/media/b905a2_fc6e586d19194c9f9ce5390b2da0b3cc.jpg" alt="Le chalet Le 1785 sous la neige, façade en madriers et soubassement de pierre" onerror="this.style.visibility='hidden'"></figure>
+  <div class="shade"></div>
+  <div class="cap"><b>Une ferme classée au patrimoine local de Manigod.</b><span>Transmise et rénovée depuis sept générations, au bout d'un chemin partagé avec une seule maison voisine.</span></div>
+  <div class="facts" id="facts"><div><b data-to="1785" data-g="0">0</b><span>année de construction</span></div><div><b data-to="7">0</b><span>générations de la même famille</span></div><div><b data-to="2" data-suf=" ha">0</b><span>de prairie privée</span></div><div><b data-to="4.7" data-dec="1">0</b><span><span class="stars">★★★★★</span> 18 avis Gîtes de France</span></div></div>
+ </div>
+</section>
+
+<section class="cut" id="visite" aria-label="Le chalet pièce par pièce">
+ <div class="stick"><div class="wrap cut-grid">
+  <svg viewBox="70 56 680 362" role="img" aria-label="Le chalet se construit pièce par pièce : soubassement de pierre, rez-de-chaussée, chambres, combles et mazot du sauna">
+   <defs>
+    <pattern id="stone" width="26" height="14" patternUnits="userSpaceOnUse"><rect width="26" height="14" fill="#3a4350"/><path d="M0 7h26M13 0v7M0 14V7M26 14V7M6 7v7M19 7v7" stroke="#55606e" stroke-width="1"/></pattern>
+    <pattern id="logs" width="10" height="9" patternUnits="userSpaceOnUse"><rect width="10" height="9" fill="#4a3424"/><line x1="0" y1="8.5" x2="10" y2="8.5" stroke="#2f2118" stroke-width="1"/></pattern>
+    <clipPath id="baseClip"><rect id="baseRect" x="120" y="360" width="400" height="0"/></clipPath>
+   </defs>
+   <path id="hill" d="M0 372 Q200 352 380 362 T760 356 V420 H0Z" fill="#1d2a38" opacity="0"/>
+   <g clip-path="url(#baseClip)"><rect x="130" y="290" width="380" height="72" fill="url(#stone)"/></g>
+   <g id="lv0" opacity="0">
+    <line x1="290" y1="292" x2="290" y2="360" stroke="#8a97a6"/><line x1="400" y1="292" x2="400" y2="360" stroke="#8a97a6"/>
+    <rect x="160" y="322" width="22" height="30" fill="#E2AE5E" opacity=".85" class="fire"/>
+    <text class="svl" x="190" y="318">Salon 40 m²</text><text class="svl s" x="190" y="334">fourneau vitré</text>
+    <text class="svl" x="300" y="318">Salle à manger</text><text class="svl s" x="300" y="334">12 couverts</text>
+    <text class="svl" x="410" y="318">Cuisine 11 m²</text><text class="svl s" x="410" y="334">frigo américain</text>
+   </g>
+   <rect id="wood1" x="130" y="220" width="380" height="70" fill="url(#logs)" opacity="0"/>
+   <g id="lv1" opacity="0">
+    <line x1="225" y1="222" x2="225" y2="290" stroke="#b08a66"/><line x1="320" y1="222" x2="320" y2="290" stroke="#b08a66"/><line x1="415" y1="222" x2="415" y2="290" stroke="#b08a66"/>
+    <g fill="#E2AE5E"><rect x="145" y="268" width="30" height="12" rx="2"/><rect x="240" y="268" width="30" height="12" rx="2"/><rect x="335" y="268" width="30" height="12" rx="2"/><rect x="370" y="268" width="16" height="12" rx="2"/><rect x="390" y="268" width="16" height="12" rx="2"/><rect x="428" y="268" width="16" height="12" rx="2"/><rect x="450" y="268" width="16" height="12" rx="2"/><rect x="472" y="268" width="16" height="12" rx="2"/></g>
+    <text class="svl s" x="145" y="246">Ch. 1 + bain</text><text class="svl s" x="240" y="246">Ch. 2</text><text class="svl s" x="335" y="246">Ch. 3</text><text class="svl s" x="428" y="246">Ch. 4</text>
+   </g>
+   <path id="roof" d="M92 226 L320 76 L548 226" fill="none" stroke="#dfe6ee" stroke-width="3" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <path id="frame" d="M130 362 V222 H510 V362 M130 290 H510 M180 222 L320 130 L460 222" fill="none" stroke="#c9a27c" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <g id="lv2" opacity="0">
+    <rect x="250" y="176" width="140" height="44" fill="url(#logs)"/>
+    <text class="svl" x="262" y="200">Bibliothèque</text><text class="svl s" x="262" y="214">par le balcon</text>
+    <g stroke="#c9a27c" stroke-width="2"><line x1="104" y1="290" x2="536" y2="290"/><line x1="104" y1="270" x2="536" y2="270"/><line x1="104" y1="222" x2="536" y2="222"/></g>
+    <g stroke="#c9a27c" stroke-width="1.4" id="balu"></g>
+    <text class="svl s" x="540" y="266">100 m² de balcons</text><text class="svl s" x="540" y="280">et terrasses abrités</text>
+   </g>
+   <g id="mazot" opacity="0">
+    <rect x="600" y="318" width="92" height="44" fill="url(#logs)"/>
+    <path d="M588 322 L646 284 L704 322" fill="#2a3340" stroke="#dfe6ee" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="618" y="332" width="18" height="16" fill="#E2AE5E" opacity=".9"/>
+    <text class="svl" x="590" y="392">Mazot, sauna</text><text class="svl s" x="590" y="406">jusqu'à 6 personnes</text>
+   </g>
+   <path id="snowcap" d="M92 226 L320 76 L548 226 L540 230 Q430 162 320 90 Q210 162 100 230Z" fill="#f2f6fa" opacity="0"/>
+   <path id="smoke" d="M372 112 q-10 -16 4 -30 t2 -32 t8 -30" fill="none" stroke="#9fb0c2" stroke-width="5" stroke-linecap="round" opacity="0"/>
+   <rect x="364" y="104" width="14" height="22" fill="#3a4350" id="chim" opacity="0"/>
+  </svg>
+  <div>
+   <p class="kick">Visite</p>
+   <h2>Deux siècles de madriers, onze places à table.</h2>
+   <p class="lede">Une ossature de plus de 200 ans, un confort d'aujourd'hui. Faites défiler, le chalet se construit sous vos yeux.</p>
+   <ol class="steps-live" id="live">
+    <li><b>Pierre et madriers</b><span>Le soubassement et l'ossature d'origine, témoins d'un savoir-faire de 1785.</span></li>
+    <li><b>Le rez-de-chaussée</b><span>Salon de 40 m² et son fourneau double face, salle à manger pour douze, cuisine équipée.</span></li>
+    <li><b>Quatre chambres</b><span>Onze couchages, une baignoire balnéo à l'étage, une douche à l'italienne en bas.</span></li>
+    <li><b>Les combles et le mazot</b><span>La bibliothèque par le balcon, et le sauna suivi d'un bain de neige.</span></li>
+   </ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
+
+<section class="hgal" id="galerie" aria-label="Photos du chalet">
+ <div class="stick">
+  <div class="wrap head"><h2>Deux hectares, toutes les saisons.</h2><span class="count" id="gcount">01 / 07</span></div>
+  <div class="track" id="track">
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b905a2_c24a90ed4f8247b299ffcdb15486aaed.jpg" alt="Le 1785 en été, soubassement en pierre et balcons de bois" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le 1785 en été</b><span>Façade et balcons</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b905a2_35d19ffda9124185a8844731a09574ca.jpg" alt="Le mazot du sauna sous la neige, montagnes en arrière-plan" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le mazot sous la neige</b><span>Sauna, 6 places</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b905a2_9ecad96620534cd5a94d24ccc9808c52.jpg" alt="Terrasse abritée en bois avec vue sur la forêt enneigée" onerror="this.style.visibility='hidden'"></div><figcaption><b>Terrasse abritée</b><span>Même par mauvais temps</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b905a2_f64f417c00044f1d99f3dc66f82a9f03.jpg" alt="Intérieur du sauna en bois clair" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le sauna du mazot</b><span>Puis un bain de neige</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b905a2_c3d037f1305a4e71ab9ef342d4661362.jpg" alt="Bibliothèque sous les combles, étagères de livres et canapé" onerror="this.style.visibility='hidden'"></div><figcaption><b>La bibliothèque</b><span>Accès par le balcon</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b905a2_28abe2d3599f4350a2b6d5c829e02c1f.jpg" alt="Prairie fleurie autour du chalet, chevaux au pâturage" onerror="this.style.visibility='hidden'"></div><figcaption><b>La prairie au printemps</b><span>Deux hectares privés</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://static.wixstatic.com/media/b905a2_56d6394456ae4f818acc5b011a38dff3.jpg" alt="Le mazot en été, table et barbecue face aux montagnes" onerror="this.style.visibility='hidden'"></div><figcaption><b>Dîner dehors en été</b><span>Barbecue et salon de jardin</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="pad stay" id="sejour"><div class="wrap">
+ <p class="kick">Réservation directe</p>
+ <h2>Composez votre semaine au chalet.</h2>
+ <p class="lede" style="margin-top:1rem">Une minute, cinq choix. Le prix s'affiche au fil de vos réponses, partagé par personne, et votre demande part directement chez le propriétaire, sans frais de plateforme.</p>
+ <div class="cfg">
+  <div class="preview" aria-live="polite">
+   <svg viewBox="0 0 420 260" aria-hidden="true">
+    <rect id="pvSky" class="pv-anim" width="420" height="260" fill="#1f3047"/>
+    <path id="pvMount" class="pv-anim" d="M0 150 L70 96 L120 118 L190 60 L250 104 L300 84 L420 140 V260 H0Z" fill="#3b4d66"/>
+    <path id="pvCap" class="pv-anim" d="M164 80 L190 60 L216 80 L204 76 L190 84 L176 76Z M282 96 L300 84 L318 94 L300 92Z" fill="#eef3f8"/>
+    <path id="pvGround" class="pv-anim" d="M0 208 Q140 194 260 202 T420 198 V260 H0Z" fill="#e6edf3"/>
+    <g id="pvFlakes" class="pv-anim" fill="#fff"></g>
+    <rect x="110" y="168" width="150" height="40" fill="#7d7f7f"/>
+    <rect x="110" y="122" width="150" height="46" fill="#6b4529"/>
+    <g fill="none" stroke="#3a2617" stroke-width="1"><path d="M110 132h150M110 142h150M110 152h150M110 162h150"/></g>
+    <g id="pvWin"><rect x="124" y="180" width="16" height="16"/><rect x="152" y="180" width="16" height="16"/><rect x="228" y="180" width="16" height="16"/><rect x="128" y="132" width="14" height="14"/><rect x="164" y="132" width="14" height="14"/><rect x="200" y="132" width="14" height="14"/><rect x="232" y="132" width="14" height="14"/><rect x="178" y="96" width="14" height="14"/></g>
+    <path d="M98 126 L185 70 L272 126" fill="#2c3036" stroke="#2c3036" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M110 166h150" stroke="#c9a27c" stroke-width="3"/><g id="pvBal" stroke="#c9a27c" stroke-width="1.2"></g>
+    <path id="pvRoofSnow" class="pv-anim" d="M96 124 L185 66 L274 124 L266 124 L185 74 L104 124Z" fill="#f4f7fa"/>
+    <rect x="214" y="72" width="10" height="20" fill="#3a3f46"/>
+    <path class="smk" d="M219 70 q-6 -8 2 -16 t0 -16" fill="none" stroke="#c4cfdb" stroke-width="4" stroke-linecap="round"/>
+    <rect x="300" y="180" width="54" height="28" fill="#5b3c24"/><path d="M292 182 L327 160 L362 182Z" fill="#2c3036"/><path id="pvMazSnow" class="pv-anim" d="M290 182 L327 158 L364 182 L356 182 L327 164 L298 182Z" fill="#f4f7fa"/>
+    <text id="pvLabel" x="210" y="248" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#3b4d66"></text>
+   </svg>
+   <div class="beds" id="beds">
+    <div class="room"><b>Chambre 1</b>lit 140, bain<div class="pips"><i class="w"></i></div></div>
+    <div class="room"><b>Chambre 2</b>lit 140<div class="pips"><i class="w"></i></div></div>
+    <div class="room"><b>Chambre 3</b>140 + 2 × 90<div class="pips"><i class="w"></i><i></i><i></i></div></div>
+    <div class="room"><b>Chambre 4</b>3 × 90<div class="pips"><i></i><i></i><i></i></div></div>
+   </div>
+   <div class="live"><div><span id="liveLab">Votre semaine</span><b id="livePrice">—</b></div><small id="livePP"></small></div>
+   <div class="cmp"><div class="d"><span>Ici, en direct</span><span class="bar"><i id="barD"></i></span><em id="cmpD">—</em></div><div class="p"><span>Via une plateforme</span><span class="bar"><i id="barP"></i></span><em id="cmpP">—</em></div><p>Grille 2020 de votre site et frais de service voyageur estimés à 12 %, à valider avec vous.</p></div>
+  </div>
+  <div class="panel" aria-live="polite">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <fieldset data-s data-n="Saison"><legend>Quand rêvez-vous de venir&nbsp;?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="season" id="s1" value="fevrier" checked><label for="s1">Vacances d'hiver<small>Février, ski à La Clusaz</small></label></div>
+     <div class="choice"><input type="radio" name="season" id="s2" value="noel"><label for="s2">Noël<small>19 au 26 décembre</small></label></div>
+     <div class="choice"><input type="radio" name="season" id="s3" value="nouvelan"><label for="s3">Nouvel an<small>26 décembre au 2 janvier</small></label></div>
+     <div class="choice"><input type="radio" name="season" id="s4" value="janvier"><label for="s4">Janvier<small>Pistes calmes, neige au rendez-vous</small></label></div>
+     <div class="choice"><input type="radio" name="season" id="s5" value="ete"><label for="s5">Été<small>Juillet et août, lac d'Annecy à 27 km</small></label></div>
+     <div class="choice"><input type="radio" name="season" id="s6" value="basse"><label for="s6">Printemps ou automne<small>Calme, randonnées, alpages</small></label></div>
+     <div class="choice"><input type="radio" name="season" id="s7" value="weekend"><label for="s7">Un week-end<small>Hors vacances scolaires</small></label></div>
+    </div></fieldset>
+    <fieldset data-s data-n="Groupe" hidden><legend>Combien serez-vous&nbsp;?</legend><p class="hint">Les lits s'allument dans l'aperçu.</p><div class="choices">
+     <div class="choice"><input type="radio" name="n" id="g1" value="5"><label for="g1">Une famille<small>Jusqu'à 5 personnes</small></label></div>
+     <div class="choice"><input type="radio" name="n" id="g2" value="8"><label for="g2">Deux familles<small>8 personnes</small></label></div>
+     <div class="choice"><input type="radio" name="n" id="g3" value="10" checked><label for="g3">Entre amis<small>10 personnes</small></label></div>
+     <div class="choice"><input type="radio" name="n" id="g4" value="11"><label for="g4">Chalet complet<small>11 personnes</small></label></div>
+    </div></fieldset>
+    <fieldset data-s data-n="Options" hidden><legend>Des besoins particuliers&nbsp;?</legend><p class="hint">Plusieurs choix possibles, ou aucun. Linge, chauffage et charges sont déjà inclus.</p><div class="choices">
+     <div class="choice"><input type="checkbox" name="opt" id="o1" value="menage" data-p="200"><label for="o1">Forfait ménage<small>200 € en fin de séjour</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o2" value="chien"><label for="o2">Nous venons avec un chien<small>Deux au plus, avec votre accord</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o3" value="bebe"><label for="o3">Équipement bébé<small>Lit et chaise haute</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o4" value="borne"><label for="o4">Voiture électrique<small>Borne de recharge sur place</small></label></div>
+    </div></fieldset>
+    <fieldset data-s data-n="Dates" hidden><legend>Quelle semaine&nbsp;?</legend><p class="hint" id="dateHint">Du samedi au samedi.</p><div class="choices" id="dates"></div></fieldset>
+    <div data-s data-n="Coordonnées" hidden><p class="thanks">Votre séjour est prêt.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="fn">Nom</label><input id="fn" autocomplete="name"></div>
+     <div class="field"><label for="fp">Téléphone ou WhatsApp</label><input id="fp" type="tel" autocomplete="tel"></div>
+     <div class="send-row"><a class="btn wa" id="waBtn" href="#" target="_blank" rel="noopener">Envoyer ma demande sur WhatsApp</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien pour mon groupe</button><span class="copied" id="copied" hidden>Lien copié</span></div></div>
+    <div data-s data-n="Envoi" hidden><p class="thanks">Merci, votre demande est partie.</p><p style="color:#a9b9c9;margin:0">Dans le site final, elle arrive aussi par email chez M. Dufournet avec le récapitulatif, et vous recevez le contrat de location en retour.</p></div>
+    <div class="est-nav"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn warm" id="next" style="margin-left:auto">Continuer</button></div>
+   </form>
+   <p class="note">Disponibilités en direct dans le site final. Prix de démonstration tirés de votre grille 2020, à actualiser avec vous.</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="pad" id="neige"><div class="wrap snowlive">
+ <div>
+  <p class="kick">En direct de Manigod</p>
+  <h2 class="rise">La neige, avant de faire les valises.</h2>
+  <p class="lede rise" style="margin-top:1rem">Le domaine de Manigod–Croix-Fry, relié à La Clusaz, est à 8,5 km du chalet. Voici ce qui tombe là-haut cette semaine.</p>
+  <ul class="dist">
+   <li><span>Pistes de Manigod–Croix-Fry</span><b>8,5 km</b></li>
+   <li><span>La Clusaz</span><b>9 km</b></li>
+   <li><span>Thônes</span><b>9 km</b></li>
+   <li><span>Annecy et son lac</span><b>27 km</b></li>
+   <li><span>Plateau des Glières</span><b>45 km</b></li>
+   <li><span>Chamonix</span><b>70 km</b></li>
+  </ul>
+ </div>
+ <div>
+  <div class="mx"><div><b id="mT">—</b><span>au col de la Croix-Fry</span></div><div><b id="mD">—</b><span>de neige au sol</span></div><div><b id="mS">—</b><span>attendus sur 7 jours</span></div></div>
+  <div class="days" id="days" aria-label="Chutes de neige prévues jour par jour"></div>
+  <p class="src" id="src">Prévisions Open-Meteo, mises à jour à chaque visite.</p>
+ </div>
+</div></section>
+
+<section class="pad" style="padding-top:0"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise"><div class="score">4,7<small><span class="stars">★★★★★</span> 18 avis Gîtes de France</small></div><h2>Ils sont venus, beaucoup reviennent.</h2></div>
+  <div class="marquee" aria-label="Avis des hôtes"><div class="mq-track">
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Une parenthèse enchantée. Le chalet a été rénové sans perdre son caractère, et la vue est superbe.</blockquote><figcaption>Diwa74, septembre 2026</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>An amazing chalet with panoramic views, a warm welcome and a house full of history.</blockquote><figcaption>Marchant and Dales, août 2026</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★★</div><blockquote>Un environnement exceptionnel, la vue depuis la table dehors, et un propriétaire très sympathique.</blockquote><figcaption>Yo91, août 2026</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★</div><blockquote>Deuxième séjour, et les enfants ont encore adoré. Un endroit pour les amoureux de la montagne.</blockquote><figcaption>Hubert, juillet 2026</figcaption></figure>
+   <figure class="rcard"><div class="stars">★★★★</div><blockquote>Calme et repos, avec un accueil parfait et un excellent rapport qualité-prix.</blockquote><figcaption>Riri, septembre 2026</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Une parenthèse enchantée. Le chalet a été rénové sans perdre son caractère, et la vue est superbe.</blockquote><figcaption>Diwa74, septembre 2026</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>An amazing chalet with panoramic views, a warm welcome and a house full of history.</blockquote><figcaption>Marchant and Dales, août 2026</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★★</div><blockquote>Un environnement exceptionnel, la vue depuis la table dehors, et un propriétaire très sympathique.</blockquote><figcaption>Yo91, août 2026</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★</div><blockquote>Deuxième séjour, et les enfants ont encore adoré. Un endroit pour les amoureux de la montagne.</blockquote><figcaption>Hubert, juillet 2026</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><div class="stars">★★★★</div><blockquote>Calme et repos, avec un accueil parfait et un excellent rapport qualité-prix.</blockquote><figcaption>Riri, septembre 2026</figcaption></figure>
+  </div></div>
+  <p class="note-rv">Extraits reformulés de vos avis Gîtes de France pour la maquette. Dans le site final, vos avis s'affichent en version originale et se mettent à jour automatiquement.</p>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Les questions qu'on pose avant de réserver.</h2>
+  <div class="faq-list">
+   <details><summary>Les vacances de février sont-elles encore libres&nbsp;?</summary><p>Ce sont les semaines les plus demandées de l'année, et un groupe de dix met souvent plusieurs semaines à se décider. Composez votre séjour plus haut et envoyez la demande&nbsp;: le propriétaire vous répond directement avec les semaines encore ouvertes.</p></details>
+   <details><summary>Le chemin d'accès est-il praticable l'hiver&nbsp;?</summary><p>Le chalet se trouve au bout d'un chemin non goudronné d'environ 250 m, partagé avec une seule maison voisine. En Haute-Savoie, pneus hiver ou chaînes sont obligatoires de novembre à mars. Le déneigement du chemin est à préciser avec vous.</p></details>
+   <details><summary>À quelle distance sont les pistes&nbsp;?</summary><p>Le domaine de Manigod–Croix-Fry, relié à La Clusaz, est à 8,5 km, et le village de La Clusaz à 9 km. Il faut une voiture&nbsp;; le parking du chalet accueille cinq véhicules.</p></details>
+   <details><summary>Comment se répartissent les couchages&nbsp;?</summary><p>Quatre chambres&nbsp;: deux avec un lit de 140, dont une avec sa propre baignoire, une avec un lit de 140 et deux lits de 90, une avec trois lits de 90. Une salle de bain avec balnéo à l'étage, une douche à l'italienne au rez-de-chaussée.</p></details>
+   <details><summary>Le linge et le ménage sont-ils compris&nbsp;?</summary><p>Le linge est fourni, le chauffage et les charges sont inclus. Le ménage de fin de séjour est proposé en option à 200 €.</p></details>
+   <details><summary>Peut-on louer pour un week-end&nbsp;?</summary><p>Oui, hors vacances scolaires, du vendredi 16 h au dimanche 18 h.</p></details>
+   <details><summary>Peut-on venir avec son chien&nbsp;?</summary><p>Oui, deux animaux au plus, avec l'accord du propriétaire. Les deux hectares de prairie leur plaisent autant qu'aux enfants.</p></details>
+   <details><summary>Comment se passe la réservation&nbsp;?</summary><p>Vous recevez un contrat de location, et une caution de 600 € est demandée. Le reste se règle directement avec la famille propriétaire, sans frais de plateforme.</p></details>
+   <details><summary>Le sauna est-il compris&nbsp;?</summary><p>Oui. Il occupe le petit mazot à côté du chalet et accueille jusqu'à six personnes. L'hiver, on enchaîne avec un bain de neige&nbsp;; l'été, avec la douche froide en plein air.</p></details>
+  </div>
+ </div>
+ <div class="contact">
+  <div><h2>Une question sur le chalet&nbsp;?</h2><a class="bigtel" href="tel:+33685917798">06 85 91 77 98</a><p style="margin:0;color:var(--soft)">Michel Dufournet, propriétaire<br>Fixe&nbsp;: <a href="tel:+33450224589">04 50 22 45 89</a> · <a href="mailto:le1785@yahoo.fr">le1785@yahoo.fr</a></p></div>
+  <div><p style="color:var(--soft);margin-top:0">Le 1785, Manigod, Haute-Savoie. À 9 km de La Clusaz et de Thônes, 27 km d'Annecy. Gîtes de France 4 épis, référence 74G160053.</p><a class="btn" href="#sejour">Composer mon séjour</a></div>
+ </div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+ <span>Au Chalet de Manigod · Le 1785, chalet de famille depuis 1785</span>
+ <form class="nl-form" id="nlf" novalidate><label for="nle">Recevoir chaque mois les semaines libres et l'enneigement</label><div class="nl-row"><input id="nle" type="email" placeholder="Votre email" autocomplete="email"><button class="btn" type="submit">Recevoir</button></div><span class="nl-ok" id="nlok" hidden>C'est noté. Démonstration&nbsp;: aucun email n'est envoyé depuis cette maquette.</span></form>
+</div></footer>
+
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Monsieur Dufournet, voici ce que nous avons relevé sur auchaletdemanigod.com, et ce que la nouvelle version apporte.</p>
+ <ul class="audit">
+  <li><div class="now"><b>Aujourd'hui</b>Vos tarifs sont une image de la grille 2020, et pour réserver il faut écrire un email sans connaître ni les dates libres ni le prix final.</div><div><b>Avec la refonte</b>Un séjour composé en une minute&nbsp;: saison, groupe, dates, prix par personne, et la demande arrive sur votre WhatsApp.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Votre page « Les avis clients » est vide&nbsp;: vos 18 avis à 4,7 sur 5 et vos 4 épis restent sur Gîtes de France et Abritel, et aucune fiche Google à votre nom n'est mise en avant.</div><div><b>Avec la refonte</b>Vos avis mis en scène dès la première page, et une FAQ qui répond avant l'email&nbsp;: chemin d'accès l'hiver, pistes, couchages.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Le bandeau « Ce site a été créé sur Wix », un menu de quatorze entrées et des photos d'illustration (fondue, fromage, galets) à la place de votre chalet.</div><div><b>Avec la refonte</b>Uniquement vos photos du 1785, et une page qui se lit d'un trait sur un téléphone.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Des informations qui se contredisent&nbsp;: 10 personnes dans la description lue par Google, 11 sur la page, et pas de numéro de téléphone avant la page Contact.</div><div><b>Avec la refonte</b>Des textes cohérents écrits pour vos hôtes, et votre mobile à portée de pouce sur chaque écran.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Site en français uniquement, alors que vos hôtes anglais saluent votre accueil dans leurs avis.</div><div><b>Avec la refonte</b>Versions anglaise et néerlandaise, pour la clientèle étrangère des Aravis.</div></li>
+ </ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Formulaire de devis, avis Google, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + estimateur de budget</li><li>FR, EN, IT</li><li>4 pages par ville</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + neige qui tombe en temps réel (WebGL), réactive au pointeur</li><li>Le chalet reconstruit pièce par pièce au défilement, galerie animée</li><li>Enneigement de Manigod en direct et comparateur de prix direct ou plateforme</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+<div class="addons">
+ <div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens hôtes et à vos contacts&nbsp;: semaines encore libres, enneigement, fêtes de Manigod et de La Clusaz. Rédigé, mis en page et envoyé pour vous.</p></div>
+ <div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos hôtes après chaque séjour, bilan mensuel.</p></div>
+ <div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Allemand, italien ou une autre langue de vos hôtes, traduite et tenue à jour avec le reste du site.</p></div>
+</div>
+<p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Au%20Chalet%20de%20Manigod">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+
+<div class="mbar"><a class="btn ghost" href="tel:+33685917798">Appeler</a><a class="btn warm" href="#sejour">Composer mon séjour</a></div>
+
+<script src="../lib/lenis.min.js"></script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lenis=null;
+if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});window.lenis=lenis;}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+
+/* ---------- Neige temps réel (WebGL) ---------- */
+var cv=document.getElementById('snow'),gl=cv.getContext('webgl',{antialias:false,alpha:false});
+var heroVisible=true,t0=performance.now();
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ var fs='precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;'+
+ 'float h1(float x){return fract(sin(x*127.1)*43758.5453);}'+
+ 'float h2(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}'+
+ 'float n1(float x){float i=floor(x);float f=fract(x);f=f*f*(3.-2.*f);return mix(h1(i),h1(i+1.),f);}'+
+ 'float n2(vec2 p){vec2 i=floor(p);vec2 f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h2(i),h2(i+vec2(1.,0.)),f.x),mix(h2(i+vec2(0.,1.)),h2(i+1.),f.x),f.y);}'+
+ 'float f2(vec2 p){float v=0.;float a=.5;for(int k=0;k<4;k++){v+=a*n2(p);p=p*2.1+vec2(1.3,.7);a*=.5;}return v;}'+
+ 'float fb(float x){float v=0.;float a=.5;for(int k=0;k<5;k++){v+=a*n1(x);x*=2.03;a*=.5;}return v;}'+
+ 'float fl(vec2 q,float sc,float sp,float sz,float sd,float w,float dn){vec2 p=q*sc;p.y+=t*sp;p.x+=t*w*sp+sin(p.y*.37+sd)*.55;vec2 id=floor(p);vec2 f=fract(p)-.5;float rn=h2(id+sd);vec2 o=vec2(h2(id+sd+1.7),h2(id+sd+3.1))-.5;o*=.5;float d=length(f-o);return smoothstep(sz,sz*.18,d)*step(dn,rn);}'+
+ 'void main(){vec2 uv=gl_FragCoord.xy/r;float as=r.x/r.y;vec2 q=vec2(uv.x*as,uv.y);vec2 mm=m-.5;'+
+ 'vec3 top=vec3(.03,.06,.1);vec3 hor=vec3(.2,.24,.35);vec3 glo=vec3(.86,.56,.5);'+
+ 'vec3 col=mix(hor,top,smoothstep(.22,1.,uv.y));'+
+ 'col+=glo*.16*exp(-abs(uv.y-.5)*5.);'+
+ 'vec2 sg=floor(q*170.);float st=h2(sg);col+=vec3(.9)*step(.9986,st)*smoothstep(.55,.95,uv.y)*(.55+.45*sin(t*1.7+st*60.));'+
+ 'float x=q.x+mm.x*.05;float rg=fb(x*.85+3.7);float rf=.42+.3*rg*rg+.035*(1.-abs(n1(x*6.)*2.-1.));'+
+ 'float far=smoothstep(rf+.002,rf-.002,uv.y);'+
+ 'float cou=f2(vec2(x*4.,uv.y*7.));float sn=smoothstep(.4,.62,cou+(uv.y-rf)*2.6+.3);'+
+ 'vec3 farC=mix(vec3(.12,.15,.22),vec3(.6,.66,.78),sn);farC=mix(farC,vec3(.95,.72,.66),.5*smoothstep(rf-.07,rf,uv.y)*sn);farC*=.7+.3*smoothstep(rf-.35,rf,uv.y);'+
+ 'col=mix(col,farC,far);'+
+ 'float x2=q.x+mm.x*.1;float rm=.25+.11*fb(x2*2.2+9.)+.01*n1(x2*70.);'+
+ 'float mid=smoothstep(rm+.003,rm-.003,uv.y);'+
+ 'vec3 midC=mix(vec3(.04,.065,.1),vec3(.09,.12,.18),clamp(uv.y*2.5,0.,1.));'+
+ 'vec2 lg=q*55.;vec2 li=floor(lg);float lr=h2(li+7.);vec2 lf=fract(lg)-.5;'+
+ 'float lamp=step(.972,lr)*smoothstep(.2,.0,length(lf))*step(uv.y,rm-.025)*step(rm-.13,uv.y);'+
+ 'midC+=vec3(1.,.7,.36)*lamp*(.75+.25*sin(t*1.1+lr*40.));'+
+ 'col=mix(col,midC,mid);'+
+ 'col+=vec3(.22,.26,.36)*.16*exp(-abs(uv.y-rm)*16.);'+
+ 'float x3=q.x+mm.x*.18;float rn=.12+.07*fb(x3*1.3+20.);'+
+ 'float nr=smoothstep(rn+.004,rn-.004,uv.y);'+
+ 'vec3 nC=mix(vec3(.3,.35,.47),vec3(.12,.15,.22),smoothstep(rn,rn-.14,uv.y));'+
+ 'col=mix(col,nC,nr);'+
+ 'vec2 pm=vec2(m.x*as,m.y);vec2 dv=q-pm;float dd=length(dv);vec2 pu=dv/(dd+.001)*.07*exp(-dd*5.);'+
+ 'float w=-mm.x*1.4;float s=0.;'+
+ 's+=fl(q-pu*1.2,5.,.7,.09,1.,w,.78)*.8;'+
+ 's+=fl(q-pu,9.,.8,.11,7.,w,.6)*.75;'+
+ 's+=fl(q-pu*.7,15.,.95,.13,13.,w,.45)*.6;'+
+ 's+=fl(q-pu*.4,26.,1.1,.16,21.,w,.4)*.42;'+
+ 'col+=vec3(.93,.96,1.)*s*(1.-.68*(1.-smoothstep(.12,.6,uv.y))*(1.-smoothstep(.4,.75,uv.x)));'+
+ 'col*=1.-.32*length(uv-vec2(.5,.58));'+
+ 'col*=mix(.6,1.,smoothstep(0.,.4,uv.y));'+
+ 'gl_FragColor=vec4(col,1.);}';
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(o));return o;}
+ var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.5,my=.6,tx=.5,ty=.6;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5);cv.width=Math.max(1,cv.clientWidth*d*.75|0);cv.height=Math.max(1,cv.clientHeight*d*.75|0);gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ window.__drawSnow=function(now){if(!heroVisible)return;mx+=(tx-mx)*.05;my+=(ty-my)*.05;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?8.:(now-t0)/1000+20.);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ window.__drawSnow(t0);
+}
+
+/* ---------- Scènes au défilement ---------- */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+function $(id){return document.getElementById(id);}
+var hdr=$('hdr'),proofEl=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=$('rv'),rvImg=rv.querySelector('img');
+var cutS=document.querySelector('.cut'),baseRect=$('baseRect'),frame=$('frame'),roof=$('roof'),lv0=$('lv0'),lv1=$('lv1'),lv2=$('lv2'),wood1=$('wood1'),mazot=$('mazot'),snowcap=$('snowcap'),smoke=$('smoke'),chim=$('chim'),hill=$('hill'),live=document.querySelectorAll('#live li'),meter=$('meter');
+(function(){var g=$('balu'),s='';for(var x=110;x<536;x+=14){s+='<line x1="'+x+'" y1="270" x2="'+x+'" y2="290"/>';}g.innerHTML=s;var b=$('pvBal'),t='';for(var y=114;y<258;y+=9){t+='<line x1="'+y+'" y1="158" x2="'+y+'" y2="166"/>';}b.innerHTML=t;})();
+var gS=document.querySelector('.hgal'),track=$('track'),gImgs=track.querySelectorAll('img'),gc=$('gcount'),gN=gImgs.length;
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+function fmtFact(b,v){var dec=+b.dataset.dec||0;return v.toLocaleString('fr-FR',{minimumFractionDigits:dec,maximumFractionDigits:dec,useGrouping:b.dataset.g!=='0'})+(b.dataset.suf||'');}
+function scenes(now){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proofEl.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*24+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&rvS.getBoundingClientRect().top<innerHeight*.4){factsDone=true;facts.forEach(function(b){var to=+b.dataset.to,st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1500));b.textContent=fmtFact(b,to*k);if(k<1)requestAnimationFrame(tick);})(st);});}
+ var c=prog(cutS);
+ hill.setAttribute('opacity',seg(c,0,.08));
+ var bh=72*ease(seg(c,.03,.18));baseRect.setAttribute('y',362-bh);baseRect.setAttribute('height',bh);
+ frame.setAttribute('stroke-dashoffset',1-ease(seg(c,.1,.3)));
+ lv0.setAttribute('opacity',seg(c,.28,.4));
+ wood1.setAttribute('opacity',seg(c,.45,.55));lv1.setAttribute('opacity',seg(c,.5,.62));
+ roof.setAttribute('stroke-dashoffset',1-ease(seg(c,.6,.72)));
+ lv2.setAttribute('opacity',seg(c,.68,.78));
+ mazot.setAttribute('opacity',seg(c,.78,.86));
+ snowcap.setAttribute('opacity',seg(c,.86,.94));chim.setAttribute('opacity',seg(c,.84,.9));
+ smoke.setAttribute('opacity',seg(c,.9,.97)*(.55+.2*Math.sin(now/700)));smoke.setAttribute('transform','translate('+(Math.sin(now/900)*3)+','+(Math.sin(now/1300)*2)+')');
+ var stp=c<.28?0:c<.48?1:c<.7?2:3;live.forEach(function(li,i){li.classList.toggle('on',i===stp);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(20,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ gc.textContent='0'+Math.min(gN,1+Math.floor(g*gN))+' / 0'+gN;
+}
+function loop(now){if(lenis)lenis.raf(now);if(window.__drawSnow&&!RM)window.__drawSnow(now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+if(RM){facts.forEach(function(b){b.textContent=fmtFact(b,+b.dataset.to);});[lv0,lv1,lv2,wood1,mazot,snowcap,chim,hill].forEach(function(el){el.setAttribute('opacity',1);});frame.setAttribute('stroke-dashoffset',0);roof.setAttribute('stroke-dashoffset',0);baseRect.setAttribute('y',290);baseRect.setAttribute('height',72);live.forEach(function(li){li.classList.add('on');});}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+
+/* ---------- Composer son séjour ---------- */
+var SEA={
+ fevrier:{n:'Vacances d\'hiver',p:2500,w:1,win:1,d:[[2027,1,6],[2027,1,13],[2027,1,20],[2027,1,27]]},
+ noel:{n:'Noël',p:2500,w:1,win:1,d:[[2026,11,19]]},
+ nouvelan:{n:'Nouvel an',p:3000,w:1,win:1,d:[[2026,11,26]]},
+ janvier:{n:'Janvier',p:1400,w:1,win:1,d:[[2027,0,2],[2027,0,9],[2027,0,16],[2027,0,23]]},
+ ete:{n:'Été',p:1750,w:1,win:0,d:[[2027,6,3],[2027,6,10],[2027,6,17],[2027,6,24],[2027,6,31],[2027,7,7]]},
+ basse:{n:'Printemps ou automne',p:990,w:1,win:0,d:[[2027,3,10],[2027,4,8],[2027,5,5],[2027,8,11]]},
+ weekend:{n:'Week-end',p:600,w:0,win:1,d:[[2026,11,4],[2026,11,11],[2027,0,8],[2027,0,15]]}
+};
+var ON={menage:'ménage',chien:'chien',bebe:'équipement bébé',borne:'borne de recharge'};
+var BEDS={'5':[1,0,0,0,0,0,0,1,1,1],'8':[1,1,1,1,1,1,0,0,0,0],'10':[1,1,1,1,1,1,1,1,1,0],'11':[1,1,1,1,1,1,1,1,1,1]};
+var M=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+var f=$('est'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=$('prev'),nx=$('next'),chips=$('chips'),i=0,reached=0,cur=0;
+function val(n){var e=f.querySelector('[name="'+n+'"]:checked');return e?e.value:null;}
+function eur(n){return Math.round(n).toLocaleString('fr-FR')+' €';}
+function dLabel(a,wk){var s=new Date(a[0],a[1],a[2]),e=new Date(a[0],a[1],a[2]+(wk?7:2));return (wk?'Samedi ':'Vendredi ')+s.getDate()+(s.getMonth()!==e.getMonth()?' '+M[s.getMonth()]:'')+' au '+(wk?'samedi ':'dimanche ')+e.getDate()+' '+M[e.getMonth()]+' '+e.getFullYear();}
+function buildDates(){var se=SEA[val('season')],box=$('dates'),old=val('date'),h='';se.d.forEach(function(a,k){var v=a.join('-'),id='d'+k;h+='<div class="choice"><input type="radio" name="date" id="'+id+'" value="'+v+'"'+((old===v||(!old&&k===0))?' checked':'')+'><label for="'+id+'">'+dLabel(a,se.w)+'</label></div>';});box.innerHTML=h;if(!val('date'))box.querySelector('input').checked=true;$('dateHint').textContent=se.w?'Du samedi au samedi (à valider avec le propriétaire).':'Du vendredi 16 h au dimanche 18 h, hors vacances scolaires.';}
+function priceOf(){var se=SEA[val('season')],p=se.p,dt=val('date');if(val('season')==='weekend'&&dt&&dt.split('-')[1]==='0')p=700;var ex=0,o=[];f.querySelectorAll('[name=opt]:checked').forEach(function(x){ex+=+(x.dataset.p||0);o.push(x.value);});return{se:se,base:p,total:p+ex,opts:o,n:+val('n'),nights:se.w?7:2};}
+function tween(to){var a=cur,st=performance.now();cur=to;(function tk(n){var q=ease(Math.min(1,(n-st)/700));$('livePrice').textContent=eur(a+(to-a)*q);if(q<1)requestAnimationFrame(tk);})(st);}
+var flakesBuilt=false;
+function preview(d){
+ var w=d.se.win;
+ $('pvSky').setAttribute('fill',w?'#1f3047':'#8fb2cf');$('pvMount').setAttribute('fill',w?'#3b4d66':'#5f7a6a');
+ $('pvGround').setAttribute('fill',w?'#e6edf3':'#7c9a55');
+ ['pvCap','pvRoofSnow','pvMazSnow'].forEach(function(k){$(k).style.opacity=k==='pvCap'?1:(w?1:0);});
+ $('pvFlakes').style.opacity=w?1:0;$('pvLabel').setAttribute('fill',w?'#3b4d66':'#25331c');
+ var lit=Math.ceil(d.n/1.5);[].forEach.call($('pvWin').children,function(r,k){r.setAttribute('fill',(w||true)&&k<lit?'#F0C070':'#2a2f36');r.style.transition='fill .6s '+(k*.06)+'s';});
+ var pips=$('beds').querySelectorAll('i'),map=BEDS[String(d.n)];[].forEach.call(pips,function(p,k){p.classList.toggle('on',!!map[k]);});
+ $('pvLabel').textContent=d.se.n+', '+d.n+' personnes';
+}
+function update(){
+ var d=priceOf();
+ tween(d.total);
+ $('liveLab').textContent=d.se.w?'Votre semaine, tout compris':'Votre week-end, tout compris';
+ $('livePP').innerHTML='soit <b style="font-family:var(--t);font-size:1rem;display:inline;color:#fff">'+eur(d.total/d.n/d.nights)+'</b><br>par personne et par nuit';
+ var plat=d.total*1.12;$('cmpD').textContent=eur(d.total);$('cmpP').textContent='≈ '+eur(plat);$('barD').style.transform='scaleX('+(d.total/plat)+')';$('barP').style.transform='scaleX(1)';
+ preview(d);
+ var hs=[val('season'),d.n,d.opts.join('.')||'-',val('date')||'-'].join('~');try{history.replaceState(null,'','#sejour='+encodeURIComponent(hs));}catch(e){}
+ return d;
+}
+function recap(){var d=update(),dt=val('date').split('-').map(Number),L=[['Période',d.se.n],['Dates',dLabel(dt,d.se.w)],['Groupe',d.n+' personnes'],['Options',d.opts.length?d.opts.map(function(o){return ON[o];}).join(', '):'aucune'],['Total indicatif',eur(d.total)],['Par personne et par nuit',eur(d.total/d.n/d.nights)]];$('recap').innerHTML=L.map(function(r){return'<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');return{d:d,L:L};}
+function drawChips(){chips.innerHTML='';S.slice(0,5).forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached||i===5;b.onclick=function(){i=k;show();};li.appendChild(b);chips.appendChild(li);});}
+function show(){if(i===3)buildDates();S.forEach(function(el,k){el.hidden=k!==i;if(k===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0||i===5;nx.hidden=i>=4;nx.textContent=i===3?'Voir mon séjour':'Continuer';drawChips();if(i===4)recap();else update();}
+f.addEventListener('change',function(e){if(e.target.name==='season'){buildDates();}update();if(e.target.type==='radio'&&i<=3){var at=i;setTimeout(function(){if(i===at){i++;show();}},420);}});
+nx.onclick=function(){if(i<5){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};
+(function(){var fl=$('pvFlakes'),s='';for(var k=0;k<34;k++){var x=(k*53)%420,r=1+(k%3)*.6,dur=5+(k%5)*1.3,del=-(k*0.71)%dur;s+='<circle class="flk" cx="'+x+'" cy="0" r="'+r+'" style="animation-duration:'+dur+'s;animation-delay:'+del+'s;opacity:'+(.5+(k%4)*.12)+'"/>';}fl.innerHTML=s;})();
+buildDates();
+(function(){var m=location.hash.match(/sejour=([^&]+)/);if(!m)return;var p=decodeURIComponent(m[1]).split('~');function chk(n,v){var e=f.querySelector('[name="'+n+'"][value="'+v+'"]');if(e)e.checked=true;}chk('season',p[0]);chk('n',p[1]);(p[2]||'').split('.').forEach(function(o){var e=f.querySelector('[name=opt][value="'+o+'"]');if(e)e.checked=true;});buildDates();chk('date',p[3]);})();
+show();
+$('waBtn').addEventListener('click',function(){var r=recap(),nm=$('fn').value.trim(),txt='Bonjour Monsieur Dufournet, je souhaite réserver Le 1785 :\n'+r.L.map(function(x){return'- '+x[0]+' : '+x[1];}).join('\n')+(nm?'\n- Nom : '+nm:'')+'\n'+location.href;this.href='https://wa.me/33685917798?text='+encodeURIComponent(txt);setTimeout(function(){i=5;show();},300);});
+$('copyBtn').addEventListener('click',function(){var c=$('copied');(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié, à envoyer à votre groupe';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});
+
+/* ---------- Neige en direct (Open-Meteo, repli silencieux) ---------- */
+(function(){
+ var u='https://api.open-meteo.com/v1/forecast?latitude=45.86&longitude=6.42&current=temperature_2m&hourly=snow_depth&daily=snowfall_sum&timezone=Europe%2FParis&forecast_days=7';
+ var J=['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'];
+ function bars(vals,labels){var mxv=Math.max(4,Math.max.apply(null,vals)),h='';vals.forEach(function(v,k){h+='<div><em>'+Math.round(v)+'</em><i style="height:'+(Math.max(2,v/mxv*110))+'px"></i>'+labels[k]+'</div>';});$('days').innerHTML=h;setTimeout(function(){[].forEach.call($('days').querySelectorAll('i'),function(x,k){x.style.transitionDelay=(k*.07)+'s';x.style.transform='scaleY(1)';});},60);}
+ bars([0,0,0,0,0,0,0],J.slice(0,7));
+ var ctl=window.AbortController?new AbortController():null;setTimeout(function(){if(ctl)ctl.abort();},6000);
+ fetch(u,ctl?{signal:ctl.signal}:{}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
+  var t=d.current&&d.current.temperature_2m;if(typeof t==='number')$('mT').textContent=Math.round(t)+' °C';
+  var hrs=d.hourly.time,sd=d.hourly.snow_depth,now=d.current.time.slice(0,13),ix=0;for(var k=0;k<hrs.length;k++){if(hrs[k].slice(0,13)===now){ix=k;break;}}
+  var dep=sd[ix];if(typeof dep==='number')$('mD').textContent=Math.round(dep*100)+' cm';
+  var sf=d.daily.snowfall_sum.map(function(v){return v||0;}),tot=sf.reduce(function(a,b){return a+b;},0);$('mS').textContent=Math.round(tot)+' cm';
+  bars(sf,d.daily.time.map(function(s){var x=new Date(s+'T12:00:00');return J[x.getDay()];}));
+  $('src').textContent='Prévisions Open-Meteo pour le col de la Croix-Fry, mises à jour à '+new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})+'.';
+ }).catch(function(){});
+})();
+
+/* ---------- Lettre mensuelle (démonstration) ---------- */
+$('nlf').addEventListener('submit',function(e){e.preventDefault();$('nlok').hidden=false;});
+
+/* ---------- Langues ---------- */
+var L={en:{n1:'The chalet',n2:'Photos',n3:'Snow',cta1s:'Book direct',h1a:'A farmhouse from 1785',h1b:'facing La Tournette.',h1c:'This winter, it is yours.',lede:'Le 1785, a 200 m² chalet on two private hectares in Manigod, 9 km from La Clusaz. Sleeps eleven, sauna in the mazot, Gîtes de France 4 épis and rated 4.7 out of 5 by 18 guests.',cta1:'Plan my stay'},
+nl:{n1:'Het chalet',n2:"Foto's",n3:'Sneeuw',cta1s:'Direct boeken',h1a:'Een boerderij uit 1785',h1b:'tegenover de Tournette.',h1c:'Deze winter is ze van jullie.',lede:'Le 1785, een chalet van 200 m² op twee hectare eigen grond in Manigod, op 9 km van La Clusaz. Elf slaapplaatsen, sauna in de mazot, Gîtes de France 4 épis en 4,7 op 5 uit 18 beoordelingen.',cta1:'Mijn verblijf plannen'}},fr={};
+document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.textContent;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){if(L[l][e.dataset.i])e.textContent=L[l][e.dataset.i];});};});
+})();
+</script>
+</body>
+</html>

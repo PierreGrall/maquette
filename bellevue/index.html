@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hôtel Bellevue & L'Aprèski, Les Gets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0E1A2C;--pool:#1C2D47;--water:#B5262F;--foam:#F2B45A;--concrete:#EEF1F4;--ink:#141C27;--soft:#596473;--line:#CDD3DB;--white:#FAFBFC;--d:"Fraunces",Georgia,"Times New Roman",serif;--t:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--concrete);color:var(--ink);font-family:var(--t);font-size:1.03rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--foam);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--t);font-weight:700;font-size:.93rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--water);background:var(--water);color:#fff;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px);background:#971E26}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);font-weight:600;letter-spacing:-.015em;margin:0}
+h2{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.04;max-width:18ch}
+.lede{color:var(--soft);max-width:38rem}
+.kick{font-family:var(--t);font-weight:700;font-size:.82rem;letter-spacing:.02em;color:var(--water);margin:0 0 .8rem}
+/* Bandeau + en-tête */
+.proof{position:relative;z-index:40;background:#0A1220;color:#c9d3df;font-family:var(--d);font-size:.8rem}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:background .4s,color .4s,top .3s}
+header.site.solid{top:0;background:rgba(238,241,244,.88);backdrop-filter:blur(10px);color:var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
+.brand{font-family:var(--d);font-weight:600;font-size:1.3rem;text-decoration:none}
+/* Grall Studio */
+.studio{background:#DDE3EA;border-top:6px solid var(--water);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid #BAC3CE}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid #BAC3CE}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid #BAC3CE}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid #BAC3CE}.addons b{font-weight:600}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--white);border:1px solid #BAC3CE;border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:#e7f2f3;border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--water);font-weight:600}.offer.rec .tag{color:var(--foam)}
+.offer h3{font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+/* FAQ */
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--water),var(--water)) center/14px 2px no-repeat,linear-gradient(var(--water),var(--water)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+/* Barre mobile */
+.mbar{display:none}
+@media (max-width:900px){.offers{grid-template-columns:1fr}}
+@media (max-width:600px){.audit li{grid-template-columns:1fr;gap:.5rem}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(14,26,44,.92);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+}
+/* En-tête bulle */
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;letter-spacing:-.01em}.lmark{width:28px;height:28px;flex:none}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+header.site,header.site.solid{background:none!important;backdrop-filter:none!important;box-shadow:none!important}
+header.site .wrap{height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:rgba(14,26,44,.36);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);color:#fff;transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:rgba(250,251,252,.82);color:var(--ink);border-color:rgba(20,28,39,.1)}
+header.site .btn{padding:.6rem 1.1rem}
+#logoSlot{display:inline-flex;align-items:center;height:34px}#logoSlot img,#logoSlot svg{height:34px;width:auto}
+@media(max-width:600px){header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}#logoSlot,#logoSlot img,#logoSlot svg{height:28px}}
+#logoSlot{gap:.6rem}.bname{font-family:var(--d);font-weight:700;font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap}@media(max-width:600px){.bname{font-size:.95rem}}
+
+.faq{margin-top:0}.bname{font-weight:600;font-size:1.08rem}.offer h3,.studio h2{font-family:var(--d)}
+.hnav{display:flex;align-items:center;gap:1.3rem;font-size:.9rem;font-weight:600}
+.hnav a{text-decoration:none;opacity:.88}
+.lang button{font:inherit;font-size:.76rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+.lmark{width:30px;height:30px;flex:none}
+
+/* Ouverture : neige temps réel */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+#snow{position:absolute;inset:0;width:100%;height:100%}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:62%;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(8,14,26,.86),rgba(8,14,26,.5) 45%,rgba(8,14,26,0))}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-weight:600;font-size:clamp(2rem,5.6vw,5.6rem);line-height:1.02;letter-spacing:-.025em}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(108%);transition:transform 1.25s cubic-bezier(.16,1,.3,1)}
+.hero h1 .ln:nth-child(2) span{transition-delay:.1s}.hero h1 .ln:nth-child(3) span{transition-delay:.2s;color:var(--foam);font-style:italic;font-weight:500}
+.ready .hero h1 .ln span{transform:none}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .6s,transform 1s .6s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:#cdd8e6;margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.nowc{position:absolute;top:calc(34px + 5.5rem);right:max(1.25rem,calc((100vw - 1200px)/2));z-index:2;font-size:.8rem;color:#cdd8e6;text-align:right;opacity:0;transition:opacity 1s 1.2s}
+.ready .nowc{opacity:1}.nowc b{display:block;font-family:var(--d);font-size:1.5rem;color:#fff;font-weight:600;font-variant-numeric:tabular-nums}
+.lang{display:flex;white-space:nowrap}
+@media(max-width:600px){.hero-ctas{display:none}.bname{font-size:.84rem}.lang button{font-size:.7rem;padding:.1rem .25rem}.hnav{gap:.5rem}.hero-row p{font-size:.93rem}.hero-row{margin-top:1.2rem}}
+@media(max-width:600px){.hero h1{font-size:clamp(1.45rem,6.1vw,2.2rem)}.hero-inner{padding-bottom:7.5rem}.hero-ctas .ghost{display:none}.nowc{top:auto;bottom:auto;top:6.5rem}}
+
+/* Révélation photo */
+.reveal{height:220vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:var(--pool)}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,26,44,.72),rgba(14,26,44,0) 55%),linear-gradient(270deg,rgba(14,26,44,.62),rgba(14,26,44,0) 38%)}
+.reveal .cap{position:absolute;left:clamp(1.25rem,4vw,3rem);bottom:clamp(1.5rem,6vh,3.2rem);color:#fff;z-index:2;max-width:28rem}
+.reveal .cap b{display:block;font-family:var(--d);font-weight:600;font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.06;margin-bottom:.5rem}
+.reveal .cap span{font-size:.95rem;color:#dbe3ee}
+.facts{position:absolute;top:clamp(5.5rem,15vh,9rem);right:clamp(1.25rem,4vw,3rem);z-index:2;display:grid;gap:1.3rem;color:#fff;text-align:right}
+.facts b{display:block;font-family:var(--d);font-weight:600;font-size:clamp(2rem,3.6vw,3rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.82rem;color:#dbe3ee}
+
+/* Une journée */
+.day{height:420vh;position:relative;background:var(--ink);color:#e3e9f1}
+.day .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.day-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.day h2{color:#fff;margin-bottom:.8rem;font-size:clamp(1.8rem,3.4vw,3rem)}
+.day .lede{color:#9fadbf;margin:0 0 1.6rem}
+.day svg{width:100%;height:auto;display:block;border-radius:10px;background:#1B2A40}
+.dphoto{position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--pool);margin-bottom:1.2rem}
+.dphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 0 100% 0);transition:clip-path 1s cubic-bezier(.16,1,.3,1)}
+.dphoto img.on{clip-path:inset(0 0 0 0)}
+.dsteps{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.dsteps li{border-left:2px solid #2E3D52;padding:.1rem 0 .1rem .9rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.dsteps li.on{opacity:1;border-color:var(--foam)}
+.dsteps b{display:block;font-family:var(--d);font-weight:600;color:#fff;font-size:1.05rem}
+.dsteps span{font-size:.9rem;color:#a9b6c7;display:block}
+.dsteps li:not(.on) span{display:none}
+
+/* Galerie horizontale */
+.hgal{height:380vh;position:relative;background:var(--concrete)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1.25rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(58vw,680px);margin:0}
+.card .ph{height:min(50vh,460px);overflow:hidden;border-radius:6px;background:#C9D2DD}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-family:var(--d);font-weight:600;font-size:1.1rem}.card figcaption span{color:var(--soft);font-size:.9rem}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--d);font-weight:600;font-size:1.15rem;font-variant-numeric:tabular-nums}
+
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+
+/* Séjour : configurateur */
+.stay{background:var(--deep);color:#e3e9f1}
+.stay h2{color:#fff}.stay .lede{color:#a2b0c2}
+.cfg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--t);font-size:.8rem;font-weight:600;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:#9aa9bd;padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--foam);color:var(--deep);border-color:var(--foam)}
+.chips button.done{color:#fff;border-color:rgba(242,180,90,.5)}.chips button:disabled{cursor:default;opacity:.45}
+.qs fieldset{border:0;margin:0;padding:0}
+.qs legend{font-family:var(--d);font-weight:600;font-size:1.45rem;color:#fff;margin-bottom:.4rem;padding:0}
+.hint{font-size:.88rem;color:#8e9db2;margin:0 0 1rem}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.opts label{position:relative;display:block;cursor:pointer}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts .o{display:block;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.8rem .95rem;transition:border-color .25s,background .25s}
+.opts .o b{display:block;color:#fff;font-weight:600}.opts .o small{color:#93a2b6;font-size:.82rem}
+.opts input:checked+.o{border-color:var(--foam);background:rgba(242,180,90,.1)}
+.opts input:focus-visible+.o{outline:3px solid var(--foam);outline-offset:2px}
+.opts input:disabled+.o{opacity:.35;cursor:not-allowed}
+.step-anim{animation:sa .5s cubic-bezier(.16,1,.3,1)}@keyframes sa{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+.nav-row{display:flex;gap:.6rem;margin-top:1.3rem}
+.nav-row .ghost{color:#dbe3ee}
+.cal{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.9rem}
+.cal-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem}
+.cal-h b{font-family:var(--d);font-weight:600;font-size:1.15rem;color:#fff}
+.cal-h button{font:inherit;font-size:.85rem;background:none;border:1px solid rgba(255,255,255,.2);color:#dbe3ee;border-radius:999px;padding:.25rem .8rem;cursor:pointer}
+.cal-h button:disabled{opacity:.3;cursor:default}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}
+.cal-g .dn{font-size:.7rem;color:#7f8fa5;padding-bottom:.2rem}
+.cal-g button{font:inherit;font-size:.86rem;font-variant-numeric:tabular-nums;aspect-ratio:1.25;border:0;border-radius:6px;background:rgba(255,255,255,.05);color:#dbe3ee;cursor:pointer;position:relative}
+.cal-g button.hi{background:rgba(181,38,47,.32)}.cal-g button.lo{background:rgba(120,150,190,.16)}.cal-g button.en{background:rgba(242,180,90,.2)}
+.cal-g button.ev::after{content:"";position:absolute;left:50%;bottom:4px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#fff}
+.cal-g button.sel{background:var(--foam);color:var(--deep);font-weight:700}
+.cal-g button.inr{box-shadow:inset 0 0 0 1px var(--foam)}
+.cal-g button:disabled{background:none;color:#46546a;cursor:default}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.78rem;color:#93a2b6;margin-top:.7rem}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:.35rem;vertical-align:-1px}
+.preview{position:sticky;top:90px;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1rem;background:#13223A}
+.room{position:relative;aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:var(--pool);perspective:900px}
+.room img{position:absolute;inset:-6%;width:112%;height:112%;max-width:none;object-fit:cover;transition:opacity .6s;will-change:transform}
+.room .tag{position:absolute;left:.7rem;bottom:.7rem;background:rgba(14,26,44,.66);backdrop-filter:blur(8px);color:#fff;font-size:.8rem;font-weight:600;padding:.35rem .7rem;border-radius:999px}
+.room .tip{position:absolute;right:.7rem;top:.7rem;font-size:.72rem;color:#fff;background:rgba(14,26,44,.5);padding:.25rem .6rem;border-radius:999px}
+.pv-row{display:grid;grid-template-columns:150px 1fr;gap:1rem;align-items:center;margin-top:1rem}
+.pv-row svg{width:100%;height:auto;display:block}
+.pv-anim{transition:fill .6s,opacity .6s}
+.live{font-family:var(--t)}
+.live span{font-size:.8rem;color:#93a2b6;display:block}
+.live b{display:block;font-family:var(--d);font-weight:600;font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;font-variant-numeric:tabular-nums;line-height:1.1}
+.live small{font-size:.82rem;color:#a9b6c7;display:block}
+.vs{margin-top:1rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.8rem;display:grid;gap:.5rem;font-size:.86rem}
+.vs div{display:grid;grid-template-columns:7.5rem 1fr;gap:.8rem;align-items:start}
+.vs dt{color:#fff;font-weight:700}.vs dd{margin:0;color:#a9b6c7}
+.vs .bar{height:6px;border-radius:3px;background:rgba(255,255,255,.1);margin-top:.35rem;overflow:hidden}.vs .bar i{display:block;height:100%;background:var(--foam);transform-origin:left;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.vs .bar.pf i{background:#5E6E86}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-size:.92rem;display:grid;gap:.25rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#93a2b6}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.6rem}
+.copied{font-size:.84rem;color:var(--foam);align-self:center}
+@media(max-width:900px){.cfg{grid-template-columns:1fr}.preview{position:relative;top:0;order:-1}.opts{grid-template-columns:1fr}}
+@media(max-width:600px){.room{aspect-ratio:16/8}.vs{display:none}.preview{padding:.7rem}.pv-row{grid-template-columns:110px 1fr;margin-top:.7rem}.live b{font-size:1.7rem}.reveal .facts{top:5.5rem;bottom:auto;left:1.25rem;right:1.25rem;grid-template-columns:1fr 1fr;gap:1rem;text-align:left}.reveal .facts b{font-size:1.7rem}.count{white-space:nowrap}.hgal h2{font-size:1.9rem}}
+
+/* Neige en direct */
+.snowlive{background:var(--concrete)}
+.sl-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,5rem);align-items:center;margin-top:2.5rem}
+.stakes{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.stake{display:grid;grid-template-columns:54px 1fr;gap:1rem;align-items:end}
+.stake svg{width:54px;height:240px}
+.stake b{display:block;font-family:var(--d);font-weight:600;font-size:2.6rem;line-height:1;font-variant-numeric:tabular-nums}
+.stake span{font-size:.85rem;color:var(--soft)}
+.fc{border-top:1px solid var(--line)}
+.fc-bars{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem;align-items:end;height:150px;padding-top:1rem}
+.fc-bars div{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;gap:.3rem}
+.fc-bars i{display:block;width:100%;max-width:38px;border-radius:4px 4px 0 0;background:var(--pool);transform-origin:bottom;transform:scaleY(0);transition:transform 1s cubic-bezier(.16,1,.3,1);height:var(--h,4%)}
+.fc-bars.in i{transform:scaleY(1)}
+.fc-bars small{font-size:.75rem;color:var(--soft);font-variant-numeric:tabular-nums}
+.fc-days{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem;text-align:center;font-size:.78rem;font-weight:600;padding:.4rem 0;border-top:1px solid var(--line)}
+.sl-note{font-size:.85rem;color:var(--soft);margin:.8rem 0 0}
+.open-cd{margin-top:2rem;display:flex;gap:1rem;align-items:baseline;flex-wrap:wrap;border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem;background:var(--white)}
+.open-cd b{font-family:var(--d);font-weight:600;font-size:2.2rem;color:var(--water);font-variant-numeric:tabular-nums;line-height:1}
+@media(max-width:900px){.sl-grid{grid-template-columns:1fr}}
+
+/* Preuve */
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.score{font-family:var(--d);font-weight:600;font-size:4.6rem;line-height:.95}.score small{display:block;font-family:var(--t);font-size:.85rem;font-weight:500;color:var(--soft);margin-top:.4rem;max-width:15rem}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 60s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,370px);background:var(--white);border-top:3px solid var(--water);padding:1.3rem 1.4rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-family:var(--d);font-weight:500;font-size:1.08rem;line-height:1.45}.rcard figcaption{font-size:.8rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.bigtel{font-family:var(--d);font-weight:600;font-size:clamp(2.2rem,5vw,3.8rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;white-space:nowrap}
+@media(max-width:900px){.rx-head,.contact{grid-template-columns:1fr;gap:1.5rem}}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-size:.86rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:flex;flex-direction:column;gap:.4rem}.nl-form label{font-weight:600;color:var(--ink)}
+.nl-form div{display:flex;gap:.4rem}.nl-form input{font:inherit;padding:.6rem .9rem;border:1px solid var(--line);border-radius:999px;background:var(--white);min-width:0;width:15rem}
+.nl-form .btn{padding:.6rem 1rem}
+@media(max-width:600px){.nl-form input{width:100%}.nl-form div{width:100%}}
+
+@media(max-width:900px){
+ .hnav a.nl{display:none}
+ .day-grid{grid-template-columns:1fr;gap:1rem}.day .lede{display:none}.day h2{font-size:1.6rem}
+ .dphoto{display:none}.day{height:360vh}
+ .card{width:80vw}.facts{top:auto;bottom:9rem}
+ .stakes{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .hnav .btn{display:none}.stake svg{height:170px}.stake b{font-size:2rem}.score{font-size:3.4rem}
+ .dsteps li:not(.on){display:none}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.day,.hgal{height:auto}.reveal .stick,.day .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1.25rem}.rise,.hero-row,.nowc,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .mq-track{animation:none;flex-wrap:wrap;width:auto}.dphoto img{transition:none}.fc-bars i{transition:none}
+ .dsteps li span{display:block}
+}
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour l'Hôtel Bellevue & L'Aprèski par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Hôtel Bellevue & L'Aprèski, accueil"><span id="logoSlot"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 25 12 12l4 5 4-6 9 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 25v-6l5-4 5 4v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="24" cy="7" r="2.4" fill="currentColor"/></svg><span class="bname">Hôtel Bellevue & L'Aprèski</span></span></a>
+ <nav class="hnav" aria-label="Navigation">
+  <a class="nl" href="#journee" data-i="n1">Une journée</a><a class="nl" href="#chambres" data-i="n2">Chambres</a><a class="nl" href="#neige" data-i="n3">Neige</a>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button><button type="button" aria-pressed="false" data-l="nl">NL</button></div>
+  <a class="btn" href="#sejour" data-i="cta1s">Mon séjour</a>
+ </nav>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="snow" aria-hidden="true"></canvas>
+ <p class="nowc" id="nowc" aria-live="polite"><span data-i="nowl">Les Gets, 1 172 m, en ce moment</span><b id="nowv">Neige et soleil</b></p>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">80 hivers</span></span><span class="ln"><span data-i="h1b">au pied des pistes des Gets.</span></span><span class="ln"><span data-i="h1c">Le prochain est le vôtre.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Hôtel trois étoiles de quinze chambres, bar d'après-ski et restaurant sur le front de neige, tenus par la famille Mugnier. Les skis se chaussent devant la porte, le déjeuner se prend au soleil, et les concerts commencent quand les pistes ferment.</p>
+   <div class="hero-ctas"><a class="btn" href="#sejour" data-i="cta1">Calculer mon séjour</a><a class="btn ghost" href="#neige" data-i="cta2">La neige ce matin</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="reveal" id="hotel" aria-label="L'hôtel">
+ <div class="stick">
+  <figure id="rv"><img src="https://www.bellevue-lesgets.com/wp-content/uploads/2018/11/Bellevue_29.jpg" alt="Le chalet de l'Hôtel Bellevue sous la neige, sur le front de neige des Gets" onerror="this.style.visibility='hidden'"><div class="shade"></div></figure>
+  <div class="facts" id="facts">
+   <div><b data-to="80" data-pre="+ de ">0</b><span>ans aux Gets</span></div>
+   <div><b data-to="15">0</b><span>chambres, petit-déjeuner compris</span></div>
+   <div><b data-to="1172" data-suf=" m">0</b><span>d'altitude, Portes du Soleil</span></div>
+   <div><b data-to="68" data-suf=" km">0</b><span>de l'aéroport de Genève</span></div>
+  </div>
+  <div class="cap"><b>Le chalet que tout le village connaît.</b><span>Sur la route du Front de Neige, à côté du rendez-vous de l'école de ski et des remontées.</span></div>
+ </div>
+</section>
+
+<section class="day" id="journee" aria-label="Une journée au Bellevue">
+ <div class="stick"><div class="wrap day-grid">
+  <div>
+   <p class="kick" style="color:var(--foam)">De 7 h 30 à la nuit</p>
+   <h2>Une journée entière sans reprendre la voiture.</h2>
+   <p class="lede">Petit-déjeuner, pistes, terrasse, après-ski, détente et dîner : tout tient dans le même chalet.</p>
+   <svg id="dsv" viewBox="0 0 640 380" role="img" aria-label="La journée au Bellevue, du matin à la nuit">
+    <defs><linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FA6CF"/><stop offset="1" stop-color="#DCE7F2"/></linearGradient><linearGradient id="skyN" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A1424"/><stop offset="1" stop-color="#2A3552"/></linearGradient></defs>
+    <rect width="640" height="380" fill="url(#skyD)"/>
+    <rect id="dNight" width="640" height="380" fill="url(#skyN)" opacity=".6"/>
+    <g id="dStars" opacity="0" fill="#fff"><circle cx="60" cy="40" r="1.3"/><circle cx="140" cy="70" r="1"/><circle cx="210" cy="30" r="1.4"/><circle cx="330" cy="55" r="1"/><circle cx="420" cy="28" r="1.3"/><circle cx="510" cy="62" r="1"/><circle cx="590" cy="35" r="1.4"/><circle cx="270" cy="90" r=".9"/></g>
+    <circle id="dSun" cx="80" cy="300" r="16" fill="#F7D27A"/>
+    <circle id="dMoon" cx="540" cy="70" r="12" fill="#EEF1F4" opacity="0"/>
+    <path id="dMts" d="M0 250 L70 190 L120 215 L190 120 L250 175 L300 150 L380 70 L450 160 L500 130 L560 185 L640 150 L640 380 L0 380Z" fill="#EEF2F7" fill-opacity="0" stroke="#fff" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+    <g id="dPiste" opacity="0" fill="none" stroke="#B5262F" stroke-width="2" stroke-dasharray="6 6"><path d="M380 74 Q360 160 300 230 T250 300"/><path d="M500 134 Q470 210 420 260 T360 310"/></g>
+    <g id="dLift" opacity="0" stroke="#1C2D47" stroke-width="1.5"><path d="M455 300 L520 140" fill="none"/><rect x="470" y="255" width="7" height="6" fill="#1C2D47"/><rect x="492" y="200" width="7" height="6" fill="#1C2D47"/></g>
+    <g id="dChalet">
+     <g id="dFirs" fill="#2F4A3E" opacity="0"></g>
+     <rect id="dBody" x="110" y="262" width="170" height="88" fill="#5A3E2B" style="transform-box:fill-box;transform-origin:bottom;transform:scaleY(0)"/>
+     <path id="dRoof" d="M96 266 L195 214 L294 266" fill="none" stroke="#6B4A33" stroke-width="10" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+     <path id="dSnowRoof" d="M100 262 L195 212 L290 262" fill="none" stroke="#fff" stroke-width="4" opacity="0"/><g id="dBal" opacity="0" fill="#3E2A1D"><rect x="116" y="294" width="158" height="4"/><rect x="116" y="324" width="158" height="4"/></g>
+     <g id="dWin" fill="#F2B45A" opacity="0"><rect x="128" y="276" width="18" height="16"/><rect x="160" y="276" width="18" height="16"/><rect x="212" y="276" width="18" height="16"/><rect x="244" y="276" width="18" height="16"/><rect x="128" y="306" width="18" height="16"/><rect x="244" y="306" width="18" height="16"/><rect x="183" y="306" width="24" height="44"/></g>
+    </g>
+    <g id="dTerr" opacity="0"><rect x="282" y="336" width="90" height="5" fill="#8A6A4A"/><path d="M300 336v-26M330 336v-26M360 336v-26" stroke="#5E6E86" stroke-width="2"/><path d="M288 312 Q300 300 312 312Z M318 312 Q330 300 342 312Z M348 312 Q360 300 372 312Z" fill="#B5262F"/></g>
+    <g id="dMusic" opacity="0" fill="none" stroke="#F2B45A" stroke-width="2.4" stroke-linecap="round"><path d="M300 290 q14 -14 0 -28"/><path d="M312 296 q24 -24 0 -48"/><path d="M324 302 q34 -34 0 -68"/></g>
+    <g id="dSteam" opacity="0" fill="none" stroke="#EEF1F4" stroke-width="2" stroke-linecap="round"><path d="M140 206 q-8 -12 0 -22 q8 -10 0 -22"/><path d="M156 210 q-8 -12 0 -22 q8 -10 0 -22"/></g>
+    <rect y="350" width="640" height="30" fill="#F4F6F8"/>
+    <g font-family="Manrope,system-ui,sans-serif" font-size="11" fill="#596473"><text x="20" y="370">7 h</text><text x="300" y="370">midi</text><text x="590" y="370">22 h</text></g>
+    <rect x="20" y="354" width="600" height="3" fill="#CDD3DB"/><rect id="dTime" x="20" y="354" width="600" height="3" fill="#B5262F" style="transform-box:fill-box;transform-origin:left;transform:scaleX(0)"/>
+   </svg>
+  </div>
+  <div>
+   <div class="dphoto" id="dphoto">
+    <img decoding="async" class="on" src="https://www.bellevue-lesgets.com/wp-content/uploads/2022/07/2C2A0080.jpg" alt="Panières du petit-déjeuner" onerror="this.style.visibility='hidden'">
+    <img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2019/04/Bellevue_25.jpg" alt="Skieurs sur le front de neige devant l'hôtel" onerror="this.style.visibility='hidden'">
+    <img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2019/04/Bellevue_20.jpg" alt="La terrasse plein sud" onerror="this.style.visibility='hidden'">
+    <img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2018/11/Apreski_5.jpg" alt="L'Aprèski à la tombée de la nuit" onerror="this.style.visibility='hidden'">
+    <img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2019/08/Bellevue_3.jpg" alt="Le jacuzzi de l'espace détente" onerror="this.style.visibility='hidden'">
+    <img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2018/11/Restaurant_1.jpg" alt="La salle du restaurant" onerror="this.style.visibility='hidden'">
+    <img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2019/08/Bellevue_21.jpg" alt="Une chambre Luxe" onerror="this.style.visibility='hidden'">
+   </div>
+   <ol class="dsteps" id="dsteps">
+    <li class="on"><b>7 h 30, le petit-déjeuner</b><span>Servi jusqu'à 10 h en salle, avec la première vue sur les pistes.</span></li>
+    <li><b>Skis aux pieds</b><span>L'école de ski et les remontées sont à quelques pas de la porte.</span></li>
+    <li><b>Midi, la terrasse plein sud</b><span>Jusqu'à 14 h 30 au soleil : spécialités locales et saveurs du monde.</span></li>
+    <li><b>Fin de journée, L'Aprèski</b><span>Vin chaud, bières, cocktails et concerts en live, au pied des pistes.</span></li>
+    <li><b>Jacuzzi, hammam, sauna</b><span>L'espace détente de l'hôtel, pour les jambes du lendemain.</span></li>
+    <li><b>19 h, le dîner</b><span>Jusqu'à 21 h : classiques de bistrot revisités, fondue et raclette.</span></li>
+    <li><b>La nuit, le calme</b><span>Le front de neige s'endort, la chambre donne sur la montagne.</span></li>
+   </ol>
+  </div>
+ </div></div>
+</section>
+
+<section class="hgal" id="chambres" aria-label="Chambres et lieux">
+ <div class="stick">
+  <div class="wrap head"><div><p class="kick">Quinze chambres, un chalet</p><h2>Balcon ou terrasse, toujours face à la montagne.</h2></div><span class="count" id="gcount">01 / 08</span></div>
+  <div class="track" id="track">
+   <figure class="card"><div class="ph"><img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2019/08/Bellevue_10.jpg" alt="Chambre Luxe, tête de lit rouge" onerror="this.style.visibility='hidden'"></div><figcaption><b>Chambre Luxe</b><span>Premier étage, balcon ou terrasse</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2018/11/Chambres_3.jpg" alt="Chambre Montagne en bois" onerror="this.style.visibility='hidden'"></div><figcaption><b>Chambre Montagne</b><span>Deuxième étage, 17 à 23 m²</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2019/08/Bellevue_15.jpg" alt="Terrasse privée face aux pistes" onerror="this.style.visibility='hidden'"></div><figcaption><b>Terrasse privée</b><span>Suite deux pièces, 33 m²</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2019/08/Bellevue_18.jpg" alt="Coin lits superposés pour les enfants" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le coin des enfants</b><span>Lits superposés, jusqu'à cinq</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2019/08/Bellevue_3.jpg" alt="Jacuzzi sous la charpente" onerror="this.style.visibility='hidden'"></div><figcaption><b>Espace détente</b><span>Jacuzzi, hammam, sauna</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2018/11/Salon_4.jpg" alt="Salon avec cheminée et fauteuils rouges" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le salon</b><span>Au coin du feu</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2018/11/Restaurant_5.jpg" alt="Salle du restaurant" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le restaurant</b><span>Dîner de 19 h à 21 h</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" decoding="async" src="https://www.bellevue-lesgets.com/wp-content/uploads/2018/11/Apreski_7.jpg" alt="Le bar de L'Aprèski en pleine soirée" onerror="this.style.visibility='hidden'"></div><figcaption><b>L'Aprèski</b><span>Concerts en fin de journée</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="pad stay" id="sejour">
+ <div class="wrap">
+  <p class="kick" style="color:var(--foam)">Réservation directe</p>
+  <h2 class="rise">Votre semaine aux Gets, chiffrée en une minute.</h2>
+  <p class="lede rise" style="margin-top:1rem">Choisissez la date, la chambre et le nombre de skieurs : le prix se calcule à chaque choix, petit-déjeuner compris, au tarif de l'hôtel et sans commission.</p>
+  <div class="cfg">
+   <form id="cfgf" class="qs" onsubmit="return false">
+    <ol class="chips" id="chips" aria-label="Étapes"></ol>
+    <div data-s data-n="Arrivée">
+     <fieldset><legend>Quel jour arrivez-vous ?</legend><p class="hint">Hiver 2026-2027. Les couleurs indiquent la saison tarifaire.</p>
+      <div class="cal"><div class="cal-h"><button type="button" id="calP">Mois précédent</button><b id="calM">Janvier 2027</b><button type="button" id="calN">Mois suivant</button></div><div class="cal-g" id="calG"></div></div>
+      <div class="legend"><span><i style="background:rgba(181,38,47,.6)"></i>Vacances, haute saison</span><span><i style="background:rgba(120,150,190,.4)"></i>Basse saison</span><span><i style="background:rgba(242,180,90,.5)"></i>Fin de saison</span><span><i style="background:#fff;border-radius:50%;width:6px;height:6px"></i>Offre ou événement</span></div>
+     </fieldset>
+    </div>
+    <div data-s data-n="Durée" hidden>
+     <fieldset><legend>Combien de nuits ?</legend><p class="hint" id="nHint">Une semaine du samedi au samedi est la formule la plus demandée.</p>
+      <div class="opts">
+       <label><input type="radio" name="n" value="3"><span class="o"><b>3 nuits</b><small>Un long week-end</small></span></label>
+       <label><input type="radio" name="n" value="4"><span class="o"><b>4 nuits</b><small>Milieu de semaine</small></span></label>
+       <label><input type="radio" name="n" value="5"><span class="o"><b>5 nuits</b><small>Forfait 6 jours possible</small></span></label>
+       <label><input type="radio" name="n" value="7" checked><span class="o"><b>7 nuits</b><small>La semaine complète</small></span></label>
+       <label><input type="radio" name="n" value="8"><span class="o"><b>8 nuits</b><small>Huitième nuit offerte en début de saison</small></span></label>
+       <label><input type="radio" name="n" value="10"><span class="o"><b>10 nuits</b><small>Les grandes vacances d'hiver</small></span></label>
+      </div>
+     </fieldset>
+    </div>
+    <div data-s data-n="Chambre" hidden>
+     <fieldset><legend>Quelle chambre ?</legend><p class="hint">Toutes ont un balcon ou une terrasse, une salle de bains et le wifi.</p>
+      <div class="opts">
+       <label><input type="radio" name="room" value="montagne"><span class="o"><b>Montagne</b><small>Deuxième étage, décor bois, balcon, 17 à 23 m², jusqu'à 4</small></span></label>
+       <label><input type="radio" name="room" value="luxe" checked><span class="o"><b>Luxe</b><small>Premier étage, style moderne, balcon ou terrasse, jusqu'à 5</small></span></label>
+      </div>
+     </fieldset>
+    </div>
+    <div data-s data-n="Voyageurs" hidden>
+     <fieldset><legend>Combien serez-vous ?</legend><p class="hint" id="pHint">À cinq, nous vous proposons la suite deux pièces de 33 m² avec grande terrasse.</p>
+      <div class="opts">
+       <label><input type="radio" name="p" value="2"><span class="o"><b>1 ou 2</b><small>En couple ou entre amis</small></span></label>
+       <label><input type="radio" name="p" value="3"><span class="o"><b>3</b><small>Un enfant ou un ami</small></span></label>
+       <label><input type="radio" name="p" value="4" checked><span class="o"><b>4</b><small>La famille au complet</small></span></label>
+       <label><input type="radio" name="p" value="5"><span class="o"><b>5</b><small>Suite deux pièces, Luxe uniquement</small></span></label>
+      </div>
+     </fieldset>
+    </div>
+    <div data-s data-n="Envies" hidden>
+     <fieldset><legend>Que pouvons-nous préparer ?</legend><p class="hint">Facultatif : nous le notons avec votre demande.</p>
+      <div class="opts">
+       <label><input type="checkbox" name="o" value="ski"><span class="o"><b>Location de ski</b><small>-30 % chez un magasin partenaire</small></span></label>
+       <label><input type="checkbox" name="o" value="table"><span class="o"><b>Table le premier soir</b><small>Au restaurant, de 19 h à 21 h</small></span></label>
+       <label><input type="checkbox" name="o" value="spa"><span class="o"><b>Espace détente</b><small>Jacuzzi, hammam et sauna</small></span></label>
+       <label><input type="checkbox" name="o" value="cours"><span class="o"><b>Cours de ski</b><small>Le point de rendez-vous est à côté</small></span></label>
+      </div>
+     </fieldset>
+    </div>
+    <div data-s data-n="Envoi" hidden>
+     <fieldset><legend>Votre séjour</legend><p class="hint">Vérifiez, puis envoyez la demande à l'équipe du Bellevue.</p>
+      <ul class="recap" id="recap"></ul>
+      <div class="send-row"><a class="btn" id="mailBtn" href="mailto:info@bellevue-lesgets.com">Envoyer ma demande</a><button type="button" class="btn ghost" id="copyBtn" style="color:#dbe3ee">Copier le lien du séjour</button><span class="copied" id="copied" hidden></span></div>
+      <p class="hint" style="margin-top:1rem">Tarifs de la grille 2025-2026, à confirmer pour cet hiver. Taxe de séjour : 1,50 € par nuit et par personne de plus de 16 ans.</p>
+     </fieldset>
+    </div>
+    <div class="nav-row"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn" id="next">Continuer</button></div>
+   </form>
+   <div class="preview" aria-live="polite">
+    <div class="room" id="room"><img loading="lazy" decoding="async" id="roomImg" src="https://www.bellevue-lesgets.com/wp-content/uploads/2019/08/Bellevue_10.jpg" alt="Aperçu de la chambre choisie" onerror="this.style.visibility='hidden'"><span class="tip">Bougez le pointeur pour entrer</span><span class="tag" id="roomTag">Luxe, premier étage</span></div>
+    <div class="pv-row">
+     <svg viewBox="0 0 150 142" aria-hidden="true">
+      <path id="pvRoof" class="pv-anim" d="M4 46 L75 8 L146 46 Z" fill="#F4F6F8"/>
+      <rect x="18" y="44" width="114" height="80" fill="#2A3B52"/>
+      <g id="pvF2"><rect class="pv-anim w2" x="28" y="52" width="16" height="14" fill="#3B4C64"/><rect class="pv-anim w2" x="52" y="52" width="16" height="14" fill="#3B4C64"/><rect class="pv-anim w2" x="82" y="52" width="16" height="14" fill="#3B4C64"/><rect class="pv-anim w2" x="106" y="52" width="16" height="14" fill="#3B4C64"/><rect x="24" y="66" width="102" height="3" fill="#8A6A4A"/></g>
+      <g id="pvF1"><rect class="pv-anim w1" x="28" y="76" width="16" height="14" fill="#3B4C64"/><rect class="pv-anim w1" x="52" y="76" width="16" height="14" fill="#3B4C64"/><rect class="pv-anim w1 ws" x="82" y="76" width="40" height="14" fill="#3B4C64"/><rect x="20" y="90" width="110" height="3" fill="#8A6A4A"/></g>
+      <rect x="28" y="100" width="94" height="24" fill="#1C2D47"/><text x="75" y="116" text-anchor="middle" font-family="Manrope,sans-serif" font-size="8" font-weight="700" fill="#F2B45A">L'Aprèski</text>
+      <g id="pvPeople" fill="#F2B45A"></g>
+     </svg>
+     <div class="live"><span id="liveDates">Du 9 au 16 janvier 2027</span><b id="livePrice">0 €</b><small id="liveSub">7 nuits, petit-déjeuner compris</small></div>
+    </div>
+    <dl class="vs">
+     <div><dt>Réservé ici</dt><dd><span id="vsHere">Tarif de l'hôtel, meilleur prix garanti, -30 % sur la location de ski.</span><div class="bar"><i id="barHere"></i></div></dd></div>
+     <div><dt>Via une plateforme</dt><dd>Même chambre, sans les avantages directs. Écart de prix constaté : à valider avec vous.<div class="bar pf"><i id="barPf"></i></div></dd></div>
+    </dl>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="pad snowlive" id="neige">
+ <div class="wrap">
+  <p class="kick">En direct des Gets</p>
+  <h2 class="rise">La neige, vue depuis la porte de l'hôtel.</h2>
+  <p class="lede rise" style="margin-top:1rem">La première question avant de réserver, réglée sans quitter la page : hauteur de neige au village et sur les crêtes, chutes prévues sur sept jours.</p>
+  <div class="sl-grid">
+   <div class="stakes">
+    <div class="stake"><svg viewBox="0 0 54 240" aria-hidden="true"><rect x="22" y="0" width="10" height="240" fill="#E9EDF2" stroke="#CDD3DB"/><g fill="#B5262F"><rect x="22" y="20" width="10" height="20"/><rect x="22" y="60" width="10" height="20"/><rect x="22" y="100" width="10" height="20"/><rect x="22" y="140" width="10" height="20"/><rect x="22" y="180" width="10" height="20"/></g><rect id="stk1" x="0" y="0" width="54" height="240" fill="#D3DEEB" style="transform-box:fill-box;transform-origin:bottom;transform:scaleY(.02);transition:transform 1.4s cubic-bezier(.16,1,.3,1)"/></svg><div><b id="sd1">…</b><span>de neige au village, 1 172 m</span></div></div>
+    <div class="stake"><svg viewBox="0 0 54 240" aria-hidden="true"><rect x="22" y="0" width="10" height="240" fill="#E9EDF2" stroke="#CDD3DB"/><g fill="#B5262F"><rect x="22" y="20" width="10" height="20"/><rect x="22" y="60" width="10" height="20"/><rect x="22" y="100" width="10" height="20"/><rect x="22" y="140" width="10" height="20"/><rect x="22" y="180" width="10" height="20"/></g><rect id="stk2" x="0" y="0" width="54" height="240" fill="#D3DEEB" style="transform-box:fill-box;transform-origin:bottom;transform:scaleY(.02);transition:transform 1.4s cubic-bezier(.16,1,.3,1)"/></svg><div><b id="sd2">…</b><span>sur les crêtes, 1 800 m</span></div></div>
+   </div>
+   <div class="fc">
+    <div class="fc-bars" id="fcBars"></div>
+    <div class="fc-days" id="fcDays"></div>
+    <p class="sl-note" id="fcNote">Chutes de neige prévues sur sept jours, en centimètres. Données Open-Meteo, mises à jour chaque heure.</p>
+    <div class="open-cd"><b id="cdDays">15</b><span id="cdTxt">jours avant l'ouverture de l'hiver à l'hôtel (date à valider avec vous). Les vacances de Noël et de février partent en premier : quinze chambres, pas une de plus.</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="pad" id="avis"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise"><div class="score">80 ans<small>de familles, d'habitués et de skieurs de passage. Votre note Google s'affiche ici en direct dans le site final.</small></div><h2>Ce que disent ceux qui reviennent chaque hiver.</h2></div>
+  <div class="marquee" aria-label="Avis clients"><div class="mq-track">
+   <figure class="rcard"><blockquote>Arrivés sans réservation, nous sommes tombés sur le meilleur emplacement du village : réveil face à la montagne, et un calme total la nuit.</blockquote><figcaption>Séjour à l'hôtel</figcaption></figure>
+   <figure class="rcard"><blockquote>Un hôtel plein de charme au cœur des Gets : une équipe attentionnée, des conseils pour chaque activité et des lits très confortables.</blockquote><figcaption>Séjour à l'hôtel</figcaption></figure>
+   <figure class="rcard"><blockquote>Une chambre chaleureuse avec un coin lits superposés pour notre fils, juste à côté du rendez-vous de l'école de ski.</blockquote><figcaption>En famille</figcaption></figure>
+   <figure class="rcard"><blockquote>Les propriétaires tiennent vraiment à vos vacances. Et l'après-ski s'arrête assez tôt pour ne jamais gêner.</blockquote><figcaption>Séjour au pied des pistes</figcaption></figure>
+   <figure class="rcard"><blockquote>Le meilleur endroit trouvé pour une bière après le ski : service rapide au bar, musique juste assez forte.</blockquote><figcaption>L'Aprèski</figcaption></figure>
+   <figure class="rcard"><blockquote>Revenus dîner une deuxième fois dans la semaine, tant la première nous avait plu. Fondue et raclette à recommander.</blockquote><figcaption>Restaurant</figcaption></figure>
+   <figure class="rcard"><blockquote>Notre adresse de famille aux Gets : une équipe efficace et une carte pour tous les goûts et tous les régimes.</blockquote><figcaption>En famille</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Arrivés sans réservation, nous sommes tombés sur le meilleur emplacement du village : réveil face à la montagne, et un calme total la nuit.</blockquote><figcaption>Séjour à l'hôtel</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Un hôtel plein de charme au cœur des Gets : une équipe attentionnée, des conseils pour chaque activité et des lits très confortables.</blockquote><figcaption>Séjour à l'hôtel</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Une chambre chaleureuse avec un coin lits superposés pour notre fils, juste à côté du rendez-vous de l'école de ski.</blockquote><figcaption>En famille</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Les propriétaires tiennent vraiment à vos vacances. Et l'après-ski s'arrête assez tôt pour ne jamais gêner.</blockquote><figcaption>Séjour au pied des pistes</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Le meilleur endroit trouvé pour une bière après le ski : service rapide au bar, musique juste assez forte.</blockquote><figcaption>L'Aprèski</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Revenus dîner une deuxième fois dans la semaine, tant la première nous avait plu. Fondue et raclette à recommander.</blockquote><figcaption>Restaurant</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Notre adresse de famille aux Gets : une équipe efficace et une carte pour tous les goûts et tous les régimes.</blockquote><figcaption>En famille</figcaption></figure>
+  </div></div>
+  <p class="note-rv">Extraits reformulés de vos avis Google pour la maquette. Dans le site final, vos avis s'affichent en version originale et se mettent à jour automatiquement.</p>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Les questions qu'on nous pose avant de réserver.</h2>
+  <div class="faq-list">
+   <details><summary>Reste-t-il de la place pour Noël et les vacances de février ?</summary><p>L'hôtel compte quinze chambres, et les semaines de vacances scolaires partent en premier. Le calculateur plus haut vous donne le prix de votre semaine ; envoyez la demande, nous vous répondons avec les disponibilités.</p></details>
+   <details><summary>L'hôtel est-il vraiment au pied des pistes ?</summary><p>Oui, sur la route du Front de Neige, à côté du point de rendez-vous de l'école de ski et des remontées. On sort skis aux pieds.</p></details>
+   <details><summary>L'après-ski est-il bruyant le soir ?</summary><p>Les concerts ont lieu en fin de journée, et le front de neige retrouve son calme ensuite. Nos clients le soulignent souvent dans leurs avis. Les chambres sont aux étages, au-dessus du bar.</p></details>
+   <details><summary>Le petit-déjeuner est-il compris ?</summary><p>Oui, tous nos tarifs incluent le petit-déjeuner, servi de 7 h 30 à 10 h en salle.</p></details>
+   <details><summary>Peut-on venir à quatre ou cinq ?</summary><p>Les chambres Montagne accueillent jusqu'à quatre personnes, les chambres Luxe jusqu'à cinq. La suite deux pièces de 33 m² dispose d'une grande terrasse sur les pistes.</p></details>
+   <details><summary>À quelle heure arriver et repartir ?</summary><p>Arrivée jusqu'à 22 h, départ avant 10 h 30. Le dernier jour, le bar et la terrasse restent ouverts pour profiter des pistes.</p></details>
+   <details><summary>Comment venir aux Gets ?</summary><p>L'aéroport de Genève est à 68 km. En train, descendez à Cluses (26 km) ou à Thonon (40 km).</p></details>
+   <details><summary>Les animaux sont-ils acceptés ?</summary><p>Pas en principe, mais nous étudions chaque demande : écrivez-nous avant de réserver.</p></details>
+   <details><summary>Quelle est la taxe de séjour ?</summary><p>1,50 € par nuit et par personne de plus de 16 ans, en plus du prix de la chambre.</p></details>
+  </div>
+ </div>
+ <div class="contact" style="margin-top:5rem">
+  <div><h2>Une question sur votre semaine ?</h2><a class="bigtel" href="tel:+33450758095">04 50 75 80 95</a><p style="margin:0;color:var(--soft)">125 route du Front de Neige, 74260 Les Gets<br><a href="mailto:info@bellevue-lesgets.com">info@bellevue-lesgets.com</a></p></div>
+  <div><p style="color:var(--soft);margin-top:0">Ouvert tous les jours pendant les saisons d'hiver et d'été. Au cœur des Portes du Soleil, entre le lac Léman et le Mont-Blanc.</p><a class="btn" href="#sejour">Calculer mon séjour</a></div>
+ </div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap"><span>BELGETS, Hôtel Bellevue & L'Aprèski Bar Resto, hôtel trois étoiles aux Gets</span>
+ <form class="nl-form" id="nlf" onsubmit="return false"><label for="nlm">Recevoir nos nouvelles et conseils de saison chaque mois</label><div><input id="nlm" type="email" placeholder="Votre email" autocomplete="email"><button class="btn" type="submit">Recevoir</button></div><span id="nlok" hidden>Merci, c'est noté. Démonstration : aucun envoi réel.</span></form>
+</div></footer>
+
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Monsieur Mugnier, voici ce que nous avons relevé sur bellevue-lesgets.com, et ce que la nouvelle version apporte.</p>
+ <ul class="audit">
+  <li><div class="now"><b>Aujourd'hui</b>Pour connaître le prix d'une semaine, le visiteur doit lire quatre tableaux de tarifs et additionner lui-même les nuits, avant d'être renvoyé vers un moteur de réservation externe.</div><div><b>Avec la refonte</b>Un calendrier coloré par saison et un prix qui se calcule à chaque choix : la demande arrive chez vous, sans commission.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>À trois semaines de l'ouverture, la page Tarifs affiche encore l'hiver 2025-2026, l'offre de début de saison date de 2021, et le Ski Festival est annoncé deux fois avec des dates différentes.</div><div><b>Avec la refonte</b>Des tarifs, des offres et des événements à jour, rangés dans le calendrier de réservation.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>La version anglaise mélange les langues (« Book une chambre », bandeau cookies en français), alors qu'une grande partie de vos clients écrit en anglais.</div><div><b>Avec la refonte</b>Des versions anglaise et néerlandaise propres, pour la clientèle des Portes du Soleil.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Aucune information sur la neige, alors que c'est la première question en novembre ; sur Google, Booking.com passe devant votre propre site.</div><div><b>Avec la refonte</b>La hauteur de neige et les chutes prévues en direct, et une vraie raison de réserver chez vous plutôt que sur une plateforme.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Vos avis Google sont affichés sans votre note, et vos 80 ans aux Gets restent noyés dans un paragraphe.</div><div><b>Avec la refonte</b>Votre histoire et vos avis mis en scène, une FAQ qui répond avant l'appel (bruit de l'après-ski, familles, taxe de séjour).</div></li>
+ </ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Formulaire de devis, avis Google, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + estimateur de budget</li><li>FR, EN, IT</li><li>4 pages par ville</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + neige qui tombe en temps réel (WebGL)</li><li>Une journée au Bellevue et la galerie des chambres animées au défilement, à 120 images/s</li><li>Visite des chambres en profondeur et calcul du séjour en direct</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+<div class="addons">
+ <div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens clients et à vos contacts&nbsp;: ouverture de la saison, concerts de L'Aprèski, offre de début de saison, Ski Festival. Rédigé, mis en page et envoyé pour vous, pour qu'ils réservent l'hiver suivant en direct.</p></div>
+ <div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos clients après chaque séjour, bilan mensuel.</p></div>
+ <div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Allemand, italien ou une autre langue de votre clientèle, traduite et tenue à jour avec le reste du site.</p></div>
+</div>
+<p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Bellevue%20Les%20Gets">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+
+<div class="mbar"><a class="btn ghost" href="tel:+33450758095">Appeler</a><a class="btn" href="#sejour">Mon séjour</a></div>
+
+<script src="../lib/lenis.min.js"></script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lenis=null;
+if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});window.lenis=lenis;}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready');});
+function $(id){return document.getElementById(id);}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+var px=.5,py=.5;addEventListener('pointermove',function(e){px=e.clientX/innerWidth;py=e.clientY/innerHeight;});
+
+/* ---------- Neige du soir sur les crêtes (WebGL) ---------- */
+var cv=$('snow'),gl=cv.getContext('webgl',{antialias:false,alpha:false}),heroVisible=true,t0=performance.now();
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ var fs=['precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;',
+ 'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+ 'float n1(float x){float i=floor(x),f=fract(x);return mix(hash(vec2(i,1.7)),hash(vec2(i+1.,1.7)),f*f*(3.-2.*f));}',
+ 'float fbm(float x){float v=0.,a=.5;for(int k=0;k<5;k++){v+=a*n1(x);x*=2.03;a*=.5;}return v;}',
+ 'float rfbm(float x){float v=0.,a=.55;for(int k=0;k<4;k++){v+=a*(1.-abs(n1(x)*2.-1.));x*=2.11;a*=.42;}return v;}',
+ 'float ridge(float x,float b,float a,float fr,float sd){return b+a*(rfbm(x*fr+sd)-.55)*1.6;}',
+ 'float firs(vec2 uv,float x,float base,float sc){float cx=x*sc;float id=floor(cx);float fx=fract(cx)-.5;float hh=.05+.07*hash(vec2(id,4.));float by=base+.03*fbm(id*.13);float y=(uv.y-by)/hh;float w=(1.-y)*.42*(1.+.12*sin(y*28.));return step(0.,y)*step(y,1.)*step(abs(fx),w)+step(uv.y,by);}',
+ 'float flakes(vec2 uv,float sc,float sp,float sz,float wind){vec2 p=uv*sc;p.y+=t*sp;p.x+=t*wind*sp+sin(p.y*.3+t*.5)*.3;vec2 id=floor(p);vec2 f=fract(p)-.5;float h=hash(id);vec2 o=vec2(hash(id+3.1),hash(id+7.7))-.5;float d=length(f-o*.6);return smoothstep(sz,sz*.2,d)*step(.45,h);}',
+ 'vec3 layer(vec3 col,vec2 uv,float x,float b,float a,float fr,float sd,vec3 lit,vec3 shd,float mixv){float h=ridge(x,b,a,fr,sd);if(uv.y<h){float hs=ridge(x+.035,b,a,fr,sd);float s=clamp(.55+(h-hs)*9.,0.,1.);s=mix(s,1.,smoothstep(h-.05,h,uv.y)*.35);vec3 c=mix(shd,lit,s);c=mix(c,shd*.75,smoothstep(h-.04,h-.4,uv.y)*.6);col=mix(c,col,mixv);}return col;}',
+ 'void main(){vec2 uv=gl_FragCoord.xy/r;float asp=r.x/r.y;vec2 q=vec2(uv.x*asp,uv.y);vec2 pr=m-.5;',
+ 'vec3 col=mix(vec3(.21,.22,.36),vec3(.03,.055,.11),smoothstep(.3,1.,uv.y));',
+ 'col+=vec3(.55,.24,.2)*exp(-abs(uv.y-.5)*7.)*.28;',
+ 'vec2 sc=floor(gl_FragCoord.xy/2.);float st=step(.9975,hash(sc))*smoothstep(.55,.95,uv.y)*(.55+.45*sin(t*1.7+hash(sc+1.)*40.));col+=vec3(st);',
+ 'col=layer(col,uv,q.x+pr.x*.04,.6,.3,1.5,3.,vec3(.66,.62,.76),vec3(.24,.27,.42),.4);',
+ 'col=layer(col,uv,q.x+pr.x*.08+4.,.47,.24,1.1,11.,vec3(.62,.64,.76),vec3(.17,.21,.33),.12);',
+ 'float x3=q.x+pr.x*.14+9.;float h3=ridge(x3,.3,.12,.7,23.);',
+ 'col=layer(col,uv,x3,.3,.12,.7,23.,vec3(.5,.54,.66),vec3(.11,.15,.24),0.);',
+ 'if(uv.y<h3){vec2 g=vec2(x3*48.,uv.y*34.);vec2 id=floor(g);vec2 f=fract(g)-.5;float on=step(.78,hash(id))*smoothstep(h3-.03,h3-.08,uv.y)*smoothstep(.1,.16,uv.y);',
+ 'vec2 o=(vec2(hash(id+2.),hash(id+5.))-.5)*.5;float dd=length(f-o);float tw=.75+.25*sin(t*2.+hash(id)*30.);col+=vec3(1.,.62,.28)*on*tw*(.02/(dd*dd+.02))*.42;}',
+ 'col=mix(col,vec3(.3,.33,.48),.2*smoothstep(.3,.05,uv.y));',
+ 'float xf=q.x+pr.x*.24;float tr=clamp(firs(uv,xf,.05,9.)+firs(uv,xf+.37,.0,6.),0.,1.);col=mix(col,vec3(.025,.045,.08),tr);',
+ 'float wind=.25+pr.x*1.6;',
+ 'float sn=flakes(q+pr*.02,26.,.22,.07,wind)*.35+flakes(q+pr*.05,14.,.38,.09,wind)*.55+flakes(q+pr*.1,7.,.62,.11,wind)*.75+flakes(q+pr*.18,3.5,.95,.14,wind)*.35;',
+ 'col+=vec3(.92,.95,1.)*sn;',
+ 'col*=1.-.4*length((uv-vec2(.5,.55))*vec2(1.,1.2));',
+ 'gl_FragColor=vec4(col,1.);}'].join('\n');
+ var okS=true;function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){okS=false;console.warn(gl.getShaderInfoLog(o));}return o;}
+ var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);
+ if(okS&&gl.getProgramParameter(pr,gl.LINK_STATUS)){
+  gl.useProgram(pr);
+  var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+  var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+  var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+  var mx=.5,my=.5;
+  var size=function(){var d=Math.min(devicePixelRatio||1,1.5);cv.width=cv.clientWidth*d*.75;cv.height=cv.clientHeight*d*.75;gl.viewport(0,0,cv.width,cv.height);};
+  size();addEventListener('resize',size);
+  new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+  window.__drawSnow=function(now){if(!heroVisible)return;mx+=(px-mx)*.04;my+=((1-py)-my)*.04;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?12.:(now-t0)/1000+12.);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+  window.__drawSnow(t0);
+ }
+}
+
+/* ---------- Scènes au défilement ---------- */
+var hdr=$('hdr'),proof=document.querySelector('.proof');
+var rvS=$('hotel'),rv=$('rv'),rvImg=rv.querySelector('img'),facts=document.querySelectorAll('#facts b'),factsDone=false;
+var dS=$('journee'),dLis=document.querySelectorAll('#dsteps li'),dImgs=document.querySelectorAll('#dphoto img'),dStep=-1;
+var D={night:$('dNight'),stars:$('dStars'),sun:$('dSun'),moon:$('dMoon'),mts:$('dMts'),piste:$('dPiste'),lift:$('dLift'),body:$('dBody'),roof:$('dRoof'),win:$('dWin'),terr:$('dTerr'),music:$('dMusic'),steam:$('dSteam'),time:$('dTime')};
+(function(){var g=$('dFirs'),h='',xs=[8,30,52,74,330,352,376,398,560,584,606,628];xs.forEach(function(x,k){var y=262+(k%3)*14,hh=26+(k*7%12);h+='<path d="M'+x+' '+(y-hh)+' L'+(x-9)+' '+y+' L'+(x+9)+' '+y+'Z"/>';});g.innerHTML=h;})();
+D.firs=$('dFirs');D.snowRoof=$('dSnowRoof');D.bal=$('dBal');
+var gS=$('chambres'),track=$('track'),gImgs=track.querySelectorAll('img'),gc=$('gcount');
+function countUp(b){var to=+b.dataset.to,pre=b.dataset.pre||'',suf=b.dataset.suf||'',st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1500));b.textContent=pre+Math.round(to*k).toLocaleString('fr-FR')+suf;if(k<1)requestAnimationFrame(tick);})(st);}
+function scenes(now){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proof.offsetHeight-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*24+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.12){factsDone=true;facts.forEach(countUp);}
+ var c=prog(dS);
+ D.mts.setAttribute('stroke-dashoffset',1-ease(seg(c,0,.1)));D.mts.setAttribute('fill-opacity',seg(c,.06,.12));
+ D.body.style.transform='scaleY('+ease(seg(c,.04,.12))+')';D.roof.setAttribute('stroke-dashoffset',1-ease(seg(c,.08,.15)));
+ D.firs.setAttribute('opacity',seg(c,.03,.09));D.snowRoof.setAttribute('opacity',seg(c,.13,.17));D.bal.setAttribute('opacity',seg(c,.11,.15));D.piste.setAttribute('opacity',seg(c,.15,.22));D.lift.setAttribute('opacity',seg(c,.15,.22));
+ var s=seg(c,0,.62),ang=Math.PI*s;D.sun.setAttribute('cx',60+520*s);D.sun.setAttribute('cy',300-250*Math.sin(ang));D.sun.setAttribute('opacity',1-seg(c,.58,.66));
+ D.night.setAttribute('opacity',Math.max(.6*(1-seg(c,0,.1)),seg(c,.5,.8)*.92));
+ D.stars.setAttribute('opacity',seg(c,.75,.9));D.moon.setAttribute('opacity',seg(c,.78,.9));
+ D.terr.setAttribute('opacity',seg(c,.28,.34));
+ D.music.setAttribute('opacity',seg(c,.42,.46)*(1-seg(c,.58,.62))*(.6+.4*Math.sin(now/180)));
+ D.steam.setAttribute('opacity',seg(c,.57,.61)*(1-seg(c,.7,.74))*(.6+.4*Math.sin(now/400)));
+ D.win.setAttribute('opacity',Math.max(seg(c,0,.04)*(1-seg(c,.1,.16)),seg(c,.42,.5))*(c>.92?.55:1));
+ D.time.style.transform='scaleX('+c+')';
+ var st=Math.min(6,Math.floor(c*7));if(st!==dStep){dStep=st;dLis.forEach(function(li,i){li.classList.toggle('on',i===st);});dImgs.forEach(function(im,i){im.classList.toggle('on',i<=st);});}
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(20,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-10+g*14-i*1.5)+'%,0,0)';});
+ gc.textContent='0'+Math.min(8,1+Math.floor(g*8))+' / 08';
+ room.tick();
+}
+/* visite de chambre en profondeur */
+var room={el:$('room'),img:$('roomImg'),x:0,y:0,tick:function(){var r=this.el.getBoundingClientRect(),tx=0,ty=0;if(r.bottom>0&&r.top<innerHeight){tx=(px-.5);ty=(py-.5);}this.x+=(tx-this.x)*.06;this.y+=(ty-this.y)*.06;this.img.style.transform='translate3d('+(-this.x*5)+'%,'+(-this.y*4)+'%,0) scale(1.04)';}};
+function loop(now){if(lenis)lenis.raf(now);if(window.__drawSnow&&!RM)window.__drawSnow(now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+if(RM){facts.forEach(function(b){b.textContent=(b.dataset.pre||'')+(+b.dataset.to).toLocaleString('fr-FR')+(b.dataset.suf||'');});dImgs.forEach(function(im){im.classList.add('on');});dLis.forEach(function(li){li.classList.add('on');});
+ ['mts','piste','lift','terr','win','stars','moon','firs','snowRoof','bal'].forEach(function(k){D[k].setAttribute('opacity',1);});D.mts.setAttribute('stroke-dashoffset',0);D.mts.setAttribute('fill-opacity',1);D.body.style.transform='none';D.roof.setAttribute('stroke-dashoffset',0);D.night.setAttribute('opacity',.75);D.sun.setAttribute('opacity',0);D.time.style.transform='none';}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise,.fc-bars').forEach(function(el,i){el.style.transitionDelay=(i%3)*.08+'s';io.observe(el);});
+
+/* ---------- Séjour : calendrier, prix, envoi ---------- */
+var RATES={montagne:{hi:[299,410,524],lo:[229,312,396],en:[204,274,344]},luxe:{hi:[331,478,577,791],lo:[260,350,412,598],en:[227,310,392,515]}};
+var OPEN=new Date(2026,11,12),CLOSE=new Date(2027,3,11);
+function ymd(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+function parse(s){var a=s.split('-');return new Date(+a[0],+a[1]-1,+a[2]);}
+function inR(d,a,b){return d>=a&&d<=b;}
+function season(d){if(inR(d,new Date(2026,11,19),new Date(2027,0,2))||inR(d,new Date(2027,1,6),new Date(2027,2,6)))return'hi';if(d>=new Date(2027,2,22))return'en';return'lo';}
+function isEarly(d){return inR(d,new Date(2026,11,18),new Date(2026,11,26));}
+function isFest(d){return inR(d,new Date(2027,2,20),new Date(2027,2,27));}
+var MN=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+var f=$('cfgf'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=$('prev'),nx=$('next'),chips=$('chips'),i=0,reached=0,cur=0,arr=new Date(2027,0,9),calM=new Date(2027,0,1);
+function val(n){var e=f.querySelector('[name="'+n+'"]:checked');return e?e.value:null;}
+function eur(n){return Math.round(n).toLocaleString('fr-FR')+' €';}
+function tween(to){var a0=cur,st=performance.now();cur=to;(function tk(n){var q=ease(Math.min(1,(n-st)/700));$('livePrice').textContent=eur(a0+(to-a0)*q);if(q<1)requestAnimationFrame(tk);})(st);}
+function drawCal(){var g=$('calG'),y=calM.getFullYear(),mo=calM.getMonth();$('calM').textContent=MN[mo].charAt(0).toUpperCase()+MN[mo].slice(1)+' '+y;
+ var h='';['L','M','M','J','V','S','D'].forEach(function(x){h+='<span class="dn">'+x+'</span>';});
+ var first=new Date(y,mo,1),off=(first.getDay()+6)%7,days=new Date(y,mo+1,0).getDate(),n=+val('n')||7,end=new Date(arr.getTime());end.setDate(end.getDate()+n);
+ for(var k=0;k<off;k++)h+='<span></span>';
+ for(var dd=1;dd<=days;dd++){var d=new Date(y,mo,dd),ok=d>=OPEN&&d<CLOSE,cl=ok?season(d):'';if(ok&&(isEarly(d)||isFest(d)))cl+=' ev';if(+d===+arr)cl+=' sel';else if(d>arr&&d<end)cl+=' inr';
+  h+='<button type="button" data-d="'+ymd(d)+'" class="'+cl+'"'+(ok?'':' disabled')+' aria-label="'+dd+' '+MN[mo]+'">'+dd+'</button>';}
+ g.innerHTML=h;$('calP').disabled=+calM<=+new Date(2026,11,1);$('calN').disabled=+calM>=+new Date(2027,3,1);}
+$('calP').onclick=function(){calM=new Date(calM.getFullYear(),calM.getMonth()-1,1);drawCal();};
+$('calN').onclick=function(){calM=new Date(calM.getFullYear(),calM.getMonth()+1,1);drawCal();};
+$('calG').addEventListener('click',function(e){var b=e.target.closest('button[data-d]');if(!b)return;arr=parse(b.dataset.d);drawCal();update();if(i===0){setTimeout(function(){if(i===0){i=1;show();}},420);}});
+var IMG={montagne:'https://www.bellevue-lesgets.com/wp-content/uploads/2018/11/Chambres_3.jpg',luxe:'https://www.bellevue-lesgets.com/wp-content/uploads/2019/08/Bellevue_10.jpg',suite:'https://www.bellevue-lesgets.com/wp-content/uploads/2019/08/Bellevue_15.jpg'};
+var ON={ski:'location de ski à -30 %',table:'table le premier soir',spa:'espace détente',cours:'cours de ski'};
+function fmtD(d){return d.getDate()+' '+MN[d.getMonth()]+' '+d.getFullYear();}
+function update(){
+ var n=+val('n')||7,rm=val('room')||'luxe',p=+val('p')||4;
+ var p5=f.querySelector('[name=p][value="5"]');p5.disabled=rm==='montagne';if(rm==='montagne'&&p===5){f.querySelector('[name=p][value="4"]').checked=true;p=4;}
+ var tot=0,minN=1e9,d=new Date(arr.getTime()),seas={};
+ for(var k=0;k<n;k++){var s=season(d),r=RATES[rm][s][Math.max(2,p)-2];tot+=r;minN=Math.min(minN,r);seas[s]=1;d.setDate(d.getDate()+1);}
+ var free=isEarly(arr)&&n>=8?minN:0;tot-=free;
+ var end=new Date(arr.getTime());end.setDate(end.getDate()+n);
+ tween(tot);
+ var suite=rm==='luxe'&&p===5,src=suite?IMG.suite:IMG[rm];if($('roomImg').getAttribute('src')!==src){$('roomImg').style.visibility='visible';$('roomImg').setAttribute('src',src);}
+ $('roomTag').textContent=suite?'Suite deux pièces, 33 m², terrasse':rm==='luxe'?'Luxe, premier étage':'Montagne, deuxième étage';
+ $('liveDates').textContent='Du '+fmtD(arr)+' au '+fmtD(end);
+ $('liveSub').textContent=n+' nuits, '+p+(p>1?' personnes':' personne')+', petit-déjeuner compris'+(free?', une nuit offerte (offre à valider)':'')+', soit '+eur(tot/n)+' la nuit';
+ [].forEach.call(document.querySelectorAll('.w1'),function(w){w.setAttribute('fill',rm==='luxe'&&(!suite||w.classList.contains('ws'))?'#F2B45A':'#3B4C64');});
+ [].forEach.call(document.querySelectorAll('.w2'),function(w,ix){w.setAttribute('fill',rm==='montagne'&&ix===1?'#F2B45A':'#3B4C64');});
+ if(rm==='luxe'&&!suite)[].forEach.call(document.querySelectorAll('.w1'),function(w,ix){w.setAttribute('fill',ix===1?'#F2B45A':'#3B4C64');});
+ var pg=$('pvPeople'),ph='';for(var j=0;j<p;j++){var cx=75-(p-1)*7+j*14,sm=j>=2;ph+='<circle cx="'+cx+'" cy="'+(sm?133:130.5)+'" r="'+(sm?2.4:3)+'"/><rect x="'+(cx-(sm?2.6:3.2))+'" y="'+(sm?136:134)+'" width="'+(sm?5.2:6.4)+'" height="'+(sm?4:6)+'" rx="2"/>';}
+ pg.innerHTML=ph;
+ $('vsHere').textContent=eur(tot)+' au tarif de l\'hôtel, meilleur prix garanti, -30 % sur la location de ski.';
+ $('barHere').style.transform='scaleX('+Math.min(1,tot/9000)+')';$('barPf').style.transform='scaleX('+Math.min(1,tot/9000)+')';
+ var hs=[ymd(arr),n,rm,p,[].map.call(f.querySelectorAll('[name=o]:checked'),function(o){return o.value;}).join('.')||'-'].join('~');try{history.replaceState(null,'','#sejour='+encodeURIComponent(hs));}catch(e){}
+ return{n:n,rm:rm,p:p,tot:tot,free:free,end:end,suite:suite,opts:[].map.call(f.querySelectorAll('[name=o]:checked'),function(o){return ON[o.value];})};
+}
+function recap(){var d=update(),L=[['Arrivée',fmtD(arr)],['Départ',fmtD(d.end)],['Chambre',d.suite?'Suite deux pièces':d.rm==='luxe'?'Luxe':'Montagne'],['Voyageurs',d.p],['Envies',d.opts.length?d.opts.join(', '):'aucune'],['Avantage direct','meilleur prix garanti, -30\u00a0% sur la location de ski'],['Total indicatif',eur(d.tot)]];$('recap').innerHTML=L.map(function(r){return'<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');}
+function drawChips(){chips.innerHTML='';S.forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=(k+1)+'. '+el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<=reached)b.className='done';b.disabled=k>reached;b.onclick=function(){i=k;show();};li.appendChild(b);chips.appendChild(li);});}
+function show(){S.forEach(function(el,k){el.hidden=k!==i;if(k===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0;nx.hidden=i===S.length-1;nx.textContent=i===S.length-2?'Voir mon séjour':'Continuer';drawChips();if(i===S.length-1)recap();else update();if(i===0)drawCal();}
+f.addEventListener('change',function(e){update();drawCal();if(e.target.type==='radio'&&i<S.length-2){var at=i;setTimeout(function(){if(i===at){i++;show();}},420);}});
+nx.onclick=function(){if(i<S.length-1){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};
+(function(){var m=location.hash.match(/sejour=([^&]+)/);if(!m)return;var q=decodeURIComponent(m[1]).split('~');try{var d=parse(q[0]);if(d>=OPEN&&d<CLOSE){arr=d;calM=new Date(d.getFullYear(),d.getMonth(),1);}}catch(e){}function chk(n,v){var el=f.querySelector('[name="'+n+'"][value="'+v+'"]');if(el)el.checked=true;}chk('n',q[1]);chk('room',q[2]);chk('p',q[3]);(q[4]||'').split('.').forEach(function(o){chk('o',o);});})();
+show();
+$('mailBtn').addEventListener('click',function(){var d=update(),txt='Bonjour,\n\nJe souhaite réserver un séjour au Bellevue :\n- Du '+fmtD(arr)+' au '+fmtD(d.end)+' ('+d.n+' nuits)\n- Chambre : '+(d.suite?'suite deux pièces':d.rm)+'\n- Voyageurs : '+d.p+'\n- Envies : '+(d.opts.length?d.opts.join(', '):'aucune')+'\n- Total indicatif : '+eur(d.tot)+'\n\nMon séjour : '+location.href+'\n';this.href='mailto:info@bellevue-lesgets.com?subject='+encodeURIComponent('Demande de séjour, '+fmtD(arr))+'&body='+encodeURIComponent(txt);});
+$('copyBtn').addEventListener('click',function(){var c=$('copied');(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});
+
+/* ---------- Neige et météo en direct (open-meteo, repli silencieux) ---------- */
+(function(){
+ var cd=Math.ceil((OPEN-new Date())/864e5);if(cd>0)$('cdDays').textContent=cd;else{$('cdDays').textContent='Ouvert';$('cdTxt').textContent='L\'hiver a commencé au Bellevue. Les vacances de Noël et de février partent en premier : quinze chambres, pas une de plus.';}
+ var bars=$('fcBars'),days=$('fcDays'),JN=['dim.','lun.','mar.','mer.','jeu.','ven.','sam.'],bh='',dh='',t=new Date();
+ for(var k=0;k<7;k++){var dd=new Date(t.getTime()+k*864e5);bh+='<div><small>…</small><i style="--h:4%"></i></div>';dh+='<span>'+(k===0?'auj.':JN[dd.getDay()])+'</span>';}
+ bars.innerHTML=bh;days.innerHTML=dh;
+ function get(u){return fetch(u).then(function(r){if(!r.ok)throw 0;return r.json();});}
+ var base='https://api.open-meteo.com/v1/forecast?latitude=46.158&longitude=6.669&timezone=Europe%2FParis&forecast_days=7&current=temperature_2m,snow_depth&daily=snowfall_sum';
+ function stake(id,bid,m){if(m==null)return;var cm=Math.round(m*100);$(bid).textContent=cm+' cm';$(id).style.transform='scaleY('+Math.max(.02,Math.min(1,cm/150))+')';}
+ get(base+'&elevation=1172').then(function(j){
+  if(j.current){stake('stk1','sd1',j.current.snow_depth);if(j.current.temperature_2m!=null){var tc=Math.round(j.current.temperature_2m);$('nowv').textContent=(tc>0?'+':'')+tc+' °C'+(j.current.snow_depth?', '+Math.round(j.current.snow_depth*100)+' cm de neige':'');}}
+  var s=j.daily&&j.daily.snowfall_sum;if(s){var mx=Math.max(10,Math.max.apply(null,s));bars.innerHTML=s.map(function(v){v=v||0;return'<div><small>'+(Math.round(v)||0)+'</small><i style="--h:'+Math.max(4,v/mx*100)+'%"></i></div>';}).join('');}
+ }).catch(function(){});
+ get(base+'&elevation=1800').then(function(j){if(j.current)stake('stk2','sd2',j.current.snow_depth);}).catch(function(){});
+})();
+
+$('nlf').addEventListener('submit',function(){$('nlok').hidden=false;});
+
+/* ---------- Langues ---------- */
+var L={en:{h1a:'80 winters',h1b:'right on the Les Gets slopes.',h1c:'The next one is yours.',lede:'A fifteen-room three-star hotel, après-ski bar and restaurant on the snow front, run by the Mugnier family. Skis on at the front door, lunch in the sun, and the live music starts when the slopes close.',cta1:'Price my stay',cta2:'Today\'s snow',cta1s:'My stay',n1:'A day here',n2:'Rooms',n3:'Snow',nowl:'Les Gets, 1,172 m, right now'},
+nl:{h1a:'80 winters',h1b:'aan de piste in Les Gets.',h1c:'De volgende is van jullie.',lede:'Driesterrenhotel met vijftien kamers, après-skibar en restaurant aan de piste, gerund door de familie Mugnier. Ski\'s aan bij de voordeur, lunch in de zon, en live muziek zodra de pistes sluiten.',cta1:'Bereken mijn verblijf',cta2:'De sneeuw vandaag',cta1s:'Mijn verblijf',n1:'Een dag hier',n2:'Kamers',n3:'Sneeuw',nowl:'Les Gets, 1.172 m, nu'}},fr={};
+document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.textContent;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){if(L[l][e.dataset.i])e.textContent=L[l][e.dataset.i];});};});
+})();
+</script>
+</body>
+</html>

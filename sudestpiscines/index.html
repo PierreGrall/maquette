@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sud Est Piscines — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Instrument+Sans:wght@400..600&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#141A3D;--brand:#3B4394;--water:#167F8E;--lagoon:#2FB3C4;--foam:#A9E5EA;--sun:#F2BE3A;--concrete:#ECEEF1;--ink:#161A33;--soft:#5B6178;--line:#CDD1DA;--white:#FAFBFC;--d:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;--t:"Instrument Sans","Helvetica Neue",Arial,system-ui,sans-serif}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--concrete);color:var(--ink);font-family:var(--t);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--lagoon);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--water);background:var(--water);color:#fff;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px);background:#0f6875}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);letter-spacing:-.025em;margin:0}
+h2{font-variation-settings:"wdth" 88;font-weight:700;font-size:clamp(2rem,4.4vw,3.7rem);line-height:1;max-width:18ch}
+.lede{color:var(--soft);max-width:38rem}
+.eyebrow{font-family:var(--d);font-size:.9rem;font-weight:600;color:var(--water);margin:0 0 1rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--sun)}
+
+/* Blocs communs */
+.proof{position:relative;z-index:40;background:#000;color:#cfdedf;font-family:var(--d);font-size:.8rem}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:background .4s,color .4s,top .3s}
+header.site.solid{top:0;background:rgba(236,238,241,.88);backdrop-filter:blur(10px);color:var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
+.brand{font-family:var(--d);font-stretch:125%;font-weight:700;font-size:1.3rem;text-decoration:none}
+.hnav{display:flex;align-items:center;gap:1.4rem;font-family:var(--d);font-size:.9rem}
+.hnav a{text-decoration:none;opacity:.85}
+.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+/* Grall Studio */
+.studio{background:#DEE1EA;border-top:6px solid var(--water);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid #BCC1D0}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid #BCC1D0}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid #BCC1D0}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid #BCC1D0}.addons b{font-weight:600}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--white);border:1px solid #BCC1D0;border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:#e7f2f3;border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--water);font-weight:600}.offer.rec .tag{color:var(--foam)}
+.offer h3{font-stretch:110%;font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--water),var(--water)) center/14px 2px no-repeat,linear-gradient(var(--water),var(--water)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mbar{display:none}
+@media (max-width:600px){
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(20,26,61,.94);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-stretch:125%;font-weight:700;letter-spacing:-.01em}.lmark{width:28px;height:28px;flex:none}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+header.site,header.site.solid{background:none!important;backdrop-filter:none!important;box-shadow:none!important}
+header.site .wrap{height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:rgba(20,26,61,.34);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);color:#fff;transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:rgba(251,252,251,.8);color:var(--ink);border-color:rgba(20,36,42,.1)}
+header.site .btn{padding:.6rem 1.1rem}
+#logoSlot{display:inline-flex;align-items:center;height:34px}#logoSlot img,#logoSlot svg{height:34px;width:auto}
+@media(max-width:600px){header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}#logoSlot,#logoSlot img,#logoSlot svg{height:28px}}
+#logoSlot{gap:.6rem}.bname{font-family:var(--d);font-stretch:118%;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap}@media(max-width:600px){.bname{font-size:.95rem}}
+
+/* Ouverture : eau temps réel */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#fff;overflow:hidden}
+#water{position:absolute;inset:0;width:100%;height:100%;background:linear-gradient(180deg,#1d5a86,#141A3D)}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero .kicker{font-family:var(--d);font-size:.92rem;color:#d7e9f2;margin:0 0 1.2rem;opacity:0;transition:opacity 1s .2s}
+.ready .hero .kicker{opacity:1}
+.hero h1{font-variation-settings:"wdth" 82;font-weight:700;font-size:clamp(2.2rem,6vw,6rem);line-height:.98;letter-spacing:-.035em}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.04em}
+.hero h1 .ln span{display:block;transform:translateY(108%);transition:transform 1.25s cubic-bezier(.16,1,.3,1)}
+.hero h1 .ln:nth-child(3) span{color:var(--foam)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.1s}.hero h1 .ln:nth-child(3) span{transition-delay:.2s}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .55s,transform 1s .55s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:#dbe8f0;margin:0;text-shadow:0 1px 16px rgba(10,14,40,.7)}
+.hero h1,.hero .kicker{text-shadow:0 2px 28px rgba(10,14,40,.45)}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.hero .btn{background:var(--sun);border-color:var(--sun);color:var(--deep)}.hero .btn:hover{background:#f5cb5e}
+.hero .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.scrollhint{position:absolute;right:1.25rem;bottom:1.25rem;z-index:2;font-family:var(--d);font-size:.75rem;color:#b9cde0;writing-mode:vertical-rl}
+@media(max-width:600px){.hero h1{font-size:clamp(1.7rem,8.4vw,2.6rem)}.hero-inner{padding-bottom:6.2rem}.scrollhint,.hero-ctas{display:none}}
+
+/* Révélation photo phare */
+.reveal{height:230vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:#2c5e74}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,26,61,.72),rgba(20,26,61,0) 55%);pointer-events:none}
+.reveal .cap{position:absolute;left:clamp(1rem,4vw,3rem);bottom:clamp(1.5rem,6vh,3rem);color:#fff;font-family:var(--d);z-index:2;max-width:28rem}
+.reveal .cap b{display:block;font-variation-settings:"wdth" 85;font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.02;margin-bottom:.45rem}
+.reveal .cap span{font-size:.92rem;color:#e0ecf3}
+.facts{position:absolute;top:clamp(6rem,15vh,9rem);right:clamp(1rem,4vw,3rem);z-index:2;display:grid;gap:1.3rem;color:#fff;font-family:var(--d);text-align:right}
+.facts div{opacity:0;transform:translateY(14px);transition:opacity .8s,transform .8s cubic-bezier(.16,1,.3,1)}.facts.on div{opacity:1;transform:none}
+.facts.on div:nth-child(2){transition-delay:.12s}.facts.on div:nth-child(3){transition-delay:.24s}
+.facts b{display:block;font-variation-settings:"wdth" 80;font-weight:700;font-size:clamp(2rem,4vw,3.4rem);line-height:.95;font-variant-numeric:tabular-nums;text-shadow:0 2px 24px rgba(20,26,61,.45)}
+.facts span{font-size:.85rem;color:#eef4f8;text-shadow:0 1px 10px rgba(20,26,61,.6)}
+
+/* Pose d'une coque */
+.cut{height:360vh;position:relative;background:var(--deep);color:#e6e9f4}
+.cut .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.cut-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.cut h2{color:#fff;margin-bottom:1rem}
+.cut .lede{color:#a6add0;margin:0 0 2rem}
+.cut svg{width:100%;height:auto;overflow:visible}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.steps-live li{border-left:2px solid #2d3566;padding:.2rem 0 .2rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--sun)}
+.steps-live b{display:block;font-family:var(--d);color:#fff;font-weight:600;font-size:1.05rem}
+.steps-live span{font-size:.96rem;color:#b3b9da}
+.meter{height:2px;background:#2d3566;margin-top:2rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--sun);transform-origin:left;transform:scaleX(0)}
+
+/* Galerie horizontale */
+.hgal{height:340vh;position:relative;background:var(--concrete)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.4rem;padding-left:max(1rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(60vw,700px);margin:0}
+.card:nth-child(even){margin-top:3.5rem}
+.card .ph{height:min(56vh,500px);overflow:hidden;background:#8fa7a2}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{font-family:var(--d);margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem;border-top:1px solid var(--ink);padding-top:.6rem}
+.card figcaption b{font-weight:600}.card figcaption span{color:var(--soft);font-size:.9rem}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{font-family:var(--d);font-weight:700;font-size:1.1rem;font-variant-numeric:tabular-nums}
+
+/* Saison */
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.year{margin-top:3rem}
+.months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;align-items:end;height:180px}
+.months i{display:block;height:var(--h);transform-origin:bottom;transform:scaleY(0);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.year.in .months i{transform:none}
+.months i.k1{background:var(--brand)}.months i.k2{background:var(--lagoon)}.months i.k3{background:var(--sun)}.months i.k4{background:#9AA1B8}
+.mlab{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px;font-family:var(--d);font-size:.78rem;color:var(--soft);margin-top:.5rem;text-align:center}
+.phases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem;margin-top:2.5rem}
+.phases div{padding-top:.8rem;border-top:3px solid var(--c)}
+.phases b{display:block;font-family:var(--d);font-size:1.08rem;margin-bottom:.3rem}.phases em{font-style:normal;font-family:var(--d);font-size:.82rem;color:var(--soft)}
+.phases p{margin:.4rem 0 0;color:var(--soft);font-size:.98rem}
+.shop{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(2rem,5vw,5rem);margin-top:6rem;align-items:center}
+.shop figure{margin:0;background:var(--deep);overflow:hidden}.zone svg{display:block;width:100%;height:auto;font-family:var(--d)}
+.zone .drw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.2s .3s cubic-bezier(.16,1,.3,1)}.zone.in .drw{stroke-dashoffset:0}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pl 2.4s cubic-bezier(.16,1,.3,1) infinite}@keyframes pl{from{transform:scale(1);opacity:1}to{transform:scale(3.2);opacity:0}}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}.zone .drw{stroke-dashoffset:0;transition:none}}
+.shop ul{list-style:none;margin:1.5rem 0 0;padding:0;border-top:1px solid var(--line)}
+.shop li{padding:.75rem 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:1rem}
+.shop li span{color:var(--soft);font-size:.95rem;text-align:right}
+
+/* Étapes */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;counter-reset:s;margin:3rem 0 0;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:1rem}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--d);font-variation-settings:"wdth" 80;font-weight:700;font-size:2.6rem;line-height:1;color:var(--brand);display:block;margin-bottom:.8rem}
+.steps h3{font-size:1.1rem;margin-bottom:.4rem}.steps p{margin:0;color:var(--soft);font-size:.98rem}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+
+/* Configurateur */
+.estimate{background:var(--deep);color:#e8eaf6;position:relative;overflow:hidden}
+.estimate h2{color:#fff}.estimate .lede{color:#a6add0}
+.panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.1rem,3vw,2rem)}
+fieldset{border:0;margin:0;padding:0;min-width:0}legend{font-family:var(--d);font-weight:600;font-size:1.25rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem .95rem;cursor:pointer;font-family:var(--d);font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:#9aa2c8;font-size:.8rem;margin-top:.2rem;font-family:var(--t)}
+.choice input:checked+label{border-color:var(--sun);background:rgba(242,190,58,.08)}
+.choice input:focus-visible+label{outline:3px solid var(--foam);outline-offset:2px}
+.swatch{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:.45rem;border:1px solid rgba(255,255,255,.4)}
+.step-anim{animation:in .55s cubic-bezier(.16,1,.3,1)}@keyframes in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.estimate .btn{background:var(--sun);border-color:var(--sun);color:var(--deep)}.estimate .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.range{font-family:var(--d);font-weight:700;font-size:1.6rem;color:#fff;margin:.2rem 0 .6rem}
+.field{display:grid;gap:.3rem;margin-bottom:.8rem}.field label{font-family:var(--d);font-size:.88rem}
+.field input{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.06);color:#fff}
+.note{font-size:.85rem;color:#8d95bd;margin-top:1rem}
+[hidden]{display:none!important}
+.cfg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.preview{position:sticky;top:90px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.2rem;overflow:hidden}
+.preview svg{width:100%;height:auto;display:block}
+.pv-anim{transform-box:fill-box;transform-origin:center;transition:transform .7s cubic-bezier(.16,1,.3,1),opacity .5s}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem;font-family:var(--d)}
+.live span{font-size:.8rem;color:#9aa2c8}.live b{display:block;white-space:nowrap;font-size:clamp(1.15rem,2vw,1.6rem);color:#fff;font-variant-numeric:tabular-nums}
+.live small{font-size:.8rem;color:#9aa2c8;text-align:right;max-width:14rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.8rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:#9aa2c8;padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--sun);color:var(--deep);border-color:var(--sun)}
+.chips button.done{color:#fff;border-color:rgba(169,229,234,.5)}.chips button:disabled{cursor:default;opacity:.45}
+.hint{font-size:.85rem;color:#8d95bd;margin:-.4rem 0 1rem}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-family:var(--d);font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#9aa2c8}
+.p3d{position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#24305c;cursor:grab;touch-action:pan-y}
+.p3d:active{cursor:grabbing}.p3d canvas{width:100%;height:100%;display:block}
+.p3d-ui{position:absolute;left:.7rem;right:.7rem;bottom:.7rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem;font-family:var(--d);font-size:.78rem;color:#e6e9f4;pointer-events:none}
+.p3d-ui button{pointer-events:auto;font:inherit;font-weight:600;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(20,26,61,.55);backdrop-filter:blur(8px);color:#fff;padding:.4rem .8rem;cursor:pointer}
+.p3d+svg{display:none}.no3d .p3d{display:none}.no3d .p3d+svg{display:block}
+.season{margin-top:1rem;font-family:var(--d)}
+.season .m{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;margin:.45rem 0 .35rem}
+.season .m i{height:8px;border-radius:2px;background:rgba(255,255,255,.1);transition:background .5s}
+.season .m i.on{background:var(--sun)}
+.season .lab{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;font-size:.62rem;color:#8890b8;text-align:center}
+.season p{margin:0;font-size:.82rem;color:#b3b9da}.season b{color:#fff}
+.countdown{font-family:var(--d);font-size:.9rem;color:#e8eaf6;background:rgba(242,190,58,.08);border:1px solid rgba(242,190,58,.3);border-radius:10px;padding:.7rem .9rem;margin:0 0 1rem}
+.countdown b{font-size:1.15rem;color:#fff}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.copied{font-family:var(--d);font-size:.82rem;color:var(--foam);align-self:center;word-break:break-all}
+
+/* Avis, contact, pied */
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.score{font-family:var(--d);font-variation-settings:"wdth" 78;font-weight:700;font-size:5rem;line-height:.9;color:var(--brand)}.score small{display:block;font-size:.85rem;font-variation-settings:"wdth" 100;font-weight:400;color:var(--soft);margin-top:.5rem}
+.stars{color:var(--sun);letter-spacing:.1em}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 52s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--white);border-left:3px solid var(--lagoon);padding:1.3rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-size:1.04rem;line-height:1.5}.rcard figcaption{font-family:var(--d);font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.bigtel{font-family:var(--d);font-variation-settings:"wdth" 80;font-weight:700;font-size:clamp(2.2rem,5.5vw,4.2rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;color:var(--brand);white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-family:var(--d);font-size:.88rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:grid;gap:.5rem;min-width:min(100%,360px)}.nl-form label{color:var(--ink);font-weight:600}
+.nl-row{display:flex;gap:.4rem}.nl-row input{flex:1;min-width:0;font:inherit;padding:.65rem .8rem;border:1.5px solid var(--line);border-radius:999px;background:var(--white)}
+.nl-row .btn{padding:.65rem 1.1rem}
+.nl-ok{color:var(--water);font-size:.85rem}
+@media (max-width:900px){.rx-head{grid-template-columns:1fr;gap:1.5rem}
+ .hnav a.nl{display:none}
+ .cut-grid,.contact,.shop{grid-template-columns:1fr}.cfg{grid-template-columns:1fr}.preview{position:relative;top:0}
+ .cut{height:300vh}.cut h2{font-size:1.8rem}.cut .lede{display:none}
+ .steps,.phases{grid-template-columns:1fr 1fr}
+ .card{width:80vw}.card:nth-child(even){margin-top:0}.facts{top:auto;bottom:9rem;right:auto;left:1rem;text-align:left;grid-template-columns:repeat(3,auto);gap:1.2rem}
+}
+@media (max-width:600px){
+ .hnav .btn{display:none}.steps,.choices,.phases{grid-template-columns:1fr}.audit li{grid-template-columns:1fr;gap:.5rem}
+ .steps-live li:not(.on){display:none}.months{height:120px}.mlab{font-size:.62rem}
+ .facts b{font-size:1.7rem}.facts span{font-size:.72rem}
+ .hero-ctas .ghost{display:none}.score{font-size:4rem}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.cut,.hgal{height:auto}.reveal .stick,.cut .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1rem}.rise,.hero-row,.hero h1 .ln span,.facts div,.hero .kicker{opacity:1;transform:none;transition:none}
+ .months i{transform:none;transition:none}.mq-track{animation:none;flex-wrap:wrap;width:auto}.pv-anim{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour Sud Est Piscines par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Sud Est Piscines, accueil"><span id="logoSlot"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="5.2" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M3 21c3.2-2.6 6.5 2.6 9.7 0s6.5 2.6 9.7 0 4.8-1.4 6.6-.6M3 27c3.2-2.6 6.5 2.6 9.7 0s6.5 2.6 9.7 0 4.8-1.4 6.6-.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span class="bname">Sud Est Piscines</span></span></a>
+ <nav class="hnav" aria-label="Navigation">
+  <a class="nl" href="#realisations" data-i="n1">Réalisations</a><a class="nl" href="#pose" data-i="n2">La pose</a><a class="nl" href="#saison" data-i="n3">Entretien</a>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button></div>
+  <a class="btn" href="#estimateur" data-i="cta1s">Estimer mon projet</a>
+ </nav>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="water" aria-hidden="true"></canvas>
+ <div class="wrap hero-inner">
+  <p class="kicker" data-i="kick">Pisciniste à Ventabren, au cœur du Pays d'Aix</p>
+  <h1><span class="ln"><span data-i="h1a">500 piscines construites</span></span><span class="ln"><span data-i="h1b">entre Aix et le Luberon.</span></span><span class="ln"><span data-i="h1c">La vôtre est la suivante.</span></span></h1>
+  <div class="hero-row">
+   <p data-i="lede">Coque polyester fabriquée en France ou béton sur mesure, posée par nos propres équipes. Ensuite, notre magasin de Ventabren et nos techniciens s'occupent de votre eau, saison après saison.</p>
+   <div class="hero-ctas"><a class="btn" href="#estimateur" data-i="cta1">Estimer ma piscine en 1 minute</a><a class="btn ghost" href="tel:+33442632983">04 42 63 29 83</a></div>
+  </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true">Défiler</div>
+</section>
+
+<section class="reveal" id="realisations" aria-label="Réalisation phare">
+ <div class="stick">
+  <figure id="rv"><img src="https://www.sud-est-piscines.fr/wp-content/uploads/2018/11/conception-piscine-aix-en-provence.jpg" alt="Piscine à fond clair bordée d'une plage et d'une pergola, jardin de palmiers et de pins, Aix-en-Provence" onerror="this.style.visibility='hidden'"></figure>
+  <div class="shade"></div>
+  <div class="cap"><b>Eau claire, plage en pierre, pergola&nbsp;: l'été entier se passe ici.</b><span>Conception et pose Sud Est Piscines, Aix-en-Provence</span></div>
+  <div class="facts" id="facts"><div><b data-to="500" data-suf="+">0</b><span>piscines construites</span></div><div><b data-to="2000" data-suf="+">0</b><span>clients suivis</span></div><div><b data-to="30" data-suf=" ans">0</b><span>de métier</span></div></div>
+ </div>
+</section>
+
+<section class="cut" id="pose" aria-label="La pose d'une coque">
+ <div class="stick"><div class="wrap cut-grid">
+  <svg viewBox="0 -10 760 400" role="img" aria-label="Animation de la pose d'une piscine coque : terrassement, descente à la grue, remblai et mise en eau, margelles">
+   <defs>
+    <pattern id="rock" width="38" height="30" patternUnits="userSpaceOnUse"><rect width="38" height="30" fill="#1b2250"/><path d="M4 8l7-3 6 3-2 6-8 1z M22 18l8-2 5 5-4 5-8-1z M14 25l4-2 3 3-3 2z" fill="#262f63"/></pattern>
+    <pattern id="fill" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#4a5288"/><circle cx="2" cy="2" r="1" fill="#6b73a6"/><circle cx="6" cy="6" r="1" fill="#6b73a6"/></pattern>
+    <linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5FD0DC"/><stop offset="1" stop-color="#1F6E9C"/></linearGradient>
+    <clipPath id="wclip"><rect id="wrect" x="200" y="292" width="364" height="0"/></clipPath>
+   </defs>
+   <g id="ground" opacity="0"><rect x="0" y="150" width="760" height="240" fill="url(#rock)"/><line x1="0" y1="150" x2="760" y2="150" stroke="#7f88b8" stroke-width="2"/><text x="14" y="372" font-family="Bricolage Grotesque, sans-serif" font-size="13" fill="#8b93c2">Calcaire du Pays d'Aix</text></g>
+   <rect id="hole" x="172" y="150" width="420" height="0" fill="#0d1233"/>
+   <g id="gravel" opacity="0"><rect x="172" y="294" width="420" height="10" fill="#3a4277"/><g fill="#8a91bd"><circle cx="190" cy="299" r="1.6"/><circle cx="230" cy="298" r="1.6"/><circle cx="270" cy="300" r="1.6"/><circle cx="310" cy="298" r="1.6"/><circle cx="350" cy="300" r="1.6"/><circle cx="390" cy="298" r="1.6"/><circle cx="430" cy="300" r="1.6"/><circle cx="470" cy="298" r="1.6"/><circle cx="510" cy="300" r="1.6"/><circle cx="550" cy="298" r="1.6"/><circle cx="575" cy="300" r="1.6"/></g></g>
+   <rect id="bfL" x="172" y="150" width="26" height="144" fill="url(#fill)"/><rect id="bfR" x="566" y="150" width="26" height="144" fill="url(#fill)"/>
+   <g clip-path="url(#wclip)"><rect x="200" y="152" width="364" height="140" fill="url(#wg)"/><path id="wave" d="M190 160 q23 -6 46 0 t46 0 t46 0 t46 0 t46 0 t46 0 t46 0 t46 0 t46 0" fill="none" stroke="#C8F1F4" stroke-width="2"/></g>
+   <g id="crane" opacity="0" stroke="#F2BE3A" stroke-width="5" fill="none">
+    <line x1="700" y1="0" x2="700" y2="150"/><line x1="330" y1="0" x2="730" y2="0"/><line x1="700" y1="0" x2="660" y2="-10" stroke-width="2"/>
+    <rect x="372" y="-3" width="20" height="8" fill="#F2BE3A" stroke="none"/>
+    <line id="cable" x1="382" y1="5" x2="382" y2="10" stroke-width="2"/>
+   </g>
+   <g id="shell">
+    <g id="slings" stroke="#F2BE3A" stroke-width="1.6" opacity="0"><line x1="382" y1="104" x2="196" y2="146"/><line x1="382" y1="104" x2="568" y2="146"/></g>
+    <path d="M188 150 H202 V292 H562 V150 H576" fill="none" stroke="#F4F6FA" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M202 182 H232 V210 H258 V238 H284 V292 H202 Z" fill="#F4F6FA" fill-opacity=".92"/>
+   </g>
+   <g id="deck" opacity="0"><rect x="120" y="142" width="80" height="9" fill="#E4E1D8"/><rect x="564" y="142" width="96" height="9" fill="#E4E1D8"/><rect x="182" y="140" width="24" height="6" fill="#FAFBFC"/><rect x="558" y="140" width="24" height="6" fill="#FAFBFC"/></g>
+   <g font-family="Bricolage Grotesque, sans-serif" font-size="13" fill="#E6E9F4">
+    <g class="lbl" opacity="0"><line x1="592" y1="240" x2="612" y2="240" stroke="#E6E9F4"/><text x="618" y="236">Fouille au gabarit</text><text x="618" y="252">de la coque</text></g>
+    <g class="lbl" opacity="0"><line x1="592" y1="300" x2="612" y2="300" stroke="#E6E9F4"/><text x="618" y="296">Lit de gravier</text><text x="618" y="312">compacté</text></g>
+    <g class="lbl" opacity="0"><text x="300" y="232" fill="#fff">Coque fabriquée en France</text></g>
+    <g class="lbl" opacity="0"><line x1="592" y1="190" x2="612" y2="190" stroke="#E6E9F4"/><text x="618" y="186">Remblai stabilisé, monté</text><text x="618" y="202">en même temps que l'eau</text></g>
+   </g>
+  </svg>
+  <div>
+   <p class="eyebrow" style="color:var(--sun)">La pose d'une coque</p>
+   <h2>Ce qui est sous la margelle compte autant que l'eau.</h2>
+   <p class="lede">Une coque bien posée, c'est une fouille juste, un lit compacté et un remblai qui monte avec l'eau. Nos équipes font tout, du premier coup de pelle à la mise en eau.</p>
+   <ol class="steps-live" id="live">
+    <li><b>Terrassement</b><span>Une fouille au gabarit, même dans le calcaire de la région.</span></li>
+    <li><b>Descente à la grue</b><span>La coque, fabriquée en France, se pose sur un lit de gravier compacté.</span></li>
+    <li><b>Remblai et mise en eau</b><span>Les deux montent ensemble, pour que la coque ne force jamais.</span></li>
+    <li><b>Margelles et plage</b><span>Finitions, mise en service, explications&nbsp;: garantie décennale fabricant et pose.</span></li>
+   </ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
+
+<section class="hgal" aria-label="Réalisations">
+ <div class="stick">
+  <div class="wrap head"><h2>Des jardins du Pays d'Aix, et leur piscine.</h2><span class="count" id="gcount">01 / 04</span></div>
+  <div class="track" id="track">
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://www.sud-est-piscines.fr/wp-content/uploads/2020/12/pisciniste-aix-en-provence-scaled.jpg" alt="Piscine rectangulaire au milieu d'une pelouse, pool house et cyprès" onerror="this.style.visibility='hidden'"></div><figcaption><b>Bassin rectangulaire, pelouse et pool house</b><span>Pays d'Aix</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://www.sud-est-piscines.fr/wp-content/uploads/2018/11/piscine-beton-aix-en-provence-e1607333376964.jpg" alt="Piscine béton entourée d'une terrasse en bois devant une maison en pierre" onerror="this.style.visibility='hidden'"></div><figcaption><b>Piscine béton, terrasse bois</b><span>Aix-en-Provence</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://www.sud-est-piscines.fr/wp-content/uploads/2018/11/gamme-premium-e1607333430154.jpg" alt="Piscine coque à fond clair avec volet, plage en pierre et pelouse" onerror="this.style.visibility='hidden'"></div><figcaption><b>Coque à fond clair, volet intégré</b><span>Aix-en-Provence</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img loading="lazy" src="https://www.sud-est-piscines.fr/wp-content/uploads/2025/03/PHOTO-6.jpg" alt="Bassin bordé de lames de bois, eau turquoise" onerror="this.style.visibility='hidden'"></div><figcaption><b>Plage immergée et bois exotique</b><span>Réalisation 2025</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="pad" id="saison"><div class="wrap">
+ <p class="eyebrow rise">Et après la mise en eau</p>
+ <h2 class="rise">Une piscine se vit douze mois. On reste là les douze.</h2>
+ <div class="year rise" id="year">
+  <div class="months" aria-hidden="true"><i class="k1" style="--h:62%"></i><i class="k1" style="--h:66%"></i><i class="k2" style="--h:74%"></i><i class="k2" style="--h:82%"></i><i class="k3" style="--h:88%"></i><i class="k3" style="--h:96%"></i><i class="k3" style="--h:100%"></i><i class="k3" style="--h:100%"></i><i class="k3" style="--h:90%"></i><i class="k4" style="--h:72%"></i><i class="k4" style="--h:66%"></i><i class="k1" style="--h:60%"></i></div>
+  <div class="mlab" aria-hidden="true"><span>Janv.</span><span>Févr.</span><span>Mars</span><span>Avr.</span><span>Mai</span><span>Juin</span><span>Juil.</span><span>Août</span><span>Sept.</span><span>Oct.</span><span>Nov.</span><span>Déc.</span></div>
+  <div class="phases">
+   <div style="--c:var(--brand)"><em>Décembre à février</em><b>Le temps des chantiers</b><p>Étude sur place, devis détaillé, terrassement&nbsp;: c'est l'hiver qu'on prépare l'été.</p></div>
+   <div style="--c:var(--lagoon)"><em>Mars et avril</em><b>Mise en service</b><p>Remise en route de la filtration, traitement de départ, contrôle des équipements.</p></div>
+   <div style="--c:var(--sun)"><em>Mai à septembre</em><b>Baignade et entretien</b><p>Contrat d'entretien, dépannage, remplacement de pompe ou de filtration, conseils en magasin.</p></div>
+   <div style="--c:#9AA1B8"><em>Octobre et novembre</em><b>Hivernage</b><p>Mise en hivernage, couverture, et rénovations&nbsp;: liner, PVC armé, mini-plage.</p></div>
+  </div>
+ </div>
+ <div class="shop">
+  <figure class="rise zone" aria-label="Zone d'intervention autour de Ventabren"><svg viewBox="0 0 840 600" role="img" aria-label="Carte de la zone d'intervention : Ventabren, Aix-en-Provence, Éguilles, Lambesc, Pertuis et le Sud-Luberon">
+   <rect width="840" height="600" fill="#141A3D"/>
+   <path d="M-20 560 C40 500 160 520 210 560 S240 640 200 660 L-20 660 Z" fill="#22306a"/><text x="24" y="585" font-size="15" fill="#8d95bd">Étang de Berre</text>
+   <path class="drw" d="M0 122 C180 110 360 150 500 178 S740 184 840 168" fill="none" stroke="#2FB3C4" stroke-width="3" pathLength="1"/><text x="40" y="104" font-size="15" fill="#8d95bd">Durance</text>
+   <text x="560" y="70" font-size="15" fill="#8d95bd">Sud-Luberon</text>
+   <path d="M650 470 L690 430 L715 444 L745 418 L790 438 L840 452" fill="none" stroke="#9AA1B8" stroke-width="2"/><text x="680" y="500" font-size="15" fill="#8d95bd">Sainte-Victoire</text>
+   <g fill="none" stroke="#3B4394" stroke-dasharray="4 8"><circle cx="343" cy="436" r="130"/><circle cx="343" cy="436" r="260"/></g>
+   <g fill="#E6E9F4" font-size="17"><circle cx="553" cy="452" r="6"/><text x="566" y="458">Aix-en-Provence</text><circle cx="428" cy="380" r="6"/><text x="441" y="386">Éguilles</text><circle cx="297" cy="227" r="6"/><text x="310" y="233">Lambesc</text><circle cx="633" cy="160" r="6"/><text x="646" y="166">Pertuis</text></g>
+   <circle class="pulse" cx="343" cy="436" r="12" fill="none" stroke="#F2BE3A" stroke-width="2"/><circle cx="343" cy="436" r="8" fill="#F2BE3A"/><text x="250" y="474" font-size="19" font-weight="700" fill="#F2BE3A">Ventabren</text>
+  </svg></figure>
+  <div class="rise">
+   <p class="eyebrow">Le magasin de Ventabren</p>
+   <h2 style="font-size:clamp(1.8rem,3.2vw,2.8rem)">La pièce introuvable ailleurs, on l'a souvent.</h2>
+   <p class="lede" style="margin-top:1rem">Au bord de la route de Berre, notre magasin est ouvert six jours sur sept en saison. On vous répond vite, et on connaît votre bassin.</p>
+   <ul>
+    <li>Traitement de l'eau<span>chlore, brome, sel, régulation du pH, spa</span></li>
+    <li>Pièces détachées<span>skimmers, projecteurs, pompes, filtration</span></li>
+    <li>Protection<span>alarmes, barrières, volets, couvertures 4 saisons</span></li>
+    <li>Accessoires<span>nettoyage, robots, loisirs dans l'eau</span></li>
+   </ul>
+  </div>
+ </div>
+</div></section>
+
+<section class="pad" style="padding-top:0"><div class="wrap">
+ <h2 class="rise">Votre piscine, de la visite à la première baignade.</h2>
+ <ol class="steps">
+  <li class="rise"><h3>Étude sur place</h3><p>Mesures, implantation, exposition, abords, emplacement du local technique.</p></li>
+  <li class="rise"><h3>Propositions sur mesure</h3><p>Forme, dimensions, couleur, filtration, traitement de l'eau, volet ou couverture.</p></li>
+  <li class="rise"><h3>Devis détaillé</h3><p>Chaque poste chiffré à part, pour comparer en toute clarté.</p></li>
+  <li class="rise"><h3>Pose par nos équipes</h3><p>De la fouille à la mise en route, puis les conseils pour bien vivre votre piscine.</p></li>
+ </ol>
+</div></section>
+
+<section class="pad estimate" id="estimateur"><div class="wrap">
+ <h2>Composez votre piscine.</h2>
+ <p class="lede" style="margin-top:1rem">Une minute, cinq choix. Le bassin se dessine sous vos yeux, et le budget s'affine à chaque réponse.</p>
+ <div class="cfg">
+  <div class="preview"><div class="p3d" id="p3d" aria-label="Aperçu 3D de votre piscine, faites glisser pour tourner autour"><canvas id="pool3d"></canvas><div class="p3d-ui"><span>Faites glisser pour tourner</span><button type="button" id="dayNight">Voir de nuit</button></div></div>
+   <svg viewBox="0 0 420 300" aria-hidden="true">
+    <rect x="0" y="0" width="420" height="300" rx="10" fill="#5f8a4c"/>
+    <g id="pvPool" class="pv-anim"><rect id="pvCoping" x="90" y="80" width="240" height="140" rx="3" fill="#E9E6DD"/><rect id="pvWater" x="100" y="90" width="220" height="120" rx="2" fill="#5CC8D0" style="transition:fill .6s"/><path d="M100 90 h40 v26 h-14 v26 h-12 v26 h-14 z" fill="#ffffff" opacity=".35"/>
+     <g id="pvVolet" opacity="0"><rect x="100" y="90" width="220" height="120" fill="#cfd5df" opacity=".9"/></g></g>
+    <text id="pvLabel" x="210" y="284" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="12" fill="#fff"></text>
+   </svg>
+   <div class="live"><div><span>Budget estimé</span><b id="liveRange">—</b></div><small>Ordre de grandeur indicatif, affiné lors de l'étude sur place.</small></div>
+   <div class="season" aria-live="polite"><div class="m" id="seasonBar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="lab"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div><p id="seasonTxt"></p></div>
+  </div>
+  <div class="panel" aria-live="polite">
+   <ol class="chips" id="chips"></ol>
+   <form id="est" novalidate>
+    <fieldset data-s data-n="Projet"><legend>Quel projet avez-vous&nbsp;?</legend><div class="choices">
+     <div class="choice"><input type="radio" name="type" id="t1" value="coque" checked><label for="t1">Piscine coque<small>Pose rapide, entretien facile, fabrication française</small></label></div>
+     <div class="choice"><input type="radio" name="type" id="t2" value="beton"><label for="t2">Piscine béton<small>Toutes formes, liner ou PVC armé</small></label></div>
+     <div class="choice"><input type="radio" name="type" id="t3" value="hesite"><label for="t3">J'hésite entre les deux<small>On compare chez vous</small></label></div>
+     <div class="choice"><input type="radio" name="type" id="t4" value="renovation"><label for="t4">Rénover ma piscine<small>Liner, PVC armé, mini-plage, fond</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Taille" hidden><legend>Quelle taille de bassin&nbsp;?</legend><p class="hint">Repère&nbsp;: pour une famille de quatre, le 8 × 4 m est le plus demandé.</p><div class="choices">
+     <div class="choice"><input type="radio" name="size" id="s1" value="7x3.5"><label for="s1">7 × 3,5 m<small>Jardin de ville, détente</small></label></div>
+     <div class="choice"><input type="radio" name="size" id="s2" value="8x4" checked><label for="s2">8 × 4 m<small>Le format familial</small></label></div>
+     <div class="choice"><input type="radio" name="size" id="s3" value="9x4"><label for="s3">9 × 4 m<small>Pour nager quelques longueurs</small></label></div>
+     <div class="choice"><input type="radio" name="size" id="s4" value="10x4.5"><label for="s4">10 × 4,5 m et plus<small>Grand jardin, réceptions</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Couleur" hidden><legend>Quelle couleur d'eau&nbsp;?</legend><p class="hint">La couleur du bassin fait celle de l'eau.</p><div class="choices">
+     <div class="choice"><input type="radio" name="col" id="c1" value="blanc" checked><label for="c1"><span class="swatch" style="background:#7FDCE0"></span>Blanc<small>Eau lagon, très lumineuse</small></label></div>
+     <div class="choice"><input type="radio" name="col" id="c2" value="sable"><label for="c2"><span class="swatch" style="background:#4FC2B6"></span>Sable<small>Eau turquoise, ton naturel</small></label></div>
+     <div class="choice"><input type="radio" name="col" id="c3" value="gris"><label for="c3"><span class="swatch" style="background:#2D8A98"></span>Gris<small>Eau bleu-vert, effet minéral</small></label></div>
+     <div class="choice"><input type="radio" name="col" id="c4" value="bleu"><label for="c4"><span class="swatch" style="background:#2672B5"></span>Bleu<small>Le bleu classique</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Équipements" hidden><legend>Des équipements ou contraintes&nbsp;?</legend><p class="hint">Plusieurs choix possibles, ou aucun.</p><div class="choices">
+     <div class="choice"><input type="checkbox" name="opt" id="o1" value="volet" data-a="6000" data-b="10000"><label for="o1">Volet<small>Sécurité, eau plus chaude</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o2" value="pac" data-a="3500" data-b="6000"><label for="o2">Pompe à chaleur<small>Baignade d'avril à octobre</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o3" value="sel" data-a="1500" data-b="2800"><label for="o3">Électrolyse au sel<small>Une eau plus douce</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o4" value="terrain" data-a="3000" data-b="10000"><label for="o4">Terrain rocheux ou accès étroit<small>On vérifie à l'étude</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o5" value="entretien" data-a="0" data-b="0"><label for="o5">Contrat d'entretien<small>Mise en service, suivi, hivernage</small></label></div></div></fieldset>
+    <fieldset data-s data-n="Calendrier" hidden><legend>Quand aimeriez-vous vous baigner&nbsp;?</legend><p class="countdown" id="countdown"></p><div class="choices">
+     <div class="choice"><input type="radio" name="when" id="w1" value="Juin 2027" checked><label for="w1">Juin 2027</label></div>
+     <div class="choice"><input type="radio" name="when" id="w2" value="Fin d'été 2027"><label for="w2">Fin d'été 2027</label></div>
+     <div class="choice"><input type="radio" name="when" id="w3" value="2028"><label for="w3">2028</label></div>
+     <div class="choice"><input type="radio" name="when" id="w4" value="Je me renseigne"><label for="w4">Je me renseigne</label></div></div></fieldset>
+    <div data-s data-n="Envoi" hidden><p style="font-family:var(--d);font-weight:600;font-size:1.25rem;color:#fff;margin:0 0 1rem">Votre projet est prêt.</p><ul class="recap" id="recap"></ul>
+     <div class="field"><label for="n">Nom</label><input id="n" autocomplete="name"></div>
+     <div class="field"><label for="p">Téléphone</label><input id="p" type="tel" autocomplete="tel"></div>
+     <div class="field"><label for="cm">Commune du projet</label><input id="cm" autocomplete="address-level2" placeholder="Éguilles, Lambesc, Aix…"></div>
+     <div class="send-row"><a class="btn" id="mailBtn" href="mailto:sudestpiscines@gmail.com">Envoyer mon projet par email</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien de mon projet</button><span class="copied" id="copied" hidden>Lien copié</span></div></div>
+    <div class="est-nav"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn" id="next" style="margin-left:auto">Continuer</button></div>
+   </form>
+   <p class="note">Fourchettes de démonstration, à valider avec vous et calibrées sur vos vrais prix avant la mise en ligne.</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="pad"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise"><div class="score">5/5<small><span class="stars">★★★★★</span> Pages Jaunes, et vos clients sur Google et Facebook</small></div><h2>Ce qu'en disent ceux qu'on suit depuis des années.</h2></div>
+  <div class="marquee" aria-label="Avis clients"><div class="mq-track">
+   <figure class="rcard"><blockquote>Un skimmer et un projecteur pour ma coque, introuvables ailleurs&nbsp;: ils les avaient. Une équipe à l'écoute, réactive et très sympathique.</blockquote><figcaption>Google · Pièces détachées</figcaption></figure>
+   <figure class="rcard"><blockquote>Plus de sept ans d'entretien et de conseils pour notre piscine au sel. Un vrai service après-vente, et des délais tenus.</blockquote><figcaption>Pages Jaunes · Entretien</figcaption></figure>
+   <figure class="rcard"><blockquote>Ils ont pris le temps d'étudier notre projet, et nous ont envoyé leur proposition juste avant de partir en congés. Un professionnalisme excellent.</blockquote><figcaption>Google · Projet de construction</figcaption></figure>
+   <figure class="rcard"><blockquote>Une équipe sérieuse et professionnelle, et un personnel accueillant.</blockquote><figcaption>Pages Jaunes · Accueil</figcaption></figure>
+   <figure class="rcard"><blockquote>Une prestation excellente. Je les recommande vivement.</blockquote><figcaption>Pages Jaunes</figcaption></figure>
+   <figure class="rcard"><blockquote>À recommander sans la moindre hésitation.</blockquote><figcaption>Facebook</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Un skimmer et un projecteur pour ma coque, introuvables ailleurs&nbsp;: ils les avaient. Une équipe à l'écoute, réactive et très sympathique.</blockquote><figcaption>Google · Pièces détachées</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Plus de sept ans d'entretien et de conseils pour notre piscine au sel. Un vrai service après-vente, et des délais tenus.</blockquote><figcaption>Pages Jaunes · Entretien</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Ils ont pris le temps d'étudier notre projet, et nous ont envoyé leur proposition juste avant de partir en congés. Un professionnalisme excellent.</blockquote><figcaption>Google · Projet de construction</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Une équipe sérieuse et professionnelle, et un personnel accueillant.</blockquote><figcaption>Pages Jaunes · Accueil</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Une prestation excellente. Je les recommande vivement.</blockquote><figcaption>Pages Jaunes</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>À recommander sans la moindre hésitation.</blockquote><figcaption>Facebook</figcaption></figure>
+  </div></div>
+  <p class="note-rv">Extraits reformulés de vos avis Google, Facebook et Pages Jaunes pour la maquette. Dans le site final, vos avis s'affichent en version originale et se mettent à jour automatiquement.</p>
+ </div>
+ <div class="faq">
+  <h2 class="rise">Les questions qu'on nous pose au magasin.</h2>
+  <div class="faq-list">
+   <details><summary>Coque ou béton, que choisir&nbsp;?</summary><p>La coque se pose vite, s'entretient facilement et arrive étanche&nbsp;; les nôtres sont fabriquées en France, avec une garantie décennale fabricant et pose. Le béton permet toutes les formes et toutes les dimensions, avec un revêtement liner ou PVC armé. Lors de l'étude sur place, on vous conseille selon votre terrain et votre budget.</p></details>
+   <details><summary>Combien coûte une piscine&nbsp;?</summary><p>Tout dépend du type de bassin, de la taille et des équipements. Le configurateur plus haut vous donne un ordre de grandeur en une minute, puis notre devis détaille chaque poste, gratuitement.</p></details>
+   <details><summary>Quand lancer mon projet pour me baigner en juin&nbsp;?</summary><p>La déclaration préalable en mairie demande en général un mois, avant le chantier. Pour nager dès les premières chaleurs, le bon moment pour valider votre projet, c'est l'hiver.</p></details>
+   <details><summary>Ma pompe a lâché ou mon eau a verdi en plein été.</summary><p>Appelez le 04 42 63 29 83. En saison, le magasin est ouvert six jours sur sept&nbsp;: dépannage, remplacement de pompe ou de filtration, et le bon traitement pour retrouver une eau claire, même si nous n'avons pas construit votre piscine.</p></details>
+   <details><summary>Mon terrain est rocheux, ou l'accès au jardin est étroit.</summary><p>C'est fréquent dans le Pays d'Aix, et c'est précisément ce que l'étude sur place vérifie&nbsp;: nature du sol, passage des engins et de la coque, exposition, abords et local technique.</p></details>
+   <details><summary>Un dispositif de sécurité est-il obligatoire&nbsp;?</summary><p>Oui, toute piscine enterrée privée doit en avoir au moins un, conforme aux normes. Nous posons les quatre&nbsp;: alarme, barrière, volet et couverture à barres quatre saisons.</p></details>
+   <details><summary>Rénovez-vous les piscines existantes&nbsp;?</summary><p>Oui&nbsp;: changement de liner ou de PVC armé, création d'une mini-plage, rehaussement du fond, remplacement de la filtration.</p></details>
+   <details><summary>Proposez-vous un contrat d'entretien&nbsp;?</summary><p>Oui&nbsp;: mise en service au printemps, entretien pendant la saison, hivernage à l'automne. Beaucoup de nos clients nous confient leur bassin depuis des années.</p></details>
+   <details><summary>Intervenez-vous dans ma commune&nbsp;?</summary><p>Dans les Bouches-du-Rhône, le Sud-Luberon et le pays de Pertuis&nbsp;: Ventabren, Aix-en-Provence, Éguilles, Lambesc et les communes voisines.</p></details>
+  </div>
+ </div>
+ <div class="contact" style="margin-top:5rem">
+  <div><h2>Venez nous voir à Ventabren.</h2><a class="bigtel" href="tel:+33442632983">04 42 63 29 83</a><p style="margin:0;color:var(--soft)">909 route de Berre (CD 10), 13122 Ventabren<br>De 9 h à 18 h, six jours sur sept en saison<br><a href="mailto:sudestpiscines@gmail.com">sudestpiscines@gmail.com</a></p></div>
+  <div><p style="color:var(--soft);margin-top:0">Construction, rénovation, entretien et magasin&nbsp;: une seule équipe pour toute la vie de votre piscine, dans les Bouches-du-Rhône, le Sud-Luberon et le pays de Pertuis.</p><a class="btn" href="#estimateur">Estimer ma piscine</a></div>
+ </div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+ <div><span style="display:flex;align-items:center;gap:.6rem;color:var(--ink);font-weight:700"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true" style="color:var(--brand)"><circle cx="16" cy="12" r="5.2" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M3 21c3.2-2.6 6.5 2.6 9.7 0s6.5 2.6 9.7 0 4.8-1.4 6.6-.6M3 27c3.2-2.6 6.5 2.6 9.7 0s6.5 2.6 9.7 0 4.8-1.4 6.6-.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Sud Est Piscines</span><span style="display:block;margin-top:.4rem">Pisciniste à Ventabren. Adhérent de la Fédération des Professionnels de la Piscine et du Spa.</span></div>
+ <form class="nl-form" id="nlForm" novalidate><label for="nlMail">Recevoir nos réalisations et conseils chaque mois</label><div class="nl-row"><input id="nlMail" type="email" placeholder="Votre email" autocomplete="email"><button class="btn" type="submit">Recevoir</button></div><span class="nl-ok" id="nlOk" hidden>Merci, c'est noté. Démonstration&nbsp;: aucun envoi réel.</span></form>
+</div></footer>
+
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Monsieur Chave, voici ce que nous avons relevé sur sud-est-piscines.fr, et ce que la nouvelle version apporte.</p>
+ <ul class="audit">
+  <li><div class="now"><b>Aujourd'hui</b>Le devis passe par une page contact générique&nbsp;: le visiteur ne sait ni quoi demander, ni à quel budget s'attendre.</div><div><b>Avec la refonte</b>Un configurateur coque ou béton en cinq questions, avec bassin 3D et fourchette de prix&nbsp;: les demandes arrivent déjà qualifiées.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Des photos de banque d'images (nageuse, bouée, chapeau de paille) occupent la place de vos 500 piscines, et aucune galerie de réalisations.</div><div><b>Avec la refonte</b>Uniquement vos bassins, mis en scène au défilement, et la pose d'une coque expliquée en dix secondes.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>« Plus de 30 ans » et « depuis 2010 » sur la même page, un copyright 2021 et un titre de diaporama resté en anglais (« Garden Systems Installer »).</div><div><b>Avec la refonte</b>Des textes cohérents, écrits pour vos clients du Pays d'Aix.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Peu d'avis visibles&nbsp;: quatre témoignages anciens sur le site, trois avis sur Pages Jaunes dont le dernier date de 2022, et aucune note affichée.</div><div><b>Avec la refonte</b>Vos avis mis en scène et une FAQ qui répond avant l'appel, y compris aux urgences de l'été.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Des photos de 1 à 2 Mo chargées telles quelles et un diaporama lourd, sans bouton d'appel toujours visible sur mobile.</div><div><b>Avec la refonte</b>Une page légère, une barre Appeler / Estimer en bas de l'écran, et une version anglaise pour la clientèle internationale d'Aix.</div></li>
+ </ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Formulaire de devis, avis Google, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + estimateur de budget</li><li>FR, EN, IT</li><li>4 pages par ville</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + eau de piscine animée en temps réel (WebGL)</li><li>Pose d'une coque et galerie animées au défilement, à 120 images/s</li><li>Bassin 3D configurable, de jour comme de nuit</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+<div class="addons">
+ <div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens clients et à vos contacts&nbsp;: mise en service au printemps, hivernage à l'automne, nouveautés du magasin, réalisations récentes. Rédigé, mis en page et envoyé pour vous.</p></div>
+ <div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos clients après chaque pose ou intervention d'entretien, bilan mensuel.</p></div>
+ <div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Allemand, néerlandais ou une autre langue de votre clientèle du Pays d'Aix, traduite et tenue à jour avec le reste du site.</p></div>
+</div>
+<p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Sud%20Est%20Piscines">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+
+<div class="mbar"><a class="btn ghost" href="tel:+33442632983">Appeler</a><a class="btn" href="#estimateur">Estimer</a></div>
+
+<script src="../lib/lenis.min.js"></script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lenis=null;
+if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});window.lenis=lenis;}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+
+/* ---------- Ouverture : eau de piscine, carrelage réfracté, ombre de pin, vaguelettes au pointeur ---------- */
+var cv=document.getElementById('water'),gl=null;try{gl=cv.getContext('webgl',{antialias:false,alpha:false});}catch(e){}
+var heroVisible=true,t0=performance.now();
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ var fs=['precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;uniform vec3 rp[4];',
+ 'float hs(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+ 'float vn(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hs(i),hs(i+vec2(1.,0.)),f.x),mix(hs(i+vec2(0.,1.)),hs(i+vec2(1.,1.)),f.x),f.y);}',
+ 'float fbm(vec2 p){float v=0.,a=.5;for(int k=0;k<4;k++){v+=a*vn(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}',
+ 'float H(vec2 p){float h=sin(dot(p,vec2(.9,.4))*3.1+t*1.1)*.05+sin(dot(p,vec2(-.5,.8))*4.3+t*1.4)*.035+sin(dot(p,vec2(.2,-1.))*7.7+t*2.1)*.015;',
+ ' h+=(vn(p*2.6+vec2(t*.2,t*.13))-.5)*.05;',
+ ' for(int k=0;k<4;k++){vec3 R=rp[k];float a=t-R.z;if(a>0.&&a<4.){float d=length(p-R.xy);float x=d-a*.55;h+=sin(x*34.)*exp(-x*x*40.)*exp(-a*1.1)*.05;}}return h;}',
+ 'float caus(vec2 p){vec2 i=p;float c=1.;for(int k=0;k<4;k++){float tt=t*(.32+float(k)*.11);i=p+vec2(cos(tt-i.x)+sin(tt+i.y),sin(tt-i.y)+cos(tt+i.x));c+=1./length(vec2(p.x/(sin(i.x+tt)/.005),p.y/(cos(i.y+tt)/.005)));}c/=5.;c=1.17-pow(c,1.4);return clamp(pow(abs(c),8.),0.,1.);}',
+ 'void main(){vec2 uv=gl_FragCoord.xy/r;float asp=r.x/r.y;vec2 p=vec2((uv.x-.5)*asp,uv.y-.5)*2.;',
+ ' float e=.004;float hx=H(p+vec2(e,0.))-H(p-vec2(e,0.));float hy=H(p+vec2(0.,e))-H(p-vec2(0.,e));vec3 n=normalize(vec3(-hx,-hy,2.*e));',
+ ' vec2 fl=p+n.xy*.42+(m-.5)*.06;vec2 g=fl*6.5+vec2(.5,.5);vec2 f=fract(g)-.5;float tid=hs(floor(g));',
+ ' float grout=smoothstep(.43,.49,max(abs(f.x),abs(f.y)));',
+ ' vec3 col=mix(vec3(.05,.27,.50),vec3(.12,.58,.70),smoothstep(-.2,1.1,uv.y));col*=.93+.12*tid;col=mix(col,vec3(.72,.88,.92),grout*.28);',
+ ' float sh=smoothstep(.48,.62,fbm(fl*1.25+vec2(sin(t*.31)*.12,cos(t*.23)*.06)))*smoothstep(-.2,.9,-p.x/asp*.8+uv.y*.9);',
+ ' float c=caus(fl*3.6+vec2(40.,37.));col+=vec3(.8,1.,.95)*c*.42*(1.-sh*.9)*mix(.15,1.,smoothstep(.2,asp<1.?.95:.8,uv.y));col*=1.-sh*.38;',
+ ' vec3 L=normalize(vec3(.14,.2,1.));vec3 Rf=reflect(vec3(0.,0.,-1.),n);float sp=pow(max(dot(Rf,L),0.),900.)*3.;col+=vec3(1.,.93,.75)*sp*(1.-sh)*smoothstep(.5,.92,uv.y);',
+ ' float tp=asp<1.?.95:.78;col=mix(col,vec3(.07,.09,.23),(1.-smoothstep(.0,tp,uv.y))*.86);col*=1.-.25*length(uv-vec2(.55,.65));',
+ ' gl_FragColor=vec4(col,1.);}'].join('\n');
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(o));return o;}
+ var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m'),urp=gl.getUniformLocation(pr,'rp');
+ var rp=new Float32Array([0,0,-9,0,0,-9,0,0,-9,0,0,-9]),ri=0,lastR=0,mx=.5,my=.5,tx=.5,ty=.5;
+ function now(){return(performance.now()-t0)/1000;}
+ function drop(x,y){var a=cv.clientWidth/cv.clientHeight;rp[ri*3]=(x-.5)*a*2;rp[ri*3+1]=(y-.5)*2;rp[ri*3+2]=now();ri=(ri+1)%4;lastR=performance.now();}
+ addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;if(heroVisible&&performance.now()-lastR>260)drop(tx,ty);});
+ cv.parentNode.addEventListener('pointerdown',function(e){var b=cv.getBoundingClientRect();drop((e.clientX-b.left)/b.width,1-(e.clientY-b.top)/b.height);});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5);cv.width=Math.max(1,cv.clientWidth*d*.6);cv.height=Math.max(1,cv.clientHeight*d*.6);gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ window.__drawWater=function(ms){if(!heroVisible)return;var s=RM?8:(ms-t0)/1000;if(!RM&&performance.now()-lastR>2600)drop(.25+Math.random()*.6,.45+Math.random()*.45);mx+=(tx-mx)*.05;my+=(ty-my)*.05;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,s);gl.uniform2f(um,mx,my);gl.uniform3fv(urp,rp);gl.drawArrays(gl.TRIANGLES,0,3);};
+ window.__drawWater(t0+8000);
+}
+
+/* ---------- Scènes au défilement ---------- */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+function $(id){return document.getElementById(id);}
+var hdr=$('hdr'),proof=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=$('rv'),rvImg=rv.querySelector('img');
+var cutS=document.querySelector('.cut'),ground=$('ground'),hole=$('hole'),gravel=$('gravel'),crane=$('crane'),cable=$('cable'),shell=$('shell'),slings=$('slings'),bfL=$('bfL'),bfR=$('bfR'),wrect=$('wrect'),wave=$('wave'),deck=$('deck'),lbls=document.querySelectorAll('.lbl'),live=document.querySelectorAll('#live li'),meter=$('meter');
+var gS=document.querySelector('.hgal'),track=$('track'),gImgs=track.querySelectorAll('img'),gc=$('gcount'),NG=gImgs.length;
+var factsEl=$('facts'),facts=factsEl.querySelectorAll('b'),factsDone=false;
+function runFacts(){factsDone=true;factsEl.classList.add('on');facts.forEach(function(b){var to=+b.dataset.to,suf=b.dataset.suf||'',st=performance.now();(function tick(n){var k=RM?1:ease(Math.min(1,(n-st)/1500));b.textContent=Math.round(to*k).toLocaleString('fr-FR')+suf;if(k<1)requestAnimationFrame(tick);})(st);});}
+
+function scenes(ms){
+ var solid=scrollY>innerHeight*.85;hdr.classList.toggle('solid',solid);hdr.style.top=solid?'0px':Math.max(0,proof.offsetHeight-scrollY)+'px';
+ var p=prog(rvS);if(!factsDone&&p>.4)runFacts();
+ if(RM)return;
+ var e=ease(seg(p,0,.7)),ins=(1-e)*18;
+ rv.style.clipPath='inset('+ins+'% '+(ins*1.3)+'% '+ins+'% '+(ins*1.3)+'% round '+((1-e)*28)+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ var c=prog(cutS);
+ ground.setAttribute('opacity',seg(c,0,.08));
+ hole.setAttribute('height',150*ease(seg(c,.06,.22)));
+ gravel.setAttribute('opacity',seg(c,.2,.27));
+ crane.setAttribute('opacity',seg(c,.24,.3)*(1-seg(c,.58,.64)));
+ var off=-95*(1-ease(seg(c,.3,.55)));
+ shell.setAttribute('transform','translate(0,'+off+')');shell.setAttribute('opacity',seg(c,.22,.28));
+ slings.setAttribute('opacity',seg(c,.26,.3)*(1-seg(c,.56,.6)));
+ cable.setAttribute('y2',104+off);
+ var w=ease(seg(c,.6,.82));wrect.setAttribute('y',292-136*w);wrect.setAttribute('height',136*w);
+ bfL.setAttribute('height',144*w);bfL.setAttribute('y',294-144*w);bfR.setAttribute('height',144*w);bfR.setAttribute('y',294-144*w);
+ wave.setAttribute('transform','translate('+(Math.sin(ms/700)*10)+','+(132-136*w)+')');
+ deck.setAttribute('opacity',seg(c,.84,.92));
+ var LA=[[.1,.18,.32,.4],[.22,.3,.5,.56],[.5,.56,1.1,1.2],[.64,.7,1.1,1.2]];
+ lbls.forEach(function(l,i){var a=LA[i];l.setAttribute('opacity',seg(c,a[0],a[1])*(1-seg(c,a[2],a[3])));});
+ var st=c<.24?0:c<.58?1:c<.84?2:3;live.forEach(function(li,i){li.classList.toggle('on',i===st);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(16,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ gc.textContent='0'+Math.min(NG,1+Math.floor(g*NG))+' / 0'+NG;
+}
+if(RM){[ground,gravel,crane,deck].forEach(function(x){x.setAttribute('opacity',1);});crane.setAttribute('opacity',0);hole.setAttribute('height',150);wrect.setAttribute('y',156);wrect.setAttribute('height',136);bfL.setAttribute('height',144);bfR.setAttribute('height',144);lbls.forEach(function(l){l.setAttribute('opacity',1);});live.forEach(function(li){li.classList.add('on');});}
+function loop(ms){if(lenis)lenis.raf(ms);if(window.__drawWater&&!RM)window.__drawWater(ms);if(window.__draw3d)window.__draw3d(ms);scenes(ms);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.15});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+document.querySelectorAll('.months i').forEach(function(el,i){el.style.transitionDelay=(i*.05)+'s';});
+
+/* ---------- Configurateur ---------- */
+var SZ={'7x3.5':[7,3.5,[24000,32000]],'8x4':[8,4,[28000,37000]],'9x4':[9,4,[32000,42000]],'10x4.5':[10,4.5,[37000,48000]]};
+var TK={coque:1,beton:1.4,hesite:1.15,renovation:0};
+var TN={coque:'Piscine coque',beton:'Piscine béton',hesite:'Coque ou béton, à comparer',renovation:'Rénovation'};
+var COL={blanc:['Blanc','#7FDCE0'],sable:['Sable','#4FC2B6'],gris:['Gris','#2D8A98'],bleu:['Bleu','#2672B5']};
+var ON={volet:'volet',pac:'pompe à chaleur',sel:'électrolyse au sel',terrain:'terrain rocheux ou accès étroit',entretien:"contrat d'entretien"};
+var f=$('est'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=$('prev'),nx=$('next'),chips=$('chips'),i=0,reached=0,cL=0,cH=0,NS=S.length;
+function val(n){var x=f.querySelector('[name="'+n+'"]:checked');return x?x.value:null;}
+function fmt(n){return(Math.round(n/500)*500).toLocaleString('fr-FR')+' €';}
+function tween(lo,hi){var a0=cL,b0=cH,st=performance.now();cL=lo;cH=hi;(function tk(n){var q=RM?1:ease(Math.min(1,(n-st)/700));$('liveRange').textContent=fmt(a0+(lo-a0)*q)+' – '+fmt(b0+(hi-b0)*q);if(q<1)requestAnimationFrame(tk);})(st);}
+function sizeTxt(s){return s.replace('x',' × ').replace('.',',')+' m';}
+function update(){
+ var t=val('type'),sz=val('size'),cl=val('col'),d=SZ[sz],lo,hi,opts=[];
+ if(t==='renovation'){var k=d[0]*d[1]/32;lo=6000*k;hi=18000*k;}else{lo=d[2][0]*TK[t];hi=d[2][1]*TK[t];}
+ f.querySelectorAll('[name=opt]:checked').forEach(function(o){lo+=+o.dataset.a;hi+=+o.dataset.b;opts.push(o.value);});
+ tween(lo,hi);
+ var sc=d[0]/8;$('pvPool').style.transform='scale('+sc+','+(d[1]/4)+')';
+ $('pvWater').setAttribute('fill',COL[cl][1]);$('pvVolet').setAttribute('opacity',opts.indexOf('volet')>-1?.9:0);
+ if(window.__pool3d)window.__pool3d({t:t,sz:sz,cl:cl,opts:opts});
+ var M=[5,6,7,8],pac=opts.indexOf('pac')>-1,vo=opts.indexOf('volet')>-1;
+ if(pac&&vo)M=[3,4,5,6,7,8,9];else if(pac)M=[4,5,6,7,8,9];else if(vo)M=[4,5,6,7,8];
+ [].forEach.call(document.querySelectorAll('#seasonBar i'),function(el,ix){el.classList.toggle('on',M.indexOf(ix)>-1);});
+ $('seasonTxt').innerHTML='<b>'+M.length+' mois</b> de baignade par an dans le Pays d\'Aix'+(M.length>4?', au lieu de 4':'')+'. Indicatif, selon l\'exposition.';
+ var hs=[t,sz,cl,opts.join('.')||'-',(val('when')||'').replace(/ /g,'_')].join('~');try{history.replaceState(null,'','#projet='+encodeURIComponent(hs));}catch(x){}
+ $('pvLabel').textContent=TN[t]+', '+sizeTxt(sz)+(reached>=2?', '+COL[cl][0].toLowerCase():'');
+ return{t:t,sz:sz,cl:cl,opts:opts,lo:lo,hi:hi};
+}
+function lines(d){return[['Projet',TN[d.t]],['Taille',sizeTxt(d.sz)],['Couleur',COL[d.cl][0]],['Équipements',d.opts.length?d.opts.map(function(o){return ON[o];}).join(', '):'aucun'],['Baignade',val('when')],['Budget indicatif',fmt(d.lo)+' – '+fmt(d.hi)]];}
+function recap(){$('recap').innerHTML=lines(update()).map(function(r){return'<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');}
+function drawChips(){chips.innerHTML='';S.forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===i)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached;b.onclick=function(){i=k;show();};li.appendChild(b);chips.appendChild(li);});}
+function show(){S.forEach(function(el,k){el.hidden=k!==i;if(k===i){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});reached=Math.max(reached,i);pv.hidden=i===0;nx.hidden=i===NS-1;nx.textContent=i===NS-2?'Voir mon projet':'Continuer';drawChips();if(i===NS-1)recap();else update();}
+f.addEventListener('change',function(e){update();if(e.target.type==='radio'&&i<NS-1){var at=i;setTimeout(function(){if(i===at){i++;show();}},420);}});
+nx.onclick=function(){if(i<NS-1){i++;show();}};pv.onclick=function(){if(i>0){i--;show();}};
+(function(){var m=location.hash.match(/projet=([^&]+)/);if(!m)return;var q=decodeURIComponent(m[1]).split('~');function chk(n,v){var x=f.querySelector('[name="'+n+'"][value="'+v+'"]');if(x)x.checked=true;}chk('type',q[0]);chk('size',q[1]);chk('col',q[2]);(q[3]||'').split('.').forEach(function(o){var x=f.querySelector('[name=opt][value="'+o+'"]');if(x)x.checked=true;});chk('when',(q[4]||'').replace(/_/g,' '));})();
+show();
+(function(){var d=new Date(),j=new Date(2027,5,1),w=Math.max(0,Math.round((j-d)/6048e5));$('countdown').innerHTML='Il reste <b>'+w+' semaines</b> avant le 1er juin 2027. Comptez environ un mois de démarches en mairie, puis le chantier&nbsp;: c\'est cet hiver qu\'il faut valider votre projet.';})();
+$('mailBtn').addEventListener('click',function(){var d=update(),who=[$('n').value,$('p').value,$('cm').value].filter(Boolean).join(', ');var body='Bonjour,\n\nVoici mon projet de piscine :\n'+lines(d).map(function(r){return'- '+r[0]+' : '+r[1];}).join('\n')+(who?'\n\n'+who:'')+'\n\nLien du projet : '+location.href;this.href='mailto:sudestpiscines@gmail.com?subject='+encodeURIComponent('Mon projet de piscine')+'&body='+encodeURIComponent(body);});
+$('copyBtn').addEventListener('click',function(){var c=$('copied');(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});
+$('nlForm').addEventListener('submit',function(e){e.preventDefault();$('nlOk').hidden=false;});
+/* ---------- Langues ---------- */
+var L={en:{n1:'Projects',n2:'How we build',n3:'Maintenance',cta1s:'Estimate my pool',kick:'Pool builder in Ventabren, in the heart of the Pays d\'Aix',h1a:'500 pools built',h1b:'from Aix to the Luberon.',h1c:'Yours is next.',lede:'French-made fibreglass shells or custom concrete pools, installed by our own teams. Then our Ventabren shop and technicians look after your water, season after season.',cta1:'Estimate my pool in 1 minute'}},fr={};
+document.querySelectorAll('[data-i]').forEach(function(x){fr[x.dataset.i]=x.textContent;});L.fr=fr;
+window.__pool3dInit=function(){update();};
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(x){if(L[l][x.dataset.i])x.textContent=L[l][x.dataset.i];});};});
+})();
+</script>
+
+<script src="../lib/three.min.js"></script>
+<script>
+(function(){
+var host=document.getElementById('p3d'),cv=document.getElementById('pool3d'),cfgEl=document.querySelector('.cfg');
+if(!window.THREE){cfgEl.classList.add('no3d');return;}
+var T=THREE,R;try{R=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:false});}catch(e){cfgEl.classList.add('no3d');return;}
+R.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
+var scene=new T.Scene(),cam=new T.PerspectiveCamera(34,4/3,.1,200);
+var hemi=new T.HemisphereLight(0xeaf4ff,0x7d8a5a,1.1),sun=new T.DirectionalLight(0xfff0d6,1.7);sun.position.set(-8,14,6);scene.add(hemi,sun);
+var night=false,theta=.7,phi=.95,rad=19,drag=null,idle=0;
+var wU={t:{value:0},c:{value:new T.Color('#7FDCE0')},n:{value:0}};
+var wMat=new T.ShaderMaterial({uniforms:wU,transparent:true,vertexShader:'varying vec2 v;void main(){v=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+fragmentShader:'uniform float t;uniform vec3 c;uniform float n;varying vec2 v;float h(vec2 p){float s=0.;vec2 q=p;for(int k=0;k<3;k++){float f=float(k);q+=vec2(sin(q.y*1.4+t*.7+f),cos(q.x*1.2-t*.6+f*1.3))*.45;s+=sin(q.x*1.7)*cos(q.y*1.5);}return s/3.;}void main(){vec2 p=v*vec2(9.,5.);float a=h(p);float l=pow(1.-smoothstep(0.,.14,abs(a)),2.);vec3 col=mix(c*.72,c*1.08,v.y)+vec3(.8,.97,.97)*l*(.3+.4*n);col=mix(col,col*.3+vec3(.1,.6,.75)*(.6+.4*l),n);gl_FragColor=vec4(col,.92);}'});
+var group=new T.Group();scene.add(group);
+function mat(c,r){return new T.MeshStandardMaterial({color:c,roughness:r==null?.85:r});}
+function box(w,h,d,m,x,y,z){var b=new T.Mesh(new T.BoxGeometry(w,h,d),m);b.position.set(x,y,z);group.add(b);return b;}
+var cfg={t:'coque',sz:'8x4',cl:'blanc',opts:[]};
+var CC={blanc:['#7FDCE0','#F2F3F1'],sable:['#4FC2B6','#E3D7BF'],gris:['#2D8A98','#9EA4AB'],bleu:['#2672B5','#DDE4EC']};
+var SZ={'7x3.5':[7,3.5],'8x4':[8,4],'9x4':[9,4],'10x4.5':[10,4.5]};
+function build(){
+ while(group.children.length)group.remove(group.children[0]);
+ var d=SZ[cfg.sz],L=d[0],W=d[1],cc=CC[cfg.cl],shellM=mat(cc[1],.45),cop=mat(night?'#8b8a86':'#ECE8DE',.75),lawn=mat(night?'#1f2d1c':'#6f9a4f',1),deckM=mat(night?'#6d6a62':'#D9D2C2',.9),D=1.5,G=40;
+ wU.c.value=new T.Color(cc[0]);
+ var P=1.4,oL=L+2*P,oW=W+2*P;box(G,.04,(G-oW)/2,lawn,0,-.02,-(oW/2+(G-oW)/4));box(G,.04,(G-oW)/2,lawn,0,-.02,oW/2+(G-oW)/4);box((G-oL)/2,.04,oW,lawn,-(oL/2+(G-oL)/4),-.02,0);box((G-oL)/2,.04,oW,lawn,oL/2+(G-oL)/4,-.02,0);
+box(L+2*P,.06,P,deckM,0,0,-W/2-P/2);box(L+2*P,.06,P,deckM,0,0,W/2+P/2);box(P,.06,W,deckM,-L/2-P/2,0,0);box(P,.06,W,deckM,L/2+P/2,0,0);
+ box(L,.08,W,shellM,0,-D,0);box(L,D,.08,shellM,0,-D/2,-W/2);box(L,D,.08,shellM,0,-D/2,W/2);box(.08,D,W,shellM,-L/2,-D/2,0);box(.08,D,W,shellM,L/2,-D/2,0);
+ if(cfg.t!=='beton'){var sw=Math.min(2.2,W*.55);for(var s=0;s<3;s++){box(.55,D-(s+1)*.38,sw,shellM,-L/2+.3+s*.55,-D+(D-(s+1)*.38)/2,-W/2+sw/2+.04);}}
+ var w=new T.Mesh(new T.PlaneGeometry(L,W),wMat);w.rotation.x=-Math.PI/2;w.position.y=-.12;group.add(w);
+ var cw=.4;box(L+2*cw,.1,cw,cop,0,.05,-W/2-cw/2);box(L+2*cw,.1,cw,cop,0,.05,W/2+cw/2);box(cw,.1,W,cop,-L/2-cw/2,.05,0);box(cw,.1,W,cop,L/2+cw/2,.05,0);
+ if(cfg.opts.indexOf('volet')>-1){var vm=mat('#d6dbe3',.6),n=Math.floor(L*.45/.22);for(var i=0;i<n;i++)box(.2,.04,W-.1,vm,L/2-.12-i*.22,-.08,0);box(.5,.5,W+.3,mat('#c9ced6'),L/2+.75,.25,0);}
+ if(cfg.opts.indexOf('pac')>-1)box(1,.8,.5,mat('#e8e6e0',.5),-L/2-1.6,.4,W/2+2.4);
+ if(cfg.opts.indexOf('sel')>-1)box(.5,.6,.4,mat('#3B4394',.5),-L/2-.4,.3,W/2+2.4);
+ if(cfg.opts.indexOf('terrain')>-1){var st=mat('#c8b99a',.95);for(var r=0;r<7;r++){box(1+((r*37)%5)*.3,.5+((r*13)%4)*.25,1+((r*7)%3)*.3,st,-G/2+5+r*4.6,.2,-W/2-5-((r*11)%3));}}
+ var lc=night?6:0;for(var k=0;k<3;k++){var pl=new T.PointLight(0x7de8f5,lc,9,1.6);pl.position.set(-L/3+k*L/3,-.9,-W/2+.3);group.add(pl);}
+ rad=Math.max(15,L*1.55+6);
+}
+function setNight(n){night=n;scene.background=new T.Color(n?'#0b1030':'#cfe6f2');scene.fog=new T.Fog(n?'#0b1030':'#cfe6f2',40,120);hemi.intensity=n?.16:1.1;sun.intensity=n?.05:1.7;wU.n.value=n?1:0;document.getElementById('dayNight').textContent=n?'Voir de jour':'Voir de nuit';build();}
+document.getElementById('dayNight').onclick=function(){setNight(!night);};
+host.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY,t:theta,p:phi};try{host.setPointerCapture(e.pointerId);}catch(x){}});
+host.addEventListener('pointermove',function(e){if(!drag)return;theta=drag.t-(e.clientX-drag.x)*.008;phi=Math.min(1.35,Math.max(.45,drag.p-(e.clientY-drag.y)*.005));idle=0;});
+host.addEventListener('pointerup',function(){drag=null;});host.addEventListener('pointercancel',function(){drag=null;});
+var vis=false;new IntersectionObserver(function(en){vis=en[0].isIntersecting;}).observe(host);
+function size(){var w=host.clientWidth,h=host.clientHeight;if(!w||!h)return;R.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}size();addEventListener('resize',size);
+var last=0;window.__draw3d=function(now){if(!vis)return;var dt=Math.min(.05,(now-last)/1000||0);last=now;wU.t.value=now/1000;if(!drag){idle+=dt;if(idle>2.5)theta+=dt*.12;}
+ cam.position.set(Math.sin(theta)*Math.sin(phi)*rad,Math.cos(phi)*rad,Math.cos(theta)*Math.sin(phi)*rad);cam.lookAt(0,-.6,0);R.render(scene,cam);};
+window.__pool3d=function(c){cfg=c;build();};
+setNight(false);
+if(window.__pool3dInit)window.__pool3dInit();
+})();
+</script>
+</body>
+</html>

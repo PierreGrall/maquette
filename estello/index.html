@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mas de l'Estello — maquette préparée par Grall Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,50&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#1E2219;--olive:#6C7850;--water:#5A4E93;--foam:#CEC7EA;--pool:#4C9DAE;--concrete:#ECEAE4;--ink:#1F211C;--soft:#5C5F56;--line:#CBC8BE;--white:#F8F7F3;--d:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;--t:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;--h:"Fraunces",Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--concrete);color:var(--ink);font-family:var(--t);font-size:1.03rem;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.wrap{width:min(1200px,100% - 2rem);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--d);font-weight:700;font-size:.93rem;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;border:1.5px solid var(--water);background:var(--water);color:#fff;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s}
+.btn:hover{transform:translateY(-2px);background:#4A3F80}
+.btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+h1,h2,h3{font-family:var(--d);letter-spacing:-.01em;margin:0}
+h1,h2{font-family:var(--h);font-weight:380;font-variation-settings:"SOFT" 50}
+h2{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.04;max-width:17ch}
+.lede{color:var(--soft);max-width:38rem}
+.kick{font-family:var(--d);font-weight:700;font-size:.8rem;letter-spacing:.04em;color:var(--olive);margin:0 0 .8rem}
+/* Bandeau + header */
+.proof{position:relative;z-index:40;background:#000;color:#D6D3C6;font-family:var(--d);font-size:.8rem}
+.proof .wrap{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;flex-wrap:wrap}
+.proof a{color:#fff}
+header.site{position:fixed;top:34px;left:0;right:0;z-index:30;color:#fff;transition:background .4s,color .4s,top .3s}
+header.site.solid{top:0;background:rgba(236,234,228,.88);backdrop-filter:blur(10px);color:var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:1rem}
+.brand{font-family:var(--d);font-stretch:125%;font-weight:700;font-size:1.3rem;text-decoration:none}
+.hnav{display:flex;align-items:center;gap:1.4rem;font-family:var(--d);font-size:.9rem}
+.hnav a{text-decoration:none;opacity:.85}
+.lang button{font:inherit;font-size:.78rem;background:none;border:1px solid transparent;border-radius:4px;padding:.1rem .35rem;color:inherit;cursor:pointer;opacity:.7}
+.lang button[aria-pressed="true"]{border-color:currentColor;opacity:1}
+
+/* Grall Studio */
+.studio{background:#DEDBD2;border-top:6px solid var(--water);padding:clamp(3.5rem,7vw,6rem) 0}
+.audit{list-style:none;margin:2rem 0 3rem;padding:0;border-top:1px solid #C2BEB2}
+.audit li{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:1rem 0;border-bottom:1px solid #C2BEB2}
+.audit b{display:block;font-family:var(--d);font-size:.8rem;margin-bottom:.15rem}.audit .now{color:var(--soft)}
+.addons{margin:0 0 2rem;max-width:46rem;border-top:1px solid #C2BEB2}.addons div{display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:.85rem 0;border-bottom:1px solid #C2BEB2}.addons b{font-weight:600}.addons span{white-space:nowrap;font-variant-numeric:tabular-nums}.addons p{grid-column:1/-1;margin:0;color:var(--soft);font-size:.95rem}
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem}
+.offer{background:var(--white);border:1px solid #C2BEB2;border-radius:12px;padding:1.5rem}
+.offer.rec{background:var(--deep);color:#e7f2f3;border-color:var(--deep)}
+.offer .tag{font-family:var(--d);font-size:.8rem;color:var(--water);font-weight:600}.offer.rec .tag{color:var(--foam)}
+.offer h3{font-stretch:110%;font-size:1.3rem;margin:.2rem 0}
+.offer .price{font-family:var(--d);font-weight:700;font-size:1.9rem;margin:.5rem 0 0}
+.offer .alt{font-family:var(--d);font-size:.85rem;opacity:.75;margin:0 0 1rem}
+.offer ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}.cta-row p{margin:0;font-size:.95rem;color:var(--soft);max-width:42rem}
+
+.reviews-x{margin-bottom:6rem}.rx-head{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:1rem;width:max-content;animation:mq 48s linear infinite}.marquee:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
+.rcard{margin:0;width:min(78vw,380px);background:var(--white);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem}
+.rcard blockquote{margin:0;font-size:1.06rem;line-height:1.5}.rcard figcaption{font-family:var(--d);font-size:.82rem;color:var(--soft);margin-top:auto}
+.note-rv{font-size:.82rem;color:var(--soft);margin-top:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:3rem;margin-bottom:6rem}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--d);font-weight:600;font-size:1.08rem;padding:1.15rem 2.5rem 1.15rem 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--water),var(--water)) center/14px 2px no-repeat,linear-gradient(var(--water),var(--water)) center/2px 14px no-repeat;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.faq details[open] summary::after{transform:rotate(135deg)}
+.faq details p{margin:0 0 1.2rem;color:var(--soft);max-width:40rem;animation:fq .45s cubic-bezier(.16,1,.3,1)}
+@keyframes fq{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.rx-head,.faq{grid-template-columns:1fr;gap:1.5rem}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none;flex-wrap:wrap;width:auto}}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-stretch:125%;font-weight:700;letter-spacing:-.01em}.lmark{width:28px;height:28px;flex:none}
+.pf-short{display:none}@media(max-width:700px){.pf-long{display:none}.pf-short{display:inline}}
+@media(max-width:600px){.hero-ctas .ghost{display:none}}
+.clogo{height:42px;width:auto;display:block}@media(max-width:600px){.clogo{height:34px}}
+header.site,header.site.solid{background:none!important;backdrop-filter:none!important;box-shadow:none!important}
+header.site .wrap{height:58px;margin-top:.7rem;width:min(1080px,100% - 1.5rem);padding:0 .45rem 0 1.1rem;border-radius:999px;background:rgba(30,34,25,.36);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border:1px solid rgba(255,255,255,.16);color:#fff;transition:background .45s,color .45s,border-color .45s}
+header.site.solid .wrap{background:rgba(248,247,243,.84);color:var(--ink);border-color:rgba(31,33,28,.12)}
+header.site .btn{padding:.6rem 1.1rem}
+#logoSlot{display:inline-flex;align-items:center;height:34px}#logoSlot img,#logoSlot svg{height:34px;width:auto}
+@media(max-width:600px){header.site .wrap{height:52px;padding:0 .5rem 0 .9rem}#logoSlot,#logoSlot img,#logoSlot svg{height:28px}}
+#logoSlot{gap:.6rem}.bname{font-family:var(--d);font-stretch:118%;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;white-space:nowrap}@media(max-width:600px){.bname{font-size:.95rem}}
+
+/* Ouverture : lumière sous le mûrier */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--deep);color:#F4F1E8;overflow:hidden}
+#light{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(2.5rem,7vh,5rem)}
+.hero h1{font-size:clamp(2.1rem,5.6vw,5.6rem);line-height:1.02;max-width:none;font-weight:340}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(108%);transition:transform 1.3s cubic-bezier(.16,1,.3,1)}
+.ready .hero h1 .ln span{transform:none}
+.hero h1 .ln:nth-child(2) span{transition-delay:.12s}.hero h1 .ln:nth-child(3) span{transition-delay:.24s}
+.hero h1 em{font-style:italic;color:var(--foam)}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:2rem;flex-wrap:wrap;opacity:0;transform:translateY(20px);transition:opacity 1s .6s,transform 1s .6s cubic-bezier(.16,1,.3,1)}
+.ready .hero-row{opacity:1;transform:none}
+.hero-row p{max-width:31rem;color:#D9D6C9;margin:0}
+.hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+.wx{font-family:var(--d);font-size:.82rem;color:#BDB9A8;margin-top:.9rem!important}
+.scrollhint{position:absolute;right:1.25rem;bottom:1.25rem;z-index:2;font-family:var(--d);font-size:.75rem;color:#A9A592;writing-mode:vertical-rl}
+@media(max-width:600px){.hero h1{font-size:clamp(1.3rem,5.9vw,2.2rem)}.hero-inner{padding-bottom:5.6rem}.hero .hero-ctas{display:none}.hero-row{margin-top:1.3rem;gap:1.2rem}}
+
+/* Révélation piscine */
+.reveal{height:220vh;position:relative;background:var(--deep)}
+.reveal .stick{position:sticky;top:0;height:100svh;overflow:hidden}
+.reveal figure{margin:0;position:absolute;inset:0;will-change:clip-path;background:#2E4A4F}
+.reveal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal .cap{position:absolute;left:clamp(1rem,4vw,3rem);bottom:clamp(1.5rem,5vh,3rem);color:#fff;z-index:2;max-width:27rem;text-shadow:0 1px 18px rgba(0,0,0,.45)}
+.reveal .cap b{display:block;font-family:var(--h);font-weight:400;font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.08;margin-bottom:.4rem}
+.reveal .cap span{font-size:.92rem}
+.facts{position:absolute;top:clamp(5.5rem,15vh,8rem);right:clamp(1rem,4vw,3rem);z-index:2;display:grid;gap:1.1rem;color:#fff;font-family:var(--d);text-align:right;background:rgba(30,34,25,.42);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:1.1rem 1.3rem}
+.facts b{display:block;font-family:var(--h);font-weight:400;font-size:clamp(1.7rem,3vw,2.6rem);line-height:1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.78rem;color:#E3E0D4}
+
+/* Une journée au mas */
+.day{height:360vh;position:relative;background:var(--deep);color:#E7E4D8}
+.day .stick{position:sticky;top:0;height:100svh;display:flex;align-items:center}
+.day-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:center}
+.day h2{color:#F4F1E8;margin-bottom:1rem;font-size:clamp(1.7rem,2.7vw,2.5rem);max-width:none}
+.day .lede{color:#A8A693;margin:0 0 1.8rem}
+.day svg{width:100%;height:auto;display:block;border-radius:14px;background:#262B20}
+.steps-live{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.steps-live li{border-left:2px solid #3A4030;padding:.15rem 0 .15rem 1rem;opacity:.35;transition:opacity .5s,border-color .5s}
+.steps-live li.on{opacity:1;border-color:var(--foam)}
+.steps-live b{display:block;font-family:var(--d);color:#fff;font-weight:700}
+.steps-live span{font-size:.94rem;color:#B3B19F}
+.meter{height:2px;background:#3A4030;margin-top:1.6rem;overflow:hidden}.meter i{display:block;height:100%;background:var(--foam);transform-origin:left;transform:scaleX(0)}
+
+/* Galerie */
+.hgal{height:360vh;position:relative;background:var(--concrete)}
+.hgal .stick{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:2rem}
+.hgal .track{display:flex;gap:1.2rem;padding-left:max(1rem,calc((100vw - 1200px)/2));will-change:transform}
+.card{flex:0 0 auto;width:min(60vw,700px);margin:0}
+.card .ph{height:min(56vh,500px);overflow:hidden;border-radius:6px;background:#C9C6B6}
+.card img{width:120%;max-width:none;height:100%;object-fit:cover;will-change:transform}
+.card figcaption{font-family:var(--d);margin-top:.8rem;display:flex;justify-content:space-between;gap:1rem}
+.card figcaption b{font-weight:700}.card figcaption span{color:var(--soft);font-size:.9rem}
+.hgal .head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem}
+.count{white-space:nowrap;font-family:var(--d);font-weight:800;font-size:1.05rem;font-variant-numeric:tabular-nums}
+
+/* Logements, visite en profondeur */
+section.pad{padding:clamp(5rem,10vw,8rem) 0}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:2.2rem 0 1.6rem}
+.tabs button{font-family:var(--d);font-weight:700;font-size:.92rem;border-radius:999px;border:1.5px solid var(--line);background:none;color:var(--ink);padding:.6rem 1.1rem;cursor:pointer;transition:background .25s,border-color .25s,color .25s}
+.tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.visit{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,4rem);align-items:center}
+.depth{position:relative;aspect-ratio:4/3;perspective:1200px}
+.depth .lay{position:absolute;margin:0;overflow:hidden;border-radius:8px;background:#C9C6B6;will-change:transform;transition:opacity .6s}
+.depth .lay img{width:100%;height:100%;object-fit:cover}
+.depth .l1{inset:0 12% 10% 0}
+.depth .l2{right:0;bottom:0;width:38%;aspect-ratio:3/4;box-shadow:0 0 0 6px var(--concrete)}
+.depth .l3{right:4%;top:-4%;width:30%;aspect-ratio:4/3;box-shadow:0 0 0 6px var(--concrete)}
+.depth .tagx{position:absolute;left:1rem;top:1rem;z-index:3;font-family:var(--d);font-size:.78rem;font-weight:700;background:rgba(248,247,243,.86);backdrop-filter:blur(8px);border-radius:999px;padding:.35rem .75rem}
+.vinfo h3{font-family:var(--h);font-weight:400;font-size:clamp(1.6rem,2.6vw,2.3rem);line-height:1.1;margin-bottom:.6rem}
+.vinfo .meta{font-family:var(--d);font-weight:700;color:var(--olive);margin:0 0 1rem}
+.vinfo ul{list-style:none;margin:0 0 1.4rem;padding:0;border-top:1px solid var(--line)}
+.vinfo li{padding:.6rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;font-size:.96rem}
+.vinfo li b{font-family:var(--d);font-size:.82rem;color:var(--soft);font-weight:700;padding-top:.1rem}
+.vfade{animation:vf .7s cubic-bezier(.16,1,.3,1)}@keyframes vf{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.rise{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.16,1,.3,1)}.rise.in{opacity:1;transform:none}
+
+/* Réservation directe */
+.book{background:var(--deep);color:#E7E4D8;position:relative;overflow:hidden}
+.book h2{color:#F4F1E8}.book .lede{color:#A8A693}
+.cfg{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:2.5rem;align-items:start}
+.panel{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:clamp(1.1rem,3vw,2rem)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.4rem;padding:0}
+.chips button{font-family:var(--d);font-size:.78rem;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:none;color:#A8A693;padding:.3rem .75rem;cursor:pointer}
+.chips button[aria-current="step"]{background:var(--foam);color:var(--deep);border-color:var(--foam);font-weight:700}
+.chips button.done{color:#fff;border-color:rgba(206,199,234,.5)}.chips button:disabled{cursor:default;opacity:.45}
+fieldset{border:0;margin:0;padding:0;min-width:0}legend{font-family:var(--d);font-weight:700;font-size:1.2rem;margin-bottom:1rem;padding:0;color:#fff}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;height:100%;border:1.5px solid rgba(255,255,255,.16);border-radius:10px;padding:.85rem .95rem;cursor:pointer;font-family:var(--d);font-size:.95rem;line-height:1.3;transition:border-color .2s,background .2s}
+.choice label small{display:block;color:#A8A693;font-size:.8rem;margin-top:.2rem}
+.choice input:checked+label{border-color:var(--foam);background:rgba(206,199,234,.09)}
+.choice input:disabled+label{opacity:.35;cursor:not-allowed}
+.choice input:focus-visible+label{outline:3px solid var(--foam);outline-offset:2px}
+.step-anim{animation:in .55s cubic-bezier(.16,1,.3,1)}@keyframes in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.est-nav{display:flex;justify-content:space-between;margin-top:1.4rem;gap:.8rem}
+.hint{font-size:.85rem;color:#9C9A87;margin:-.4rem 0 1rem}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem;font-family:var(--d);font-weight:700;color:#fff}
+.cal-head button{font:inherit;font-size:.85rem;background:none;border:1px solid rgba(255,255,255,.2);border-radius:999px;color:#fff;padding:.3rem .8rem;cursor:pointer}
+.cal-head button:disabled{opacity:.3;cursor:default}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;font-family:var(--d);font-size:.85rem}
+.cal .dw{text-align:center;font-size:.7rem;color:#8E8C7A;padding-bottom:.2rem}
+.cal button{aspect-ratio:1;border:1px solid rgba(255,255,255,.1);border-radius:8px;background:rgba(255,255,255,.03);color:#fff;font:inherit;cursor:pointer;font-variant-numeric:tabular-nums;transition:background .2s,border-color .2s}
+.cal button.hi{border-color:rgba(206,199,234,.35)}
+.cal button:disabled{opacity:.22;cursor:default}
+.cal button[aria-pressed="true"]{background:var(--foam);color:var(--deep);border-color:var(--foam);font-weight:800}
+.cal-key{display:flex;gap:1rem;flex-wrap:wrap;font-family:var(--d);font-size:.75rem;color:#9C9A87;margin-top:.7rem}
+.cal-key i{display:inline-block;width:10px;height:10px;border-radius:3px;border:1px solid rgba(206,199,234,.6);margin-right:.35rem;vertical-align:-1px}
+.preview{position:sticky;top:90px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1rem;overflow:hidden}
+.pv-ph{position:relative;aspect-ratio:16/10;border-radius:10px;overflow:hidden;background:#3A4030}
+.pv-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s,transform 1.2s cubic-bezier(.16,1,.3,1)}
+.pv-ph img.out{opacity:0;transform:scale(1.06)}
+.pv-ph .pv-badge{position:absolute;left:.7rem;bottom:.7rem;font-family:var(--d);font-size:.78rem;font-weight:700;color:#fff;background:rgba(30,34,25,.55);backdrop-filter:blur(8px);border-radius:999px;padding:.35rem .75rem}
+.months{margin-top:1rem;font-family:var(--d)}
+.months .m{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;margin:.35rem 0}
+.months .m i{height:9px;border-radius:2px;background:rgba(255,255,255,.07);transition:background .5s}
+.months .m i.mid{background:rgba(206,199,234,.28)}.months .m i.high{background:rgba(206,199,234,.55)}.months .m i.sel{background:#fff}
+.months .lab{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;font-size:.6rem;color:#8E8C7A;text-align:center}
+.live{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-top:1rem;font-family:var(--d)}
+.live span{font-size:.8rem;color:#A8A693}.live b{display:block;white-space:nowrap;font-family:var(--h);font-weight:400;font-size:clamp(1.6rem,2.6vw,2.2rem);color:#fff;font-variant-numeric:tabular-nums}
+.live small{font-size:.8rem;color:#A8A693;text-align:right;max-width:13rem}
+.vs{margin-top:.9rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.8rem;display:grid;gap:.35rem;font-family:var(--d);font-size:.86rem}
+.vs div{display:flex;justify-content:space-between;gap:1rem}.vs span{color:#A8A693}.vs b{font-variant-numeric:tabular-nums;color:#fff}
+.vs .gain b{color:var(--foam)}.vs p{margin:.2rem 0 0;font-size:.75rem;color:#8E8C7A}
+.recap{list-style:none;padding:0;margin:0 0 1rem;font-family:var(--d);font-size:.9rem;display:grid;gap:.3rem}
+.recap li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(255,255,255,.08);padding:.35rem 0}.recap li span{color:#A8A693}
+.send-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.btn.wa{background:#1F8F52;border-color:#1F8F52}.btn.wa:hover{background:#18763F}
+.copied{font-family:var(--d);font-size:.82rem;color:var(--foam);align-self:center}
+.note{font-size:.82rem;color:#8E8C7A;margin-top:1rem}
+[hidden]{display:none!important}
+
+/* Preuves, FAQ, contact */
+.score{font-family:var(--h);font-weight:400;font-size:4.4rem;line-height:1}.score small{display:block;font-family:var(--d);font-size:.85rem;color:var(--soft);margin-top:.4rem;max-width:14rem;line-height:1.4}
+.rcard .who{font-family:var(--d);font-weight:700;font-size:.8rem;color:var(--olive)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.bigtel{font-family:var(--h);font-weight:400;font-size:clamp(2.2rem,5vw,3.8rem);text-decoration:none;display:inline-block;margin:.4rem 0 1rem;white-space:nowrap}
+footer.site{border-top:1px solid var(--line);padding:2.5rem 0 6rem;font-family:var(--d);font-size:.85rem;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:flex-end}
+.nl-form{display:grid;gap:.45rem;max-width:26rem}.nl-form label{font-weight:700;color:var(--ink)}
+.nl-row{display:flex;gap:.5rem}.nl-row input{flex:1;min-width:0;font:inherit;padding:.65rem .9rem;border:1.5px solid var(--line);border-radius:999px;background:var(--white)}
+.nl-row .btn{padding:.65rem 1.1rem}
+.nl-ok{color:var(--olive);font-weight:700;margin:0}
+
+.mbar{display:none}
+@media (max-width:900px){
+ .hnav a.nl{display:none}
+ .day-grid,.cfg,.contact,.visit{grid-template-columns:1fr}
+ .day{height:300vh}.day h2{font-size:1.7rem}.day .lede{display:none}
+ .card{width:82vw}.facts{top:auto;bottom:7.5rem;gap:.7rem;padding:.8rem 1rem}
+ .preview{position:relative;top:0}
+}
+@media (max-width:600px){
+ .hnav .btn{display:none}.choices{grid-template-columns:1fr}.audit li{grid-template-columns:1fr;gap:.5rem}
+ .steps-live li:not(.on){display:none}.day svg{max-height:42vh}
+ .facts{grid-template-columns:1fr 1fr;left:1rem;right:1rem;text-align:left}
+ .reveal .cap{bottom:auto;top:5.5rem}
+ .vinfo li{grid-template-columns:1fr;gap:.1rem}
+ .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;position:fixed;inset:auto 0 0 0;z-index:35;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(30,34,25,.92);backdrop-filter:blur(8px)}
+ .mbar .btn{padding:.85rem .5rem}.mbar .ghost{color:#fff}
+ .hero-ctas .ghost{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+ .reveal,.day,.hgal{height:auto}.reveal .stick,.day .stick,.hgal .stick{position:relative;height:auto;min-height:100svh}
+ .hgal .track{flex-wrap:wrap;padding:0 1rem}.rise,.hero-row,.hero h1 .ln span{opacity:1;transform:none;transition:none}
+ .step-anim,.vfade{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="proof"><div class="wrap"><span class="pf-long">Maquette préparée pour le Mas de l'Estello par Grall Studio, à partir de vos photos et de vos textes. Page privée, non référencée.</span><span class="pf-short">Maquette privée préparée par Grall Studio</span><a href="#grall-studio">Voir la proposition</a></div></div>
+
+<header class="site" id="hdr"><div class="wrap">
+ <a class="brand" href="#top" aria-label="Mas de l'Estello, accueil"><span id="logoSlot"><svg class="lmark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="20" cy="11" r="5.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 29c-3.2-5-3.6-13 0-24 3.6 11 3.2 19 0 24z" fill="currentColor"/><path d="M3 29h26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="bname">Mas de l'Estello</span></span></a>
+ <nav class="hnav" aria-label="Navigation">
+  <a class="nl" href="#mas" data-i="n1">Le mas</a><a class="nl" href="#logements" data-i="n2">Logements</a><a class="nl" href="#questions" data-i="n3">Questions</a>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" aria-pressed="true" data-l="fr">FR</button><button type="button" aria-pressed="false" data-l="en">EN</button></div>
+  <a class="btn" href="#reserver" data-i="cta1s">Réserver en direct</a>
+ </nav>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Accueil">
+ <canvas id="light" aria-hidden="true"></canvas>
+ <div class="wrap hero-inner">
+  <h1><span class="ln"><span data-i="h1a">2 000 m² de jardin provençal.</span></span><span class="ln"><span data-i="h1b">Une piscine chauffée de 10 m.</span></span><span class="ln"><span><em data-i="h1c">Trois logements, pas plus.</em></span></span></h1>
+  <div class="hero-row">
+   <div><p data-i="lede">Deux chambres d'hôtes et un gîte indépendants, chacun avec sa terrasse, au bout du chemin des Mattouins à Saint‑Rémy‑de‑Provence. Nicolas sert le petit‑déjeuner à l'ombre du mûrier platane.</p><p class="wx" id="wx" hidden></p></div>
+   <div class="hero-ctas"><a class="btn" href="#reserver" data-i="cta1">Voir les prix et réserver</a><a class="btn ghost" href="tel:+33675008205">06 75 00 82 05</a></div>
+  </div>
+ </div>
+ <div class="scrollhint" aria-hidden="true">Défiler</div>
+</section>
+
+<section class="reveal" id="mas" aria-label="La piscine du mas">
+ <div class="stick">
+  <figure id="rv"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1600x10000:format=jpg/path/s940e0dc9b4b6eaa9/image/i789b5d47b87863a6/version/1509211571/image.jpg" alt="La piscine du Mas de l'Estello, bordée de cyprès et de transats" onerror="this.style.visibility='hidden'"></figure>
+  <div class="facts" id="facts">
+   <div><b data-to="2000" data-suf=" m²">0</b><span>de jardin, oliviers et lavandes</span></div>
+   <div><b data-to="10" data-suf=" m">0</b><span>de piscine, chauffée en saison</span></div>
+   <div><b data-to="3">0</b><span>logements indépendants</span></div>
+   <div><b data-to="9.2" data-dec="1">0</b><span>emplacement, voyageurs Booking</span></div>
+  </div>
+  <div class="cap"><b>Cyprès, transats, eau à 10 mètres de votre porte.</b><span>Sécurisée, en accès libre, partagée seulement entre les hôtes du mas.</span></div>
+ </div>
+</section>
+
+<section class="day" id="journee" aria-label="Une journée au mas">
+ <div class="stick"><div class="wrap day-grid">
+  <svg viewBox="0 0 640 420" role="img" aria-label="Une journée au Mas de l'Estello, du petit-déjeuner au ciel étoilé">
+   <rect id="dsky" x="0" y="0" width="640" height="420" fill="#3B4A4C" opacity="0"/>
+   <g id="stars" opacity="0" fill="#F4F1E8"><circle cx="60" cy="50" r="1.4"/><circle cx="130" cy="92" r="1"/><circle cx="210" cy="40" r="1.6"/><circle cx="300" cy="80" r="1"/><circle cx="380" cy="36" r="1.3"/><circle cx="450" cy="96" r="1"/><circle cx="530" cy="54" r="1.6"/><circle cx="600" cy="110" r="1.1"/><circle cx="96" cy="150" r="1"/><circle cx="560" cy="160" r="1"/><circle cx="250" cy="130" r="1.2"/><path d="M470 70a22 22 0 1 0 22 30a17 17 0 1 1-22-30z"/></g>
+   <circle id="sun" cx="60" cy="330" r="18" fill="#F2D59A"/>
+   <path id="alp" pathLength="1" d="M0 300 L50 282 L88 290 L132 246 L160 262 L204 226 L240 254 L290 218 L330 248 L372 232 L414 258 L468 238 L516 262 L574 246 L640 268" fill="none" stroke="#CFCBB8" stroke-width="2" stroke-linejoin="round" stroke-dasharray="1" stroke-dashoffset="1"/>
+   <path id="gnd" d="M0 330 H640" stroke="#CFCBB8" stroke-width="2" opacity="0"/>
+   <g id="mas" fill="none" stroke="#F4F1E8" stroke-width="2" stroke-linejoin="round">
+    <path pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M252 330 V268 H392 V330 M242 270 L322 238 L402 270 M272 330 V296 H296 V330 M318 282 h22 v20 h-22z M354 282 h22 v20 h-22z"/>
+   </g>
+   <g id="cyp" fill="#6C7850">
+    <path d="M206 330c-10-26-9-62 0-96c9 34 10 70 0 96z"/><path d="M226 330c-8-22-7-50 0-76c7 26 8 54 0 76z"/><path d="M428 330c-10-28-9-66 0-104c9 38 10 76 0 104z"/>
+   </g>
+   <g id="olive" fill="#8C9670" opacity="0"><circle cx="520" cy="296" r="18"/><circle cx="540" cy="288" r="16"/><circle cx="530" cy="306" r="15"/><path d="M531 330v-24" stroke="#8C9670" stroke-width="4"/></g>
+   <g id="lav" fill="#8D84C2" opacity="0"><circle cx="470" cy="326" r="4"/><circle cx="480" cy="324" r="4"/><circle cx="490" cy="326" r="4"/><circle cx="500" cy="324" r="4"/><circle cx="160" cy="326" r="4"/><circle cx="170" cy="324" r="4"/><circle cx="180" cy="326" r="4"/></g>
+   <g id="table" opacity="0" fill="none" stroke="#F2D59A" stroke-width="2"><path d="M110 318h44M132 318v12M118 314h6M140 314h6"/></g>
+   <rect id="pool" x="200" y="350" width="240" height="30" rx="3" fill="#4C9DAE" style="transform-box:fill-box;transform-origin:left;transform:scaleX(0)"/>
+   <path id="rip" d="M212 362 q12 -5 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0" fill="none" stroke="#BFE3EA" stroke-width="1.5" opacity="0"/>
+   <g id="smoke" fill="none" stroke="#CFCBB8" stroke-width="1.5" opacity="0"><path d="M412 296c-6-8 6-12 0-20s6-12 0-20"/><path d="M422 300c-6-8 6-12 0-20"/></g>
+   <g font-family="Manrope,system-ui,sans-serif" font-size="12" fill="#CFCBB8">
+    <text class="lbl" x="104" y="306" opacity="0">terrasse</text>
+    <text class="lbl" x="200" y="400" opacity="0">piscine 5 × 10 m</text>
+    <text class="lbl" x="300" y="210" opacity="0">Alpilles</text>
+   </g>
+  </svg>
+  <div>
+   <p class="kick" style="color:#A9B48C">Une journée au mas</p>
+   <h2>Le matin à l'ombre, l'après‑midi dans les Alpilles.</h2>
+   <p class="lede">Ce que vos hôtes viennent chercher, raconté heure par heure au fil du défilement.</p>
+   <ol class="steps-live" id="live">
+    <li><b>8 h, petit‑déjeuner</b><span>Copieux, servi en chambre ou sur votre terrasse, selon l'envie et la météo.</span></li>
+    <li><b>11 h, piscine</b><span>5 × 10 m, sécurisée, chauffée en saison, entre cyprès et oliviers.</span></li>
+    <li><b>15 h, les Alpilles</b><span>Saint‑Rémy, Glanum et Les Baux‑de‑Provence, puis retour au calme.</span></li>
+    <li><b>20 h, plancha</b><span>Sur la terrasse du gîte, sous le store, avec la cuisine équipée à deux pas.</span></li>
+    <li><b>23 h, le ciel</b><span>Une propriété à l'écart : on entend les cigales, puis plus rien.</span></li>
+   </ol>
+   <div class="meter"><i id="meter"></i></div>
+  </div>
+ </div></div>
+</section>
+
+<section class="hgal" aria-label="Le mas en images">
+ <div class="stick">
+  <div class="wrap head"><div><p class="kick">Le mas en images</p><h2>Dehors, tout le temps.</h2></div><div class="count" id="gcount">01 / 06</div></div>
+  <div class="track" id="track">
+   <figure class="card"><div class="ph"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1600x10000:format=jpg/path/s940e0dc9b4b6eaa9/image/ia56897c23d78a53b/version/1509211713/image.jpg" alt="La façade du mas, volets gris-bleu et terrasse" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le mas</b><span>Volets gris‑bleu, jardin méditerranéen</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=jpg/path/s940e0dc9b4b6eaa9/backgroundarea/i85074d346395f6f4/version/1509211108/image.jpg" alt="Petit-déjeuner servi en terrasse sous l'olivier" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le petit‑déjeuner</b><span>Compris dans les chambres d'hôtes</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1600x10000:format=jpg/path/s940e0dc9b4b6eaa9/image/ibac34f67be3711f5/version/1606667920/image.jpg" alt="Transats au bord de la piscine" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>La piscine</b><span>Chauffée en saison</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1600x10000:format=jpg/path/s940e0dc9b4b6eaa9/image/icaea9bdf6fccaf55/version/1509209994/image.jpg" alt="Salon de jardin sur la terrasse latérale de l'Esterelle" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>La terrasse de l'Esterelle</b><span>Sous le mûrier platane</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1600x10000:format=jpg/path/s940e0dc9b4b6eaa9/image/if9198a4026155bf1/version/1606667590/image.jpg" alt="Terrasse du gîte sous le store, face au jardin" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>La terrasse du gîte</b><span>Store automatique et plancha</span></figcaption></figure>
+   <figure class="card"><div class="ph"><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1600x10000:format=jpg/path/s940e0dc9b4b6eaa9/image/idf46d62b8d3d0f0f/version/1453135390/image.jpg" alt="Lavandes et cyprès dans le jardin" loading="lazy" onerror="this.style.visibility='hidden'"></div><figcaption><b>Le jardin</b><span>Cyprès, oliviers, lavandes</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="pad" id="logements"><div class="wrap">
+ <p class="kick">Les logements</p>
+ <h2 class="rise">Trois façons de séjourner, toutes de plain‑pied sur le jardin.</h2>
+ <div class="tabs" role="tablist" aria-label="Logements">
+  <button type="button" role="tab" aria-selected="true" data-v="esterelle">L'Esterelle, 35 m²</button>
+  <button type="button" role="tab" aria-selected="false" data-v="figuier">Le Figuier, 18 m²</button>
+  <button type="button" role="tab" aria-selected="false" data-v="gite">Le gîte, 70 m²</button>
+ </div>
+ <div class="visit" id="visit">
+  <div class="depth" id="depth" aria-hidden="true">
+   <figure class="lay l1"><img id="v1" src="" alt="" onerror="this.style.visibility='hidden'"></figure>
+   <figure class="lay l3"><img id="v3" src="" alt="" onerror="this.style.visibility='hidden'"></figure>
+   <figure class="lay l2"><img id="v2" src="" alt="" onerror="this.style.visibility='hidden'"></figure>
+   <span class="tagx" id="vtag">Bougez la souris pour entrer</span>
+  </div>
+  <div class="vinfo" id="vinfo"></div>
+ </div>
+</div></section>
+
+<section class="pad book" id="reserver"><div class="wrap">
+ <p class="kick" style="color:#A9B48C">Réservation directe</p>
+ <h2>Vos dates, votre prix, sans commission.</h2>
+ <p class="lede" style="margin-top:1rem">Choisissez un logement et une arrivée : le prix se calcule avec les tarifs du mas, taxe de séjour comprise, et votre demande part chez Nicolas en un message.</p>
+ <div class="cfg">
+  <form class="panel" id="bk" onsubmit="return false">
+   <ul class="chips" id="chips" aria-label="Étapes"></ul>
+   <fieldset data-s data-n="Logement"><legend>Où voulez‑vous dormir ?</legend><div class="choices">
+    <div class="choice"><input type="radio" name="log" id="l1" value="esterelle" checked><label for="l1">Chambre l'Esterelle<small>35 m², mezzanine, deux terrasses</small></label></div>
+    <div class="choice"><input type="radio" name="log" id="l2" value="figuier"><label for="l2">Chambre le Figuier<small>18 m², terrasse privative ombragée</small></label></div>
+    <div class="choice"><input type="radio" name="log" id="l3" value="gite"><label for="l3">Gîte l'Estello<small>70 m², 2 chambres, jusqu'à 4 personnes</small></label></div>
+   </div></fieldset>
+   <fieldset data-s data-n="Voyageurs" hidden><legend>Combien d'adultes ?</legend><div class="choices">
+    <div class="choice"><input type="radio" name="ad" id="a1" value="1"><label for="a1">1 adulte</label></div>
+    <div class="choice"><input type="radio" name="ad" id="a2" value="2" checked><label for="a2">2 adultes</label></div>
+    <div class="choice"><input type="radio" name="ad" id="a3" value="3"><label for="a3">3 adultes<small id="a3s">Couchage en mezzanine</small></label></div>
+    <div class="choice"><input type="radio" name="ad" id="a4" value="4"><label for="a4">4 adultes<small id="a4s">Couchage en mezzanine</small></label></div>
+   </div></fieldset>
+   <fieldset data-s data-n="Arrivée" hidden><legend>Votre jour d'arrivée</legend>
+    <div class="cal-head"><button type="button" id="cPrev" aria-label="Mois précédent">Avant</button><span id="cTitle"></span><button type="button" id="cNext" aria-label="Mois suivant">Après</button></div>
+    <div class="cal" id="cal"></div>
+    <div class="cal-key"><span><i></i>Haute saison, juin à septembre</span><span>Fermé de décembre à février</span></div>
+   </fieldset>
+   <fieldset data-s data-n="Durée" hidden><legend>Combien de nuits ?</legend><p class="hint" id="minHint"></p><div class="choices" id="nights"></div></fieldset>
+   <fieldset data-s data-n="Options" hidden><legend>Derniers détails</legend>
+    <div class="choices" id="optCh">
+     <div class="choice"><input type="radio" name="pdj" id="p1" value="sur la terrasse" checked><label for="p1">Petit‑déjeuner en terrasse<small>Compris</small></label></div>
+     <div class="choice"><input type="radio" name="pdj" id="p2" value="en chambre"><label for="p2">Petit‑déjeuner en chambre<small>Compris</small></label></div>
+    </div>
+    <div class="choices" id="optGite" hidden>
+     <div class="choice"><input type="checkbox" name="opt" id="o1" value="menage" data-p="70"><label for="o1">Ménage de fin de séjour<small>70 €</small></label></div>
+     <div class="choice"><input type="checkbox" name="opt" id="o2" value="bebe" data-p="0"><label for="o2">Lit bébé et chaise haute<small>Offerts sur demande</small></label></div>
+    </div>
+   </fieldset>
+   <div data-s data-n="Récapitulatif" hidden>
+    <p class="kick" style="color:#A9B48C;margin:0 0 .6rem">Votre séjour</p>
+    <ul class="recap" id="recap"></ul>
+    <div class="send-row"><a class="btn wa" id="waBtn" href="https://wa.me/33675008205" target="_blank" rel="noopener">Envoyer à Nicolas sur WhatsApp</a><a class="btn ghost" id="mailBtn" href="mailto:masestello@outlook.fr">Par email</a><button type="button" class="btn ghost" id="copyBtn">Copier le lien du séjour</button><span class="copied" id="copied" hidden></span></div>
+    <p class="note">Nicolas confirme la disponibilité, puis un acompte de 30 % rend la réservation ferme. Tarifs 2026 du site, à valider pour 2027.</p>
+   </div>
+   <div class="est-nav"><button type="button" class="btn ghost" id="prev" hidden>Retour</button><button type="button" class="btn" id="next">Continuer</button></div>
+  </form>
+  <div class="preview" aria-live="polite">
+   <div class="pv-ph"><img id="pvA" src="" alt="" onerror="this.style.visibility='hidden'"><img id="pvB" class="out" src="" alt="" onerror="this.style.visibility='hidden'"><span class="pv-badge" id="pvBadge"></span></div>
+   <div class="months"><div class="m" id="mbar"></div><div class="lab"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div></div>
+   <div class="live"><div><span id="lvLab">À partir de</span><b id="lvPrice">0 €</b></div><small id="lvSub">la nuit, petit‑déjeuner compris</small></div>
+   <div class="vs" id="vs" hidden>
+    <div><span>Réservé en direct</span><b id="vsDirect"></b></div>
+    <div><span>Via une plateforme, estimation</span><b id="vsPlat"></b></div>
+    <div class="gain"><span>Gardé dans votre poche</span><b id="vsGain"></b></div>
+    <p>Écart estimé à partir d'une commission de plateforme d'environ 17 %, à valider avec vous.</p>
+   </div>
+  </div>
+ </div>
+</div></section>
+
+<section class="pad"><div class="wrap">
+ <div class="reviews-x">
+  <div class="rx-head rise"><div class="score">9,2<small>sur 10 pour l'emplacement, note des voyageurs Booking.com</small></div><h2>Ce que les hôtes retiennent : Nicolas, la piscine, le calme.</h2></div>
+  <div class="marquee" aria-label="Avis de voyageurs"><div class="mq-track">
+   <figure class="rcard"><blockquote>Nicolas est un hôte vraiment adorable.</blockquote><figcaption class="who">Voyageuse, Pays‑Bas</figcaption></figure>
+   <figure class="rcard"><blockquote>Des hôtes chaleureux et un excellent petit‑déjeuner, différent chaque matin.</blockquote><figcaption class="who">Voyageur, Royaume‑Uni</figcaption></figure>
+   <figure class="rcard"><blockquote>Calme, une très belle piscine et un petit‑déjeuner formidable.</blockquote><figcaption class="who">Voyageur, Nouvelle‑Zélande</figcaption></figure>
+   <figure class="rcard"><blockquote>Un très bon accueil, un logement charmant et bien placé.</blockquote><figcaption class="who">Voyageuse, France</figcaption></figure>
+   <figure class="rcard"><blockquote>À l'écart, avec ce qu'il faut d'intimité.</blockquote><figcaption class="who">Voyageur, Suède</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Nicolas est un hôte vraiment adorable.</blockquote><figcaption class="who">Voyageuse, Pays‑Bas</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Des hôtes chaleureux et un excellent petit‑déjeuner, différent chaque matin.</blockquote><figcaption class="who">Voyageur, Royaume‑Uni</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Calme, une très belle piscine et un petit‑déjeuner formidable.</blockquote><figcaption class="who">Voyageur, Nouvelle‑Zélande</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>Un très bon accueil, un logement charmant et bien placé.</blockquote><figcaption class="who">Voyageuse, France</figcaption></figure>
+   <figure class="rcard" aria-hidden="true"><blockquote>À l'écart, avec ce qu'il faut d'intimité.</blockquote><figcaption class="who">Voyageur, Suède</figcaption></figure>
+  </div></div>
+  <p class="note-rv">Extraits reformulés de vos avis voyageurs (Booking.com) pour la maquette. Dans le site final, vos avis Google et Booking s'affichent en version originale et se mettent à jour automatiquement.</p>
+ </div>
+ <div class="faq" id="questions">
+  <h2 class="rise">Les questions qu'on pose à Nicolas avant de réserver.</h2>
+  <div class="faq-list">
+   <details><summary>Juillet et août : faut‑il réserver tôt ?</summary><p>Oui. Le mas ne compte que trois logements, et le gîte se loue à la semaine en juillet, août et septembre : il n'y a que quelques semaines d'été à attribuer chaque année.</p></details>
+   <details><summary>Comment réserver en direct ?</summary><p>Choisissez votre logement et vos dates dans le calculateur ci‑dessus, puis envoyez la demande. Nicolas confirme la disponibilité ; un acompte de 30 % rend la réservation ferme et définitive.</p></details>
+   <details><summary>Quelle est la durée minimale ?</summary><p>Deux nuits dans les chambres d'hôtes. Pour le gîte, trois nuits, et sept nuits en juillet, août et septembre.</p></details>
+   <details><summary>Et si je dois annuler ?</summary><p>En cas d'annulation totale ou partielle moins de 90 jours avant l'arrivée, l'acompte est conservé.</p></details>
+   <details><summary>Le petit‑déjeuner est‑il compris ?</summary><p>Oui, dans les deux chambres d'hôtes : il est servi en chambre ou sur l'une de vos terrasses, selon l'envie et la météo. Le gîte est indépendant, avec cuisine équipée et plancha.</p></details>
+   <details><summary>La piscine est‑elle chauffée ?</summary><p>Oui, en saison. Elle mesure 5 × 10 m, elle est sécurisée et en accès libre, partagée entre les hôtes et les propriétaires.</p></details>
+   <details><summary>Peut‑on venir avec un bébé ?</summary><p>Dans le gîte, un lit bébé et une chaise haute sont fournis gratuitement sur demande.</p></details>
+   <details><summary>Les animaux sont‑ils acceptés ?</summary><p>Non, ni dans les chambres d'hôtes, ni dans le gîte.</p></details>
+   <details><summary>Y a‑t‑il la climatisation et un parking ?</summary><p>Climatisation réversible, moustiquaires et Wi‑Fi dans chaque logement, et une place sous abri voiture derrière le portail automatique.</p></details>
+  </div>
+ </div>
+ <div class="contact">
+  <div><h2>Une question sur vos dates ?</h2><a class="bigtel" href="tel:+33675008205">06 75 00 82 05</a><p style="margin:0;color:var(--soft)">171, chemin des Mattouins, 13210 Saint‑Rémy‑de‑Provence<br><a href="mailto:masestello@outlook.fr">masestello@outlook.fr</a></p></div>
+  <div><p style="color:var(--soft);margin-top:0">Ouvert de mars à novembre. Chambres d'hôtes à partir de deux nuits, gîte à partir de trois nuits, à la semaine en été.</p><a class="btn" href="#reserver">Calculer mon séjour</a></div>
+ </div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">
+ <span>Mas de l'Estello, chambres d'hôtes et gîte à Saint‑Rémy‑de‑Provence</span>
+ <form class="nl-form" id="nl"><label for="nlm">Recevoir nos disponibilités et nouvelles du mas chaque mois</label><div class="nl-row"><input type="email" id="nlm" placeholder="votre@email.fr" required><button class="btn" type="submit">Recevoir</button></div><p class="nl-ok" id="nlok" hidden>Merci, c'est noté. Démonstration : aucun email n'est envoyé.</p></form>
+</div></footer>
+
+<aside id="grall-studio" class="studio" aria-labelledby="gs"><div class="wrap">
+ <h2 id="gs">Ce que cette maquette change par rapport à votre site actuel.</h2>
+ <p class="lede" style="margin-top:1rem">Nicolas, voici ce que nous avons relevé sur masdelestello.fr, et ce que la nouvelle version apporte.</p>
+ <ul class="audit">
+  <li><div class="now"><b>Aujourd'hui</b>Les tarifs sont sur une page, les disponibilités sur une autre, et il faut ensuite écrire ou appeler : rien ne permet de demander un séjour en ligne.</div><div><b>Avec la refonte</b>Une réservation directe en six étapes, avec le prix calculé taxe de séjour comprise, l'acompte, et la demande envoyée sur votre WhatsApp.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Vos voyageurs passent par les plateformes, qui prélèvent leur commission sur chaque nuit.</div><div><b>Avec la refonte</b>Le prix direct comparé au prix plateforme, pour donner à vos hôtes une raison de réserver chez vous.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Des galeries en vignettes de 180 à 210 pixels et de longues listes d'équipements : on ne voit ni la piscine ni le jardin en grand.</div><div><b>Avec la refonte</b>Vos photos en plein écran, et une visite en profondeur de chaque logement.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Les compliments de vos hôtes sur Booking n'apparaissent nulle part, et l'acompte, l'annulation ou les animaux ne sont expliqués qu'au moment des tarifs.</div><div><b>Avec la refonte</b>Vos avis mis en scène, et une FAQ qui répond avant le premier message.</div></li>
+  <li><div class="now"><b>Aujourd'hui</b>Un site Jimdo qui décrit les logements sans faire ressentir Saint‑Rémy, alors que vos hôtes viennent des Pays‑Bas, de Suède ou de Nouvelle‑Zélande.</div><div><b>Avec la refonte</b>La lumière du mûrier dès l'ouverture, une journée au mas au fil du défilement, en français et en anglais.</div></li>
+ </ul>
+ <div class="offers">
+  <div class="offer"><span class="tag">Essentiel</span><h3>Signature</h3><p class="price">1 900 €</p><p class="alt">ou 0 € puis 119 €/mois sur 24 mois, maintenance incluse</p><ul><li>Refonte jusqu'à 6 pages, FR et EN</li><li>Formulaire de devis, avis Google, barre d'appel mobile</li><li>Référencement local</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer"><span class="tag">Conversion</span><h3>Croissance</h3><p class="price">2 900 €</p><p class="alt">ou 0 € puis 169 €/mois sur 24 mois</p><ul><li>Signature + estimateur de budget</li><li>FR, EN, IT</li><li>4 pages par ville</li><li>Suivi mensuel des demandes</li><li>En ligne en moins d'une semaine</li></ul></div>
+  <div class="offer rec"><span class="tag">Ce que vous venez de voir</span><h3>Immersion</h3><p class="price">4 900 €</p><p class="alt">ou 0 € puis 279 €/mois sur 24 mois</p><ul><li>Croissance + lumière du mûrier en temps réel (WebGL)</li><li>Journée au mas et galerie animées au défilement, à 120 images/s</li><li>Réservation directe avec prix ici et sur les plateformes</li><li>Visite en profondeur de chaque logement</li><li>En ligne en deux semaines</li></ul></div>
+ </div>
+ <h3 style="margin:0 0 .5rem">Options, sans engagement de durée</h3>
+<div class="addons">
+ <div><b>Lettre mensuelle à vos clients</b><span>89 €/mois</span><p>Un email par mois à vos anciens hôtes et à vos contacts&nbsp;: semaines encore libres, ouverture de la saison, marchés et fêtes de Saint‑Rémy. De quoi les faire revenir en direct. Rédigé, mis en page et envoyé pour vous.</p></div>
+ <div><b>Avis et fiche Google</b><span>79 €/mois</span><p>Réponse à chaque avis sous 48 h, deux publications par mois sur votre fiche, demande d'avis envoyée à vos hôtes après chaque séjour, bilan mensuel.</p></div>
+ <div><b>Langue supplémentaire</b><span>290 € par langue</span><p>Néerlandais, allemand ou suédois, les langues de vos hôtes, traduits et tenus à jour avec le reste du site.</p></div>
+</div>
+<p class="lede" style="margin:0 0 1.5rem;max-width:46rem">Une agence demande en général deux à trois mois et un budget souvent deux fois plus élevé. Ici, votre site est en ligne en moins d'une semaine, sinon le premier mois est offert. Vous le voyez avant de payer le solde, nous reprenons vos textes et vos photos, et vous n'avez rien à préparer.</p>
+ <div class="cta-row"><a class="btn" href="mailto:contact.grallstudio@gmail.com?subject=Site%20Mas%20de%20l%27Estello">Je veux ce site</a><p>Prix nets. Le solde n'est dû qu'une fois le site validé. Cette maquette reste en ligne quinze jours. Pierre Grall, Grall Studio, contact.grallstudio@gmail.com</p></div>
+</div></aside>
+
+<div class="mbar"><a class="btn ghost" href="tel:+33675008205">Appeler</a><a class="btn" href="#reserver">Réserver</a></div>
+
+<script src="../lib/lenis.min.js"></script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var lenis=null;
+if(!RM&&window.Lenis){lenis=new Lenis({lerp:.09,smoothWheel:true});window.lenis=lenis;}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});});
+requestAnimationFrame(function(){document.body.classList.add('ready')});
+var IMG='https://image.jimcdn.com/app/cms/image/transf/dimension=1600x10000:format=jpg/path/s940e0dc9b4b6eaa9/image/';
+
+/* ---------- Lumière sous le mûrier (WebGL) ---------- */
+var cv=document.getElementById('light'),gl=cv.getContext('webgl',{antialias:false,alpha:false});
+var heroVisible=true,t0=performance.now();
+if(gl){
+ var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+ var fs=['precision highp float;uniform vec2 r;uniform float t;uniform vec2 m;',
+ 'float hs(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
+ 'vec2 hs2(vec2 p){return fract(sin(vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3))))*43758.5453);}',
+ 'float ns(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hs(i),hs(i+vec2(1.,0.)),f.x),mix(hs(i+vec2(0.,1.)),hs(i+vec2(1.,1.)),f.x),f.y);}',
+ 'float fbm(vec2 p){float v=0.;float a=.5;for(int i=0;i<5;i++){v+=a*ns(p);p=p*2.03+vec2(1.7,9.2);a*=.5;}return v;}',
+ 'float dap(vec2 p,float s,float tt,vec2 w){p*=s;vec2 ip=floor(p),fp=fract(p);float v=0.;',
+ ' for(int j=0;j<3;j++){for(int i=0;i<3;i++){vec2 g=vec2(float(i)-1.,float(j)-1.);vec2 o=hs2(ip+g);float ph=hs(ip+g+3.7)*6.2831;',
+ '  vec2 c=g+.5+.28*(o-.5)+vec2(sin(tt*.9+ph),cos(tt*.7+ph))*(.05+.22*length(w))-fp;',
+ '  float rad=.2+.2*o.x;float on=step(.38,o.y);float d=length(c*vec2(1.,1.3));',
+ '  v+=on*(1.-smoothstep(rad*.45,rad,d))*(.7+.3*sin(tt*1.7+ph*2.));}}return v;}',
+ 'void main(){vec2 uv=gl_FragCoord.xy/r;vec2 p=(gl_FragCoord.xy-.5*r)/r.y;vec2 w=(m-.5)*2.;float tt=t;',
+ ' float st=fbm(p*7.+vec2(3.,1.));float grain=ns(gl_FragCoord.xy*.7);',
+ ' float gap=smoothstep(.34,.6,fbm(p*1.3+vec2(tt*.025,-tt*.012)+w*.05));float leaf=smoothstep(.5,.78,fbm(p*3.4+vec2(-tt*.04,tt*.02)+w*.09));',
+ ' float d=dap(p+w*.02,3.6,tt,w)+.7*dap(p*1.2+5.,6.4,tt*1.15,w)+.5*dap(p*.9+11.,11.,tt*1.3,w);',
+ ' d=clamp(gap*.38+d*(.3+.9*gap),0.,1.)*(1.-leaf*.7);',
+ ' float mk=smoothstep(.15,1.05,uv.x*.75+uv.y*.95);',
+ ' vec3 shade=vec3(.118,.13,.098)*(.78+.45*st);vec3 sunc=vec3(1.,.84,.58)*(.82+.3*st);',
+ ' vec3 col=mix(shade,sunc,d*mk*.9);',
+ ' float pl=exp(-6.*length((uv-m)*vec2(r.x/r.y,1.)));col+=vec3(1.,.82,.55)*pl*.07;',
+ ' col+=vec3(.42,.38,.62)*.05*(1.-uv.y);',
+ ' col*=1.-.28*length(uv-vec2(.55,.62));col+=(grain-.5)*.018;gl_FragColor=vec4(col,1.);}'].join('\n');
+ function sh(tp,s){var o=gl.createShader(tp);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))console.error(gl.getShaderInfoLog(o));return o;}
+ var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+ var bf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,bf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
+ var lp=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+ var ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m');
+ var mx=.62,my=.6,tx=.62,ty=.6;addEventListener('pointermove',function(e){tx=e.clientX/innerWidth;ty=1-e.clientY/innerHeight;});
+ function size(){var d=Math.min(devicePixelRatio||1,1.5);cv.width=cv.clientWidth*d*.7;cv.height=cv.clientHeight*d*.7;gl.viewport(0,0,cv.width,cv.height);}
+ size();addEventListener('resize',size);
+ new IntersectionObserver(function(en){heroVisible=en[0].isIntersecting;}).observe(cv);
+ window.__drawLight=function(now){if(!heroVisible)return;mx+=(tx-mx)*.04;my+=(ty-my)*.04;gl.uniform2f(ur,cv.width,cv.height);gl.uniform1f(ut,RM?6.:(now-t0)/1000);gl.uniform2f(um,mx,my);gl.drawArrays(gl.TRIANGLES,0,3);};
+ window.__drawLight(t0+6000);
+}
+
+/* ---------- Météo en direct ---------- */
+(function(){var wx=document.getElementById('wx');if(!window.fetch)return;
+ var W=function(c){return c===0?'ciel dégagé':c<=2?'quelques nuages':c===3?'ciel couvert':c<=48?'brume':c<=67?'pluie':c<=77?'neige':c<=82?'averses':'orage';};
+ fetch('https://api.open-meteo.com/v1/forecast?latitude=43.79&longitude=4.83&current=temperature_2m,weather_code&daily=sunset&timezone=Europe%2FParis&forecast_days=1').then(function(r){return r.ok?r.json():null;}).then(function(j){
+  if(!j||!j.current)return;var s=j.daily&&j.daily.sunset&&j.daily.sunset[0]?j.daily.sunset[0].slice(11,16).replace(':',' h '):null;
+  wx.textContent='En ce moment à Saint‑Rémy : '+Math.round(j.current.temperature_2m)+' °C, '+W(j.current.weather_code)+(s?'. Coucher du soleil à '+s+'.':'.');wx.hidden=false;
+ }).catch(function(){});})();
+
+/* ---------- Scènes au défilement ---------- */
+function prog(el){var r=el.getBoundingClientRect(),h=el.offsetHeight-innerHeight;return Math.min(1,Math.max(0,-r.top/(h||1)));}
+function ease(x){return 1-Math.pow(1-x,3);}
+function seg(p,a,b){return Math.min(1,Math.max(0,(p-a)/(b-a)));}
+var hdr=document.getElementById('hdr'),proof=document.querySelector('.proof');
+var rvS=document.querySelector('.reveal'),rv=document.getElementById('rv'),rvImg=rv.querySelector('img');
+var dayS=document.querySelector('.day'),alp=document.getElementById('alp'),gnd=document.getElementById('gnd'),masP=document.querySelector('#mas path'),cyp=document.querySelectorAll('#cyp path'),olive=document.getElementById('olive'),lav=document.getElementById('lav'),table=document.getElementById('table'),pool=document.getElementById('pool'),rip=document.getElementById('rip'),smoke=document.getElementById('smoke'),sun=document.getElementById('sun'),stars=document.getElementById('stars'),dsky=document.getElementById('dsky'),lbls=document.querySelectorAll('.lbl'),live=document.querySelectorAll('#live li'),meter=document.getElementById('meter');
+cyp.forEach(function(c){c.style.transformBox='fill-box';c.style.transformOrigin='bottom';c.style.transform='scaleY(0)';});
+var gS=document.querySelector('.hgal'),track=document.getElementById('track'),gImgs=track.querySelectorAll('img'),gc=document.getElementById('gcount');
+var facts=document.querySelectorAll('#facts b'),factsDone=false;
+function fmtN(v,dec){return v.toLocaleString('fr-FR',{minimumFractionDigits:dec,maximumFractionDigits:dec});}
+
+function scenes(now){
+ var ph=proof.offsetHeight;hdr.classList.toggle('solid',scrollY>innerHeight*.85);hdr.style.top=Math.max(0,ph-scrollY)+'px';
+ if(RM)return;
+ var p=prog(rvS),e=ease(seg(p,0,.7));
+ var ins=(1-e)*18;rv.style.clipPath='inset('+ins+'% '+ins*1.3+'% '+ins+'% '+ins*1.3+'% round '+(1-e)*28+'px)';
+ rvImg.style.transform='scale('+(1.15-.15*e)+') translateY('+(-p*4)+'%)';
+ if(!factsDone&&p>.4){factsDone=true;facts.forEach(function(b){var to=+b.dataset.to,dec=+b.dataset.dec||0,suf=b.dataset.suf||'',st=performance.now();(function tick(n){var k=ease(Math.min(1,(n-st)/1400));b.textContent=fmtN(to*k,dec)+suf;if(k<1)requestAnimationFrame(tick);})(st);});}
+ var c=prog(dayS);
+ alp.style.strokeDashoffset=1-ease(seg(c,0,.14));gnd.setAttribute('opacity',seg(c,.04,.12));
+ masP.style.strokeDashoffset=1-ease(seg(c,.06,.2));
+ cyp.forEach(function(el,i){el.style.transform='scaleY('+ease(seg(c,.1+i*.03,.24+i*.03))+')';});
+ olive.setAttribute('opacity',seg(c,.16,.24));lav.setAttribute('opacity',seg(c,.18,.26));table.setAttribute('opacity',seg(c,.06,.14)*(1-seg(c,.3,.36)));
+ pool.style.transform='scaleX('+ease(seg(c,.22,.38))+')';rip.setAttribute('opacity',seg(c,.34,.4));rip.setAttribute('transform','translate('+(Math.sin(now/700)*6)+',0)');
+ smoke.setAttribute('opacity',seg(c,.62,.68)*(1-seg(c,.8,.86)));smoke.setAttribute('transform','translate(0,'+(Math.sin(now/500)*2)+')');
+ var a=Math.PI*(1-Math.min(1,c/.8));sun.setAttribute('cx',320+270*Math.cos(a));sun.setAttribute('cy',330-250*Math.sin(a));sun.setAttribute('opacity',1-seg(c,.74,.82));
+ dsky.setAttribute('opacity',(seg(c,.08,.3)*(1-seg(c,.6,.82)))*.55);stars.setAttribute('opacity',seg(c,.82,.92));
+ lbls[0].setAttribute('opacity',seg(c,.08,.14)*(1-seg(c,.3,.36)));lbls[1].setAttribute('opacity',seg(c,.3,.38)*(1-seg(c,.56,.6)));lbls[2].setAttribute('opacity',seg(c,.42,.5)*(1-seg(c,.62,.66)));
+ var st=c<.22?0:c<.42?1:c<.62?2:c<.8?3:4;live.forEach(function(li,i){li.classList.toggle('on',i===st);});
+ meter.style.transform='scaleX('+c+')';
+ var g=prog(gS),max=track.scrollWidth-innerWidth+Math.max(16,(innerWidth-1200)/2);
+ track.style.transform='translate3d('+(-g*max)+'px,0,0)';
+ gImgs.forEach(function(im,i){im.style.transform='translate3d('+(-8+g*16-i*2)+'%,0,0)';});
+ gc.textContent='0'+Math.min(6,1+Math.floor(g*6))+' / 06';
+ depthTick();
+}
+
+/* ---------- Visite en profondeur ---------- */
+var V={
+ esterelle:{a:[IMG+'i5e3beafc4becbe70/version/1488236583/image.jpg','Lit 160 de l\'Esterelle'],b:[IMG+'i0b7733a0e7048697/version/1488236583/image.jpg','Salle d\'eau avec douche à l\'italienne'],c:[IMG+'icaea9bdf6fccaf55/version/1509209994/image.jpg','Terrasse latérale et salon de jardin'],
+  t:'Chambre d\'hôtes l\'Esterelle',m:'35 m², indépendante, deux terrasses',L:[['Couchage','Lit 160 × 200, mezzanine avec lit simple et canapé‑lit'],['Salle d\'eau','Douche à l\'italienne, sèche‑serviettes, sèche‑cheveux'],['Coin repas','Micro‑ondes, bouilloire, Nespresso, réfrigérateur silencieux'],['Dehors','Terrasse face à l\'entrée, et terrasse latérale avec table en teck, canapé et fauteuils'],['Confort','Climatisation réversible, moustiquaire, Wi‑Fi, TV']]},
+ figuier:{a:[IMG+'ic660d537b7f7639f/version/1509211571/image.jpg','L\'olivier et les transats du jardin'],b:[IMG+'ib97e9dda92ad154e/version/1509211571/image.jpg','Le jardin'],c:[IMG+'iadd3d13943d4c507/version/1509210534/image.jpg','La piscine'],
+  t:'Chambre d\'hôtes le Figuier',m:'18 m², indépendante, terrasse privative ombragée',L:[['Pour qui','Un couple, au calme, à deux pas de la piscine'],['Petit‑déjeuner','Compris, servi en chambre ou en terrasse'],['Dehors','Terrasse privative ombragée, piscine chauffée en saison'],['Sur place','Place sous abri voiture, portail automatique'],['Photos','Les photos de la chambre seront reprises de votre site']]},
+ gite:{a:[IMG+'i6fa32e2860fa87a8/version/1606667920/image.jpg','Le salon du gîte'],b:[IMG+'ied5adbd58bb74ca7/version/1509207961/image.jpg','Chambre exposée sud'],c:[IMG+'id9adbb4d2f40cec0/version/1606667902/image.jpg','La cuisine équipée'],
+  t:'Gîte l\'Estello',m:'70 m², jusqu\'à 4 personnes',L:[['Étage','Chambre 160 × 200 exposée sud, chambre avec deux lits 90 exposée est, climatisées'],['Rez‑de‑chaussée','Salon, cuisine équipée, arrière‑cuisine avec lave‑linge, salle d\'eau'],['Dehors','Terrasse avec store automatique, plancha à gaz, petit jardin'],['Famille','Lit bébé et chaise haute offerts sur demande'],['Linge','Draps et serviettes fournis']]}
+};
+var depth=document.getElementById('depth'),lays=depth.querySelectorAll('.lay'),vinfo=document.getElementById('vinfo'),dx=0,dy=0,dtx=0,dty=0;
+function setImg(id,s){var im=document.getElementById(id);im.style.visibility='';im.src=s[0];im.alt=s[1];}
+function showV(k){var v=V[k];setImg('v1',v.a);setImg('v2',v.b);setImg('v3',v.c);
+ vinfo.innerHTML='<h3>'+v.t+'</h3><p class="meta">'+v.m+'</p><ul>'+v.L.map(function(r){return'<li><b>'+r[0]+'</b>'+r[1]+'</li>';}).join('')+'</ul><a class="btn" href="#reserver" data-book="'+k+'">Voir les prix de ce logement</a>';
+ vinfo.classList.remove('vfade');void vinfo.offsetWidth;vinfo.classList.add('vfade');
+ vinfo.querySelector('[data-book]').addEventListener('click',function(e){e.preventDefault();var r=document.querySelector('#bk [name=log][value="'+k+'"]');if(r){r.checked=true;bi=1;show();}var t=document.getElementById('reserver');lenis?lenis.scrollTo(t,{offset:-70}):t.scrollIntoView();});
+}
+document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b);});showV(b.dataset.v);});});
+depth.addEventListener('pointermove',function(e){var r=depth.getBoundingClientRect();dtx=(e.clientX-r.left)/r.width-.5;dty=(e.clientY-r.top)/r.height-.5;});
+depth.addEventListener('pointerleave',function(){dtx=0;dty=0;});
+function depthTick(){var r=depth.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;var sp=(r.top+r.height/2-innerHeight/2)/innerHeight;dx+=(dtx-dx)*.08;dy+=(dty-dy)*.08;
+ var k=[[-18,1.06],[26,1],[40,1]];lays.forEach(function(l,i){var f=k[i][0];l.style.transform='translate3d('+(dx*f)+'px,'+(dy*f+sp*f*1.2)+'px,0) rotateY('+(dx*(i?4:-3))+'deg) rotateX('+(-dy*(i?3:-2))+'deg) scale('+k[i][1]+')';});}
+showV('esterelle');
+
+/* ---------- Réservation directe ---------- */
+var LOG={esterelle:{n:'Chambre l\'Esterelle',ty:'ch',max:4,img:IMG+'i5e3beafc4becbe70/version/1488236583/image.jpg',b:'35 m², petit‑déjeuner compris'},figuier:{n:'Chambre le Figuier',ty:'ch',max:2,img:IMG+'ic660d537b7f7639f/version/1509211571/image.jpg',b:'18 m², petit‑déjeuner compris'},gite:{n:'Gîte l\'Estello',ty:'gite',max:4,img:IMG+'i6fa32e2860fa87a8/version/1606667920/image.jpg',b:'70 m², 2 chambres'}};
+var MN=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+var f=document.getElementById('bk'),S=[].slice.call(f.querySelectorAll('[data-s]')),pv=document.getElementById('prev'),nx=document.getElementById('next'),chips=document.getElementById('chips'),bi=0,reached=0,arr=null,cur=0;
+var today=new Date();today.setHours(0,0,0,0);var calM=new Date(today.getFullYear(),today.getMonth(),1);
+function $(id){return document.getElementById(id);}
+function val(n){var e=f.querySelector('[name="'+n+'"]:checked');return e?e.value:null;}
+function eur(n){return Math.round(n).toLocaleString('fr-FR')+' €';}
+function open(m){return m>=2&&m<=10;}
+function high(m){return m>=5&&m<=8;}
+function rate(k,m,ad){if(LOG[k].ty==='gite')return high(m)?950/7:120;var r=ad<=1?(high(m)?100:85):(high(m)?105:(m===4?95:90));if(ad>2)r+=(ad-2)*20;return r;}
+function addD(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x;}
+function dstr(d){return d.getDate()+' '+MN[d.getMonth()]+' '+d.getFullYear();}
+function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+function durs(){var k=val('log');if(LOG[k].ty==='ch')return[2,3,4,5,7];if(arr&&arr.getMonth()>=6&&arr.getMonth()<=8)return[7,14];return[3,4,5,7,14];}
+function okStay(n){if(!arr)return true;for(var i=0;i<n;i++){if(!open(addD(arr,i).getMonth()))return false;}return true;}
+function nights(){var e=f.querySelector('[name=nt]:checked');return e?+e.value:0;}
+function calc(){var k=val('log'),ad=+val('ad'),n=nights(),tot=0,tx=0,o=0;if(!arr||!n)return null;
+ for(var i=0;i<n;i++){tot+=rate(k,addD(arr,i).getMonth(),ad);}
+ tx=n*ad*(LOG[k].ty==='gite'?2.45:1.15);
+ if(LOG[k].ty==='gite')f.querySelectorAll('[name=opt]:checked').forEach(function(x){o+=+x.dataset.p;});
+ return{k:k,ad:ad,n:n,stay:tot,tax:tx,opt:o,total:tot+tx+o};}
+function tween(el,to){var from=el._v||0,st=performance.now();el._v=to;(function tk(t){var q=ease(Math.min(1,(t-st)/650));el.textContent=eur(from+(to-from)*q);if(q<1)requestAnimationFrame(tk);})(st);}
+var pvA=$('pvA'),pvB=$('pvB'),lastImg='';
+function setPv(src){if(src===lastImg)return;lastImg=src;var on=pvA.classList.contains('out')?pvB:pvA,off=on===pvA?pvB:pvA;off.style.visibility='';off.src=src;off.classList.remove('out');on.classList.add('out');}
+function drawCal(){var y=calM.getFullYear(),m=calM.getMonth(),c=$('cal'),h='';$('cTitle').textContent=MN[m]+' '+y;
+ ['L','M','M','J','V','S','D'].forEach(function(d){h+='<span class="dw">'+d+'</span>';});
+ var first=(new Date(y,m,1).getDay()+6)%7,nd=new Date(y,m+1,0).getDate();for(var i=0;i<first;i++)h+='<span></span>';
+ for(var d=1;d<=nd;d++){var dt=new Date(y,m,d),dis=dt<=today||!open(m)||!open(addD(dt,1).getMonth()),sel=arr&&dt.getTime()===arr.getTime();h+='<button type="button" data-d="'+d+'" class="'+(high(m)?'hi':'')+'"'+(dis?' disabled':'')+' aria-pressed="'+(sel?'true':'false')+'" aria-label="'+d+' '+MN[m]+'">'+d+'</button>';}
+ c.innerHTML=h;$('cPrev').disabled=y===today.getFullYear()&&m===today.getMonth();}
+$('cal').addEventListener('click',function(e){var b=e.target.closest('button');if(!b||b.disabled)return;arr=new Date(calM.getFullYear(),calM.getMonth(),+b.dataset.d);drawCal();buildN();update();var at=bi;setTimeout(function(){if(bi===at){bi++;show();}},420);});
+$('cPrev').onclick=function(){calM=new Date(calM.getFullYear(),calM.getMonth()-1,1);drawCal();};
+$('cNext').onclick=function(){calM=new Date(calM.getFullYear(),calM.getMonth()+1,1);drawCal();};
+function buildN(keep){var k=val('log'),prev=keep||nights(),L=durs().filter(okStay),h='';if(!L.length)L=[durs()[0]];
+ if(L.indexOf(prev)<0)prev=L[0];
+ L.forEach(function(n,i){h+='<div class="choice"><input type="radio" name="nt" id="nt'+n+'" value="'+n+'"'+(n===prev?' checked':'')+'><label for="nt'+n+'">'+n+' nuits<small>'+(arr?'départ le '+dstr(addD(arr,n)).replace(/ \d{4}$/,''):'')+'</small></label></div>';});
+ $('nights').innerHTML=h;
+ $('minHint').textContent=LOG[k].ty==='ch'?'Deux nuits minimum dans les chambres d\'hôtes.':(arr&&arr.getMonth()>=6&&arr.getMonth()<=8?'En juillet, août et septembre, le gîte se loue à la semaine.':'Trois nuits minimum hors juillet, août et septembre.');}
+function syncLog(){var k=val('log'),mx=LOG[k].max;['1','2','3','4'].forEach(function(a){var e=$('a'+a);e.disabled=+a>mx;});
+ if(+val('ad')>mx){$('a2').checked=true;}
+ $('a3s').textContent=k==='gite'?'Deux chambres':'Couchage en mezzanine';$('a4s').textContent=k==='gite'?'Deux chambres':'Couchage en mezzanine, à valider';
+ $('optCh').hidden=LOG[k].ty!=='ch';$('optGite').hidden=LOG[k].ty==='ch';}
+function update(){var k=val('log'),ad=+val('ad'),d=calc();setPv(LOG[k].img);$('pvBadge').textContent=LOG[k].n+', '+LOG[k].b;
+ var ms=[];if(d){for(var i=0;i<d.n;i++){var mm=addD(arr,i).getMonth();if(ms.indexOf(mm)<0)ms.push(mm);}}else if(arr)ms=[arr.getMonth()];
+ [].forEach.call($('mbar').children,function(el,ix){el.className=ms.indexOf(ix)>-1?'sel':open(ix)?(high(ix)?'high':'mid'):'';});
+ if(d){$('lvLab').textContent='Votre séjour, '+d.n+' nuits';tween($('lvPrice'),d.total);$('lvSub').textContent='taxe de séjour comprise, soit '+eur(d.stay/d.n)+' la nuit'+(LOG[d.k].ty==='ch'?' avec petit‑déjeuner':'');
+  var plat=d.stay*1.17+d.tax+d.opt;$('vs').hidden=false;$('vsDirect').textContent=eur(d.total);$('vsPlat').textContent=eur(plat);$('vsGain').textContent=eur(plat-d.total);}
+ else{var m=arr?arr.getMonth():5,r=rate(k,m,ad);$('lvLab').textContent=arr?'En '+MN[m]:'À partir de';tween($('lvPrice'),arr?r:rate(k,2,ad));$('lvSub').textContent=LOG[k].ty==='gite'?'la nuit pour le gîte entier':'la nuit, petit‑déjeuner compris';$('vs').hidden=true;}
+ try{var hs=[k,ad,arr?iso(arr):'-',nights()||'-',val('pdj')||'-',[].map.call(f.querySelectorAll('[name=opt]:checked'),function(x){return x.value;}).join('.')||'-'].join('~');history.replaceState(null,'','#sejour='+encodeURIComponent(hs));}catch(e){}
+ return d;}
+function lines(){var d=calc(),k=val('log'),L=[['Logement',LOG[k].n],['Adultes',val('ad')],['Arrivée',arr?dstr(arr):'à choisir'],['Départ',d?dstr(addD(arr,d.n)):'à choisir']];
+ if(LOG[k].ty==='ch')L.push(['Petit‑déjeuner',val('pdj')]);else{var o=[].map.call(f.querySelectorAll('[name=opt]:checked'),function(x){return x.value==='menage'?'ménage de fin de séjour':'lit bébé et chaise haute';});L.push(['Options',o.length?o.join(', '):'aucune']);}
+ if(d){L.push(['Séjour',eur(d.stay)]);if(d.opt)L.push(['Ménage',eur(d.opt)]);L.push(['Taxe de séjour',eur(d.tax)]);L.push(['Total',eur(d.total)]);L.push(['Acompte de 30 %',eur(d.total*.3)]);}
+ return L;}
+function recap(){update();$('recap').innerHTML=lines().map(function(r){return'<li><span>'+r[0]+'</span>'+r[1]+'</li>';}).join('');}
+function drawChips(){chips.innerHTML='';S.forEach(function(el,k){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=el.dataset.n;if(k===bi)b.setAttribute('aria-current','step');else if(k<reached)b.className='done';b.disabled=k>reached;b.onclick=function(){bi=k;show();};li.appendChild(b);chips.appendChild(li);});}
+function show(){S.forEach(function(el,k){el.hidden=k!==bi;if(k===bi){el.classList.remove('step-anim');void el.offsetWidth;el.classList.add('step-anim');}});
+ if(bi===3&&!arr){bi=2;return show();}
+ reached=Math.max(reached,bi);pv.hidden=bi===0;nx.hidden=bi===5||bi===2;nx.textContent=bi===4?'Voir mon séjour':'Continuer';
+ if(bi===2){if(arr)calM=new Date(arr.getFullYear(),arr.getMonth(),1);else{var nx0=new Date(today.getFullYear(),today.getMonth()+(today.getDate()>20?1:0),1);while(!open(nx0.getMonth()))nx0=new Date(nx0.getFullYear(),nx0.getMonth()+1,1);calM=nx0;}drawCal();}
+ if(bi===3)buildN();drawChips();if(bi===5)recap();else update();}
+f.addEventListener('change',function(e){if(e.target.name==='log'){syncLog();buildN();}update();});
+f.addEventListener('click',function(e){var t=e.target;if(t.tagName==='INPUT'&&t.type==='radio'&&(bi<=1||bi===3)){var at=bi;setTimeout(function(){if(bi===at){bi++;show();}},420);}});
+nx.onclick=function(){if(bi<5){bi++;show();}};pv.onclick=function(){if(bi>0){bi--;show();}};
+(function(){var m=location.hash.match(/sejour=([^&]+)/);if(!m)return;var p=decodeURIComponent(m[1]).split('~');function chk(n,v){var e=f.querySelector('[name="'+n+'"][value="'+v+'"]');if(e)e.checked=true;}
+ chk('log',p[0]);syncLog();chk('ad',p[1]);if(p[2]&&p[2]!=='-'){var q=p[2].split('-');arr=new Date(+q[0],+q[1]-1,+q[2]);if(arr<=today)arr=null;}if(arr){buildN(+p[3]);}chk('pdj',p[4]);(p[5]||'').split('.').forEach(function(o){chk('opt',o);});if(arr&&nights()){bi=4;reached=4;}})();
+syncLog();show();
+function msg(){var T='Bonjour Nicolas, je souhaite réserver au Mas de l\'Estello :\n'+lines().map(function(r){return'- '+r[0]+' : '+r[1];}).join('\n')+'\n'+location.href;return T;}
+$('waBtn').addEventListener('click',function(){this.href='https://wa.me/33675008205?text='+encodeURIComponent(msg());});
+$('mailBtn').addEventListener('click',function(){this.href='mailto:masestello@outlook.fr?subject='+encodeURIComponent('Demande de séjour au Mas de l\'Estello')+'&body='+encodeURIComponent(msg());});
+$('copyBtn').addEventListener('click',function(){var c=$('copied');(navigator.clipboard?navigator.clipboard.writeText(location.href):Promise.reject()).then(function(){c.textContent='Lien copié';c.hidden=false;},function(){c.textContent=location.href;c.hidden=false;});});
+(function(){var mb=$('mbar');for(var i=0;i<12;i++)mb.appendChild(document.createElement('i'));update();})();
+
+/* ---------- Lettre mensuelle (démonstration) ---------- */
+$('nl').addEventListener('submit',function(e){e.preventDefault();$('nlok').hidden=false;this.querySelector('.nl-row').hidden=true;});
+
+function loop(now){if(lenis)lenis.raf(now);if(window.__drawLight&&!RM)window.__drawLight(now);scenes(now);requestAnimationFrame(loop);}
+requestAnimationFrame(loop);
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.2});
+document.querySelectorAll('.rise').forEach(function(el,i){el.style.transitionDelay=(i%4)*.08+'s';io.observe(el);});
+if(RM){facts.forEach(function(b){b.textContent=fmtN(+b.dataset.to,+b.dataset.dec||0)+(b.dataset.suf||'');});
+ alp.style.strokeDashoffset=0;masP.style.strokeDashoffset=0;cyp.forEach(function(el){el.style.transform='none';});pool.style.transform='none';[gnd,olive,lav,rip].forEach(function(x){x.setAttribute('opacity',1);});live.forEach(function(li){li.classList.add('on');});}
+
+/* ---------- Langues ---------- */
+var L={en:{n1:'The mas',n2:'Stays',n3:'Questions',cta1s:'Book direct',h1a:'2,000 m² of Provençal garden.',h1b:'A heated 10‑metre pool.',h1c:'Three places to stay, no more.',lede:'Two guest rooms and a self‑contained cottage, each with its own terrace, at the end of chemin des Mattouins in Saint‑Rémy‑de‑Provence. Nicolas serves breakfast in the shade of the mulberry tree.',cta1:'See prices and book'}},fr={};
+document.querySelectorAll('[data-i]').forEach(function(e){fr[e.dataset.i]=e.textContent;});L.fr=fr;
+document.querySelectorAll('.lang button').forEach(function(b){b.onclick=function(){var l=b.dataset.l;document.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(function(e){e.textContent=L[l][e.dataset.i];});};});
+})();
+</script>
+</body>
+</html>
